@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophize This! — Quiz Ledger</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <div id="dashboardView" class="dashboard-view">
+    <header class="masthead">
+      <p class="eyebrow">Philosophize This! · Quiz Ledger</p>
+      <h1>Test the philosophy, not the podcast</h1>
+      <p class="subtitle">Ten questions per episode on the underlying ideas and arguments — not the host's stories or turns of phrase. Scores are saved on this device only.</p>
+    </header>
+    <hr class="rule" />
+
+    <div class="suggestion" id="suggestionBox"></div>
+
+    <p class="ledger-title">Episodes</p>
+    <div class="ep-list" id="episodeList"></div>
+
+    <p class="ledger-title">Request more quizzes</p>
+    <p class="request-intro">Pick episodes from the full 245-episode archive that don't have a quiz yet. Save your list, then hand the copied episode numbers to Claude in a future session to have quizzes written for them.</p>
+    <div class="request-panel">
+      <input class="request-search mono" id="requestSearch" type="text" placeholder="Search by episode number or title…" />
+      <div class="request-list" id="requestList"></div>
+      <div class="request-footer">
+        <span class="request-count mono" id="requestCount">0 selected</span>
+        <div class="request-footer-actions">
+          <button class="restart" id="requestSaveBtn">Save list</button>
+          <button class="pill" id="requestCopyBtn">Copy saved list</button>
+        </div>
+      </div>
+      <p class="request-saved mono" id="requestSavedLine"></p>
+    </div>
+  </div>
+
+  <div id="quizView" class="quiz-view">
+    <button class="back-link mono" id="backBtn">&larr; all episodes</button>
+    <div class="quiz-header-row">
+      <p class="eyebrow" id="quizEpLabel"></p>
+      <a class="transcript-link mono" id="quizTranscriptLink" href="#" target="_blank" rel="noopener">Read full transcript ↗</a>
+    </div>
+
+    <div id="quizBody">
+      <div class="progress-row">
+        <span id="progressLabel">§ 1 / 10</span>
+        <span id="scoreLive">correct so far — 0</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+      <div class="card">
+        <p class="q-number mono" id="qNumber">1.</p>
+        <p class="question-text" id="questionText"></p>
+        <div class="options" id="options"></div>
+        <div class="note" id="note"></div>
+        <div class="next-row" id="nextRow">
+          <button class="pill" id="nextBtn">Next &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="results" id="results">
+      <p class="eyebrow">Result</p>
+      <p class="score-line mono" id="scoreLine">0 / 10</p>
+      <p class="score-label" id="scoreLabel"></p>
+      <div id="missedWrap"></div>
+      <div class="results-actions">
+        <button class="pill" id="retakeBtn">Retake this quiz</button>
+        <button class="restart" id="doneBtn">Back to all episodes</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="episode-index.js"></script>
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.philosophizethis.org)",
+      "Bash(python3 -c ' *)",
+      "Bash(node tests/validate.js)",
+      "Bash(node server.js)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:4173/api/store)",
+      "Bash(curl -s -X POST http://localhost:4173/api/store -H \"Content-Type: application/json\" -d '{\"scores\":{},\"requests\":[]}')",
+      "Bash(kill %1)",
+      "Bash(jobs)",
+      "Bash(ps -p 60719 -o pid,cmd)",
+      "Bash(kill 60719)"
+    ]
+  }
+}
