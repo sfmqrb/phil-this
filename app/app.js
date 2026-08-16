@@ -5,6 +5,14 @@
   var serverAvailable = false;
   var currentUser = null; // { id, email, name } | null — guests use local-only, unscoped keys
 
+  // Shareable URLs: /episode/N opens that episode's quiz, /episode/N/transcript
+  // opens its transcript, /transcripts and /credit open those tabs. setUrl no-ops
+  // when already at that path, so calling it from both a click handler and from
+  // the initial route dispatch (below) never creates a duplicate history entry.
+  function setUrl(path) {
+    if (location.pathname !== path) history.pushState(null, "", path);
+  }
+
   // Every browser-storage key is namespaced per signed-in account, so two
   // people sharing a machine (or a guest, then an account) never see each
   // other's scores/requests/in-progress quizzes.
@@ -289,9 +297,9 @@
     if (creditView) creditView.classList.add("show");
   }
 
-  if (tabEpisodesBtn) tabEpisodesBtn.addEventListener("click", showEpisodesTab);
-  if (tabTranscriptsBtn) tabTranscriptsBtn.addEventListener("click", showTranscriptsTab);
-  if (tabCreditBtn) tabCreditBtn.addEventListener("click", showCreditTab);
+  if (tabEpisodesBtn) tabEpisodesBtn.addEventListener("click", function () { showEpisodesTab(); setUrl("/"); });
+  if (tabTranscriptsBtn) tabTranscriptsBtn.addEventListener("click", function () { showTranscriptsTab(); setUrl("/transcripts"); });
+  if (tabCreditBtn) tabCreditBtn.addEventListener("click", function () { showCreditTab(); setUrl("/credit"); });
 
   // ---------- transcripts tab: browse every transcript by title ----------
 
@@ -392,6 +400,7 @@
 
   function openTranscriptReader(entry) {
     if (!transcriptReaderEl) return;
+    setUrl("/episode/" + entry.id + "/transcript");
     transcriptTitleListEl.style.display = "none";
     if (transcriptListFilterInput) transcriptListFilterInput.style.display = "none";
     transcriptReaderEl.style.display = "";
@@ -421,6 +430,7 @@
 
   function closeTranscriptReader() {
     if (!transcriptReaderEl) return;
+    setUrl("/transcripts");
     transcriptReaderEl.style.display = "none";
     transcriptTitleListEl.style.display = "";
     if (transcriptListFilterInput) transcriptListFilterInput.style.display = "";
@@ -844,6 +854,7 @@
   function startQuiz(episodeId, forceRestart) {
     currentEpisode = QUIZ_DATA.find(function (ep) { return ep.id === episodeId; });
     if (!currentEpisode) return;
+    setUrl("/episode/" + episodeId);
 
     var cached = !forceRestart ? loadProgress()[String(episodeId)] : null;
     var resumed = !!(cached && cached.currentIndex > 0 && cached.currentIndex < currentEpisode.questions.length);
@@ -904,6 +915,7 @@
   }
 
   function goToDashboard() {
+    setUrl("/");
     quizView.classList.remove("show");
     dashboardView.classList.remove("hide");
     renderDashboard();
@@ -1005,9 +1017,34 @@
   qEls.doneBtn.addEventListener("click", goToDashboard);
   qEls.retakeBtn.addEventListener("click", function () { startQuiz(currentEpisode.id, true); });
 
+  // ---------- routing ----------
+  // Reads location.pathname on load and on back/forward, and opens the
+  // matching view. Each of these calls (startQuiz, openTranscriptReader,
+  // showTranscriptsTab, showCreditTab) is also what click handlers use, and
+  // setUrl() no-ops when already at that path, so this never double-pushes
+  // history or fights with the click-driven navigation above.
+  function dispatchRoute() {
+    var pathname = location.pathname;
+    var m = pathname.match(/^\/episode\/(\d+)\/transcript\/?$/);
+    if (m) {
+      var entry = getAllTranscripts().find(function (e) { return e.id === Number(m[1]); });
+      if (entry) { showTranscriptsTab(); openTranscriptReader(entry); }
+      return;
+    }
+    m = pathname.match(/^\/episode\/(\d+)\/?$/);
+    if (m) {
+      showEpisodesTab();
+      startQuiz(Number(m[1]));
+      return;
+    }
+    if (pathname === "/transcripts" || pathname === "/transcripts/") { showTranscriptsTab(); return; }
+    if (pathname === "/credit" || pathname === "/credit/") { showCreditTab(); return; }
+  }
+  window.addEventListener("popstate", dispatchRoute);
+
   fetchMe().then(function (user) {
     currentUser = user;
     renderAccountBar();
     return currentUser ? hydrateStoreFromServer() : null;
-  }).then(renderDashboard);
+  }).then(renderDashboard).then(dispatchRoute);
 })();

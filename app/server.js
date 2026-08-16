@@ -354,6 +354,18 @@ var server = http.createServer(function (req, res) {
     if (!isInside(APP_DIR, filePath)) { res.writeHead(403).end("Forbidden"); return; }
   }
 
+  // Client-side routes like /episode/90 or /episode/90/transcript have no file
+  // on disk. They have no dot in the last path segment (unlike real assets:
+  // style.css, app.js, wordclouds/90.png), so fall back to index.html and let
+  // app.js read location.pathname and render the right view.
+  var lastSegment = pathname.slice(pathname.lastIndexOf("/") + 1);
+  if (pathname !== "/" && lastSegment.indexOf(".") === -1 && pathname.indexOf("/transcripts/") !== 0) {
+    fs.access(filePath, fs.constants.F_OK, function (err) {
+      serveFile(res, err ? path.join(APP_DIR, "index.html") : filePath);
+    });
+    return;
+  }
+
   serveFile(res, filePath);
 });
 
