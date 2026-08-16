@@ -14,6 +14,13 @@
     if (location.pathname !== path) history.pushState(null, "", path);
   }
 
+  // Rewrites the address bar without adding a history entry — used when a URL
+  // points at something that isn't there any more (an episode with no quiz, a
+  // typo'd path), so the bar always agrees with the view we fell back to.
+  function replaceUrl(path) {
+    if (location.pathname !== path) history.replaceState(null, "", path);
+  }
+
   // Every browser-storage key is namespaced per signed-in account, so two
   // people sharing a machine (or a guest, then an account) never see each
   // other's scores/requests/in-progress quizzes.
@@ -289,7 +296,15 @@
     });
   }
 
-  // ---------- view tabs (episodes / transcripts / review / credit) ----------
+  // ---------- the one navigation function ----------
+  // Five top-level views live in index.html, all hidden by CSS until they get
+  // the "show" class. showView() is the ONLY place in this file that touches
+  // those classes: it hides all five, shows exactly one, syncs the tab strip
+  // (Episodes stays lit for both the dashboard and a quiz, since a quiz is an
+  // episode you opened), scrolls back to the top, and refreshes whatever that
+  // view renders. Every entry point — tab clicks, startQuiz, goToDashboard,
+  // passage links, "Take quiz" buttons, the review session, dispatchRoute —
+  // goes through it, so the visible view can never drift from the URL.
 
   var dashboardView = document.getElementById("dashboardView");
   var quizView = document.getElementById("quizView");
@@ -301,56 +316,64 @@
   var tabReviewBtn = document.getElementById("tabReviewBtn");
   var tabCreditBtn = document.getElementById("tabCreditBtn");
 
-  function showEpisodesTab() {
-    if (tabEpisodesBtn) tabEpisodesBtn.classList.add("active");
-    if (tabTranscriptsBtn) tabTranscriptsBtn.classList.remove("active");
-    if (tabReviewBtn) tabReviewBtn.classList.remove("active");
-    if (tabCreditBtn) tabCreditBtn.classList.remove("active");
-    if (transcriptsView) transcriptsView.classList.remove("show");
-    if (reviewView) reviewView.classList.remove("show");
-    if (creditView) creditView.classList.remove("show");
-    if (dashboardView) dashboardView.classList.remove("hide");
+  var VIEW_ORDER = ["dashboard", "quiz", "transcripts", "review", "credit"];
+  var currentViewName = null;
+
+  function viewContainer(name) {
+    if (name === "dashboard") return dashboardView;
+    if (name === "quiz") return quizView;
+    if (name === "transcripts") return transcriptsView;
+    if (name === "review") return reviewView;
+    if (name === "credit") return creditView;
+    return null;
   }
 
-  function showTranscriptsTab() {
-    if (tabTranscriptsBtn) tabTranscriptsBtn.classList.add("active");
-    if (tabEpisodesBtn) tabEpisodesBtn.classList.remove("active");
-    if (tabReviewBtn) tabReviewBtn.classList.remove("active");
-    if (tabCreditBtn) tabCreditBtn.classList.remove("active");
-    if (dashboardView) dashboardView.classList.add("hide");
-    if (reviewView) reviewView.classList.remove("show");
-    if (creditView) creditView.classList.remove("show");
-    if (transcriptsView) transcriptsView.classList.add("show");
-    renderTranscriptList();
+  function viewTab(name) {
+    if (name === "dashboard" || name === "quiz") return tabEpisodesBtn;
+    if (name === "transcripts") return tabTranscriptsBtn;
+    if (name === "review") return tabReviewBtn;
+    if (name === "credit") return tabCreditBtn;
+    return null;
   }
 
-  function showReviewTab() {
-    if (tabReviewBtn) tabReviewBtn.classList.add("active");
-    if (tabEpisodesBtn) tabEpisodesBtn.classList.remove("active");
-    if (tabTranscriptsBtn) tabTranscriptsBtn.classList.remove("active");
-    if (tabCreditBtn) tabCreditBtn.classList.remove("active");
-    if (dashboardView) dashboardView.classList.add("hide");
-    if (transcriptsView) transcriptsView.classList.remove("show");
-    if (creditView) creditView.classList.remove("show");
-    if (reviewView) reviewView.classList.add("show");
-    renderReviewStatus();
+  function showView(name) {
+    var target = VIEW_ORDER.indexOf(name) === -1 ? "dashboard" : name;
+    var activeTab = viewTab(target);
+    var changed = currentViewName !== target;
+
+    VIEW_ORDER.forEach(function (key) {
+      var el = viewContainer(key);
+      if (!el) return;
+      if (key === target) el.classList.add("show");
+      else el.classList.remove("show");
+    });
+    [tabEpisodesBtn, tabTranscriptsBtn, tabReviewBtn, tabCreditBtn].forEach(function (tab) {
+      if (!tab) return;
+      if (tab === activeTab) tab.classList.add("active");
+      else tab.classList.remove("active");
+    });
+
+    // The reader is a sub-state of the transcripts view, not a view of its
+    // own: any navigation closes it, and openTranscriptReader re-opens it
+    // immediately after its own showView("transcripts") call. That way
+    // /transcripts always means the title list and the reader only survives
+    // on /episode/N/transcript.
+    hideTranscriptReaderPanel();
+
+    currentViewName = target;
+    if (changed && typeof window.scrollTo === "function") window.scrollTo(0, 0);
+
+    if (target === "dashboard") renderDashboard();
+    if (target === "transcripts") renderTranscriptList();
+    // A half-finished review session survives a trip to another tab; only a
+    // view with no session running falls back to the deck summary.
+    if (target === "review" && !reviewSessionActive) renderReviewStatus();
   }
 
-  function showCreditTab() {
-    if (tabCreditBtn) tabCreditBtn.classList.add("active");
-    if (tabEpisodesBtn) tabEpisodesBtn.classList.remove("active");
-    if (tabTranscriptsBtn) tabTranscriptsBtn.classList.remove("active");
-    if (tabReviewBtn) tabReviewBtn.classList.remove("active");
-    if (dashboardView) dashboardView.classList.add("hide");
-    if (transcriptsView) transcriptsView.classList.remove("show");
-    if (reviewView) reviewView.classList.remove("show");
-    if (creditView) creditView.classList.add("show");
-  }
-
-  if (tabEpisodesBtn) tabEpisodesBtn.addEventListener("click", function () { showEpisodesTab(); setUrl("/"); });
-  if (tabTranscriptsBtn) tabTranscriptsBtn.addEventListener("click", function () { showTranscriptsTab(); setUrl("/transcripts"); });
-  if (tabReviewBtn) tabReviewBtn.addEventListener("click", function () { showReviewTab(); setUrl("/review"); });
-  if (tabCreditBtn) tabCreditBtn.addEventListener("click", function () { showCreditTab(); setUrl("/credit"); });
+  if (tabEpisodesBtn) tabEpisodesBtn.addEventListener("click", function () { setUrl("/"); showView("dashboard"); });
+  if (tabTranscriptsBtn) tabTranscriptsBtn.addEventListener("click", function () { setUrl("/transcripts"); showView("transcripts"); });
+  if (tabReviewBtn) tabReviewBtn.addEventListener("click", function () { setUrl("/review"); showView("review"); });
+  if (tabCreditBtn) tabCreditBtn.addEventListener("click", function () { setUrl("/credit"); showView("credit"); });
 
   // ---------- learn data: arguments, key ideas, terms, passage anchors ----------
   // app/learn/<id>.json is generated per episode and may simply be absent for
@@ -447,9 +470,7 @@
     btn.addEventListener("click", function () {
       var entry = getAllTranscripts().find(function (e) { return e.id === episodeId; });
       if (!entry) return;
-      if (quizView) quizView.classList.remove("show");
-      showTranscriptsTab();
-      openTranscriptReader(entry, anchorText);
+      openTranscriptReader(entry, anchorText); // handles the view switch itself
     });
     return btn;
   }
@@ -560,7 +581,6 @@
         quizLink.textContent = "Take quiz";
         quizLink.addEventListener("click", function (ev) {
           ev.stopPropagation();
-          showEpisodesTab();
           startQuiz(e.id);
         });
         row.appendChild(quizLink);
@@ -609,12 +629,14 @@
 
   // anchorText is optional: when given (from a "Read the passage →" button),
   // the paragraph containing it is highlighted and scrolled into view.
+  // Callable from any view: it navigates to the transcripts view first.
   function openTranscriptReader(entry, anchorText) {
     if (!transcriptReaderEl) return;
+    showView("transcripts");
     setUrl("/episode/" + entry.id + "/transcript");
     transcriptReaderId = entry.id;
     transcriptReaderText = "";
-    transcriptTitleListEl.style.display = "none";
+    if (transcriptTitleListEl) transcriptTitleListEl.style.display = "none";
     if (transcriptListFilterInput) transcriptListFilterInput.style.display = "none";
     transcriptReaderEl.style.display = "";
     transcriptReaderTitleEl.textContent = "#" + entry.id + " · " + entry.title;
@@ -627,12 +649,14 @@
     transcriptReaderStatusEl.textContent = "Loading transcript…";
     if (transcriptReaderQuizBtn) {
       transcriptReaderQuizBtn.style.display = entry.hasQuiz ? "" : "none";
-      transcriptReaderQuizBtn.onclick = function () { showEpisodesTab(); startQuiz(entry.id); };
+      transcriptReaderQuizBtn.onclick = function () { startQuiz(entry.id); };
     }
 
+    // The key ideas sit above the transcript and start open: they're the point,
+    // the transcript is the evidence.
     if (transcriptLearnBox) {
       transcriptLearnBox.style.display = "none";
-      transcriptLearnBox.open = false;
+      transcriptLearnBox.open = true;
       if (transcriptLearnBodyEl) transcriptLearnBodyEl.innerHTML = "";
       fetchLearnData(entry.id).then(function (data) {
         if (transcriptReaderId !== entry.id) return; // reader moved on while we fetched
@@ -660,13 +684,21 @@
       });
   }
 
-  function closeTranscriptReader() {
+  // Pure DOM reset of the reader panel — no URL, no navigation. Called by
+  // showView on every view change, so no other code has to remember it.
+  function hideTranscriptReaderPanel() {
     if (!transcriptReaderEl) return;
-    setUrl("/transcripts");
     transcriptReaderId = null;
+    transcriptReaderText = "";
     transcriptReaderEl.style.display = "none";
-    transcriptTitleListEl.style.display = "";
+    if (transcriptTitleListEl) transcriptTitleListEl.style.display = "";
     if (transcriptListFilterInput) transcriptListFilterInput.style.display = "";
+  }
+
+  // "← all transcripts": back to the title list, as a real navigation.
+  function closeTranscriptReader() {
+    setUrl("/transcripts");
+    showView("transcripts");
   }
 
   function copyTranscriptText() {
@@ -900,74 +932,11 @@
       teaser.textContent = ep.teaser;
       body.appendChild(title);
       body.appendChild(teaser);
-      // Inline "Transcript" shortcut, same pattern as the key-ideas toggle:
-      // the full transcript expands in a scrollable box right in the list.
-      var txBox = null;
-      if (ep.transcriptFile) {
-        var txToggle = document.createElement("button");
-        txToggle.className = "ep-transcript-link ep-learn-toggle mono";
-        txToggle.type = "button";
-        txToggle.textContent = "Transcript ▾";
-        txBox = document.createElement("div");
-        txBox.className = "ep-learn";
-        txBox.style.display = "none";
-        txToggle.addEventListener("keydown", function (e) { e.stopPropagation(); });
-        txToggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          if (txBox.style.display !== "none") {
-            txBox.style.display = "none";
-            txToggle.textContent = "Transcript ▾";
-            return;
-          }
-          txBox.style.display = "";
-          txToggle.textContent = "Transcript ▴";
-          if (txBox.hasChildNodes()) return;
-          var loading = document.createElement("p");
-          loading.className = "ep-learn-status mono";
-          loading.textContent = "Loading…";
-          txBox.appendChild(loading);
-          fetch(ep.transcriptFile)
-            .then(function (res) { if (!res.ok) throw new Error("fetch failed"); return res.text(); })
-            .then(function (raw) {
-              txBox.innerHTML = "";
-              var readerBtn = document.createElement("button");
-              readerBtn.className = "search-row-link";
-              readerBtn.type = "button";
-              readerBtn.textContent = "Open in reader →";
-              readerBtn.addEventListener("click", function () {
-                var entry = getAllTranscripts().find(function (t) { return t.id === ep.id; });
-                if (!entry) return;
-                showTranscriptsTab();
-                openTranscriptReader(entry);
-              });
-              var scroll = document.createElement("div");
-              scroll.className = "ep-transcript-inline";
-              appendTranscriptParagraphs(scroll, stripTranscriptHeader(raw));
-              txBox.appendChild(readerBtn);
-              txBox.appendChild(scroll);
-            })
-            .catch(function () {
-              txBox.innerHTML = "";
-              var failed = document.createElement("p");
-              failed.className = "ep-learn-status mono";
-              failed.textContent = "Could not load this transcript. Is the server still running?";
-              txBox.appendChild(failed);
-            });
-        });
-        txBox.addEventListener("click", function (e) { e.stopPropagation(); });
-        txBox.addEventListener("keydown", function (e) { e.stopPropagation(); });
-        body.appendChild(txToggle);
-      }
-      if (ep.url) {
-        var originalLink = document.createElement("a");
-        originalLink.className = "ep-transcript-link mono";
-        originalLink.href = ep.url;
-        originalLink.target = "_blank";
-        originalLink.rel = "noopener";
-        originalLink.textContent = "Original episode ↗";
-        originalLink.addEventListener("click", function (e) { e.stopPropagation(); });
-        body.appendChild(originalLink);
-      }
+      // One row of card actions, in the order that matters: the ideas first,
+      // the transcript second, the source last. Both boxes expand *below* the
+      // row, so a toggle never slides out from under the cursor when it opens.
+      var actions = document.createElement("div");
+      actions.className = "ep-actions";
 
       // Inline "Key ideas" shortcut: skim the episode's argument, key ideas,
       // and terms right in the list, without starting the quiz or the reader.
@@ -1010,9 +979,80 @@
       });
       learnBox.addEventListener("click", function (e) { e.stopPropagation(); });
       learnBox.addEventListener("keydown", function (e) { e.stopPropagation(); });
-      body.appendChild(learnToggle);
-      if (txBox) body.appendChild(txBox);
+      actions.appendChild(learnToggle);
+
+      // Inline "Transcript" shortcut, same pattern as the key-ideas toggle:
+      // the full transcript expands in a scrollable box right in the list —
+      // deliberately smaller and quieter than the key ideas above it.
+      var txBox = null;
+      if (ep.transcriptFile) {
+        var txToggle = document.createElement("button");
+        txToggle.className = "ep-transcript-link ep-learn-toggle mono";
+        txToggle.type = "button";
+        txToggle.textContent = "Transcript ▾";
+        txBox = document.createElement("div");
+        txBox.className = "ep-learn";
+        txBox.style.display = "none";
+        txToggle.addEventListener("keydown", function (e) { e.stopPropagation(); });
+        txToggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          if (txBox.style.display !== "none") {
+            txBox.style.display = "none";
+            txToggle.textContent = "Transcript ▾";
+            return;
+          }
+          txBox.style.display = "";
+          txToggle.textContent = "Transcript ▴";
+          if (txBox.hasChildNodes()) return;
+          var loading = document.createElement("p");
+          loading.className = "ep-learn-status mono";
+          loading.textContent = "Loading…";
+          txBox.appendChild(loading);
+          fetch(ep.transcriptFile)
+            .then(function (res) { if (!res.ok) throw new Error("fetch failed"); return res.text(); })
+            .then(function (raw) {
+              txBox.innerHTML = "";
+              var readerBtn = document.createElement("button");
+              readerBtn.className = "search-row-link";
+              readerBtn.type = "button";
+              readerBtn.textContent = "Open in reader →";
+              readerBtn.addEventListener("click", function () {
+                var entry = getAllTranscripts().find(function (t) { return t.id === ep.id; });
+                if (!entry) return;
+                openTranscriptReader(entry);
+              });
+              var scroll = document.createElement("div");
+              scroll.className = "ep-transcript-inline";
+              appendTranscriptParagraphs(scroll, stripTranscriptHeader(raw));
+              txBox.appendChild(readerBtn);
+              txBox.appendChild(scroll);
+            })
+            .catch(function () {
+              txBox.innerHTML = "";
+              var failed = document.createElement("p");
+              failed.className = "ep-learn-status mono";
+              failed.textContent = "Could not load this transcript. Is the server still running?";
+              txBox.appendChild(failed);
+            });
+        });
+        txBox.addEventListener("click", function (e) { e.stopPropagation(); });
+        txBox.addEventListener("keydown", function (e) { e.stopPropagation(); });
+        actions.appendChild(txToggle);
+      }
+      if (ep.url) {
+        var originalLink = document.createElement("a");
+        originalLink.className = "ep-transcript-link mono";
+        originalLink.href = ep.url;
+        originalLink.target = "_blank";
+        originalLink.rel = "noopener";
+        originalLink.textContent = "Original episode ↗";
+        originalLink.addEventListener("click", function (e) { e.stopPropagation(); });
+        actions.appendChild(originalLink);
+      }
+
+      body.appendChild(actions);
       body.appendChild(learnBox);
+      if (txBox) body.appendChild(txBox);
 
       var status = document.createElement("div");
       status.className = "ep-status mono";
@@ -1291,6 +1331,7 @@
   var reviewIndex = 0;
   var reviewScore = 0;
   var reviewAnswered = false;
+  var reviewSessionActive = false; // a running session survives a trip to another tab
 
   function refreshReviewBadge() {
     if (!rEls.badge) return;
@@ -1317,6 +1358,7 @@
 
   function renderReviewStatus() {
     refreshReviewBadge();
+    reviewSessionActive = false;
     if (rEls.session) rEls.session.style.display = "none";
     if (rEls.results) rEls.results.classList.remove("show");
     var deck = loadReview();
@@ -1366,6 +1408,9 @@
     reviewQueue = shuffled(resolved).slice(0, REVIEW_SESSION_MAX);
     reviewIndex = 0;
     reviewScore = 0;
+    reviewSessionActive = true;
+    setUrl("/review");
+    showView("review");
     if (rEls.results) rEls.results.classList.remove("show");
     if (rEls.startRow) rEls.startRow.style.display = "none";
     if (rEls.status) {
@@ -1447,6 +1492,7 @@
   }
 
   function finishReviewSession() {
+    reviewSessionActive = false;
     if (rEls.session) rEls.session.style.display = "none";
     if (rEls.results) rEls.results.classList.add("show");
     if (rEls.scoreLine) rEls.scoreLine.textContent = reviewScore + " / " + reviewQueue.length;
@@ -1492,16 +1538,37 @@
     doneBtn: document.getElementById("doneBtn"),
     resumeBanner: document.getElementById("resumeBanner"),
     resumeBannerText: document.getElementById("resumeBannerText"),
-    resumeRestartBtn: document.getElementById("resumeRestartBtn")
+    resumeRestartBtn: document.getElementById("resumeRestartBtn"),
+    learnBox: document.getElementById("quizLearnBox"),
+    learnBody: document.getElementById("quizLearnBody")
   };
 
+  // Fills the "Key ideas" box at the top of the quiz view for this episode.
+  // Open by default (the ideas are what the quiz is about), collapsible by the
+  // reader, and re-opened fresh whenever another episode's quiz starts.
+  // Episodes with no learn data simply never show the box.
+  function renderQuizLearnBox(episodeId) {
+    if (!qEls.learnBox) return;
+    qEls.learnBox.style.display = "none";
+    qEls.learnBox.open = true;
+    if (qEls.learnBody) qEls.learnBody.innerHTML = "";
+    fetchLearnData(episodeId).then(function (data) {
+      if (!currentEpisode || currentEpisode.id !== episodeId) return; // moved on
+      if (!hasLearnContent(data)) return;
+      renderLearnPanel(qEls.learnBody, data);
+      qEls.learnBox.style.display = "";
+    });
+  }
+
+  // Returns false when there's no such quiz, so callers (dispatchRoute) can
+  // fall back instead of leaving the user on a view that never changed.
   function startQuiz(episodeId, forceRestart) {
     currentEpisode = QUIZ_DATA.find(function (ep) { return ep.id === episodeId; });
-    if (!currentEpisode) return;
+    if (!currentEpisode) return false;
     setUrl("/episode/" + episodeId);
-    // Warm the learn data now so passage anchors are ready the moment someone
-    // misses a question. A missing file is fine — it caches as "none".
-    fetchLearnData(episodeId);
+    // Warms the learn data too, so passage anchors are ready the moment
+    // someone misses a question. A missing file is fine — it caches as "none".
+    renderQuizLearnBox(episodeId);
 
     var cached = !forceRestart ? loadProgress()[String(episodeId)] : null;
     var resumed = !!(cached && cached.currentIndex > 0 && cached.currentIndex < currentEpisode.questions.length);
@@ -1516,8 +1583,7 @@
       if (forceRestart) clearEpisodeProgress(episodeId);
     }
 
-    dashboardView.classList.add("hide");
-    quizView.classList.add("show");
+    showView("quiz");
     qEls.results.classList.remove("show");
     qEls.quizBody.style.display = "";
     qEls.epLabel.textContent = "Episode " + currentEpisode.id + " · " + currentEpisode.title;
@@ -1553,6 +1619,7 @@
       }
     }
     renderQuestion();
+    return true;
   }
 
   if (qEls.resumeRestartBtn) {
@@ -1563,9 +1630,7 @@
 
   function goToDashboard() {
     setUrl("/");
-    quizView.classList.remove("show");
-    dashboardView.classList.remove("hide");
-    renderDashboard();
+    showView("dashboard");
   }
 
   function renderQuestion() {
@@ -1702,31 +1767,43 @@
   qEls.nextBtn.addEventListener("click", nextQuestion);
   qEls.backBtn.addEventListener("click", goToDashboard);
   qEls.doneBtn.addEventListener("click", goToDashboard);
-  qEls.retakeBtn.addEventListener("click", function () { startQuiz(currentEpisode.id, true); });
+  qEls.retakeBtn.addEventListener("click", function () {
+    if (currentEpisode) startQuiz(currentEpisode.id, true);
+  });
 
   // ---------- routing ----------
-  // Reads location.pathname on load and on back/forward, and opens the
-  // matching view. Each of these calls (startQuiz, openTranscriptReader,
-  // showTranscriptsTab, showReviewTab, showCreditTab) is also what click handlers use, and
-  // setUrl() no-ops when already at that path, so this never double-pushes
-  // history or fights with the click-driven navigation above.
+  // Reads location.pathname on load and on back/forward and opens the matching
+  // view. Every branch ends in a showView() (directly, or via startQuiz /
+  // openTranscriptReader, which are the same calls the click handlers use), so
+  // back and forward always land in a state that matches the URL. Anything
+  // unrecognised — a typo'd path, an episode with no quiz, a transcript that
+  // isn't in the index — falls back to the dashboard and rewrites the address
+  // bar to match. setUrl() no-ops when already at that path, so dispatching a
+  // route never double-pushes history.
+  function goHome() {
+    replaceUrl("/");
+    showView("dashboard");
+  }
+
   function dispatchRoute() {
-    var pathname = location.pathname;
-    var m = pathname.match(/^\/episode\/(\d+)\/transcript\/?$/);
+    var pathname = location.pathname.replace(/\/+$/, "") || "/";
+    var m = pathname.match(/^\/episode\/(\d+)\/transcript$/);
     if (m) {
       var entry = getAllTranscripts().find(function (e) { return e.id === Number(m[1]); });
-      if (entry) { showTranscriptsTab(); openTranscriptReader(entry); }
+      if (entry) openTranscriptReader(entry);
+      else goHome();
       return;
     }
-    m = pathname.match(/^\/episode\/(\d+)\/?$/);
+    m = pathname.match(/^\/episode\/(\d+)$/);
     if (m) {
-      showEpisodesTab();
-      startQuiz(Number(m[1]));
+      if (!startQuiz(Number(m[1]))) goHome();
       return;
     }
-    if (pathname === "/transcripts" || pathname === "/transcripts/") { showTranscriptsTab(); return; }
-    if (pathname === "/review" || pathname === "/review/") { showReviewTab(); return; }
-    if (pathname === "/credit" || pathname === "/credit/") { showCreditTab(); return; }
+    if (pathname === "/transcripts") { showView("transcripts"); return; }
+    if (pathname === "/review") { showView("review"); return; }
+    if (pathname === "/credit") { showView("credit"); return; }
+    if (pathname === "/") { showView("dashboard"); return; }
+    goHome();
   }
   window.addEventListener("popstate", dispatchRoute);
 
@@ -1734,5 +1811,8 @@
     currentUser = user;
     renderAccountBar();
     return currentUser ? hydrateStoreFromServer() : null;
-  }).then(renderDashboard).then(dispatchRoute);
+  }).then(function () {
+    refreshReviewBadge(); // the tab badge is on screen in every view
+    dispatchRoute();
+  });
 })();

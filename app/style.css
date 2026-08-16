@@ -53,6 +53,23 @@ a { color: inherit; }
   padding: 44px 20px 90px;
 }
 
+/* ---------- top-level views ---------- */
+/* All five are hidden until exactly one gets .show. Only showView() in app.js
+   ever adds or removes that class, so two views can never be on screen at
+   once. */
+
+.dashboard-view,
+.quiz-view,
+.transcripts-view,
+.review-view,
+.credit-view { display: none; }
+
+.dashboard-view.show,
+.quiz-view.show,
+.transcripts-view.show,
+.review-view.show,
+.credit-view.show { display: block; }
+
 /* ---------- masthead ---------- */
 
 .masthead {
@@ -333,9 +350,18 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   text-wrap: balance;
 }
 
+/* One flex row for every card action, so the toggles and links keep the same
+   rhythm instead of relying on ad-hoc margins. */
+.ep-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 10px;
+}
+
 .ep-transcript-link {
   display: inline-block;
-  margin-top: 8px;
   font-size: 11px;
   letter-spacing: 0.03em;
   color: var(--ink-soft);
@@ -373,6 +399,7 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 .transcript-reader-actions {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -391,9 +418,10 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   color: var(--ink);
 }
 
+/* Sits at the bottom of the quiz view — decoration under the content. */
 .wordcloud-frame {
   display: block;
-  margin: 18px 0 26px;
+  margin: 34px 0 0;
   border: 1px solid var(--rule);
   border-radius: 3px;
   background: var(--paper-raised);
@@ -406,7 +434,7 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   display: block;
   width: 100%;
   height: auto;
-  max-height: 220px;
+  max-height: 150px;
   object-fit: contain;
 }
 
@@ -674,9 +702,6 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 
 /* ---------- review view ---------- */
 
-.review-view { display: none; }
-.review-view.show { display: block; }
-
 .review-status {
   font-size: 13px;
   color: var(--ink-soft);
@@ -693,9 +718,6 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 }
 
 /* ---------- transcripts view ---------- */
-
-.transcripts-view { display: none; }
-.transcripts-view.show { display: block; }
 
 .transcript-list { margin-top: 14px; border-bottom: 1px solid var(--rule); }
 
@@ -770,19 +792,21 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   cursor: pointer;
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
-.ep-body .ep-transcript-link { margin-right: 12px; }
 .ep-learn { margin-top: 10px; cursor: default; }
 .ep-learn .learn-panel { background: var(--paper); }
+/* The inline transcript is supporting evidence, not the headline: smaller,
+   shorter, and quieter than the key-ideas panel above it. */
 .ep-transcript-inline {
   margin-top: 8px;
-  max-height: 420px;
+  max-height: 260px;
   overflow-y: auto;
   border: 1px solid var(--rule);
   border-radius: 3px;
   background: var(--paper);
-  padding: 14px 16px;
-  line-height: 1.7;
-  font-size: 15px;
+  padding: 12px 14px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: var(--ink-soft);
 }
 .ep-learn-status {
   margin: 0;
@@ -845,6 +869,9 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   text-transform: uppercase;
   color: var(--ink-soft);
 }
+/* The copy that leads a view (quiz, transcript reader) rather than trailing it. */
+.learn-details-lead { margin: 22px 0 28px; }
+
 .learn-summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .learn-details[open] .learn-summary { color: var(--accent); }
 
@@ -888,9 +915,6 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 }
 
 /* ---------- credit view ---------- */
-
-.credit-view { display: none; }
-.credit-view.show { display: block; }
 
 .credit-text {
   font-size: 14.5px;
@@ -940,10 +964,6 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 .credit-back-link:hover { color: var(--accent); border-color: var(--accent); }
 
 /* ---------- quiz view ---------- */
-
-.quiz-view { display: none; }
-.quiz-view.show { display: block; }
-.dashboard-view.hide { display: none; }
 
 .back-link {
   background: none;

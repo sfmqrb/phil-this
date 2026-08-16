@@ -22,7 +22,10 @@
     <button class="view-tab" id="tabCreditBtn" type="button">Credit</button>
   </nav>
 
-  <div id="dashboardView" class="dashboard-view">
+  <!-- Five top-level views, all hidden by CSS until app.js's showView() gives
+       exactly one of them the "show" class. The dashboard starts with it so
+       the page has something on it before the first dispatchRoute(). -->
+  <div id="dashboardView" class="dashboard-view show">
     <header class="masthead">
       <p class="eyebrow">Philosophitor</p>
       <h1>Test the philosophy, not the podcast</h1>
@@ -139,7 +142,7 @@
         </div>
       </div>
       <p class="search-status mono" id="transcriptReaderStatus"></p>
-      <details class="learn-details" id="transcriptLearnBox" style="display:none">
+      <details class="learn-details" id="transcriptLearnBox" open style="display:none">
         <summary class="learn-summary mono">Key ideas</summary>
         <div class="learn-panel" id="transcriptLearnBody"></div>
       </details>
@@ -237,9 +240,13 @@
       <button class="search-row-link" id="resumeRestartBtn" type="button">Start over</button>
     </div>
 
-    <a class="wordcloud-frame" id="quizWordcloudLink" href="#" target="_blank" rel="noopener" style="display:none">
-      <img class="wordcloud-img" id="quizWordcloudImg" alt="Top 20 words from this episode, as a word cloud" />
-    </a>
+    <!-- Key ideas lead the quiz: what the episode argued, before you're asked
+         whether it stuck. Open by default, collapsible, hidden entirely for
+         episodes with no learn data. -->
+    <details class="learn-details learn-details-lead" id="quizLearnBox" open style="display:none">
+      <summary class="learn-summary mono">Key ideas</summary>
+      <div class="learn-panel" id="quizLearnBody"></div>
+    </details>
 
     <div id="quizBody">
       <div class="progress-row">
@@ -270,6 +277,11 @@
         <button class="restart" id="doneBtn">Back to all episodes</button>
       </div>
     </div>
+
+    <!-- Decoration, so it sits under the things you actually learn from. -->
+    <a class="wordcloud-frame" id="quizWordcloudLink" href="#" target="_blank" rel="noopener" style="display:none">
+      <img class="wordcloud-img" id="quizWordcloudImg" alt="Top 20 words from this episode, as a word cloud" />
+    </a>
   </div>
 
 </div>
