@@ -358,6 +358,6 @@ var server = http.createServer(function (req, res) {
 });
 
 server.listen(PORT, HOST, function () {
-  console.log("Philosophize This! quiz app running at http://" + HOST + ":" + PORT + "/");
+  console.log("Philosophitor running at http://" + HOST + ":" + PORT + "/");
   console.log("Accounts + scores are stored in " + db.DB_FILE);
 });

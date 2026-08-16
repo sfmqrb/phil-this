@@ -1,6 +1,6 @@
-// SQLite-backed accounts + per-user quiz storage for the Philosophize This!
-// quiz app. Uses Node's built-in (experimental) node:sqlite module, so there
-// are still zero npm dependencies.
+// SQLite-backed accounts + per-user quiz storage for Philosophitor. Uses
+// Node's built-in (experimental) node:sqlite module, so there are still
+// zero npm dependencies.
 "use strict";
 
 var path = require("path");
