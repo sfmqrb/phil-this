@@ -1541,6 +1541,125 @@ const QUIZ_DATA = [
     ]
   },
   {
+    id: 45,
+    transcriptFile: "../transcripts/045-transcript-government.md",
+    wordcloud: "wordclouds/45.png",
+    title: "Hobbes, Locke, and Rousseau on the Role of Government",
+    teaser: "Three answers to the same question — why does government exist at all, and what does it owe the people under it?",
+    questions: [
+      {
+        q: "Why does Hobbes conclude that, in the state of nature, it would not be wrong for someone to kill another person and take their belongings?",
+        options: [
+          "Because a government exists but consistently fails to enforce the contracts people have already signed with one another",
+          "Because in the state of nature, killing another person is always the most rational strategy available for survival",
+          "Because without any laws or signed contract in place, there is no standard by which right or wrong could even be defined",
+          "Because Hobbes believed humans are naturally cruel and selfish by biological instinct, regardless of any social arrangement"
+        ],
+        correct: 2,
+        note: "Hobbes's point isn't about human psychology but about the absence of any agreed standard. Without a signed contract insuring anything, there's no basis on which an act could be called wrong; that's why he calls the state of nature a condition without right or wrong at all, not just a violent one."
+      },
+      {
+        q: "In the \"guy with the crooked eyes\" example, what is the muscular protector on the island mainly meant to illustrate?",
+        options: [
+          "That government legitimately emerges once the strongest person on the island seizes power and demands payment by force",
+          "That a third party with clearly agreed tasks and limits can be worth voluntarily paying for, which is the basic case for having government",
+          "That any government is legitimate as long as it succeeds in preventing violence, however it obtained its authority",
+          "That a government's only real function, according to this example, is providing physical protection against violent crime"
+        ],
+        correct: 1,
+        note: "The example works by having the group agree in advance to pay for a specific, limited service. The protection itself is one instance of the point, not the whole point: the illustration is about why people would voluntarily consent to a third party with defined tasks, which is the basic argument for government existing at all."
+      },
+      {
+        q: "What point does the \"medicine\" analogy make about Romanticism's relationship to the Enlightenment?",
+        options: [
+          "That the Enlightenment functioned like medicine that cured society of superstition the way real medicine cures illness",
+          "That reason was always harmful the moment it was applied to any long-standing traditional institution",
+          "That Romanticism was itself the disease that Enlightenment reason still needed to treat",
+          "That reason wasn't the problem, but too much of it suppressed something as essential as human emotion"
+        ],
+        correct: 3,
+        note: "The analogy specifically frames the issue as one of dosage: nobody in the analogy is questioning whether medicine (reason) helps, only how much is safe. Applied to the Enlightenment, the claim is that reason itself wasn't the problem; suppressing emotion by over-applying it produced the backlash known as Romanticism."
+      },
+      {
+        q: "What was the position Rousseau took in the newspaper essay contest that first made his name?",
+        options: [
+          "That progress in the arts and sciences had made society worse by moving people further from the state of nature",
+          "That Sparta was a superior civilization mainly because of its military discipline and strict legal code",
+          "That as the arts and sciences advanced, people's original liberty grew even as laws grew more restrictive",
+          "That every form of organized government is inherently illegitimate regardless of how it treats its citizens"
+        ],
+        correct: 0,
+        note: "Rousseau's essay took the minority position that progress in the arts and sciences made things worse, since it pulled humanity further from the state of nature he thought people belonged in. His Sparta comparison supports this thesis but isn't the thesis itself."
+      },
+      {
+        q: "What does Rousseau's image of \"garlands of flowers\" laid over \"iron chains\" argue about the effect of civilization on people?",
+        options: [
+          "That civilization gradually restores the liberty lost when private property was first introduced",
+          "That the chains represent nature, and civilization is the garland that frees people from them",
+          "That any law or government whatsoever is entirely and always a disguised form of slavery",
+          "That civilization disguises the loss of freedom rather than removing it, making people love their own subjugation"
+        ],
+        correct: 3,
+        note: "The chains (loss of freedom) are still there in this image; the flowers (arts, sciences, culture) just decorate them so people stop noticing or resenting the loss. The line is specifically about disguising subjugation, which is why Rousseau says it makes people \"love their slavery.\""
+      },
+      {
+        q: "According to the episode, how does Locke's view of government's role differ from Hobbes's?",
+        options: [
+          "Locke says government exists to protect natural rights like life, liberty, and property, while Hobbes says it exists to maintain order",
+          "Locke agrees that maintaining order is government's sole purpose, but disagrees about who should hold that power",
+          "Locke says government exists to promote the general will of the people, while Hobbes focuses on natural rights",
+          "Locke believes government has no legitimate authority to protect any individual right whatsoever"
+        ],
+        correct: 0,
+        note: "The episode lays out three distinct answers to the same question: Hobbes says government's job is maintaining order, Locke says it's protecting natural rights (life, liberty, property), and Rousseau (covered separately) says it's promoting the general will. Locke's view is presented explicitly as a correction of Hobbes's."
+      },
+      {
+        q: "What is Rousseau's rebuttal to the idea that maintaining order alone justifies government's existence?",
+        options: [
+          "That Hobbes's state of nature is wrong because early humans actually lived in organized political councils",
+          "That order is the single most important thing a government can provide, more important even than liberty",
+          "That no government in history has ever actually succeeded at maintaining order for long",
+          "That peaceful order isn't enough on its own, since you can live peacefully in a dungeon"
+        ],
+        correct: 3,
+        note: "Rousseau's specific counter to Hobbes is that peace by itself proves nothing about quality of life, since a dungeon can also be peaceful. This is why he argues government needs to do more than just suppress conflict."
+      },
+      {
+        q: "What is the amnesia thought experiment on the island meant to test?",
+        options: [
+          "Whether people would still commit acts like theft or violence with no memory of civilization's conventions, to isolate what's truly natural in humans",
+          "Whether people would immediately reinvent private property and government out of necessity, regardless of what they remembered",
+          "Whether losing the memory of a prior social contract would make Hobbes's state of war even worse",
+          "Whether memory loss always produces a more peaceful society than the one people started in"
+        ],
+        correct: 0,
+        note: "The thought experiment strips away memory of civilization's conventions specifically to ask what's left when culture is subtracted: would violence and theft still happen, or were they always dependent on ideas like ownership that civilization introduced? It's a tool for separating nature from culture, which is exactly what Hobbes and Rousseau disagree about."
+      },
+      {
+        q: "The passage adds that ideas of property \"could not have been formed all at once in the human mind.\" What does this complicate about the story of the first man who claimed land?",
+        options: [
+          "It shows the first man to claim land had already worked out a formal theory of property rights",
+          "It shows property ideas came before language, which is why the story had to be told rather than argued",
+          "It shows the corruption wasn't one dramatic act, but the result of prior ideas accumulating gradually",
+          "It proves no historical account of how property began could ever really be given"
+        ],
+        correct: 2,
+        note: "This detail is a check against reading the \"first man claimed land\" story too literally, as one dramatic moment. The text explicitly says the idea of property depended on many prior ideas that couldn't form all at once, meaning the fable describes a gradual process, not a single event."
+      },
+      {
+        q: "Why does Rousseau think a government whose main job is protecting property is not equally fair to everyone?",
+        options: [
+          "Because property owners are exempt from paying for government services that non-owners still have to fund",
+          "Because such protection benefits people who own more property far more than it benefits those with little or none",
+          "Because the poor eventually use their political freedom to seize property back from the rich",
+          "Because private property should never be recognized as legitimate under any political system"
+        ],
+        correct: 1,
+        note: "Rousseau's objection is distributional: since property protection scales with how much property someone has, a state built around that function ends up serving wealthier people more than poorer ones, even if it technically applies to everyone equally."
+      }
+    ]
+  },
+  {
     id: 197,
     transcriptFile: "../transcripts/197-episode-197-transcript.md",
     wordcloud: "wordclouds/197.png",
