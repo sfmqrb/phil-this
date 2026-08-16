@@ -292,6 +292,7 @@
   var transcriptReaderBodyEl = document.getElementById("transcriptReaderBody");
   var transcriptReaderBackBtn = document.getElementById("transcriptReaderBackBtn");
   var transcriptCopyBtn = document.getElementById("transcriptCopyBtn");
+  var transcriptReaderQuizBtn = document.getElementById("transcriptReaderQuizBtn");
 
   function stripTranscriptHeader(raw) {
     var lines = raw.split("\n");
@@ -310,7 +311,7 @@
     QUIZ_DATA.forEach(function (ep) { titleById[ep.id] = ep.title; });
     var source = typeof EPISODE_INDEX !== "undefined" ? EPISODE_INDEX : [];
     ALL_TRANSCRIPTS = source.map(function (e) {
-      return { id: e.id, file: e.file, title: titleById[e.id] || e.label };
+      return { id: e.id, file: e.file, title: titleById[e.id] || e.label, hasQuiz: !!titleById[e.id] };
     }).sort(function (a, b) { return a.id - b.id; });
     return ALL_TRANSCRIPTS;
   }
@@ -330,9 +331,15 @@
       return;
     }
     visible.forEach(function (e) {
-      var row = document.createElement("button");
+      var row = document.createElement("div");
       row.className = "transcript-row";
-      row.type = "button";
+      row.tabIndex = 0;
+      row.setAttribute("role", "button");
+      row.addEventListener("click", function () { openTranscriptReader(e); });
+      row.addEventListener("keydown", function (ev) {
+        if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); openTranscriptReader(e); }
+      });
+
       var id = document.createElement("span");
       id.className = "transcript-row-id mono";
       id.textContent = "#" + e.id;
@@ -341,7 +348,20 @@
       title.textContent = e.title;
       row.appendChild(id);
       row.appendChild(title);
-      row.addEventListener("click", function () { openTranscriptReader(e); });
+
+      if (e.hasQuiz) {
+        var quizLink = document.createElement("button");
+        quizLink.className = "transcript-row-quiz-link";
+        quizLink.type = "button";
+        quizLink.textContent = "Take quiz ↗";
+        quizLink.addEventListener("click", function (ev) {
+          ev.stopPropagation();
+          showEpisodesTab();
+          startQuiz(e.id);
+        });
+        row.appendChild(quizLink);
+      }
+
       transcriptTitleListEl.appendChild(row);
     });
   }
@@ -355,6 +375,10 @@
     transcriptReaderLinkEl.href = "../transcripts/" + entry.file;
     transcriptReaderBodyEl.textContent = "";
     transcriptReaderStatusEl.textContent = "Loading transcript…";
+    if (transcriptReaderQuizBtn) {
+      transcriptReaderQuizBtn.style.display = entry.hasQuiz ? "" : "none";
+      transcriptReaderQuizBtn.onclick = function () { showEpisodesTab(); startQuiz(entry.id); };
+    }
 
     fetch("../transcripts/" + entry.file)
       .then(function (res) { if (!res.ok) throw new Error("fetch failed"); return res.text(); })
