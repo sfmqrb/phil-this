@@ -98,10 +98,6 @@
   var pct = QuizLogic.pct;
   var escapeHtml = QuizLogic.escapeHtml;
 
-  function computeSuggestion(scores) {
-    return QuizLogic.computeSuggestion(scores, QUIZ_DATA);
-  }
-
   // ---------- account bar ----------
 
   var accountGuestEl = document.getElementById("accountGuest");
@@ -260,26 +256,42 @@
   var dashboardView = document.getElementById("dashboardView");
   var quizView = document.getElementById("quizView");
   var transcriptsView = document.getElementById("transcriptsView");
+  var creditView = document.getElementById("creditView");
   var tabEpisodesBtn = document.getElementById("tabEpisodesBtn");
   var tabTranscriptsBtn = document.getElementById("tabTranscriptsBtn");
+  var tabCreditBtn = document.getElementById("tabCreditBtn");
 
   function showEpisodesTab() {
     if (tabEpisodesBtn) tabEpisodesBtn.classList.add("active");
     if (tabTranscriptsBtn) tabTranscriptsBtn.classList.remove("active");
+    if (tabCreditBtn) tabCreditBtn.classList.remove("active");
     if (transcriptsView) transcriptsView.classList.remove("show");
+    if (creditView) creditView.classList.remove("show");
     if (dashboardView) dashboardView.classList.remove("hide");
   }
 
   function showTranscriptsTab() {
     if (tabTranscriptsBtn) tabTranscriptsBtn.classList.add("active");
     if (tabEpisodesBtn) tabEpisodesBtn.classList.remove("active");
+    if (tabCreditBtn) tabCreditBtn.classList.remove("active");
     if (dashboardView) dashboardView.classList.add("hide");
+    if (creditView) creditView.classList.remove("show");
     if (transcriptsView) transcriptsView.classList.add("show");
     renderTranscriptList();
   }
 
+  function showCreditTab() {
+    if (tabCreditBtn) tabCreditBtn.classList.add("active");
+    if (tabEpisodesBtn) tabEpisodesBtn.classList.remove("active");
+    if (tabTranscriptsBtn) tabTranscriptsBtn.classList.remove("active");
+    if (dashboardView) dashboardView.classList.add("hide");
+    if (transcriptsView) transcriptsView.classList.remove("show");
+    if (creditView) creditView.classList.add("show");
+  }
+
   if (tabEpisodesBtn) tabEpisodesBtn.addEventListener("click", showEpisodesTab);
   if (tabTranscriptsBtn) tabTranscriptsBtn.addEventListener("click", showTranscriptsTab);
+  if (tabCreditBtn) tabCreditBtn.addEventListener("click", showCreditTab);
 
   // ---------- transcripts tab: browse every transcript by title ----------
 
@@ -288,6 +300,7 @@
   var transcriptReaderEl = document.getElementById("transcriptReader");
   var transcriptReaderTitleEl = document.getElementById("transcriptReaderTitle");
   var transcriptReaderLinkEl = document.getElementById("transcriptReaderLink");
+  var transcriptReaderOriginalLinkEl = document.getElementById("transcriptReaderOriginalLink");
   var transcriptReaderStatusEl = document.getElementById("transcriptReaderStatus");
   var transcriptReaderBodyEl = document.getElementById("transcriptReaderBody");
   var transcriptReaderBackBtn = document.getElementById("transcriptReaderBackBtn");
@@ -311,7 +324,7 @@
     QUIZ_DATA.forEach(function (ep) { titleById[ep.id] = ep.title; });
     var source = typeof EPISODE_INDEX !== "undefined" ? EPISODE_INDEX : [];
     ALL_TRANSCRIPTS = source.map(function (e) {
-      return { id: e.id, file: e.file, title: titleById[e.id] || e.label, hasQuiz: !!titleById[e.id] };
+      return { id: e.id, file: e.file, url: e.url, title: titleById[e.id] || e.label, hasQuiz: !!titleById[e.id] };
     }).sort(function (a, b) { return a.id - b.id; });
     return ALL_TRANSCRIPTS;
   }
@@ -349,6 +362,17 @@
       row.appendChild(id);
       row.appendChild(title);
 
+      if (e.url) {
+        var originalLink = document.createElement("a");
+        originalLink.className = "transcript-row-quiz-link";
+        originalLink.href = e.url;
+        originalLink.target = "_blank";
+        originalLink.rel = "noopener";
+        originalLink.textContent = "Original ↗";
+        originalLink.addEventListener("click", function (ev) { ev.stopPropagation(); });
+        row.appendChild(originalLink);
+      }
+
       if (e.hasQuiz) {
         var quizLink = document.createElement("button");
         quizLink.className = "transcript-row-quiz-link";
@@ -373,6 +397,10 @@
     transcriptReaderEl.style.display = "";
     transcriptReaderTitleEl.textContent = "#" + entry.id + " — " + entry.title;
     transcriptReaderLinkEl.href = "../transcripts/" + entry.file;
+    if (transcriptReaderOriginalLinkEl) {
+      transcriptReaderOriginalLinkEl.href = entry.url || "#";
+      transcriptReaderOriginalLinkEl.style.display = entry.url ? "" : "none";
+    }
     transcriptReaderBodyEl.textContent = "";
     transcriptReaderStatusEl.textContent = "Loading transcript…";
     if (transcriptReaderQuizBtn) {
@@ -427,7 +455,6 @@
   if (transcriptListFilterInput) {
     transcriptListFilterInput.addEventListener("input", renderTranscriptList);
   }
-  var suggestionBox = document.getElementById("suggestionBox");
   var episodeList = document.getElementById("episodeList");
   var topicFilterInput = document.getElementById("topicFilter");
   var topicOtherEl = document.getElementById("topicOther");
@@ -476,30 +503,6 @@
   }
 
   function renderDashboard() {
-    var scores = loadScores();
-    var suggestion = computeSuggestion(scores);
-
-    suggestionBox.innerHTML = "";
-    var label = document.createElement("p");
-    label.className = "suggestion-label mono";
-    label.textContent = "Suggested next";
-    var text = document.createElement("p");
-    text.className = "suggestion-text";
-    text.innerHTML = suggestion.text;
-    suggestionBox.appendChild(label);
-    suggestionBox.appendChild(text);
-    if (suggestion.episode && suggestion.cta) {
-      var actions = document.createElement("div");
-      actions.className = "suggestion-actions";
-      var btn = document.createElement("button");
-      btn.className = "pill";
-      btn.type = "button";
-      btn.textContent = suggestion.cta;
-      btn.addEventListener("click", function () { startQuiz(suggestion.episode.id); });
-      actions.appendChild(btn);
-      suggestionBox.appendChild(actions);
-    }
-
     renderEpisodeList();
   }
 
@@ -555,6 +558,16 @@
         link.textContent = "Read full transcript ↗";
         link.addEventListener("click", function (e) { e.stopPropagation(); });
         body.appendChild(link);
+      }
+      if (ep.url) {
+        var originalLink = document.createElement("a");
+        originalLink.className = "ep-transcript-link mono";
+        originalLink.href = ep.url;
+        originalLink.target = "_blank";
+        originalLink.rel = "noopener";
+        originalLink.textContent = "Original episode ↗";
+        originalLink.addEventListener("click", function (e) { e.stopPropagation(); });
+        body.appendChild(originalLink);
       }
 
       var status = document.createElement("div");
@@ -818,6 +831,7 @@
     missedWrap: document.getElementById("missedWrap"),
     backBtn: document.getElementById("backBtn"),
     transcriptLink: document.getElementById("quizTranscriptLink"),
+    originalLink: document.getElementById("quizOriginalLink"),
     wordcloudLink: document.getElementById("quizWordcloudLink"),
     wordcloudImg: document.getElementById("quizWordcloudImg"),
     retakeBtn: document.getElementById("retakeBtn"),
@@ -871,6 +885,14 @@
       qEls.transcriptLink.style.display = "";
     } else {
       qEls.transcriptLink.style.display = "none";
+    }
+    if (qEls.originalLink) {
+      if (currentEpisode.url) {
+        qEls.originalLink.href = currentEpisode.url;
+        qEls.originalLink.style.display = "";
+      } else {
+        qEls.originalLink.style.display = "none";
+      }
     }
     renderQuestion();
   }

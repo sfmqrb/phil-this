@@ -28,7 +28,8 @@ var path = require("path");
 var QuizLogic = require("./logic.js");
 var db = require("./db.js");
 
-var PORT = Number(process.argv[2]) || 4173;
+var PORT = Number(process.argv[2]) || Number(process.env.PORT) || 4173;
+var HOST = process.env.HOST || "0.0.0.0";
 var APP_DIR = __dirname;
 var ROOT_DIR = path.join(APP_DIR, "..");
 var TRANSCRIPTS_DIR = path.join(ROOT_DIR, "transcripts");
@@ -356,7 +357,7 @@ var server = http.createServer(function (req, res) {
   serveFile(res, filePath);
 });
 
-server.listen(PORT, "127.0.0.1", function () {
-  console.log("Philosophize This! quiz app running at http://localhost:" + PORT + "/");
-  console.log("Accounts + scores are stored in " + path.join(APP_DIR, "data.sqlite"));
+server.listen(PORT, HOST, function () {
+  console.log("Philosophize This! quiz app running at http://" + HOST + ":" + PORT + "/");
+  console.log("Accounts + scores are stored in " + db.DB_FILE);
 });

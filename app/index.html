@@ -12,6 +12,7 @@
   <nav class="view-tabs" id="viewTabs">
     <button class="view-tab active" id="tabEpisodesBtn" type="button">Episodes</button>
     <button class="view-tab" id="tabTranscriptsBtn" type="button">Transcripts</button>
+    <button class="view-tab" id="tabCreditBtn" type="button">Credit</button>
   </nav>
 
   <div id="dashboardView" class="dashboard-view">
@@ -77,8 +78,6 @@
       </form>
     </div>
 
-    <div class="suggestion" id="suggestionBox"></div>
-
     <p class="ledger-title">Episodes</p>
     <input class="request-search mono" id="topicFilter" type="text" placeholder="Filter by topic or philosopher (e.g. “Spinoza”)…" />
     <div class="ep-list" id="episodeList"></div>
@@ -128,6 +127,7 @@
           <button class="transcript-link mono" id="transcriptReaderQuizBtn" type="button" style="display:none">Take quiz ↗</button>
           <button class="transcript-link mono" id="transcriptCopyBtn" type="button">Copy transcript</button>
           <a class="transcript-link mono" id="transcriptReaderLink" href="#" target="_blank" rel="noopener">Open raw ↗</a>
+          <a class="transcript-link mono" id="transcriptReaderOriginalLink" href="#" target="_blank" rel="noopener" style="display:none">Original episode ↗</a>
         </div>
       </div>
       <p class="search-status mono" id="transcriptReaderStatus"></p>
@@ -135,11 +135,49 @@
     </div>
   </div>
 
+  <div id="creditView" class="credit-view">
+    <header class="masthead">
+      <p class="eyebrow">Philosophize This! · Credit</p>
+      <h1>Who made what here</h1>
+      <p class="subtitle">This quiz ledger is an unofficial, fan-made project — not affiliated with or endorsed by the show.</p>
+    </header>
+    <hr class="rule" />
+
+    <p class="ledger-title">This site</p>
+    <p class="credit-text">This quiz ledger — the episode quizzes, transcript browser, search, and accounts — was vibecoded: built by describing what it should do to an AI coding assistant (Claude) and iterating from there, rather than written by hand line by line. It is an independent, unofficial companion to the podcast, made by a fan.</p>
+
+    <p class="ledger-title">Philosophize This!</p>
+    <p class="credit-text">All podcast content, transcripts, and episode titles referenced on this site belong to <strong>Philosophize This!</strong>, written and hosted by Stephen West. Please support the source material directly through the links below.</p>
+
+    <div class="credit-links">
+      <a class="credit-link-card" href="https://www.philosophizethis.org/contribute" target="_blank" rel="noopener">
+        <span class="credit-link-title mono">Patreon</span>
+        <span class="credit-link-desc">Contribute on a per-episode basis, with monthly limits you control.</span>
+      </a>
+      <a class="credit-link-card" href="https://www.philosophizethis.org/contribute" target="_blank" rel="noopener">
+        <span class="credit-link-title mono">PayPal</span>
+        <span class="credit-link-desc">A one-time contribution for whatever you feel the back catalogue is worth.</span>
+      </a>
+      <a class="credit-link-card" href="https://www.philosophizethis.org/merch" target="_blank" rel="noopener">
+        <span class="credit-link-title mono">Merch Store</span>
+        <span class="credit-link-desc">Official Philosophize This! merch, with new designs added regularly.</span>
+      </a>
+    </div>
+
+    <p class="credit-text credit-quote">"My only goal in life is to make a podcast that brightens people's lives a little bit. I want to be the notification on your phone that doesn't induce any stress." &mdash; Stephen West</p>
+
+    <p class="ledger-title">Listen to the show</p>
+    <p class="credit-text">Apple &middot; Stitcher &middot; Spotify &middot; Google Play &middot; Libsyn &middot; YouTube — find links to all of these on the official site below.</p>
+
+    <a class="credit-back-link" href="https://www.philosophizethis.org/" target="_blank" rel="noopener">philosophizethis.org &rarr;</a>
+  </div>
+
   <div id="quizView" class="quiz-view">
     <button class="back-link mono" id="backBtn">&larr; all episodes</button>
     <div class="quiz-header-row">
       <p class="eyebrow" id="quizEpLabel"></p>
       <a class="transcript-link mono" id="quizTranscriptLink" href="#" target="_blank" rel="noopener">Read full transcript ↗</a>
+      <a class="transcript-link mono" id="quizOriginalLink" href="#" target="_blank" rel="noopener" style="display:none">Original episode ↗</a>
     </div>
 
     <div class="resume-banner mono" id="resumeBanner" style="display:none">

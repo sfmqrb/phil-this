@@ -8,10 +8,15 @@ var crypto = require("crypto");
 var fs = require("fs");
 var DatabaseSync = require("node:sqlite").DatabaseSync;
 
-var DB_FILE = path.join(__dirname, "data.sqlite");
+// DATA_DIR lets deployments point the SQLite file at a mounted persistent
+// volume (e.g. Fly.io) instead of the code directory, so redeploys don't
+// wipe accounts. Defaults to app/ for local/dev use.
+var DATA_DIR = process.env.DATA_DIR || __dirname;
+var DB_FILE = path.join(DATA_DIR, "data.sqlite");
 var LEGACY_STORE_FILE = path.join(__dirname, "store.json");
 var SESSION_DAYS = 30;
 
+fs.mkdirSync(DATA_DIR, { recursive: true });
 var db = new DatabaseSync(DB_FILE);
 db.exec("PRAGMA journal_mode = WAL");
 db.exec("PRAGMA foreign_keys = ON");
@@ -246,6 +251,7 @@ function importLegacyStore(userId) {
 }
 
 module.exports = {
+  DB_FILE: DB_FILE,
   publicUser: publicUser,
   createUser: createUser,
   verifyLogin: verifyLogin,
