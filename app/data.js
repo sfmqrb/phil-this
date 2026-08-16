@@ -249,114 +249,233 @@ const QUIZ_DATA = [
     teaser: "God, Nature, and the argument that everything — including your choices — is one unbroken causal chain.",
     questions: [
       {
-        q: "How does Spinoza's definition of 'substance' differ subtly from Descartes' definition?",
+        q: "Descartes vs. Spinoza on substance — what is the key difference?",
         options: [
-          "Spinoza requires substance to be physical; Descartes required it to be mental",
-          "They are identical — Spinoza simply renamed Descartes' concept",
-          "Descartes defined substance as depending on nothing else for its existence; Spinoza sharpened this to mean something whose existence is conceptually self-explanatory, not needing to be understood via anything outside itself",
-          "Spinoza rejected the concept of substance entirely"
+          "Eternal vs conscious",
+          "Physical vs mental",
+          "Independence vs self-explanation",
+          "Singular vs many"
         ],
         correct: 2,
-        note: "This subtle shift — from ontological independence to conceptual self-sufficiency — is what lets Spinoza rule out any finite thing (a phone, a person) as a true substance."
+        note: "Descartes defined substance as not dependent on anything else. Spinoza sharpened this to a stronger standard — existence that explains itself."
       },
       {
-        q: "Why does Spinoza conclude there is exactly one true substance rather than many?",
+        q: "Why can't individual things (people, planets, galaxies) be substances?",
         options: [
-          "Applying his strict definition of substance rigorously, nothing finite is conceptually self-explanatory — only the total, undivided whole of existence qualifies",
-          "Because Aristotle's four causes require a single origin point",
-          "Because Descartes' mind-body dualism proved there must be only one substance",
-          "Because ancient atomism demanded indivisibility"
+          "They lack eternal duration",
+          "They can only be understood in relation to something else",
+          "They are made of matter",
+          "They were created at a point in time"
+        ],
+        correct: 1,
+        note: "The iPhone example: you can't explain what it is without reaching outside itself to its manufacturer, materials, and purpose."
+      },
+      {
+        q: "What does the dog Charlie example prove about an infinite God?",
+        options: [
+          "If Charlie is outside God, God is limited",
+          "Animals have divine consciousness",
+          "Charlie is a passive emotion",
+          "Matter opposes spirit"
         ],
         correct: 0,
-        note: "This is substance monism — a direct rejection of both pluralist views and Descartes' own dualism of mental and physical substance."
+        note: "To stay genuinely infinite, nothing — however mundane — can be excluded from God."
       },
       {
-        q: "What does Spinoza mean by identifying God with Nature ('Deus sive Natura')?",
+        q: "What does the talking triangle/circle illustrate?",
         options: [
-          "That God created nature and then withdrew from it entirely",
-          "That since the one substance is infinite and self-explanatory, and nothing can exist outside an infinite being, God simply is the total, undivided existence of nature",
-          "That nature worships God through natural cycles",
-          "That 'God' and 'Nature' are unrelated homonyms"
+          "Math is closer to God",
+          "Every being projects its own attributes onto God",
+          "Geometry was Spinoza's method",
+          "More sides means a more accurate God"
         ],
         correct: 1,
-        note: "If God is genuinely infinite, nothing — not even your dog, not even the physical universe as a bounded object — can exist as something separate from God."
+        note: "This generalizes to humans imagining God as seeing, hearing, and judging — projecting our own nature onto the divine."
       },
       {
-        q: "What is the difference between a transcendent and an immanent conception of God, and which does Spinoza hold?",
+        q: "Miracles should be judged by what standard instead?",
         options: [
-          "Transcendent means present within creation; Spinoza is transcendent",
-          "They are the same idea with different names; Spinoza uses both",
-          "Immanent means existing apart from and above creation; Spinoza is immanent",
-          "Transcendent means existing apart from and above creation, judging it from outside; Spinoza's God is immanent — fully present within and identical to nature"
+          "Scripture consistency",
+          "Witness count",
+          "Emotional intensity",
+          "The wisdom in the doctrine"
         ],
         correct: 3,
-        note: "Because everything is part of God/Nature under Spinoza's monism, God cannot also stand outside it looking in."
+        note: "Since God is nature, an apparent miracle just means the cause isn't understood yet — not that natural law was broken."
       },
       {
-        q: "Spinoza argues that if a triangle could speak, it would describe God as triangular. What point is this meant to illustrate?",
+        q: "What is the flaw in defining a circle by 'equal radii'?",
         options: [
-          "That geometry is the purest form of theology",
-          "That God has no true nature at all",
-          "That creatures naturally reason from their own nature and mistakenly project it onto God — attributing human traits like will and judgment to God is a cognitive error, not a discovery",
-          "That mathematical objects are divine"
-        ],
-        correct: 2,
-        note: "This is a serious epistemological point about anthropomorphic projection, not merely a rhetorical joke."
-      },
-      {
-        q: "How does Spinoza's determinism follow from his metaphysics of substance?",
-        options: [
-          "It doesn't follow from his metaphysics — it's a separate, unrelated claim",
-          "Since there is only one substance and everything else is a mode/effect within nature's single unbroken causal chain, nothing (including human choice) is self-caused or exempt from that chain",
-          "Determinism follows only from religious scripture, not from substance theory",
-          "Because free will was disproven by Descartes before Spinoza wrote"
-        ],
-        correct: 1,
-        note: "If you truly had free will, you'd need to be a self-caused substance in your own right — but Spinoza's monism allows only one substance, so this is impossible."
-      },
-      {
-        q: "What is the difference between a 'passive' and an 'active' emotion in Spinoza's framework?",
-        options: [
-          "Passive emotions are always negative; active emotions are always positive",
-          "Active emotions are irrational; passive emotions are rational",
-          "There is no real difference — it's purely a matter of intensity",
-          "A passive emotion arises when we are only the partial cause of what happens in us, driven by external forces we don't understand; an active emotion arises when we clearly and adequately understand the causes of what we feel"
-        ],
-        correct: 3,
-        note: "For Spinoza, gaining clear understanding of an emotion's causes can transform a passion into something active — understanding, not suppression, is the mechanism of freedom within a determined system."
-      },
-      {
-        q: "What is Spinoza's concept of 'conatus'?",
-        options: [
-          "The underlying drive of all things to persist in and increase their own power/capacity to act, from which he derives joy, sadness, love, and hate",
-          "The formal proof that God exists",
-          "The Aristotelian four causes applied to ethics",
-          "A method for achieving detachment from all desire"
+          "It names a property, not the essence",
+          "It only applies to perfect circles",
+          "It misapplies geometry",
+          "No center is specified"
         ],
         correct: 0,
-        note: "Joy is an experienced increase in this striving-power; sadness is a decrease; love and hate are just this drive directed at things believed to help or hinder it."
+        note: "The essence generates the property; the property itself isn't the essence."
       },
       {
-        q: "How does Spinoza's ethical conclusion — that harming another is self-defeating — follow from his metaphysics?",
+        q: "What does the repeated billboard/Joan Jett moment reveal?",
         options: [
-          "It doesn't follow logically; it's simply asserted as a separate moral rule",
-          "It follows from a divine commandment unrelated to his metaphysics",
-          "If all individual things are modes of the one substance (God/Nature), then harming another is structurally like a body part attacking another part of the same body — self-undermining, since all things' existence is interdependent within the single whole",
-          "It follows from majority social agreement about what's beneficial"
-        ],
-        correct: 2,
-        note: "This is the normative payoff of substance monism — ethics derived logically from metaphysics rather than asserted independently."
-      },
-      {
-        q: "Which pair correctly matches a necessary thing with a contingent thing, using Spinoza's distinction?",
-        options: [
-          "Both you and your parents are necessary beings",
-          "You are contingent (your existence depends on something prior, your parents); a necessary being's existence follows from its own nature and cannot fail to exist",
-          "You are necessary; your parents are contingent",
-          "Necessary and contingent apply only to abstract mathematical objects, not living things"
+          "Memory fades fast",
+          "Spontaneous-feeling choice can still be caused",
+          "Billboards are special triggers",
+          "Free will exists unconsciously"
         ],
         correct: 1,
-        note: "This distinction is the engine for identifying what could possibly satisfy Spinoza's strict definition of substance — only something whose existence follows from its own nature qualifies."
+        note: "It felt free both times, but was the same causal output — illustrating ignorance of the true causes behind a 'free' choice."
+      },
+      {
+        q: "What distinguishes active from passive emotion?",
+        options: [
+          "Pleasant vs unpleasant",
+          "Sudden vs gradual",
+          "Adequate cause vs partial cause",
+          "Shared vs solitary"
+        ],
+        correct: 2,
+        note: "It has nothing to do with whether the emotion feels good or bad — anger can be active if it's clearly understood."
+      },
+      {
+        q: "All emotion reduces to what one tendency?",
+        options: [
+          "Striving to increase power (joy/sadness = its rise/fall)",
+          "Search for certainty",
+          "Desire for approval",
+          "Self-preservation instinct"
+        ],
+        correct: 0,
+        note: "Conatus — the drive to persist and increase one's power to act — is the root Spinoza traces every emotion back to."
+      },
+      {
+        q: "What premise underlies the foot-vs-foot ethics analogy?",
+        options: [
+          "Shared nervous system",
+          "Individual beings are interdependent modes of one substance",
+          "God judges every act",
+          "Evolved cooperation"
+        ],
+        correct: 1,
+        note: "Harming another damages the same whole both depend on."
+      }
+    ]
+  },
+  {
+    id: 33,
+    transcriptFile: "../transcripts/033-spinoza-pt-1-transcript.md",
+    wordcloud: "wordclouds/33.png",
+    title: "Spinoza: Excommunication and the Cost of Heresy",
+    teaser: "A mob lynching, a forced excommunication, and the letters that explain why Spinoza waited until his death to publish his most dangerous ideas.",
+    questions: [
+      {
+        q: "The host tells the story of Johan De Witt's murder to argue against a common claim that religion uniquely causes violent atrocities. What is the actual point?",
+        options: [
+          "Political violence is always less brutal than religious violence",
+          "Tribal violence occurs under nationalism and politics, not only religion",
+          "The Dutch were uniquely prone to violence during this era",
+          "Religion had already lost its influence in Europe by this point"
+        ],
+        correct: 1,
+        note: "De Witt, a political leader with no religious motive behind his death, was beaten, stabbed, and dismembered by a mob over pure factionalism (Orangeism vs. republicanism) — evidence that tribal violence isn't unique to religion. Jainism's nonviolent core shows the reverse isn't automatic either."
+      },
+      {
+        q: "After rejecting religion as the root cause, what does the host propose as the deeper underlying cause?",
+        options: [
+          "The absence of a strong central government to enforce order",
+          "Economic inequality between competing social classes",
+          "A lack of scientific education among the general population",
+          "Humanity's tendency to form tribes and marginalize outsiders"
+        ],
+        correct: 3,
+        note: "Abolishing religion wouldn't fix this — it would just remove one banner under which the same tribal, out-group-marginalizing instinct expresses itself; people would still divide along other lines and still turn violent."
+      },
+      {
+        q: "According to Leibniz's account, what did Spinoza's host/landlord do on the night of the massacre, and why did it matter?",
+        options: [
+          "He locked Spinoza inside to stop him from being killed posting a sign",
+          "He hid Spinoza's writings so the Inquisition couldn't confiscate them",
+          "He refused to let Spinoza speak with Leibniz about the massacre",
+          "He convinced Spinoza to formally join the Orangeist political faction"
+        ],
+        correct: 0,
+        note: "Spinoza wanted to publicly post a sign calling the mob 'Ultimi Barborum' (the most extreme barbarians) that very night; his host locked him inside to keep him from being killed himself — arguably the reason Spinoza survived to write his later work."
+      },
+      {
+        q: "Why does the lens-grinding occupation detail matter beyond being biographical trivia?",
+        options: [
+          "It shows Spinoza secretly supported the House of Orange-Nassau",
+          "It proves Spinoza had formal training as a natural scientist",
+          "It symbolizes the era and is later linked to the cause of his death",
+          "It explains why the Jewish community offered him money to stay quiet"
+        ],
+        correct: 2,
+        note: "Beyond being period color for the Scientific Revolution's obsession with optics, the detail pays off later: the glass dust Spinoza inhaled over years of lens-grinding is cited as the likely cause of the lung condition that killed him in 1677."
+      },
+      {
+        q: "Before excommunication, the authorities offered Spinoza a large monthly payment to stay quiet. What did he do instead?",
+        options: [
+          "He accepted it and stayed publicly silent",
+          "He sent them a mathematically structured outline of his own views",
+          "He publicly converted to Christianity to escape the pressure",
+          "He asked Leibniz to negotiate a compromise on his behalf"
+        ],
+        correct: 1,
+        note: "Rather than take the money, Spinoza sent a mathematically structured outline of his heretical views, comparing their certainty to a geometric proof — an assertive move that left the authorities no option but the formal excommunication that followed."
+      },
+      {
+        q: "In his reply to Albert Burgh, how does Spinoza justify claiming to know he holds the true philosophy?",
+        options: [
+          "By comparing it to feelings of certainty produced through prayer",
+          "By pointing to the number of people who already agreed with him",
+          "By citing consistency with Maimonides' writings",
+          "By comparing it to the self-evident certainty of a geometric truth"
+        ],
+        correct: 3,
+        note: "Spinoza grounds his certainty in mathematical self-evidence, not faith or feeling: he claims to know his philosophy is true the same way one knows a triangle's angles sum to two right angles, since a true idea carries its own certainty."
+      },
+      {
+        q: "What flaw does Spinoza identify in Albert's argument that Christianity's rapid spread through common people proves divine backing?",
+        options: [
+          "The same reasoning would apply equally to any group preaching in Christ's name",
+          "Uneducated people are never capable of spreading ideas effectively at all",
+          "Christianity actually spread more slowly than several other world religions",
+          "The claim relies on miracles, which Spinoza rejects as evidence entirely"
+        ],
+        correct: 0,
+        note: "Common people spreading a belief proving divine backing would equally justify any group or denomination preaching in Christ's name — it can't single out the Roman Catholic Church specifically."
+      },
+      {
+        q: "What does Spinoza claim is Albert's real underlying motive for devotion to the Church?",
+        options: [
+          "A genuine love of God expressed through communal worship",
+          "Fear of hell, which Spinoza calls the single cause of superstition",
+          "Peer pressure from Albert's newly adopted social circle",
+          "A sincere intellectual conviction reached through careful study"
+        ],
+        correct: 1,
+        note: "Spinoza accuses Albert of fear of hell, not love of God, as the real motive — a misplaced humility that trusts other people's authority over the reason Spinoza thinks God gave each person to use."
+      },
+      {
+        q: "How does the host connect Spinoza's decision never to publish Ethics during his lifetime back to the opening story?",
+        options: [
+          "He wanted to revise it further and never considered it finished",
+          "He lacked the financial means to have it printed and distributed",
+          "Expressing dangerous ideas openly could get a person killed by mobs",
+          "The Catholic Church had banned all publications on the nature of God"
+        ],
+        correct: 2,
+        note: "The same climate that let a mob murder and dismember a former head of state for political reasons made openly publishing heterodox religious views physically dangerous — which is why Ethics stayed unpublished until after Spinoza's death in 1677."
+      },
+      {
+        q: "What is the host's closing question actually asking?",
+        options: [
+          "What behavior follows if we are not unique individuals known by a personal God",
+          "Whether Albert Burgh ever forgave Spinoza for rejecting his letter",
+          "Whether Orangeism ultimately succeeded in restoring a monarchy",
+          "How lens grinding technology changed during the Scientific Revolution"
+        ],
+        correct: 0,
+        note: "The episode closes on a deliberate cliffhanger — what follows, behaviorally and ethically, if we are not unique individuals watched over by a personal, judging God — setting up the next episode's account of Spinoza's actual God-as-nature view."
       }
     ]
   },
@@ -2251,6 +2370,125 @@ const QUIZ_DATA = [
         ],
         correct: 3,
         note: "This cosmological backdrop is what raises the stakes from 'feel better today' to 'permanently escape a repeating cycle of suffering.'"
+      }
+    ]
+  },
+  {
+    id: 11,
+    transcriptFile: "../transcripts/011-stoicism-early-cynics-episode-11-transcript.md",
+    wordcloud: "wordclouds/11.png",
+    title: "Stoicism: Logic, Physics, and Ethics as One System",
+    teaser: "From Zeno's shipwreck and Diogenes' cynicism to the three interlocking pillars — logic, physics, ethics — that make stoic calm more than just detachment.",
+    questions: [
+      {
+        q: "The egg analogy (logic/physics/ethics as shell/yolk/white) — what's the deeper point?",
+        options: [
+          "Ethics borrowed from Aristotle's Lyceum",
+          "Logic was least important",
+          "Ethics can't be understood without physics and logic first",
+          "The three pillars developed over three separate centuries"
+        ],
+        correct: 2,
+        note: "Understanding fate and the divine logos (physics) is what justifies the ethical claim that worry is pointless — without the physics, the ethics is just an unsupported assertion."
+      },
+      {
+        q: "What's the real distinguishing factor between Epicurean and Stoic responses to a hypothetical apocalypse?",
+        options: [
+          "Stoics act reasonably while accepting fate, rather than merely enjoying detachment",
+          "Stoics deny the disaster is happening",
+          "Stoics fight physically more than Epicureans",
+          "Stoics reject reason in favor of following orders"
+        ],
+        correct: 0,
+        note: "Not passivity vs. struggle — both remain emotionally unbothered, but Stoics still act virtuously through reason while Epicureans simply withdraw to enjoy pleasure."
+      },
+      {
+        q: "What broader point does the host draw from Zeno's shipwreck?",
+        options: [
+          "It proves stoicism could only originate among sailors",
+          "It shows Zeno had already studied philosophy",
+          "It explains his rejection of an afterlife",
+          "It illustrates how a confrontation with mortality reoriented Zeno's priorities"
+        ],
+        correct: 3,
+        note: "The near-death experience shifted him from commerce toward philosophy — treating each day as a gift."
+      },
+      {
+        q: "Alexander says he'd want to be Diogenes. What similarity does the host identify?",
+        options: [
+          "Both secretly wanted to abandon responsibility",
+          "Both are essentially untouchable because neither has anything left to lose",
+          "Both believed strongly in fate and the afterlife",
+          "Both studied under Socrates"
+        ],
+        correct: 1,
+        note: "Alexander has everything, Diogenes wants nothing — both are immune to ordinary threats."
+      },
+      {
+        q: "What gap in cynicism drove Zeno to seek further education?",
+        options: [
+          "Cynicism required too much wealth",
+          "Cynics rejected the idea that virtue alone suffices",
+          "Cynicism lacked a physics that could justify why fate was real",
+          "Cynics thought nature was too chaotic to study"
+        ],
+        correct: 2,
+        note: "Ethics needs physics to ground the claim that worry is pointless — the same reason Epicureans needed atomism."
+      },
+      {
+        q: "What's the correct Stoic view of God/nature the host clarifies?",
+        options: [
+          "A humanlike being that exists outside the universe",
+          "God and nature are identical — the material universe itself is divine",
+          "God exists but doesn't touch matter",
+          "Nature means only the non-human environment"
+        ],
+        correct: 1,
+        note: "Not a sky god, not environmentalism — nature just is God, a rational material substance."
+      },
+      {
+        q: "What's the functional distinction between passive and active nature?",
+        options: [
+          "Passive governs living beings, active governs celestial bodies",
+          "Passive is fire and air, active is earth and water",
+          "Passive is the past, active is the present",
+          "Passive is the raw material, active is the reason that shapes it"
+        ],
+        correct: 3,
+        note: "Like a chair needing both material and an assembler — passive is earth/water, active is fire/air (the divine logos)."
+      },
+      {
+        q: "Zeno's hand-gesture demonstration — what does the progression represent?",
+        options: [
+          "Each stage from open palm to gripped fist marks increasing certainty, ending in unshakeable knowledge",
+          "The four classical elements in sequence",
+          "The four Stoic virtues",
+          "The different sense organs"
+        ],
+        correct: 0,
+        note: "Perception, then assent, then comprehension, then knowledge (grasping the fist) — each stage firmer than the last."
+      },
+      {
+        q: "The Lost scene (Locke and Charlie) — what's the actual Stoic connection?",
+        options: [
+          "Both are escaping a physical trap",
+          "Locke abandoned reason for instinct",
+          "Reasoned choice, not instinct, is what the scene and stoicism both treat as distinctly human",
+          "Suffering is always caused by others"
+        ],
+        correct: 2,
+        note: "Locke's line — choice over instinct is what separates humans from animals — mirrors Stoic reason as the human spark of the divine logos."
+      },
+      {
+        q: "Why did logic matter so much to the Stoics as one of the three pillars?",
+        options: [
+          "Mainly to win debates against Epicureans",
+          "Mastering logic was a direct way of aligning with the universe's governing reason",
+          "Because Chrysippus simply liked writing about it",
+          "Only for interpreting Cleanthes' poetry"
+        ],
+        correct: 1,
+        note: "Logic means understanding the divine logos itself, since nature is fundamentally rational."
       }
     ]
   },

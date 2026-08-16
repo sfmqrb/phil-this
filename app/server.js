@@ -1,22 +1,38 @@
 #!/usr/bin/env node
-// Zero-dependency static file server + JSON store for the quiz app.
+// Zero-dependency static file server + accounts + per-user quiz store for
+// the quiz app. Accounts and scores live in SQLite (app/data.sqlite) via
+// Node's built-in node:sqlite; see db.js.
 // Run:  node server.js [port]      (defaults to 4173)
 // Then open http://localhost:4173/ instead of double-clicking index.html.
 //
-// GET  /api/store    -> { scores, requests } currently saved on disk
-// POST /api/store    -> body { scores, requests }, overwrites store.json
-// GET  /api/search?q=<term> -> case-insensitive full-text search across every transcript
+// Auth:
+//   POST   /api/auth/register  { email, name, password } -> { user }
+//   POST   /api/auth/login     { email, password }        -> { user }
+//   POST   /api/auth/logout                                -> { ok }
+//   GET    /api/auth/me                                    -> { user | null }
+//   PATCH  /api/auth/me  { name, email, currentPassword?, newPassword? } -> { user }
+//
+// Per-user data (requires an authenticated session cookie):
+//   GET  /api/store  -> { scores, progress }
+//   POST /api/store  body { scores } -> overwrites the caller's own scores
+//   POST   /api/progress  { episodeId, currentIndex, score, missed } -> upsert
+//   DELETE /api/progress/:episodeId                                  -> clear
+//
+// GET /api/search?q=<term> -> case-insensitive, typo-tolerant full-text
+//                              search across every transcript
 "use strict";
 
 var http = require("http");
 var fs = require("fs");
 var path = require("path");
+var QuizLogic = require("./logic.js");
+var db = require("./db.js");
 
 var PORT = Number(process.argv[2]) || 4173;
 var APP_DIR = __dirname;
 var ROOT_DIR = path.join(APP_DIR, "..");
 var TRANSCRIPTS_DIR = path.join(ROOT_DIR, "transcripts");
-var STORE_FILE = path.join(APP_DIR, "store.json");
+var SESSION_COOKIE = "phil_this_sid";
 
 var MIME = {
   ".html": "text/html; charset=utf-8",
@@ -25,20 +41,6 @@ var MIME = {
   ".md": "text/plain; charset=utf-8",
   ".json": "application/json; charset=utf-8"
 };
-
-function readStore() {
-  try {
-    return JSON.parse(fs.readFileSync(STORE_FILE, "utf8"));
-  } catch (e) {
-    return { scores: {}, requests: [] };
-  }
-}
-
-function writeStore(data) {
-  fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2));
-}
-
-if (!fs.existsSync(STORE_FILE)) writeStore({ scores: {}, requests: [] });
 
 // ---------- transcript search index ----------
 // Built once at startup: every transcript's body (markdown header stripped),
@@ -82,12 +84,14 @@ function buildTranscriptIndex() {
       return;
     }
     var text = stripHeader(raw);
+    var textLower = text.toLowerCase();
     index.push({
       id: id,
       file: file,
       title: titleFor(id, labelById[id]),
       text: text,
-      textLower: text.toLowerCase()
+      textLower: textLower,
+      words: Array.from(new Set(QuizLogic.tokenize(textLower)))
     });
   });
   index.sort(function (a, b) { return a.id - b.id; });
@@ -97,55 +101,11 @@ function buildTranscriptIndex() {
 var TRANSCRIPT_INDEX = buildTranscriptIndex();
 console.log("Indexed " + TRANSCRIPT_INDEX.length + " transcripts for search.");
 
-function countOccurrences(haystackLower, needleLower) {
-  if (!needleLower) return 0;
-  var count = 0;
-  var pos = 0;
-  while (true) {
-    var idx = haystackLower.indexOf(needleLower, pos);
-    if (idx === -1) break;
-    count++;
-    pos = idx + needleLower.length;
-  }
-  return count;
-}
-
-function makeSnippet(text, matchIndex, matchLen) {
-  var padding = 70;
-  var start = Math.max(0, matchIndex - padding);
-  var end = Math.min(text.length, matchIndex + matchLen + padding);
-  var pre = text.slice(start, matchIndex).replace(/\s+/g, " ").trim();
-  var match = text.slice(matchIndex, matchIndex + matchLen);
-  var post = text.slice(matchIndex + matchLen, end).replace(/\s+/g, " ").trim();
-  if (start > 0) pre = "…" + pre;
-  if (end < text.length) post = post + "…";
-  return { pre: pre, match: match, post: post };
-}
-
 function searchTranscripts(query) {
-  var q = (query || "").trim();
-  if (!q) return { query: q, results: [] };
-  var qLower = q.toLowerCase();
-
-  var results = TRANSCRIPT_INDEX.map(function (entry) {
-    var count = countOccurrences(entry.textLower, qLower);
-    if (!count) return null;
-    var firstIdx = entry.textLower.indexOf(qLower);
-    var snippet = makeSnippet(entry.text, firstIdx, q.length);
-    return {
-      id: entry.id,
-      title: entry.title,
-      file: entry.file,
-      count: count,
-      pre: snippet.pre,
-      match: snippet.match,
-      post: snippet.post
-    };
-  }).filter(Boolean);
-
-  results.sort(function (a, b) { return b.count - a.count || a.id - b.id; });
-  return { query: q, results: results.slice(0, 50), totalMatches: results.length };
+  return QuizLogic.searchTranscripts(TRANSCRIPT_INDEX, query, { limit: 50 });
 }
+
+// ---------- small HTTP helpers ----------
 
 function sendJson(res, status, obj) {
   var body = JSON.stringify(obj);
@@ -192,31 +152,188 @@ function serveFile(res, filePath) {
   });
 }
 
+// ---------- cookies / sessions ----------
+
+function parseCookies(req) {
+  var header = req.headers.cookie || "";
+  var out = {};
+  header.split(";").forEach(function (part) {
+    var idx = part.indexOf("=");
+    if (idx === -1) return;
+    var k = part.slice(0, idx).trim();
+    var v = part.slice(idx + 1).trim();
+    if (k) { try { out[k] = decodeURIComponent(v); } catch (e) { out[k] = v; } }
+  });
+  return out;
+}
+
+function setSessionCookie(res, token) {
+  var maxAge = 30 * 24 * 60 * 60;
+  res.setHeader("Set-Cookie", SESSION_COOKIE + "=" + token + "; Path=/; HttpOnly; SameSite=Lax; Max-Age=" + maxAge);
+}
+
+function clearSessionCookie(res) {
+  res.setHeader("Set-Cookie", SESSION_COOKIE + "=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0");
+}
+
+function currentUser(req) {
+  var token = parseCookies(req)[SESSION_COOKIE];
+  var user = db.getSessionUser(token);
+  return user ? { user: user, token: token } : null;
+}
+
+function requireAuth(req, res) {
+  var session = currentUser(req);
+  if (!session) {
+    sendJson(res, 401, { error: "Sign in required." });
+    return null;
+  }
+  return session;
+}
+
+// ---------- validation ----------
+
+var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function validateEmail(email) {
+  return typeof email === "string" && EMAIL_RE.test(email.trim());
+}
+
+// ---------- routing ----------
+
 var server = http.createServer(function (req, res) {
   var pathname = decodeURIComponent(req.url.split("?")[0]);
 
-  if (pathname === "/api/search" && req.method === "GET") {
-    var parsedUrl = new URL(req.url, "http://localhost");
-    sendJson(res, 200, searchTranscripts(parsedUrl.searchParams.get("q")));
+  // ----- auth -----
+
+  if (pathname === "/api/auth/register" && req.method === "POST") {
+    readBody(req, function (err, body) {
+      if (err) { sendJson(res, 400, { error: "Invalid request." }); return; }
+      var email = String(body.email || "").trim();
+      var name = String(body.name || "").trim();
+      var password = String(body.password || "");
+      if (!validateEmail(email)) { sendJson(res, 400, { error: "Enter a valid email address." }); return; }
+      if (!name) { sendJson(res, 400, { error: "Enter a display name." }); return; }
+      if (password.length < 8) { sendJson(res, 400, { error: "Password must be at least 8 characters." }); return; }
+      if (db.getUserByEmail(email)) { sendJson(res, 409, { error: "An account with that email already exists." }); return; }
+      var user = db.createUser(email, name, password);
+      var token = db.createSession(user.id);
+      setSessionCookie(res, token);
+      sendJson(res, 200, { user: db.publicUser(user) });
+    });
     return;
   }
 
+  if (pathname === "/api/auth/login" && req.method === "POST") {
+    readBody(req, function (err, body) {
+      if (err) { sendJson(res, 400, { error: "Invalid request." }); return; }
+      var user = db.verifyLogin(String(body.email || ""), String(body.password || ""));
+      if (!user) { sendJson(res, 401, { error: "Wrong email or password." }); return; }
+      var token = db.createSession(user.id);
+      setSessionCookie(res, token);
+      sendJson(res, 200, { user: db.publicUser(user) });
+    });
+    return;
+  }
+
+  if (pathname === "/api/auth/logout" && req.method === "POST") {
+    var token = parseCookies(req)[SESSION_COOKIE];
+    db.deleteSession(token);
+    clearSessionCookie(res);
+    sendJson(res, 200, { ok: true });
+    return;
+  }
+
+  if (pathname === "/api/auth/me" && req.method === "GET") {
+    var session = currentUser(req);
+    sendJson(res, 200, { user: session ? db.publicUser(session.user) : null });
+    return;
+  }
+
+  if (pathname === "/api/auth/me" && req.method === "PATCH") {
+    var authed = requireAuth(req, res);
+    if (!authed) return;
+    readBody(req, function (err, body) {
+      if (err) { sendJson(res, 400, { error: "Invalid request." }); return; }
+      if (body.email !== undefined && !validateEmail(body.email)) {
+        sendJson(res, 400, { error: "Enter a valid email address." });
+        return;
+      }
+      if (body.email !== undefined) {
+        var existing = db.getUserByEmail(body.email);
+        if (existing && existing.id !== authed.user.id) {
+          sendJson(res, 409, { error: "Another account already uses that email." });
+          return;
+        }
+      }
+      try {
+        var updated = db.updateProfile(authed.user.id, {
+          name: body.name,
+          email: body.email,
+          currentPassword: body.currentPassword,
+          newPassword: body.newPassword
+        });
+        sendJson(res, 200, { user: db.publicUser(updated) });
+      } catch (e) {
+        sendJson(res, 400, { error: e.message || "Could not update profile." });
+      }
+    });
+    return;
+  }
+
+  // ----- per-user store -----
+
   if (pathname === "/api/store" && req.method === "GET") {
-    sendJson(res, 200, readStore());
+    var storeSession = requireAuth(req, res);
+    if (!storeSession) return;
+    sendJson(res, 200, db.getStoreForUser(storeSession.user.id));
     return;
   }
 
   if (pathname === "/api/store" && req.method === "POST") {
+    var postSession = requireAuth(req, res);
+    if (!postSession) return;
     readBody(req, function (err, body) {
-      if (err) { sendJson(res, 400, { error: "invalid JSON" }); return; }
-      var current = readStore();
-      var next = {
-        scores: body.scores && typeof body.scores === "object" ? body.scores : current.scores,
-        requests: Array.isArray(body.requests) ? body.requests : current.requests
-      };
-      writeStore(next);
+      if (err) { sendJson(res, 400, { error: "Invalid JSON" }); return; }
+      if (body.scores && typeof body.scores === "object") {
+        db.replaceScoresForUser(postSession.user.id, body.scores);
+      }
       sendJson(res, 200, { ok: true });
     });
+    return;
+  }
+
+  // ----- in-progress ("half-taken") quiz cache -----
+
+  if (pathname === "/api/progress" && req.method === "POST") {
+    var progressSession = requireAuth(req, res);
+    if (!progressSession) return;
+    readBody(req, function (err, body) {
+      if (err || typeof body.episodeId === "undefined") { sendJson(res, 400, { error: "Invalid request." }); return; }
+      db.saveProgress(progressSession.user.id, body.episodeId, {
+        currentIndex: body.currentIndex,
+        score: body.score,
+        missed: body.missed
+      });
+      sendJson(res, 200, { ok: true });
+    });
+    return;
+  }
+
+  if (pathname.indexOf("/api/progress/") === 0 && req.method === "DELETE") {
+    var deleteSession = requireAuth(req, res);
+    if (!deleteSession) return;
+    var episodeId = Number(pathname.slice("/api/progress/".length));
+    db.clearProgress(deleteSession.user.id, episodeId);
+    sendJson(res, 200, { ok: true });
+    return;
+  }
+
+  // ----- transcript search -----
+
+  if (pathname === "/api/search" && req.method === "GET") {
+    var parsedUrl = new URL(req.url, "http://localhost");
+    sendJson(res, 200, searchTranscripts(parsedUrl.searchParams.get("q")));
     return;
   }
 
@@ -241,5 +358,5 @@ var server = http.createServer(function (req, res) {
 
 server.listen(PORT, "127.0.0.1", function () {
   console.log("Philosophize This! quiz app running at http://localhost:" + PORT + "/");
-  console.log("Scores are being saved to " + STORE_FILE);
+  console.log("Accounts + scores are stored in " + path.join(APP_DIR, "data.sqlite"));
 });

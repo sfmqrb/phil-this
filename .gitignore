@@ -1,0 +1,3 @@
+app/data.sqlite
+app/data.sqlite-wal
+app/data.sqlite-shm

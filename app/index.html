@@ -9,18 +9,96 @@
 <body>
 <div class="wrap">
 
+  <nav class="view-tabs" id="viewTabs">
+    <button class="view-tab active" id="tabEpisodesBtn" type="button">Episodes</button>
+    <button class="view-tab" id="tabTranscriptsBtn" type="button">Transcripts</button>
+  </nav>
+
   <div id="dashboardView" class="dashboard-view">
     <header class="masthead">
       <p class="eyebrow">Philosophize This! · Quiz Ledger</p>
       <h1>Test the philosophy, not the podcast</h1>
-      <p class="subtitle">Ten questions per episode on the underlying ideas and arguments — not the host's stories or turns of phrase. Scores are saved on this device only.</p>
+      <p class="subtitle">Ten questions per episode on the underlying ideas and arguments — not the host's stories or turns of phrase. Sign in to save scores to an account; otherwise they stay on this device only.</p>
     </header>
     <hr class="rule" />
+
+    <div class="account-bar" id="accountBar">
+      <div class="account-guest" id="accountGuest">
+        <span class="account-status-text mono">Playing as guest — scores stay on this device.</span>
+        <div class="account-actions">
+          <button class="pill" id="showLoginBtn" type="button">Sign in</button>
+          <button class="restart" id="showRegisterBtn" type="button">Create account</button>
+        </div>
+      </div>
+
+      <div class="account-signed-in" id="accountSignedIn" style="display:none">
+        <span class="account-status-text mono">Signed in as <strong id="accountName"></strong> · <span id="accountEmail"></span></span>
+        <div class="account-actions">
+          <button class="restart" id="showProfileBtn" type="button">Profile</button>
+          <button class="restart" id="logoutBtn" type="button">Log out</button>
+        </div>
+      </div>
+
+      <form class="account-form" id="loginForm" style="display:none">
+        <p class="account-form-title mono">Sign in</p>
+        <input class="request-search mono" id="loginEmail" type="email" placeholder="Email" autocomplete="username" required />
+        <input class="request-search mono" id="loginPassword" type="password" placeholder="Password" autocomplete="current-password" required />
+        <p class="account-form-error mono" id="loginError"></p>
+        <div class="account-form-actions">
+          <button class="pill" type="submit">Sign in</button>
+          <button class="restart" type="button" id="loginCancelBtn">Cancel</button>
+        </div>
+      </form>
+
+      <form class="account-form" id="registerForm" style="display:none">
+        <p class="account-form-title mono">Create account</p>
+        <input class="request-search mono" id="registerName" type="text" placeholder="Display name" autocomplete="name" required />
+        <input class="request-search mono" id="registerEmail" type="email" placeholder="Email" autocomplete="username" required />
+        <input class="request-search mono" id="registerPassword" type="password" placeholder="Password (min 8 characters)" autocomplete="new-password" required minlength="8" />
+        <p class="account-form-error mono" id="registerError"></p>
+        <div class="account-form-actions">
+          <button class="pill" type="submit">Create account</button>
+          <button class="restart" type="button" id="registerCancelBtn">Cancel</button>
+        </div>
+      </form>
+
+      <form class="account-form" id="profileForm" style="display:none">
+        <p class="account-form-title mono">Profile</p>
+        <input class="request-search mono" id="profileName" type="text" placeholder="Display name" autocomplete="name" required />
+        <input class="request-search mono" id="profileEmail" type="email" placeholder="Email" autocomplete="username" required />
+        <input class="request-search mono" id="profileCurrentPassword" type="password" placeholder="Current password (only needed to change password)" autocomplete="current-password" />
+        <input class="request-search mono" id="profileNewPassword" type="password" placeholder="New password (leave blank to keep current)" autocomplete="new-password" />
+        <p class="account-form-error mono" id="profileError"></p>
+        <p class="account-form-success mono" id="profileSuccess"></p>
+        <div class="account-form-actions">
+          <button class="pill" type="submit">Save changes</button>
+          <button class="restart" type="button" id="profileCancelBtn">Close</button>
+        </div>
+      </form>
+    </div>
 
     <div class="suggestion" id="suggestionBox"></div>
 
     <p class="ledger-title">Episodes</p>
+    <input class="request-search mono" id="topicFilter" type="text" placeholder="Filter by topic or philosopher (e.g. “Spinoza”)…" />
     <div class="ep-list" id="episodeList"></div>
+    <div class="pagination" id="episodePagination">
+      <div class="pagination-size">
+        <label for="pageSizeSelect" class="mono">Show</label>
+        <select class="pagination-select mono" id="pageSizeSelect">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="pagination-nav">
+        <button class="pagination-btn mono" id="pagePrevBtn" type="button">&larr; Prev</button>
+        <span class="pagination-status mono" id="pageStatus"></span>
+        <button class="pagination-btn mono" id="pageNextBtn" type="button">Next &rarr;</button>
+      </div>
+    </div>
+    <div class="topic-other" id="topicOther" style="display:none"></div>
 
     <p class="ledger-title">Search transcripts</p>
     <p class="request-intro">Search the full text of all 245 episode transcripts — not just titles. Case doesn't matter.</p>
@@ -29,20 +107,30 @@
       <p class="search-status mono" id="searchStatus"></p>
       <div class="search-results" id="searchResults"></div>
     </div>
+  </div>
 
-    <p class="ledger-title">Request more quizzes</p>
-    <p class="request-intro">Pick episodes from the full 245-episode archive that don't have a quiz yet. Save your list, then hand the copied episode numbers to Claude in a future session to have quizzes written for them.</p>
-    <div class="request-panel">
-      <input class="request-search mono" id="requestSearch" type="text" placeholder="Search by episode number or title…" />
-      <div class="request-list" id="requestList"></div>
-      <div class="request-footer">
-        <span class="request-count mono" id="requestCount">0 selected</span>
-        <div class="request-footer-actions">
-          <button class="restart" id="requestSaveBtn">Save list</button>
-          <button class="pill" id="requestCopyBtn">Copy saved list</button>
+  <div id="transcriptsView" class="transcripts-view">
+    <header class="masthead">
+      <p class="eyebrow">Philosophize This! · Transcripts</p>
+      <h1>Every episode transcript, by title</h1>
+      <p class="subtitle">Browse all 245 transcripts and read them right here — no quiz required.</p>
+    </header>
+    <hr class="rule" />
+
+    <input class="request-search mono" id="transcriptListFilter" type="text" placeholder="Filter by title…" />
+    <div class="transcript-list" id="transcriptTitleList"></div>
+
+    <div class="transcript-reader" id="transcriptReader" style="display:none">
+      <button class="back-link mono" id="transcriptReaderBackBtn">&larr; all transcripts</button>
+      <div class="quiz-header-row">
+        <p class="eyebrow" id="transcriptReaderTitle"></p>
+        <div class="transcript-reader-actions">
+          <button class="transcript-link mono" id="transcriptCopyBtn" type="button">Copy transcript</button>
+          <a class="transcript-link mono" id="transcriptReaderLink" href="#" target="_blank" rel="noopener">Open raw ↗</a>
         </div>
       </div>
-      <p class="request-saved mono" id="requestSavedLine"></p>
+      <p class="search-status mono" id="transcriptReaderStatus"></p>
+      <div class="transcript-body" id="transcriptReaderBody"></div>
     </div>
   </div>
 
@@ -51,6 +139,11 @@
     <div class="quiz-header-row">
       <p class="eyebrow" id="quizEpLabel"></p>
       <a class="transcript-link mono" id="quizTranscriptLink" href="#" target="_blank" rel="noopener">Read full transcript ↗</a>
+    </div>
+
+    <div class="resume-banner mono" id="resumeBanner" style="display:none">
+      <span id="resumeBannerText"></span>
+      <button class="search-row-link" id="resumeRestartBtn" type="button">Start over</button>
     </div>
 
     <a class="wordcloud-frame" id="quizWordcloudLink" href="#" target="_blank" rel="noopener" style="display:none">
