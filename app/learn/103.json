@@ -1,0 +1,30 @@
+{
+  "id": 103,
+  "argument": "This episode tells the story of a 300-year quest for certainty that runs from Descartes through Kant, the post-Kantian idealists, and Husserl to Sartre. Descartes' rationalist method, demanding claims that are 'clear and distinct,' arrives at the cogito but leaves us certain only of our own minds (phenomena, not external objects), a solipsism his God-argument failed to escape. Kant's Copernican turn made the mind an active organizer of phenomena while placing noumena forever out of reach, and post-Kantian idealists pushed this further than Kant intended, doubting even that an external world exists at all. Husserl's phenomenology tried to rescue certainty about the external world by rigorously studying consciousness itself; Heidegger and then Sartre inherited this project, with Sartre ultimately retaining consciousness (unlike Heidegger) while rejecting universal-essence explanations of the individual, as his critique of a Flaubert biography illustrates.",
+  "keyIdeas": [
+    "Descartes' rationalist method sought mathematical-style certainty, governed by the rule to assert nothing not 'clear' and 'distinct,' concluding that the very act of doubting/thinking proves a thinking thing exists ('I think, therefore I am') -- the one thing he has direct rather than indirect awareness of.",
+    "Because sensory errors (like a stick appearing bent in water) show we're never directly aware of external objects, only of how they appear to us, Descartes' God-argument against solipsism convinced 'nobody.'",
+    "Kant's 'Copernican turn' argues the mind actively organizes phenomena rather than passively receiving them, distinguishing knowable phenomena from unknowable noumena ('things-in-themselves') -- his transcendental idealism, which post-Kantian idealists pushed further than he intended, doubting even that an external world exists at all.",
+    "Husserl's phenomenology tries to rescue certainty about the external, physical world (not just the mind) by rigorously studying the structure of consciousness itself, distinguishing the doubt-everything 'phenomenological attitude' from the default, presupposition-laden 'natural attitude.'",
+    "Sartre, unlike Heidegger, retains consciousness as inseparable from the world; his Flaubert argument shows that reducing a person to universal psychological drives leaves unexplained why those drives produced this specific individual's choices, motivating his rejection of universal-essence explanations."
+  ],
+  "terms": [
+    { "term": "Clear and distinct", "def": "Descartes' criteria for a rigorous claim: nothing obscure ('clear') and nothing confused ('distinct')." },
+    { "term": "Phenomena / noumena", "def": "Kant's distinction between the world of human experience as structured by the mind (phenomena) and the unknowable world of 'things-in-themselves' (noumena)." },
+    { "term": "Solipsism", "def": "The view that one can be certain only of one's own existence/mind, not of an external world." },
+    { "term": "Transcendental idealism", "def": "Kant's position that all we can know is the mind-structured world of phenomena, never things-in-themselves." },
+    { "term": "Natural attitude / phenomenological attitude", "def": "Husserl's distinction between the default, presupposition-laden everyday stance and the rigorous, doubt-everything philosophical stance -- mutually exclusive ways of orienting to the world." }
+  ],
+  "anchors": [
+    "a philosopher truly concerned with the quest for certainty shall henceforth never make any claim that is not, one, so clear that there is nothing obscure about it and, two, so distinct that there’s nothing confused about it.",
+    "to him, at the very least we must be some sort of thinking thing that exists.",
+    "we’re not directly aware of the things that exist in the world; we’re only directly aware of the way that they appear to us or the phenomena as they appear to us.",
+    "an argument, for instance, where the existence of God was a certainty and that, therefore, God would never deceive us planting all these thoughts in our head about a world existing if there wasn’t actually one. Nobody else was buying it.",
+    "Kant, on the other hand, says that when you take a closer look at the mind, how it receives these phenomena, the mind actually contributes a lot to them.",
+    "There’s the world of things in themselves: that’s the world out there beyond our basic map of reality that we’re reading with our senses. And then there’s the world of human experience",
+    "if we can’t ever know anything about this world of things in themselves, how can we know for certain there’s more than one thing responsible for all these phenomena? How can we know that these things actually cause the phenomena? Isn’t causality just a category of the mind?",
+    "He wants to tweak our methods of looking at these phenomena, study the very structure of consciousness, and arrive at a certainty that includes an external, physical world among other things.",
+    "the phenomenological attitude and the natural attitude are mutually exclusive. It’s impossible to look at the world in both ways simultaneously.",
+    "To Sartre, it’s consciousness and the world that are fundamentally inseparable."
+  ]
+}

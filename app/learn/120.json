@@ -1,0 +1,45 @@
+{
+  "id": 120,
+  "argument": "This episode traces the rise and collapse of logical positivism, the movement that restricted meaningful philosophy to what could be verified logically or empirically, and dismissed everything else - ethics, aesthetics, theology - as meaningless 'metaphysics.' Early Wittgenstein's Tractatus reinforced this by arguing language could only sensically describe empirical states of affairs. But the Verification Principle collapsed under its own weight: it was self-refuting, and Popper showed that if verification is the standard of meaning, science itself must be discarded, since general laws can never be fully verified. Quine and Kuhn then undermined the movement's remaining foundations, showing observation is theory-laden and that scientific paradigms are incommensurable with each other.",
+  "keyIdeas": [
+    "Logical positivism (logical empiricism) holds philosophy should restrict itself to what can be known via logic/mathematics and sense-data/empirical observation, using 'metaphysics' as a pejorative catch-all for unverifiable ethical, aesthetic, or theological claims.",
+    "The Verification Principle holds that a statement's meaning is identical to its method of verification: an unverifiable proposition isn't just false, it is literally meaningless - a view reinforced by early Wittgenstein's Tractatus, where ethics and aesthetics can only be 'shown,' not 'said.'",
+    "The Verification Principle is self-refuting (the claim that unverifiable statements are meaningless is itself unverifiable), and Popper (building on Hume's problem of induction, illustrated by the discovery of black swans) showed that if verification equals meaning, science itself must be discarded, since scientific laws can never be fully verified.",
+    "Popper's alternative, falsificationism, holds that science progresses not by verifying theories true but by falsifying wrong ones; Quine's 'two dogmas of empiricism' further argued the analytic/synthetic divide is untenable and that observation is always theory-laden, not raw sense-data.",
+    "Kuhn's paradigm shifts show science advances through revolutions, not steady cumulative progress, and that paradigms are 'incommensurable' - no direct translation exists across a shift - implying verification/falsification criteria are themselves paradigm-relative, not neutral arbiters of meaning."
+  ],
+  "terms": [
+    {
+      "term": "logical positivism",
+      "def": "Also called logical empiricism; the movement holding philosophy should restrict itself to logical/mathematical and empirically verifiable claims."
+    },
+    {
+      "term": "the Verification Principle",
+      "def": "The central tenet that a statement's meaning equals its method of verification; unverifiable statements are meaningless."
+    },
+    {
+      "term": "falsificationism",
+      "def": "Popper's view that science progresses by ruling out false theories through falsification, not by verifying theories true."
+    },
+    {
+      "term": "two dogmas of empiricism",
+      "def": "Quine's critique of the analytic/synthetic divide and the idea that experience can be reduced to raw, uninterpreted sense-data."
+    },
+    {
+      "term": "incommensurability",
+      "def": "Kuhn's claim that concepts across a scientific paradigm shift cannot be directly translated into one another."
+    }
+  ],
+  "anchors": [
+    "Why can’t there be a group of thinkers that are solely in the business of focusing on what we can know? Logical truths and empirical truths, logical empiricism",
+    "Metaphysics, to the logical positivists, is a pejorative term to just describe any of this unverifiable speculation that theologians and philosophers have been throwing around for hundreds of years",
+    "for the sense of a proposition is in its method of verification",
+    "Anything else, be it in the realm of ethics, aesthetics, metaphysics, whatever it is, cannot be said in a sensical way",
+    "making the claim that metaphysical assertions are meaningless is itself a metaphysical assertion",
+    "for hundreds of years in Western Europe it was believed that all swans were white",
+    "the role of induction and scientific experiments is not to verify or confirm scientific theories but to falsify or disconfirm scientific theories that are wrong",
+    "he calls the two dogmas of empiricism: number one, this age-old idea from the Enlightenment of there being a clear divide between analytic and synthetic propositions",
+    "in between these revolutions there are long, stable periods where scientists conduct what he calls “normal science”",
+    "the word “gravity” means something entirely different to a scientist today than it did to Newton"
+  ]
+}

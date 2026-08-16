@@ -1,0 +1,30 @@
+{
+  "id": 21,
+  "argument": "Saint Thomas Aquinas fused Aristotle's philosophy with Christian faith, most famously through the unmoved mover argument: since nothing moves without being moved by something else, and this chain cannot regress forever, there must be a first, itself-unmoved mover, which Aquinas calls God. He also resolved the apparent conflict between Aristotle's eternal universe and the Church's creation doctrine by arguing that reason alone cannot prove the world had a beginning, so an eternally existing universe could still be entirely dependent on God as its creator.",
+  "keyIdeas": [
+    "What seems 'obviously' true depends on what alternative explanations an era has available -- ancient Greeks saw cosmic design as obvious before Darwin offered natural selection as an alternative, which matters for reading Aquinas fairly.",
+    "In the stick analogy, since a stick only moves when moved by a hand, and that chain of movers cannot regress infinitely, there must be a first, unmoved mover -- which Aquinas identifies as God.",
+    "Movement for Aristotle and Aquinas means any change from potentiality to actuality, not just change of location -- wood has the potentiality to become fire, and becoming fire counts as movement.",
+    "Aquinas distinguishes the unmoved mover from modern gravity: gravity exists within time and could conceivably have a beginning, while God is eternal and exists external to time altogether.",
+    "Aquinas resolved the tension between Aristotle's eternal universe and the Church's creation doctrine by arguing reason alone cannot prove the world had a beginning -- like an eternal foot could produce an eternally existing footprint, an eternal universe could still be entirely dependent on God as its creator."
+  ],
+  "terms": [
+    { "term": "Unmoved mover", "def": "Aristotle's and Aquinas's term for the first cause of all motion, which is itself moved by nothing else." },
+    { "term": "Potentiality and actuality", "def": "Aristotle's distinction between what a thing could become (like wood's potential to be fire) and its actual current state; movement is the change from one to the other." },
+    { "term": "Prime mover argument", "def": "Aquinas's argument, adapted from Aristotle, that the chain of movers in the universe requires a first, unmoved mover, identified as God." },
+    { "term": "Footprint-in-the-sand analogy", "def": "Aquinas's image, quoted in the episode as 'a footprint in the sand is due to the foot that makes it' -- showing something (the universe) can be entirely dependent on its cause (an eternal foot) without that dependence requiring a first moment in time." },
+    { "term": "Infinity (Aristotle's physics)", "def": "Aristotle's view that an infinite physical body is impossible because it couldn't have a coherent 'natural place,' while time can be infinite since every moment has a preceding one." }
+  ],
+  "anchors": [
+    "The people in this song are a classic example of mistaking correlation with causation",
+    "it gives us an alternative theory about how things could be seemingly providentially ordered, seemingly designed",
+    "we must reach a prime mover which is itself not moved by anything",
+    "wood has the potentiality to be fire, but for it to actually become fire, it needs to be moved by something",
+    "God is eternal, meaning that it has always and will always exist external to time itself",
+    "They’ll threaten to beat you up instead of submitting that you have won this argument",
+    "reason alone can never demonstrate that the world had a beginning",
+    "if that foot was an eternal foot, if that foot had always existed, then there wouldn’t be a time before that footprint existed",
+    "how can the infinite have one part up and the other down, or an extremity and a center?",
+    "for every year or month, there has to be a preceding year or month"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 121,
+  "argument": "In Discipline and Punish, Foucault argues that the shift from public torture to modern imprisonment was not moral progress but a change in the tactics of power: control moved from punishing the criminal's body to disciplining the mind through constant surveillance, normalization, and examination. This same three-pronged method, epitomized by Bentham's panopticon, now pervades modern institutions like workplaces, producing self-policing subjects, and Foucault ultimately locates true power not in politics or economics but in whoever controls the knowledge and categories people use to understand themselves.",
+  "keyIdeas": [
+    "Foucault avoids the word 'history' because it implies a narrative of near-constant moral progress, an assumption he wants to question rather than accept.",
+    "In 1750s societies, the true function of criminal punishment was maintaining the sovereign's authority and social order, not justice or fairness; botched public executions became a liability because the same visibility that proved the sovereign's power also revealed exactly who to overthrow.",
+    "By 1837, punishment had shifted from spectacular bodily harm to disciplining the mind, using a three-pronged method of surveillance, normalization, and examination epitomized by Bentham's panopticon.",
+    "Modern institutions, from prisons to corporations, apply this same method so effectively that people become both prisoner and warden, policing themselves without needing an external enforcer.",
+    "Foucault locates true power not in political office or economic wealth but in whoever controls the knowledge, categories, and vocabulary people use to understand themselves."
+  ],
+  "terms": [
+    { "term": "genealogy / archaeology", "def": "Foucault's alternative terms to 'history,' describing methods that don't assume a narrative of progress." },
+    { "term": "panopticon", "def": "Bentham's prison design where a guard can see any cell but is never visible to prisoners, so they behave as if always watched." },
+    { "term": "surveillance, normalization, examination", "def": "The three-pronged method Foucault says has become the dominant way of controlling human behavior in modern institutions." },
+    { "term": "docile subjects", "def": "People made useful, harmless, and compliant through disciplinary power rather than through force." },
+    { "term": "sovereign power", "def": "The older model of power centered on a king or state that punishes the body and can take life." }
+  ],
+  "anchors": [
+    "so often the word “history” brings with it a connotation that we exist in our modern world at the end of this long, historical timeline of events that have led to near constant progress",
+    "that feeling of moral superiority so often gets us to never consider the similarities between the world back then and the world as it is now",
+    "the primary function was its ability to maintain social order",
+    "there is zero confusion in anyone’s mind when looking for the people in power that need to be overthrown and killed",
+    "There is a fundamental shift from the physical punishment of the person’s body, like we used to do, to the more modern disciplining and reformation of the person’s mind",
+    "the only reasonable thing the prisoners can do in a prison that’s designed this way is to behave every second of every day as though they’re being watched",
+    "they will actually police themselves to stay that way",
+    "the goal of the penal system is reforming criminals to fit a pre-existing mold of what a normal person is, not direct retribution for a crime",
+    "they have an ability to show us exactly what we are, the law-abiding occupants and active participants in what is effectively a massive social prison",
+    "if you can dictate the parameters that those people use to understand the most foundational things about their existence"
+  ]
+}

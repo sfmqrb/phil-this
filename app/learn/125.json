@@ -1,0 +1,30 @@
+{
+  "id": 125,
+  "argument": "Deleuze rejects the idea that philosophy is a failed search for objective truth and instead defines philosophy as the 'art of concept creation': philosophers don't discover pre-existing truths but create ontological frameworks that bring order to the ungraspable chaos of reality. This creative work is distinct from but as valuable as science, which only analyzes concepts once philosophy has united them, and it rests on a 'plane of immanence' that precedes and enables concept-creation, in a deliberate rejection of transcendence.",
+  "keyIdeas": [
+    "Deleuze finds the 'philosophy failed to reach truth' critique uninteresting because, as a post-structuralist, he never assumed truth was reachable in the first place, so judging philosophy by that standard misses the point.",
+    "Philosophy is 'the art of concept creation,' not discovery: philosophers create ontological frameworks that bring order to reality's ungraspable chaos rather than uncovering truths that were already there.",
+    "Per Todd May, continental philosophy's guiding question shifted from 'how should one act' to 'how might one live' after Nietzsche's death of God removed the possibility of objective morality.",
+    "Science only analyzes existing concepts: a field can't study something as a unified object until philosophy's act of concept creation has first united its many effects into a single concept, like 'star,' a process grounded on a 'plane of immanence' that precedes concept-creation itself, much as wood exists before a woodworker carves it.",
+    "Old philosophers like Descartes remain valuable not because they were right, but because they offer a window into a different way of ordering the chaos of reality, making history 'a goldmine of useful ideas.'"
+  ],
+  "terms": [
+    { "term": "concept creation", "def": "Deleuze's definition of what philosophy actually does, as opposed to discovering pre-existing truth." },
+    { "term": "plane of immanence", "def": "The underlying set of parameters, preceding concepts themselves, that makes concept-creation possible." },
+    { "term": "conceptual personae", "def": "The voice or human character through which a philosophy is presented, giving it context and making it make sense." },
+    { "term": "deconstruction", "def": "One postmodern strategy, popularized by a couple of key thinkers, for unraveling grand narratives; not the whole of postmodernism." },
+    { "term": "transcendence vs. immanence", "def": "The classic philosophical dichotomy that Deleuze's plane of immanence responds to by rejecting transcendence." }
+  ],
+  "anchors": [
+    "they were never going to arrive at the truth about things. It was impossible the whole time",
+    "creating ontological frameworks that help the people of their time understand the truly ungraspable chaos that reality is",
+    "Nietzsche’s cited as the guy responsible for it in many ways, the death of god, the death of the possibility for us to arrive at any sort of objective morality",
+    "Before we had the concept of a photon, are the rays of light distinct from the sun or part of it?",
+    "it’s not until that concept creation happens that we can have scientists dedicated to studying this unity that we’ve defined as a star",
+    "the woodworker didn’t create the wood that they’re using",
+    "The value of Descartes, Hume, Kant, and all the rest of them is that they can offer us a window into a different way that people have brought order to this chaos",
+    "the voice a particular philosophy is presented in that gives it context and allows it to make sense",
+    "Deconstruction is just one strategy of many that was proposed",
+    "He’s rejecting this transcendence and is instead offering this “plane of immanence” as an explanation"
+  ]
+}

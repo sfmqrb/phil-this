@@ -1,0 +1,30 @@
+{
+  "id": 29,
+  "argument": "This episode traces Descartes's path from a sickly, largely solitary childhood to the systematic, mathematics-driven visionary who dreamed of a Mathesis Universalis - a single method that could unify and drive progress across all the separate sciences. The episode frames Descartes as a Steve Jobs-like figure who treated obstacles as opportunities rather than something to avoid, and shows how his systematic habits of mind, epitomized by the Rules for the Direction of the Mind, applied the same rigorous, assumption-checking approach to both scientific problems and everyday life.",
+  "keyIdeas": [
+    "The canned-tuna-vs.-fresh-tuna contrarian-friend example shows that some claims (like 2+2=4) are certain for everyone, while preferences are shaped by flawed individual senses, raising the question of what standard should ground all future knowledge.",
+    "Descartes's 'Mathesis Universalis' was his ambition to find a single, mathematics-based method that could unify and drive progress across all the separate sciences, which at the time seemed needlessly fragmented.",
+    "This ambition was more realistic in Descartes's era because comparatively little was known in any given field, unlike today when mastering even one field takes a decade or more.",
+    "Descartes's childhood - his mother's death, his father's absences, and his frequent illness - left him alone with his sickness, and noticing contradictions even in what his schooling called 'certainties' planted the question of whether anything can be known for certain.",
+    "Descartes treated adversity like Steve Jobs did: not as an obstacle to circumvent (the 'tourist' approach) but as an opportunity for growth, applying the same systematic scrutiny to thought that a master applies to any skill, as in Rule Nine's instruction to dwell on even the smallest facts until the truth is seen clearly."
+  ],
+  "terms": [
+    { "term": "Mathesis Universalis", "def": "Descartes's proposed universal, mathematics-based method meant to unify and drive progress across all the different sciences." },
+    { "term": "Rules for the Direction of the Mind", "def": "An unfinished treatise in which Descartes lays out rules for thinking correctly in science and philosophy, including breaking problems into their smallest parts." },
+    { "term": "Isaac Beeckman", "def": "The mentor whose posted math challenge and friendship helped Descartes rediscover his love of mathematics after being turned off by his schooling." },
+    { "term": "systematic thinking", "def": "The hallmark of Descartes's approach - developing a substantive reason for every step taken, rather than acting without examining the process, as illustrated by the Gordon Ramsay eggs example." },
+    { "term": "Rule Three", "def": "Descartes's instruction to inquire not what others think or what we conjecture, but only what we can clearly perceive or deduce with certainty, illustrated by the surprise-party example about misreading evidence based on preconceived expectations." }
+  ],
+  "anchors": [
+    "every single preference we have, from the taste of this hamburger vs that hamburger or the color of these curtains over those curtains, all of these preferences are based on our own individually flawed sense organs and their map of the world",
+    "Or a sort of universal language that relies heavily on mathematics to try to arrive at scientific truths and hopefully combine all these different areas of study into one comprehensive one",
+    "back in the time of Descartes and this famous divide, we didn't know as much in all of these fields. It was a perfectly reasonable ambition to think that a single man with no life and an inferiority complex could find a universal approach to these things",
+    "This supposedly led him to ask the question, Can we know anything for certain?",
+    "Beeckman was the friend and mentor that got Descartes focused",
+    "This is the moment when he leveled up from transient genius to effective visionary genius",
+    "they don't see it as an annoying obstacle. They see it as an opportunity for growth",
+    "developing a substantive reason for WHY you are doing each and every individual thing you do",
+    "We ought to give the whole of our attention to the most insignificant and most easily mastered facts, and remain a long time in contemplation of them until we are accustomed to behold the truth clearly and distinctly",
+    "she's setting up a surprise party for you"
+  ]
+}

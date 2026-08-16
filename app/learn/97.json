@@ -1,0 +1,31 @@
+{
+  "id": 97,
+  "argument": "Wittgenstein's work, across two very different books, asks what language can and cannot do. In the early Tractatus he argues language works by picturing states of affairs in the world, so any proposition reaching beyond that limit — like 'what is the meaning of life?' — isn't false but meaningless, and philosophy's job is to show us the limits of what can be said. Later, in Philosophical Investigations, he reverses course: the meaning of a word isn't fixed by necessary and sufficient conditions but comes from how it's actually used within a community, with cases like 'game' linked only by overlapping 'family resemblances' rather than one shared essence.",
+  "keyIdeas": [
+    "Under the picture theory, a proposition breaks into names (terms for things in the world) and their logical configuration, which mirrors the arrangement of facts when language is used properly.",
+    "A proposition is true if it pictures reality as it is, false if it describes a possible but non-actual state of affairs, and meaningless if it goes beyond what language can describe at all.",
+    "Formal logic, unlike pure mathematics, can be applied directly to evaluate whether everyday human thinking is clearly structured, which is why Wittgenstein saw it as central to understanding language.",
+    "Questions like 'what is the meaning of my life?' are nonsensical to the Tractatus because language was built to describe states of affairs, not transcendental things — some truths can only show themselves, not be said.",
+    "In Philosophical Investigations, Wittgenstein rejects necessary-and-sufficient-condition definitions in favor of family resemblance (as with 'game') and argues meaning is inescapably social, as the beetle-in-a-box thought experiment shows."
+  ],
+  "terms": [
+    { "term": "Picture theory", "def": "Wittgenstein's early view that a well-formed proposition pictures or describes a state of affairs in the world." },
+    { "term": "Names", "def": "The terms within a proposition that describe things in the world, whose logical arrangement is meant to mirror reality." },
+    { "term": "Necessary/sufficient conditions", "def": "The older theory of definition — that a word's meaning is fixed by conditions every instance must meet — which Wittgenstein later rejects." },
+    { "term": "Family resemblance", "def": "The loose, overlapping similarities (as among different 'games') that link a word's uses without any single common trait." },
+    { "term": "Beetle in a box", "def": "Wittgenstein's thought experiment showing that a private, unshareable meaning collapses into meaninglessness — language requires a community." },
+    { "term": "Fly bottle", "def": "Wittgenstein's metaphor for being trapped by confused, language-rooted misconceptions, which philosophy's job is to release us from." }
+  ],
+  "anchors": [
+    "the function of proper effective language is descriptive. It describes state of affairs occurring in the world.",
+    "things he called names, which are terms that describe things in the world",
+    "if the proposition describes something that is impossible or goes beyond the limits of language, the proposition is meaningless.",
+    "unlike math, at least logic can be applied directly to our thinking and help us determine if we’re thinking correctly.",
+    "this thing designed to describe states of affairs in the world",
+    "language is insufficient at describing these transcendental concepts",
+    "stop trying to find a perfect set of necessary and sufficient conditions",
+    "Wittgenstein says that what we’re sensing there are family resemblances between things.",
+    "there’s no way for you to ever be able to use the word “beetle” in any sort of meaningful way.",
+    "We’re trapped in a metaphorical fly bottle is what he’s saying. Philosophy’s job is to show us the way out."
+  ]
+}

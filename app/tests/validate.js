@@ -126,7 +126,44 @@ QUIZ_DATA.forEach(function (ep) {
   }
 });
 
-// ---------- 4. Pure logic tests (logic.js) ----------
+// ---------- 4. Learning paths (paths.js) ----------
+// paths.js is optional: a checkout without it still has a working app (the
+// paths strip just stays hidden), so a missing file warns rather than fails.
+
+(function () {
+  var pathsFile = path.join(APP_DIR, "paths.js");
+  var pathsExist = fs.existsSync(pathsFile);
+  warn(pathsExist, "paths.js not found — skipping learning-path checks");
+  if (!pathsExist) return;
+
+  var LEARNING_PATHS = require(pathsFile);
+  check(Array.isArray(LEARNING_PATHS) && LEARNING_PATHS.length > 0, "LEARNING_PATHS must be a non-empty array");
+  if (!Array.isArray(LEARNING_PATHS)) return;
+
+  var seenKeys = {};
+  var seenEpisodeIds = {};
+
+  LEARNING_PATHS.forEach(function (p, pIdx) {
+    var where = "learning path " + (p && p.key ? "“" + p.key + "”" : "at index " + pIdx);
+    check(typeof p.key === "string" && p.key.trim().length > 0, where + ": key must be a non-empty string");
+    check(!seenKeys[p.key], where + ": duplicate path key");
+    seenKeys[p.key] = true;
+    check(typeof p.title === "string" && p.title.trim().length > 0, where + ": title must be a non-empty string");
+    check(typeof p.blurb === "string" && p.blurb.trim().length > 0, where + ": blurb must be a non-empty string");
+    check(Array.isArray(p.episodes) && p.episodes.length > 0, where + ": episodes must be a non-empty array");
+
+    (p.episodes || []).forEach(function (id) {
+      check(!!indexById[id], where + ": episode #" + id + " is not in episode-index.js");
+      check(!seenEpisodeIds[id], "episode #" + id + " appears in more than one learning path");
+      seenEpisodeIds[id] = true;
+    });
+  });
+
+  var uncovered = EPISODE_INDEX.filter(function (e) { return !seenEpisodeIds[e.id]; }).map(function (e) { return e.id; });
+  check(uncovered.length === 0, uncovered.length + " episode(s) from episode-index.js are in no learning path: " + uncovered.slice(0, 10).join(", "));
+})();
+
+// ---------- 5. Pure logic tests (logic.js) ----------
 
 function assertEqual(actual, expected, message) {
   check(actual === expected, message + " (expected " + JSON.stringify(expected) + ", got " + JSON.stringify(actual) + ")");
@@ -191,6 +228,88 @@ check(/again from the top/i.test(QuizLogic.scoreCommentary(1, 10)), "scoreCommen
   var suggestion = QuizLogic.computeSuggestion(scores, QUIZ_DATA);
   check(suggestion.episode === null, "computeSuggestion with all-perfect scores should suggest nothing further");
   check(suggestion.cta === null, "computeSuggestion with all-perfect scores should have no call to action");
+})();
+
+// applyReviewAnswer() — the spaced-repetition ladder
+(function () {
+  var deck = {};
+  QuizLogic.applyReviewAnswer(deck, 4, 2, false, "2026-01-01T00:00:00.000Z");
+  var entry = deck["4:2"];
+  check(!!entry, "applyReviewAnswer enrols a question answered wrong");
+  assertEqual(entry.stage, 0, "a freshly enrolled entry starts at stage 0");
+  assertEqual(entry.due, "2026-01-02T00:00:00.000Z", "a freshly enrolled entry is due tomorrow");
+  assertEqual(entry.lapses, 0, "a freshly enrolled entry has no lapses yet");
+  assertEqual(entry.added, "2026-01-01T00:00:00.000Z", "a freshly enrolled entry records when it was added");
+
+  QuizLogic.applyReviewAnswer(deck, 4, 2, true, "2026-01-02T00:00:00.000Z");
+  assertEqual(deck["4:2"].stage, 1, "a correct review advances the stage");
+  assertEqual(deck["4:2"].due, "2026-01-05T00:00:00.000Z", "stage 1 pushes the next review out 3 days");
+
+  QuizLogic.applyReviewAnswer(deck, 4, 2, true, "2026-01-05T00:00:00.000Z");
+  assertEqual(deck["4:2"].stage, 2, "a second correct review advances again");
+  assertEqual(deck["4:2"].due, "2026-01-12T00:00:00.000Z", "stage 2 pushes the next review out 7 days");
+
+  QuizLogic.applyReviewAnswer(deck, 4, 2, false, "2026-01-12T00:00:00.000Z");
+  assertEqual(deck["4:2"].stage, 0, "getting it wrong again resets to stage 0");
+  assertEqual(deck["4:2"].due, "2026-01-13T00:00:00.000Z", "a reset entry comes back tomorrow");
+  assertEqual(deck["4:2"].lapses, 1, "a repeat mistake counts as a lapse");
+  assertEqual(deck["4:2"].added, "2026-01-01T00:00:00.000Z", "a reset entry keeps its original added date");
+})();
+
+// applyReviewAnswer() — stage caps at the top of the ladder
+(function () {
+  var deck = { "9:0": { stage: 0, due: "2026-01-01T00:00:00.000Z", lapses: 0, added: "2026-01-01T00:00:00.000Z" } };
+  var last = QuizLogic.REVIEW_INTERVALS.length - 1;
+  for (var i = 0; i < 10; i++) QuizLogic.applyReviewAnswer(deck, 9, 0, true, "2026-01-01T00:00:00.000Z");
+  assertEqual(deck["9:0"].stage, last, "stage never climbs past the last interval");
+  assertEqual(
+    deck["9:0"].due,
+    new Date(Date.UTC(2026, 0, 1) + QuizLogic.REVIEW_INTERVALS[last] * 24 * 60 * 60 * 1000).toISOString(),
+    "a capped entry still uses the longest interval"
+  );
+})();
+
+// applyReviewAnswer() — first-try-correct questions never enter the deck
+(function () {
+  var deck = {};
+  QuizLogic.applyReviewAnswer(deck, 12, 3, true, "2026-01-01T00:00:00.000Z");
+  assertEqual(Object.keys(deck).length, 0, "a correct answer on an un-enrolled question is a no-op");
+})();
+
+// reviewKey() / parseReviewKey()
+assertEqual(QuizLogic.reviewKey(4, 2), "4:2", "reviewKey joins episode and question index");
+assertEqual(QuizLogic.parseReviewKey("4:2").epId, 4, "parseReviewKey reads the episode id back");
+assertEqual(QuizLogic.parseReviewKey("4:2").qIndex, 2, "parseReviewKey reads the question index back");
+
+// dueReviewEntries() — filtering by due date and ordering
+(function () {
+  var deck = {
+    "1:0": { stage: 0, due: "2026-01-03T00:00:00.000Z", lapses: 0, added: "2026-01-01T00:00:00.000Z" },
+    "2:1": { stage: 1, due: "2026-01-01T00:00:00.000Z", lapses: 2, added: "2026-01-01T00:00:00.000Z" },
+    "3:2": { stage: 2, due: "2026-01-09T00:00:00.000Z", lapses: 0, added: "2026-01-01T00:00:00.000Z" }
+  };
+  var due = QuizLogic.dueReviewEntries(deck, "2026-01-05T00:00:00.000Z");
+  assertEqual(due.length, 2, "dueReviewEntries drops entries that aren't due yet");
+  assertEqual(due[0].key, "2:1", "dueReviewEntries returns the longest-overdue entry first");
+  assertEqual(due[1].key, "1:0", "dueReviewEntries sorts by due date ascending");
+  assertEqual(due[0].epId, 2, "dueReviewEntries resolves the episode id from the key");
+  assertEqual(due[0].qIndex, 1, "dueReviewEntries resolves the question index from the key");
+  assertEqual(due[0].lapses, 2, "dueReviewEntries carries the lapse count through");
+  assertEqual(QuizLogic.dueReviewEntries(deck, "2026-01-01T00:00:00.000Z").length, 1, "an entry due exactly now counts as due");
+  assertEqual(QuizLogic.dueReviewEntries({}, "2026-01-05T00:00:00.000Z").length, 0, "an empty deck has nothing due");
+})();
+
+// reviewCounts()
+(function () {
+  var deck = {
+    "1:0": { stage: 0, due: "2026-01-03T00:00:00.000Z", lapses: 0, added: "2026-01-01T00:00:00.000Z" },
+    "2:1": { stage: 1, due: "2026-01-01T00:00:00.000Z", lapses: 2, added: "2026-01-01T00:00:00.000Z" },
+    "3:2": { stage: 2, due: "2026-01-09T00:00:00.000Z", lapses: 0, added: "2026-01-01T00:00:00.000Z" }
+  };
+  var counts = QuizLogic.reviewCounts(deck, "2026-01-05T00:00:00.000Z");
+  assertEqual(counts.due, 2, "reviewCounts counts what's due now");
+  assertEqual(counts.total, 3, "reviewCounts counts the whole deck");
+  assertEqual(QuizLogic.reviewCounts({}, "2026-01-05T00:00:00.000Z").total, 0, "reviewCounts on an empty deck is zero");
 })();
 
 // ---------- report ----------

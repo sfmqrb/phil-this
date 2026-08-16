@@ -1,0 +1,30 @@
+{
+  "id": 77,
+  "argument": "Steve sets up a two-part series on Marx and Kierkegaard's views of religion by first laying out how Marx understood the suffering of the people around him. Applying Hegel's dialectic to economic history, Marx sees all of history as a repeating cycle of a ruling class (thesis) exploiting a class of workers (antithesis) until revolution produces a new order (synthesis), and argues that even a worker who loves their job and feels fairly paid is still exploited, since a company only profits by paying less than the value that labor produces. Marx's central claim is that religion functions as 'the opiate of the masses': like morphine for a broken leg, it doesn't cure the underlying exploitation but numbs the pain of it by redirecting attention to a future otherworldly reward, and its structure and content shift to mirror and morally justify whatever economic system is currently in power.",
+  "keyIdeas": [
+    "Seeing a real photograph or video of a historical philosopher, rather than just a legend or bust, makes them a real person rather than a distant enigma, which matters for relating to the suffering Marx believed was happening around him.",
+    "As European trade expanded, demand outpaced what individual craftsmen could produce, so the people who thrived were those with the means to mass-produce goods, concentrating economic control in a small manufacturing class (the bourgeoisie).",
+    "Marx adapts Hegel's dialectic to economic history: the ruling class is the thesis, the exploited class is the antithesis, and their conflict produces a revolution (synthesis) that becomes the new thesis, repeating endlessly.",
+    "A worker can love their job and feel well paid and still be exploited, because a company must generate more value from labor than it pays for that labor to be profitable -- being paid what you expect isn't the same as being paid what you're worth.",
+    "Religion is 'the opiate of the masses' because, like morphine, it doesn't cure the underlying condition of exploitation but numbs the pain of it by redirecting focus to a future, otherworldly reward, and its structure typically mirrors and morally justifies whatever economic system currently holds power."
+  ],
+  "terms": [
+    { "term": "Dialectic (Marx's use)", "def": "Hegel's three-part process of change (thesis, antithesis, synthesis) applied by Marx to economic history as ruling class, exploited class, and revolution." },
+    { "term": "Bourgeoisie", "def": "Marx's term for the class of manufacturers and capital owners who control trade and production." },
+    { "term": "Proletariat", "def": "Marx's term for the exploited working class beholden to the bourgeoisie." },
+    { "term": "Exploitation (Marx's use)", "def": "The gap between the value a worker produces and what they are paid, pocketed by the class that controls production, regardless of how the worker feels about their job." },
+    { "term": "Opiate of the masses", "def": "Marx's description of religion as something that numbs the pain of exploitation with the promise of otherworldly reward rather than curing its cause." }
+  ],
+  "anchors": [
+    "these philosophers become people to us, not enigmas",
+    "the people that do survive in that environment are not the craftsmen or the artisans but the manufacturers, the people that have the means to mass-produce stuff",
+    "think of the ruling class of people as the thesis and the exploited class of people as the antithesis",
+    "you are making that company that you work for a lot more than $50,000 to do the stuff that you do for them every year",
+    "Just because you’ve grown fond of the chains that you’ve had around your leg since birth, that doesn’t mean that they’re not there",
+    "obviously to prolong the amount of time in between these revolutions as long as possible",
+    "Opiates mitigate and help you forget about pain—the pain of being exploited",
+    "not only is this transparently a mirror image of the feudal economic system that’s designed to control people and keep them in the peasantry",
+    "you bring that resentment to church with you on Sunday, and you’re told to turn the other cheek",
+    "it gives us some really invaluable context at understanding the more nuanced points of their thinking"
+  ]
+}

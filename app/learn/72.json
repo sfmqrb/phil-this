@@ -1,0 +1,30 @@
+{
+  "id": 72,
+  "argument": "This episode examines insecurity as a driver of behavior distinct from morality. Most everyday decisions run on autopilot because the deliberation already happened earlier in life, but insecurity substitutes other people's arbitrary, shifting expectations for your own reasoning, restricting what you do (and sometimes what you let a partner do) out of fear rather than judgment about what's actually good. That substitution carries a real, often invisible cost to your happiness, though questioning morality can loosen insecurity's grip without ever fully eliminating it.",
+  "keyIdeas": [
+    "Most daily decisions, like which foot to put in front of the other, don't involve active moral debate because that debate already happened earlier in life and the conclusion now runs on autopilot.",
+    "Morality and insecurity both restrict or aim toward outcomes, but the real difference is who is 'driving': with insecurity, other people's expectations are steering, not your own reasoning.",
+    "Standards people fear violating, like wearing overalls to school, are arbitrary and inconsistent across groups and eras (the cowboy-hat group would embrace what another group mocks), which undercuts their authority even as insecurity makes people pay a real daily cost, in jobs or relationships, to obey them.",
+    "In relationships, insecurity produces private, unspoken 'lines' about what counts as cheating, and can create an 'emotional cage' that restricts a partner's actions without removing their underlying desires, producing only a false sense of security.",
+    "The game-show prisoner's dilemma parallels insecurity: people steal out of fear of a bad future (being taken advantage of) rather than reasoning to the right outcome, the same structure by which insecurity restricts behavior."
+  ],
+  "terms": [
+    { "term": "insecurity", "def": "Behavior restricted by fear of other people's expectations rather than by one's own reasoned judgment." },
+    { "term": "autopilot decision", "def": "A choice already settled by past deliberation, no longer consciously debated (e.g. how you walk)." },
+    { "term": "emotional cage", "def": "Restricting a partner's behavior in a way that doesn't remove their underlying desires, just their ability to act on them." },
+    { "term": "opportunity cost (of insecurity)", "def": "The often-unnoticed happiness a person forfeits by living up to someone else's standard instead of their own." },
+    { "term": "prisoner's dilemma (game-show version)", "def": "A game-theory scenario used as an analogy for choices driven by fear of a bad outcome rather than reasoned judgment." }
+  ],
+  "anchors": [
+    "now that decision that at one point in your life wasn’t obvious to you at all, now you just kind of, you know, drive to work every day",
+    "what’s different between them lies in understanding who is the driver of that car",
+    "you would be ruthlessly socially castigated for wearing them",
+    "the only reason you didn’t is because you’re trying to live up to a standard that somebody else or something else conferred onto you",
+    "you are paying a very real cost every day of your life, every second that you spend in misery",
+    "they would welcome you in with open arms. They’re not going to judge you for wearing overalls.",
+    "I may have not agreed with the line, but that was her line.",
+    "She’s still the same person whether you have that expectation of her or not. She still wants to go on the date.",
+    "It’s entirely fueled not by what the right thing to do is but what future world would we want to prevent for fear of social reprisal.",
+    "Questioning morality really is an antidote to insecurity. But it’s not a panacea."
+  ]
+}

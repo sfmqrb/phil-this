@@ -1,0 +1,30 @@
+{
+  "id": 123,
+  "argument": "Foucault extends his method to madness and sexuality, arguing that modern science's diagnosis and categorization of the mad and the sexual actually intensified control over them even as it claimed to help, and that the 'repressive hypothesis' of sexuality is wrong: rather than repressing sex, modern power incited constant confession-like discourse about it. This exposes power as diffuse and 'capillary' rather than centralized, a productive form he calls biopower, which manages populations and produces self-policing subjects rather than ruling through a sovereign's threat of death.",
+  "keyIdeas": [
+    "Genealogy, used in Foucault's later work, traces how one period evolves into another, unlike archaeology, which only compares isolated historical snapshots.",
+    "Madness and Civilization argues that as science increasingly diagnosed, categorized, and medicated the mentally ill, it turned them into objects of study rather than full human beings, even while claiming to care for them.",
+    "The 'repressive hypothesis,' that power has suppressed sexuality since the 17th and 18th centuries, is wrong to Foucault: sexuality was constantly talked about, just privately, in a confession-like relationship to doctors and psychologists who controlled that discourse, and before the 19th century people didn't even understand themselves as having a personal 'sexuality.'",
+    "Modern power is not centralized in a sovereign but diffuse and 'capillary,' flowing through everyday relationships like boss, teacher, and doctor.",
+    "Biopower is a form of power that no longer threatens death but instead manages and optimizes life through metrics like population, birth rates, and disease prevalence."
+  ],
+  "terms": [
+    { "term": "repressive hypothesis", "def": "The claim, which Foucault disputes, that power suppressed sexuality since the 17th-18th centuries." },
+    { "term": "genealogy", "def": "Foucault's method for tracing how one historical period evolves into another, unlike archaeology's isolated snapshots." },
+    { "term": "capillary power", "def": "Foucault's model of power as diffuse, flowing from every point in a network rather than a single center." },
+    { "term": "biopower", "def": "Power that manages and optimizes life (population, health, birth rates) instead of threatening death." },
+    { "term": "confessional", "def": "Foucault's comparison of modern therapeutic or medical disclosure about sex to religious confession." }
+  ],
+  "anchors": [
+    "it wasn’t an uncommon attitude at the time to see people considered to be mad as touched by the gods in some way",
+    "the more they’ve dehumanized these people and turned them into objects that exist for the sake of science being able to study them: objects of study rather than human beings",
+    "the goal of the archaeologist is to capture a snapshot in time",
+    "all you can ever do is compare the discourse surrounding a subject in one period to the discourse of another period",
+    "people’s thoughts and behaviors surrounding the topic of sexuality have been repressed by people in power",
+    "He actually compares these backroom meetings with our doctors or psychologists to a modern-day confessional booth",
+    "nobody ever thought of themselves as heterosexual versus homosexual versus any other form of sexuality",
+    "power is an unstable network flowing in all directions from every point at once",
+    "the prisoners themselves would police each other far better than any system you could come up with that was implemented by force",
+    "the exercise of power over living beings no longer carries the threat of death, but instead takes charge of people’s lives"
+  ]
+}

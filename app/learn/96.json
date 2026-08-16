@@ -1,0 +1,30 @@
+{
+  "id": 96,
+  "argument": "Ayn Rand set out to build a complete philosophical system, Objectivism, that runs top-down from metaphysics and epistemology through ethics to a laissez-faire political conclusion. Starting from the fear that a culture of altruism can be weaponized to make people sacrifice themselves and others 'for the greater good' — a fear rooted in what she witnessed under Soviet communism — she argues that rigorous concept formation reveals the essential property of a human being as rationality, that morality's function is survival while remaining rational, and that this all converges on rational self-interest and free markets. Critics call this 'tennis without a net': she stipulates 'human' as 'rational' and then declares that any truly rational person will agree with her specific conclusions, making the system unfalsifiable, which fuels the ongoing debate over whether she counts as a philosopher at all.",
+  "keyIdeas": [
+    "Rand's critique of altruism: it treats self-sacrifice as the paradigm of virtue, and she worried a population taught that self-sacrifice-for-the-collective is virtuous can be induced to commit atrocities 'for the greater good' — a concern rooted in what she witnessed under Soviet communism.",
+    "She named her system 'Objectivism' because she believed philosophy had abandoned objective truth, mired in subjectivism and relativism; formalizing this, she rejects Kant's phenomena/noumena dichotomy and inserts a third category, the 'objective' — what remains once cultural whims and unexamined intuition are stripped away by sufficiently rigorous reason, which she claims rational people would converge on identically.",
+    "Concept formation — the process by which humans classify raw perceptual experience into mental shorthand ('concepts') — is what Rand treats as separating humans from animals and rigorous thinkers from sloppy ones; applying the idea of an 'essential property' (what makes a thing that thing, such that removing it means the thing ceases to be itself) rigorously to humans, she concludes the essential property of humans is rationality.",
+    "Morality's function is to ensure survival 'while remaining rational,' not survival by any means, because humans are essentially rational animals, so surviving in a way that abandons rationality wouldn't preserve what actually makes someone human.",
+    "Critics call this the 'tennis without a net' problem: Rand stipulatively defines 'human' as 'rational,' then claims all truly rational people will agree with her specific conclusions, so anyone who rationally disagrees can simply be redefined as 'not rational,' making the system unfalsifiable by design."
+  ],
+  "terms": [
+    { "term": "Objectivism", "def": "Ayn Rand's complete philosophical system, aimed at restoring objectivity against what she saw as pervasive subjectivism and relativism." },
+    { "term": "Concept formation", "def": "The process by which raw perceptual experience is classified into mental shorthand ('concepts') like 'tree' or 'kitchen.'" },
+    { "term": "Essential property", "def": "What makes a thing that thing — remove it and the thing ceases to be itself." },
+    { "term": "Trichotomy (intrinsic/subjective/objective)", "def": "Rand's replacement for Kant's phenomena/noumena split, adding 'objective' as what remains after rational scrutiny strips away cultural whims." },
+    { "term": "Rational self-interest", "def": "Rand's ethical ideal, from which she argues laissez-faire capitalism follows as the only system respecting rational agents' mutually beneficial exchanges." }
+  ],
+  "anchors": [
+    "if you can convince somebody to go over there and kill that baby as a service to the state and the rest of the population, not only can you get them to do it, but they do it and they feel like they’re morally justified in doing so",
+    "I’m going to get this ship back on course. I’m going to make it so we can finally talk about things objectively",
+    "Ayn Rand thinks this process of concept formation is one of the most fundamental and crucial things we do as human beings",
+    "the essential property of something is what makes the thing what it is—the thing that if you took it away it would cease to be whatever it is",
+    "it’s not enough just to survive. You have to survive while also being rational. Because if you weren’t rational anymore, you wouldn’t be a rational animal anymore",
+    "Well, Ayn Rand doesn’t think it’s a dichotomy; she thinks it’s a trichotomy between the intrinsic",
+    "We need the only system that allows for people acting in their own rational self-interest to make mutually beneficial exchanges with each other",
+    "she’s essentially playing tennis without the net. That she smuggled in this virtue of rationality, and the only way she was able to do that is because she wrote the definition of what it means to be a human",
+    "it is entirely possible for someone to have a definition of philosophy that is really Pythagorean: philosophy is tantamount to a love of wisdom or a love of thinking about stuff",
+    "I want to go from the top down. I want to start with her politics and then sort of work our way back up"
+  ]
+}

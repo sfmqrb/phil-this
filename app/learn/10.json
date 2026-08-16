@@ -1,0 +1,30 @@
+{
+  "id": 10,
+  "argument": "Epicurus built a complete philosophy aimed at ataraxia, freedom from pain and mental disturbance, resting on a materialist metaphysics (atoms and void, refined with the 'swerve' to preserve free will against Democritus's determinism) and an empiricist epistemology in which the senses never lie but the mind can misjudge them. From this foundation he argued that pleasure is the goal of life, but that static pleasure (the tranquil absence of pain and desire) is superior to fleeting kinetic pleasure, and that the greatest sources of mental disturbance -- fear of the gods and fear of death -- can be rationally dissolved. Friendship, lived communally, was essential both for its own pleasures and for keeping people honest with themselves.",
+  "keyIdeas": [
+    "Epicurus believed determinism, if true, would make morality pointless, since no one could be held accountable for actions that were just atoms colliding according to fixed laws -- so he added the 'swerve,' a random deviation in atomic motion, to preserve some free will.",
+    "The senses themselves never lie; they are purely mechanical transmitters of atoms. Error creeps in only when the mind misjudges what the sensory signal means, as with a tower that looks round from far away and square up close.",
+    "Epicurus distinguished kinetic pleasure (the active satisfying of a desire, like eating when hungry) from static pleasure (the tranquil state once a desire is satisfied) -- static pleasure, the absence of pain, is the higher and more reliable goal.",
+    "We shouldn't fear the gods, because they exist in a blissful state and have no interest in involving themselves in human affairs, and we shouldn't fear death, because once we're dead our atoms disperse and there is no one left to experience anything bad.",
+    "Friends act as an objective, honest check against self-delusion, and Epicurus compared philosophy itself to medicine: worthless if it doesn't relieve psychological suffering, just as medicine is worthless if it doesn't treat bodily disease."
+  ],
+  "terms": [
+    { "term": "Ataraxia", "def": "Tranquility, or complete freedom from pain and mental disturbance; the ultimate goal of Epicurean philosophy." },
+    { "term": "The swerve", "def": "Epicurus's idea that atoms randomly deviate slightly from their path at unpredictable times, explaining both the original collisions of atoms and preserving a degree of free will against strict determinism." },
+    { "term": "Kinetic pleasure", "def": "Moving pleasure experienced while actively satisfying a desire, such as eating when hungry." },
+    { "term": "Static pleasure", "def": "The tranquil state of satisfaction once a desire has been fulfilled and pain has been removed; the superior, higher form of pleasure." },
+    { "term": "Tetrapharmakos", "def": "Epicurus's four-fold remedy for a happy life: God holds no fear, death holds no worries, good can easily be attained, and evil (pain) can be endured." }
+  ],
+  "anchors": [
+    "Because as far as he saw it, most people were lost.",
+    "This would make morality absolutely pointless because you could never hold anyone accountable for any of their actions.",
+    "Epicurus thought it wasn’t the senses that were deceiving us. Our minds were deceiving us.",
+    "There’s a point of diminishing returns.",
+    "the kinetic pleasure is useless when it comes to actually increasing your level of pleasure in that context, Epicurus thinks it’s equally as useless at actually increasing your pleasure when nothing is wrong at all.",
+    "He thought that the gods must exist, but they just don’t want anything to do with humans.",
+    "when you die, the atoms that make up your mind, just like the ones that make up your body, will disperse and all go their separate ways. And you have no sense organs, so you’re incapable of sensing anything.",
+    "as there is no benefit in medicine if it does not treat the diseases of the body, so with philosophy, if it does not drive out the affliction of the soul.",
+    "a true friend in Epicurus’ eyes would have shone light on their delusions",
+    "the pain you receive in the long term completely overrides the pleasure you get in the short term."
+  ]
+}

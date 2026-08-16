@@ -1,0 +1,30 @@
+{
+  "id": 131,
+  "argument": "This episode explains Antonio Gramsci's theory of cultural hegemony as his answer to why Marx's prophesied proletarian revolution never happened in the West: political control depends on cultural control, and dominant groups secure people's consent to the status quo not through force but by making their norms feel like the natural order of things, a population's 'common sense,' the way no one gets angry at a hurricane. Hegemony works by controlling intellectuals, education, and the philosophy that drives political action, so that even a genuinely honest person raised inside a dominant ideology cannot be certain their beliefs reflect truth rather than the interests of the status quo. Gramsci's own goal was not to replace capitalist hegemony with an equally dominant Marxist one, but to cultivate a general, persistent public skepticism toward whatever the status quo happens to be, which is why he insisted revolutionaries first had to win the cultural 'war of position' before any 'war of maneuver.'",
+  "keyIdeas": [
+    "Gramsci argues Marx's prophesied proletarian uprising failed in the West because political control depends on cultural control, and dominant groups secure consent through hegemony rather than physical force.",
+    "Gramsci redefines 'hegemony' from the ancient Greek sense of control through military threat to control exercised through shaping a population's cultural norms and values.",
+    "The hurricane analogy shows that people don't get angry at outcomes they perceive as nature rather than as someone's choice; hegemony works by making the status quo feel like nature, a population's internalized 'common sense,' rather than one option among others.",
+    "Ruling intellectuals reinforce the existing cultural order, often without realizing it, while organic intellectuals actively challenge it and build alternatives; hegemony is established by controlling three things: the intellectuals, the education system, and the philosophy that drives political action.",
+    "Gramsci's actual goal was not to replace capitalist hegemony with Marxist hegemony but to cultivate general public skepticism toward whatever the status quo is, which is why he criticized orthodox Marxists for pursuing the 'war of maneuver' (revolution) without first winning the 'war of position' against cultural hegemony, and why he saw dictators like Stalin as opportunists who twisted his philosophy into state worship."
+  ],
+  "terms": [
+    { "term": "Cultural hegemony", "def": "Gramsci's term for how a dominant social group secures and maintains power by shaping cultural norms and values so that they feel like the natural order rather than one option among others." },
+    { "term": "Common sense", "def": "The internalized set of cultural norms that makes the status quo feel like the natural way of the world rather than a temporary, contingent arrangement." },
+    { "term": "Ruling intellectuals / organic intellectuals", "def": "Ruling intellectuals reinforce the existing cultural order (often unknowingly); organic intellectuals actively challenge the status quo and build cultural alternatives." },
+    { "term": "War of position / war of maneuver", "def": "Gramsci's distinction between the cultural struggle to win hegemony (war of position) and the actual revolutionary action (war of maneuver); he argued orthodox Marxists wrongly focused on the latter without winning the former." },
+    { "term": "Historical materialism", "def": "Marx's framework for explaining social change through economic/material conditions; Gramsci accused orthodox Marxists of overemphasizing the materialism and neglecting the historical, contextual part of it." }
+  ],
+  "anchors": [
+    "Political control is almost always dictated by cultural control",
+    "during antiquity there were things called hegemons",
+    "There’s no human intent or will behind a giant storm. Nobody can be held morally culpable, so we chalk it up as an unfortunate series of events",
+    "Cultural norms become to the average person what Gramsci calls the “common sense that they use to make sense of their place in the world.”",
+    "There are “ruling intellectuals” and “organic intellectuals.”",
+    "Cultural hegemony is established by taking control of three things: the intellectuals of a society, the education within a society, and the philosophy that drives people to political action",
+    "if you’re an intellectually honest person, you’d at least for a second have to consider that maybe your entire understanding of capitalism and socialism has been given to you by a handful of intellectuals",
+    "His goal was to replace both of these narrow approaches with an ideology where the public has a general and intense level of skepticism about the status quo",
+    "These orthodox Marxists of his time were far too focused on the war of maneuver, which was the actual communist revolution that they wanted to bring about",
+    "he thought they were paying way too much attention to the materialism part of historical materialism and not nearly enough attention to the historical part of it"
+  ]
+}

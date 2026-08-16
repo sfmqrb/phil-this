@@ -1,0 +1,29 @@
+{
+  "id": 135,
+  "argument": "Leo Strauss, though himself a committed rationalist, argued that the entire project of modernity was doomed because it discarded the ancient assumption of inherent values and final causes and tried to build political life on value-neutral reason and individual self-interest alone. Because political institutions must make decisions that require values, and value-neutral reason cannot supply them, modernity is condemned to drift into relativism, historicism, scientism, economism, or nihilism, and Strauss controversially argued the Third Reich was an extreme expression of this same value-discarding logic. His proposed corrective was not to abandon reason but to treat rationality itself as culturally plural, drawing on the ancients' virtue-oriented, ideal-striving conception of philosophy as a way of life.",
+  "keyIdeas": [
+    "Strauss accepts that reason is relative to the culture that produces it, but reframes this as a strength rather than a weakness: different cultures' rational approaches can help solve problems one's own rationality cannot.",
+    "His 'ideal vs. real' distinction: ancient Aristotelian rationality assumed final causes and purposes in an ordered universe and aimed at unreachable ideals that structured society around virtue, while modern rationality assumes value neutrality and only describes what exists.",
+    "Because modernity assumes no inherent values or virtuous citizens, it needs artificial safeguards like constitutions and legal systems to keep society functioning at a baseline regardless of individual virtue.",
+    "A political tradition built on value-neutral reason eventually exhausts its inherited, borrowed values and collapses into one of Strauss's 'isms' -- relativism, historicism, scientism, economism, or nihilism.",
+    "Strauss controversially links the Third Reich's project of discarding existing traditions and imposing a controlling power structure to the same value-discarding logic set in motion by the Enlightenment."
+  ],
+  "terms": [
+    { "term": "Ideal vs. real", "def": "Strauss's distinction between the ancients' orientation toward unreachable, virtue-structuring ideals and modernity's focus on describing and designing the value-neutral 'real' world." },
+    { "term": "Final causes", "def": "The Aristotelian idea that things in nature have inherent purposes that fit into an ordered universe." },
+    { "term": "The 'isms'", "def": "Strauss's list of end-states -- relativism, historicism, scientism, economism, and nihilism -- that a value-neutral modern political tradition inevitably drifts toward." },
+    { "term": "Sectarian", "def": "Strauss's term for a thinker whose subjective certainty in a solution has become stronger than their awareness of how problematic that solution still is -- the moment they stop being a philosopher." }
+  ],
+  "anchors": [
+    "it’s not the only tool we have, and it’s not a universal tool that we should try to use for every task we have",
+    "the fact that reason is relative to the culture it was produced in is not a weakness of reason at all. It’s actually a strength in his eyes",
+    "putting a very charitable, modern bias on what the word progress really means",
+    "contrast that with the ancient Greeks who used the Aristotelian scientific method, a scientific method that assumes the existence of final causes",
+    "society itself was structured around virtue. That’s the point",
+    "you need to construct certain safeguards, safeguards like a legal system, safeguards like a constitution, things that ensure that, even when you don’t have a virtuous ruler or citizenry, that society will still exist",
+    "we’re left with no values, and the entire project of modernity begins to consume itself",
+    "their chief aim was to do away with the existing traditions and values and replace them instead with a power structure under which the universe could be controlled",
+    "philosophers used to be on a quest to discover knowledge of the whole, as opposed to knowledge of individual, particular things",
+    "the philosopher ceases to be a philosopher at the moment at which the ‘subjective certainty’ of a solution becomes stronger than his awareness of the problematic character of that solution"
+  ]
+}

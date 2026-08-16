@@ -1,0 +1,30 @@
+{
+  "id": 69,
+  "argument": "This episode (a compilation of two earlier segments) argues that certainty is impossible for any belief -- even the claim that certainty is impossible can't itself be held with certainty -- so every belief is ultimately a leap of faith, though not all leaps of faith are equal, since what people believe is often explained by non-truth-related factors like confirmation bias rather than by evidence. It then turns to Kant's account of why people fail to think for themselves: 'self-incurred immaturity' is not a lack of intellect but a comfortable dependence rooted in laziness and cowardice, and Kant's motto 'sapere aude' ('dare to be wise') calls people to use the intellectual autonomy already available to them despite the risk of occasional failure.",
+  "keyIdeas": [
+    "No belief, however well-evidenced, can be known with absolute certainty -- even the claim 'certainty is impossible' can't itself be held with certainty, echoed in Voltaire's 'doubt is an unpleasant condition, but certainty is absurd.'",
+    "The Cartesian circle objection undermines Descartes's cogito as a foundation for certainty: his 'clear and distinct idea' criterion could itself have been implanted by a deceiver, making the reasoning question-beggingly circular.",
+    "Because certainty is unreachable, every belief is technically a leap of faith, but the crucial qualifier is that not all leaps of faith are equal -- unreachable certainty doesn't make beliefs equally valid or arbitrary.",
+    "Belief is often 'truth-independent': what people believe is frequently explained by confirmation bias, social conditioning, or convenience rather than by how true the belief actually is, as shown by mutually exclusive beliefs held with equal conviction.",
+    "Kant defines 'self-incurred immaturity' as the inability to use one's own understanding without another's guidance, caused not by lack of intellect but by laziness and cowardice -- and his motto 'sapere aude' identifies a deficit of courage, not knowledge, as the true obstacle to enlightenment."
+  ],
+  "terms": [
+    { "term": "Cartesian circle", "def": "The objection that Descartes's proof of certainty relies circularly on a 'clear and distinct idea' criterion that could itself be deceived." },
+    { "term": "Truth-independent belief", "def": "Belief explained by factors like bias or convenience rather than by the actual truth of the claim." },
+    { "term": "Self-incurred immaturity (Unmündigkeit)", "def": "Kant's term for the inability to think for oneself when the cause lies in one's own lack of resolve, not lack of intellect." },
+    { "term": "Sapere aude", "def": "Kant's Enlightenment motto, 'dare to be wise,' calling people to have the courage to use their own understanding." },
+    { "term": "Leap of faith", "def": "The episode's term for the fact that believing anything -- even in the physical world's existence -- requires an act of faith since certainty is unreachable, though 'not all leaps of faith are equal.'" }
+  ],
+  "anchors": [
+    "we can’t even be certain about the fact that certainty is impossible",
+    "Doubt is an unpleasant condition, but certainty is absurd.",
+    "his clear and distinct ideas could have been deceived from the very beginning",
+    "all leaps of faith are not created equal",
+    "what you believe has absolutely nothing to do with how true it is",
+    "Enlightenment is man’s emergence from his self-incurred immaturity",
+    "It is because of laziness and cowardice that so great a part of humankind",
+    "The danger is not in fact so great, for by a few falls they would eventually learn to walk",
+    "that implies that there’s something holding us back. We need to be courageous enough to be wise",
+    "The key to that cage right now is hanging around your neck."
+  ]
+}

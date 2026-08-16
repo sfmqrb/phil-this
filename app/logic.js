@@ -205,6 +205,72 @@
     return "This one's worth listening to again from the top.";
   }
 
+  // ---------- spaced repetition ("review deck") ----------
+  // Every question answered wrong enters a personal deck and comes back on an
+  // expanding schedule: get it right and it moves one rung up the ladder, get
+  // it wrong again and it drops back to the bottom (tomorrow).
+  // deck: { "<epId>:<qIndex>": { stage, due, lapses, added } }
+
+  var REVIEW_INTERVALS = [1, 3, 7, 14, 30, 60]; // days
+  var DAY_MS = 24 * 60 * 60 * 1000;
+
+  function reviewKey(epId, qIndex) {
+    return String(epId) + ":" + String(qIndex);
+  }
+
+  function parseReviewKey(key) {
+    var parts = String(key || "").split(":");
+    return { epId: Number(parts[0]), qIndex: Number(parts[1]) };
+  }
+
+  function addDays(nowIso, days) {
+    return new Date(new Date(nowIso).getTime() + days * DAY_MS).toISOString();
+  }
+
+  // Mutates and returns `deck` after grading one answer. A first-try-correct
+  // question never enters the deck — only mistakes get enrolled.
+  function applyReviewAnswer(deck, epId, qIndex, correct, nowIso) {
+    var key = reviewKey(epId, qIndex);
+    var entry = deck[key];
+    var now = nowIso || new Date().toISOString();
+
+    if (!correct) {
+      deck[key] = {
+        stage: 0,
+        due: addDays(now, REVIEW_INTERVALS[0]),
+        lapses: entry ? (entry.lapses || 0) + 1 : 0,
+        added: entry && entry.added ? entry.added : now
+      };
+      return deck;
+    }
+
+    if (!entry) return deck;
+    entry.stage = Math.min((entry.stage || 0) + 1, REVIEW_INTERVALS.length - 1);
+    entry.due = addDays(now, REVIEW_INTERVALS[entry.stage]);
+    return deck;
+  }
+
+  // Everything due at or before `nowIso`, soonest-due first.
+  function dueReviewEntries(deck, nowIso) {
+    var now = nowIso || new Date().toISOString();
+    var out = [];
+    Object.keys(deck || {}).forEach(function (key) {
+      var entry = deck[key];
+      if (!entry || !entry.due || entry.due > now) return;
+      var parsed = parseReviewKey(key);
+      out.push({
+        key: key, epId: parsed.epId, qIndex: parsed.qIndex,
+        stage: entry.stage || 0, due: entry.due, lapses: entry.lapses || 0
+      });
+    });
+    out.sort(function (a, b) { return a.due < b.due ? -1 : (a.due > b.due ? 1 : 0); });
+    return out;
+  }
+
+  function reviewCounts(deck, nowIso) {
+    return { due: dueReviewEntries(deck, nowIso).length, total: Object.keys(deck || {}).length };
+  }
+
   // Mutates and returns `scores` with a new attempt recorded for episodeId.
   function applyResult(scores, episodeId, score, total, dateIso) {
     var key = String(episodeId);
@@ -220,6 +286,12 @@
     computeSuggestion: computeSuggestion,
     scoreCommentary: scoreCommentary,
     applyResult: applyResult,
+    REVIEW_INTERVALS: REVIEW_INTERVALS,
+    reviewKey: reviewKey,
+    parseReviewKey: parseReviewKey,
+    applyReviewAnswer: applyReviewAnswer,
+    dueReviewEntries: dueReviewEntries,
+    reviewCounts: reviewCounts,
     levenshtein: levenshtein,
     tokenize: tokenize,
     fuzzyIncludes: fuzzyIncludes,

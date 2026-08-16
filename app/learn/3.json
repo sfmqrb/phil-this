@@ -1,0 +1,30 @@
+{
+  "id": 3,
+  "argument": "In fifth-century Athens, the demand for courtroom persuasion gave rise to the sophists, itinerant teachers who charged money to teach rhetoric and argument-winning tactics rather than truth, and who often embraced relativism — the view, epitomized by Protagoras, that no belief is more objectively right than another. Socrates emerged from this same environment but broke sharply from it: he pursued truth and virtue through relentless questioning (the Socratic method), rejected relativism as self-undermining, believed all wrongdoing stemmed from ignorance rather than malice, and ultimately chose to die rather than compromise his principles — the decisive difference between him and the sophists he was often mistaken for.",
+  "keyIdeas": [
+    "The sophists were itinerant teacher-entrepreneurs who arose to meet Athenian demand for courtroom persuasion and social advancement, charging money to teach rhetoric and argument-winning tactics rather than truth or wisdom.",
+    "Protagoras's relativism ('man is the measure of all things') held that the worth of a belief is set by the person holding it, not by objective facts, extending this from perception to morality itself — nothing is inherently good, only judged good by a person or society.",
+    "Socrates argued relativism is self-refuting: if everyone's belief is equally correct, no one can be wiser than anyone else, which undermines the sophists' own claim to teach anything of value.",
+    "The Socratic method (elenchus) works by getting someone to define a concept like beauty or justice, then exposing contradictions in their own definition — showing that a definition that seemed solid at first can collapse under scrutiny.",
+    "Socrates held that no one does evil willingly, since full knowledge of evil's true nature would make it psychologically intolerable to pursue; the classic objection to this is akrasia — cases like an addict who knows the correct choice but still acts against it."
+  ],
+  "terms": [
+    { "term": "Sophists", "def": "Itinerant teacher-entrepreneurs in ancient Athens who charged money to teach rhetoric, argument, and other practical subjects, often prioritizing winning arguments over teaching truth." },
+    { "term": "Relativism", "def": "The view, associated with Protagoras, that there are no absolute truths or moral principles and that everything, including morality, is subjective to the person or society judging it." },
+    { "term": "Socratic method / elenchus", "def": "Socrates's technique of questioning someone's definition of a concept until contradictions in it are revealed, showing they didn't actually know what they thought they knew." },
+    { "term": "Inductive argument", "def": "A method, associated with the Socratic method, where a set of premises based on experience is established and then shown to lead to a universal truth; later influential on Aristotle and the scientific method." },
+    { "term": "Akrasia", "def": "The phenomenon of knowingly acting against one's own better judgment, cited as the classic objection to Socrates's claim that no one does evil willingly." }
+  ],
+  "anchors": [
+    "Just as different drugs draw forth different humors from the body—some putting a stop to disease, others to life—so too with words: some cause pain, others joy, some strike fear, some stir the audience to boldness",
+    "it’s the man holding the opinion that’s the measure of the worth of the argument, not the actual argument itself or the facts it’s based on",
+    "if relativism is true and everyone is right regardless of what they think, how can any one man be wiser than another",
+    "they don’t teach people anything that’s better knowledge; they just teach them more useful knowledge, knowledge that can be used to benefit the person, like in the context of the courts",
+    "he showed Critobulus that maybe he didn’t know exactly what beauty was",
+    "he thinks he knows something when he does not, whereas when I do not know, neither do I think I know",
+    "How can you philosophize about what is good if you don’t even know what the word “good” truly means?",
+    "people addicted to cigarettes want to stop, but they can’t, or various other examples where we know what the correct decision is but choose to act otherwise out of convenience",
+    "No one knows whether death may not be the greatest of all blessings for a man, yet men fear it as if they knew that it is the greatest of all evils",
+    "He lost an argument he could have easily won because of how much he cherished his moral principles"
+  ]
+}

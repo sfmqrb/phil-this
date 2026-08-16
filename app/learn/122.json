@@ -1,0 +1,30 @@
+{
+  "id": 122,
+  "argument": "In The Order of Things, Foucault studies not individual scientific discoveries but the unconscious background assumptions, which he calls 'epistemes,' that make a given era's science possible at all. Unlike Kuhn's paradigms, epistemes are unconscious and shape all the sciences of an era simultaneously, and they are maintained less through outright force than through 'normalizing power,' which gets people to feel that conforming is simply who they are, inverting Kant's project by showing that what seems necessarily true is actually historically contingent.",
+  "keyIdeas": [
+    "Foucault studies the dichotomy between discursive formations (the language used to talk about institutions) and non-discursive formations (the institutions themselves, like hospitals and schools).",
+    "An episteme differs from Kuhn's paradigm: a paradigm is a consciously used set of best practices affecting one field, while an episteme is an unconscious set of assumptions shaping all the sciences of an era simultaneously, as shown by how the 18th versus 19th century description of a sick patient reflects a different background episteme.",
+    "The Renaissance episteme organized knowledge around resemblances between things, while the 18th-century episteme organized it around differences and taxonomy.",
+    "Normalizing power, unlike repressive power, works by getting people to feel that avoiding certain behavior is simply part of who they are, not something imposed by force.",
+    "Foucault inverts Kant's project: instead of analyzing the subjective to reach necessary truths, Foucault shows that things assumed to be necessary are actually subjective and rooted in history."
+  ],
+  "terms": [
+    { "term": "episteme", "def": "The historical but unconscious background assumptions that ground knowledge and make it possible within a particular era." },
+    { "term": "discursive / non-discursive formations", "def": "The language used to talk about institutions versus the institutions (hospitals, schools, prisons) themselves." },
+    { "term": "paradigm (Kuhn)", "def": "The dominant, consciously used theories and practices of a scientific field at a given time, contrasted with Foucault's episteme." },
+    { "term": "normalizing power", "def": "Power that works by making people feel a behavior is part of their own identity, rather than compelling them by force." },
+    { "term": "physical reductionism", "def": "The idea, popular in Foucault's era, that every science might eventually be reduced to physics." }
+  ],
+  "anchors": [
+    "It’s not crazy to think that chemistry is nothing more than the interactions between atoms and molecules that ultimately adhere to the laws of physics",
+    "the underlying rules that exist in the background of all scientific inquiry that make conducting science even possible and the relationship between scientific knowledge and power structures",
+    "the institutions that make up our societies -- hospitals, schools, prisons, social circles of many varieties, also known as non-discursive formations",
+    "Remember the outdated way of looking at history where we hyper-focus on subjectivity and the actions of a few key players",
+    "in the 19th century in a hospital, the disease is seen as something that’s inside the patient that needs to be fixed",
+    "an episteme is a set of entirely unconscious assumptions that are made",
+    "there wasn’t a single second in your mind when you entertained the possibility of going to work completely naked today",
+    "the rise of philosophy that sees the world in terms of differences between things rather than similarities",
+    "going to sketchy parts of town and doing hardcore drugs is just not who you are at all",
+    "Foucault is interested in finding things that we think are necessarily true and showing them to be subjective, contingent, and grounded in history"
+  ]
+}

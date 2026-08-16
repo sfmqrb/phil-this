@@ -1,0 +1,30 @@
+{
+  "id": 84,
+  "argument": "William James argues that just as beauty and goodness turned out to be subjective adjectives rather than objective nouns we discover, truth might work the same way: not a fixed property an idea has by matching some cosmic reality, but something that happens to an idea through a process of usefulness and verification. On his pragmatist view, a belief counts as true when it is supported by evidence, can withstand counterarguments, and keeps proving its worth by predicting outcomes and helping people act successfully in the world - which lets both tender-minded (dogmatic, a priori) and tough-minded (skeptical, empirical) people find common ground on what 'true' means.",
+  "keyIdeas": [
+    "James proposes treating truth like beauty: not an objective thing 'out there' independent of us, but an adjective describing a certain kind of human experience.",
+    "Peirce's pragmatic maxim, illustrated by the 'soft until touched' diamond, holds that if a belief makes no difference to any possible experience, it has no meaning beyond its practical, sensory effects.",
+    "The squirrel-around-the-tree example shows many apparent disagreements about reality are really just disagreements about how a word is being defined, not about what actually happened.",
+    "Truth is not a stagnant property an idea already has; it is a process an idea earns over time by being verified, corroborated, and validated through use - a belief is justifiable when it has evidence in its favor, can withstand counterarguments, and keeps proving its worth by continuing to predict outcomes, and it only becomes useful, and so true, if a person actually acts on it.",
+    "James's criteria are relative to a person's context: the 1400s flat-earth belief and today's spherical-earth belief could both satisfy his three criteria within their own eras, even though we now know one was false; he extends 'religion' to any totalizing worldview - not just traditional religion but things like nationalism or racism - that functions as an ultimate reference point."
+  ],
+  "terms": [
+    { "term": "pragmatism", "def": "The philosophical view, as James uses it, that the meaning and truth of an idea are tied to its practical, useful effects rather than to a fixed correspondence with objective reality." },
+    { "term": "pragmatic maxim", "def": "Peirce's principle that the meaning of a concept is exhausted by the sensory, practical effects of its object; a belief that makes no experiential difference has no further meaning." },
+    { "term": "tender-minded / tough-minded", "def": "James's two personality types: tender-minded people favor a priori reasoning and dogmatism and tend toward religion; tough-minded people favor empirical proof, determinism, and skepticism." },
+    { "term": "truth as adjective (vs. noun)", "def": "James's reframing of truth as a description of a human experience with an idea, rather than a fixed objective thing an idea either matches or fails to match." },
+    { "term": "religion (James's definition)", "def": "'Man's total reaction upon life' - any fundamentalist, totalizing way of interpreting existence, not limited to traditional organized religion." }
+  ],
+  "anchors": [
+    "What if truth is not a noun but an adjective we use to describe a particular type of human experience?",
+    "pragmatism solved this problem. It united the tender and tough minded alike",
+    "This is the pragmatic maxim, that the meaning of a concept is the sensory effect of its object.",
+    "It really just comes down to how you define “going around” the squirrel.",
+    "Truth happens to an idea. It becomes true, is made true by events.",
+    "the idea needs to keep proving its worth to you as something that is useful to you, and part of doing that is consistently predicting future results",
+    "your belief that the earth was flat was a true belief back then",
+    "if you believe that the trail is going to lead you back to safety",
+    "those are not true statements; they just simply are the case",
+    "any type of fundamentalist interpretation of life should be considered a religion because it’s ultimately the same type of thinking going on"
+  ]
+}

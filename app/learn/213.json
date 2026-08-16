@@ -1,0 +1,30 @@
+{
+  "id": 213,
+  "argument": "Gilles Deleuze's Nietzsche and Philosophy reads Nietzsche as escaping the 'Image of Thought' that has governed Western philosophy since Plato — the assumption that new ideas are valid only insofar as they correspond to some pre-established framework. In its place, Deleuze finds a metaphysics of difference: reality is a constant interplay of active and reactive forces, identity is a temporary pattern rather than a fixed essence, and true thinking is not conformity to past criteria but the creative construction of genuinely new concepts. This reframes eternal recurrence, the master/slave relationship, and even modern 'societies of control' around the same core opposition between reactive repetition and active, affirmative creation.",
+  "keyIdeas": [
+    "The 'Image of Thought' names the implicit criteria (correspondence to Forms, clarity and distinctness, categories of understanding) that philosophers from Plato to Descartes to Kant used to judge new thought valid; its mechanism is 'representational thinking,' which judges a particular thing valid or real only insofar as it resembles a pre-established ideal — as when a particular tree counts as a 'real' tree only by resembling the ideal Form of Tree — exposing 'validity' as really just conformity to a prior framework.",
+    "Difference, not fixed essence, is fundamental: instead of static identities, reality is made of competing, interacting forces, so a person or thing is a temporary, repeated pattern of forces — a 'site of becoming' — not a stable essence.",
+    "Deleuze rejects reading master and slave as a Hegelian dialectical opposition needing resolution: they come from separate genealogies and express two independent kinds of will to power — active forces that create and assert (a revolution, an artist) and reactive forces that govern, mitigate, or restore prior order (an immune system, existing institutions) — so a slave revolt is one will to power overcoming another, an affirmation of difference rather than a negation.",
+    "Deleuze reinterprets eternal recurrence as continually affirming difference anew in each moment regardless of whether it conforms to past protocols, likened to playing a dice game where the point is engagement and affirmation rather than guaranteed success.",
+    "In his later work on 'societies of control,' Deleuze distinguishes Information — a 'snapshot and a command' that prescribes accepted meaning and produces only 'fake difference' — from Art, which is genuinely creative activity that produces new interpretations of reality."
+  ],
+  "terms": [
+    { "term": "Image of Thought", "def": "The implicit set of criteria past philosophers used to judge whether new thinking counts as legitimate or valid." },
+    { "term": "Representational thinking", "def": "Judging a particular thing as valid or real only to the degree it corresponds to or resembles a pre-established ideal." },
+    { "term": "Active/reactive forces", "def": "Active forces create and assert will; reactive forces govern, mitigate, or restore prior order — independent expressions of will to power." },
+    { "term": "Eternal recurrence", "def": "In Deleuze's reading, the continual affirmation of difference anew in each moment, independent of past protocols." },
+    { "term": "Societies of control", "def": "Deleuze's later concept for modern societies that dominate people by controlling the information that constructs their worldview." }
+  ],
+  "anchors": [
+    "how VALID someone’s thoughts are…always comes down to how well they correspond to some PRE-EXISTING set of criteria",
+    "to Plato, those things are trees…ONLY because they RESEMBLE or REPRESENT… the more IDEAL form of a tree",
+    "He was ultimately…a site of becoming",
+    "Masters and slaves come from two COMPLETELY different genealogies",
+    "these are forces that mitigate or GOVERN the active forces by fighting OFF the virus, trying to return the body back to a level of stasis",
+    "you’re rolling the dice, over and over again, hoping to roll a seven… but even if you DON’T get a seven, you’re still at least playing the game",
+    "Or is that because they are BORN into power dynamics… that regularly EXPOSE them to forces that influence them to BE passive and reactive",
+    "Information in a control society he says…is both a snapshot and a command at the exact same time",
+    "Philosophy to Deleuze…TRUE thinking…is a CREATIVE activity",
+    "whose WHOLE bag of TRICKS…is to find ways to EXPLAIN the experience you’re HAVING…through how it CORRESPONDS to or REPRESENTS"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": 73,
+  "argument": "The episode is a practical field guide to the small set of logical fallacies that recur across almost every everyday disagreement, regardless of topic. The point is not just to feel that an argument is wrong but to be able to name the specific flawed move being made, since most disagreements recycle the same 10-15 fallacious patterns.",
+  "keyIdeas": [
+    "Appeal to consequences becomes fallacious specifically when it's used to argue for the factual truth of a claim, not when used to argue for the practical value of adopting a policy or action.",
+    "Affirming the consequent mistakes 'if P then Q, and Q is true' for proof that P is true, ignoring that Q could have many other possible causes besides P.",
+    "Appeal to ignorance treats absence of disproof as evidence of truth; its personal incredulity variant substitutes 'I can't imagine how this could be true' for actual evidence.",
+    "A slippery-slope fallacy asserts a chain of increasingly extreme consequences without establishing that each link is actually likely, unlike a legitimate causal-chain argument that justifies every step.",
+    "Strawman, ad hominem, false equivalence, and bandwagon fallacies each substitute a distorted, personal, superficial, or headcount-based move for actually engaging with the substance of an argument."
+  ],
+  "terms": [
+    { "term": "Appeal to consequences", "def": "Arguing that a claim is true (or false) because believing it produces a desirable (or undesirable) outcome, rather than because of evidence for its truth." },
+    { "term": "Affirming the consequent", "def": "Invalidly concluding that the antecedent of a true conditional must be true just because its consequent is observed to be true." },
+    { "term": "Appeal to ignorance", "def": "Treating the absence of disproof as evidence that a claim is true; its personal incredulity variant treats one's own inability to imagine something as disproof." },
+    { "term": "Slippery slope", "def": "Arguing a position is bad because it will set off a chain of increasingly extreme consequences, without justifying that each link in the chain is actually likely." },
+    { "term": "Strawman", "def": "Misrepresenting an opponent's position as weaker or more extreme than it actually is, then refuting that weaker version instead." },
+    { "term": "False equivalence", "def": "Treating two things as comparably valid based on one superficial similarity while ignoring real differences in the evidence behind each." }
+  ],
+  "anchors": [
+    "one is a proposition about what might make the world a better place, and the other is a proposition justifying what we should believe and what is objectively true",
+    "there are many other explanations for why the cashier might be happy that have nothing to do with five random balls being pulled out of a spinning machine",
+    "because something is really difficult for them to understand, they assume that it must not be true",
+    "make the case that a certain position is bad because the acceptance of it will bring about not just it but a sequence of events that will be horrible",
+    "somebody takes your argument and paints a cartoonish, simplified, ridiculous version of the argument in an attempt to have an easy target to attack",
+    "someone will attack you personally in an attempt to discredit the source of the information so that they don’t have to argue against what you’re actually saying",
+    "the goal is to use one or two attributes about a thing and use those to pretend as though both things are exactly the same",
+    "how many people think something is the case really has nothing to do with whether it actually is the case or not",
+    "no matter what subject we’re talking about—football, healthcare, welfare, civil rights, or even the newest Harry Potter book—people pretty much use the same ones over and over again",
+    "First you give people food stamps; next thing you know we’re living in a communist nanny state"
+  ]
+}

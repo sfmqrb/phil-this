@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "argument": "Philosophy became possible only once early human groups settled in resource-abundant places, freeing brainpower that had gone toward pure survival for art, science, and philosophy instead, which is why Western philosophy first arose in the closely clustered city-states of Greece and Italy. The first Presocratics were monists who each proposed a single fundamental substance or principle behind everything: Thales argued for water based on its versatility and capacity for change, Heraclitus argued that everything is in constant flux governed by a unifying logos of battling opposites, and Democritus and Leucippus proposed indivisible atoms moving through void. Atomism specifically solved two outstanding problems, Zeno's paradox of infinite divisibility and Parmenides' claim that change is impossible, by positing that atoms themselves never change while their configurations do, and by trusting reason over the senses to reach conclusions invisible to the naked eye.",
+  "keyIdeas": [
+    "Whether an early human group developed art, science, and philosophy depended on settling somewhere with enough resources that survival took less mental effort, freeing brainpower for other pursuits, illustrated by the contrast between the constantly-on-the-run group and the walled, secure city of Woodbury.",
+    "The label 'Presocratic' is often justified by claiming Presocratics dealt only with metaphysics while Socrates covered epistemology, but West argues this misrepresents them since Presocratics did address questions of knowledge too, just less than Socrates.",
+    "Thales concluded everything is made of water because he observed it could take the forms of ice, liquid, and steam, reasoning that a substance capable of such change and motion was likely the basis of everything.",
+    "Heraclitus argued you can never step into the same river twice, since the water touching your foot differs each time, and saw opposites like hot and cold as two ends of one connected spectrum, each giving the other its meaning.",
+    "Democritus and Leucippus's atomism solved Zeno's paradox by proposing an indivisible smallest particle, and reconciled with Parmenides by arguing atoms themselves never change while the configuration of atoms making up an object does, explaining apparent change without violating 'something cannot come from nothing.'"
+  ],
+  "terms": [
+    { "term": "Presocratic", "def": "Term for philosophers before Socrates, sometimes criticized as implying they only addressed metaphysics rather than epistemology." },
+    { "term": "Monism", "def": "The metaphysical view that everything is made up of a single, fundamental substance, such as Thales's water." },
+    { "term": "Logos", "def": "Heraclitus's term for the universal cosmic law governing all things, including the constant flux of opposites." },
+    { "term": "Atomism", "def": "Democritus and Leucippus's theory that everything consists of indivisible atoms moving through empty space (void)." },
+    { "term": "True-born knowledge / bastard knowledge", "def": "Democritus's distinction between knowledge gained through reason (true-born) versus knowledge gained through the deceptive senses (bastard)." }
+  ],
+  "anchors": [
+    "If you don’t need to worry about where your next meal is going to come from or whether a pack of wolves is going to steal your baby in the middle of the night, you can focus on other things, like art, science, government, and philosophy",
+    "their strength in numbers allows them to focus on other things",
+    "Yes, it is true they dealt with less issues of epistemology than Socrates, but they definitely did address them.",
+    "because water was essential to life, because it could take on basically any form it was held in, because it was capable of motion, because it was capable of change—that all things must just be water",
+    "It’s a theory of how the first humans would survive to maturity if we existed in some alternate universe where babies could just manifest themselves inside the belly of a fish",
+    "it would get wet by touching a completely different set of water molecules. So it’s not the same river.",
+    "one of them always gives the other one its significance. An example of this is like, only by being hot can we truly appreciate what being cold is.",
+    "they hypothesized about some particle that was so incredibly small it couldn’t be divided anymore. Then the paradox would be solved",
+    "the atoms things are made up of don’t in themselves change, but the configuration of atoms changes: some going away, some new ones being attracted",
+    "the senses are weak; the senses are deceptive. They have small limits imposed upon them. When something gets too small for the human eye to see, it doesn’t not exist just because the eye can’t see it."
+  ]
+}

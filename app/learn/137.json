@@ -1,0 +1,30 @@
+{
+  "id": 137,
+  "argument": "John Rawls set out to defend liberal democracy against its long history of failure by arguing that societies have never had a genuine conversation about what justice, specifically 'distributive justice,' actually requires. Using the veil-of-ignorance thought experiment, he argued rational people designing a society without knowing their place in it would choose the structure that gives the best possible outcome to the worst-off (the 'maximin' rule), and that inequalities are only just when they arise from positions open to all and their benefits flow to the least advantaged, since so much of what makes people unequal is simply morally arbitrary luck.",
+  "keyIdeas": [
+    "Rawls thinks liberal democracy's history of failure stems not from a flaw in the system itself but from never having a substantive conversation about what justice actually requires.",
+    "'Primary social goods' are the surplus value produced by cooperating in society, including not just income and wealth but also less obvious goods like rights, liberties, and opportunities.",
+    "Much of what makes people unequal, talent, family, luck, even accidents, is 'morally arbitrary': not something a person fully owns or deserves, whether the luck is good or bad.",
+    "The veil of ignorance asks people to design a society without knowing their own place within it, so self-interest can't bias the structure they choose; rational people would then follow the 'maximin' rule, picking the society whose worst-case outcome is the best available.",
+    "An inequality is just only when it arises from a position open to all (equality of opportunity) and its benefits flow to the least advantaged (the difference principle), not simply from legally possessing wealth."
+  ],
+  "terms": [
+    { "term": "Distributive justice", "def": "The question of how the surplus value created by social cooperation should be allocated." },
+    { "term": "Primary social goods", "def": "The full set of benefits produced by society, including income and wealth but also rights, liberties, and opportunities." },
+    { "term": "Veil of ignorance / original position", "def": "Rawls's thought experiment in which people design a society's structure without knowing their own place within it." },
+    { "term": "Maximin rule", "def": "The principle of choosing the social structure whose worst-case outcome for the least advantaged is the best among all options." },
+    { "term": "Difference principle", "def": "The idea that inequalities are just only if they benefit the least advantaged members of society." }
+  ],
+  "anchors": [
+    "we’ve never really had a truly substantive conversation about what we really mean when we say that",
+    "these social goods certainly include obvious things like income, power, and wealth",
+    "What if the billionaire got all their money by going door to door with an army and saying, ‘Give me all your money, or I’ll kill you,’ until they got a billion dollars",
+    "The deals will almost certainly always favor the first astronaut simply because the first astronaut happened to get there first",
+    "it would be wrong for anyone to think it was just for you to own the consequences of something that is in your life solely because of a horrible stroke of luck",
+    "you are asked to decide how this society will be structured without knowing anything about your position within that society once it’s founded",
+    "we pick the structure where the worst-case scenario for a person is the best out of all the other possible worst-case scenarios in other strategies",
+    "you’re going to cut the pizza in a way where if you were to get the smallest piece it’s still something you’d be satisfied receiving",
+    "the smallest piece of pizza in a revised capitalist structure is bigger than the equal pieces provided by socialism",
+    "social and economic inequalities must first be to everyone’s advantage. And two, such social and economic inequalities must be attached to positions that are equally open to all"
+  ]
+}

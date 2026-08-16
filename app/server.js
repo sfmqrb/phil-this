@@ -13,10 +13,12 @@
 //   PATCH  /api/auth/me  { name, email, currentPassword?, newPassword? } -> { user }
 //
 // Per-user data (requires an authenticated session cookie):
-//   GET  /api/store  -> { scores, progress }
+//   GET  /api/store  -> { scores, progress, review }
 //   POST /api/store  body { scores } -> overwrites the caller's own scores
 //   POST   /api/progress  { episodeId, currentIndex, score, missed } -> upsert
 //   DELETE /api/progress/:episodeId                                  -> clear
+//   POST /api/review  body { review } -> overwrites the caller's own
+//                                        spaced-repetition review deck
 //
 // GET /api/search?q=<term> -> case-insensitive, typo-tolerant full-text
 //                              search across every transcript
@@ -298,6 +300,21 @@ var server = http.createServer(function (req, res) {
       if (err) { sendJson(res, 400, { error: "Invalid JSON" }); return; }
       if (body.scores && typeof body.scores === "object") {
         db.replaceScoresForUser(postSession.user.id, body.scores);
+      }
+      sendJson(res, 200, { ok: true });
+    });
+    return;
+  }
+
+  // ----- spaced-repetition review deck -----
+
+  if (pathname === "/api/review" && req.method === "POST") {
+    var reviewSession = requireAuth(req, res);
+    if (!reviewSession) return;
+    readBody(req, function (err, body) {
+      if (err) { sendJson(res, 400, { error: "Invalid JSON" }); return; }
+      if (body.review && typeof body.review === "object") {
+        db.replaceReviewForUser(reviewSession.user.id, body.review);
       }
       sendJson(res, 200, { ok: true });
     });

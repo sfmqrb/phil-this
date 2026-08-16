@@ -1,0 +1,30 @@
+{
+  "id": 48,
+  "argument": "Adam Smith argues that true wealth isn't a raw dollar figure but what your labor can actually buy, and that this real wealth has exploded because of specialization and self-interested trade. People pursuing their own interests, not altruism, is what has made ordinary modern life more comfortable than that of history's kings.",
+  "keyIdeas": [
+    "Wealth should be measured by what your money or labor can actually buy, not just a raw number -- illustrated by the 'million dollars vs. a cheeseburger' desert-island example.",
+    "Real wealth, measured in labor-hours needed for an hour of light, increased over 43,000-fold in 200 years because technological innovation and specialization reinforce each other in a self-perpetuating cycle.",
+    "Smith's pin-factory example shows specialization lets a team of workers produce tens of thousands of times more than a single generalist working alone could ever manage.",
+    "Trying to do everything yourself, like carrying a Swiss Army knife instead of separate specialized tools, produces mediocre versions of everything rather than a few genuinely good things.",
+    "Smith reframes self-interest: people don't need to be altruistic for society to benefit -- appealing to someone's self-interest, as in trade or Steve Jobs building the iPhone, can produce broad social good regardless of the underlying motive."
+  ],
+  "terms": [
+    { "term": "Specialization", "def": "Dividing labor so individuals or groups focus on one task, dramatically increasing output and quality." },
+    { "term": "Division of labor", "def": "Smith's actual term for what the episode calls 'specialization': the pin-factory example of breaking production into over a dozen separate steps done by different workers, letting a team make ~50,000 pins a day versus one person's single pin." },
+    { "term": "Self-interest", "def": "Acting in one's own benefit; Smith argues this, not altruism, is what drives people to make bargains that end up benefiting society." },
+    { "term": "\"Man is an animal that makes bargains\"", "def": "Smith's phrase for the human habit of trading by appealing to others' self-interest rather than their charity." },
+    { "term": "Real wealth", "def": "Wealth measured by what your labor or money can actually purchase, rather than a raw net-worth figure." }
+  ],
+  "anchors": [
+    "I can’t think of a single king from human history that wouldn’t trade lives with me in a heartbeat",
+    "you have a million dollars, and I have a cheeseburger. If we’re stranded on a desert island where that money doesn’t buy anything, who’s richer?",
+    "In 200 years, the efficiency of your work hours in this very small area has improved by 43,200 times.",
+    "Technological innovation and specialization—these two things are the linchpin, and they’re also incredibly intertwined.",
+    "this team of specialists that he’s assembled—when humans are working together in coalition—these guys can make almost 50,000 pins in a day",
+    "you just get a mediocre knife, a bad nail file, and those little scissor things",
+    "there’s a self-interested motivation there for improving bread production",
+    "one of the most common tactics that we use to try to get what we want from the other person is by appealing to their self-interest",
+    "when you remove the meritocracy of professional sports, there’s no reason for them to try as hard as they possibly can each day",
+    "His vice, if that’s what you want to call it, of wanting to be put down in the annuls of history, ultimately, is a great thing for everyone, including him."
+  ]
+}

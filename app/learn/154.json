@@ -1,0 +1,30 @@
+{
+  "id": 154,
+  "argument": "Peirce and James's pragmatism emerges as a middle ground between thinkers who still chased certainty through better methodology and those who abandoned philosophy as pointless, since pragmatists doubted certainty was ever achievable but still found philosophy useful. They rejected Descartes-style foundationalism, since knowledge of one's own consciousness is just as inferential as knowledge of the outside world, and argued that to understand something is simply to know its consequences for behavior and action. From this they built a convergence theory of truth, where truth is what rational inquiry eventually converges on and what produces favorable results when acted on, a view James extended into how belief itself, whether about free will or the possibility of success, shapes what becomes true.",
+  "keyIdeas": [
+    "Pragmatism is a 'middle ground' because Peirce and James doubted philosophy could ever achieve certainty, yet still thought it was useful and necessary, rather than abandoning it as pointless like some of their contemporaries.",
+    "Pragmatists reject Descartes's 'I think, therefore I am' as a foundation for certainty because knowledge of one's own consciousness is just as inferential as knowledge of the outside world; even trying to access raw, uninferred experience (Peirce's 'naked in a room' image) just produces a new set of inferences.",
+    "To understand something, for a pragmatist, is to know all the ways that thing has consequences on behavior or human action, not to trace it to some foundational essence.",
+    "The convergence theory of truth holds that truth is the conclusion that everyone rationally investigating an issue will eventually arrive at together; James adds that a belief is true if acting on it produces favorable results, as in his example of someone who denies cars exist.",
+    "James distinguishes 'healthy-minded' people, who focus on and cultivate the good, from 'sick souls,' who remain aware of evil and refuse to ignore it, and argues that while both determinism and free will can explain the past, belief in free will matters most when looking toward the future."
+  ],
+  "terms": [
+    { "term": "Pragmatism", "def": "The philosophical middle ground, associated with Peirce and James, that doubts certainty is achievable but still finds philosophy useful and necessary." },
+    { "term": "Convergence theory of truth", "def": "The view that truth is the conclusion all rational inquirers investigating an issue will eventually converge on given enough time." },
+    { "term": "Foundationalism / solipsism", "def": "Attempts, in the tradition of Descartes and Locke, to ground certainty in individual consciousness, which pragmatists reject as no less inferential than knowledge of the outside world." },
+    { "term": "Healthy-minded vs. sick soul", "def": "James's two temperaments: healthy-minded people focus on and cultivate the good, while sick souls remain aware of evil and refuse to ignore it." },
+    { "term": "Compatibilism", "def": "James's middle-ground stance that both determinism and free will can explain the past, but belief in free will matters for shaping the future." }
+  ],
+  "anchors": [
+    "Maybe we’ll never be able to ultimately verify the integrity of our philosophy, but it is still undeniably useful or necessary.",
+    "we have no reason to assume that anything I claim to know about my consciousness is any more reliable than my knowledge of the outside world.",
+    "all you’ve really succeeded in doing there is to create a new set of inferences.",
+    "To understand something is to know all the ways that thing has consequences on behavior or human action.",
+    "the truth is the conclusion that all the people looking into it will converge upon given enough time.",
+    "the first time you test the truth of that and moonwalk into the middle of the intersection, Grandma Beatrice is going to have a new hood ornament.",
+    "He just uses the word “sick” to denote a malaise that comes with an awareness of the evil present in the world and an unwillingness to ignore it.",
+    "when looking into the future, your belief about whether you have free will or not is everything.",
+    "if you believe the truth is that you will never be able to make it, then you will never even try to jump. And you’re just going to get eaten by the bear.",
+    "For Peirce, the meaning of your actions isn’t located up in your brain somewhere but in your public acts."
+  ]
+}

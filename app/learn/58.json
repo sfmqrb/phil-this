@@ -1,0 +1,30 @@
+{
+  "id": 58,
+  "argument": "Kant argues morality must be grounded in our own reason rather than outsourced to a deity, monarch, or untrained subjective feeling, because only a decision based on our own reasoning counts as truly free, and morality is tied to freedom of choice. This sets up the classic tension between deontology (judging actions by adherence to duty and moral principles regardless of consequences) and consequentialism (judging actions solely by their outcomes). The axe murderer thought experiment shows deontology's cost: rigid duty-based honesty could require revealing where your children are hiding, while modified versions of the Anne Frank scenario show consequentialism's cost: without a reliable way to weigh outcomes, its flexibility can even be stretched to justify normally forbidden acts.",
+  "keyIdeas": [
+    "The axe murderer thought experiment shows the human cost of rigid duty-based principles: a moral absolutist deontologist who believes lying is always wrong would have to tell an axe murderer exactly where the children are hiding.",
+    "Just as you wouldn't trust an inexperienced person to perform surgery or fly a plane, Kant's supporters argue you shouldn't trust someone who hasn't seriously studied morality to construct their own moral code from limited personal experience.",
+    "Via Rousseau's slave argument, obeying an externally decreed moral code (from a deity or monarch) means you aren't making a fully autonomous choice, just as a slave ordered to kill isn't held fully morally culpable.",
+    "We don't judge a lion as immoral for killing a gazelle because it acts on pure impulse without reasoning through alternatives; moral responsibility requires the capacity to have reasoned toward a different choice.",
+    "Deontology cares about intention or duty, not just outcome (illustrated by two kids cleaning their rooms, one from duty, one for an ice cream reward), while consequentialism's flexibility, illustrated by the time-travel Hitler example, is also its danger: it can justify normally forbidden acts like murder if the calculated consequences are good enough."
+  ],
+  "terms": [
+    { "term": "deontology", "def": "The ethical view that whether an action is right or wrong is determined by the action itself and adherence to moral principles or duty, not by its consequences." },
+    { "term": "consequentialism", "def": "The ethical view that whether an action is right or wrong is determined by the consequences it produces, not the act itself." },
+    { "term": "moral absolutism", "def": "The idea that certain actions (like lying) are always wrong, regardless of context or consequences." },
+    { "term": "moral culpability", "def": "The degree to which someone is held responsible for an action, which Kant ties to whether the action stemmed from their own free, reasoned choice." },
+    { "term": "kingdom of ends", "def": "Kant's vision of an ideal society where every person is treated as an end in themselves rather than a means to someone else's goal." }
+  ],
+  "anchors": [
+    "A deontologist who is a moral absolutist that believes that lying is wrong would have to answer their door, look at the axe murderer dead in his eyes, and tell him exactly where their kids are.",
+    "You wouldn’t get operated on by a surgeon who wasn’t an expert.",
+    "Rousseau thought that if a master ordered his slave to kill someone else that it would be wrong for us as people to hold that slave morally culpable for murder",
+    "that lion is not a bad lion. It’s just responding to impulses in its body",
+    "the only way something can be said to be truly a free decision is if it’s based on our own reason",
+    "there’s a big difference between a kid that cleans his room out of a sense of duty",
+    "It were better for sun and moon to drop from heaven, for the earth to fail, and for all the many millions who are upon it to die of starvation in extremest agony",
+    "it removes human discretion from the equation, so there’s no chance of us letting ourselves off the moral hook",
+    "no matter what decision you make standing in that doorway, human life will be lost",
+    "A consequentialist might say that killing Hitler to save the subsequent tens of millions of people who died as a result of his decisions—that murder in this very specific case would be morally justifiable."
+  ]
+}

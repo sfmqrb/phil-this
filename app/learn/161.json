@@ -1,0 +1,30 @@
+{
+  "id": 161,
+  "argument": "Karl Popper's The Open Society and Its Enemies traces how some of the most revered works in Western political philosophy, especially Plato's holism and Hegel and Marx's historicism, laid the intellectual groundwork for totalitarian thought. Against this, Popper argues that politics should work like falsifiable science: piecemeal, correctable trial and error aimed at reducing suffering, rather than pursuing a utopian end state. Democracy matters to him not because it avoids mistakes, but because it lets power change hands without violence.",
+  "keyIdeas": [
+    "Popper's project was to trace the philosophical roots of totalitarian thinking back through revered Western political theory, rather than cataloguing present-day symptoms of fascism.",
+    "The 'strain of civilization' is the burden of individual responsibility and instability that comes with living in an open society, worth enduring because it keeps people in the driver's seat rather than steered by a false narrative.",
+    "Plato's mistake, per Popper, was approaching politics through 'holism': treating the state as needing a designed, static whole to prevent decay, which led to rigid class structures and the philosopher king.",
+    "Popper objects to historicists like Hegel and Marx who claim to know 'the history of mankind' is moving toward an 'end of history,' since what they call history of mankind is really only the narrower history of political power, and future decisions will rest on knowledge that doesn't exist yet.",
+    "Just as scientific theories should be falsifiable rather than provable, like 'all swans are white,' political theories should be improved through piecemeal trial and error rather than aiming at an unfalsifiable, perfect end state; Popper favors reducing suffering over increasing happiness, and values democracy because it avoids tyranny, not because it avoids mistakes."
+  ],
+  "terms": [
+    { "term": "Open society / closed society", "def": "Societies built on individual freedom and critical scrutiny of institutions, versus tribal, dogma-bound societies." },
+    { "term": "Holism", "def": "Popper's term for treating the state as a designed whole rather than understanding it through its parts, which he thinks led Plato to justify rigid social engineering." },
+    { "term": "Historicism", "def": "The belief that history follows discoverable laws pointing toward an inevitable 'end of history.'" },
+    { "term": "Piecemeal social engineering", "def": "Making small, correctable adjustments to concrete problems over time, as opposed to sweeping utopian social engineering." },
+    { "term": "Negative utilitarianism", "def": "Prioritizing the reduction of suffering over the pursuit of happiness in policy." }
+  ],
+  "anchors": [
+    "tracing the philosophical roots of this tendency TOWARDS totalitarian ideas IN western thought",
+    "at LEAST you are SOMEWHAT in the drivers seat...as opposed to getting chauffeured around by whatever fascist or totalitarian narrative happens to rule the day",
+    "post-hoc trying to design a government that prevents this natural process of decay and corruption",
+    "There is no history of mankind; there is only an indefinite number of histories",
+    "you don’t KNOW...what people 50 or 100 years from now will KNOW and be BASING their decisions on",
+    "What makes a scientific theory a USEFUL one is NOT that it can be proven to be true",
+    "how is the state to be constituted so that bad rulers can be got rid of without bloodshed, without violence",
+    "He compares it to a physical engineer that’ll make adjustments to a machine and improve how it functions little by little over time",
+    "It leads invariably to the attempt to impose our scale of ‘higher’ values upon others",
+    "The reason democracy is important to protect is that it avoids tyranny"
+  ]
+}

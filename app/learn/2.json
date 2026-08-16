@@ -1,0 +1,30 @@
+{
+  "id": 2,
+  "argument": "Pythagoras founded a religious commune around the idea that mathematical truths like the Pythagorean theorem were glimpses of eternal, divine law, distinguishing him from a modern cult leader in that he seems to have sincerely believed he was relaying sacred knowledge rather than pursuing money or power; his followers avoided meat because they believed in reincarnation of souls into animals, and sought to escape the punishing cycle of reincarnation by studying the eternal truths of math, music, and astronomy. Parmenides then upends this whole tradition with a purely deductive argument: because something cannot come from nothing, and things exist now, the universe must be eternal, and because change would require something to become what 'is not,' which cannot coherently be spoken of, change itself must be logically impossible, a conclusion he defends by insisting reason must always override the deceptive senses. Empedocles offers a compromise, agreeing the four elements themselves never change but arguing that their combining and separating, driven by the opposed forces of Love and Strife, produces the appearance of birth, death, and the ever-changing world we perceive.",
+  "keyIdeas": [
+    "West distinguishes Pythagoras from a modern cult leader by arguing that his extreme social skill combined with mathematical proofs that felt like glimpses of divine truth made it plausible his roughly 300 followers believed he was relaying sacred knowledge, not chasing money or power.",
+    "The Pythagorean theorem felt like magic or God-given wisdom because realizing a single formula held true without exception for every right triangle felt like touching an eternal law of the universe, especially without centuries of accumulated math texts to draw on.",
+    "Pythagoreans avoided meat because they believed in the transmigration of souls: eating an animal risked eating a relative or friend who had been reincarnated into it, and they sought to escape the cycle of reincarnation by studying eternal, unchanging subjects like math, music, and astronomy.",
+    "Parmenides argued deductively that the universe must be eternal, since something cannot come from a state of complete nonexistence and things demonstrably exist now, and that change is logically impossible since it would require something to become what 'is not,' which cannot be coherently spoken of.",
+    "Empedocles compromised with Parmenides by agreeing the four elements (earth, water, fire, air) themselves never change, while arguing their combining and separating, driven by the opposed forces of Love and Strife, produces the appearance of birth, death, and the ever-changing world we perceive."
+  ],
+  "terms": [
+    { "term": "Transmigration of souls", "def": "The Orphic-influenced Pythagorean belief that souls of the dead could be reincarnated into animals, underlying their prohibition on eating meat." },
+    { "term": "Monism (Pythagorean)", "def": "The Pythagorean view that number is the ruler of all forms, with mathematical ratios explaining phenomena like musical harmony." },
+    { "term": "Deductive reasoning (Parmenides)", "def": "Reasoning from a starting premise to a necessary conclusion; Parmenides is credited as the first to bring rigorous deduction to philosophy." },
+    { "term": "'What is is, and what is not is not'", "def": "Parmenides' foundational premise, used to argue that something cannot come from nothing and that change is incoherent." },
+    { "term": "Love and Strife", "def": "Empedocles' two opposed cosmic forces: Love combines elements into things and draws people together, Strife breaks elements apart and drives people apart." }
+  ],
+  "anchors": [
+    "The difference between Pythagoras and what we think of as a modern cult leader is that these modern cult leaders start these things up so they can have money, power, or influence over people. It’s not crazy to think that Pythagoras actually thought of himself as relaying some sacred information.",
+    "to feel that you really understand something about the essence of that triangle and the laws that govern the sides of that right triangle or pretty much any right triangle in the entire universe—that must have been mind-numbing",
+    "one of the anvils was exactly twice the size of the other anvil. So, when their hammers beat on the anvils, it made the same note just one octave apart",
+    "They thought that by eating other animals, you were essentially eating your grandma who just died and was reincarnated into the body of a chicken or something.",
+    "the closest thing a person can achieve to immortality is to understand these eternal truths and to try to live in harmony with them",
+    "a point in time where the universe was in a state of nothing existing is impossible because things exist now. And nothing can come into existence from a place where nothing exists.",
+    "if change was possible, it would first have to be one way and then change into another way that it’s not right now. But we can’t speak of what is not, so we can’t speak of change. Therefore, change is impossible.",
+    "that’s based on evidence you’ve gathered through the sense organs. And if what you think you see with your senses and what reason tells you contradicts each other, reason should always be held in higher regard because the senses are deceptive and can’t be trusted.",
+    "Empedocles thought the elements earth, fire, air, and water themselves do not change. They just intermingle and move around and combine with each other.",
+    "Love combines the elements into a human or a dog, and strife tears it apart and decomposes us."
+  ]
+}

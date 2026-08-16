@@ -1,0 +1,30 @@
+{
+  "id": 146,
+  "argument": "Building on Heraclitus's insight that the universe is a continuous flux rather than a set of static objects, Bergson argues that reality (which he calls 'duration') is a wholistic process whose moments interpenetrate rather than sitting side by side as separate, quantifiable units. Any attempt to spatially measure a process -- a sand dune, an evolving species, a second of time -- distorts the very thing being studied, which is why Bergson rejects 'mechanism,' the view that everything can be explained by breaking it into fixed, interacting parts. This grounds his theory of laughter: we laugh when we witness 'the mechanical encrusted upon the living,' meaning a person behaving rigidly, automaton-like, rather than with the fluid elasticity a healthy, vital society needs. Laughter functions as a social corrective, gently punishing rigidity in the absentminded, the conformist, and the separatist alike, keeping society flexible without resorting to jail -- though Bergson (via Aristotle) also allows that sometimes we simply laugh for laughter's own sake.",
+  "keyIdeas": [
+    "Heraclitus's river metaphor shows that we mistakenly treat moments as separate, static, freestanding things, when reality is a continuous flow; the sand dune example makes the same point about scientific measurement, which distorts a process by trying to spatially quantify a single moment of it.",
+    "Bergson prefers 'duration' to 'time' because duration is a wholistic, continuous process where moments interpenetrate, rather than sitting as distinct, quantifiable units on a timeline.",
+    "'Mechanism' is the view that everything, including life and evolution, can be explained by breaking it into distinct parts that work together like a machine; Bergson rejects this because a machine's outputs can only recombine its existing finite parts, so mechanism can't account for genuinely new things emerging in evolution -- his alternative is the élan vital, or vital impulse.",
+    "Humans face a paradox: we're the one species that wants intimate access to life's process, yet using intelligence (mechanistic, spatial analysis) to study that process distorts the very thing we're trying to access -- other animals live it intuitively instead.",
+    "Laughter is a social corrective aimed at rigidity: the absentminded friend who trips resembles a rigid automaton, the conformist businessperson shows how blind rigidity makes a society less vital, and non-criminal offenders who merely lack elasticity are corrected by laughter rather than jail -- though Aristotle's point about the function of eyesight suggests laughter, like seeing, can also just be enjoyed for its own sake."
+  ],
+  "terms": [
+    { "term": "Duration", "def": "Bergson's term for a wholistic, continuous process in which moments interpenetrate rather than existing as separate, quantifiable units, as opposed to 'time' measured spatially." },
+    { "term": "Mechanism", "def": "The view that everything can be explained by breaking it into distinct parts that work together like a machine." },
+    { "term": "Vitalism / élan vital", "def": "Bergson's view that life is a singular, continuous process governed by its own rules, driven by a 'vital impulse' that mechanism cannot fully explain." },
+    { "term": "The mechanical encrusted upon the living", "def": "Bergson's phrase for the moment a person's behavior becomes rigid and automaton-like rather than fluid and adaptive -- the trigger for laughter." },
+    { "term": "Elasticity", "def": "The flexibility a person needs to remain a functioning, vital member of society; its lack (through absentmindedness, conformism, or separatism) is what laughter corrects." }
+  ],
+  "anchors": [
+    "Heraclitus is saying that the universe is not made up of a bunch of static, separate, distinct objects that can be cataloged and compared up next to each other to be able to understand them.",
+    "there’s a sense in which by the time you get done making your first measurement of one little piece of that sand dune, the sand dune has shifted",
+    "duration is a wholistic, connected, and continuous process, not unlike the sand dune",
+    "everything can be explained by looking to material and mechanical principles to be able to explain it. We break things down into their component parts",
+    "if life is emerging and it resembles something like a machine, then nothing new could really come out of it because everything new would have to be born out of the existing finite set of cogs and gears that it has",
+    "we’re the one species that wants to know about the complex inner workings of the process of life and how it operates. And yet, because we always have to use our intelligence to be able to arrive at that knowledge, we are the only species that can’t get intimate access to it.",
+    "in that moment they resemble an automaton programmed to start a vape store far more than they resemble a functioning member of the process of society",
+    "if everybody blindly committed to some role that they just fell into one day, then we wouldn’t have enough resistance against the current dominant narrative at any one time. Society, in other words, if it were filled with conformists, would be a less vital or healthy place, for Bergson.",
+    "And we have an obvious solution for criminals. We put them in jail. But these minor offenses -- where people really aren’t hurting anyone else, they just lack elasticity -- we’re not going to put them in jail for that.",
+    "sometimes you just want to enjoy the view. Sometimes you just want to look out the window and see things for the sake of seeing them."
+  ]
+}

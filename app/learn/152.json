@@ -1,0 +1,29 @@
+{
+  "id": 152,
+  "argument": "Starting from Benjamin's essay 'The Task of the Translator,' this episode establishes that art is not created with an audience in mind and that even a perfect reproduction of a work's raw content misses the fuller meaning tied to when, where, and how it was originally made. Benjamin extends this into his theory of the 'aura,' the unique presence of an object coexisting with an observer in one moment of space and time, which mechanical reproduction technologies like photography destroy by collapsing that distance. As reproduction spreads, unique things, including our own likeness in the selfie, get treated as interchangeable copies, a shift Benjamin ties directly to the rise of mass culture and mass production.",
+  "keyIdeas": [
+    "Benjamin rejects the idea that a translator's job is to make a text as accessible as possible, because that assumes art considers its receiver, when in fact works of art are not created with an audience in mind.",
+    "The 1812 Overture thought experiment shows that even a perfect note-for-note reproduction of a work's raw content cannot recreate the fuller meaning tied to when, where, and how the original was created and conveyed.",
+    "The 'aura' is the unique appearance of distance between subject and object coexisting at one moment in space and time (as with the moon or the Mona Lisa); it allows for a reflective aesthetic experience that photography, by collapsing that distance, destroys.",
+    "As reproduction becomes possible, even singular, unique things get treated as interchangeable copies, a 'sameness' that Benjamin says is not a coincidence alongside the rise of mass production, mass transit, and mass psychology.",
+    "The selfie exemplifies people willingly turning themselves into a mass-reproducible copy, like a picture of the Mona Lisa rather than the unique original, sacrificing their own aura the way art's aura was sacrificed."
+  ],
+  "terms": [
+    { "term": "Aura", "def": "The unique appearance of distance between subject and object coexisting at one moment in space and time, which allows for a reflective aesthetic experience." },
+    { "term": "The Task of the Translator", "def": "Benjamin's early essay arguing translation is not fundamentally about making a text accessible to the reader, since art is not created with an audience in mind." },
+    { "term": "Mechanical reproduction", "def": "Technology, like photography, that allows a work or a likeness to be mass-duplicated and distributed outside its original time and place." },
+    { "term": "Sameness", "def": "The effect by which reproduction makes even singular, unique things feel interchangeable, replicable copies." }
+  ],
+  "anchors": [
+    "No poem is intended for the reader, no picture for the beholder, no symphony for the listener. In appreciation for a work of art or art form, consideration of the receiver never proves fruitful.",
+    "no matter how perfectly you reproduce the raw data in a work of art, and no matter how perfectly you can translate the contents of a text, there will always be something more you are missing when it comes to accessing the entirety of its meaning.",
+    "couldn’t you say that the world around you is just as much a collection of symbols that you’re constantly reading that denote meanings as well?",
+    "for the longest time because paintings were so expensive and time consuming to produce, it was only the rich and powerful—most of the time members of the aristocracy—that could ever afford to have their likeness painted.",
+    "there is an immediacy to my experience of the moon because we are subject and object coexisting at a particular moment in space and time together. But on the other hand, there’s a distance between subject and object.",
+    "The peeling away of the object’s shell, the destruction of the aura, is the signature of a perception whose sense of the sameness of things has grown to the point where even the singular, the unique, is divested of its uniqueness—by means of its reproduction.",
+    "whenever we take a selfie, we are essentially turning ourselves into a picture of the Mona Lisa rather than the real thing. We mass-reproduce, distribute, and commodify ourselves.",
+    "The destruction of the aura makes it so that now there’s not even anything missing if something’s mass-produced, distributed, and commodified.",
+    "it’s not a coincidence that this technology has corresponded with a rise in mass culture: mass production, mass transit, mass distribution, mass psychology, mass consumption, mass communication.",
+    "What happens when for the first time in human history the masses can come face to face with themselves?"
+  ]
+}

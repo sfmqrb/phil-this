@@ -1,0 +1,30 @@
+{
+  "id": 147,
+  "argument": "This episode traces the classic philosophical debate between 'being' (Parmenides's view that reality is fixed and eternal, and our sense of change is illusion) and 'becoming' (Heraclitus's view of universal flux), and connects it to Nietzsche's love of comedy. A great philosopher, like a great comedian, refuses to accept the way things are as fixed and eternal -- both comedy and tragedy negate 'being' by showing that an apparently stable reality is really just an absurd stage in an ongoing process. This applies to personal identity (no Facebook snapshot captures a self that's constantly becoming something else) as much as to the universe (a static-looking coffee table is actually decaying and hurling through space; only our narrow vantage point makes it look fixed). Process philosophers like Bergson and Whitehead reject material reductionism -- the chain from physics to psychology -- because it treats existence purely spatially and leaves out meaning and consciousness. Accepting becoming over being forces us to confront two hard problems: the terror that a seemingly fixed world can give way, and the struggle to ground knowledge once only perspective, not objectivity, is available.",
+  "keyIdeas": [
+    "Nietzsche ranks philosophers partly by their use of humor because comedy performs the same function great philosophy should: refusing to accept the way things are as fixed and eternal, and instead treating it as one absurd, changeable stage in an ongoing process.",
+    "Parmenides's line 'what is is, and what is not is not' argues that the changes we perceive through our senses are illusions layered over an eternal, unchanging truth beneath appearances -- the polar opposite of Heraclitus's flux.",
+    "Personal identity works the same way: an old Facebook memory can't capture who you are, because small unnoticed changes accumulate and no snapshot truly holds a self that is constantly becoming something else -- a fixed group identity 'branded into your side' produces exactly this kind of malaise for Nietzsche.",
+    "The coffee table / '70,000 miles an hour' example shows that something looking static is only an effect of the narrow, single vantage point we're stuck observing it from -- the object is actually decaying and hurtling through space.",
+    "Process philosophers like Bergson (via the IKEA end-table analogy) and Whitehead reject material reductionism -- the chain of physics to chemistry to biology to psychology -- because it treats existence purely spatially and leaves out process-based aspects like meaning and consciousness; accepting becoming over being forces us to confront the terror that a fixed world can give way and the struggle to ground knowledge once only perspective, not objectivity, is available."
+  ],
+  "terms": [
+    { "term": "Being", "def": "The view that there is a fixed way that things are in the world, which philosophers and scientists should try to discover and categorize." },
+    { "term": "Becoming", "def": "The process-oriented view that things are fundamentally in constant change, with no fixed 'way that things are.'" },
+    { "term": "Negation of being", "def": "The move, shared by comedy and tragedy for Nietzsche, of denying or subverting the idea that current reality is fixed and eternal." },
+    { "term": "Material reductionism", "def": "The view that everything about the universe, including psychology, can ultimately be explained by its most fundamental physical parts (physics to chemistry to biology to psychology)." },
+    { "term": "Metaphysics (Whitehead's sense)", "def": "For Whitehead, not just an account of why the physical world is the way it is, but the framework that sets the terms for any discussion about reality at all." }
+  ],
+  "anchors": [
+    "one of the marks of a great philosopher is not just to accept the way that things are and never question them. That’s kind of the opposite of your job.",
+    "They see something most people just see as an ordinary reality of the world and, then, by making fun of it, they show people that this thing isn’t “the way that things are” in some eternal sense.",
+    "he thought our flawed senses deceive us in this world of appearances and that actual truth about the state of things is eternal and unchanging",
+    "everybody would admit that they’re a different person today than they were five years ago. How about this? If we took a snapshot of something you said on Facebook five years ago",
+    "like something branded into your side so the other members know you’re one of them",
+    "the only way you could possibly think that there is is because you’re only viewing it from your incredibly narrow perspective that you have access to",
+    "The materials that make something up are not the entirety of what something is.",
+    "Thinkers like Bergson want to look at other elements of existence that we also haven’t made much headway in, and he wants to look at them from the same process-oriented perspective: things like consciousness, things like meaning, things like aesthetics.",
+    "Metaphysics, to Whitehead, is not just about explaining how the physical world is the way that it is, like many philosophers have done in the past. Metaphysics is the realm that he says sets the conduct of discussions, the actual framework that we use to even be able to have a conversation about the way things are in the universe.",
+    "Once you accept that we don’t have access to objectivity or eternal truths, once you accept that all you have access to is a perspective and all we have access to is intersubjectivity, how can you reliably decide what you’re going to believe?"
+  ]
+}

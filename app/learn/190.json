@@ -1,0 +1,30 @@
+{
+  "id": 190,
+  "argument": "Martha Nussbaum builds a 'Neo-Stoicism' that keeps the Stoic insight that emotions are judgments about what matters to us, while rejecting the Stoic conclusion that emotions should be suppressed in favor of pure reason, arguing instead that emotions like compassion are cognitively rich and essential to moral development. Drawing on developmental psychology absent from ancient Stoicism, she traces how compassion can expand a person's moral circle outward from family to strangers, and distinguishes guilt (which acknowledges another's rights and motivates repair) from shame (which is purely self-focused). She extends this humane, needs-based view to politics through her Capabilities Approach, arguing that social contract theory's image of the autonomous, healthy producer leaves out the disabled, children, and the elderly, and closes by returning to Euripides's Hecuba to argue that being genuinely good requires a trust and openness to the world that leaves you vulnerable to being shattered by betrayal through no fault of your own.",
+  "keyIdeas": [
+    "Nussbaum keeps the Stoic definition of emotion as a judgment about whether something external is good or bad for our well-being, but rejects the conclusion that a wise person should therefore detach from the external world, since our lives are fundamentally 'needy' and dependent on other people and material resources.",
+    "Where classical Stoicism ignored developmental psychology, Nussbaum's Neo-Stoicism incorporates it: a baby's first experience of jealousy, when it sees its mother caring for someone else, marks the moment it's forced out of default narcissism to recognize other people exist.",
+    "Against the Stoic, Kantian, and Nietzschean objections to compassion, Nussbaum argues compassion is not just an emotion but a 'vehicle' that can expand a person's circle of moral concern from immediate family outward to strangers and society.",
+    "Using a car-accident example, Nussbaum distinguishes shame (entirely self-focused, fixed by convincing yourself you're perfect again) from guilt (which acknowledges the other person's rights and is fixed through making reparations).",
+    "Nussbaum's Capabilities Approach critiques social contract theory (Hobbes, Locke, Rousseau) for modeling the 'good citizen' as an autonomous, healthy producer, which leaves out people with disabilities, children, and the elderly; a just society must actively give people the real capability to flourish, not just an abstract equal right to."
+  ],
+  "terms": [
+    { "term": "Neo-Stoicism", "def": "Nussbaum's update to classical Stoic ethics that incorporates modern developmental psychology and treats emotions as valuable sources of moral information rather than things to be detached from." },
+    { "term": "Emotional repertoire", "def": "Nussbaum's term for the individual, personal-history-shaped set of emotional responses a person develops, which the Stoics largely ignored." },
+    { "term": "Compassion (Nussbaum's definition)", "def": "A painful emotion occasioned by awareness of another person's undeserved misfortune, which Nussbaum treats as a vehicle for expanding moral concern." },
+    { "term": "Shame vs. guilt", "def": "Shame is self-focused, about protecting one's own image, fixed by restoring a sense of perfection; guilt acknowledges another's rights and is fixed through reparation." },
+    { "term": "Capabilities Approach", "def": "Nussbaum's political theory, drawn from Aristotle, that justice requires structuring society to give people the actual capability to flourish, not merely an abstract equal right to." }
+  ],
+  "anchors": [
+    "To be a good human being is to have a kind of openness to the world",
+    "ALL that an emotion is…is a JUDGMENT you’re making about something that’s happening EXTERNAL to you… that you’re then LINKING to whether it’s good or bad for your OWN personal projects",
+    "The POINT is: we can take the core of Stoicism… and USE modern psychology to make it EVEN BETTER. Again this is Neo…Stoicism.",
+    "this COULD BE the moment…where that child feels the feeling of JEALOUSY, for the very first time…when they’re FORCED to come out of their default narcissism and recognize that they are not the only person in the entire world",
+    "the more COMPASSION you feel for the person who is being hurt in a situation that is ENTIRELY not their fault…the more hatred and resentment you often feel towards the people who are RESPONSIBLE for them being there",
+    "compassion can serve as a VEHICLE for people to expand their moral horizons…to expand the numbers of people that they care about hopefully to the entire society, maybe even the world",
+    "while shame is ENTIRELY self-focused…GUILT…has a BUILT IN acknowledgment of another person’s rights",
+    "the GOOD CITIZEN…is someone who produces…someone who produces in a way that benefits everyone out of mutual advantage",
+    "the entrance to the bank is just a set of 30 stairs up to the front door. What are they supposed to do?",
+    "the condition of being good is that it should always be possible for you to be morally destroyed by something that you couldn’t prevent"
+  ]
+}

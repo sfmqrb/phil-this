@@ -1,0 +1,30 @@
+{
+  "id": 46,
+  "argument": "Rousseau argues that government structure should be matched to the size of the society it governs -- monarchy for large populations, aristocracy for medium ones, democracy for small ones -- and that examining each type's strengths and weaknesses reveals elective aristocracy as the best overall option. But even his favorite form depends on citizens having access to good information about who deserves to rule, something that is never guaranteed even on a small island.",
+  "keyIdeas": [
+    "Rousseau questions whether the violence of human history should be labeled 'human nature,' since it really reflects the decisions of a small handful of ambitious rulers, not humanity as a whole.",
+    "He sorts every government into monarchy (rule by one), aristocracy (rule by the few), and democracy (rule by the many), and argues government size should scale inversely with the number of decision-makers.",
+    "Pure democracy fails, in his view, because power naturally tends to consolidate into fewer hands over time, and because requiring every citizen to be a full-time politician eats up the very freedom government was meant to secure.",
+    "Monarchy fails because one ruler's decision-making is limited to a single set of experiences, the officials he appoints share that same limitation and are often chosen for loyalty over merit, and a ruler's vision dies with him.",
+    "Elective aristocracy is Rousseau's favorite because it combines the stability of shared laws with the ability to remove corrupt rulers, but it still depends on an educated citizenry with reliable information -- something even a small island struggles to guarantee."
+  ],
+  "terms": [
+    { "term": "Magistrate", "def": "In Rousseau's framework, a person who holds a share of governing power; the ratio of magistrates to citizens defines the type of government." },
+    { "term": "Aristocracy", "def": "Rule by the few; Rousseau distinguishes natural, hereditary, and elective forms, favoring the elective kind." },
+    { "term": "State of nature", "def": "The hypothetical pre-civilization condition humans lived in before governments were formed." },
+    { "term": "Elective aristocracy", "def": "A government by a small elected group, which Rousseau considers the best balance of stability and accountability." },
+    { "term": "Veil of classification", "def": "The episode's term for the limits on what information citizens can access when judging who deserves power, since some information never reaches the public." }
+  ],
+  "anchors": [
+    "we can better understand the role of each ingredient in these government recipes that we’re looking at today",
+    "why is it fair to conflate the decisions of a few hundred ambitious rulers from history with human nature itself?",
+    "the more people you’re dealing with, the fewer number of people should be making all the decisions for them",
+    "He says that governments by nature always tend to deviate towards having less people in charge than more people in charge.",
+    "Do you really want to be a full-time politician or a full-time congressman on top of having a full-time job and a family and hobbies and friends",
+    "he’s appointing people that promote his agenda. He’s not even thinking about the person that’s the most qualified for the job.",
+    "Think of it, like, the last 50 years you’ve been working towards one guy’s goal; he falls off the side of a mountain, and then all that work’s wasted",
+    "There’s absolutely zero merit involved at all when choosing your rulers.",
+    "They can still elect a group of people to rule for them instead of forcing them to spend all their time being a politician",
+    "You can’t know about information that is classified—all of the intel, all the stuff that they see on satellites"
+  ]
+}

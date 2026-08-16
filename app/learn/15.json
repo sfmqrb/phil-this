@@ -1,0 +1,30 @@
+{
+  "id": 15,
+  "argument": "Plotinus answers the problem of evil -- how can a good, ordered universe contain so much suffering -- by arguing evil has no positive existence of its own; it is only a privation, an absence of good, not a rival force battling against it. This works because existence itself is a good, so nothing can be wholly evil without ceasing to exist entirely. Underlying this is Plotinus's larger metaphysics: things are real in proportion to how unified they are, giving rise to a hierarchy of being (the One, the Intellect, the Soul, and the physical world) in which the sense-able world we inhabit is simply the most diluted, least unified, and therefore least real and most evil-prone tier.",
+  "keyIdeas": [
+    "Plotinus's privation theory holds that evil is not a presence but an absence of goodness; nothing can be wholly evil because complete absence of good would mean the thing couldn't exist at all.",
+    "Existence itself counts as a good, so anything that exists -- even something monstrous -- retains some minimal good (like basic functioning) that allows it to exist, blocking the idea of 'pure evil' as its own positive force.",
+    "Plotinus grounds his whole system in the question of what makes something one thing rather than a mere aggregate: an army, a chorus, or a ship needs real unity to exist as what it's called.",
+    "The more unity something possesses, the more real it is -- reality is graded rather than binary, producing a hierarchy of being: natural unity (like a dog's) ranks above artificially assembled unity (like a clock's), and the pure Form of a thing ranks above any physical instance mixing multiple qualities together.",
+    "This graded hierarchy reframes evil as a deficiency or falling-away from unity/coherence/goodness, rather than as an independently existing force -- explaining the problem of evil without denying that bad things happen."
+  ],
+  "terms": [
+    { "term": "Privation theory of evil", "def": "The view that evil is not a real, positive thing but merely an absence or lack of good." },
+    { "term": "The One", "def": "The topmost, indescribable source of unity in Plotinus's hierarchy, sometimes called the Good or God." },
+    { "term": "The Intellect", "def": "The second tier of Plotinus's hierarchy, the realm of the perfect, unified Forms -- true existence." },
+    { "term": "The Soul", "def": "The third tier, which projects reflections of the Forms into physical matter, creating the sense-able world." },
+    { "term": "Hierarchy (chain) of being", "def": "Plotinus's graded ordering of reality by degree of unity, from the One down through Intellect, Soul, and matter." }
+  ],
+  "anchors": [
+    "how can an all-powerful, loving God exist and still allow evil to exist in the world?",
+    "that isn’t a presence of evil or badness; that’s just an absence of goodness",
+    "if something was completely devoid of any good qualities, it would not and could not exist",
+    "It is in virtue of unity that beings are beings.",
+    "the more unity something has, the more real it is",
+    "Living things like dogs have a unity that’s inherent. They were born with it.",
+    "a tree is always going to have some other forms in relation to it like greenness or roundness",
+    "If you took away the good of something, then the bad is always taken away with it. So bad only exists in relation to something good and is, therefore, just an absence of good.",
+    "Only absences of good do—good things not being as purely good as they could be.",
+    "the more unity something has, the more real it is"
+  ]
+}

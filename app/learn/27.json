@@ -1,0 +1,30 @@
+{
+  "id": 27,
+  "argument": "Thomas Hobbes reframes fear as a useful survival tool that only becomes harmful in excess, since we've already exchanged some liberty for security under the social contract and no longer need constant vigilance. Because human senses and personal experience distort reality (something the narrator illustrates through his own paranoid misreading of a man carrying an umbrella), Hobbes rejects Bacon's sense-based scientific method and instead models the Leviathan on geometry, building conclusions step by step from precisely defined language, arguing that imprecise words are what ultimately drive society's deepest and most dangerous disagreements.",
+  "keyIdeas": [
+    "Fear is like NyQuil: helpful in small doses for self-preservation, but harmful and even paralyzing in excess, and we shouldn't 'artificially create a state of nature' in our own lives since we've already traded some liberty for security.",
+    "The umbrella-carrying man at Subway illustrates that personal history and bias distort perception, the same flaw Hobbes finds in relying on sense experience for scientific knowledge - reinforced by the unreliability of eyewitness testimony raised in the Mormon-visitor exchange.",
+    "Unlike Bacon, who grounds scientific method in sense experience, Hobbes grounds it in precisely defined language and reasoning from first principles, modeled explicitly on how geometry builds proofs.",
+    "Because humans are physical 'machines' made of imperfect parts, our senses are inherently flawed tools for arriving at trustworthy knowledge, which is why Hobbes turns to language and definition instead.",
+    "Ordinary words like 'microphone' or 'I'm at the club' call up different images or meanings for different listeners; for Hobbes, this same ambiguity, left unresolved at a societal scale, is what escalates disagreements all the way to civil war and undermines the peace the social contract is meant to secure."
+  ],
+  "terms": [
+    { "term": "state of nature", "def": "Hobbes's term for the pre-social-contract condition of constant danger and fear for survival, which people should not needlessly recreate once security has been secured." },
+    { "term": "social contract", "def": "The exchange of some personal liberty for security under a sovereign, which the episode says makes constant fear and vigilance unnecessary." },
+    { "term": "idols of the mind", "def": "Bacon's term (referenced here) for the biases that make eyewitness testimony and sense experience unreliable as a foundation for knowledge." },
+    { "term": "first principles", "def": "Certain, clearly-defined starting points from which reliable conclusions are built step by step, the method Hobbes borrows from geometry." },
+    { "term": "definitions", "def": "Hobbes's insistence that scientific reasoning must begin by precisely settling the meaning of words before building any argument on them." }
+  ],
+  "anchors": [
+    "fear, to Thomas Hobbes, is a little bit like NyQuil",
+    "Hobbes would advise that we shouldn’t artificially create a state of nature in our lives when none exists. After all, we signed the social contract",
+    "this is an excellent example of a terribly distorted map of the world proving that it is incapable of perceiving reality accurately because that lens will always be shaded and driven by experience",
+    "our method should be more centered around language than it should be around human experience",
+    "Human experience is very shaky. Multiple people can all experience the same event and have very different accounts of what actually took place",
+    "Hobbes admired this way of reasoning so much that he lays out his Leviathan in a very similar way",
+    "We are machines. We’re machines made of bones, skin, flesh, and blood, just like all the other animals in the world",
+    "a completely different image of “microphone” comes up in the head of everybody listing",
+    "at the club, the country club! I’m at the golf course right now",
+    "these sorts of fundamental disagreements naturally go to civil war"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 37,
+  "argument": "Leibniz, like Spinoza, holds there is only one kind of substance, but where Spinoza's substance is the totality of everything, Leibniz's is the smallest possible unit — the monad, a simple, non-physical thing that cannot be subdivided because it has no extension. Monads are windowless, meaning nothing ever passes directly between them; instead, each one contains from creation a complete script of its relationship to every other monad across all of time, a state Leibniz calls preestablished harmony, which is why they appear coordinated without ever interacting. This metaphysics underwrites Leibniz's distinction between two kinds of truth: truths of reasoning, which are necessarily true by definition alone (like 'all bachelors are unmarried'), and truths of fact, which are only contingently true and can mislead us if we generalize from limited observation (the mansion with the lights on) — a distinction that will matter directly for his theodicy in the next episode.",
+  "keyIdeas": [
+    "The BuyPhone/iPhone story illustrates that two people can independently arrive at the same landmark discovery without wrongdoing — the same situation, the episode argues, as Leibniz and Newton both independently developing calculus.",
+    "Leibniz agrees with Spinoza that there is only one true substance, but disagrees on what it is: Spinoza's one substance is everything in the universe taken as a totality, while Leibniz's is the smallest possible unit, so small it isn't physical at all — the monad.",
+    "Anything with extension (taking up physical space) can in principle be bisected into smaller, interdependent parts, so it can't be the simplest, self-explaining thing that exists — which is why a true substance must be non-physical, unlike an atom.",
+    "Monads 'have no windows': nothing passes into or out of them, and there is no direct interaction (secondary causation) between them — each already contains everything it will ever be from the moment of creation, coordinated through preestablished harmony rather than real-time interaction.",
+    "Leibniz distinguishes truths of reasoning (necessarily true by the definition of their terms, like 'all bachelors are unmarried') from truths of fact (contingently true, based on observation, and prone to mistaken generalization, as in the mansion-with-the-lights-on example)."
+  ],
+  "terms": [
+    { "term": "monad", "def": "Leibniz's single true substance: a simple, non-physical, indivisible unit that everything in the universe is ultimately made up of." },
+    { "term": "extension", "def": "The property of taking up physical space (length, breadth, depth); anything with extension can in principle be subdivided, so it can't qualify as Leibniz's simplest substance." },
+    { "term": "windowless monads", "def": "Leibniz's claim that nothing passes directly into or out of a monad — no monad ever causally interacts with another." },
+    { "term": "preestablished harmony", "def": "The state in which each monad contains, from creation, a complete script of its relationship to every other monad across all of time, so that they appear coordinated without ever directly interacting." },
+    { "term": "truths of reasoning vs. truths of fact", "def": "Leibniz's distinction between necessary truths, true by definition alone (truths of reasoning), and contingent truths, true based on observation and possibly otherwise (truths of fact)." }
+  ],
+  "anchors": [
+    "There’s no thievery here. There’s no deception that went on. You guys were both brilliant people that both independently arrived at the exact same conclusion",
+    "Spinoza thinks that there is one substance and that that one substance is everything in the universe. Leibniz goes the other direction. He thinks we have one substance that’s so small it can’t even be said to exist in physical form",
+    "you’re taking something incredibly complex—the iPhone—and you’re starting to break it down into smaller pieces",
+    "that length can be bisected in theory, right? That depth can be bisected",
+    "The atom is a particle. It takes up space in the physical world. It possesses the quality of extension. The monad is incorporeal",
+    "There is no direct interaction between these monads. There is no, what philosophers would call, secondary causation",
+    "By knowing their place in this giant, cosmic, Broadway script, they know exactly where all the other monads are going to be in relation to them",
+    "You can’t be a bachelor and be married. If you were married, you would lose your membership to the bachelor club",
+    "You might do your scientific experiments about the mansion around you, get to the rooms that are immediately surrounding your room. And you might conclude that you exist in a mansion where every single room in the mansion has the lights on",
+    "There’s a veritable infinity of monads just making up your body alone. How could you ever actually be able to do the calculations necessary"
+  ]
+}

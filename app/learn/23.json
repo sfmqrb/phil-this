@@ -1,0 +1,30 @@
+{
+  "id": 23,
+  "argument": "Machiavelli argued that virtue is not a single fixed template but depends on the goal being pursued, and that a ruler's overriding goal must be the stability of the state -- without which no plan for prosperity can succeed. This justifies using force, deception, and even cruelty when necessary, since a prince must act as both fox (to recognize traps) and lion (to frighten wolves); yet Machiavelli also praised Rome's republic, resolving the apparent contradiction by treating forceful rule and republican government as two sequential stages, where stability secured by force must come before a republic can safely develop.",
+  "keyIdeas": [
+    "Reducing Machiavelli to the popular sense of 'Machiavellian' misses his broader body of work, much as judging George Orwell only by Animal Farm would.",
+    "Right and wrong action depends on the goal being pursued -- what makes a good comedian differs from what makes a good doctor -- so a ruler's virtue is judged against the goal of maintaining a stable state, not the same template that applies to ordinary citizens.",
+    "A ruler's ten-year plan for prosperity is worthless without stability first, since instability undermines any progress no matter how good the plan; as Machiavelli's line about armed prophets being victorious and unarmed prophets being destroyed suggests, a new order will always face resistance from those invested in the old one.",
+    "The Prince's endorsement of an amoral, forceful ruler and the Discourses on Livy's praise of Rome's republic are reconciled as two stages of one process: a forceful ruler must first secure stability before a republic can safely develop.",
+    "Machiavelli argued a few decisive executions can be more merciful than excessive tenderness, since unchecked disorder harms the whole community while a prince's executions harm only isolated individuals -- and since love and fear rarely coexist, it is safer for a ruler to be feared than loved."
+  ],
+  "terms": [
+    { "term": "The Prince", "def": "Machiavelli's most famous work, a handbook for a new ruler on how to seize and maintain stability of a state, even through amoral means." },
+    { "term": "Discourses on Livy", "def": "Machiavelli's work praising Rome's republic, drawing on the historian Livy's account of Roman government." },
+    { "term": "Stability", "def": "The chief goal Machiavelli assigns to a ruler, without which no other plan for the state can succeed." },
+    { "term": "Armed prophets", "def": "Machiavelli's phrase for reformers who back a new order with force and thus succeed, contrasted with 'unarmed prophets' who rely on persuasion alone and are destroyed." },
+    { "term": "Fox and lion", "def": "Machiavelli's image for the two tools a ruler needs: the fox's cunning to recognize traps (deception), and the lion's strength to frighten wolves (open threats)." }
+  ],
+  "anchors": [
+    "people take away a one-dimensional interpretation of him because they judge him based on only his most famous work",
+    "good or bad is defined after the fact by a goal that’s trying to be achieved",
+    "That instability undermines the whole process",
+    "all armed prophets have been victorious, and all unarmed prophets have been destroyed",
+    "Machiavelli was probably talking about what he saw as two different stages in the development of a state",
+    "The question is, which one is the wisest?",
+    "these as a rule injure the whole community, while the executions carried out by the prince injure only one individual",
+    "since love and fear can hardly exist together, if we must choose between them, it is far safer to be feared than loved",
+    "The lion cannot protect himself from traps, and the fox cannot defend himself from the wolves",
+    "as the first method is often insufficient, one must have recourse to the second"
+  ]
+}

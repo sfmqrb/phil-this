@@ -18,6 +18,7 @@
   <nav class="view-tabs" id="viewTabs">
     <button class="view-tab active" id="tabEpisodesBtn" type="button">Episodes</button>
     <button class="view-tab" id="tabTranscriptsBtn" type="button">Transcripts</button>
+    <button class="view-tab" id="tabReviewBtn" type="button">Review<span class="review-badge mono" id="reviewDueBadge" style="display:none"></span></button>
     <button class="view-tab" id="tabCreditBtn" type="button">Credit</button>
   </nav>
 
@@ -85,6 +86,8 @@
     </div>
 
     <p class="ledger-title">Episodes</p>
+    <div class="paths-strip" id="pathsStrip" style="display:none"></div>
+    <p class="path-blurb" id="pathBlurb" style="display:none"></p>
     <input class="request-search mono" id="topicFilter" type="text" placeholder="Filter by topic or philosopher (e.g. “Spinoza”)…" />
     <div class="ep-list" id="episodeList"></div>
     <div class="pagination" id="episodePagination">
@@ -136,7 +139,52 @@
         </div>
       </div>
       <p class="search-status mono" id="transcriptReaderStatus"></p>
+      <details class="learn-details" id="transcriptLearnBox" style="display:none">
+        <summary class="learn-summary mono">Key ideas</summary>
+        <div class="learn-panel" id="transcriptLearnBody"></div>
+      </details>
       <div class="transcript-body" id="transcriptReaderBody"></div>
+    </div>
+  </div>
+
+  <div id="reviewView" class="review-view">
+    <header class="masthead">
+      <h1>The questions you got wrong, back again</h1>
+      <p class="subtitle">Every question you miss joins this deck and returns on a widening schedule — a day later, then three, then a week — until it sticks.</p>
+    </header>
+    <hr class="rule" />
+
+    <p class="ledger-title">Your deck</p>
+    <p class="review-status mono" id="reviewStatus"></p>
+    <div class="review-start-row" id="reviewStartRow" style="display:none">
+      <button class="pill" id="reviewStartBtn" type="button">Start review</button>
+    </div>
+
+    <div id="reviewSession" style="display:none">
+      <div class="progress-row">
+        <span id="reviewProgressLabel">§ 1 / 1</span>
+        <span id="reviewScoreLive">0 correct so far</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="reviewProgressFill" style="width:0%"></div></div>
+
+      <div class="card">
+        <p class="review-source mono" id="reviewSource"></p>
+        <p class="question-text" id="reviewQuestionText"></p>
+        <div class="options" id="reviewOptions"></div>
+        <div class="note" id="reviewNote"></div>
+        <div class="next-row" id="reviewNextRow">
+          <button class="pill" id="reviewNextBtn">Next &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="results" id="reviewResults">
+      <p class="eyebrow">Session complete</p>
+      <p class="score-line mono" id="reviewScoreLine">0 / 0</p>
+      <p class="score-label" id="reviewScoreLabel"></p>
+      <div class="results-actions">
+        <button class="restart" id="reviewBackBtn">Back to your deck</button>
+      </div>
     </div>
   </div>
 
@@ -216,6 +264,7 @@
       <p class="score-line mono" id="scoreLine">0 / 10</p>
       <p class="score-label" id="scoreLabel"></p>
       <div id="missedWrap"></div>
+      <div id="resultsLearn"></div>
       <div class="results-actions">
         <button class="pill" id="retakeBtn">Retake this quiz</button>
         <button class="restart" id="doneBtn">Back to all episodes</button>
@@ -227,6 +276,7 @@
 
 <script src="data.js"></script>
 <script src="episode-index.js"></script>
+<script src="paths.js"></script>
 <script src="logic.js"></script>
 <script src="app.js"></script>
 </body>

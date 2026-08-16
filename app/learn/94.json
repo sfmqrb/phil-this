@@ -1,0 +1,30 @@
+{
+  "id": 94,
+  "argument": "The episode asks what 'progress' actually means, arguing that modern technology's abundance of options makes this question harder than ever, since agreeing on a general goal like reducing suffering doesn't resolve disagreement about which specific actions count as progress toward it. Dostoevsky is used to diagnose a recurring illusion, in both personal life and political thinking, that some specific future change will finally deliver lasting satisfaction - comparing suffering to breathing, something that can be held off but always returns, while insisting he isn't against all progress, only against the fantasy of a final, permanent utopia. The episode then turns to transhumanism's Hedonistic Imperative, which argues a world without suffering may be achievable and morally obligatory, and works through objections (meaning requires contrast, loss of motivation) using both scientific evidence and Alan Watts's dream thought experiment, which suggests struggle gets deliberately reintroduced into any story precisely because unbroken comfort eventually becomes boring.",
+  "keyIdeas": [
+    "Neil deGrasse Tyson's two pieces of advice - know more, and limit the suffering of others - raise the deeper question of what 'progress' even means, since maximizing happiness, propagating the species, and simply limiting suffering are not obviously the same goal.",
+    "Ancient problems (drought, disease, frostbite) had clear solutions regardless of one's theory of progress, but modern technology creates so many more options that people now struggle to agree on which option even counts as the right one - illustrated by the disagreement over whether a Mars rocket or direct poverty relief better serves the shared goal of reducing suffering.",
+    "Dostoevsky identifies a recurring pattern, in both personal life (a promotion, a fixed car belt) and political thinking, of believing some specific future change will finally deliver lasting satisfaction - even though satisfaction rarely follows for long, since suffering is compared to breathing: it can be held off temporarily but always returns; he isn't opposed to all progress, but specifically criticizes the idea that we could ever reach a final, permanent state of total equality, fairness, and peace, even while still striving to get closer to it.",
+    "The Hedonistic Imperative (a strand of transhumanism) argues suffering could in principle be eliminated through technology, and that dismissing this as impossible may be premature - just as anesthetics were unimaginable two hundred years ago; it answers the objection that meaning requires contrast with suffering by pointing to people with severe genetic conditions who suffer despite never having experienced happiness for comparison, and answers the motivation objection by citing evidence that higher dopamine states increase, rather than decrease, the range of activities pursued.",
+    "Alan Watts's dream thought experiment suggests that even with total control over a 75-year dream life, a person would eventually reintroduce unpredictability and hardship, because unbroken success and pleasure becomes boring - implying struggle may be something people choose to keep, not merely something imposed on them."
+  ],
+  "terms": [
+    { "term": "progress", "def": "The contested concept the episode interrogates - variously defined as limiting suffering, maximizing happiness, or propagating the species/life - whose ambiguity becomes more consequential as technology multiplies the available options." },
+    { "term": "transhumanism", "def": "A movement, rooted philosophically in Nietzsche's overman, that seeks to use technology to transcend current physical or mental limits of the human being." },
+    { "term": "Hedonistic Imperative", "def": "A strand of transhumanism holding that we have a moral obligation to use drugs, nanotechnology, and genetic engineering to eliminate involuntary suffering entirely." },
+    { "term": "Darwinian pathology of consciousness", "def": "The Hedonistic Imperative's term for the current human emotional architecture - sadness, guilt, fear, and the rest - shaped by evolution for survival rather than for wellbeing." },
+    { "term": "wireheading", "def": "A lab technique of directly and continuously stimulating an animal's brain reward center, used as an early, crude example of engineering constant positive experience." }
+  ],
+  "anchors": [
+    "Should that be an intrinsic good that you assign to your life when you’re young on the same level as “know more today than you did yesterday?”",
+    "More options means more difficult decision-making. More difficult decision-making means we need to have some sort of come-to-Jesus moment where we think about what exact criteria we’re going to use to determine which option to pick.",
+    "how do we know that that might not innovate some technology that allows everyone on earth to have food, water, and shelter?",
+    "Once I get this promotion, then things are really going to fall into place.",
+    "maybe suffering is as integral a part of life as breathing is.",
+    "that one day we can expect to bring about a world that’s totally equal, fair, and peaceful.",
+    "Two hundred years ago, powerful synthetic pain-killers and surgical anesthetics were unknown.",
+    "No, they’re still suffering. They just have no hope of a better destination.",
+    "Hyper-dopaminergic states tend also to increase the range of activities an organism finds worth pursuing",
+    "How long are you going to do that before that whole 75-year trust-fund life gets a little boring to you?"
+  ]
+}

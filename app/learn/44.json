@@ -1,0 +1,30 @@
+{
+  "id": 44,
+  "argument": "Continuing the show's 'Belief' episode, this installment argues that since certainty is impossible, every belief is a leap of faith — but not all leaps are equal, and lazy or self-serving ones can cause real harm to others, not just oneself. The episode stages a historical debate over slavery: Aristotle, Augustine, and Aquinas each built intuitive, seemingly solid arguments defending it from the natural, theological, or biological order of things, while Rousseau dismantled both possible justifications for authority over another person — brute force and consent — arguing no one can coherently consent to total submission, and that morality requires freedom. The point is that even brilliant, respected thinkers can hold beliefs that cause immense harm when left unexamined, a caution about which of today's confidently-held beliefs future generations may judge the same way.",
+  "keyIdeas": [
+    "Since certainty is impossible, every belief is a leap of faith at some level — but not all leaps of faith are made with equal care; some are self-critical, others lazy and self-serving.",
+    "Aristotle argued slaves lacked the rational capacity to manage their own lives, making slavery a supposedly mutually beneficial arrangement like a master and a domesticated animal.",
+    "Augustine held slavery was a result of human sin, not part of God's original order, but also framed enslaving captives as a 'lesser evil' than killing them — an argument that foreshadows later consent-based reasoning.",
+    "Aquinas grounded a natural human hierarchy in the way nature organizes itself hierarchically everywhere (angels, predators and prey), extending that to differences in intelligence and physical robustness among people.",
+    "Rousseau rejected both possible bases for authority — brute force and consent — arguing that handing yourself over completely is 'absurd and inconceivable' as an act of consent, and that morality cannot exist without freedom."
+  ],
+  "terms": [
+    { "term": "Leap of faith", "def": "The idea that since certainty is impossible, every belief ultimately rests on an unprovable commitment — though some are made more carefully than others." },
+    { "term": "Pyrrho's radical skepticism", "def": "An ancient extreme of suspending judgment about everything, illustrating what taking 'certainty is impossible' to its self-defeating limit would look like." },
+    { "term": "Lesser of two evils", "def": "Augustine's argument that enslaving captured people is more merciful than killing them." },
+    { "term": "Natural hierarchy", "def": "Aquinas's idea that nature organizes itself hierarchically everywhere, used to justify human hierarchy based on intelligence and physical robustness." },
+    { "term": "Social contract", "def": "Rousseau's framework for evaluating whether an arrangement of authority over people is legitimate." }
+  ],
+  "anchors": [
+    "every belief is at some level a leap of faith, but not all leaps of faith are created equal",
+    "he is so willing to suspend judgment about whether that cart is actually rolling down the road that he just steps out in front of it",
+    "He thought it was very clear based on what he saw that they were essentially just domesticated animals.",
+    "It is with justice we believe that the condition of slavery is the result of sin.",
+    "slavery should really be seen as a lesser of two evils.",
+    "For men of outstanding intelligence naturally take command, while those who are less intelligent but of more robust physique seem intended by nature to act as servants.",
+    "The first way is by brute force. The second way is by consent.",
+    "is to say something absurd and inconceivable; such an act is null and illegitimate",
+    "if you aren’t free to be making poor decisions, how can you be said to be making good decisions?",
+    "even something as unanimously detestable as slavery in today’s world was justified by brilliant people for thousands of years"
+  ]
+}

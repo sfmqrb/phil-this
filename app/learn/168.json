@@ -1,0 +1,30 @@
+{
+  "id": 168,
+  "argument": "Carol Gilligan challenges Kohlberg's finding that girls score lower on his scale of moral development, arguing his methodology was built almost entirely from a male perspective and mistook a different mode of moral reasoning, one centered on relationships and care rather than abstract justice, for moral immaturity. From this she develops the 'ethics of care,' which rejects the traditional moral subject of thought experiments like the trolley problem (an independent, rational, mutually indifferent individual) in favor of a relational subject who is interdependent, embedded in context, and morally informed by cultivated emotions like empathy. Philosophers like Tronto and Held extend this into practical virtues of caregiving and argue that care must be valued at the level of society and politics, not dismissed as a private or inherently feminine concern.",
+  "keyIdeas": [
+    "Gilligan was skeptical that girls scored lower on Kohlberg's moral development scale because his scale, subjects, and administrators were drawn almost entirely from a male perspective.",
+    "In the Heinz dilemma, Jake treats the problem deductively as a 'math problem with human beings,' while Amy treats it as a narrative of relationships and searches for a solution where no one gets permanently hurt.",
+    "Gilligan attributes the difference mostly to socialization: girls are raised as caregivers tasked with maintaining relationships, while boys are raised as problem solvers tasked with asserting their vision on the world.",
+    "An ethics of care rejects the traditional 'independent, rational, indifferent' moral subject assumed by ethics like Kant's or Bentham's, replacing it with a subject constituted by relationships and interdependence.",
+    "Joan Tronto and Berenice Fisher identify five virtues of care, in order, Attentiveness, Responsibility, Competence, Responsiveness, and Plurality, arguing that good intentions without skill (competence) or listening (responsiveness) still fail as care."
+  ],
+  "terms": [
+    { "term": "Ethics of care", "def": "A moral framework, developed from Gilligan's work, centered on attentiveness, relationships, and responsiveness to need rather than abstract principles." },
+    { "term": "Kohlberg's moral development scale", "def": "A 1-6 scale measuring moral reasoning from preconventional through conventional to postconventional, which Gilligan argued was biased toward male-style justice reasoning." },
+    { "term": "Ethic of justice", "def": "The traditional moral framework focused on fairness, individual rights, and consistent application of abstract principles, contrasted with an ethic of care." },
+    { "term": "Liberal individualism", "def": "The assumption in traditional ethics that the moral subject is an independent, rational, mutually indifferent individual; an ethics of care rejects this as a delusional fantasy." },
+    { "term": "Tronto's five virtues of care", "def": "Attentiveness, Responsibility, Competence, Responsiveness, and Plurality: the skills Tronto and Fisher say must be cultivated to care well." }
+  ],
+  "anchors": [
+    "almost ALL of the test subjects being tested in Kohlberg's analysis...were boys. Almost all of the people administering the tests...were men.",
+    "instead of amy seeing this whole situation as a “math problem with human beings” she saw it more in terms of a “narrative of relationships that extends over time.”",
+    "Men are told to be problem solvers by society…women are told to be caregivers.",
+    "it reinforces outdated gender stereotypes…I mean who’s to say that women are the only ones that stand to benefit from seeing the world through the lens of care?",
+    "you ask a WOMAN to tell you who she is, Gilligan says, and MORE OFTEN THAN NOT…she’ll tell you about the meaningful RELATIONSHIPS, that she has",
+    "certain emotions are actually things to be cultivated and practiced. Things like empathy, sensitivity, responsiveness",
+    "you don’t try to CARE for those people out of a sense of obligation…nobody’s going to come and arrest you if you don’t DO anything about it.",
+    "The ethics of care, then, is at least in PART a consequentialist ethics.",
+    "Whenever there’s a situation where there is one person being cared for…and another person that’s providing care…that INSTANTLY creates a power discrepancy",
+    "a caring society might see the tasks of bringing up children, educating its members, meeting the needs of all, achieving peace and treasuring the environment"
+  ]
+}

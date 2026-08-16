@@ -1,0 +1,30 @@
+{
+  "id": 31,
+  "argument": "Unlike Descartes, who tried to prove with certainty that some infinite being exists, Blaise Pascal set out only to show that not believing in the Christian God is irrational, given genuine uncertainty about whether God exists. His wager treats belief like any other calculated risk we take every day (starting a business, flying to Hawaii): believing costs something finite, but if God exists you gain infinitely, while disbelieving risks an infinite loss for a merely finite gain - though the episode also lays out the major rebuttals, from belief not being a matter of choice to the wager's failure to pick out which God is the right one.",
+  "keyIdeas": [
+    "Pascal aimed to show that not believing in the Christian God was irrational, without claiming certainty about God's existence the way Descartes had tried to.",
+    "The 'spiritual Wheel of Fortune' image captures the modern agnostic's objection: an all-powerful, all-knowing God had no need to hide something as important as eternal salvation behind mystery.",
+    "The small-business-vs-corporate-job and Hawaii-flight examples establish that every decision, even ones that feel safe, is a calculated risk made under real uncertainty - setting up belief in God as the same kind of bet.",
+    "The four outcomes: believe with God real (infinite gain), believe with God unreal (nothing lost); disbelieve with God real (infinite loss), disbelieve with God unreal (nothing lost) - summarized as losing nothing by believing wrongly but gaining everything by believing rightly.",
+    "Contrary to the popular 'nothing to lose' summary, Pascal thought believers do lose something finite - autonomy, income, Sunday mornings - but argued it's still worth losing given the infinite potential gain; rebuttals include that belief isn't a switch you can choose to flip (the Santa Claus comparison), the 'wrong god' objection that the same logic justifies any god, and the false dichotomy that treats hedonism as the only alternative to Christian ethics."
+  ],
+  "terms": [
+    { "term": "Pascal's wager", "def": "The argument that believing in God is the rational bet because it risks only a finite loss for a chance at infinite gain, while disbelief risks an infinite loss for a finite gain." },
+    { "term": "calculated risk", "def": "Pascal's framing for every decision made under uncertainty, including belief in God, based on weighing possible finite losses against possible gains." },
+    { "term": "wrong god objection", "def": "The rebuttal that Pascal's wager logic could justify belief in any god, since it never picks out which one is correct." },
+    { "term": "false dichotomy (hedonism objection)", "def": "The rebuttal that treating hedonism as the only alternative to Christian ethics ignores the hundreds of other ethical systems that exist." },
+    { "term": "byproduct argument", "def": "The counterargument that positive life outcomes believers attribute to God are really the natural result of practicing virtues like honesty and patience." }
+  ],
+  "anchors": [
+    "Pascal was trying to show that to not believe in the Christian God was just irrational",
+    "why does it all need to be shrouded in mystery",
+    "Every decision that you make and every belief that you hold is a calculated risk",
+    "if you believe in God and he doesn’t exist, then you’ve lost nothing, but if you believe in God and he exists, you’ve gained everything",
+    "He would say that what you have to lose is finite",
+    "Belief has a certain irresistibility about it",
+    "Pascal’s wager could just as easily be used to justify belief in the existence of some other God",
+    "Why is the only alternative to a belief in the Christian God a life of hedonism where pleasure is the highest good",
+    "are a byproduct of following a solid system of behaviors, not a belief in God",
+    "he pigeon-holes the possibilities that can come after death"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 126,
+  "argument": "Deleuze argues that traditional ontologies ground conceptual stability in 'identity' (the truth of what there is), which requires a transcendent, superior substance, as in Plato's forms, the Abrahamic God, or Kant's things-in-themselves, that installs a hierarchy and an ethics of aiming toward it. Spinoza broke from this by creating the first ontology of immanence, where being is univocal (one substance) that differentiates itself through 'expression' rather than creation or emanation, a process Deleuze argues is best understood temporally, via Bergson's view that the past exists virtually within the present, rather than spatially.",
+  "keyIdeas": [
+    "Since we lack access to the truth about what there actually is, Deleuze grounds philosophical stability in difference rather than identity, following the post-structuralist rejection of accessible objective truth.",
+    "Ontologies of transcendence (Plato's forms, the Abrahamic God, Kant's things-in-themselves) all set up a hierarchy where one substance or mode of being is superior and the other inferior, and build an ethics demanding people aim toward the transcendent.",
+    "Spinoza was the first philosopher to step outside ontologies of transcendence and construct the first ontology of immanence, built on the idea that being is univocal, one substance.",
+    "Spinoza's concept of 'expression' (substance expressing itself through attributes, which express themselves through modes) explains how one substance can arrange into infinite different combinations without needing separate substances or an external creator; Bergson's view that the past exists virtually within the present, like genetic code within a cell, lets Deleuze explain this differentiation temporally rather than spatially.",
+    "An ontology of immanence doesn't claim full, transcendent access to being; it only 'palpates' or infers a general sense of it, like a doctor feeling for what they can't see."
+  ],
+  "terms": [
+    { "term": "ontology of immanence vs. transcendence", "def": "Immanence treats being as one substance with no hierarchy; transcendence ranks one substance or mode above another." },
+    { "term": "univocal being", "def": "The idea that there is only one substance or mode of being, central to Spinoza's and Deleuze's ontology." },
+    { "term": "expression", "def": "Spinoza's alternative to creation and emanation, where substance arranges itself into infinite combinations from within itself." },
+    { "term": "substance, attributes, modes", "def": "Spinoza's three-part structure: modes are properties expressing attributes, which express substance." },
+    { "term": "virtual / actual (Bergson)", "def": "The past exists virtually, shaping the actual present without being directly observable, as genetic code shapes a cell." }
+  ],
+  "anchors": [
+    "We don’t have access to the truth. We don’t have the privilege of being able to base conceptual stability on what there is",
+    "one of these two modes of being is always superior and the other one subservient",
+    "the transcendent is a way to install a hierarchy",
+    "step outside the status quo of philosophy, and instead create the very first ontology of immanence",
+    "substance expresses itself through attributes, or substance expresses itself through the essences of things",
+    "there’s a set of genetic code written deep within that cell that has a very real effect on how that cell looks, how that cell behaves",
+    "any one of those present moments can be almost infinitely subdivided",
+    "Expression as a process attempts to explain how a substance on its own, without the help of any outside entity like a god, can arrange itself into an infinite number of combinations",
+    "they have this method of feeling around and pushing and prodding in certain areas to get a general idea of what’s on the other side",
+    "we think of this whole process as going on inside some sort of cosmic Tupperware container that holds it all in"
+  ]
+}

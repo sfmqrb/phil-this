@@ -1,0 +1,31 @@
+{
+  "id": 9,
+  "argument": "After witnessing old age, sickness, death, and an ascetic during his four sights, Siddhartha Gautama abandoned his life of royal luxury and, after years of failed asceticism, found a middle way between indulgence and extreme self-denial, achieving enlightenment under the fig tree at Bodh Gaya. His resulting teaching, the Four Noble Truths, holds that dissatisfaction is the default state of the mind, that it is caused by attachment, aversion, and ignorance rooted in the delusion of a separate self, that it can be ended by dissolving that delusion, and that the Eightfold Path of morality, meditation, and wisdom is the practical route to nirvana — a permanent extinguishing of desire achieved entirely through one's own effort, with no God to answer to and no salvation dependent on belief.",
+  "keyIdeas": [
+    "The doctrine of impermanence (anicca) holds that nothing — including both pleasure and pain — lasts very long; all existence, including the self, is in constant flux.",
+    "The Middle Way rejects both a life of sensual indulgence and a life of extreme ascetic self-denial, both of which the Buddha personally tried and found did not produce lasting insight or happiness.",
+    "The First Noble Truth holds that dissatisfaction (dukkha) is the default state of mind — even when satisfaction is achieved, the mind normalizes to it and the feeling fades.",
+    "The Second Noble Truth identifies three mechanisms through which desire produces suffering: attachment (assuming a thing will bring permanent happiness), aversion (reacting to unmet expectations about how the world 'should' be), and ignorance (believing happiness is controlled by external things).",
+    "The Third Noble Truth grounds the end of suffering in 'no-self' (anatta): the desire driving suffering is rooted in the delusion of a separate, bounded self, and recognizing the self as impermanent and interconnected — without denying experience outright — undercuts that root desire."
+  ],
+  "terms": [
+    { "term": "Anicca (impermanence)", "def": "The doctrine that nothing, including pleasure, pain, and the self, lasts very long; all existence is in constant flux." },
+    { "term": "Dukkha (dissatisfaction)", "def": "The First Noble Truth's claim that dissatisfaction is the default state of mind, since satisfaction fades as the mind normalizes to it." },
+    { "term": "The Middle Way", "def": "The path between sensual indulgence and extreme ascetic self-denial that the Buddha found, after personally testing both extremes and finding neither produced lasting insight." },
+    { "term": "Anatta (no-self)", "def": "The doctrine that there is no separate, bounded, permanent self; the delusion of such a self is the root of the desire that drives suffering." },
+    { "term": "Nirvana", "def": "Literally 'blown out,' referring to the extinguishing of the flames of desire, aversion, and ignorance — not an afterlife or annihilation." },
+    { "term": "The Eightfold Path", "def": "The Buddha's guidebook to nirvana, organized into three categories: morality (right speech, action, livelihood), meditation (right effort, mindfulness, concentration), and wisdom (right understanding, resolve)." }
+  ],
+  "anchors": [
+    "nothing ever lasts very long. This whole existence is impermanent, and that would become a crucial base for his philosophy",
+    "He realized that the true path to enlightenment lied somewhere between these two extremes. And he called this path the middle way.",
+    "dissatisfaction is the default state of the human brain",
+    "he thought you can distill it down to one of three things: attachment, aversion, or ignorance",
+    "But Siddhartha Gautama didn’t think that we should completely reject or deny the existence of our personalities or our sense of self, but just realize that it’s an illusion and be mindful of which thought patterns were productive or not",
+    "the three categories are morality, meditation, and wisdom",
+    "the state of being that you achieve when the flames of desire, aversion, and ignorance have finally been blown out",
+    "Mindfulness is about being self-aware. It’s about diligently monitoring every thought you have so that you can determine whether each thought is productive or not",
+    "Your fate is 100% in your own hands",
+    "they were destined to a life of suffering, sickness, and despair and destined to repeat this cycle over and over and over again"
+  ]
+}

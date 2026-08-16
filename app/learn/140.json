@@ -1,0 +1,30 @@
+{
+  "id": 140,
+  "argument": "Isaiah Berlin distinguished 'negative freedom' (freedom from interference) from 'positive freedom' (the actual ability to act on one's options), and warned that positive freedom's ambiguous link to 'self-rule' makes it easy for regimes to redefine freedom as conformity to some externally imposed standard, as Rousseau did with the 'general will.' Berlin traced this danger back to the Enlightenment's 'monism,' the assumption, borrowed from mathematics, that every question has one correct answer reachable by a single method that will cohere into one worldview, arguing this same monolithic thinking, applied to billions of different human lives, produced 20th-century totalitarianism, and proposed 'pluralism,' multiple, equally rational but conflicting ends, as an alternative to both monism and mere relativism.",
+  "keyIdeas": [
+    "Negative freedom is freedom from outside interference; positive freedom requires not just the opportunity but the actual ability to act on one's options.",
+    "Berlin worried that positive freedom's link to 'self-rule' is dangerously ambiguous, since Rousseau defined self-rule as adherence to the 'general will,' letting anyone who disagreed be labeled as failing to truly self-rule.",
+    "Enlightenment thinkers borrowed three assumptions from mathematics, that a single correct answer exists, a clear method can find it, and answers cohere into one worldview, but Berlin argues none of these hold for philosophy's moral and political questions.",
+    "This 'monism,' the drive to reduce everything to one master value or answer, runs throughout Western thought and, applied to political life, leads to the totalitarian certainty behind movements like Marxism and National Socialism.",
+    "Berlin distinguishes pluralism from relativism: relativism says differing preferences have nothing more to say for them, while pluralism holds that different, even conflicting, ends can each be arrived at by fully rational people."
+  ],
+  "terms": [
+    { "term": "Negative freedom", "def": "Freedom from interference or obstruction by outside entities." },
+    { "term": "Positive freedom", "def": "The actual ability, not just the opportunity, to act on one's options; sometimes clarified by Berlin as 'self-rule.'" },
+    { "term": "Monism", "def": "The assumption that there is one single correct answer to every question, reachable by one method, cohering into one worldview." },
+    { "term": "Pluralism", "def": "The view that there are many different, sometimes conflicting, ends that people can arrive at while remaining fully rational, distinct from relativism." },
+    { "term": "Counter-Enlightenment", "def": "Thinkers who opposed Enlightenment universalism, individualism, and industrial modernity, favoring particulars, community, and romantic nature." }
+  ],
+  "anchors": [
+    "it doesn’t just mean you have the opportunity to do something; true “positive freedom” means you have the ability to do it",
+    "anything you want to do that runs contrary to this single standard that we’ve come up with really is just you not controlling your ability to “self-rule” vigilantly enough",
+    "Not only do we not know if there is a single correct answer to the questions that are asked, we don’t even know the proper methodology to use to arrive at that correct answer if there was one",
+    "if you wanted badly enough to make a case that there was a hierarchy of values that all lesser virtues fall out of, you could do it",
+    "if you can believe that rationality will provide us with scientific-like certainty or probability when answering questions about what it's like to live for people with numbers in the billions, then you end up with things like Marxism. You end up with National Socialism",
+    "When the Enlightenment focused on universals and an eternal understanding of things, the Counter-Enlightenment called for a focus on particular examples and the historical or cultural influence",
+    "the value that freedom and security both have in that particular, cohesive, singular worldview was determined by their position within that overarching structure, that single historical narrative",
+    "I prefer coffee; you prefer champaign. We have different tastes. There’s nothing more to be said. That is relativism",
+    "Political philosophy, to Isaiah Berlin, was a type of moral philosophy applied to the public realm",
+    "it could easily become coopted by governments narrowing the definition of freedom, trying to control people"
+  ]
+}

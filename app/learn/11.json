@@ -1,0 +1,30 @@
+{
+  "id": 11,
+  "argument": "Stoicism grew out of cynicism but insisted that ethics could not stand alone -- it needed a physics and a logic to justify it, since living virtuously in agreement with nature requires first knowing what nature actually is. Zeno of Citium, shaped by a shipwreck and his cynic training under Crates, built a materialist, pantheistic system in which God, nature, and the universe are identical, animated by an active divine reason (logos) that governs passive matter and produces fate. Humans participate in that reason, and the whole point of logic and physics is to let people reason well enough to live in harmony with this providential, deterministic universe.",
+  "keyIdeas": [
+    "The stoics pictured logic, physics, and ethics as an egg's shell, yolk, and white: distinct but interdependent, so ethics can't be properly understood without the physics and logic that ground it.",
+    "Stoicism evolved directly out of cynicism (Zeno studied under the cynic Crates), keeping the cynic emphasis on virtue and living according to nature but adding the physics and metaphysics cynicism lacked.",
+    "The stoic universe is pantheistic: God is not a being outside the universe but the material universe itself, divided into passive nature (raw matter) and active nature (the divine logos/reason that shapes it).",
+    "Because reason has had infinite tries at creating and destroying the universe in an eternal cycle and always does it the one perfect way, everything that happens is fated, and accepting that fate rationally is the path to tranquility.",
+    "Zeno's hand-gesture demonstration (open palm, closing fingers, closed fist, fist gripped by the other hand) visualized perception, assent, comprehension, and knowledge as increasing degrees of epistemic certainty."
+  ],
+  "terms": [
+    { "term": "Logos", "def": "The divine reason, will, and fate that pervades and governs the universe; humans' own reason is a spark of it." },
+    { "term": "Apatheia", "def": "The stoic goal of being free from being controlled by disturbing emotion, achieved by reasoning in harmony with nature." },
+    { "term": "Pneuma", "def": "The mixture of fire and air, the fundamental active substance the stoics believed pervaded and structured everything." },
+    { "term": "Passive/active nature", "def": "Passive nature is the raw material (earth and water); active nature is the divine reason/fire and air that shapes it." },
+    { "term": "Stoa Poikile", "def": "The 'painted stoa' in the Athenian Agora where Zeno lectured, giving the stoics their name." }
+  ],
+  "anchors": [
+    "it’s impossible to understand where they’re coming from with their ethics without first understanding the other two parts, logic and physics",
+    "The stoics would use their natural ability to reason to make the wisest and most virtuous decision, because at least that decision was in harmony with nature.",
+    "This near-death experience changed his outlook on life.",
+    "There’s definitely a freedom in having nothing to lose.",
+    "One of the main things that’s missing from cynicism that ends up being a key element in stoicism is the idea of physics and metaphysics",
+    "Pantheistic means that God is the universe.",
+    "The active element of nature is the divine logos, also known as reason, also known as fate.",
+    "Then he closes his fist tight and points to it and says, this is comprehension.",
+    "being able to make choices based on something other than instinct is the only thing that separates you from him",
+    "the stoics thought that understanding logic was understanding the divine logos or reason that governs all things"
+  ]
+}

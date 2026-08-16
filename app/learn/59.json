@@ -1,0 +1,30 @@
+{
+  "id": 59,
+  "argument": "The trolley problem reveals that our confident moral reasoning often isn't the real reason behind our judgments: most people readily pull a lever to divert a trolley from five people to one, reasoning as consequentialists, yet recoil from pushing a fat man off a bridge to achieve the identical outcome, even though the underlying behavior (actively trading one life for five) is the same. Neither 'he was already in harm's way' nor 'physical contact makes it different' survives scrutiny. Kant's answer is that pushing the man treats him as a mere means to an end rather than as an end in himself, and his categorical imperative asks whether you could will your action's maxim to become a universal law without contradiction or chaos, a test that explains why lying and littering fail and why articulating our real reasoning matters for harder real-world dilemmas.",
+  "keyIdeas": [
+    "In the lever scenario, most people reason as consequentialists (or utilitarians): one death is a better outcome than five, so pulling the lever maximizes utility.",
+    "The bridge scenario is unsettling because the underlying behavior is remarkably similar to the lever scenario, actively choosing to end one life to save five, yet people judge them completely differently.",
+    "The 'already in harm's way' rebuttal fails because the side track was just as safe as the bridge until the decision to pull the lever put someone on it; the trebuchet variant shows physical contact isn't what makes pushing wrong either.",
+    "For Kant, pushing the fat man is wrong because it treats him as a means to an end (a tool for saving the five) rather than as an end in himself.",
+    "Kant's categorical imperative asks you to universalize your action's maxim: could you will that everyone act the same way without contradiction or chaos? This explains why littering (it would flood the world in garbage) and lying (universal lying would make deception, and thus lying, impossible) both fail the test."
+  ],
+  "terms": [
+    { "term": "trolley problem", "def": "The classic thought experiment contrasting a lever scenario (diverting a trolley to kill one instead of five) with a bridge scenario (pushing one man to stop the trolley and save five)." },
+    { "term": "utilitarianism", "def": "A form of consequentialism, developed by Bentham and refined by Mill, holding that the right action is the one that maximizes utility (often pleasure or wellbeing) for the greatest number." },
+    { "term": "categorical imperative", "def": "Kant's test for moral action: act only on a maxim you could will to become a universal law that everyone follows without contradiction or chaos." },
+    { "term": "means to an end vs. end in itself", "def": "Kant's distinction between using a person merely as a tool to achieve some other goal (wrong) versus respecting them as having inherent worth (right)." },
+    { "term": "kingdom of ends", "def": "Kant's vision of an ideal moral society in which every person is treated as an end in themselves, never merely as a means." }
+  ],
+  "anchors": [
+    "one person dying is a much better outcome than five people dying",
+    "in both cases, your behavior remains remarkably similar. You are actively sentencing one innocent person to death in the name of saving five innocent people.",
+    "They were completely out of harm’s way until you decided to pull the lever and put them into harm’s way.",
+    "Would you feel morally justified to do that?",
+    "you are using that guy as a means to some end that you aim to achieve, and that is wrong",
+    "if Snickers bars existed back in Babylonia, well, you might find quite a few people that disagreed with you at the time",
+    "Consider for a second what the world would look like if literally every other person in the entire world acted just as you did in that situation",
+    "think of the burden to the average taxpayer, including you, by the way. We’d have to spend millions and millions of your hard-earned dollars",
+    "if we existed in a world where all anyone ever did was lie, then everyone would always know that they were being lied to.",
+    "murder trials and economic policy and whether to become involved in a war or what a just war is at all or foreign policy or civil rights"
+  ]
+}

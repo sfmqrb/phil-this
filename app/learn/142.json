@@ -1,0 +1,30 @@
+{
+  "id": 142,
+  "argument": "Richard Rorty argues that Locke and Kant never actually discovered a universal grounding for human rights or liberalism -- they, like Hammurabi before them, made those foundations rather than finding them. Rorty takes this as the true fulfillment of the Enlightenment: its real significance was never landing on final answers but subverting old authority, a project that was always going to consume itself and its own claims to universal truth. Since we can't access reality-in-itself outside language, and since grounding a political strategy in one philosophical theory always turns into an endless, losing sales campaign, Rorty argues we should instead let political strategy reflect the common values citizens actually converge on -- and live personally as an 'ironist,' someone who doubts her own final vocabulary rather than claiming special access to the truth.",
+  "keyIdeas": [
+    "Rorty sees Locke and Kant as no more successful than Hammurabi at discovering a true grounding for human rights; the real significance of the Enlightenment was subverting traditional authority, not landing on new final answers -- a project meant to eventually consume itself, including its own foundations.",
+    "Berlin's pluralism is not anti-Enlightenment to Rorty; it's the Enlightenment's spirit of questioning old assumptions playing itself out to its logical conclusion.",
+    "Grounding a political system like liberalism in a universal philosophical theory means endlessly selling that theory, importing cultural baggage, and always losing the fight to cram one interpretation onto a genuinely pluralistic society -- so Rorty favors letting strategy reflect the 'fact of pluralism,' the common values citizens actually converge on.",
+    "Rorty rejects the correspondence theory of truth: language doesn't just mediate our access to reality, it constitutes how we understand reality, so there's no direct correspondence between description and 'things in themselves.' This grounds his distinction between making and finding truth -- human rights and political strategies are made through history and culture, not discovered as pre-existing facts.",
+    "Living as an 'ironist' means having radical, ongoing doubts about your own final vocabulary, knowing argument within it can't resolve those doubts, and not believing your vocabulary is closer to reality than anyone else's -- which is why Rorty favors 'ironic disruption,' helping people see beyond their worldview from outside it, over traditional point-by-point argument."
+  ],
+  "terms": [
+    { "term": "Final vocabulary", "def": "The collection of stories, metaphors, and narratives a person uses to make sense of the world and their place in it, which they typically mistake for the truth." },
+    { "term": "Ironist", "def": "Someone with radical, continuing doubts about her own final vocabulary who knows argument can't resolve those doubts and doesn't believe her vocabulary is closer to reality than anyone else's." },
+    { "term": "Correspondence theory of truth (representationalist paradigm)", "def": "The view that a statement is true if it represents or corresponds to the way things really are in the world -- which Rorty rejects." },
+    { "term": "Fact of pluralism", "def": "Rorty's term for the reality that a society is made of citizens who converge on different values, so political strategy should reflect that rather than one imposed theory." },
+    { "term": "Making vs. finding", "def": "Rorty's distinction between treating truths (like human rights) as created through historical and cultural processes versus discovered as pre-existing facts about the universe." }
+  ],
+  "anchors": [
+    "people like Locke and Kant were no more discovering a truth about what grounds human rights than Hammurabi was before them",
+    "The significance of the Enlightenment was not to land on new answers; it was to question old assumptions.",
+    "this wasn’t an anti-Enlightenment idea at all. To Rorty, this was the project of the Enlightenment left to play itself out.",
+    "you will always be trying to cram one interpretation of how human life should be structured into the enormously complex, pluralistic maelstrom of people coexisting together",
+    "Rorty suggests that we allow our political strategy to reflect the common values of the people that make up the culture",
+    "language actually constitutes reality, meaning that the language we use and the way we use it changes the way we think about reality",
+    "it is so malleable -- so capable of being combined with indifference to the suffering of people of the wrong sorts -- that it gives us precious little to rely on",
+    "Locke and Kant are not finding the truth about human rights. They’re using a very human process called reason to make a truth about human rights",
+    "she has radical and continuing doubts about the final vocabulary she currently uses because she has been impressed by other vocabularies",
+    "anything can be made to look good or bad by being redescribed because it’s not like there’s some single argumentative standard out there"
+  ]
+}

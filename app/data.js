@@ -7981,7 +7981,7 @@ const QUIZ_DATA = [
           "They exist mainly to justify the warlords' authority over the officials working under them during the Warring States period",
           "They apply only to family relationships and have no bearing on how Confucius thought government officials should behave"
         ],
-        correct: 2,
+        correct: 1,
         note: "The episode states the function of the five relationships directly: 'the main point of all of this was to make sense of the ambiguity of individual morality... By distilling individual moral decisions down into a situational, hierarchical structure, it was much easier for the individual to understand.' Each relationship, including ruler-subject, assigns asymmetric obligations, like a ruler being benevolent and a subject being loyal, rather than treating both parties identically."
       },
       {

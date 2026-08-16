@@ -1,0 +1,29 @@
+{
+  "id": 138,
+  "argument": "Robert Nozick argued for a strictly 'minimal state' against both anarchism and Rawlsian redistribution, grounding his case in the claim that individuals have rights, moral side constraints, that cannot be violated even to produce better outcomes. Because people are entitled to what they've legally and voluntarily acquired, and because no one can be harmed, including through taxation, without consent, any attempt to enforce a 'patterned distribution' of goods, however fair-sounding, amounts to a kind of forced labor and an ongoing violation of self-ownership.",
+  "keyIdeas": [
+    "The state's job is to determine and enforce what people are legally entitled to, not to rule on what's fair or deserved, as illustrated by the Grandma Beatrice will example.",
+    "'Moral side constraints' are fixed boundaries on what may be done to a person regardless of outcome; most importantly, no one may be harmed without consent, which is why Nozick treats redistributive taxation as a kind of harm.",
+    "Even in a stateless world, a minimal state emerges naturally as competing private protection agencies consolidate through coordination pressures into a local monopoly.",
+    "Taxation that redistributes income without consent amounts to forced labor, since it commandeers a portion of a person's working time for causes they never chose to support.",
+    "Any 'patterned distribution' (like strict equality) is unsustainable without constant coercive government intervention, since every voluntary transaction after the pattern is achieved will disrupt it again."
+  ],
+  "terms": [
+    { "term": "Minimal state", "def": "Nozick's ideal state, limited to protection and enforcement of contracts, rejecting broader redistributive functions." },
+    { "term": "Moral side constraints", "def": "Fixed boundaries on what can be done to a person, regardless of the outcome it might produce." },
+    { "term": "Entitlement theory", "def": "Nozick's view that justice concerns whether holdings were acquired and transferred legitimately, not whether the resulting distribution matches some pattern." },
+    { "term": "Patterned distribution", "def": "Any principle, like strict equality, requiring goods to be distributed according to a predetermined pattern, which Nozick argues requires constant coercive upkeep." }
+  ],
+  "anchors": [
+    "The job of the state is to determine what he is entitled to and then to make sure that he gets it. The state should be focused on entitlements and rights",
+    "they set the parameters for what can be done to a person without violating their rights",
+    "what naturally emerges in the state of nature is a local monopoly over the protection services of a region",
+    "The only way you’d owe them money is if you consented to pay them for the music before they started playing",
+    "For almost three and a half hours out of an eight-hour shift, they are not working towards improving their life",
+    "you are still the property of that slave master. We would say, clearly, this is still wrong",
+    "the government has to step in and restore the balance of that pattern",
+    "these possessions were already legally acquired and owned by people and then given to someone else through a legal process",
+    "it allows the world to act as a laboratory where we can run any kind of experiment that we want",
+    "they don’t want the best situation for the least advantaged. They want certain basic services guaranteed with a satisfactory quality of life ensured and, then, beyond that, they just want the government to leave them alone"
+  ]
+}

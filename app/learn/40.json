@@ -1,0 +1,30 @@
+{
+  "id": 40,
+  "argument": "The episode redefines superstition broadly as falsely attributing an effect to a cause, and shows this pattern runs through everyday beliefs about happiness, sports rituals, and old maritime customs, not just obviously silly ideas. Berkeley targets a deeper superstition: the unexamined assumption that some independently existing material reality causes our perceptions, when all we ever actually experience is the perception itself; since he was worried that a self-sustaining material substance could let God be reasoned out of the universe, he concludes only minds and ideas exist, with God's perpetual perception keeping everything in existence. Voltaire, meanwhile, attacks superstition and intolerance in religion itself, using his observations of England's religiously diverse marketplace in Letters Concerning the English Nation to argue that many competing faiths, not one or two dominant ones, produce social peace.",
+  "keyIdeas": [
+    "Superstition, in the episode's dictionary-style definition, is falsely attributing an effect to a cause, a pattern that shows up in mundane beliefs about wealth and happiness just as much as in old sailors' rituals.",
+    "Berkeley's key move is questioning the assumption that some independent material reality exists behind our perceptions, since empiricism holds all knowledge comes from sense experience and we never actually experience that supposed underlying matter.",
+    "Berkeley worried that treating matter as a self-sustaining substance would let God become unnecessary to daily reality, so he concludes only minds exist, with God's perpetual perception keeping the world (including an unwatched falling tree) in existence.",
+    "Voltaire's anti-Semitism was unusual for his era: rather than blaming Jews for killing Jesus, he resented them for making Christianity, one of his primary targets, possible in the first place.",
+    "In Letters Concerning the English Nation, Voltaire observed that England's marketplace, with many coexisting religions, was more peaceful than a system with only one or two, since many competitors prevents any single religion from dominating or feeling threatened."
+  ],
+  "terms": [
+    { "term": "Superstition", "def": "Falsely attributing some cause to some effect, as when an apple is credited with keeping the doctor away." },
+    { "term": "Immaterialist idealist", "def": "Berkeley's position that only mind, not material substance, makes up the universe." },
+    { "term": "Substance", "def": "Something whose existence explains itself; Berkeley worried a self-sustaining material substance would make God unnecessary." },
+    { "term": "Veil of perception", "def": "The idea that we never access reality directly, only the ideas our senses construct of it, which Berkeley treats as a possible superstition." },
+    { "term": "Deist / theist", "def": "Voltaire evolved from declaring himself a deist toward a theist, believing in a necessary, eternal, spiritual being while rejecting organized religious dogma." }
+  ],
+  "anchors": [
+    "they superstitiously conclude that the cause of their happiness has to be all of these material things that they have",
+    "he has a very deliberate ritual that he executes, completely convinced that at some level the type of beer that he drinks is going to affect the outcome of the game",
+    "Why do we even need to assume that there’s some fundamental reality underneath that’s causing all these ideas?",
+    "All knowledge is derived from sense experience. But we never actually experience this supposed more real world that’s out there, do we?",
+    "he believed that there is one entity that is always watching that tree, one entity that is perpetually aware of everything in the universe",
+    "what is to stop the scientific community and the world for that matter from just removing God from the equation?",
+    "the main goal behind it is that it’s trying to preserve the idea of God",
+    "Voltaire hated the Jews not because they killed Jesus but because they made Christianity possible at all",
+    "he was in England finding and recording the great things about the English nation to give the revolutionaries in France a sort of framework to work from",
+    "if there was only one religion allowed in England, the government would be completely arbitrary at that point"
+  ]
+}

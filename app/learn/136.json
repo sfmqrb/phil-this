@@ -1,0 +1,30 @@
+{
+  "id": 136,
+  "argument": "Hannah Arendt argued that the Enlightenment's great mistake was subverting the political realm, the space of public action among equal citizens, by turning it into a mere means to economic ends, which left modern people to construct a thin, cheapened 'economic man' identity out of jobs and possessions instead of genuine political engagement. This worldlessness, she argued, produced masses of people starved for meaning and primed to be swept up by totalitarian movements, and her account of Adolf Eichmann's trial showed that such evil doesn't require hatred or genius, only the surrender of independent thought to whatever group hands you an identity.",
+  "keyIdeas": [
+    "Arendt divides human activity into Labor (biological survival), Work (producing the cultural and material world), and Action (political engagement among equal citizens), and it is Action, not contemplation, that gives things and people their meaning and identity.",
+    "She rejected being called a 'political philosopher,' associating philosophy with a contemplative tradition, epitomized by Plato, that withdraws from public life and so fails to engage the real political world.",
+    "The Enlightenment turned politics into a means to economic ends (securing property), reversing the ancient view where economic activity served the end of political participation, producing a 'pixelated,' cheapened 'economic man' identity.",
+    "Her concept of 'world alienation' goes further than the common criticism of self-alienation: people are cut off not just from themselves but from the shared public world, since the political realm that would connect them to it has been removed.",
+    "Adolf Eichmann's trial revealed the 'banality of evil': he was not a hate-filled genius but an ordinary, unoriginal 'joiner' who committed atrocities seeking career advancement, having surrendered the responsibility to think for himself."
+  ],
+  "terms": [
+    { "term": "Labor, Work, Action", "def": "Arendt's three categories of human activity: biological maintenance, production of the cultural world, and political engagement, respectively." },
+    { "term": "The active life vs. the contemplative life", "def": "Socrates and Aristotle's model of philosophy as public engagement, versus Plato's model of philosophy as solitary introspection." },
+    { "term": "World alienation", "def": "Being cut off from the shared public world itself, not just from oneself, because the political realm has been subverted." },
+    { "term": "Banality of evil", "def": "Arendt's concept that great evil can be committed by ordinary, unremarkable people just following orders or seeking advancement, not by fanatics." },
+    { "term": "Animal laborans", "def": "Marx's term, repurposed by Arendt, for a human being reduced to their role as a laborer, 'worldless' and cut off from political life." }
+  ],
+  "anchors": [
+    "Philosophy, practiced in the traditional, contemplative form, has failed to provide anything remotely of value in the real world because, she would say, it doesn’t take place in the real world",
+    "Action, simply put, is the realm of the political, the words and activities of equal citizens who are engaged in the public realm",
+    "without the realm of the political, a building would just be a building; a tree would just be a tree",
+    "politics is a means to an end. In this case, politics is a means to ensuring the economic end of private property rights",
+    "this sense of identity it gives you in modernity is a cheapened version of what used to be available to people",
+    "views people, fundamentally, as things that fill an economic role rather than political actors",
+    "This is a case of world alienation, she says. By subverting the political, the Enlightenment has produced a world where we can no longer imbue our cultural artifacts and our world with meaning",
+    "This was not a man motivated to do what he did because of a racist ideology. This was a man motivated because he was trying to get a promotion",
+    "someone who all throughout his life has joined group after group in the interest of someone telling him who he should be",
+    "a worldless, alienated population of economic cogs, dying to move for something, devoid of a political realm where they could establish their own values, they were given something to move for"
+  ]
+}

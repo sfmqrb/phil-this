@@ -1,0 +1,30 @@
+{
+  "id": 65,
+  "argument": "The episode tells the story of Mary Wollstonecraft, who was pulled from the Thames and resuscitated after a suicide attempt before becoming a foundational Enlightenment thinker on women's equality. Drawing on Locke's tabula rasa — the idea that character comes from experience and education rather than fixed nature — she argues there is no principled reason to deny women the same education given to men, and that the institution built around denying them that education (culminating in Rousseau's vision of women existing purely to serve and please men) functions like slavery, benefiting those who profit from women's blind obedience. The episode closes by generalizing her insight: every era's notion of a 'successful life' is an arbitrary social conditioning that future generations will judge harshly, just as we now judge Rousseau's view of women.",
+  "keyIdeas": [
+    "Mary Wollstonecraft was one of the people resuscitated by the Royal Humane Society after a suicide attempt in the Thames, before becoming a foundational Enlightenment thinker on women's equality.",
+    "Her childhood witnessing her father's drunken abuse of her mother, and later helping her sister Eliza escape an abusive marriage, foreshadow her later concern with women's subjugation.",
+    "Because if character comes from experience and education rather than innate nature (per Locke's tabula rasa), there is no principled reason to deny women the same education given to men.",
+    "Rousseau's Emile defines a woman's whole education and existence in relation to serving and pleasing men, which Wollstonecraft argues resembles the logic of slavery; she argues denying women education isn't incidental but actively benefits those who profit from women's blind obedience.",
+    "She applies the Enlightenment's own logic of equality more consistently than her male contemporaries did, extending it to include women, and opposed marriage as it existed in her time because it gave husbands near-total legal control over a woman's life."
+  ],
+  "terms": [
+    { "term": "Tabula rasa", "def": "Locke's idea that the mind is a blank slate shaped by experience, which Wollstonecraft uses to argue women's supposed inferiority is due to lack of education, not nature." },
+    { "term": "Vindication of the Rights of Woman", "def": "Wollstonecraft's most famous work, arguing for women's education and equality on Enlightenment grounds." },
+    { "term": "Blind obedience", "def": "The submissive conditioning Wollstonecraft says is deliberately maintained in women by denying them education, benefiting 'tyrants' and 'sensualists.'" },
+    { "term": "Legalized slavery (of marriage)", "def": "Wollstonecraft's characterization of the marriage laws of her time, which gave husbands near-total control over a wife's life and person." },
+    { "term": "Conditioning", "def": "The episode's broader concept: society instills an arbitrary sense of what a 'successful life' looks like, which each generation later judges as ridiculous or unjust." }
+  ],
+  "anchors": [
+    "was successfully resuscitated back to life was a woman that had tried to commit suicide by throwing herself into the river",
+    "her dad would get drunk and beat her mother senseless on the regular",
+    "conditioned by society and the people around them to be this unqualified thing that’s just designed to get married someday",
+    "the content of someone’s character might really just be contingent on the collection of experiences they’ve had thus far",
+    "The whole education of women ought to be relative to men.",
+    "tyrants and sensualists are in the right when they endeavor to keep women in the dark, because the former only wants slaves and the latter a plaything",
+    "Is it that women are inferior to men, or is it that us underserving and subjugating women",
+    "true equality would be for men and women, not equality for men and then women can be this subspecies of slaves",
+    "The amount of control that women had over their life once they got married was just atrocious.",
+    "is no doubt going to be looked back on by people in the future and ridiculed"
+  ]
+}

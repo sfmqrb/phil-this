@@ -1,0 +1,30 @@
+{
+  "id": 16,
+  "argument": "Saint Augustine merged Neo-Platonism with Christianity, becoming the philosopher most responsible for keeping Platonic thought alive into the medieval period. He answered the problem of evil by locating its source in human free will rather than in God or in metaphysical distance from the One, and he developed a radical theory of time in which past and future have no independent existence, existing only as memory and expectation in the mind.",
+  "keyIdeas": [
+    "Augustine held that every human, even an infant, is a sinner from birth, so no age or apparent innocence exempts anyone from needing God's grace.",
+    "His language about the 'murk of lust' obscuring the 'clear light of true love' draws on the Platonic/Plotinian distinction between the lower sense-able world and a higher, truer reality.",
+    "Augustine broke from Plotinus on the problem of evil: where Plotinus blamed evil on metaphysical distance from the One, Augustine attributed it to humans misusing the free will God gave them.",
+    "Because God created time itself, God cannot exist within time and is therefore external to it and unaffected by its passage.",
+    "Past and future do not exist independently; they exist only in the mind as three 'tenses of times' -- memory, attention, and expectation -- and the mind measures time by measuring the impression a passing thing leaves behind, not the thing itself."
+  ],
+  "terms": [
+    { "term": "Confessions", "def": "Augustine's autobiographical work in which he recounts his sins and conversion and works out his philosophy of time." },
+    { "term": "Manicheism", "def": "A Gnostic dualist religion Augustine followed before Christianity, holding that good and evil are two opposing cosmic forces." },
+    { "term": "Free will", "def": "The God-given human ability to choose between good and bad courses of action; for Augustine, the source of evil in the world." },
+    { "term": "Christian Platonist", "def": "Augustine's designation for fusing Plotinus's Neo-Platonic philosophy with Christian doctrine." },
+    { "term": "Three tenses of times", "def": "Augustine's idea that past, present, and future are really the present of past things (memory), present of present things (attention), and present of future things (expectation), existing only in the mind." }
+  ],
+  "anchors": [
+    "no man is free from sin, not even a child who has lived only one day on earth",
+    "the clear light of true love from the murk of lust",
+    "He started having questions that people couldn’t answer. And ultimately, he just wasn’t satisfied.",
+    "it actually almost calls into question our ability to exercise free will if our actions are so predictable or God has the ability to seize control over your actions",
+    "Plotinus attributed it to the distance between this lower matter and the transcendent One, or the source of everything good",
+    "the only way humans can truly be rational creatures is if they have the ability to make choices",
+    "when something has a creation, people can always ask, well, what came before that?",
+    "he couldn’t have existed within the fabric of time ever. So, therefore, he exists external to it and isn’t affected by it",
+    "there are three tenses of times: the present of past things, the present of present things, the present of future things",
+    "this impression which I measure when I measure time"
+  ]
+}

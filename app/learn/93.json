@@ -1,0 +1,30 @@
+{
+  "id": 93,
+  "argument": "The episode traces how the concept of love has been understood historically - from Plato's Diotima and her ascending ladder of love, through the medieval placement of love of God at the top, to romanticism's shift toward intense, feeling-based expectations of marriage - before arriving at Nietzsche's own deflationary but ultimately affirming view. Nietzsche argues that when closely examined, love and greed turn out to be the same underlying instinct, differing only in whether the person already possesses something and is satisfied or still wants more; but rather than concluding love should be abandoned, he thinks it remains a genuinely worthwhile, mutually beneficial will to power, so long as people are honest with themselves about their real motives instead of telling themselves a flattering story about pure selflessness.",
+  "keyIdeas": [
+    "Slogans like 'all you need is love' fail as real solutions because naming a general remedy doesn't answer the practical questions of what loving action actually requires, how much, and when - just as saying sick patients 'need drugs' doesn't specify which drugs, doses, or timing.",
+    "What counts as loving action shifts with cultural context and can still cause real harm (illustrated by a parent who 'has to beat' a child in the name of love), showing that even universal love wouldn't by itself resolve much.",
+    "Diotima's ladder of love in Plato's Symposium ascends from bodily love, to love of a person's soul/personality, to love of the laws and institutions that shaped that personality, to love of knowledge, and finally to love of the Form of beauty itself - with each higher rung making the lower ones lose their former appeal.",
+    "The medieval conception of love kept this ascending ladder structure but placed love of God at the very top as the ultimate form; romanticism later replaced practical reasons for marriage with an expectation of intense, lifelong feeling, and asks people to be totally tolerant of some flaws while being totally intolerant of others (like wandering attention).",
+    "Nietzsche argues that love and greed are the same underlying instinct with two different names, distinguished only by whether a person already possesses something and is satisfied, or is still unsatisfied and wants more (illustrated by the Italian sports car example) - yet he does not conclude love should be abandoned; he sees it as a mutually beneficial will to power still worth pursuing, so long as people are honest about their real motives rather than flattering themselves with a story of pure selflessness."
+  ],
+  "terms": [
+    { "term": "Diotima's ladder of love", "def": "The ascending progression of love described in Plato's Symposium, moving from love of a body, to love of a soul/personality, to love of institutions and knowledge, culminating in love of the Form of beauty itself." },
+    { "term": "bodily love", "def": "The first rung on Diotima's ladder: an infatuation with another person's physical body, which is not unique to that person since many other bodies share the same qualities." },
+    { "term": "romanticism (on love)", "def": "The cultural movement that replaced practical reasons for marriage with the expectation of intense, lifelong romantic feeling as the true basis for choosing a partner." },
+    { "term": "will to power", "def": "Nietzsche's concept, applied here to love, describing a mutually beneficial dynamic in which both partners are driven by the same underlying instinct to make something new part of themselves." },
+    { "term": "love as greed", "def": "Nietzsche's claim that love and greed are the same instinct manifesting in two ways, distinguished by whether the desiring person already has something and is satisfied or is still unsatisfied and wants more." }
+  ],
+  "anchors": [
+    "Yeah, but what kinds of drugs? How high of a dose of these drugs? When do they need these drugs?",
+    "people might still steal from people they love in the name of feeding others that they love. They may still assault people that they love in the name of love.",
+    "the things you like about this person’s body are not exclusive to them in any way. There’s a lot of other bodies out there that have these exact same qualities.",
+    "everything about this personality that you love so much really was forged by certain aspects of culture, laws and institutions that cultivated these personality traits",
+    "once you’ve tasted that forbidden fruit on the next rung of the ladder, all the other forms of love sort of just lose their appeal.",
+    "All of which is inferior to the ultimate love, the love of God.",
+    "the litmus test for who you should love or who you should marry shouldn’t be based on practical considerations like how good it is for your career or something like that, but that these initial feelings that we have, they’re going to decide for us.",
+    "if the person you love has romantic feelings for somebody else or if they’re telling you tons of things you need to change about yourself or if they’re not fornicating with you on a regular basis, these are all signs that there’s something deeply wrong with the relationship, not things you need to be tolerant of.",
+    "The only difference between whether we classify it as love or greed in the moment comes down to how satisfied somebody is with what they already have.",
+    "love is sort of a mutually beneficial will to power"
+  ]
+}

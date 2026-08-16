@@ -1,0 +1,30 @@
+{
+  "id": 25,
+  "argument": "Francis Bacon believed humanity's confusion in his era stemmed from flawed methods of pursuing knowledge, and he set out to build a scientific method that combined outside evidence with internal reasoning rather than relying on either alone. His deeper argument is that science could not just describe nature but could actually solve human problems like scarcity, making old virtue-based restraints unnecessary, but only if people first learned to recognize and correct the built-in biases - the 'idols of the mind' - that distort how humans perceive and talk about the world.",
+  "keyIdeas": [
+    "Bacon's ant/spider/bee metaphor: ants (superstitious knowledge-seekers) and spiders (pure reasoners) each rely on only one source of insight, while the ideal bee combines outside evidence with internal reasoning to benefit everyone, not just itself.",
+    "His 'negative instances' method meant actively hunting for exceptions that could disprove a rule, rather than just piling up confirming examples - a methodological shift toward testing rather than only confirming.",
+    "Bacon agreed with Montaigne that people had been forming generalizations in biased ways, but concluded the fix was correcting that process, not abandoning general rules altogether.",
+    "Bacon thought science, funded publicly rather than left to private individuals, could eliminate scarcity itself, making the virtue-based restraint (temperance, honesty under scarcity) that older philosophy relied on unnecessary.",
+    "Bacon identified four 'idols of the mind' that distort human thinking: idols of the tribe (flawed senses shared by everyone), idols of the cave (individual conditioning and upbringing), idols of the marketplace (words carrying misleading connotations), and idols of the theater (inherited philosophical or social doctrines never questioned)."
+  ],
+  "terms": [
+    { "term": "idols of the tribe", "def": "Distortions built into human sensory perception itself, shared by everyone, like an oar looking bent in water even though it's straight." },
+    { "term": "idols of the cave", "def": "Biases adopted through an individual's own upbringing, education, or cultural conditioning rather than universal perception." },
+    { "term": "idols of the marketplace", "def": "Distortion caused by the connotations of the words we use, where different words for the same reality trigger different reactions." },
+    { "term": "idols of the theater", "def": "Long-accepted philosophical or societal doctrines, inherited like a fictional play, that shape our thinking without ever being questioned." },
+    { "term": "negative instances", "def": "Bacon's method of deliberately searching for exceptions that could disprove a proposed rule, rather than only collecting confirming examples." }
+  ],
+  "anchors": [
+    "the seeds of hatred were planted, and things were going to change forever",
+    "It shouldn’t rely solely on the powers of the mind or rely solely on material from the natural world",
+    "you should look for instances where plants don’t need sunlight",
+    "not only to realize that it could benefit all of humanity, but to recognize the various faults in the way that people think about things",
+    "somebody could just find the cure to cancer or some other very valuable piece of information like that and then just sit on it for years",
+    "science is going to solve the problem of human excess because it’s going to make human excess an obsolete thing",
+    "like an oar put into the water where it looks bent because of the way our eyes perceive light, but it’s actually straight",
+    "brilliant marketers have conditioned people to believe things like a low-carb diet is healthy or a low-fat diet is healthy",
+    "Now, the thing they’re describing hasn’t changed at all. But the way that people perceive it has changed quite a bit",
+    "the reason why as a society we deeply admire people like Martin Luther King, Jr., Susan B. Anthony, Harriet Tubman, is because they questioned the philosophical systems underlying the world that they were born into"
+  ]
+}

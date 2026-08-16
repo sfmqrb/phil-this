@@ -1,0 +1,30 @@
+{
+  "id": 85,
+  "argument": "Peter Singer argues that because most people already believe inaction is wrong when a life is in danger right in front of them, and because people born into modern Western civilization have effectively 'won the lottery' of resources, that same moral obligation extends to the millions of preventable poverty deaths happening far away - inaction there is not morally different just because the suffering is distant. This is the basis of effective altruism: it's not enough to feel compassion and give; we should use reason to direct our giving - roughly 10% of income for most people - toward wherever it will do the most good, while still living sustainably enough to keep earning and giving over the long term.",
+  "keyIdeas": [
+    "Almost everyone already believes that failing to help a dying child right in front of you is wrong, which sets up the question of why we treat distant, statistically massive suffering (millions of preventable child deaths a year) so differently.",
+    "The resources at your disposal change your moral culpability: having a shirt to sacrifice for a drowning person (or a lever to pull in the trolley problem) turns inaction into an actual moral choice you're responsible for, rather than simply being absent from the situation.",
+    "Effective altruism means using reason to find where money does the most good, not just giving generously to whatever cause is emotionally close (like a hometown church) - illustrated by Toby Ord, who shows that living comfortably and doing enormous good are not mutually exclusive.",
+    "Singer answers objections to a life of extreme self-denial with an oxygen-mask logic: being too depleted, unhealthy, or unable to function well undermines your actual capacity to keep earning and donating over time.",
+    "Effective giving requires research, not just trust in low administrative-overhead numbers - a charity spending more on operations can still do more lasting good than one that keeps overhead minimal - and small individual donations add up when many people give them, so Singer suggests redirecting the hedonic treadmill, the urge to earn more so you can buy more, toward earning more so you can give more."
+  ],
+  "terms": [
+    { "term": "effective altruism", "def": "The approach, associated with Peter Singer, of using reason to direct charitable giving to wherever it will do the most measurable good, not just wherever feels emotionally compelling." },
+    { "term": "the 'effective' part of effective altruism", "def": "Singer's emphasis that good intentions aren't enough - donors must research and reason about which causes and charities actually produce the most good per dollar." },
+    { "term": "moral culpability tied to resources", "def": "Singer's idea that how blameworthy inaction is depends on what resources (a shirt, a lever, money) a person actually had available to help." },
+    { "term": "hedonic treadmill", "def": "The pattern of always chasing the next purchase for satisfaction that never lasts, which Singer suggests redirecting toward giving instead of spending." },
+    { "term": "oxygen-mask logic", "def": "The episode's own analogy: just like the airline instruction to 'secure your oxygen mask before you secure the mask of the child next to you,' staying fed, healthy, and professional first is necessary so you can keep earning and donating long-term." }
+  ],
+  "anchors": [
+    "how could you possibly live with yourself for the rest of your life knowing that you could have saved this little girl’s life",
+    "You didn’t have a t-shirt that you could sacrifice in the first place.",
+    "The fact that you have the resource of the lever changes everything. It gives you more potential choices",
+    "sure, it’s great that Toby Ord wanted to give so much. But we don’t all have to give massive portions of our income to be able to make a difference.",
+    "that money would accomplish so much more in Africa than it ever could in the United States.",
+    "eventually donate enough money for a charity to employ three aid workers, five aid workers—all of which are going to be doing the same job you would have done",
+    "all of these things inhibit your ability to make the money to donate, if in fact you wanted to truly to the most good you could possibly do.",
+    "the second operation might cost a little bit more to execute, but think of how much more good is being done as a result of it.",
+    "I pay my bills and survive from the one, two dollars an episode that people give on Patreon.",
+    "instead of making more so that you can spend more, you make more so that you can give more?"
+  ]
+}

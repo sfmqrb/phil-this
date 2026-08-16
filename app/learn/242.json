@@ -1,0 +1,30 @@
+{
+  "id": 242,
+  "argument": "Shakespeare's Romeo and Juliet dramatizes two intertwined philosophical problems: the self-defeating logic of honor-code violence that fills the vacuum left by weak or inconsistent authority, and a tension between the traditional Christian view of love/marriage and a rival 'religion of love' in which dying for romantic love is the highest good. Scholars read the play as testing state, church, and love itself as authorities capable of ending the feud, and finding all of them fail — only catastrophe finally brings peace. Romeo and Juliet's love is genuinely, productively irrational, which is exactly why audiences still experience it as one of the great love stories rather than a cautionary tale about foolish teenagers.",
+  "keyIdeas": [
+    "Jill Levenson argues honor-code violence is structurally self-defeating: every retaliatory act creates a newly offended party who must retaliate in turn, producing an escalating cycle rather than the order it claims to preserve — and beneath the rhetoric of maintaining social order, this violence actually serves the pride and ego of the participants, with the social-order justification working as a post-hoc rationalization.",
+    "Elizabeth Frazer reads the play as testing state/legal power (the Prince), religious/moral authority (the Church/Friar Laurence), and the redemptive power of love, showing all three fail — the Prince's authority fails because he arrives too late and doesn't consistently enforce his own stated deterrent, especially for elite families — so only catastrophe, Romeo and Juliet's deaths, finally ends the feud.",
+    "Paul Siegel identifies a tension between the traditional Christian framework, which treats love and marriage as serving family and moral duty, and a rival 'religion of love' tradition with its own imagery and soteriology, where dying for romantic love is the highest good, earning a lovers' paradise.",
+    "People are more likely to idealize romantic love as a near-religious experience when the world around them doesn't take their existence or agency seriously; Juliet is treated as a pawn in marriage negotiations and both teens are treated as extensions of their parents' wishes.",
+    "Natasha McKeever and Joe Saunders argue genuine love has a partly irrational component — instant, unvetted choice of partner, immediate emotionally unsafe commitment, and willingness to die after only days — which is precisely why the play still reads as a great love story rather than a tale of foolish teenagers."
+  ],
+  "terms": [
+    { "term": "Honor code", "def": "An informal system where retaliatory violence is meant to deter disrespect and preserve order, but which Shakespeare shows to be structurally self-defeating." },
+    { "term": "State of authority failure", "def": "The play's depiction of the Prince arriving too late and failing to consistently enforce punishment, especially for elite families." },
+    { "term": "Religion of love", "def": "A rival, cult-like tradition of romantic devotion with its own imagery and soteriology, where dying for love is the highest good." },
+    { "term": "Soteriology", "def": "A view of what earns a person salvation; the 'religion of love' has its own soteriology distinct from Christianity's." },
+    { "term": "Irrationality of love", "def": "McKeever and Saunders's account of love's partly irrational features — in who is chosen, in depth, and in centrality — that make it feel genuinely real." }
+  ],
+  "anchors": [
+    "Somebody disrespects your honor, so now you gotta beat em up. But now whoever gets beat up…has had THEIR honor disrespected…and now they gotta beat somebody ELSE up",
+    "it MOSTLY just serves… the pride and ego of the people that are doing the fighting",
+    "the ONLY THING…that FINALLY BRINGS an end to the violence between these two groups…is a catastrophe",
+    "The prince in the play always shows up too late… and then doesn’t actually follow through with the punishments, ESPECIALLY when it comes to the members of these ELITE FAMILIES",
+    "DYING…in the NAME of your romantic love for someone else…is the HIGHEST good that can be ACHIEVED",
+    "people in general, are far more likely to IDEALIZE…EROTIC, ROMANTIC LOVE for another PERSON like this…when they DON’T feel like the world AROUND them…TAKES their existence very SERIOUSLY",
+    "in service to some intense FEELING that they’re having…that they’ve had for all of about 24 hours together…they will BURN to the ground EVERY social institution and relationship that makes their lives even possible",
+    "the reason audiences generally see Romeo and Juliet as a great LOVE story…is that there’s something partly IRRATIONAL about love, when it’s REAL",
+    "WHO they choose to love is irrational…in that it’s instant, basically at first sight, there’s no real VETTING going on at all",
+    "this is what happens when people OVER estimate their expertise in an attempt to try to HELP someone and JUST end up doing more HARM"
+  ]
+}

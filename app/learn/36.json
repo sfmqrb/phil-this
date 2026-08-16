@@ -1,0 +1,30 @@
+{
+  "id": 36,
+  "argument": "Against the rationalist picture of innate ideas — imagined as a divine signature stamped on the soul at creation — Locke argues the mind at birth is a tabula rasa, a blank slate with no content, though its capacity to reason and abstract is innate. His case rests on a logical point (an idea 'imprinted' but never consciously perceived, as in infants, isn't coherently innate at all) and a cross-cultural one (if ideas like God were truly innate, we'd expect broadly similar notions of them across all cultures, and we don't). Simple ideas built from raw sense experience are the only material the mind has to work with, combined by reason into complex ideas — which means experience, and above all education, does most of the work of making a person who they are, a conclusion Locke draws out into concrete, often surprisingly progressive proposals for how children should be taught.",
+  "keyIdeas": [
+    "The rationalist 'artist's signature' picture holds that a divine creator left a trace of innate knowledge in each person at birth, the way an artist signs a finished work; Locke rejects this.",
+    "Locke's logical objection: for something to be 'imprinted' on the mind must mean it is perceived by the mind — but infants and 'idiots' never perceive supposedly innate ideas, so calling them innate is nearly a contradiction.",
+    "Locke's cross-cultural objection: if ideas (especially of God) were truly innate regardless of upbringing, we'd expect broadly similar notions of them across all cultures and history — and we don't see that.",
+    "In Locke's computer analogy, the mind's hardware and processes — its capacity for reason and abstraction — are innate, but the content it processes (simple ideas, built into complex ideas) comes entirely from sense experience.",
+    "Because the mind is shaped almost entirely by experience, and school is a young person's most sustained source of experience, education does most of the work of shaping who someone becomes ('nine parts of ten'); Locke's practical proposals (like dancing, and never making learning feel like a forced task) follow from taking this seriously."
+  ],
+  "terms": [
+    { "term": "tabula rasa", "def": "Locke's term (Latin for 'blank slate') for the mind at birth: void of any innate ideas, with all content supplied by later experience." },
+    { "term": "innate ideas", "def": "The rationalist position, which Locke rejects, that certain ideas (such as of God) are imprinted on the mind at birth rather than derived from experience." },
+    { "term": "simple ideas", "def": "In Locke's account, the basic units of knowledge produced directly from raw sense perception, which the mind then combines to form complex ideas." },
+    { "term": "complex ideas", "def": "Ideas formed when reason connects and combines simple ideas that were first built from sense experience." },
+    { "term": "corpuscles", "def": "Robert Boyle's theory that the physical world is made of tiny subatomic particles; it shaped Locke's evidence-based, experience-grounded approach to knowledge." }
+  ],
+  "anchors": [
+    "just as an artist paints a painting and when he paints that painting he leaves a little signature at the bottom",
+    "It seems to me a near contradiction to say, that there were truths imprinted on the soul which it perceives and understands not",
+    "we would see at least some similarities across all the cultures of the world throughout history",
+    "the hardware and drivers are innate, but those hardware and drivers are completely useless without a hard drive full of information",
+    "those simple ideas become the ingredients that we have to make complex ideas, because the brain processes them and reasons and makes connections between them",
+    "that really annoying person at work that’s always bothering you—they too are just the sum total of their set of experiences",
+    "nine parts of ten are what they are, good or evil, useful or not, by their education",
+    "they would naturally be able to bring those skills into other aspects of their personal life",
+    "We naturally, as I said, even from our cradles, love liberty, and have therefore an aversion to many things for no other reason but because they are enjoined us",
+    "Boyle told Locke about a theory pretty popular at the time that the world is made up of tiny little subatomic things known as corpuscles"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 145,
+  "argument": "This episode surveys the theories of laughter that came before Henri Bergson's famous essay, setting up the problem his theory will later solve. Comedy and tragedy turn out to be structurally similar -- both respond to a world of complex, competing forces mostly outside anyone's control, and both aim to subvert expectations, whether by mocking the status quo or sacrificing a hero to demand change. That's part of why comedy has real political power: mocking a person or idea, as Voltaire understood, can permanently strip it of the appearance of infallibility. The three classic theories -- superiority, relief, and incongruity -- each explain some cases of laughter but each fails on others (we pity the unfortunate rather than laugh at them; some jokes build no tension; some absurd, unresolved surprises just aren't funny), leaving an unresolved tension between comedy that speaks truth to power and comedy that exists purely for absurdity's sake, a tension Bergson's own theory will try to resolve.",
+  "keyIdeas": [
+    "Comedy and tragedy share a deep structural similarity: both address a problem arising from complex, competing forces mostly outside anyone's control, and both aim to subvert the viewer's expectations.",
+    "Voltaire's mockery of Rousseau illustrates comedy's political power: once people laugh at something, they stop taking it as seriously, which is why dictators fear public mockery -- it strips away the appearance of infallibility.",
+    "Bergson's approach breaks from earlier philosophers by shifting away from trying to pin down a fixed definition of 'funny' and toward examining its relation to internal human experience.",
+    "The superiority theory (we laugh because we feel superior to the butt of the joke) explains slapstick but fails to explain why we feel pity rather than amusement toward people with real health or financial problems.",
+    "The relief theory (laughter as release of built-up nervous tension, as in the mathematician joke) and the incongruity theory (laughter from violated-then-resolved expectations, as in the drywall-screws seminar example) each capture part of the picture but neither alone is sufficient, leaving philosophers with a persistent tension between comedy as truth-telling and comedy as pure absurdity."
+  ],
+  "terms": [
+    { "term": "The comic", "def": "Bergson's term for the comedic or funny in general, which he studies through its relation to internal human experience rather than trying to define it as a fixed category." },
+    { "term": "Superiority theory", "def": "The theory that we laugh because we feel superior to some element of the joke or situation." },
+    { "term": "Relief theory", "def": "The theory that laughter releases built-up nervous tension once expectations of a bad outcome are shown to be unfounded." },
+    { "term": "Incongruity theory", "def": "The theory that laughter comes from the resolution of a violated expectation, not from surprise or incongruity alone." },
+    { "term": "Truth-to-power vs. absurdity tension", "def": "The unresolved disagreement over whether comedy's purpose is fundamentally political critique or purely absurd entertainment for its own sake." }
+  ],
+  "anchors": [
+    "Both formats usually cite the reality that we live in a world of complex, competing forces, mostly out of our control.",
+    "the idea is that he thought, once you can get people to laugh at something, they never take that thing quite as seriously ever again",
+    "Bergson’s more interested in examining the relationship between funny and the internal experience of human beings.",
+    "the superiority theory would say that you and your friends are laughing at that moment because you’re getting a certain amount of joy in knowing that you are superior to this person in this moment",
+    "Why, when we see people with health problems, relationship problems, financial problems, why are there so many cases of people being far worse off than us that don’t amuse us at all?",
+    "we start to develop expectations about their situation, only to find out on the punchline that those expectations were wrong and that all that mental energy we put into caring about them was a total waste of time",
+    "There wasn’t any nervous energy being built up to set up a thwarting of someone’s expectations. He was only saying something positive before the punchline.",
+    "certainly that’s a surprising thing to say, but it’s not funny",
+    "Picture someone who’s not a carpenter going to a seminar full of journeyman carpenters, giving the keynote speech about drywall screws. No doubt violating expectations; no doubt absurd and resolving into nothing. No one’s laughing there.",
+    "The people that believe only in the truth-to-power side of comedy might look at the absurd side of comedy and think they’re saying things that are affecting people’s worldviews that are maybe dangerous."
+  ]
+}

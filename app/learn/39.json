@@ -1,0 +1,31 @@
+{
+  "id": 39,
+  "argument": "17th-century thinkers like Descartes, Locke, and Leibniz wanted absolute certainty about reality, but ran into a fundamental problem: our senses evolved to help us survive, not to reveal the true, atomic-level composition of the world, leaving us stuck behind a 'veil of perception' between our mental map of reality and reality itself. Locke tries to rescue some of this by distinguishing primary qualities (features actually in matter's arrangement) from secondary qualities (produced only when that matter interacts with our senses), using his knife and iPhone examples to show that things like pain and color aren't literally contained in objects. The episode closes by previewing Berkeley's radical solution: instead of assuming an inaccessible material reality lies behind our perceptions, why not conclude that only perceived ideas exist at all.",
+  "keyIdeas": [
+    "Eyes evolved to build a functional map of the world accurate enough for survival tasks like eating and avoiding danger, not to reveal what reality is actually made of at the atomic level.",
+    "The 'veil of perception' is the problem that we can never get past our mental map of reality to directly access reality as it truly is underneath.",
+    "Deduction applies an already-held general truth to a specific case (like a detective reading a crime scene), while induction generalizes from observed cases but can never rule out an unobserved exception, so neither can deliver certainty.",
+    "Locke's primary qualities (shape, size, motion) are held to be actual features of matter's underlying arrangement, while secondary qualities (color, taste, pain) only arise from that matter interacting with a perceiver's senses.",
+    "Leibniz and Berkeley, despite very different systems, were both motivated by keeping God a necessary, ever-involved part of a universe that the new mechanistic science threatened to make self-sufficient."
+  ],
+  "terms": [
+    { "term": "Veil of perception", "def": "The idea that we only ever experience the mental map our senses construct, with no way to get past it to reality as it truly is." },
+    { "term": "Deduction", "def": "Starting from an already-held general truth and applying it to interpret a specific case, as a detective does at a crime scene." },
+    { "term": "Induction", "def": "Inferring a general truth from individual observed cases, which can never rule out an unobserved exception that breaks the pattern." },
+    { "term": "Primary qualities", "def": "Locke's term for qualities (like shape or motion) held to be actual features of an object's underlying matter itself." },
+    { "term": "Secondary qualities", "def": "Locke's term for qualities (like color or taste) that arise only from matter interacting with a perceiver's senses." },
+    { "term": "Corpuscles", "def": "Boyle and Locke's term for the tiny, colorless, tasteless, odorless particles of matter that make up the real fabric of reality." }
+  ],
+  "anchors": [
+    "These eyes were designed to create a map of the world accurate enough for you to eat, sleep, reproduce, and survive as long as possible.",
+    "human eyes create a map of the world that is accurate enough but far from actual reality",
+    "We can’t get past this veil between how we perceive the world and how it actually is.",
+    "starting with something that you think is true, and then you apply that truth to some individual, specific case",
+    "How can we be sure that the next dog born on planet earth is not going to be the exception to the rule",
+    "these tools that we were given weren’t designed to do what we’re trying to do with them.",
+    "these secondary qualities are explainable only by referring to the primary qualities",
+    "you wouldn’t say that pain was somehow cooped up inside of the knife",
+    "he’s a lot like Leibniz because he’s this religious guy, and he’s faced with the problem of reconciling this new mechanistic way of viewing the universe with the notion of God",
+    "isn’t it more reasonable to conclude that only the ideas themselves exist? I mean, really, that’s the only thing we have any kind of interaction with."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 114,
+  "argument": "Marcuse concludes that living the Great Refusal, his term for the personal protest against 'that which is,' cannot be a simple slogan or a movement you join, because it requires radicalizing your own subjectivity, and you first have to deeply understand that subjectivity, including how much of your own picture of the world was itself given to you by the culture industry. He argues that American culture is defined by an obsession with control and domination visible down to everyday language and pastimes like football, and he pushes back on the claim that this aggression is simply biological by pointing to women's historical exclusion from the aggressive work and political realm as a kind of control group, and to the fast cultural shift away from traditional masculinity as evidence conditioning, not biology, is doing most of the work. His warning to real movements is that they can unconsciously reproduce the very domination and control they claim to oppose, especially through technologically distanced 'technological aggression' like drone strikes and anonymous internet comments.",
+  "keyIdeas": [
+    "Living the Great Refusal has to be an intensely individual process because it is fundamentally about radicalizing your own subjectivity, which requires first deeply understanding that subjectivity.",
+    "The slogan 'the Great Refusal is a protest against that which is' has a hidden problem: a person's own picture of 'that which is' may itself be shaped by products and media, so they might not actually know what they're protesting.",
+    "Marcuse points to everyday language about 'conquering the business world' and to football as simulated territorial warfare as evidence that American culture is obsessed with control and domination even at the most micro level of individuals.",
+    "Against the claim that aggression is simply biological (like chimpanzee hierarchies), Marcuse argues that women, historically kept out of the aggressive work and political realm, serve as an informal 'control group' showing what humans look like without that conditioning, and that the perceived decline of the 'man's man' stereotype over just a few decades shows the trait can't be strictly biological.",
+    "Marcuse warns that real-world movements risk unconsciously reproducing the same domination and control they claim to oppose, such as by censoring or dismissing ideas based on identity rather than content, and names 'technological aggression' (drone strikes, internet comments) as a way technology makes aggression easier by distancing the actor from those they harm."
+  ],
+  "terms": [
+    { "term": "The Great Refusal", "def": "Marcuse's term for the personal protest against 'that which is,' which he concludes must be an individual, personalized process of radicalizing one's own subjectivity." },
+    { "term": "That which is", "def": "The target of the Great Refusal's protest; Marcuse cautions that a person's picture of 'that which is' may itself be a product of media rather than an accurate view of the world." },
+    { "term": "New sensibility", "def": "Marcuse's term, borrowed from Marx's idea of the emancipation of the senses, for a new kind of human being whose very senses (not just beliefs) are freed from conditioning by a culture of domination and control." },
+    { "term": "Technological aggression", "def": "Marcuse's idea that technology (drone strikes, internet comments) makes aggression easier to carry out because it distances the person acting from having to directly confront who they are harming." },
+    { "term": "Subjectivity", "def": "A person's sense of who they are and how they see the world; Marcuse argues it is shaped by culture down to the level of the senses themselves, not just beliefs." }
+  ],
+  "anchors": [
+    "the Great Refusal, in order to be done effectively, has to be an extremely individual, personalized journey that people embark on",
+    "Practically my entire worldview up until the moment I heard about this stuff has been given to me by TV shows, radio programs, newspapers, books, documentaries",
+    "if the world you’re trying to change doesn’t actually exist, neither does the revolutionary potential of your effort",
+    "Football is America’s game, and it’s essentially just simulated warfare by people in uniforms",
+    "what you’re really looking at there is not the history of humankind but a history of acts of aggression committed almost entirely by men in positions of power",
+    "We’ve had a control group the entire time, women who throughout history have not had to enter into this aggressive work and political realm",
+    "if you’ve noticed a decline in the number of men that behave in that way in the last 50 years between 1970 and 2018, he’d point to that as evidence of the fact that this can’t strictly be biological",
+    "a lot of the way that our senses perceive the world has been socially conditioned into us just based on the tendencies of the culture we happen to be born into",
+    "technology often makes participating in an aggressive, dominating society much easier to do because it distances people from the act of aggression",
+    "be wary of turning into the very forces of domination that you claim to despise"
+  ]
+}

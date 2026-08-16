@@ -1,0 +1,30 @@
+{
+  "id": 19,
+  "argument": "The episode traces three Islamic philosophers' approaches to reconciling reason and revelation as paths to truth: al-Kindi argued reason and prophecy are compatible, each filling gaps the other leaves; al-Ghazali, after doubting even his own senses and reason, concluded that reason produces only conceptual knowledge while faith delivers direct, first-hand truth; and Averroes proposed a division of labor where philosophy serves the intellectually capable few and religion delivers an accessible version of truth to everyone else, each supporting the other.",
+  "keyIdeas": [
+    "When two philosophers reach opposing conclusions they both call 'the truth,' the episode argues this reveals a flaw in the method one of them used to arrive at it, not that truth itself is subjective.",
+    "Al-Kindi defined philosophy as 'the true knowledge of things insofar as is possible for man,' which let him treat reason and revelation as compatible: use reason as far as it can go, and prophecy to fill in the rest.",
+    "Al-Ghazali noticed that children raised in a given religion almost always adopt their parents' faith, concluding that most belief is 'authority-based opinion' rather than independently examined truth; after 'pulling a Socrates on himself' and doubting even sense perception and necessary truths, he fell into a decade of debilitating skepticism.",
+    "Al-Ghazali resolved his crisis by concluding reason produces only conceptual knowledge -- knowing the definition of health, not being healthy -- while faith and prophecy provide direct, first-hand experience of truth that reason alone cannot reach.",
+    "Averroes responded that philosophy and religion each serve different audiences and mutually benefit each other -- religion provides civil order and an accessible truth for the masses, while philosophy serves the few capable of it -- so it is 'downright irresponsible' for philosophers to publicly undermine ordinary people's religious belief."
+  ],
+  "terms": [
+    { "term": "Al-Farabi's commentary", "def": "Al-Farabi's explanatory work on Aristotle that bridged the cultural and temporal gap between Aristotle's Greek examples and the Islamic world, making his ideas understandable." },
+    { "term": "Authority-based opinions", "def": "Al-Ghazali's term for beliefs people absorb from parents and teachers without independently examining them." },
+    { "term": "Necessary truths", "def": "Truths that hold by definition or essence, such as a square having four sides, which al-Ghazali counted as one of only two things knowable with certainty." },
+    { "term": "The Incoherence of the Philosophers", "def": "Al-Ghazali's most famous work, arguing that philosophers relying solely on reason are ultimately incoherent." },
+    { "term": "The Incoherence of the Incoherence", "def": "Averroes' response to al-Ghazali, defending philosophy's value alongside religion." }
+  ],
+  "anchors": [
+    "it has to be a problem with the method they used to arrive at truth",
+    "there was just too large of a cultural and time period gap between when Aristotle lived and when Avicenna lived. And al-Farabi made it accessible to him",
+    "use reason to know as much as we possibly can, and then add on divine knowledge given to us through the prophets to fill in the gaps",
+    "not how the truth makes you feel, not how different the person looks who’s bringing you the truth",
+    "In the quote we just read, he calls these sorts of things authority-based opinions",
+    "there’s only two things as far as he can see that we can be certain about. And those are sense perceptions and necessary truths",
+    "His story goes that apparently for ten years he had this terrible disease of skepticism about everything",
+    "When you only use reason to understand something, you’re never experiencing the truth first-hand",
+    "He thought there should be something like a business arrangement between the two of them",
+    "if philosophers do make people question their faith in religion, it’s downright irresponsible"
+  ]
+}

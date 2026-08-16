@@ -1,0 +1,30 @@
+{
+  "id": 45,
+  "argument": "Using a shipwreck/desert-island thought experiment, the episode compares Hobbes, Locke, and Rousseau on why government is justified and what its role should be. Hobbes thought the state of nature is a lawless war of all against all, so government's job is simply to maintain order; Locke thought government exists to protect natural rights — life, liberty, and property; and Rousseau, believing the state of nature was actually peaceful, argued that mere order isn't enough, since 'you can live peacefully in a dungeon,' and that civilization's institutions, especially private property, disguise the loss of freedom as love of one's own subjugation, making a government whose main job is protecting property unfair to those who own little.",
+  "keyIdeas": [
+    "Hobbes argued that without any laws or contract, there's no standard for right or wrong, so the state of nature is effectively lawless — government's core job is to maintain order.",
+    "The 'guy with the crooked eyes' example shows how a third party with agreed tasks and limits, like basic protection, can be worth voluntarily paying for — the basic case for government.",
+    "Locke agreed government matters but held its purpose is protecting natural rights (life, liberty, property), not merely keeping order.",
+    "Rousseau, taking the opposite view of the state of nature from Hobbes, argued civilization's 'garlands of flowers' (laws, arts, sciences) disguise the 'iron chains' of lost liberty, making people love their own subjugation rather than removing it.",
+    "Rousseau rebutted the idea that order alone justifies government by noting you can live peacefully in a dungeon, and argued that a government mainly protecting property benefits the propertied far more than everyone else."
+  ],
+  "terms": [
+    { "term": "State of nature", "def": "The hypothetical condition of humans before government or society — imagined as a violent free-for-all by Hobbes, and as peaceful and free by Rousseau." },
+    { "term": "Social contract", "def": "The agreement by which people trade some natural freedom for a different kind of freedom under government." },
+    { "term": "Romanticism", "def": "The reactive movement, illustrated by the 'medicine' analogy, emphasizing emotion and nature as a corrective to the Enlightenment's overreliance on reason." },
+    { "term": "General will", "def": "Rousseau's term for what government should serve, as opposed to mere order (Hobbes) or natural rights (Locke)." },
+    { "term": "Amnesia thought experiment", "def": "Rousseau's device for isolating what's genuinely natural in human behavior by imagining people who've forgotten all social conventions." }
+  ],
+  "anchors": [
+    "There is no right or wrong because there are no laws in place to deem what right or wrong even is.",
+    "this third party with certain clear tasks assigned to it and certain limitations might be tremendously beneficial to us.",
+    "When you exalt reason to the level that was being done during the Enlightenment and you suppress something like human emotion",
+    "the entire long history of civilization can really be seen as things getting worse for us progressively",
+    "make them love their slavery by turning them into what are called civilized people.",
+    "the role of government is actually to protect our natural rights: life, liberty, and property.",
+    "you can live peacefully in a dungeon, he says, right? Just because you’re living peacefully doesn’t make it a good life.",
+    "Would we still be killing each other over who has a pineapple or not? Would we still steal things from each other",
+    "the idea of property depends on many prior ideas, which could only be acquired successfully, and could not have been formed all at once in the human mind.",
+    "it will always benefit the rich more than everybody else because they have more property that’s being protected."
+  ]
+}

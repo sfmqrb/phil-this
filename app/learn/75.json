@@ -1,0 +1,30 @@
+{
+  "id": 75,
+  "argument": "Responding to listener questions about whether fallacy-spotting actually matters, Steve argues that since most real-world arguments are won through emotional, fallacy-ridden persuasion rather than formal logic, knowing fallacies is a genuinely useful tool -- like the sophists' rhetoric training -- both offensively, for winning individual battles in the larger 'war of ideas' that shapes beliefs and history, and defensively, as protection against being manipulated or swindled. He then walks through several more fallacies (red herring, argument from authority, begging the question, black and white, hasty generalization), showing in each case how the trick works by looking past the emotional surface to the underlying premise-conclusion structure of the argument.",
+  "keyIdeas": [
+    "Because most everyday arguments, especially in politics, are decided by emotional appeal rather than formal logic, fallacies are a genuinely effective persuasive tool in that setting, the same way sophists taught rhetoric to Athenians who needed to win at trial.",
+    "A fallacy's persuasive power isn't fixed; it depends on whether the audience can recognize it, which is why naming a fallacy (like calling out an ad hominem) strips it of the emotional force it used to carry.",
+    "Winning an individual argument is like winning a small battle in a larger 'war of ideas' that shapes beliefs and, over time, history; knowing fallacies is the artillery or intel for that fight.",
+    "Every argument has an underlying premise-conclusion structure, like a math equation, and spotting a fallacy means quickly locating the specific faulty step in that structure.",
+    "Red herrings change the subject to something tangentially related instead of answering the question; argument from authority is the mirror image of ad hominem, since both skip evaluating the actual argument in favor of judging the source; begging the question offers a conclusion with no supporting premise; black and white fallacies hide the many moderate options between two extremes; and hasty generalizations treat a single anecdote as sufficient evidence for a broad claim."
+  ],
+  "terms": [
+    { "term": "Red herring", "def": "Changing the subject to something only tangentially related in order to avoid addressing the actual argument or question." },
+    { "term": "Argument from authority", "def": "Treating a claim as true simply because it comes from a respected or credentialed source, without evaluating the argument itself." },
+    { "term": "Begging the question", "def": "Treating a conclusion as self-evidently true and offering no actual premise or evidence to support it." },
+    { "term": "Black and white fallacy", "def": "Presenting only two extreme options, one deliberately absurd, while ignoring the reasonable positions in between; also called the fallacy of the excluded middle." },
+    { "term": "Hasty generalization", "def": "Drawing a broad conclusion about a whole group or situation from a single anecdote or too small a sample." }
+  ],
+  "anchors": [
+    "most of the time it is just a kneejerk, emotional, fallacy-ridden argument that people relate to",
+    "these fallacies that are so useful in today’s world, they wouldn’t affect people the same way",
+    "that emotional response that was evoked back then isn’t in me anymore because I instantly identify it as what it is",
+    "if winning an argument is like winning a battle in this war of ideas, then knowing logical fallacies is like the artillery in the battle",
+    "being able to see instantly that the mistake that they made in their thinking was that 2+3 = 6, being able to home in on it real quick",
+    "changes the subject to something else that’s only tangentially related to avoid having the original argument",
+    "Instead of saying that an argument is invalid because of the terrible, uncredible source that it’s coming out of, this one uses a source, props it up, and says that this thing has to be true because it’s coming out of this source",
+    "as though it’s self-evident and as though it doesn’t need justification or evidence to back it up",
+    "there’s tons of positions in the middle between those two extremes",
+    "an anecdote is not a sufficient premise to an argument necessarily"
+  ]
+}

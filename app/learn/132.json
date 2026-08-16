@@ -1,0 +1,30 @@
+{
+  "id": 132,
+  "argument": "This episode introduces Carl Schmitt's critique of liberalism, the broad Enlightenment-era political philosophy of reason, rational debate, and limited government that replaced pre-liberal methods like divine revelation and tradition, each liberal feature designed as a solution to a specific past failure. Schmitt's basic complaint is that despite this promise of a peaceful, cosmopolitan world, history under liberalism kept producing the same dictatorships, bloodshed, and instability it claimed to end, because liberalism cannot actually resolve irreconcilable political differences through debate and, when confronted with a sufficiently hostile movement, must either let itself be destroyed or act like a dictator. Schmitt calls liberalism's attempt to bind power to predefined rules 'normativism,' an illusion because no constitution can cover every contingency; the sovereign liberalism claims to have eliminated simply reappears whenever a real emergency demands decisive action, revealing that liberal and pre-liberal societies share the same underlying authoritarian reality, liberalism is just less honest about it.",
+  "keyIdeas": [
+    "The 'liberalism' Schmitt critiques refers to the broad Enlightenment-era political philosophy and standard of legitimacy, not the modern American left; it replaced pre-liberal methods like divine revelation and tradition with reason, secular scholarship, and rational debate.",
+    "Each hallmark of liberalism (separation of powers, global economic ties, rational debate) was designed as a direct solution to a specific past problem, like dictatorship or religious war.",
+    "Schmitt's basic complaint is that despite liberalism's promise of a peaceful, cosmopolitan world, history under liberalism kept producing the same dictatorships, bloodshed, and instability it claimed to end.",
+    "Some political differences are irreconcilable through rational debate (illustrated by someone who believes they should be king and everyone else their slave), which contradicts liberalism's assumption that any disagreement can be talked through; faced with a sufficiently hostile movement, liberalism's only real options are to be destroyed or to act like a dictator.",
+    "'Normativism,' holding power to predefined rules like a constitution, is an illusion to Schmitt because no set of rules can cover every contingency; liberal societies claim to have eliminated the sovereign, but during a genuine emergency the sovereign reappears and simply acts, revealing that constitutional norms only ever restrain the sovereign during periods of normalcy, when it wouldn't be exercising authoritarian power anyway."
+  ],
+  "terms": [
+    { "term": "Liberalism (Schmitt's sense)", "def": "The Enlightenment-era political philosophy and standard of legitimacy, reason, rational debate, limited government, that replaced pre-liberal methods like divine revelation and tradition." },
+    { "term": "Pre-liberal thought", "def": "The methods societies used before the Enlightenment to determine political legitimacy, such as divine revelation, tradition, ritual, and theological scholarship." },
+    { "term": "Normativism", "def": "Schmitt's term for holding political power to predefined rules like a constitution; he considers it an illusion because it only appears to remove the need for a sovereign." },
+    { "term": "Sovereign", "def": "The authority capable of decisive, extra-constitutional action in an emergency; Schmitt argues liberalism claims to eliminate the sovereign but it simply reappears whenever a real crisis demands it." },
+    { "term": "State of exception", "def": "A moment of genuine emergency in which normal constitutional rules break down and someone must simply act with sovereign authority." }
+  ],
+  "anchors": [
+    "The term liberalism is referring to a political philosophy and method of determining political legitimacy that emerged out of the beginning of the Enlightenment",
+    "you can see why many of the hallmarks of liberalism are what they are, when you think about them in relation to some historical problem they were trying to solve",
+    "throughout the entire tenure of liberalism, things continue to descend into dictatorships, bloodshed, and political instability all the way up to the present day",
+    "what happens when you try to have a rational debate with someone whose whole political belief is that I should be king of the world, and you should all be my slaves? Well, it doesn’t work",
+    "Choice number one, be willing to accept the destruction of liberalism simply because something else was popular at the time. Or, choice number two, use the power of the state to silence opposition",
+    "normativism is an illusion to Carl Schmitt",
+    "You are never going to be able to come up with a set of rules that accounts for every contingency, given how many moving parts are involved when making decisions that affect this many people",
+    "Abracadabra! Poof! The sovereign was there the whole time.",
+    "the pre-liberal societies were just a lot more honest about the authoritarianism that was going on",
+    "the only time pieces of paper like the constitution prevent the sovereign from acting are during periods of normalcy, when the sovereign wouldn’t be exercising authoritarian power anyway"
+  ]
+}

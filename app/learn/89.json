@@ -1,0 +1,31 @@
+{
+  "id": 89,
+  "argument": "Simone de Beauvoir argues that the subjugation of women is not natural or inevitable but the product of men objectifying women, stripping away their status as free subjects and confining them to \"immanence\" while reserving \"transcendence\" for themselves. This began with a real economic advantage (male physical strength in a resource-scarce world) that snowballed into control over law, culture, and the very definition of femininity, which is then reinforced generation after generation through upbringing rather than biology. She lands as an egalitarian existentialist: some biological differences exist, but they cannot explain the vast cultural gap between how men and women are expected to behave, since for her existence precedes essence.",
+  "keyIdeas": [
+    "Objectification, borrowed from Descartes' subject/object split, means stripping a person's subjectivity so they are treated purely as a thing that is acted upon, like a chair or wheelbarrow.",
+    "De Beauvoir divides behavior into transcendence (striving, imposing one's will, having a voice) and immanence (passivity, submissiveness, voicelessness), and notes it is 'convenient' that transcendence maps onto masculinity and immanence onto femininity.",
+    "Women become who they are through two histories: the broader cultural history of expectations, and their own personal history of having those expectations reinforced by parents, teachers, and friends from childhood.",
+    "The root cause traces back to a world where economic prosperity depended on physical strength; men's advantage there snowballed into control over resources, government, and law, letting men define femininity itself.",
+    "Modern sexism is harder to quantify than historical sexism because, per the hiring example, a person's conscious experience is identical whether or not the decision was sexist -- only their inference about the other person's motive differs."
+  ],
+  "terms": [
+    { "term": "Subject/object dichotomy", "def": "Descartes' division of everything into subjects (thinking things that act) and objects (matter that is acted upon, like a chair)." },
+    { "term": "Objectification", "def": "What the episode calls 'objectifying' a person: removing their subjectivity so they're treated as a mere object, via forms like instrumentality, denial of autonomy, fungibility, or ownership." },
+    { "term": "Transcendence", "def": "The set of virtues tied to being a subject: striving for freedom, imposing one's will on the world, having a strong voice." },
+    { "term": "Immanence", "def": "The set of virtues tied to being an object: passivity, submissiveness, self-effacement, voicelessness." },
+    { "term": "Woman as 'the other'", "def": "De Beauvoir's claim that being a self/human is culturally coded as male, leaving woman defined as everything the self rejects." },
+    { "term": "Gender essentialism", "def": "The view that men and women have fixed, inborn essences that explain differences in behavior; de Beauvoir rejects it as an explanation for the cultural gap between the sexes." }
+  ],
+  "anchors": [
+    "something that’s acted upon, something like a chair or a wheelbarrow",
+    "as though she’s just a piece of meat, as a tool for the objectifier’s purposes",
+    "you may be enslaved to any number of processes: advertising, addiction, anything",
+    "how convenient that transcendent qualities are all the qualities that we see as masculine qualities, and the immanent qualities are all the ones we see as feminine",
+    "women are the byproduct of two different histories",
+    "much more likely to be firm and aggressive when they’re disciplining a boy",
+    "Resources are limited, and this forced women to have to be economically dependent on men",
+    "their biggest fear is that they become what they’ve engineered for women to become",
+    "Femininity is a social construct, not something imbued into women at conception",
+    "nothing changes about your conscious experience of what actually occurred. The only thing that changes is what you’re inferring is going on inside of that guy’s head"
+  ]
+}

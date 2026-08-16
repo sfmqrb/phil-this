@@ -1,0 +1,31 @@
+{
+  "id": 5,
+  "argument": "Aristotle argues that a well-lived life requires a structured plan aimed at a single ultimate end goal, living well or happiness (eudaimonia), which is self-sufficient and pursued for its own sake rather than as a means to anything further. Achieving it requires acquiring the 'real goods' — bodily goods, external goods, and goods of the soul — that fulfill our shared natural desires, and requires actively practicing virtues like temperance and courage until they become habitual second nature, though even a virtuous person's flourishing can still be thwarted by luck.",
+  "keyIdeas": [
+    "Aristotle claims a well-lived life requires a structured hierarchy of goals with one ultimate goal at the top, not just a scattering of unconnected priorities — we deliberate about means to reach given ends, not about the ends themselves.",
+    "Eudaimonia (living well/happiness) is the ultimate end of all human action because it is self-sufficient — no one can give a further reason for wanting it, unlike every subordinate good, which is always pursued as a means toward something else.",
+    "Aristotle distinguishes the apparent good (the object of appetite or desire — what merely seems good in the moment) from the real good (the object of rational wish — what is actually good for human nature).",
+    "The 'real goods' required for eudaimonia fall into three categories: bodily goods (health, vitality), external goods (the means to bodily needs, like food and shelter), and goods of the soul (knowledge, friendship, self-esteem).",
+    "Virtue is a matter of habituation, not innate knowledge or a single correct choice — a trained disposition built through repeated action, captured in Aristotle's line 'we are what we repeatedly do'; and it must be actively exercised, not merely possessed, since even a virtuous person's happiness can be thwarted by luck."
+  ],
+  "terms": [
+    { "term": "Eudaimonia", "def": "Aristotle's term for living well or flourishing, the ultimate self-sufficient end goal of all human action, often translated as 'happiness.'" },
+    { "term": "Apparent good", "def": "The object of appetite or desire — what merely seems good to a person in the moment, as opposed to what is actually good for them." },
+    { "term": "Real good", "def": "The object of rational wish — what is actually good for human nature, as distinct from the apparent good that is merely desired." },
+    { "term": "Real goods", "def": "Aristotle's three categories of goods required for eudaimonia: bodily goods, external goods, and goods of the soul." },
+    { "term": "Temperance and courage", "def": "Aristotle's two primary moral virtues: temperance is moderation, avoiding excess; courage is enduring temporary discomfort or pain to achieve a higher good, extending beyond battlefield bravery." },
+    { "term": "Tyche (luck)", "def": "The role of chance and external circumstance beyond a person's control that can still thwart even a virtuous person's flourishing." }
+  ],
+  "anchors": [
+    "there’s only one fully correct plan for life",
+    "We deliberate not about ends but about means. For a doctor does not deliberate whether he shall heal",
+    "when you ask someone why they want happiness, they can never really give you an answer",
+    "the apparent good is the object of appetite, and the real good is the primary object of rational wish",
+    "natural desires—or needs, for us—which are desires we were born with because we’re human and all humans have them regardless of background",
+    "These bodily goods, as they’re called, are made up of vigor, vitality, health, and sensual pleasures",
+    "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "He thought that doing things that cause us temporary discomfort or pain to ultimately achieve some higher good is just another form of courage",
+    "Aristotle says that the best athletes in the world only win at the Olympic games if they actually compete",
+    "Luck plays a significant role in determining whether you ever have the chance of living well"
+  ]
+}

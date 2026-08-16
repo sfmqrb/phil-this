@@ -1,0 +1,30 @@
+{
+  "id": 115,
+  "argument": "The episode sets up historical context before a major shift in 20th-century thought: the analytic/continental split traces back to differing objections to Kant, and both traditions were dominant before Ferdinand de Saussure's semiotics upended assumptions about subjectivity. Saussure's insight that there is zero necessary connection between a signifier and what it signifies means a word's meaning comes only from its relationships and differences within a larger system, not from any direct correspondence to the world. Structuralists extend this insight far beyond language, suggesting personal identity, cultural norms, and even historical narratives are all products of narrow, humanly-imposed structures rather than the free expression of an autonomous, reasoning self, making structuralism feel to many like existentialism's successor.",
+  "keyIdeas": [
+    "The analytic/continental split is often traced to Kant: analytic philosophy grew out of objections to his epistemology, while continental philosophy grew out of objections to his metaphysics of a world of things-in-themselves versus a world of experience.",
+    "Analytic philosophers like Wittgenstein focus heavily on language and formal logic because language is an imprecise, flawed human construction, so mistakes in how we use it could be the real source of many philosophical problems.",
+    "Saussure's claim that there is zero necessary connection between the signifier and the signified undermines theories that language originated through direct correspondence between words and things, and implies that a word's meaning comes only from its relationships and differences with all the other words in the larger system of the language.",
+    "Structuralists extend this to personal identity: what it is to be you may work like word meaning, arising from your relationships and differences with the many other people around you, and to history, arguing traditional narratives (like 'Napoleon invades Russia') are biased toward assuming the subject dictates the world rather than the world shaping the subject.",
+    "This wave of thought was seen by many as a successor to existentialism, since it challenges the existentialist idea of total freedom, arguing our choices are dictated by a narrow set of structural parameters we're given rather than being freely chosen."
+  ],
+  "terms": [
+    { "term": "Semiotics", "def": "The study of signs, founded by Ferdinand de Saussure, examining things like words or pictures that stand in for something else." },
+    { "term": "Signifier / signified", "def": "Saussure's two parts of a sign: the signifier is the word or image standing in for something, the signified is the concept it references." },
+    { "term": "Structuralism", "def": "The view, following Saussure, that meaning across language, culture, identity, and history arises from underlying structures and relationships rather than direct correspondence to reality." },
+    { "term": "Superstructure theory", "def": "Marx's idea that things like art, politics, and religion are always massively shaped by the economic and material reality a person is born into, rather than being free, uninhibited creation." },
+    { "term": "Synthetic a priori", "def": "Kant's category for truths reasoned to that are neither purely definitional (truths of reason) nor empirically verified (truths of fact), whose validity the analytic tradition would go on to challenge." }
+  ],
+  "anchors": [
+    "one major approach to philosophy at this time that primarily takes issue with Kant’s epistemology -- that’s the analytic tradition -- and another major approach that takes issue with Kant’s metaphysics",
+    "language is a massively flawed, totally imprecise, messed-up collection of agreements made by a bunch of people in the past",
+    "there is zero necessary connection between the signifier and the signified",
+    "the meaning of a word lies in the relationships between that word and all of the other words within a larger system",
+    "There are 40,320 ways that you can rearrange all the words in that sentence",
+    "maybe the meaning of what it is to be you is just the relationships between you and what it means to be the thousands of other people that surround you every day",
+    "it’s the subject that dictates what happens in the world, not the world that dictates the subject",
+    "it would be absolutely impossible for you to ever be an atheist",
+    "the kind of artwork that you produce is always going to be massively dictated by something that was entirely out of your control: the economic and material reality that you were born into",
+    "every choice we make and every thought we have is ultimately dictated by an extremely narrow set of parameters that were given to us"
+  ]
+}

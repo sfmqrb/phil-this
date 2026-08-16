@@ -1,0 +1,29 @@
+{
+  "id": 7,
+  "argument": "Daoism, founded by the possibly-legendary Laozi and expanded by Zhuangzi, emerged from the same crumbling Zhou dynasty context as Confucianism, but reached the opposite conclusion: instead of returning to tradition and ritual, humans should shed civilization's distractions and align themselves with the Dao, the natural, uncategorizable way of the universe. Central to this is wu wei, or action through nonaction -- flowing around resistance rather than straining against it -- which Daoists apply to both personal life and government, arguing that the best government is one that barely governs at all.",
+  "keyIdeas": [
+    "Like Confucius, Laozi believed civilization had gone wrong, but instead of Confucius's conservative return to tradition and ritual, Laozi wanted people to shed the distractions of civilization entirely and live closer to nature.",
+    "The Dao is often interpreted as an absence, like the empty space of a road: it can't be classified or categorized, which is why the Daodejing opens by saying 'the Dao that can be told is not the eternal Dao' -- language's restrictive, categorizing nature can't capture it.",
+    "Wu wei (action through nonaction) means flowing around an obstacle the way water erodes a boulder over time, rather than straining against it directly with force.",
+    "Laozi and Zhuangzi both apply wu wei to government, arguing that people function best when government's presence is minimal or barely noticeable, like fish undisturbed in water.",
+    "The yin-yang symbol illustrates that opposites like good/evil or day/night are interdependent -- each side's significance comes from its relation to the other, and each contains a seed of its opposite."
+  ],
+  "terms": [
+    { "term": "Dao", "def": "Literally 'path' or 'road'; the natural, harmonious way the universe follows, which cannot be fully named or classified by language." },
+    { "term": "Wu wei", "def": "Nonaction, or action through nonaction; going with the flow of nature rather than straining against it." },
+    { "term": "Yin-yang", "def": "The interdependence of opposites; each side of a pair (like good and evil) gives the other its significance and contains a seed of the other within it." },
+    { "term": "Daodejing", "def": "The short, cryptically worded book of about 5,000 characters attributed to Laozi that founds Daoist philosophy." }
+  ],
+  "anchors": [
+    "Both Laozi and Confucius were part of the camp of people that thought their people had lost their way as a civilization.",
+    "it’s that emptiness that gives any object its significance",
+    "makes it incapable of ever adequately describing the Dao because the Dao isn’t something that can be classified or categorized",
+    "we should be like water. We should just flow as nature does, like water through the cracks of the boulder",
+    "He thought that people work best when they aren’t governed or the presence of a government is so small that the people hardly even notice it exists.",
+    "He thought that whenever someone commits an evil act, it’s evil because it’s undermining some established mechanism or entity in society. And if you give evil nothing to oppose, it just kind of ceases to exist.",
+    "Zhuangzi thought it was pointless to try to pursue something that was unlimited with a life that is limited.",
+    "It’s impossible to have the top of an iPhone without also having the bottom of that iPhone. The significance of what the top of something is is given by its relation to its opposite.",
+    "he’s being critical of the idea of arriving at true knowledge from any one individual perspective.",
+    "pretty much all tradition falls into that category, which is completely the opposite viewpoint of Daoism’s rival political philosophy, Confucianism, that saw tradition as the most important thing."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 101,
+  "argument": "Heidegger argues that 2,500 years of philosophy and science, though genuinely useful, have progressively convinced humanity that measurable facts about entities amount to understanding Being itself, alienating us from the deeper mystery of existence. Using Dasein and a phenomenological, insider's method, he revives Aristotle's four causes to show that a thing's possibility depends on all four converging in Dasein's conception, then argues that modern technology reveals nature not through respectful, craftsmanlike 'bringing-forth' (poiesis) but through 'Enframing' (Gestell), a challenging demand that nature supply extractable, storable energy -- reducing nature to mere 'standing-reserve.' Contrasted with John Dewey's view of technology as straightforward liberation from nature, Heidegger concedes the liberation is real but argues it has cost us our attunement to the mystery of Being, which is what makes humans distinctively ontological beings.",
+  "keyIdeas": [
+    "Heidegger's 'alienation from Being' thesis: philosophy and science, humanity's tools for confronting existence, have progressively convinced us that measurable facts about entities amount to understanding Being itself, when they don't -- since Being itself, the sheer fact that things are at all, is distinct from any particular entity.",
+    "Because we ourselves are the entities for whom being is an issue, Heidegger's phenomenological method asks 'what is it like to be a human being' from an insider's perspective, using the term Dasein rather than 'consciousness' or 'subject' to avoid smuggling in a subject/object split.",
+    "Reviving Aristotle's four causes against the post-Cartesian reduction to efficient cause alone, Heidegger argues a thing (like a cup) is only revealed as possible once material, formal, efficient, and final causes converge in Dasein's conception of it.",
+    "The essence of technology (techne) is 'revealing' -- traditionally a respectful, craftsmanlike bringing-forth of latent potentialities in nature (poiesis) -- but modern technology instead 'challenges' nature through Enframing (Gestell), demanding it supply extractable, storable energy, and reduces it to mere 'standing-reserve' (Bestand), inventory valuable only for human use.",
+    "Against Dewey's view that technology is pure liberation from nature's domination, Heidegger concedes the liberation is real but argues it cost us our attunement to the mystery of Being -- the capacity that makes humans distinctively ontological beings."
+  ],
+  "terms": [
+    { "term": "Being (Sein)", "def": "The sheer fact that things are at all, distinct from any particular entity or from facts about entities." },
+    { "term": "Dasein", "def": "Heidegger's term for human existence, chosen to avoid the subject/object split smuggled in by words like 'consciousness.'" },
+    { "term": "Enframing (Gestell)", "def": "The episode uses this verb directly -- 'we enframe the world... it means to look at the natural world only in terms of how much utility it has for human purposes' -- describing modern technology's 'challenging' demand that nature 'supply energy which can be extracted and stored.'" },
+    { "term": "Standing-reserve (Bestand)", "def": "Named almost verbatim in the episode: 'We turn the natural world into what he calls a standing reserve, or a sort of backstock of inventory just sitting there waiting to be used and consumed by human beings.'" },
+    { "term": "Poiesis", "def": "The Greek sense of bringing-forth latent potentialities within nature, resembling artisanal craftsmanship, as opposed to modern technology's challenging." }
+  ],
+  "anchors": [
+    "Heidegger thinks science and philosophy, the longer they’ve gone on, have progressively alienated us from that original state where we question the true extent of the mystery of being.",
+    "existence has pretty much always been looked at as this spatial and temporal realm that we all exist in that’s full of entities, entities like buffalo and mountains and nebulae, all spatially and temporally relating to one another.",
+    "Heidegger never uses words like “consciousness” or “subjective experience” because to even use words like “consciousness” to describe what we have is to imply that consciousness is its own thing separate from the world.",
+    "a more insider’s approach, a phenomenological approach to answering that question would be to ask, “What is it like to be a human being?”",
+    "it wasn’t until a Dasein conceived of the final cause of a cup in correspondence with the formal and material causes -- it wasn’t until that coalition of four was born that the idea of a cup was revealed as something that can potentially be.",
+    "Technology is the art of bringing forth the potentiality of the wooden rolling pin latent within the tree or bringing forth the potentiality of the marble statue latent within the giant piece of rock.",
+    "It’s a challenging which puts to nature the unreasonable demand that it supply energy which can be extracted and stored as such",
+    "We turn the natural world into what he calls a standing reserve, or a sort of backstock of inventory just sitting there waiting to be used and consumed by human beings.",
+    "He’d agree that technology has liberated us from the shackles of nature. But at what cost?",
+    "Heidegger thinks that at our core we are ontological beings. We’re the kind of beings that ask questions about what it means to be or why things are the way they are."
+  ]
+}

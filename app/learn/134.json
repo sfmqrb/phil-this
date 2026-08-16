@@ -1,0 +1,29 @@
+{
+  "id": 134,
+  "argument": "The episode explains why so many philosophers at the start of the 20th century turned against the Enlightenment legacy of reason, individualism, and science, not because they opposed reason or science themselves but because they came to see both as culturally relative tools rather than paths to objective certainty. Beginning with Nietzsche and Kierkegaard and moving through Rorty, Burke, and Hume, the episode argues that treating reason as the standard of political legitimacy risks cultural imperialism and offers no real grounding for values, and closes by reframing this modern/postmodern tension as a recurrence of the ancient debate between Socrates and Protagoras.",
+  "keyIdeas": [
+    "Nietzsche thought the Enlightenment's founders missed a giant opportunity: instead of questioning certainty itself, they simply swapped religious certainty for rational certainty, replacing one dogma with another.",
+    "Kierkegaard argued that rationality, however powerful for producing general knowledge, cannot help with the paradoxes of individual human existence, illustrated by his admission that he could not 'understand' Abraham despite the era's scientific achievements.",
+    "Drawing on Richard Rorty, the episode compares surviving scientific theories to species under natural selection: a theory's long survival may show it fit the cultural and scientific biases of its environment, not that it matches objective reality.",
+    "Because reason is culturally relative, using it as the standard for political legitimacy risks cultural imperialism, since whichever culture defines 'rational' can judge, and even justify invading, cultures that deviate from it.",
+    "Since modern science must assume value neutrality (per Hume's fork, that you cannot derive an 'ought' from an 'is'), it cannot generate values on its own; it becomes a tool used to justify values that culture has already smuggled in."
+  ],
+  "terms": [
+    { "term": "Enlightenment", "def": "The historical and philosophical movement that replaced reliance on religious dogma with reason, individualism, and science as the primary path to truth." },
+    { "term": "Hume's fork (Hume's guillotine)", "def": "The idea that you cannot logically derive an 'ought' (a value) from an 'is' (a fact)." },
+    { "term": "Cultural imperialism", "def": "Judging or invading other cultures based on how well they conform to one's own culturally produced standard of rationality." },
+    { "term": "Value neutrality", "def": "The stance, assumed by modern science, that it should describe what exists without asserting purposes or values." }
+  ],
+  "anchors": [
+    "just changed the criteria for what makes something certain",
+    "rationality just cannot help you there. It's not a useful tool in that context",
+    "There’s something about being a human being that’s lost when we’re using purely rational analysis to try to explain it",
+    "when it comes to understanding certain aspects of our human experience of the universe, the tool of rational analysis just cannot tell the full story",
+    "Are the longest-lasting and most frequently relied upon theories stable because they match a stable reality or because scientists get together to keep them stable",
+    "Science is creating one version of understanding what we have access to",
+    "you can basically find a way to rationalize anything",
+    "rationality can also become the justification for invasion",
+    "Science cannot provide us with values on its own. The only thing it can do is serve as a tool, a tool to justify values that are smuggled into it by culture",
+    "This has been going on for thousands of years. This very well may be one of those debates that just never has a winner"
+  ]
+}

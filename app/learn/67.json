@@ -1,0 +1,31 @@
+{
+  "id": 67,
+  "argument": "Hegel is responding to Kant's split between the world as we experience it and an unreachable world of \"things in themselves,\" and he questions why we need to assume that hidden real world exists at all. To make his case he works through the theories of knowledge that came before him, showing that neither sense-certainty (knowledge from immediate sensation) nor perception (knowledge from organizing sensations into objects) can stand on their own as a self-sufficient basis for knowledge, since both always turn out to depend on something outside themselves.",
+  "keyIdeas": [
+    "Leibniz and Hume left only two kinds of knowable statements, truths of reason and truths of fact, which seemed to reduce philosophy to either word-analysis or empirical verification, jobs scientists already do.",
+    "Kant answered this by proposing synthetic a priori propositions and the idea that philosophy could study the mental lens through which we experience the world, distinguishing that experience from an inaccessible world of things in themselves.",
+    "Hegel questions the need to assume this hidden 'real' world behind our experience at all, wondering whether consciousness and its relations to itself might be all there is.",
+    "Sense-certainty only ever gives 'truth of has-been' rather than 'truth of being,' since sensed objects (illustrated by nighttime) are constantly changing and stop being true almost immediately.",
+    "Perception, illustrated by the saltshaker, fails to be self-sufficient too: calling the salt white or bitter only makes sense by comparison to everything else you've experienced, and even the boundary of 'the thing' (the glass canister) is an arbitrary line we impose."
+  ],
+  "terms": [
+    { "term": "truths of reason", "def": "Leibniz's category of statements true by definition, like 'all bachelors are unmarried.'" },
+    { "term": "truths of fact", "def": "Leibniz's category of statements verifiable through immediate empirical experiment." },
+    { "term": "synthetic a priori", "def": "Kant's proposed third type of proposition, beyond truths of reason and fact, that let philosophy study the mind's lens on experience." },
+    { "term": "sense-certainty (sense-immediacy)", "def": "The mode of consciousness that tries to ground knowledge in immediate sensory experience." },
+    { "term": "universals and particulars", "def": "Universals are shared qualities like redness; particulars are the individual objects that possess those qualities." },
+    { "term": "perception", "def": "The mode of consciousness that organizes sense-objects by finding relationships between them, e.g. comparing the salt to everything else you've sensed." }
+  ],
+  "anchors": [
+    "Wait a second, that’s what scientists do. They’re not philosophers.",
+    "He called these synthetic a priori propositions.",
+    "Maybe there isn’t this world of things in themselves that we’re assuming is out there.",
+    "Philosophy at this stage is all about finding assumptions.",
+    "Hegel says that sense-certainty doesn’t give you truth of being but truth of has-been.",
+    "the blender may possess the universal quality of redness or greenness or roundness",
+    "that salt only has differentiating qualities when it’s compared in relation to all the other things that you’ve been conscious of before",
+    "Hegel asks, who are we to determine what a thing in itself is?",
+    "because just like in the case of sense-certainty, this is not a self-sufficient, independent way of arriving at knowledge",
+    "he hasn’t really talked about exactly what he thinks consciousness is or how that in any way relates to the long soliloquy I gave last episode about history or the freedom question"
+  ]
+}

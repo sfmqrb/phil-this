@@ -1,0 +1,30 @@
+{
+  "id": 50,
+  "argument": "Using the French Revolution's National Assembly seating as the literal origin of 'left' and 'right,' the episode argues that reducing modern politics to a Paine-versus-Burke rematch oversimplifies things. But there's a real kernel of truth: most political disagreements do reduce to a choice between two general methods -- Burke's tradition-tested gradual refinement and Paine's reason-based sweeping change -- and, in the host's own view, society actually needs both.",
+  "keyIdeas": [
+    "'Left' and 'right' originated literally from where delegates sat in France's 1789 National Assembly: the king's supporters to the right of the president, the revolution's supporters to the left.",
+    "Left and right resist a single consistent definition, because which side counts as which flips depending on which underlying issue -- government control, property, planned versus free economies -- is used as the axis.",
+    "Reducing any specific modern disagreement to 'just Paine vs. Burke again' ignores the actual details of what's being argued about, much like blaming a couple's disagreement on Tesla vs. Edison.",
+    "Burke held that an idea's legitimacy comes from being rooted in a society's own tradition and track record, which is why he supported the tradition-grounded American Revolution but opposed the French Revolution's untested ideals.",
+    "Paine countered that tradition alone can't establish legitimacy, since the same reasoning could justify things like slavery, and the host's own final take is that gradual refinement and sweeping change both have their place and actually need each other."
+  ],
+  "terms": [
+    { "term": "Left wing / right wing", "def": "Political terms originating from the 1789 National Assembly seating, king's supporters to the right, revolution's supporters to the left." },
+    { "term": "Party of Order / Party of Movement", "def": "The names later given to the right-seated and left-seated factions of the National Assembly." },
+    { "term": "Tradition (Burke)", "def": "Burke's standard for legitimacy -- an institution is valid if it's rooted in a society's own history and has a track record of working." },
+    { "term": "Natural rights", "def": "Locke and Hobbes's idea of rights inherent to all humans regardless of tradition, which Burke rejected in favor of tradition-based legitimacy." },
+    { "term": "Gradual refinement vs. revolutionary change", "def": "The episode's central contrast between Burke's incremental approach and Paine's reason-driven, sweeping approach to solving problems." }
+  ],
+  "anchors": [
+    "The people that supported the king and the way that things currently were in France sat on the right-hand side of the president. And the people that supported the revolution sat on the left-hand side of the president.",
+    "We’re going to come back to these two methods in detail later on in this show.",
+    "To say that in modern times all we have are tens of millions of Thomas Paines arguing against tens of millions of Edmund Burkes is just a shameful oversimplification of what is actually happening",
+    "The point is, left to right is just a spectrum. And depending on what particular issue you’re using as the basis for that spectrum, it might drastically change where your views fall on it.",
+    "What we’re talking about here at the most basic level are two different approaches to solving problems.",
+    "The true test of an idea’s legitimacy to Edmund Burke was whether something was rooted in tradition, not whether it sounded reasonable or not.",
+    "taxation without representation being a bad thing was something that was well-founded in the tradition and history of England",
+    "You could just as easily look to the past and see that your culture has a longstanding tradition of slavery and then use that tradition to justify perpetuating it.",
+    "Over the years, I developed systems, and I made small, gradual changes to my egg-making process much in the style of Edmund Burke.",
+    "it almost seems like we need both. Sometimes we need the broad, sweeping changes. Then at other times we need the other side to preserve and improve those broad, sweeping changes after they’re implemented."
+  ]
+}

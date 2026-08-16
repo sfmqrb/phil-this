@@ -1,0 +1,30 @@
+{
+  "id": 169,
+  "argument": "Latour argues that 'modernity' is not simply a recent time period but a specific metaphysical premise: the purification of reality into two separate domains, nature (studied by science) and culture (studied by politics). He claims this shared premise, not any epistemological disagreement, is what fuels the endless fight between scientific realists and postmodernists in the 'Science Wars.' His slogan 'we have never been modern' means that in practice human and nonhuman entities were always entangled in 'hybrids' (like a newspaper article blending chemistry and politics), so his Actor Network Theory instead treats all entities, rocks, people, ideas, institutions, as metaphysically equal 'actants' studied through their relations to other actants, a shift he says is urgent because nearly every major problem left after 1989 involves humanity's entanglement with the nonhuman world.",
+  "keyIdeas": [
+    "To 'think like a product of modernity' means holding a specific cluster of Enlightenment-era premises, such as faith in science and belief in linear progress, that can feel self-evident and hard to imagine otherwise.",
+    "Latour argues the Science Wars between postmodernists and scientific realists stem not from an epistemological dispute but from a shared metaphysical premise both sides have too much faith in.",
+    "That shared premise is the 'purification' of nature and culture, human and nonhuman, into separate domains; Latour's Actor Network Theory instead treats rocks, people, ideas, and institutions all as metaphysically equal 'actants.'",
+    "Everyday experience, like reading a newspaper article on the ozone layer, already shows science and politics blended into inseparable 'hybrids,' contradicting the modern claim that they should be kept purified and separate.",
+    "Latour singles out 1989 because, after the West's Cold War triumph, nearly every remaining global problem (pollution, climate change, pandemics) turned out to be about humanity's relationship to the nonhuman world, exposing the failure of treating technology as a neutral tool."
+  ],
+  "terms": [
+    { "term": "Modern constitution", "def": "Latour's term for the tacit Enlightenment-era agreement that nature and culture, or the human and the nonhuman, must be studied as separate, purified realms." },
+    { "term": "Actor Network Theory", "def": "Latour's framework for studying reality as networks of 'actants' connected to one another, none reducible to any other." },
+    { "term": "Actants", "def": "Entities, human or nonhuman, physical or conceptual, treated as metaphysically equal and studied through their connections to other entities." },
+    { "term": "Hybrids", "def": "Latour's term for the blended nature-culture phenomena, like the ozone layer or a newspaper story, that we experience daily despite modernity's claim that science and politics are separate." },
+    { "term": "Purification", "def": "The modern practice of dividing the world into the purely natural (for science) and the purely cultural (for politics), which Latour argues never actually matched reality." }
+  ],
+  "anchors": [
+    "the word MODERN is going to describe an attitude of thinking, or even a WAY OF BEING… that emerged hundreds of years ago near the beginning of the Enlightenment",
+    "if you find yourself SO EMBEDDED in these beliefs that they seem practically self-evident to you where you have a hard time even imagining any other way reality could be",
+    "Bruno Latour thinks the REAL problem between the post-modernists and the scientific realists…is a METAPHYSICAL problem",
+    "try looking NOT to where everyone seems to be DISAGREEING. Try looking to where everyone agrees.",
+    "the assumed separation… between human and non-human entities",
+    "these actants…are all metaphysically equivalent to each other…and that NONE of these entities can be reduced to any other entity or explanation",
+    "The same article mixes together chemical reactions and political reactions. A single thread links the most esoteric sciences and the most sordid politics",
+    "that’s like trying to understand WAR by getting a bunch of people and a bunch of weapons putting them in a room…and putting all of the people on one side of the room…and all of the weapons on the other side of the room",
+    "EVERY SINGLE ONE OF THEM essentially…has to do with humanity and its relationship to the planet",
+    "technology carries with it a type of latent morality…and it’s not good enough to just understand it on its own…we have to have the ability to understand HOW THAT technology is going to impact other actants"
+  ]
+}

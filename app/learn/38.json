@@ -1,0 +1,30 @@
+{
+  "id": 38,
+  "argument": "Leibniz's theodicy answers a harder problem than Plotinus's: not whether evil is merely possible in a world made by a non-intervening God, but why an interventionist God who performs miracles doesn't simply stop all evil (the 'underachiever argument'). Leibniz's answer is that God, guided by a principle of sufficient reason, surveyed every possible universe and chose the best one overall — not perfect by human standards, since we can't know all the downstream consequences of removing any single evil, and since it may be arrogant to assume human happiness, rather than the welfare of all sentient creatures, is the metric God uses. Unlike Plotinus's 'evil is merely an absence of good,' Leibniz treats evil as something God permits (rather than decrees) as a necessary means toward a greater good — and this same architecture of windowless, self-contained monads that grounds his theodicy is also what he uses to argue for human free will, though compatibilists' attempt to reconcile that freedom with determinism draws the sharp objection that they've simply redefined what freedom means.",
+  "keyIdeas": [
+    "Plotinus asked whether evil is even possible in a world made by a good, non-intervening God; Leibniz faces a harder problem, the 'underachiever argument' — why an interventionist God who performs miracles doesn't simply act to stop all evil, since crediting God for one rescue means blaming God for the ninety-nine times a similar situation ends badly.",
+    "'Best of all possible worlds' means God, guided by the principle of sufficient reason, considered every possible universe and chose the one that is best overall — not one free of suffering or perfect by human standards.",
+    "Leibniz answers the 'remove this atrocity' objection two ways: humans can't know all the downstream consequences of removing a single event, and it's arrogant to assume human happiness (rather than the welfare of all sentient creatures) is the metric God uses to judge the world's goodness.",
+    "Unlike Plotinus's 'evil is the absence of good,' Leibniz holds God is responsible for the 'holes' too — evil is something God permits (decreeing good, merely letting evil happen) as a necessary means toward a greater overall good, illustrated by how thirst amplifies the goodness of drinking water when genuinely needed.",
+    "Leibniz argues windowless monads support free will, since each monad is self-contained and uninfluenced by outside conditioning; but the determinist critique of compatibilism (the freeway analogy) charges that this just redefines freedom as minor local choices within an already-fixed outcome."
+  ],
+  "terms": [
+    { "term": "theodicy", "def": "A justification of God's actions or inactions in the face of evil — literally, an argument that God is just." },
+    { "term": "the underachiever argument", "def": "The objection that an interventionist God who performs miracles in some cases but not others must bear responsibility for the cases where he doesn't intervene." },
+    { "term": "best of all possible worlds", "def": "Leibniz's claim that God, guided by the principle of sufficient reason, surveyed every possible universe and chose the one best overall, though not perfect by human standards." },
+    { "term": "principle of sufficient reason", "def": "Leibniz's principle that everything, including God's choice of which universe to create, has a specific purpose or reason behind it rather than being arbitrary." },
+    { "term": "compatibilism", "def": "The view that free will and determinism are compatible; criticized in the episode's freeway analogy as merely redefining freedom as minor local choices within an outcome that's already fixed." }
+  ],
+  "anchors": [
+    "Plotinus was a Neo-Platonist",
+    "we also have to give God credit for the 99 times out of 100 that the baby dies in that scenario",
+    "God contemplated all possible ways the universe could have played out, and he chose the best one",
+    "let’s not pretend like we know for a fact that if 9/11 never happened the world would be a better place for it",
+    "How arrogant and shortsighted is it for us to assume that human happiness is the metric that God uses to determine how good the world is",
+    "If God is responsible for all of creation, then he’s also responsible for the holes he leaves in it",
+    "When God wills for good things to happen, he does so, Leibniz says, by decree. And when he wills evil things to happen, he’s just kind of letting it happen",
+    "The goodness of that water is far greater than if we weren’t thirsty at all and we drank some water out of an airport urinal",
+    "they’re also entirely self-containing if that’s the case. And they’re, therefore, not influenced by any sort of conditioning",
+    "compatibilists really aren’t proving that free will is compatible with determinism. They’re just switching the definition of what freedom is"
+  ]
+}

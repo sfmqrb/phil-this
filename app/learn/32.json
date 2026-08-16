@@ -1,0 +1,30 @@
+{
+  "id": 32,
+  "argument": "Pascal's own life -- a childhood where math was withheld until he was desperate for it, and an adulthood spent doubting whether scientific truth could ever be final -- explains why he turned to probability and expected value to navigate uncertainty. He reframes his famous wager as a rational +EV bet: a finite cost weighed against an infinite reward. And that same logic of weighing outcomes ultimately traces back to what Pascal calls the great paradox of creation, in which the human imagination is the single root of both our grandeur and our misery.",
+  "keyIdeas": [
+    "Pascal's father deliberately withheld math instruction to build his desire for it, and by age 11 Pascal had independently worked out Euclid's geometric axioms on his own.",
+    "Pascal believed scientific truth could never be considered final, because the very methods used to measure and prove things kept being discovered to be flawed later on -- so intellectual humility mattered more than false certainty.",
+    "Trying to solve a friend's interrupted gambling game, Pascal helped lay the foundations of probability theory and expected value (EV), showing that a bet is worth taking if the weighted sum of its outcomes is positive.",
+    "Pascal's wager is reframed through expected value: believing in God is a +EV bet because it weighs a finite cost against a potentially infinite reward, the same logic professional gamblers use to make +EV decisions.",
+    "Pascal calls man 'the great paradox of creation' because we live in simultaneous grandeur and misery, and both trace back to imagination: it lets us build and improve our lives, but also lets us imagine an escape from death and suffering we can never reach."
+  ],
+  "terms": [
+    { "term": "Expected value (EV)", "def": "The sum of possible outcomes weighted by their probability and payoff, used to judge whether a bet or decision is worth taking." },
+    { "term": "+EV (positive expected value)", "def": "A wager or decision whose weighted-average outcome is favorable over the long run, even though any single instance of it can lose." },
+    { "term": "Pascal's wager", "def": "Pascal's argument that believing in God is the rational bet, since a finite cost is outweighed by a potentially infinite reward." },
+    { "term": "Probability theory", "def": "The mathematical framework Pascal helped found, originally to solve a problem about fairly dividing stakes in an interrupted gambling game." },
+    { "term": "Scholasticism", "def": "The dominant pre-Enlightenment educational tradition of treating Aristotle as unchallenged authority, which Pascal's father deliberately avoided in his son's education." }
+  ],
+  "anchors": [
+    "His father actually forbid him to study math until the time was right.",
+    "the mechanisms we were using to measure it or collect whatever it is that we’re trying to prove were flawed from the start",
+    "how should these two people divide up the stakes evenly and fairly?",
+    "we’re at -5; plus 9 for the value if we rolled a 5. And what do you get? 4, a positive number.",
+    "try to make a +EV play in life and hope for the best outcome",
+    "you can make great decisions in your life and just get tremendously unlucky over and over and over",
+    "What the professional gambler is essentially doing is thinking about each possible number that could pop up on the die.",
+    "we constantly live in a state of both the highest grandeur and the deepest misery, simultaneously",
+    "our ability to imagine also allows us to imagine a life devoid of death, pain, and suffering",
+    "these things could be as flimsy as that same judgment of the guy dressed in rags. Those two things could be based on the same amount of truth because they both come from the imagination."
+  ]
+}

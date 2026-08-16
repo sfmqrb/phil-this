@@ -1,0 +1,30 @@
+{
+  "id": 49,
+  "argument": "Comparing Nogales, Arizona and Nogales, Mexico -- identical geography split by a fence -- the episode traces the pre-Enlightenment belief system called mercantilism, which held that wealth equals gold reserves, and shows how that faulty premise shaped policy, possibly for cynical, self-serving reasons involving industry and government. Adam Smith's rebuttal of mercantilism through free trade, along with government-enforced law and order, explains why some nations end up prosperous and others don't.",
+  "keyIdeas": [
+    "Two towns with identical geography but a fence between them show that the wealth gap between Nogales, Arizona and Nogales, Mexico must come from something other than geography or natural resources.",
+    "Building conclusions on an unverified premise -- a 'skyscraper built on a faulty premise' -- is dangerous because the whole structure collapses if that first belief turns out to be false, as the vitamin C health analogy illustrates.",
+    "Pre-Enlightenment mercantilism held that a nation's wealth was measured by how much gold and precious metal it had in reserve, which led governments to restrict imports and encourage exports.",
+    "The episode's 'tinfoil hat' theory suggests mercantilist policy may really have been a cynical bargain: industry funded government wars and expansion in exchange for import restrictions that shielded them from competition.",
+    "Adam Smith rebutted mercantilism by showing that imports free up domestic resources for more efficient uses, benefiting both trading nations, and by exposing the toxic relationship between government and industry leaders as possibly his most revolutionary criticism."
+  ],
+  "terms": [
+    { "term": "Mercantilism", "def": "The pre-Enlightenment economic doctrine that a nation's wealth is measured by its gold and precious-metal reserves." },
+    { "term": "Free trade", "def": "Adam Smith's principle that buying goods from whoever produces them most efficiently benefits both trading nations." },
+    { "term": "Economies of scale", "def": "The idea that production becomes more efficient per unit as fixed costs are spread across larger output." },
+    { "term": "Import restriction / tariff", "def": "Mercantilist policy tools used to protect domestic industry from foreign competition." },
+    { "term": "Rule of law", "def": "Government-enforced order and property protection, which the episode argues gives citizens the incentive to innovate and work harder." }
+  ],
+  "anchors": [
+    "Now, physically speaking, this is the exact same town. I mean, as far as physical barriers are concerned, it’s only separated by about 50 feet and a flimsy fence.",
+    "you have an entire skyscraper built on top of that premise. But the problem with that is that if that premise ends up not being true, the entire building comes crumbling down.",
+    "Eventually, this policy of vitamin C at all costs is going to start making you feel sick, really sick",
+    "a country was wealthy in relation to how much gold it had in its reserves",
+    "What these people say really happened is that the captains of industry back then in these respective countries were in cahoots with the leaders of government and that they stood to benefit greatly from the restriction of imports",
+    "how about in exchange for me paying into this system that funds your wars and expansion plans, you guys in the government enact policies that restrict imports so that I don’t have to compete with other countries",
+    "It’s not hard to imagine how this whole situation may not have been set up in the best interests of everyone, but maybe it heavily favored a small collection of people at the top of the industry",
+    "it actually benefits us greatly to buy something from another country if they can produce it more efficiently than we can",
+    "this toxic relationship that exists between government and the chiefs of industry in a given country",
+    "they answer that question with a strong sense of law and order"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 20,
+  "argument": "The episode presents two very different medieval approaches to God: Anselm's ontological argument, which tries to prove God's existence purely from the definition of God as 'that than which nothing greater can be thought,' and the objections it faced from Kant and Gaunilo; and Maimonides' negative theology, which holds that God cannot be positively described in human language at all, since anthropomorphic scripture was written for a people not ready for an abstract, non-human God, and any positive quality wrongly categorizes God the same way it categorizes ordinary things.",
+  "keyIdeas": [
+    "Atheists who dismiss God by mocking a childhood, popular conception of God are only refuting one narrow definition, ignoring the many other philosophical concepts of God that thinkers have developed.",
+    "Anselm distinguishes things that exist only in human understanding from things that exist in reality, then argues that a being 'than which nothing greater can be thought' must exist in reality too, since existing in reality is greater than existing in thought alone.",
+    "Kant objected that treating existence-in-reality as automatically greater than existence-in-thought is just a human bias, and that existence is not a quality like other attributes -- his invented 'washington' fruit shows that defining something as existing doesn't make it exist.",
+    "Gaunilo's 'perfect island' used Anselm's same reasoning to 'prove' the existence of a perfect island, suggesting something is wrong with the argument's form; the counter-response is that qualities like the amount of sand or number of trees don't admit of a true maximum the way goodness and justice do.",
+    "Maimonides argued Moses used human, physical language for God because his audience wasn't ready for an abstract God, and that God cannot have any qualities at all -- since qualities imply parts, and parts raise the question of what brought them together -- so it is more accurate to describe God only negatively, e.g. 'not merciless' rather than 'benevolent.'"
+  ],
+  "terms": [
+    { "term": "Ontological argument", "def": "Anselm's proof that God, defined as the greatest conceivable being, must exist in reality and not merely in thought." },
+    { "term": "Scholasticism", "def": "The medieval method of acquiring knowledge through dialectical reasoning, of which Anselm is considered the father." },
+    { "term": "The 'washington' fruit", "def": "Kant's invented fruit whose definition includes 'and it exists,' used to show that defining existence into a thing doesn't make it real." },
+    { "term": "Gaunilo's perfect island", "def": "A parody of Anselm's argument applying the same logic to 'prove' a perfect island exists, meant to expose a flaw in its form." },
+    { "term": "Negative theology", "def": "Maimonides' view that God can only be described by what he is not, since positive qualities wrongly categorize God's absolute oneness." }
+  ],
+  "anchors": [
+    "they were proving God didn’t exist, or at least making fun of the idea of a God existing, based on a very limited view of what God is",
+    "Let’s say you have an idea for an invention, and it exists only in your mind because you haven’t actually created it yet",
+    "if it exists only in thought it could also be thought of as existing in reality as well, which is greater",
+    "That sounds a lot like a bias inherent in a human that values existing over not existing",
+    "This sort of tacking existence on after the fact is what Kant said Anselm did in his ontological argument",
+    "you can use the exact same argument to prove that lots of other things exist that don’t actually exist",
+    "there can be a perfect goodness and justice, and these are the qualities Anselm was proving the existence of with his argument",
+    "the people of his time period weren’t familiar with the idea of a monotheistic, personal God",
+    "If multiple parts exist in any sense, the question “What brought those two parts together?” becomes valid",
+    "To put God’s benevolence on the same level as mine for helping some ducks across the road is completely ridiculous to Maimonides"
+  ]
+}

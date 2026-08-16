@@ -1,0 +1,31 @@
+{
+  "id": 86,
+  "argument": "Sartre argues that the meaning we see in everyday things - words, chairs, dinner rituals, even our own identities - is not built into those things by some cosmic order, but is added by human beings, a condition he calls the absurdity of the world. Because no God has preordained an essence for people the way Plato and Aristotle thought essences existed for objects, existence precedes essence: we exist first, without a fixed nature, and only afterward determine through our choices what we become. This makes us radically free and fully responsible - 'condemned to be free' - and the central failure Sartre diagnoses is bad faith: the convenient, self-serving lie people tell themselves (like the waiter who insists he has no other options) to avoid facing how much choice they actually have.",
+  "keyIdeas": [
+    "Sartre's 'absurdity of the world' names the strangeness that appears when familiar things - a repeated word, a houseplant, an ordinary dinner - are stripped of the meaning we habitually project onto them, revealing that meaning isn't inherent to the things themselves.",
+    "Building on Husserl's phenomenology and Hume's critique of causation (the pool-ball example), Sartre holds that even basic structures like cause and effect are meanings humans impose on raw experience, not features discovered in the world itself.",
+    "Against the essentialist view (Plato, Aristotle) that objects and people have a fixed, predetermined nature, Sartre's 'existence precedes essence' means a person exists first and only later determines, through their choices, what they will be.",
+    "'Man is condemned to be free': we never chose to exist, yet once we exist we are fully responsible for everything we choose within that freedom - a condition Kierkegaard describes as producing dread, which people try to escape by being 'lost in the infinite' (endless deliberation) or 'lost in the finite' (simply copying others).",
+    "Bad faith is accepting a belief not because it's the most convincing one, but because it's convenient and lets a person avoid an uncomfortable truth about their own freedom - illustrated by the waiter who insists he 'has always been a waiter' to avoid admitting he is choosing not to consider other options."
+  ],
+  "terms": [
+    { "term": "absurdity of the world", "def": "Sartre's term for the strangeness revealed when the meaning humans habitually attach to ordinary things is stripped away, showing that meaning is added, not inherent." },
+    { "term": "phenomenology", "def": "Husserl's project of studying raw experience by trying to strip away all humanly imposed meanings and categories, so as to study phenomena as they actually are." },
+    { "term": "essence / essentialism", "def": "The Platonic and Aristotelian idea that objects and people have a fixed, defining nature (essence) that exists prior to and independent of them." },
+    { "term": "existence precedes essence", "def": "Sartre's core existentialist claim: there is no fixed nature placed in a person before birth; a person exists first and only afterward determines, through choices, what they will be." },
+    { "term": "condemned to be free", "def": "Sartre's phrase for the fact that we never chose to exist, yet once we do exist we are fully responsible for everything we choose." },
+    { "term": "bad faith", "def": "Accepting a belief not because it is the most convincing one, but because it is convenient and lets a person avoid an uncomfortable truth, especially about their own freedom and choices." }
+  ],
+  "anchors": [
+    "these objects like chairs or the word “cookie” for your entire life, there’s no essence preordained into these things by a higher power",
+    "waiting for this rock that you live on that’s hurtling through the vacuum of space to get to a particular spot",
+    "There’s no necessary connection between pool ball A’s movement and pool ball B’s movement.",
+    "This veneer had melted, leaving soft, monstrous masses, all in disorder",
+    "essential property or the essence of that toothbrush, a quality that’s necessary to make it what it is",
+    "what if we’re born without an essence, and once we’re born it’s our job to determine what our essence will be",
+    "you didn’t bring yourself into existence. You didn’t have a choice. Yet here you are, born into a world with so much freedom to choose while simultaneously held responsible for everything that you choose to do",
+    "Both of these to Kierkegaard are attempts to avoid the dizziness of being truly free, a state of dread as Kierkegaard calls it.",
+    "Bad faith is when we accept something as true that really isn’t all that convincing to us, not because we think it’s the truest thing in the world but because it’s convenient and easy for us to believe in it.",
+    "he’s cutting the legs out from underneath his ability to choose. He’s putting up this barrier to try to convince himself that he actually doesn’t have a choice in the matter"
+  ]
+}

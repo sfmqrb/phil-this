@@ -1,0 +1,30 @@
+{
+  "id": 60,
+  "argument": "The episode traces the concept of the sublime, a strange and ineffable feeling distinct from beauty. Starting with Longinus's claim that we marvel at the ocean but not a stream, it moves through 18th-century travelers crossing the Alps who describe a paradoxical horror-mingled-with-delight, and arrives at Edmund Burke, who argues the sublime is a separate aesthetic category triggered specifically by feeling just enough danger from something powerful beyond calculation, without being overwhelmed by it. Burke insists the sublime is not simply beauty taken to an extreme but a mutually exclusive, more active and \"real\" kind of experience, which is why the later Romantic movement embraced it as a rebuttal to Enlightenment rationalism.",
+  "keyIdeas": [
+    "The sublime typically occurs in the wilderness not because of a mystical bond with nature, but because nature is usually the only available source of greatness beyond human calculation.",
+    "Longinus's contrast between a small stream and the ocean shows that we don't marvel at safe, small things; we marvel at things whose scale exceeds our ability to measure them.",
+    "Travelers crossing the Alps described a paradoxical feeling of horror mingled with delight, suggesting a way of aesthetically judging the world that has nothing to do with ordinary beauty.",
+    "Burke argues the sublime requires a precise 'Goldilocks zone': enough perceived danger to threaten self-preservation, but not so much that the experience becomes purely terrible rather than pleasurable.",
+    "For Burke, the sublime and the beautiful are mutually exclusive categories, not degrees of the same thing: beauty brings the mind to passive 'inaction' while the sublime makes the mind actively 'swell.'"
+  ],
+  "terms": [
+    { "term": "Sublime", "def": "A profound, ineffable aesthetic experience of pleasurable distress produced by contact with something powerful beyond calculation, distinct from ordinary beauty." },
+    { "term": "Ineffable", "def": "So great and beyond comparison that human language is not capable of fully describing it." },
+    { "term": "Greatness beyond calculation", "def": "A scale or power so far beyond ordinary human measurement (like the ocean) that it becomes a source of awe rather than mere appreciation." },
+    { "term": "Self-preservation instinct", "def": "The deep-seated drive to survive that, according to Burke, must be threatened just enough (but not overwhelmed) to produce the sublime's pleasurable distress." },
+    { "term": "Romanticism", "def": "A cultural and philosophical movement that embraced the sublime as a non-intellectual, natural counterweight to the Enlightenment's emphasis on reason." }
+  ],
+  "anchors": [
+    "because nature is usually the only place we can get that sort of greatness",
+    "We don’t marvel at things like lakes and streams. We marvel at the ocean.",
+    "How can you be mingled with horror but still somehow be unquestionably deriving pleasure from the entire experience?",
+    "Why is the inverse of that necessarily true? Why does ugliness necessarily have to be painful?",
+    "there’s this not-too-hot, not-too-cold sort of Goldilocks’ zone of an attack on your instinct of self-preservation",
+    "he says the mind swells when it finds that—obviously a much more active thing",
+    "these waters must be troubled before they can exert their virtues",
+    "some strange pleasure that they get by recounting a horrible situation where their lives were in danger",
+    "these people don’t seem like the best neutral third parties to be conducting these so-called unbiased experiments about the sublime",
+    "this idea of the sublime being a more real, non-intellectual, more natural version of aesthetically judging the world"
+  ]
+}

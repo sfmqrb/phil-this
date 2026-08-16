@@ -1,0 +1,30 @@
+{
+  "id": 56,
+  "argument": "Hume's skepticism left philosophy in ruins: if custom is merely a 'consolation prize' after concluding we can know nothing for certain except our own existence, metaphysics has nowhere to stand. Kant, born into a historical 'Goldilocks zone' late enough to see the full rationalist-empiricist debate play out, set out to do for metaphysics what Copernicus did for astronomy: a revolution in perspective. Building on Descartes's cogito and Hume's own account of causation as a mental imposition, Kant argues that if we can be certain we exist, we must exist in time in relation to a changing external world, giving us equal certainty that space and time exist outside us, rescuing metaphysics from the ashes of solipsism.",
+  "keyIdeas": [
+    "Custom being 'the great guide of human life' is only a consolation prize, what's left over after Hume's skepticism concluded we can know nothing for certain except that we exist, not a real solution to that problem.",
+    "Kant's birth in 1724 placed him in a 'historical Goldilocks zone': late enough to see the rationalist-empiricist debate play out fully, but not so early he had to pioneer like Descartes, nor immersed in revolution like Rousseau.",
+    "Kant saw his project as analogous to Copernicus: just as science underwent a revolution when humanity stopped seeing itself as the center of the universe, metaphysics needed a similar revolution in perspective.",
+    "Ancient science assumed the cosmos already had order to be passively discovered; post-Scientific-Revolution science had to actively construct order, since no first principles guaranteed it, an idea Hume's account of causation (the mind imposing connections onto chaotic phenomena) reinforces.",
+    "Kant extends Descartes's cogito: since existing requires existing in a moment of time relative to changes in space, and we're certain we exist, we can be equally certain an external world with space and time exists, rescuing metaphysics from the 'smoldering ashes' that only exist if we accept the premise of solipsism."
+  ],
+  "terms": [
+    { "term": "solipsism", "def": "The premise that the only thing we can know for certain is that we ourselves exist; the qualification that makes Hume's supposed destruction of metaphysics only conditional." },
+    { "term": "cogito, ergo sum", "def": "Descartes's 'I think, therefore I am': even a thought deceptively planted by an evil demon is still a thought, proving the thinker exists." },
+    { "term": "rationalism vs. empiricism", "def": "The long-running philosophical debate the episode says Kant was fortunate to be born late enough to see play out fully, between the 'continental rationalists' and the 'British empiricists.'" },
+    { "term": "Copernican revolution (in metaphysics)", "def": "Kant's ambition to revolutionize how we understand knowledge itself, paralleling how Copernicus revolutionized humanity's understanding of its place in the universe." },
+    { "term": "causation (as a mental imposition)", "def": "Hume's idea, used by Kant, that connections like cause and effect are impositions the human mind makes on the world rather than something given directly by the world itself." }
+  ],
+  "anchors": [
+    "after we’ve applied this rigorous skepticism to the world and we’ve arrived at the idea that we can’t know anything for certain except for the fact that we exist",
+    "he’s not born too early. He’s not born so early in history to have to be a pioneer, like a Descartes or a Francis Bacon.",
+    "Kant saw Copernicus as nothing short of a complete revolution in the way that we humans perceive the world around us",
+    "We are passengers in this world. Science was a passive process during antiquity.",
+    "these connections are imposed by us onto the universe, not given to us by the universe",
+    "Look at you! What’s the point of philosophy? Is philosophy a joke?",
+    "even a thought that was deceptively planted into my head by an evil demon is still a thought",
+    "Kant argues that for something to exist at all it needs to exist in a particular moment in time in relation to things changing in space.",
+    "The dog runs across the yard. The car backs out of the driveway. The earth rotates around the sun.",
+    "a pile of ashes that really only exist if we accept the premise of solipsism"
+  ]
+}

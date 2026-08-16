@@ -1,0 +1,30 @@
+{
+  "id": 148,
+  "argument": "Drawing on Walter Lippmann and the work of Noam Chomsky and Edward Herman, this episode argues that news media is best understood not as an independent 'fourth estate' but as a medium -- a filter standing between us and reality -- raising the question of who controls that filter and why. Lippmann's model of society (elites, a 'specialized class' of officials constrained by funders, and a 'bewildered herd') explains why elites benefit from keeping the public distracted rather than informed, a goal Chomsky frames through the toddler-and-parent analogy as responsible protection rather than malicious control. As direct suppression of dissent became less viable with the spread of democratic freedoms, propaganda techniques like the Mohawk Valley formula and vacuous political slogans took its place, reframing debates rather than engaging them. Crucially, this filtering isn't a top-down conspiracy: journalists internalize the priorities that let them keep their jobs, and structural filters -- ownership, advertising, elite sourcing, flack, and fear of a common enemy -- shape what counts as news without anyone needing to lie.",
+  "keyIdeas": [
+    "Reframing 'media' through the dictionary sense of 'medium' -- rather than the 'fourth estate' -- casts it as a filter standing between us and reality, raising the question of who controls that filter and why.",
+    "In Lippmann's model, elected officials in the 'specialized class' are constrained because their re-election and ability to accomplish anything depends on playing by rules set by the people who hold real power, like private funders.",
+    "Chomsky's toddler-and-parent example frames limiting and distracting the public as responsible parental protection rather than malicious control, explaining how people in power can hold this view without seeming evil to themselves.",
+    "As the spread of democratic freedoms (assembly, expression) made direct suppression of dissent less viable, propaganda tactics like the Mohawk Valley formula (reframing a labor dispute as a question of loyalty rather than policy) and vacuous slogans ('Keep America Great,' 'Hope and Change') took its place, shrinking legitimate debate without engaging the real issues.",
+    "Media control doesn't require a top-down conspiracy: as Chomsky's exchange with a reporter shows, filtering happens through career selection and internalized priorities, and five structural filters -- ownership, advertising, elite sourcing, flack, and fear of a common enemy -- shape what gets reported, even when journalists are ethical and sincere."
+  ],
+  "terms": [
+    { "term": "Manufacturing consent", "def": "Chomsky and Herman's term for how media systematically shapes public opinion to align with elite interests without overt coercion." },
+    { "term": "Bewildered herd", "def": "Lippmann's term for the mass of ordinary citizens, seen in his model as needing to be limited and distracted rather than fully informed." },
+    { "term": "Mohawk Valley formula", "def": "A media strategy for busting a strike by reframing the dispute around an unrelated question (like patriotism) rather than the actual policy at issue." },
+    { "term": "Propaganda model / five filters", "def": "Chomsky and Herman's account of the five structural filters -- ownership, advertising, sourcing/elite influence, flack, and fear -- that shape what news gets reported." },
+    { "term": "Flack", "def": "Organized pressure (from powerful sources) against journalists who step outside acceptable reporting parameters, which can cut off their access to newsworthy information." }
+  ],
+  "anchors": [
+    "Media in this way serves as a filter: the intervening substance through which impressions are conveyed to the senses.",
+    "a politician with all the qualifications in the world, with the best intentions in the world, cannot survive for very long or even win an election in the first place if they’re not willing to play by the rules of the people that make the rules",
+    "Not only would that be completely dumb, but it would be irresponsible. And “responsible” is going to become an important word to these people in power that have this view of society.",
+    "But throughout the 20th century that had become less effective, largely in part due to democracy: freedom to assemble, freedom of expression. These things are spreading at a rate that they never had before.",
+    "the Mohawk Valley formula is a formula designed to align the motives of the strike with some message, a message that really has nothing to do with the strike or the policy in question, but this message diminishes the support that the workers are going to get from the public",
+    "the statement is utterly meaningless. The statement is so vacuous that it’s really not saying anything of substance",
+    "if you believed something different you wouldn’t be sitting where you’re sitting",
+    "let’s say you come across a story that strongly goes against the interests of one of your competitor stations. You might be much more inclined to run that story than you ever would have otherwise.",
+    "But, equally, they have advertisers as a customer. And what do they sell to these advertisers? You; audiences.",
+    "You can start to see that enemy out there, that you fear, that’s destroying the world, really are just fellow human beings that have lived a different life than you with their own fears, with their own desires to save the world their kids will one day have to live in"
+  ]
+}

@@ -64,6 +64,19 @@ db.exec(
   ")"
 );
 
+db.exec(
+  "CREATE TABLE IF NOT EXISTS review_deck (" +
+  "  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE," +
+  "  episode_id INTEGER NOT NULL," +
+  "  q_index INTEGER NOT NULL," +
+  "  stage INTEGER NOT NULL," +
+  "  due_at TEXT NOT NULL," +
+  "  lapses INTEGER NOT NULL," +
+  "  added_at TEXT NOT NULL," +
+  "  PRIMARY KEY (user_id, episode_id, q_index)" +
+  ")"
+);
+
 // ---------- password hashing (scrypt, no dependency needed) ----------
 
 function hashPassword(password) {
@@ -197,7 +210,17 @@ function getStoreForUser(userId) {
     progress[String(row.episode_id)] = { currentIndex: row.current_index, score: row.score, missed: missed };
   });
 
-  return { scores: scores, progress: progress };
+  var reviewRows = db.prepare(
+    "SELECT episode_id, q_index, stage, due_at, lapses, added_at FROM review_deck WHERE user_id = ?"
+  ).all(userId);
+  var review = {};
+  reviewRows.forEach(function (row) {
+    review[row.episode_id + ":" + row.q_index] = {
+      stage: row.stage, due: row.due_at, lapses: row.lapses, added: row.added_at
+    };
+  });
+
+  return { scores: scores, progress: progress, review: review };
 }
 
 function replaceScoresForUser(userId, scores) {
@@ -212,6 +235,31 @@ function replaceScoresForUser(userId, scores) {
       (record && record.attempts || []).forEach(function (a) {
         insert.run(userId, Number(episodeId), Number(a.score) || 0, Number(a.total) || 0, String(a.date || new Date().toISOString()));
       });
+    });
+    db.exec("COMMIT");
+  } catch (e) {
+    db.exec("ROLLBACK");
+    throw e;
+  }
+}
+
+// ---------- spaced-repetition review deck ----------
+
+function replaceReviewForUser(userId, deck) {
+  db.exec("BEGIN");
+  try {
+    db.prepare("DELETE FROM review_deck WHERE user_id = ?").run(userId);
+    var insert = db.prepare(
+      "INSERT INTO review_deck (user_id, episode_id, q_index, stage, due_at, lapses, added_at) " +
+      "VALUES (?, ?, ?, ?, ?, ?, ?)"
+    );
+    Object.keys(deck || {}).forEach(function (key) {
+      var entry = deck[key];
+      if (!entry) return;
+      var parts = String(key).split(":");
+      var now = new Date().toISOString();
+      insert.run(userId, Number(parts[0]) || 0, Number(parts[1]) || 0, Number(entry.stage) || 0,
+        String(entry.due || now), Number(entry.lapses) || 0, String(entry.added || now));
     });
     db.exec("COMMIT");
   } catch (e) {
@@ -263,6 +311,7 @@ module.exports = {
   deleteSession: deleteSession,
   getStoreForUser: getStoreForUser,
   replaceScoresForUser: replaceScoresForUser,
+  replaceReviewForUser: replaceReviewForUser,
   saveProgress: saveProgress,
   clearProgress: clearProgress
 };

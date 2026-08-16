@@ -1,0 +1,30 @@
+{
+  "id": 194,
+  "argument": "Drawing on Peter Gelderloos's 'Anarchy Works,' the episode argues that police exist not because society would collapse into chaos without them, but because they are the state's tactical arm for enforcing hierarchy and maintaining a monopoly on violence and conflict resolution. Historical episodes like the 1919 Seattle General Strike and anarchist militias in Ukraine and Spain are offered as evidence that communities can organize security and conflict resolution horizontally, without centralized police or armies. A skeptic concedes that anarchism has a theoretical answer to every security question but insists the ideas remain infeasible until people's values change; the anarchist replies that major ethical shifts, like the end of slavery, have always required people to act before a change felt imaginable to most.",
+  "keyIdeas": [
+    "The anarchist critique of policing parallels Bookchin's critique of environmental symptom-treatment: naming problems like poverty, addiction, or gun violence without asking why a hierarchical society reliably produces them is like picking up trash instead of addressing the source of pollution.",
+    "Abuse of many kinds, from child abuse to abuse based on ethnicity or orientation, shares a common root: the abuser sees the abused as inferior to themselves, which anarchists trace back to society's deep embedding of hierarchy.",
+    "To Gelderloos, laws are not neutral safeguards but the codification of what the state has taken and imposed by force, so police enforcement often serves order for its own sake rather than public safety.",
+    "During the 1919 Seattle General Strike, roughly 70,000 workers kept essential services and food distribution running themselves and used volunteer, non-violent conflict resolution, challenging the idea that a city collapses without centralized authority.",
+    "Anarchist militias differ from traditional military units by being horizontally organized, voluntary, and leaderless except for temporary, elected leadership; historical examples like Ukraine's post-WWI militias and the American Revolution show smaller, less hierarchical forces succeeding against larger conventional powers through guerrilla tactics."
+  ],
+  "terms": [
+    { "term": "Anarchism", "def": "The position that society's problems trace back to forced hierarchical authority, and that removing such hierarchy is necessary to fundamentally change how people relate to each other." },
+    { "term": "General Strike", "def": "A strike in which workers from many different industries walk out together, as in Seattle 1919, large enough to shut down normal city operations." },
+    { "term": "Anarchist militia", "def": "A horizontally organized, voluntary defense force whose members can leave at any time and whose leadership is appointed temporarily by vote rather than fixed chain of command." },
+    { "term": "Mutual aid", "def": "Self-organized, reciprocal support among community members, cited by Gelderloos as a recurring historical pattern even in non-anarchist-identified societies." },
+    { "term": "Monopoly on violence", "def": "The state's exclusive claim to legitimate force and conflict resolution, which anarchists argue the police exist to protect and enforce." }
+  ],
+  "anchors": [
+    "you can pick up some trash, you can BAN plastic packaging but it does nothing to solve the fundamental social issues",
+    "these people are seen by the abuser as LESS than them",
+    "enforcement for ENFORCEMENT’S sake",
+    "The state is a mafia that has won control over society, and the law is the codification of everything they’ve stolen from us",
+    "They maintained public services, they started public cafeterias to get food out to anyone who needed it",
+    "caused by socio-economic factors DRIVEN by the SPECIFIC STRUCTURE of the hierarchical system that we’re living in",
+    "Militias… are horizontally organized by VOLUNTARY MEMBERS that decide to join and stay, they often can LEAVE at any time",
+    "the Ukrainians after the end of WW1 and their anarchist militias being HIGHLY successful against the white army and the soviets despite being HEAVILY outnumbered and outgunned",
+    "It’s just not FEASIBLE right now",
+    "It was UNETHICAL to run an economy based on slave labor"
+  ]
+}

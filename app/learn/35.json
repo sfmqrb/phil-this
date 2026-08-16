@@ -1,0 +1,30 @@
+{
+  "id": 35,
+  "argument": "Responding directly to Robert Filmer's biblical defense of monarchy, Locke argues we are not born as property of a father-king: God's grant of dominion in Genesis was addressed to all of humankind, not to Adam individually, and even if it had been, reason rather than scripture is the right tool for deciding what political system a society should have. From this, Locke reasons that people are born free (like reason itself, an innate capacity not yet exercised) and self-owned, entitled by natural law to life, liberty, and the fruits of their labor — including property, since providing for oneself unavoidably means transforming the earth's raw resources. Natural law, however, is worthless without enforcement, which is why government exists at all; and because government's whole purpose is to protect these pre-existing natural rights, a government that fails to do so can be justly changed or overthrown by its citizens.",
+  "keyIdeas": [
+    "Locke attacks Filmer's use of Genesis on two fronts: God's grant of dominion was addressed to the whole human species, not to Adam as an individual monarch, and even a correct biblical reading wouldn't settle politics — reason, not scripture, is the right tool for choosing a system of government.",
+    "Infants prove nothing against being 'born free': freedom, like reason, is an innate faculty present at birth that simply can't yet be exercised, so dependence on parents doesn't disprove natural freedom.",
+    "Natural law, even if true, accomplishes nothing without enforcement — like a law on the books with no police — which is why government is necessary at all.",
+    "Locke breaks from Hobbes: where Hobbes holds people have no rights in the state of nature and surrender freedom to the sovereign for order, Locke holds that natural rights (life, liberty, property) already exist prior to government, and government exists only to protect them.",
+    "Because everything we own was ultimately harvested from the earth, exercising the natural right to liberty by providing for oneself unavoidably requires using natural resources — raising the question of who controls them; Locke rejects both centralized equal-distribution overseers and an unregulated free-for-all as inconsistent with real human nature, and concludes citizens may rightfully change or overthrow a government that fails to protect their natural rights."
+  ],
+  "terms": [
+    { "term": "patriarchalism", "def": "Robert Filmer's position that monarchs rule by the same right as fathers over children, tracing political authority back to Adam's God-given dominion." },
+    { "term": "natural law", "def": "Universal moral truths about proper conduct that Locke believes reason can derive from human nature, independent of scripture — but which require enforcement to have any practical effect." },
+    { "term": "self-ownership", "def": "The idea that each person owns their own body and mind from birth, the foundation Locke builds his account of natural rights on." },
+    { "term": "state of nature", "def": "The condition of humans prior to government; for Locke, natural rights (life, liberty, property) already exist in this state, unlike for Hobbes, who denies any unalienable rights exist there." },
+    { "term": "life, liberty, and property", "def": "Locke's three natural rights, which government exists to protect; property specifically refers to the fruits of one's labor, not an entitlement to any particular possession." }
+  ],
+  "anchors": [
+    "God was talking to all of mankind. God pronounced the human species as stewards over the land, not a single guy named Adam",
+    "We shouldn’t look to things like the Bible to determine what system of government we have.",
+    "we are born free, as we are born rational; not that we have actually the exercise of either",
+    "that alone should show you that eating those animals is a behavior that God endorses",
+    "Just like a law can be on the books in today’s world and that law is essentially worthless if no police are actually enforcing it",
+    "Many of the rights that we did have in a state of nature were handed over to the Leviathan in the interest of self-preservation",
+    "was at one point in its history a natural resource harvested from the earth in some way",
+    "all men are created equal, but not all natural resources are created equal",
+    "Hitler didn’t invade Czechoslovakia because of scarcity",
+    "the citizens underneath it have every right to change it or even overthrow it completely"
+  ]
+}

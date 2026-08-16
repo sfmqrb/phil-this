@@ -1,0 +1,30 @@
+{
+  "id": 47,
+  "argument": "Having settled on government's structure, the episode asks what government's job actually is -- Rousseau says to serve the 'general will' -- and shows how difficult that concept is to pin down and act on, since personal, group, and abstract notions of will can conflict with each other. Even once a society agrees on a shared goal, enormous disagreement remains over the path to get there and how exactly to execute it, and real-world elections often select leaders based on factors with little connection to who could best serve that goal.",
+  "keyIdeas": [
+    "The three philosophers gave three different answers to what government's job is: Hobbes said maintain order, Locke said protect natural rights of life, liberty, and property, and Rousseau said serve the general will of the people.",
+    "Left unchecked, a person's personal will can lead them to expect things from government that serve only themselves and could actively harm others, rather than serving the common good.",
+    "Even a neutral-seeming law like private property protection can never be perfectly equal, since it inherently benefits people who already have more property.",
+    "Commentators split the general will into the 'democratic' version (what an assembly of citizens actually decides through debate) and the 'transcendental' version (an abstract sense of what's truly best for the common good, independent of any actual vote).",
+    "Agreeing on the general will is only step one -- governments still face enormous uncertainty over the path to achieve it and how to execute that path, as the road-trip and Iraq War examples illustrate, and real elections often select leaders on the basis of factors like ad spending or shared ethnicity rather than merit."
+  ],
+  "terms": [
+    { "term": "General will", "def": "Rousseau's term for what government ought to serve -- the common good, distinct from any individual's personal will." },
+    { "term": "Personal will", "def": "An individual's self-interested wants, which Rousseau warns can be mistaken for what government should provide." },
+    { "term": "Democratic general will", "def": "The general will understood as whatever citizens arrive at through assembly and debate." },
+    { "term": "Transcendental general will", "def": "The general will understood as an abstract 'best for the common good,' independent of what any actual assembly decides." },
+    { "term": "Single-issue voter", "def": "Someone who attaches their political identity to one cause, which the episode treats as a distortion of the general will." }
+  ],
+  "anchors": [
+    "nothing in the coffee table package tells you what the function of your coffee table should be",
+    "Thomas Hobbes said it was to maintain order. John Locke said it was to protect our natural rights of life, liberty, and property. And Rousseau said it was to serve the general will of the people.",
+    "We can all imagine how someone thinking in terms of only themselves could be led to expect things of their government that don’t necessarily correspond with the common good",
+    "that law can never be equal because it’s always going to unequally benefit people that have more property",
+    "exterior to what any one person actually wants from the government",
+    "there isn’t another government down the street that we can go to if we don’t like how this one’s doing things",
+    "defining the general will is only the first step in this concoction that we’re making",
+    "the decisions that we make today on behalf of the general will don’t just affect us today or tomorrow or even a year from now, but centuries down the line",
+    "We can totally see where these people are coming from. They’re compassionate people.",
+    "Your character doesn’t need to have any merit at all. As long as you can run one more ad than your opponent, that’s all it takes."
+  ]
+}

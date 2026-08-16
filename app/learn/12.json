@@ -1,0 +1,29 @@
+{
+  "id": 12,
+  "argument": "Stoic ethics centers on oikeiosis: the idea that every creature has a natural disposition, and humanity's unique disposition is rationality, so living well means acting in accordance with reason rather than base instinct. From this flows the stoics' most practical teaching -- the sharp distinction between what we control (our own thoughts and actions) and what we don't (everything external, called 'indifferents,' some preferred and some not) -- which underlies their techniques for managing expectations, anger, and grief, and their compatibilist acceptance of fate as something to be met with calm rather than resistance.",
+  "keyIdeas": [
+    "Oikeiosis is the natural disposition assigned to each kind of creature; for humans it includes self-preservation but crucially also rationality, so acting on impulse alone means acting like an animal rather than fulfilling one's distinctly human nature.",
+    "Only wisdom and virtue are intrinsically good; things like health, wealth, or reputation are 'indifferents' -- preferred or unpreferred, but not good or bad in themselves, since something like health only matters in relation to the character of the person who has it.",
+    "The stoics separated everything into what we control (our own thoughts and actions) and what we don't (all external events), and argued that basing happiness on things outside our control is a recipe for disaster.",
+    "The stoics were compatibilists: they believed determinism and free will coexist, illustrated by the image of a dog tied to a moving cart -- fate moves forward regardless of our wishes, so our only real choice is whether to resist it or accept it calmly.",
+    "Seneca argued anger is not an involuntary reflex like shivering at cold water, because it requires the mind to pass through several judgments (realization, indignation, condemnation, retribution), making it a voluntary process that reason can interrupt."
+  ],
+  "terms": [
+    { "term": "Oikeiosis", "def": "The natural disposition or orientation assigned to a creature by nature; for humans this centrally includes the capacity for reason." },
+    { "term": "Apatheia", "def": "A state free of suffering that comes from understanding which things are and aren't within one's control; not to be confused with modern 'apathy.'" },
+    { "term": "Indifferents (preferred/unpreferred)", "def": "External things like health, wealth, or reputation that are not intrinsically good or bad, only preferable or not, since only virtue and wisdom are truly good." },
+    { "term": "Compatibilism", "def": "The stoic view, stated directly in the episode ('the most important thing to take from their views on the matter is that they were compatibilists'), that determinism/fate and free will are compatible rather than mutually exclusive." }
+  ],
+  "anchors": [
+    "the Romans ended up really taking a liking to the stoic school.",
+    "The stoics would see this human as one that’s acting like it has the oikos of a skunk, or any animal for that matter.",
+    "The stoics would say they have absolutely zero control over anything that’s happening there.",
+    "the health of Adolph Hitler in 1939 wasn’t a very good thing, right?",
+    "If you approach the big game on Sunday pessimistically, if you truly expect that all those terrible things are going to happen, then when they do happen it was to be expected. And when they don’t happen, you’re pleasantly surprised.",
+    "There’s no fighting it. The question is, how much are we going to whine and complain and struggle along the way?",
+    "It certainly wouldn’t make much sense for a foot to sabotage or inhibit the ability for the hands to do their job.",
+    "None of these is in our power; no amount of reasoning can induce them not to happen. But anger is put to flight by precept.",
+    "Never say about anything ‘I have lost it’ but only ‘I have given it back.’",
+    "You shouldn’t do the right thing because it brings about happiness, although it probably will."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 34,
+  "argument": "Spinoza argued that only one true substance exists — a self-explanatory, infinite totality he calls God or Nature — and that everything else, including us, is just a mode or ripple within it. Because this totality causes everything, including our thoughts and desires, free will is an illusion: we are simply ignorant of the true causes behind our choices and emotions. Since we are all interdependent parts of one being, Spinoza concludes there is no rational basis for harming one another, since doing so damages the same substance we ourselves are part of.",
+  "keyIdeas": [
+    "Spinoza redefines substance as that whose existence is self-explanatory, and concludes there is only one such substance: the entire totality of existence, which he calls God or Nature.",
+    "Individual things (people, planets, an iPhone) are not substances because they can only be understood in relation to something else, unlike the infinite totality itself.",
+    "If God is infinite, nothing (like the dog Charlie) can exist outside of God, and every being naturally projects its own attributes onto God, as the talking triangle or circle would.",
+    "Free will is an illusion: our choices and emotions are caused by a chain of prior causes we are simply unaware of, as illustrated by an involuntary, repeated reaction to a billboard.",
+    "Emotions are 'active' when we are their adequate (full) cause and 'passive' when we are only a partial cause, and all emotion ultimately reduces to a striving to increase power — joy being its rise, sadness its fall."
+  ],
+  "terms": [
+    { "term": "Substance", "def": "For Spinoza, that whose existence explains itself, rather than (as for Descartes) merely that which does not depend on anything else." },
+    { "term": "Substance monism", "def": "Spinoza's view that there is only one true substance — the entire totality of existence — which he identifies as both God and Nature." },
+    { "term": "Active emotion", "def": "An emotion of which we are the adequate (full) cause, arising from a clear and distinct understanding of its cause." },
+    { "term": "Passive emotion", "def": "An emotion of which we are only a partial cause, arising from causes we do not fully understand." },
+    { "term": "Striving to increase power", "def": "Spinoza's account of the single tendency underlying all emotion; joy is felt as an increase in power, sadness as a decrease." }
+  ],
+  "anchors": [
+    "he says that substance is that in which its existence explains itself",
+    "they can’t be understood by themselves. They need to be understood in relation to some other concept out there",
+    "The fact that he exists and he is not God shows that at least in some small capacity God is limited and is, therefore, not infinite",
+    "Thus each would ascribe God its own attributes, would assume itself to be like God, and look on everything else as ill-shaped",
+    "the revelation of God can only be established by the wisdom of the doctrine, not by miracles",
+    "such a definition does not in the least explain the essence of a circle, but solely one of its properties",
+    "It felt like it was against my will. It felt like it was going to be my reaction before I even did it",
+    "I say that we are active when something takes place within us or out of us of which we are the adequate cause",
+    "all of these emotions that we think are driving us all the time can be distilled down to one thing—a tendency to increase power",
+    "it would be ludicrous for your left foot to declare war on your right foot or to try to hurt it in some way, because their existence depends on each other"
+  ]
+}

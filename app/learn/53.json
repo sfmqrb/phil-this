@@ -1,0 +1,30 @@
+{
+  "id": 53,
+  "argument": "Hume argues that legitimate knowledge falls into only two categories -- abstract/formal reasoning and empirical matters of fact -- and applies this radical empiricism to dismantle unearned assumptions about the soul and the self. Rather than denying a soul outright, he grants it provisionally and then asks why it must be immortal or personally 'ours,' and when he looks inward for a unified self he finds only a shifting 'bundle' of perceptions with no observed owner, undercutting Descartes's cogito. Since causation itself can't be proven with certainty, Hume concludes that all belief is ultimately a matter of custom and evidence rather than certainty, making him the logical endpoint of the rationalist-to-empiricist lineage running from Descartes through Locke and Berkeley.",
+  "keyIdeas": [
+    "Hume's Fork divides legitimate knowledge into 'relations of ideas' (abstract/formal reasoning like logic and math) and 'matters of fact' (empirical claims); anything else is 'sophistry and illusion.'",
+    "Hume's characteristic method is targeted skepticism: rather than flatly denying a concept like the soul exists, he provisionally grants it and then attacks the unearned attributes people attach to it afterward.",
+    "Hume argues by analogy that even an immortal soul shouldn't be assumed to concern us: the matter making up our bodies existed before birth and continues after death without 'concerning' us now, so why assume a soul would?",
+    "Introspecting, Hume finds no unified, persisting self -- only a 'bundle' of shifting thoughts and perceptions with no observed possessor, which challenges Descartes's inference from 'there is thinking' to 'there is a thinker.'",
+    "Since we can't logically prove causation, Hume proposes custom -- repeated, predictable association through observed experience -- as our best available basis for expecting regularities to continue, summed up in 'a wise man proportions his belief to the evidence.'"
+  ],
+  "terms": [
+    { "term": "Hume's Fork", "def": "Hume's division of legitimate knowledge into relations of ideas and matters of fact; anything outside these is illegitimate." },
+    { "term": "Bundle theory of self", "def": "Hume's view that the self is nothing more than a collection of fleeting perceptions with no unifying substance underneath." },
+    { "term": "Custom", "def": "Repeated observed association, which Hume treats as our practical (though not certain) basis for expecting cause-effect regularities." },
+    { "term": "Cogito, ergo sum", "def": "Descartes's 'I think, therefore I am,' which Hume challenges by denying introspection reveals a unified thinker." },
+    { "term": "Matters of fact", "def": "Hume's category of empirical claims grounded in observation, one half of Hume's Fork." }
+  ],
+  "anchors": [
+    "Commit it then to the flames: for it can contain nothing but sophistry and illusion.",
+    "Hume spends most of his time in his work attacking the qualities that he thinks people are tacking on lazily after the fact.",
+    "The soul therefore if immortal, existed before our birth; and if the former existence no ways concerned us, neither will the latter.",
+    "he just sees a bunch of thoughts and associations and ideas seemingly bundled together",
+    "Why is there necessarily some sort of continuity there, some self that possesses all of these things?",
+    "Is that chariot something more than just the collection of those ingredients?",
+    "All David Hume is doing here is just taking this line of thinking one step further.",
+    "Custom is the great guide of human life.",
+    "David Hume famously said a wise man always proportions his belief to the evidence.",
+    "he would have seen these two things as just two possibilities of the potentially millions of different systems we might use to arrive at understanding about the world around us"
+  ]
+}

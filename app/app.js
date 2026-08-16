@@ -1,6 +1,7 @@
 (function () {
   var STORAGE_KEY = "phil-this-quiz-scores-v1";
   var PROGRESS_KEY = "phil-this-quiz-progress-v1";
+  var REVIEW_KEY = "phil-this-quiz-review-v1";
   var LETTERS = ["A", "B", "C", "D"];
   var serverAvailable = false;
   var currentUser = null; // { id, email, name } | null — guests use local-only, unscoped keys
@@ -38,6 +39,24 @@
     writeScoresLocal(scores);
     pushStoreToServer();
     return record;
+  }
+
+  // ---------- spaced-repetition review deck ----------
+  // { "<epId>:<qIndex>": { stage, due, lapses, added } } — every question
+  // answered wrong lands here and comes back on a widening schedule.
+
+  function loadReview() { return readJson(scopedKey(REVIEW_KEY), {}); }
+  function writeReviewLocal(deck) { localStorage.setItem(scopedKey(REVIEW_KEY), JSON.stringify(deck)); }
+
+  // Grades one answer into the deck (from the quiz or a review session) and
+  // persists it locally + upstream.
+  function recordReviewAnswer(episodeId, qIndex, isCorrect) {
+    var deck = loadReview();
+    QuizLogic.applyReviewAnswer(deck, episodeId, qIndex, isCorrect, new Date().toISOString());
+    writeReviewLocal(deck);
+    pushReviewToServer();
+    refreshReviewBadge();
+    return deck;
   }
 
   // ---------- in-progress ("half-taken") quiz cache ----------
@@ -84,6 +103,16 @@
     }).catch(function () {});
   }
 
+  function pushReviewToServer() {
+    if (!currentUser || typeof fetch !== "function") return;
+    fetch("/api/review", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ review: loadReview() })
+    }).catch(function () {});
+  }
+
   function fetchMe() {
     if (typeof fetch !== "function") return Promise.resolve(null);
     return fetch("/api/auth/me", { credentials: "same-origin" })
@@ -99,6 +128,7 @@
       .then(function (data) {
         writeScoresLocal(data.scores || {});
         writeProgressLocal(data.progress || {});
+        writeReviewLocal(data.review || {});
       })
       .catch(function () {});
   }
@@ -259,21 +289,25 @@
     });
   }
 
-  // ---------- view tabs (episodes / transcripts) ----------
+  // ---------- view tabs (episodes / transcripts / review / credit) ----------
 
   var dashboardView = document.getElementById("dashboardView");
   var quizView = document.getElementById("quizView");
   var transcriptsView = document.getElementById("transcriptsView");
+  var reviewView = document.getElementById("reviewView");
   var creditView = document.getElementById("creditView");
   var tabEpisodesBtn = document.getElementById("tabEpisodesBtn");
   var tabTranscriptsBtn = document.getElementById("tabTranscriptsBtn");
+  var tabReviewBtn = document.getElementById("tabReviewBtn");
   var tabCreditBtn = document.getElementById("tabCreditBtn");
 
   function showEpisodesTab() {
     if (tabEpisodesBtn) tabEpisodesBtn.classList.add("active");
     if (tabTranscriptsBtn) tabTranscriptsBtn.classList.remove("active");
+    if (tabReviewBtn) tabReviewBtn.classList.remove("active");
     if (tabCreditBtn) tabCreditBtn.classList.remove("active");
     if (transcriptsView) transcriptsView.classList.remove("show");
+    if (reviewView) reviewView.classList.remove("show");
     if (creditView) creditView.classList.remove("show");
     if (dashboardView) dashboardView.classList.remove("hide");
   }
@@ -281,25 +315,159 @@
   function showTranscriptsTab() {
     if (tabTranscriptsBtn) tabTranscriptsBtn.classList.add("active");
     if (tabEpisodesBtn) tabEpisodesBtn.classList.remove("active");
+    if (tabReviewBtn) tabReviewBtn.classList.remove("active");
     if (tabCreditBtn) tabCreditBtn.classList.remove("active");
     if (dashboardView) dashboardView.classList.add("hide");
+    if (reviewView) reviewView.classList.remove("show");
     if (creditView) creditView.classList.remove("show");
     if (transcriptsView) transcriptsView.classList.add("show");
     renderTranscriptList();
+  }
+
+  function showReviewTab() {
+    if (tabReviewBtn) tabReviewBtn.classList.add("active");
+    if (tabEpisodesBtn) tabEpisodesBtn.classList.remove("active");
+    if (tabTranscriptsBtn) tabTranscriptsBtn.classList.remove("active");
+    if (tabCreditBtn) tabCreditBtn.classList.remove("active");
+    if (dashboardView) dashboardView.classList.add("hide");
+    if (transcriptsView) transcriptsView.classList.remove("show");
+    if (creditView) creditView.classList.remove("show");
+    if (reviewView) reviewView.classList.add("show");
+    renderReviewStatus();
   }
 
   function showCreditTab() {
     if (tabCreditBtn) tabCreditBtn.classList.add("active");
     if (tabEpisodesBtn) tabEpisodesBtn.classList.remove("active");
     if (tabTranscriptsBtn) tabTranscriptsBtn.classList.remove("active");
+    if (tabReviewBtn) tabReviewBtn.classList.remove("active");
     if (dashboardView) dashboardView.classList.add("hide");
     if (transcriptsView) transcriptsView.classList.remove("show");
+    if (reviewView) reviewView.classList.remove("show");
     if (creditView) creditView.classList.add("show");
   }
 
   if (tabEpisodesBtn) tabEpisodesBtn.addEventListener("click", function () { showEpisodesTab(); setUrl("/"); });
   if (tabTranscriptsBtn) tabTranscriptsBtn.addEventListener("click", function () { showTranscriptsTab(); setUrl("/transcripts"); });
+  if (tabReviewBtn) tabReviewBtn.addEventListener("click", function () { showReviewTab(); setUrl("/review"); });
   if (tabCreditBtn) tabCreditBtn.addEventListener("click", function () { showCreditTab(); setUrl("/credit"); });
+
+  // ---------- learn data: arguments, key ideas, terms, passage anchors ----------
+  // app/learn/<id>.json is generated per episode and may simply be absent for
+  // an episode (or for the whole app). Every caller treats a miss as "this
+  // episode has no learn data" and quietly hides the extra UI. The cache holds
+  // the promise itself — including the ones that resolved to null — so a
+  // missing file is never re-fetched.
+
+  var learnCache = {};
+
+  function fetchLearnData(episodeId) {
+    var key = String(episodeId);
+    if (learnCache[key]) return learnCache[key];
+    if (typeof fetch !== "function") return Promise.resolve(null);
+    learnCache[key] = fetch("learn/" + key + ".json")
+      .then(function (res) { if (!res.ok) throw new Error("no learn data"); return res.json(); })
+      .then(function (data) { return data && typeof data === "object" ? data : null; })
+      .catch(function () { return null; });
+    return learnCache[key];
+  }
+
+  function hasLearnContent(data) {
+    if (!data) return false;
+    return !!(data.argument ||
+      (Array.isArray(data.keyIdeas) && data.keyIdeas.length) ||
+      (Array.isArray(data.terms) && data.terms.length));
+  }
+
+  // The verbatim transcript sentence behind question qIndex's correct answer,
+  // or "" when this episode has no anchor for that question.
+  function learnAnchor(data, qIndex) {
+    if (!data || !Array.isArray(data.anchors) || typeof qIndex !== "number") return "";
+    var anchor = data.anchors[qIndex];
+    if (typeof anchor !== "string" || !anchor.trim()) return "";
+    return anchor;
+  }
+
+  // Fills a container with the argument / key ideas / terms block. Everything
+  // goes in as text — learn data is never treated as HTML.
+  function renderLearnPanel(container, data) {
+    if (!container) return;
+    container.innerHTML = "";
+    if (!data) return;
+
+    if (data.argument) {
+      var lead = document.createElement("p");
+      lead.className = "learn-argument";
+      lead.textContent = data.argument;
+      container.appendChild(lead);
+    }
+
+    var ideas = Array.isArray(data.keyIdeas) ? data.keyIdeas : [];
+    if (ideas.length) {
+      var list = document.createElement("ul");
+      list.className = "learn-ideas";
+      ideas.forEach(function (idea) {
+        if (!idea) return;
+        var li = document.createElement("li");
+        li.textContent = idea;
+        list.appendChild(li);
+      });
+      container.appendChild(list);
+    }
+
+    var terms = Array.isArray(data.terms) ? data.terms : [];
+    if (terms.length) {
+      var termWrap = document.createElement("div");
+      termWrap.className = "learn-terms";
+      terms.forEach(function (t) {
+        if (!t || !t.term) return;
+        var row = document.createElement("div");
+        row.className = "learn-term-row";
+        var name = document.createElement("span");
+        name.className = "learn-term mono";
+        name.textContent = t.term;
+        var def = document.createElement("span");
+        def.className = "learn-def";
+        def.textContent = t.def || "";
+        row.appendChild(name);
+        row.appendChild(def);
+        termWrap.appendChild(row);
+      });
+      container.appendChild(termWrap);
+    }
+  }
+
+  // "Read the passage →": leaves whatever view you're in, opens the transcript
+  // reader for that episode and scrolls to the paragraph the answer came from.
+  function makePassageButton(episodeId, anchorText) {
+    var btn = document.createElement("button");
+    btn.className = "search-row-link";
+    btn.type = "button";
+    btn.textContent = "Read the passage →";
+    btn.addEventListener("click", function () {
+      var entry = getAllTranscripts().find(function (e) { return e.id === episodeId; });
+      if (!entry) return;
+      if (quizView) quizView.classList.remove("show");
+      showTranscriptsTab();
+      openTranscriptReader(entry, anchorText);
+    });
+    return btn;
+  }
+
+  // Appends the passage button to a note area once the episode's learn data is
+  // in, unless stillCurrent() says the reader has moved on to another question.
+  function appendPassageLink(noteEl, episodeId, qIndex, stillCurrent) {
+    if (!noteEl) return;
+    fetchLearnData(episodeId).then(function (data) {
+      var anchor = learnAnchor(data, qIndex);
+      if (!anchor) return;
+      if (stillCurrent && !stillCurrent()) return;
+      var row = document.createElement("div");
+      row.className = "note-actions";
+      row.appendChild(makePassageButton(episodeId, anchor));
+      noteEl.appendChild(row);
+    });
+  }
 
   // ---------- transcripts tab: browse every transcript by title ----------
 
@@ -314,6 +482,10 @@
   var transcriptReaderBackBtn = document.getElementById("transcriptReaderBackBtn");
   var transcriptCopyBtn = document.getElementById("transcriptCopyBtn");
   var transcriptReaderQuizBtn = document.getElementById("transcriptReaderQuizBtn");
+  var transcriptLearnBox = document.getElementById("transcriptLearnBox");
+  var transcriptLearnBodyEl = document.getElementById("transcriptLearnBody");
+  var transcriptReaderId = null; // which episode the reader is currently showing
+  var transcriptReaderText = ""; // the raw body, kept for "Copy transcript"
 
   function stripTranscriptHeader(raw) {
     var lines = raw.split("\n");
@@ -398,9 +570,45 @@
     });
   }
 
-  function openTranscriptReader(entry) {
+  // The transcript body as <p> elements, split on blank lines. Returns the
+  // paragraph elements so a caller can hunt for an anchor inside them.
+  function renderTranscriptBody(text) {
+    var paragraphs = [];
+    transcriptReaderBodyEl.innerHTML = "";
+    String(text).split(/\n{2,}/).forEach(function (chunk) {
+      var trimmed = chunk.trim();
+      if (!trimmed) return;
+      var p = document.createElement("p");
+      p.className = "transcript-para";
+      p.textContent = trimmed;
+      transcriptReaderBodyEl.appendChild(p);
+      paragraphs.push(p);
+    });
+    return paragraphs;
+  }
+
+  // Exact match first (anchors are verbatim quotes), then a case-insensitive
+  // pass for the ones that drifted in capitalisation.
+  function findAnchorParagraph(paragraphs, anchorText) {
+    var needle = String(anchorText);
+    var i;
+    for (i = 0; i < paragraphs.length; i++) {
+      if (paragraphs[i].textContent.indexOf(needle) !== -1) return paragraphs[i];
+    }
+    var lower = needle.toLowerCase();
+    for (i = 0; i < paragraphs.length; i++) {
+      if (paragraphs[i].textContent.toLowerCase().indexOf(lower) !== -1) return paragraphs[i];
+    }
+    return null;
+  }
+
+  // anchorText is optional: when given (from a "Read the passage →" button),
+  // the paragraph containing it is highlighted and scrolled into view.
+  function openTranscriptReader(entry, anchorText) {
     if (!transcriptReaderEl) return;
     setUrl("/episode/" + entry.id + "/transcript");
+    transcriptReaderId = entry.id;
+    transcriptReaderText = "";
     transcriptTitleListEl.style.display = "none";
     if (transcriptListFilterInput) transcriptListFilterInput.style.display = "none";
     transcriptReaderEl.style.display = "";
@@ -417,11 +625,30 @@
       transcriptReaderQuizBtn.onclick = function () { showEpisodesTab(); startQuiz(entry.id); };
     }
 
+    if (transcriptLearnBox) {
+      transcriptLearnBox.style.display = "none";
+      transcriptLearnBox.open = false;
+      if (transcriptLearnBodyEl) transcriptLearnBodyEl.innerHTML = "";
+      fetchLearnData(entry.id).then(function (data) {
+        if (transcriptReaderId !== entry.id) return; // reader moved on while we fetched
+        if (!hasLearnContent(data)) return;
+        renderLearnPanel(transcriptLearnBodyEl, data);
+        transcriptLearnBox.style.display = "";
+      });
+    }
+
     fetch("../transcripts/" + entry.file)
       .then(function (res) { if (!res.ok) throw new Error("fetch failed"); return res.text(); })
       .then(function (raw) {
+        if (transcriptReaderId !== entry.id) return;
         transcriptReaderStatusEl.textContent = "";
-        transcriptReaderBodyEl.textContent = stripTranscriptHeader(raw);
+        transcriptReaderText = stripTranscriptHeader(raw);
+        var paragraphs = renderTranscriptBody(transcriptReaderText);
+        if (!anchorText) return;
+        var hit = findAnchorParagraph(paragraphs, anchorText);
+        if (!hit) return;
+        hit.classList.add("passage-hit");
+        hit.scrollIntoView({ block: "center" });
       })
       .catch(function () {
         transcriptReaderStatusEl.textContent = "Could not load this transcript. Is the server still running?";
@@ -431,13 +658,16 @@
   function closeTranscriptReader() {
     if (!transcriptReaderEl) return;
     setUrl("/transcripts");
+    transcriptReaderId = null;
     transcriptReaderEl.style.display = "none";
     transcriptTitleListEl.style.display = "";
     if (transcriptListFilterInput) transcriptListFilterInput.style.display = "";
   }
 
   function copyTranscriptText() {
-    var text = transcriptReaderBodyEl ? transcriptReaderBodyEl.textContent : "";
+    // The paragraph elements drop the blank lines between them, so copy from
+    // the raw body we kept when the transcript loaded.
+    var text = transcriptReaderText || (transcriptReaderBodyEl ? transcriptReaderBodyEl.textContent : "");
     if (!text) return;
     var showResult = function (ok) {
       if (!transcriptCopyBtn) return;
@@ -512,8 +742,109 @@
     });
   }
 
+  // ---------- learning paths ----------
+  // Curriculum arcs from paths.js (optional — with no paths.js the strip stays
+  // hidden and the ledger behaves exactly as before). Selecting a path narrows
+  // the ledger to that arc's quizzed episodes, in listening order; the text
+  // filter and pagination still apply on top of it.
+
+  var pathsStripEl = document.getElementById("pathsStrip");
+  var pathBlurbEl = document.getElementById("pathBlurb");
+  var selectedPathKey = null;
+  var PATH_PASS_RATIO = 0.7;
+
+  function getPaths() {
+    return (typeof LEARNING_PATHS !== "undefined" && Array.isArray(LEARNING_PATHS)) ? LEARNING_PATHS : [];
+  }
+
+  function selectedPath() {
+    if (!selectedPathKey) return null;
+    return getPaths().filter(function (p) { return p.key === selectedPathKey; })[0] || null;
+  }
+
+  // Of this path's episodes that actually have a quiz, how many has the user
+  // passed (best score >= 70%)?
+  function pathProgress(path, scores) {
+    var covered = getCoveredIds();
+    var quizzed = (path.episodes || []).filter(function (id) { return covered[id]; });
+    var done = 0;
+    quizzed.forEach(function (id) {
+      var record = scores[String(id)];
+      var episode = getEpisodeById(id);
+      if (!record || !episode || !episode.questions.length) return;
+      if (record.best / episode.questions.length >= PATH_PASS_RATIO) done++;
+    });
+    return { done: done, total: quizzed.length };
+  }
+
+  function togglePath(key) {
+    selectedPathKey = (key && key !== selectedPathKey) ? key : null;
+    currentPage = 1;
+    renderEpisodeList();
+  }
+
+  function renderPathsStrip(scores) {
+    if (!pathsStripEl) return;
+    var paths = getPaths();
+    pathsStripEl.innerHTML = "";
+    if (!paths.length) {
+      pathsStripEl.style.display = "none";
+      if (pathBlurbEl) pathBlurbEl.style.display = "none";
+      return;
+    }
+    pathsStripEl.style.display = "";
+
+    paths.forEach(function (path) {
+      var progress = pathProgress(path, scores);
+      if (!progress.total) return; // nothing quizzable in this arc yet
+      var isActive = selectedPathKey === path.key;
+      var chip = document.createElement("button");
+      chip.className = "path-chip" + (isActive ? " active" : "");
+      chip.type = "button";
+      chip.setAttribute("aria-pressed", isActive ? "true" : "false");
+      chip.addEventListener("click", function () { togglePath(path.key); });
+
+      var title = document.createElement("span");
+      title.className = "path-chip-title";
+      title.textContent = path.title;
+      var count = document.createElement("span");
+      count.className = "path-chip-count mono";
+      count.textContent = progress.done + "/" + progress.total;
+      var track = document.createElement("span");
+      track.className = "path-chip-track";
+      var fill = document.createElement("span");
+      fill.className = "path-chip-fill";
+      fill.style.width = ((progress.done / progress.total) * 100) + "%";
+      track.appendChild(fill);
+
+      chip.appendChild(title);
+      chip.appendChild(count);
+      chip.appendChild(track);
+      pathsStripEl.appendChild(chip);
+    });
+
+    if (!pathBlurbEl) return;
+    var path = selectedPath();
+    pathBlurbEl.innerHTML = "";
+    if (!path) {
+      pathBlurbEl.style.display = "none";
+      return;
+    }
+    pathBlurbEl.style.display = "";
+    var blurb = document.createElement("span");
+    blurb.textContent = path.blurb || "";
+    var clear = document.createElement("button");
+    clear.className = "search-row-link";
+    clear.type = "button";
+    clear.textContent = "clear";
+    clear.addEventListener("click", function () { togglePath(null); });
+    pathBlurbEl.appendChild(blurb);
+    pathBlurbEl.appendChild(clear);
+  }
+
   function renderDashboard() {
     renderEpisodeList();
+    refreshReviewBadge();
   }
 
   function renderEpisodeList() {
@@ -521,8 +852,13 @@
     var progress = loadProgress();
     var query = ((topicFilterInput && topicFilterInput.value) || "").trim().toLowerCase();
 
+    renderPathsStrip(scores);
+
     episodeList.innerHTML = "";
-    var sortedEpisodes = QUIZ_DATA.slice().sort(function (a, b) { return a.id - b.id; });
+    var path = selectedPath();
+    var sortedEpisodes = path
+      ? (path.episodes || []).map(getEpisodeById).filter(Boolean)
+      : QUIZ_DATA.slice().sort(function (a, b) { return a.id - b.id; });
     var visibleEpisodes = query
       ? sortedEpisodes.filter(function (ep) { return textMatches(ep.title, query) || textMatches(ep.teaser, query); })
       : sortedEpisodes;
@@ -579,6 +915,50 @@
         originalLink.addEventListener("click", function (e) { e.stopPropagation(); });
         body.appendChild(originalLink);
       }
+
+      // Inline "Key ideas" shortcut: skim the episode's argument, key ideas,
+      // and terms right in the list, without starting the quiz or the reader.
+      var learnToggle = document.createElement("button");
+      learnToggle.className = "ep-transcript-link ep-learn-toggle mono";
+      learnToggle.type = "button";
+      learnToggle.textContent = "Key ideas ▾";
+      var learnBox = document.createElement("div");
+      learnBox.className = "ep-learn";
+      learnBox.style.display = "none";
+      learnToggle.addEventListener("keydown", function (e) { e.stopPropagation(); });
+      learnToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (learnBox.style.display !== "none") {
+          learnBox.style.display = "none";
+          learnToggle.textContent = "Key ideas ▾";
+          return;
+        }
+        learnBox.style.display = "";
+        learnToggle.textContent = "Key ideas ▴";
+        if (learnBox.hasChildNodes()) return;
+        var loading = document.createElement("p");
+        loading.className = "ep-learn-status mono";
+        loading.textContent = "Loading…";
+        learnBox.appendChild(loading);
+        fetchLearnData(ep.id).then(function (data) {
+          learnBox.innerHTML = "";
+          if (!hasLearnContent(data)) {
+            var none = document.createElement("p");
+            none.className = "ep-learn-status mono";
+            none.textContent = "No key ideas for this episode yet.";
+            learnBox.appendChild(none);
+            return;
+          }
+          var panel = document.createElement("div");
+          panel.className = "learn-panel";
+          renderLearnPanel(panel, data);
+          learnBox.appendChild(panel);
+        });
+      });
+      learnBox.addEventListener("click", function (e) { e.stopPropagation(); });
+      learnBox.addEventListener("keydown", function (e) { e.stopPropagation(); });
+      body.appendChild(learnToggle);
+      body.appendChild(learnBox);
 
       var status = document.createElement("div");
       status.className = "ep-status mono";
@@ -673,6 +1053,7 @@
   // ---------- shared helper: which episode ids already have a quiz ----------
 
   var coveredIds = null;
+  var episodesById = null;
 
   function getCoveredIds() {
     if (!coveredIds) {
@@ -680,6 +1061,14 @@
       QUIZ_DATA.forEach(function (ep) { coveredIds[ep.id] = true; });
     }
     return coveredIds;
+  }
+
+  function getEpisodeById(id) {
+    if (!episodesById) {
+      episodesById = {};
+      QUIZ_DATA.forEach(function (ep) { episodesById[ep.id] = ep; });
+    }
+    return episodesById[id] || null;
   }
 
   // ---------- transcript search ----------
@@ -815,6 +1204,206 @@
     });
   }
 
+  // ---------- review tab: spaced-repetition sessions ----------
+  // The deck fills up from wrong answers anywhere in the app. A session takes
+  // whatever is due, re-asks it in a shuffled order, and re-grades it through
+  // the same ladder, so a question only leaves your rotation by being right
+  // several times over.
+
+  var REVIEW_SESSION_MAX = 20;
+
+  var rEls = {
+    badge: document.getElementById("reviewDueBadge"),
+    status: document.getElementById("reviewStatus"),
+    startRow: document.getElementById("reviewStartRow"),
+    startBtn: document.getElementById("reviewStartBtn"),
+    session: document.getElementById("reviewSession"),
+    progressLabel: document.getElementById("reviewProgressLabel"),
+    scoreLive: document.getElementById("reviewScoreLive"),
+    progressFill: document.getElementById("reviewProgressFill"),
+    source: document.getElementById("reviewSource"),
+    questionText: document.getElementById("reviewQuestionText"),
+    options: document.getElementById("reviewOptions"),
+    note: document.getElementById("reviewNote"),
+    nextRow: document.getElementById("reviewNextRow"),
+    nextBtn: document.getElementById("reviewNextBtn"),
+    results: document.getElementById("reviewResults"),
+    scoreLine: document.getElementById("reviewScoreLine"),
+    scoreLabel: document.getElementById("reviewScoreLabel"),
+    backBtn: document.getElementById("reviewBackBtn")
+  };
+
+  var reviewQueue = [];
+  var reviewIndex = 0;
+  var reviewScore = 0;
+  var reviewAnswered = false;
+
+  function refreshReviewBadge() {
+    if (!rEls.badge) return;
+    var counts = QuizLogic.reviewCounts(loadReview(), new Date().toISOString());
+    rEls.badge.textContent = String(counts.due);
+    rEls.badge.style.display = counts.due ? "" : "none";
+  }
+
+  // One line about the soonest entry that isn't due yet.
+  function nextDueLine(deck) {
+    var now = Date.now();
+    var soonest = null;
+    Object.keys(deck).forEach(function (key) {
+      var entry = deck[key];
+      if (!entry || !entry.due) return;
+      var when = new Date(entry.due).getTime();
+      if (when <= now) return;
+      if (soonest === null || when < soonest) soonest = when;
+    });
+    if (soonest === null) return "Nothing is scheduled ahead — your deck is clear.";
+    var days = Math.max(1, Math.ceil((soonest - now) / (24 * 60 * 60 * 1000)));
+    return days === 1 ? "The next question comes due tomorrow." : "The next question comes due in " + days + " days.";
+  }
+
+  function renderReviewStatus() {
+    refreshReviewBadge();
+    if (rEls.session) rEls.session.style.display = "none";
+    if (rEls.results) rEls.results.classList.remove("show");
+    var deck = loadReview();
+    var counts = QuizLogic.reviewCounts(deck, new Date().toISOString());
+    if (rEls.status) {
+      if (!counts.total) {
+        rEls.status.textContent = "Your deck is empty. Miss a question in any quiz and it lands here, then comes back until it sticks.";
+      } else if (counts.due) {
+        rEls.status.textContent = counts.due + " due now · " + counts.total + " in your deck.";
+      } else {
+        rEls.status.textContent = "0 due now · " + counts.total + " in your deck. " + nextDueLine(deck);
+      }
+    }
+    if (rEls.startRow) rEls.startRow.style.display = counts.due ? "" : "none";
+  }
+
+  function shuffled(list) {
+    var out = list.slice();
+    for (var i = out.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var swap = out[i];
+      out[i] = out[j];
+      out[j] = swap;
+    }
+    return out;
+  }
+
+  function startReviewSession() {
+    var deck = loadReview();
+    var due = QuizLogic.dueReviewEntries(deck, new Date().toISOString());
+    var resolved = [];
+    var pruned = false;
+    due.forEach(function (entry) {
+      var episode = QUIZ_DATA.find(function (ep) { return ep.id === entry.epId; });
+      var question = episode && episode.questions[entry.qIndex];
+      // The quiz bank grows and changes under decks built weeks earlier, so
+      // quietly drop anything that no longer resolves to a real question.
+      if (!question) { delete deck[entry.key]; pruned = true; return; }
+      resolved.push({ epId: entry.epId, qIndex: entry.qIndex, episode: episode, question: question });
+    });
+    if (pruned) {
+      writeReviewLocal(deck);
+      pushReviewToServer();
+    }
+    if (!resolved.length) { renderReviewStatus(); return; }
+
+    reviewQueue = shuffled(resolved).slice(0, REVIEW_SESSION_MAX);
+    reviewIndex = 0;
+    reviewScore = 0;
+    if (rEls.results) rEls.results.classList.remove("show");
+    if (rEls.startRow) rEls.startRow.style.display = "none";
+    if (rEls.status) {
+      rEls.status.textContent = reviewQueue.length + (reviewQueue.length === 1 ? " question" : " questions") + " in this session.";
+    }
+    if (rEls.session) rEls.session.style.display = "";
+    renderReviewQuestion();
+  }
+
+  function renderReviewQuestion() {
+    var item = reviewQueue[reviewIndex];
+    reviewAnswered = false;
+    var total = reviewQueue.length;
+    if (rEls.progressLabel) rEls.progressLabel.textContent = "§ " + (reviewIndex + 1) + " / " + total;
+    if (rEls.scoreLive) rEls.scoreLive.textContent = reviewScore + " correct so far";
+    if (rEls.progressFill) rEls.progressFill.style.width = ((reviewIndex / total) * 100) + "%";
+    if (rEls.source) rEls.source.textContent = "from #" + item.episode.id + " · " + item.episode.title;
+    if (rEls.questionText) rEls.questionText.textContent = item.question.q;
+    if (rEls.note) { rEls.note.classList.remove("show"); rEls.note.innerHTML = ""; }
+    if (rEls.nextRow) rEls.nextRow.classList.remove("show");
+    if (!rEls.options) return;
+
+    rEls.options.innerHTML = "";
+    item.question.options.forEach(function (opt, idx) {
+      var btn = document.createElement("button");
+      btn.className = "option";
+      btn.type = "button";
+      var letterEl = document.createElement("span");
+      letterEl.className = "letter";
+      letterEl.textContent = LETTERS[idx];
+      var labelEl = document.createElement("span");
+      labelEl.textContent = opt;
+      btn.appendChild(letterEl);
+      btn.appendChild(labelEl);
+      btn.addEventListener("click", function () { selectReviewAnswer(idx); });
+      rEls.options.appendChild(btn);
+    });
+  }
+
+  function selectReviewAnswer(idx) {
+    if (reviewAnswered) return;
+    reviewAnswered = true;
+    var item = reviewQueue[reviewIndex];
+    var isCorrect = idx === item.question.correct;
+
+    if (isCorrect) reviewScore++;
+
+    if (rEls.options) {
+      var buttons = rEls.options.querySelectorAll(".option");
+      buttons.forEach(function (b, i) {
+        b.disabled = true;
+        if (i === item.question.correct) b.classList.add("correct");
+        else if (i === idx) b.classList.add("wrong");
+        else b.classList.add("dim");
+      });
+    }
+
+    recordReviewAnswer(item.epId, item.qIndex, isCorrect);
+
+    if (rEls.note) {
+      rEls.note.innerHTML = "<strong>" + (isCorrect ? "Right." : "Not quite.") + "</strong> " + item.question.note;
+      rEls.note.classList.add("show");
+      appendPassageLink(rEls.note, item.epId, item.qIndex, function () {
+        return reviewAnswered && reviewQueue[reviewIndex] === item;
+      });
+    }
+    if (rEls.nextRow) rEls.nextRow.classList.add("show");
+    if (rEls.scoreLive) rEls.scoreLive.textContent = reviewScore + " correct so far";
+    if (rEls.nextBtn) rEls.nextBtn.focus();
+  }
+
+  function nextReviewQuestion() {
+    reviewIndex++;
+    if (reviewIndex >= reviewQueue.length) {
+      finishReviewSession();
+    } else {
+      renderReviewQuestion();
+    }
+  }
+
+  function finishReviewSession() {
+    if (rEls.session) rEls.session.style.display = "none";
+    if (rEls.results) rEls.results.classList.add("show");
+    if (rEls.scoreLine) rEls.scoreLine.textContent = reviewScore + " / " + reviewQueue.length;
+    if (rEls.scoreLabel) rEls.scoreLabel.textContent = nextDueLine(loadReview());
+    refreshReviewBadge();
+  }
+
+  if (rEls.startBtn) rEls.startBtn.addEventListener("click", startReviewSession);
+  if (rEls.nextBtn) rEls.nextBtn.addEventListener("click", nextReviewQuestion);
+  if (rEls.backBtn) rEls.backBtn.addEventListener("click", renderReviewStatus);
+
   // ---------- quiz engine ----------
 
   var currentEpisode = null;
@@ -839,6 +1428,7 @@
     scoreLine: document.getElementById("scoreLine"),
     scoreLabel: document.getElementById("scoreLabel"),
     missedWrap: document.getElementById("missedWrap"),
+    resultsLearn: document.getElementById("resultsLearn"),
     backBtn: document.getElementById("backBtn"),
     transcriptLink: document.getElementById("quizTranscriptLink"),
     originalLink: document.getElementById("quizOriginalLink"),
@@ -855,6 +1445,9 @@
     currentEpisode = QUIZ_DATA.find(function (ep) { return ep.id === episodeId; });
     if (!currentEpisode) return;
     setUrl("/episode/" + episodeId);
+    // Warm the learn data now so passage anchors are ready the moment someone
+    // misses a question. A missing file is fine — it caches as "none".
+    fetchLearnData(episodeId);
 
     var cached = !forceRestart ? loadProgress()[String(episodeId)] : null;
     var resumed = !!(cached && cached.currentIndex > 0 && cached.currentIndex < currentEpisode.questions.length);
@@ -959,7 +1552,11 @@
     var isCorrect = idx === item.correct;
 
     if (isCorrect) currentScore++;
-    else missed.push({ q: item.q, note: item.note });
+    else missed.push({ q: item.q, note: item.note, qIndex: currentIndex });
+
+    // A miss enrols this question in the review deck; a hit on a question
+    // already enrolled moves it one rung up the spaced-repetition ladder.
+    recordReviewAnswer(currentEpisode.id, currentIndex, isCorrect);
 
     buttons.forEach(function (b, i) {
       b.disabled = true;
@@ -970,6 +1567,13 @@
 
     qEls.note.innerHTML = "<strong>" + (isCorrect ? "Right." : "Not quite.") + "</strong> " + item.note;
     qEls.note.classList.add("show");
+    if (!isCorrect) {
+      var epId = currentEpisode.id;
+      var qIdx = currentIndex;
+      appendPassageLink(qEls.note, epId, qIdx, function () {
+        return answered && !!currentEpisode && currentEpisode.id === epId && currentIndex === qIdx;
+      });
+    }
     qEls.nextRow.classList.add("show");
     qEls.scoreLive.textContent = currentScore + " correct so far";
     qEls.nextBtn.focus();
@@ -997,6 +1601,9 @@
     qEls.scoreLine.textContent = currentScore + " / " + total;
     qEls.scoreLabel.textContent = scoreCommentary(currentScore, total);
 
+    var episodeId = currentEpisode.id;
+    var missedRows = [];
+
     qEls.missedWrap.innerHTML = "";
     if (missed.length) {
       var title = document.createElement("p");
@@ -1008,8 +1615,34 @@
         row.className = "missed-item";
         row.innerHTML = "<div class=\"q\">" + escapeHtml(m.q) + "</div><div>" + m.note + "</div>";
         qEls.missedWrap.appendChild(row);
+        // Progress cached before this feature existed has no qIndex; those
+        // rows simply don't get a passage link.
+        missedRows.push({ row: row, qIndex: m.qIndex });
       });
     }
+
+    if (qEls.resultsLearn) qEls.resultsLearn.innerHTML = "";
+    fetchLearnData(episodeId).then(function (data) {
+      if (!currentEpisode || currentEpisode.id !== episodeId) return; // moved on
+      if (qEls.resultsLearn && hasLearnContent(data)) {
+        var learnTitle = document.createElement("p");
+        learnTitle.className = "missed-title";
+        learnTitle.textContent = "Key ideas from this episode";
+        var panel = document.createElement("div");
+        panel.className = "learn-panel";
+        renderLearnPanel(panel, data);
+        qEls.resultsLearn.appendChild(learnTitle);
+        qEls.resultsLearn.appendChild(panel);
+      }
+      missedRows.forEach(function (entry) {
+        var anchor = learnAnchor(data, entry.qIndex);
+        if (!anchor) return;
+        var actions = document.createElement("div");
+        actions.className = "note-actions";
+        actions.appendChild(makePassageButton(episodeId, anchor));
+        entry.row.appendChild(actions);
+      });
+    });
   }
 
   qEls.nextBtn.addEventListener("click", nextQuestion);
@@ -1020,7 +1653,7 @@
   // ---------- routing ----------
   // Reads location.pathname on load and on back/forward, and opens the
   // matching view. Each of these calls (startQuiz, openTranscriptReader,
-  // showTranscriptsTab, showCreditTab) is also what click handlers use, and
+  // showTranscriptsTab, showReviewTab, showCreditTab) is also what click handlers use, and
   // setUrl() no-ops when already at that path, so this never double-pushes
   // history or fights with the click-driven navigation above.
   function dispatchRoute() {
@@ -1038,6 +1671,7 @@
       return;
     }
     if (pathname === "/transcripts" || pathname === "/transcripts/") { showTranscriptsTab(); return; }
+    if (pathname === "/review" || pathname === "/review/") { showReviewTab(); return; }
     if (pathname === "/credit" || pathname === "/credit/") { showCreditTab(); return; }
   }
   window.addEventListener("popstate", dispatchRoute);

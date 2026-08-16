@@ -1,0 +1,29 @@
+{
+  "id": 158,
+  "argument": "Building on de Beauvoir's analysis of revenge, this episode uses Nietzsche's genealogical method to show that guilt is not a natural response calibrated to victims but an inherited, self-directed form of self-punishment that once served social control. In a post-God world, people still inherit Judeo-Christian guilt and its demand for self-denial, but without a divine authority to give that punishment meaning, leaving many in self-hatred. Nietzsche points to art as a model of meaning that doesn't depend on staking a claim to objective truth, offering an alternative to the ascetic ideal's binary of true and false.",
+  "keyIdeas": [
+    "De Beauvoir argues that because we can never control another person's subjectivity, revenge can't force a wrongdoer to feel the victim's pain; instead it functions as a symbolic statement that governs future behavior through punishment.",
+    "Nietzsche applies a Darwin-style genealogy to guilt: moral intuitions weren't written into human nature but were inherited and propagated within specific social environments, much like physical traits.",
+    "Before Judeo-Christian morality, virtues tracked social class (courage for warriors, strength for kings); the oppressed class invented the category of 'evil' to name the virtues of their oppressors, creating the good/evil binary known as slave morality.",
+    "Nietzsche is skeptical of fixed moral categories like good and evil, illustrated by the sand dune image: reality is an unstable, constantly shifting process that no fixed category can fully capture, so even compassion can sometimes do more harm than good.",
+    "In a 'God is dead' world, people still inherit the sense that certain desires must be renounced and punished, but without God to give that punishment legitimate meaning, leaving them in self-hatred; art offers a model of meaning that doesn't require staking a claim to truth."
+  ],
+  "terms": [
+    { "term": "Genealogy", "def": "Nietzsche's method of tracing the historical and social origin of a moral feeling rather than assuming it is simply natural." },
+    { "term": "Slave morality", "def": "The value system of the historically oppressed class (self-sacrifice, humility, altruism) that came to define 'goodness' after the concept of evil was created." },
+    { "term": "Ascetic ideal", "def": "The pathological pattern of self-denial and binary thinking (good/evil, true/false) inherited from religious tradition." },
+    { "term": "Asceticism", "def": "Severe self-discipline and avoidance of indulgence; a systematized form of self-denial." }
+  ],
+  "anchors": [
+    "we can never control another person’s subjectivity",
+    "governing future behavior through punishment",
+    "People feel guilty when they’ve never done anything or for not doing enough",
+    "natural selection provides an alternative explanation for how our traits were actually inherited",
+    "the virtues people embodied corresponded with whatever social class they found themselves in and which virtues served them within it",
+    "created a new moral category that encapsulated the primary virtues of the people that occupied positions of power",
+    "grab a steak knife from your kitchen and get to work",
+    "momentary snapshots of any aspect of that sand dune can never capture the sand dune in its entirety",
+    "there’s no will or decree of a God to give a legitimate meaning to having this guilt",
+    "When Kanye West comes out with a new album, that album is not released as a refutation of Cardi B’s work"
+  ]
+}

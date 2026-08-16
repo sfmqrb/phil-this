@@ -1,0 +1,30 @@
+{
+  "id": 197,
+  "argument": "Using Slavoj Žižek's theory of ideology, Stephen West argues that 'rational, science-only' materialism is itself an ideology with unnoticed contradictions at its base — it smuggles in unprovable assumptions like the rational coherence of the universe and the reliability of induction. He then turns to Thomas Nagel and Philip Goff, who argue that a purely material account of reality cannot fully explain consciousness, value, or the fine-tuning of physical constants, and who propose non-theistic accounts of cosmic purpose (teleological laws, the value-selection hypothesis) that aim to preserve the achievements of science while restoring room for purpose and meaning.",
+  "keyIdeas": [
+    "Žižek holds that the most powerful ideologies are the ones whose users don't notice the contradictions at their foundation; a self-described rational, science-only materialist can be just as embedded in an unexamined ideology as a creationist.",
+    "Material reductionism — the view that truth about the universe should be understood only by studying its material components and forces — requires smuggling in unprovable philosophical assumptions, such as the rational coherence of the universe and the reliability of induction.",
+    "The history of light being understood first as a particle, then a wave, then both shows that the same empirical data can be viewed through different conceptual frameworks that change what we take reality to be, meaning science is never a neutral, valueless enterprise.",
+    "Philip Goff's value-selection hypothesis proposes that the extreme fine-tuning of physical constants exists because it allows for a universe containing great value — life, love, beauty, and consciousness — rather than being mere coincidence.",
+    "Thomas Nagel's concept of teleological laws suggests laws of nature could run from future to past, with the present being shaped by a pull toward future goals like the emergence of life, complementing rather than replacing ordinary causal laws."
+  ],
+  "terms": [
+    { "term": "Ideology (Žižekian sense)", "def": "A deeply embedded network of tactics and symbols everyone uses to simplify reality into something coherent, typically containing unnoticed contradictions at its base." },
+    { "term": "Material reductionism", "def": "The view that truth about the universe should be understood solely by studying its material components and the fundamental forces governing them." },
+    { "term": "Value-selection hypothesis", "def": "Philip Goff's proposal that the fine-tuned physical constants of the universe are the way they are because they allow for a universe containing great value, such as life, love, and beauty." },
+    { "term": "Teleological laws", "def": "Thomas Nagel's proposed laws of nature that would work from future to past, with the present shaped by a pull toward future goals like the emergence of life, unlike ordinary past-to-future causal laws." },
+    { "term": "Panagentialism", "def": "A theory Goff discusses in which particles are disposed by their own nature to respond rationally to experience, offering a possible account of free will grounded in a rational teleology to the universe." }
+  ],
+  "anchors": [
+    "the contradictions at the bottom of it… are things that the people using it, don’t even NOTICE",
+    "can and SHOULD be understood… by studying the MATERIALS that things are made out of",
+    "that the universe is something that is rationally coherent, to the point that human rationality can be used to study and understand it",
+    "the numbers that we see in the fine tuning of physics are the way they are BECAUSE they allow for a universe containing great value",
+    "there may also be laws that move from future to past",
+    "rolling a dice and it coming up six 174 times in a row",
+    "this is an entirely, non-material, theoretical explanation to ground their worldview that, ironically, needs to be always grounded in material evidence",
+    "because they lack a level of self AWARENESS ABOUT the ideology that mediates their thinking",
+    "the SAME empirical data can be looked at through DIFFERENT conceptual frameworks",
+    "find a way to incorporate ALL of the great science we’ve done so far, and explore how it connects to a landscape of MEANING"
+  ]
+}

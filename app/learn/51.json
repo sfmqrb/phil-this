@@ -1,0 +1,45 @@
+{
+  "id": 51,
+  "argument": "David Hume's is/ought problem shows that no observation about how the world is can, by itself, justify a conclusion about how we ought to act -- a mistake people make constantly, sometimes harmlessly and sometimes to justify atrocities. This logical gap limits what science can tell us about ethics. By a separate but related line of skepticism about causation, Hume also undermines the cosmological argument for God's existence: since causal connection is never directly observed, seeing an effect can't license unlimited assumptions about its cause.",
+  "keyIdeas": [
+    "The is/ought problem: taking a factual observation about the world and treating it, by itself, as sufficient grounds for a conclusion about how one ought to act -- illustrated by the sympathetic 7-Eleven clerk, then by the slavery and 'women should just raise children' examples, showing the same flawed move can be used to justify real harm.",
+    "Because of is/ought, however completely science describes what the universe is, it can never on its own tell us what we ought to do with that information -- a limitation, not a flaw, and not the same as conceding ground to religion.",
+    "Hume argued that religion's errors are more dangerous than philosophy's because religion presents itself as inerrant moral doctrine that can be selectively quoted to justify atrocities, while a philosopher's error just gets corrected by later thinkers.",
+    "Ancient thinkers noticed that in nature the formal, efficient, and final causes of things tend to line up, as with a dandelion seed, which led people to think that knowing an effect's form let them reliably infer its cause -- an assumption Newtonian physics undermined.",
+    "Using the billiard-ball example, Hume argues we never actually observe a causal 'connection' between events, only that one follows another -- so the cosmological argument for God illegitimately infers far more about a 'cause' of the universe than the mere existence of an effect can support."
+  ],
+  "terms": [
+    {
+      "term": "Is/ought problem",
+      "def": "Hume's observation that you cannot validly derive a claim about what ought to be from a claim about what is."
+    },
+    {
+      "term": "Cosmological argument",
+      "def": "The argument that the universe must have had a cause, and that this cause (God) must be nonphysical, eternal, and uncaused."
+    },
+    {
+      "term": "Four causes",
+      "def": "Aristotle's framework of material, formal, efficient, and final causes used to explain why something exists."
+    },
+    {
+      "term": "Causal connection",
+      "def": "The link between cause and effect that Hume argues we never actually observe -- only the succession of one event after another."
+    },
+    {
+      "term": "Unmoved mover",
+      "def": "Aristotle's concept of an uncaused first cause of motion in the universe, which assumed matter's natural state was rest."
+    }
+  ],
+  "anchors": [
+    "he’s making a blind inference about how he ought to be acting because of it",
+    "people use this sort of mistake all the time to justify doing terrible things",
+    "He’s attacking a dishonest inference that people sometimes make by looking at the way that the world is and then pretending that the way things ought to be naturally follows from it",
+    "it can never tell us what we ought to do with all of this highly valuable information that it’s given us",
+    "people are born into the world today, and they think they have a choice between two things: you can believe in monotheistic religion",
+    "people can take these two sentences over here and use them to justify the Spanish Inquisition",
+    "three of those four causes are always pretty much the same thing, all of them but the material cause",
+    "Aristotle’s argument about the unmoved mover, that’s only necessary if the primary state of matter is to be stationary. But in Newton’s physics, it was to be in motion.",
+    "all you know for certain is that the movement of pool ball 2 followed the movement of pool ball 1",
+    "I can assume that they are really good at making hamburgers. I can assume that they’re being paid to make that hamburger. But I can’t assume some things."
+  ]
+}

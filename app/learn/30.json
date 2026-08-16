@@ -1,0 +1,30 @@
+{
+  "id": 30,
+  "argument": "Descartes's proof of God's existence was never aimed at converting anyone to Christianity specifically; he needed only an infinite, perfect being as a metaphysical bookend for his rationalist system, since an unending chain of causal and logical connections would otherwise have no valid endpoint. That God also solves the Cartesian circle by guaranteeing that clear and distinct perceptions we're no longer directly attending to remain trustworthy, though critics point out that his formal/objective reality argument is itself circular and that his claim of an innate idea of an infinite God is undermined by cultures that believed in finite creators.",
+  "keyIdeas": [
+    "Descartes was not trying to prove that the Christian or any specific God exists, only that some infinite first cause exists, as a metaphysical bookend for his rationalist system.",
+    "God's guarantee in Descartes's system is only needed to preserve truths we're no longer directly attending to (illustrated by the UPS delivery guy assuming the porch stairs haven't changed), not truths we clearly and distinctly perceive in the moment.",
+    "Because an infinite, perfect being would never deceive us, God's existence guarantees that our perceptions match reality, which is how Descartes escapes the problem posed by the evil demon.",
+    "Descartes needs God as a bookend because his rationalist project connects everything through causal and logical relationships, and an unending chain with no endpoint would make the whole system of connections invalid.",
+    "The 'Cartesian circle' objection: Descartes uses God to guarantee non-deceptive thoughts, but relies on non-deceptive thoughts to conclude that God exists in the first place; critics also object that his formal/objective reality distinction inconsistently treats ideas as both lesser and greater than finite things, and that many cultures believed in finite creators, suggesting the idea of an infinite God is taught rather than innate."
+  ],
+  "terms": [
+    { "term": "formal reality", "def": "Descartes's term for the degree of reality a thing itself possesses (infinite, finite, or modal), as opposed to the reality of an idea representing it." },
+    { "term": "objective reality", "def": "Descartes's term for the degree of reality an idea has, determined by the nature of the thing it represents - an idea of God has more than an idea of a table." },
+    { "term": "ontological argument", "def": "Saint Anselm's argument that God, defined as that than which nothing greater can be conceived, must exist in reality since existing is greater than existing only in thought; used by Descartes as a backup to his main argument." },
+    { "term": "Cartesian circle", "def": "The objection that Descartes uses God to guarantee non-deceptive thoughts while relying on non-deceptive thoughts to prove God exists." },
+    { "term": "evil demon (evil genius)", "def": "Descartes's hypothetical deceiver whose existence God's non-deceptive perfection is meant to rule out." }
+  ],
+  "anchors": [
+    "He was referencing some infinite first cause from which all things initially sprang",
+    "The insurance that God provides is that those stairs have not changed since the last time you did your analysis",
+    "Descartes says that as an infinite, perfect being, God would never deceive us. So, therefore, we can be certain that what we see about the world is the way that it actually is",
+    "There has to be a bookend from which everything is derived from, or else all these connections might be invalid",
+    "It’s like it’s compensating for his first argument which gets a little sketchy",
+    "what determines their level of objective reality is the thing that they’re representing",
+    "there must be as much reality in the cause of something as in the effect it generates",
+    "he uses God as the being that ensures that there is not an evil demon constantly deceiving him, but he relies on his thoughts being non-deceptive to arrive at the conclusion that God exists",
+    "he relegates the existence of ideas, and he makes them lesser than things that have finite formal reality. But on the other end, he makes their existence greater than things with finite formal reality",
+    "Many cultures throughout history have vehemently believed in a creator that in itself was not infinite"
+  ]
+}

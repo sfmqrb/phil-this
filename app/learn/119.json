@@ -1,0 +1,45 @@
+{
+  "id": 119,
+  "argument": "This episode lays out Derrida's account of language, building on Saussure, to argue that meaning is never stable or fully present. Words carry both a synchronic meaning (position within the current system of related words) and a diachronic meaning (the historical catalog of all past meanings), which makes pinning down a single, stable meaning impossible - a mistake Derrida calls the 'philosophy of presence.' Because we must nonetheless speak as though words have fixed meanings (logocentrism), and because there is no experience unmediated by language, Derrida concludes that 'there is nothing outside the text': all human experience of reality is filtered through the linguistic system.",
+  "keyIdeas": [
+    "Synchronic meaning is a word's meaning at one point in time, defined by its relation to other words in the system; diachronic meaning is the historical catalog of every meaning the word has carried across time.",
+    "The 'philosophy of presence' is philosophy's traditional mistake of assuming there is an immediate, stable meaning behind words that can be directly accessed, when meaning is always deferred or 'non-present.'",
+    "'Phonocentrism' is the historical privileging of speech over writing because speech feels like it carries a clear, present intention from a living speaker, which let philosophers believe an author's intention grounds a word's true meaning.",
+    "'Logocentrism' is the unavoidable practice of speaking as if words had stable meanings - necessarily repressing a word's full diachronic and synchronic complexity just to communicate at all - and requires pretending words are anchored to a 'transcendental signified' that doesn't actually exist.",
+    "'There is nothing outside the text' means nothing in human experience is unmediated by language: since meaning itself is a linguistic phenomenon, we cannot access reality independent of concepts and language, illustrated by the thought experiment of a person alone with no language encountering a 'tree' that simply wouldn't mean anything."
+  ],
+  "terms": [
+    {
+      "term": "synchronic meaning",
+      "def": "A word's meaning at one point in time, defined by its position relative to other words within the current linguistic system."
+    },
+    {
+      "term": "diachronic meaning",
+      "def": "The historical catalog of all the different meanings a word has carried across time."
+    },
+    {
+      "term": "phonocentrism",
+      "def": "The historical privileging of speech over writing because speech feels like it carries a speaker's clear, present intention."
+    },
+    {
+      "term": "logocentrism",
+      "def": "The unavoidable practice of speaking as though words have stable, concrete meanings, repressing their full complexity in order to communicate."
+    },
+    {
+      "term": "transcendental signified",
+      "def": "The illusory idea of an ultimate, fixed concept that a word is securely anchored to, which logocentrism requires us to pretend exists."
+    }
+  ],
+  "anchors": [
+    "the diachronic meaning of the word or, simply put, the historical catalog of all the different meanings that particular word has represented in the past",
+    "for a long time we have assumed that there is a level of immediacy between words and their meanings that just doesn’t exist",
+    "this phonocentric approach has allowed thinkers throughout history to persist in a delusion that the intention of an author somehow grounds the ultimate meanings of the words",
+    "as speakers we can never escape this logocentrism. With every sentence we utter we have to speak pretending as though the words we’re using have stable, concrete meanings",
+    "We have to pretend as though the words we’re saying are connected to what he calls a “transcendental signified.”",
+    "an essential part of playing that game is to always be someone who has to repress all of the other potential meanings of the words they’re using",
+    "there would be absolutely no necessary reason for you to delineate between this green and brown thing in front of you and the ground beneath it or the sky behind it",
+    "Jacques Derrida would say, yeah, that’s absolutely true, but there’s no going back at this point",
+    "there’s nothing about your experience that isn’t mediated, governed, affected by, or, as in some cases, entirely controlled by language",
+    "maybe this means we’re not going to be able to talk about things like morality or, you know, what the good life is like"
+  ]
+}

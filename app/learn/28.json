@@ -1,0 +1,30 @@
+{
+  "id": 28,
+  "argument": "Descartes emerged from an age when Europe's foundations of certainty - the Church's authority, scholastic method, and the earth-centered universe - had all collapsed at once, prompting philosophers to rebuild knowledge from scratch. His answer was a method of radical doubt: reject anything with even a shadow of doubt, all the way down through the senses, mathematics, and finally the possibility of an evil deceiving genius, until reaching one thing that survives all doubt - the fact that he is thinking, and therefore exists - which becomes the unshakeable first principle everything else can be rebuilt on.",
+  "keyIdeas": [
+    "Europeans of Descartes's time felt they had to start over because multiple long-trusted foundations - religious authority via the Reformation, the scholastic method, and the Ptolemaic universe - had all collapsed at once, leaving no stable basis for certainty.",
+    "This crisis split thinkers into rationalists (Descartes, Spinoza, Leibniz), who held that reason alone could reach certain knowledge, and empiricists (Locke, Berkeley, Hume), who held that knowledge must come from sense experience.",
+    "Descartes doubted even obviously true things because he knew that if he left any belief open to even a shadow of doubt, radical skeptics would tear it apart - so he had to out-doubt them first to arrive at something unshakeable.",
+    "The dream argument (echoed in the Matrix reference) shows there's no reliable way to distinguish waking perception from a dream while inside it, so sense experience can't ground certain knowledge; Descartes pushes doubt even further with the evil genius, a hypothetical deceiver powerful enough to make even math suspect.",
+    "From total doubt, Descartes reasons that even a thought planted by a deceiver is still a thought - so the fact that he is thinking at all proves something exists to do the thinking: cogito, ergo sum, 'I think, therefore I am.'"
+  ],
+  "terms": [
+    { "term": "rationalism", "def": "The view, held by Descartes, Spinoza, and Leibniz, that certain knowledge can be reached through reason alone." },
+    { "term": "empiricism", "def": "The view, held by Locke, Berkeley, and Hume, that knowledge must ultimately come from sense experience." },
+    { "term": "method of doubt", "def": "Descartes's technique of rejecting any belief that admits even a shadow of doubt, used to strip away unreliable foundations and rebuild knowledge from scratch." },
+    { "term": "evil genius (evil demon)", "def": "Descartes's hypothetical powerful deceiver, used to cast doubt on even seemingly certain truths like mathematics." },
+    { "term": "cogito, ergo sum", "def": "The standard Latin name for Descartes's conclusion, stated in the episode itself in English as 'I think, therefore I am' -- his first unshakeable certainty, reached because even a deceptive thought proves that a thinking thing exists." }
+  ],
+  "anchors": [
+    "We’ve seen the Protestant Reformation where the implementation of the religion of an entire millennium came crashing down",
+    "Rationalism is the idea that knowledge can be arrived at through the use of reason; and empiricism, which is the idea that knowledge needs to be arrive at through sense experience",
+    "the conditioned beliefs of humanity during his time period are represented by this over-the-top, extremely oversimplified guy talking really loud at a party somewhere",
+    "If there was any room for doubt, he would fail. And he knew this",
+    "I see so manifestly that there are no certain indications by which we may clearly distinguish wakefulness from sleep",
+    "some evil genius, not less powerful than deceitful, has employed his whole energies in deceiving me",
+    "A deceptive thought is still a thought. So, therefore, we must be thinking things, whatever they are",
+    "Descartes would say that if there’s even a shadow of doubt possible, that you should throw that belief out and start over again",
+    "Instead, what you should do, Descartes says, is you should dump out all of the apples and start completely over",
+    "what possible benefit could we really get from doubting whether a hairdryer really exists"
+  ]
+}

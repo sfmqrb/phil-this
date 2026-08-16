@@ -1,0 +1,28 @@
+{
+  "id": 33,
+  "argument": "Spinoza's life has to be understood against a backdrop of ferocious political and religious violence, exemplified by the mob murder of Johan De Witt, which shows that tribalism rather than religion itself is the deeper source of atrocity. Spinoza embodied a stubborn commitment to reason in this dangerous world: he refused a bribe to stay quiet about his heterodox views on God, was excommunicated for it, and later demolished a former friend's plea to convert to Christianity with arguments grounded in geometric certainty. That same danger of expressing unpopular ideas is why he never published his masterwork, Ethics, during his lifetime.",
+  "keyIdeas": [
+    "The mob killing of Johan De Witt, done for political rather than religious reasons, is used to argue that religion is not the unique cause of atrocity — the deeper cause is humanity's tendency to form tribes and marginalize outsiders.",
+    "Spinoza's landlord locked him inside his house on the night of the massacre to stop him from posting a sign denouncing the mob, likely saving his life.",
+    "Offered a large bribe to stay silent about his views, Spinoza instead sent the Jewish authorities a rigorously structured, mathematical outline of his beliefs, which led to his formal excommunication.",
+    "In his reply to Albert Burgh, Spinoza claims to know his philosophy is true with the same certainty as a geometric proof, and argues that Christianity's rapid spread among common people proves nothing, since the same reasoning would support any group preaching in Christ's name.",
+    "Spinoza traces Burgh's devotion to the Church not to love of God but to fear of hell, which he calls the single cause of superstition; the same climate of danger that killed De Witt is why Spinoza withheld Ethics from publication until after his death."
+  ],
+  "terms": [
+    { "term": "Orangeism", "def": "A political faction supporting a monarchist House of Orange-Nassau, opposed to the pro-republic party that Johan De Witt led." },
+    { "term": "Excommunication", "def": "The formal ritual banishment Spinoza received from the Amsterdam Jewish community after refusing to stay silent about his views." },
+    { "term": "Ethics", "def": "Spinoza's principal philosophical work, which he never published during his lifetime and which his friends released only after his death in 1677." }
+  ],
+  "anchors": [
+    "This guy was torn apart and eaten by a mob of people for a political cause, not a religious cause",
+    "Maybe the real problem is man’s ability to attach themselves to a tribe and marginalize other groups of people that don’t agree with them",
+    "his host locked the house to keep him from going out, for he would be exposed to being torn to pieces",
+    "It would eventually kill him, as we’ll talk about later. But there is no job that is more Scientific Revolution-y than that",
+    "he decided to do is send the Jewish authorities a comprehensive, mathematical, structured outline of all of his views",
+    "In the same way as you know that three angles of a triangle are equal to two right angles",
+    "this reason militates not only for the Romish Church, but for all those who profess in the name of Christ",
+    "your fear of hell, the single cause of superstition",
+    "that dynamic is ultimately what forced Spinoza to never release his principal work called Ethics",
+    "If we as humans are not all individual, unique snowflakes with a God that knows our first name and cares about us, what are we"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 26,
+  "argument": "Hobbes argues that without government, humans exist in a 'state of nature' where nothing is owned, nothing is unjust, and the only rational good is self-preservation -- a condition of perpetual, brutal war driven by competition, distrust, and pride. Because mere promises can't be trusted in that condition, people rationally consent to a social contract that transfers their unlimited natural rights to an absolute sovereign (the Leviathan), whose monopoly on force is what makes agreements actually binding and who, once established, effectively becomes the source of morality and law itself. Self-preservation, pursued through reason, thus generates both the case for government and a set of natural laws whose first principle is to seek peace.",
+  "keyIdeas": [
+    "The social contract is an implicit agreement, not a literal document, that explains why government exists and how much authority it should have over citizens.",
+    "The state of nature is a hypothetical pre-political condition with no laws or property; because everything belongs to everyone, everything is perpetually contestable, making life 'solitary, poor, nasty, brutish, and short.'",
+    "There is no justice or injustice in the state of nature because right and wrong are relational qualities that require a common power and law to exist at all -- 'where there is no common power, there is no law: where no law, no injustice.'",
+    "Humans are naturally roughly equal, since even the physically weaker can kill the stronger through cunning or alliance, and this rough equality drives three causes of quarrel: competition, diffidence, and glory.",
+    "A mere oath between two parties is insufficient because there's no enforcer to guarantee compliance, so an absolute sovereign -- the Leviathan -- is needed to enforce the contract by force, and once established, the sovereign's laws become the effective moral order."
+  ],
+  "terms": [
+    { "term": "State of nature", "def": "Hobbes's hypothetical pre-political condition of no laws, government, or property, marked by perpetual war." },
+    { "term": "Social contract", "def": "The implicit agreement by which individuals forfeit natural rights to a sovereign in exchange for peace and security." },
+    { "term": "Leviathan", "def": "Hobbes's name (from the biblical sea monster) for the absolute sovereign who enforces the social contract by force." },
+    { "term": "Natural law", "def": "Principles derived from reason about how to best achieve self-preservation, the first being to seek peace." },
+    { "term": "Diffidence", "def": "One of Hobbes's three causes of quarrel: invading others preemptively out of fear and distrust." }
+  ],
+  "anchors": [
+    "why do humans need government in the first place, or how did people come to realize that government was a good idea at all",
+    "the life of man, solitary, poor, nasty, brutish, and short",
+    "Where there is no common power, there is no law: where no law, no injustice.",
+    "the only thing that can really be considered a “good” in the state of nature",
+    "From this equality of ability, ariseth equality of hope in attaining of our ends.",
+    "First, competition; secondly, diffidence; thirdly, glory.",
+    "Never underestimate just how selfish humans can be.",
+    "This person holding the AK-47 in our example is the leviathan, the sovereign, the leader with absolute authority to do whatever he wants whenever he wants in the interest of maintaining the contract.",
+    "the laws that the sovereign puts in place in the interest of keeping us out of a perpetual state of war, those become the moral order that you’re beholden to",
+    "which is to seek peace and follow it"
+  ]
+}

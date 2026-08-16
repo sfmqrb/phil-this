@@ -1,0 +1,31 @@
+{
+  "id": 239,
+  "argument": "In Sources of the Self and The Ethics of Authenticity, Charles Taylor traces a genealogy of the modern self, showing how Western assumptions about morality and identity shifted from being grounded in one's roles within a cosmic order (ancient Athens), to an inward turn toward God's equally-offered love (Augustine), to disengaged scientific observation of the self (Descartes), to a self that can be deliberately reorganized (Locke) and is grounded in feeling (Hume), to a natural inner self that society corrupts and authenticity must uncover and express (Rousseau and Romanticism). Taylor argues all three resulting strands — religious, instrumental-reason, and Romantic-authenticity — remain necessary and coexist today, and that real authenticity requires acknowledging the shared 'horizons of significance' that ground our choices rather than treating personal preference as a self-generated, self-justifying source of value.",
+  "keyIdeas": [
+    "A genealogy of the modern self traces the changing assumptions people have made at different points in Western history about what a self is and how it relates to morality, to explain why modern people focus so heavily on authenticity.",
+    "Ancient Athenians primarily understood the self in terms of roles within families, civic groups, and a cosmic order upheld by the gods, not as a private inner 'true self' to be discovered — a stark contrast with the modern conception.",
+    "Descartes' mind-body dualism produced 'disengaged reason': the idea that the self could be studied the way science studies the external world, observed from a neutral, detached 'view from nowhere' rather than known through lived, embedded experience.",
+    "Rousseau argued that society corrupts people and that beneath social conditioning lies a truer, more natural self that must be individually discovered, protected, and expressed — a key origin point of the modern hyper-focus on authenticity.",
+    "Taylor calls the shared background of narratives, traditions, and values against which meaningful choices are actually made 'horizons of significance'; treating 'good' as simply meaning 'I prefer it' is circular and denies these horizons are actually grounding the choice, whether or not the person realizes it."
+  ],
+  "terms": [
+    { "term": "Genealogy of the self", "def": "Taylor's method of tracing the changing historical assumptions about what a self is and how it relates to morality, used in Sources of the Self to explain the modern focus on authenticity." },
+    { "term": "Disengaged reason", "def": "Taylor's term for the Cartesian view of the self as an object to be observed and assessed from a neutral, detached 'view from nowhere,' rather than known through lived, embedded experience." },
+    { "term": "Tabula rasa", "def": "John Locke's idea that people are born blank slates without pre-existing knowledge, implying the self can, in principle, be deliberately reorganized into a different kind of person." },
+    { "term": "Horizons of significance", "def": "Taylor's term for the shared background of narratives, traditions, and values against which meaningful choices are actually made, even when they feel like pure personal preference." },
+    { "term": "Burden of self-interpretation", "def": "Taylor's term for the modern responsibility placed on individuals to take an unbiased inventory of themselves, decide what kind of person to be, and act on it, with far less of a handbook than people had in earlier eras." },
+    { "term": "Strong evaluation", "def": "Taylor's requirement that a person be able to say why one choice is better than another; without it, one doesn't actually know the values driving one's own choices." }
+  ],
+  "anchors": [
+    "he’s gonna consider the ASSUMPTIONS people are making at EACH POINT in history, about the SELF",
+    "they viewed themselves LESS in terms of being an individual…and MORE in terms of the ROLES they served…IN some higher ORDER that was going on",
+    "there’s this turn INWARD by St. Augustine in his philosophy, when it comes to what constitutes the self and someone’s moral WORTH",
+    "this kind of, “view from nowhere” that I can ASSESS things from neutrally",
+    "you have the power to REORGANIZE your SELF… in essentially ANY WAY that you want",
+    "It’s that we first FEEL that murder is WRONG…and then we come up with all sorts of rational arguments and religious explanations AFTER the fact to JUSTIFY that feeling",
+    "each of us has a more NATURAL self that, ONE: we need to individually study to be able to truly understand",
+    "He CALLS these moral frameworks: horizons of significance",
+    "Something is good…because I THINK it’s good. And I THINK something’s good…because it’s GOOD.",
+    "instrumental REASON taken too far can degrade authenticity, because it turns people into machines and denies their humanity"
+  ]
+}

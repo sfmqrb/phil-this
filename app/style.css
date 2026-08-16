@@ -233,6 +233,70 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   margin: 40px 0 14px;
 }
 
+/* ---------- learning paths strip ---------- */
+
+.paths-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.path-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 190px;
+  max-width: 250px;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 10px 12px;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.path-chip:hover { border-color: var(--accent); }
+.path-chip:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.path-chip.active { border-color: var(--accent); background: var(--accent-soft); }
+
+.path-chip-title {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.path-chip-count {
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.path-chip-track {
+  display: block;
+  position: relative;
+  height: 2px;
+  background: var(--rule);
+}
+
+.path-chip-fill {
+  display: block;
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  background: var(--accent);
+}
+
+.path-blurb {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+
 .ep-card {
   display: flex;
   align-items: center;
@@ -595,6 +659,39 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 .view-tab.active { color: var(--accent); background: var(--paper-raised); }
 .view-tab:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
+.review-badge {
+  display: inline-block;
+  margin-left: 7px;
+  min-width: 17px;
+  padding: 1px 5px;
+  border-radius: 9px;
+  background: var(--warm);
+  color: var(--paper);
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------- review view ---------- */
+
+.review-view { display: none; }
+.review-view.show { display: block; }
+
+.review-status {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+}
+
+.review-start-row { margin-bottom: 26px; }
+
+.review-source {
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+
 /* ---------- transcripts view ---------- */
 
 .transcripts-view { display: none; }
@@ -654,6 +751,106 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 
 .transcript-reader { margin-top: 18px; }
 
+/* ---------- key ideas (learn data) ---------- */
+
+.learn-panel {
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--paper-raised);
+  padding: 16px 18px;
+}
+
+/* Inline key-ideas shortcut on episode cards */
+.ep-learn-toggle {
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  margin-left: 12px;
+}
+.ep-learn { margin-top: 10px; cursor: default; }
+.ep-learn .learn-panel { background: var(--paper); }
+.ep-learn-status {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.learn-argument {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0 0 12px;
+}
+
+.learn-ideas {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.learn-ideas li { margin-bottom: 6px; }
+.learn-ideas li:last-child { margin-bottom: 0; }
+
+.learn-terms {
+  border-top: 1px dashed var(--rule);
+  padding-top: 10px;
+}
+
+.learn-term-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 4px 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.learn-term {
+  flex: none;
+  width: 130px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.learn-def { color: var(--ink-soft); }
+
+.learn-details {
+  margin-top: 14px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--paper-raised);
+  padding: 10px 14px;
+}
+
+.learn-summary {
+  cursor: pointer;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.learn-summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.learn-details[open] .learn-summary { color: var(--accent); }
+
+.learn-details .learn-panel {
+  border: none;
+  background: none;
+  padding: 14px 0 4px;
+}
+
+.note-actions { margin-top: 10px; }
+
+@media (max-width: 480px) {
+  .path-chip { max-width: none; }
+  .learn-term-row { flex-direction: column; gap: 2px; }
+  .learn-term { width: auto; }
+}
+
 .transcript-body {
   margin-top: 14px;
   white-space: pre-wrap;
@@ -665,6 +862,18 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   border-radius: 3px;
   background: var(--paper-raised);
   padding: 18px;
+}
+
+.transcript-para { margin: 0 0 1.1em; }
+.transcript-para:last-child { margin-bottom: 0; }
+
+/* The paragraph a "Read the passage →" link points at. */
+.transcript-para.passage-hit {
+  background: var(--accent-soft);
+  border-left: 2px solid var(--accent);
+  border-radius: 2px;
+  padding: 8px 12px;
+  margin-left: -14px;
 }
 
 /* ---------- credit view ---------- */

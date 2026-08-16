@@ -1,0 +1,30 @@
+{
+  "id": 62,
+  "argument": "The episode argues that our beliefs about suicide are far more conditioned and less settled than they feel, since we selectively redefine \"suicide\" to exclude the self-facilitated deaths of people we admire (Jesus, Socrates) while condemning others. It surveys arguments against suicide grounded in duty to gods, the universe, or society, and traces how Christian theology (via Augustine and Aquinas) hardened this into an absolute prohibition, before Enlightenment thinkers like Hume and Voltaire complicated it. The episode ends with Kant, who gives a purely secular case that suicide is never moral: attempting it treats yourself as a mere thing rather than a human being, and it cannot be a moral act because it destroys your capacity to perform any moral act ever again.",
+  "keyIdeas": [
+    "We tend to redefine \"suicide\" to only cover the self-facilitated deaths we already disapprove of, calling the ones we admire (Jesus, Socrates) something else entirely.",
+    "Plato's guard-post analogy holds that we've been placed in life for a purpose by the gods, so it isn't our decision when that duty ends; a secular \"Saganism\" version updates this to an obligation to the universe or cosmos.",
+    "Augustine argues from the wording of the Ten Commandments — \"Thou shalt not kill,\" not \"thy neighbor\" — that the prohibition on killing applies to oneself too, reinforced by Aquinas's concept of usus, that we merely use our bodies while God retains ownership.",
+    "Hume challenges the church's \"divine order\" argument by pressing on what that order could actually mean, showing that under any workable definition it doesn't clearly forbid suicide.",
+    "Kant gives two secular arguments against suicide: attempting it treats yourself as a mere thing rather than a human being, and it cannot be a moral act because the act itself eliminates your capacity to ever perform a moral act again."
+  ],
+  "terms": [
+    { "term": "Usus", "def": "The Augustine/Aquinas concept that humans merely possess and use their bodies while God retains actual ownership of them." },
+    { "term": "Divine order", "def": "The church's claim that God has established a fixed order for life and death that suicide violates; Hume presses on what this could actually mean." },
+    { "term": "Saganism", "def": "The episode's playful secular update of Plato's guard-post argument, using Carl Sagan's idea that we are 'a way for the cosmos to know itself' in place of the gods." },
+    { "term": "Self-facilitated death", "def": "A death a person deliberately brings about themselves, used as a neutral term to expose how selectively we apply the label 'suicide.'" },
+    { "term": "Categorical distinction between moral acts and non-acts", "def": "Kant's point that suicide can't be a moral act because it destroys the agent's capacity to do any further moral acts at all." }
+  ],
+  "anchors": [
+    "very tempting to try to redefine this word “suicide” to only account for the negative",
+    "It would be completely inappropriate if you were a guard manning a guard post to relieve yourself of your duty.",
+    "we have an obligation to some exterior thing, whatever it is, some purpose assigned to us by a third party",
+    "he says, “Thou shalt not kill.” That means everything, everything, yourself included",
+    "We were limited to what they called the concept of usus, sort of like a rent-to-own program.",
+    "one of the exceptions to that rule of liberty over our body is that, well, we can’t kill ourselves",
+    "It’s somewhere in the intentions behind why you’re doing something that suicide lies, not in what actually happens",
+    "What is this divine order that we’re appealing to there? Really, let’s get to the bottom of what this divine order is",
+    "treat him as a beast, as a thing, and to use him for our sport as we do our sport as we do a horse or a dog",
+    "the very act of doing it precludes moral acts from being able to take place at all"
+  ]
+}

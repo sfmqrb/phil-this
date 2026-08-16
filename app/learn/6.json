@@ -1,0 +1,30 @@
+{
+  "id": 6,
+  "argument": "Aristotle broke decisively with his teacher Plato by locating truth in the physical, observable world rather than a transcendent realm of forms, making him an empiricist rather than a rationalist. This grounds his entire project: his four causes (material, formal, efficient, final) give a fuller account of why things exist than the Presocratics or Plato managed alone, his biological classification depends on observing function as much as physical form, and his system of logic (the syllogism) provides a formal method for turning premises gathered through observation into certain conclusions. Together these tools -- empirical observation, the four causes, and syllogistic logic -- formed the first systematic scientific method.",
+  "keyIdeas": [
+    "Where Plato believed truth is accessed through reason toward a transcendent world of forms, Aristotle believed truth is found on earth through the senses -- symbolized in Raphael's The School of Athens by Plato pointing up and Aristotle's hand held parallel to the ground.",
+    "Aristotle rejected Plato's innate knowledge: our sense of 'tree-y-ness' (or any universal concept) is built up from the sum of our sensory experience, not remembered from a heavenly realm.",
+    "Aristotle's four causes explain any existing thing: material cause (what it's made of), formal cause (its arrangement or structure), efficient cause (what brought it into being), and final cause (its purpose or function).",
+    "Considering an object's final cause mattered for classification because two creatures with very different appearances could share functionally similar features that place them in the same category, which physical traits alone would miss.",
+    "Aristotle's scientific method combined inductive reasoning (using observed patterns to arrive at premises believed true) with deductive reasoning via the syllogism (transforming those premises into proven universal truths)."
+  ],
+  "terms": [
+    { "term": "Four causes", "def": "Aristotle's account of why anything exists: material, formal, efficient, and final cause." },
+    { "term": "Syllogism", "def": "Aristotle's formal system of logic in which a conclusion follows necessarily from two premises relating three terms, e.g. all A are B, B is C, therefore A is C." },
+    { "term": "Teleology", "def": "The study of the purpose or function (final cause) that natural things serve, central to how Aristotle classified living things." },
+    { "term": "Knowledge of the fact vs. knowledge of the reasoned fact", "def": "Aristotle's distinction between merely knowing that something is true (e.g. grass is green) and knowing why it is true, which requires reason and hypothesis, not just the senses." },
+    { "term": "Empiricism", "def": "The view that truth comes from sensory experience; the episode calls Aristotle 'an empiricist who was a biologist' and describes his 'empiricist viewpoint that truth is arrived at through the senses, not through reason.'" }
+  ],
+  "anchors": [
+    "Plato is pointing up towards the sky because he believed that the truth about the world around us can be found in his transcendent world of forms",
+    "our concept of tree-y-ness comes from our senses—the sum total of all our experiences with trees up until this point in our life",
+    "efficient cause or how it’s brought into being is the construction crew that puts it together",
+    "two creatures could have features that were remarkably similar but look completely different. And if you never considered what these characteristics actually accomplished, you could miss the fact that they belonged in the same category.",
+    "greenness and smoothness only exist if there is something that physically exists that possesses their qualities",
+    "It was actually first used by a guy named Sextus Empiricus years later.",
+    "There’s a big difference between knowing that grass is green and knowing why grass is green. And it’s impossible to know why grass is green merely with our senses. We need to hypothesize about potential causes using our reason",
+    "Inductive reasoning is really good at discovering patterns or finding universal generalizations that we can then prove or disprove with our deductive reasoning.",
+    "If the Presocratics spent way too much time focusing on the material cause of something, then Plato and his influencers, the Pythagoreans, spent way too much time focusing on the formal cause",
+    "the common rebuttal to that from feminist philosophers is that Plato wasn’t as anti-woman as Aristotle was. So Aristotle has no excuse."
+  ]
+}

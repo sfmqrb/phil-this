@@ -1,0 +1,45 @@
+{
+  "id": 144,
+  "argument": "This episode pairs Max Weber's account of rationalization with Henri Bergson's critique of spatialized time. Weber argues that the Enlightenment project of applying scientific efficiency to every social domain - government, economy, the self - delivers real goods (freedom, equality, technology, knowledge) but always at a hidden cost, trapping modern people in an 'iron cage' of bureaucratic impersonality, identity-anxiety, technological alienation, and disenchantment. Bergson then argues that this same rationalizing impulse leads us to falsely understand even non-spatial things like time through spatial metaphors, when reality, especially lived time or 'duration,' is better understood as continuous, unfolding process rather than static, measurable instants.",
+  "keyIdeas": [
+    "'Rationalization' is the Enlightenment project of applying scientific efficiency to every social domain, breaking society into component parts each optimized on its own terms, in contrast to premodern societies that prioritized endurance and tradition over pure efficiency.",
+    "Weber's 'world mastery' names the overarching goal of total human control over nature and society; his characteristic 'yes, but' structure grants that it delivers real goods while insisting every gain carries a hidden cost.",
+    "Greater equality within institutions produces bureaucratic impersonality (illustrated by the DMV), because treating people as interchangeable units is what equal treatment actually requires, and modern freedom brings constant identity-anxiety in place of the premodern peasant's stable, unquestioned identity.",
+    "Technological alienation describes how technology's self-accelerating nature obsoletes not just old tools but the pieces of life and meaning built around them, so that nothing accumulates sentimental value before it's replaced.",
+    "Weber's 'iron cage' describes how modern rationalized existence traps individuals even while delivering real progress, culminating in 'disenchantment' - the world losing its aura of mystery the more thoroughly science explains and controls it; Bergson's sand-dune and movie-theater analogies argue reality, including time, is fundamentally a process ('duration') rather than a static thing that holds still to be measured."
+  ],
+  "terms": [
+    {
+      "term": "rationalization",
+      "def": "Weber's term for the Enlightenment project of applying scientific efficiency to every social domain."
+    },
+    {
+      "term": "world mastery (Weltbeherrschung)",
+      "def": "Weber's term for humanity's overarching goal of total control over nature and society through rationalization."
+    },
+    {
+      "term": "the iron cage",
+      "def": "Weber's metaphor for how modern rationalized existence traps individuals even as it delivers real material progress."
+    },
+    {
+      "term": "disenchantment (Entzauberung)",
+      "def": "The byproduct of scientific understanding whereby the world loses its aura of mystery the more thoroughly it is explained and controlled."
+    },
+    {
+      "term": "duration (durée)",
+      "def": "Bergson's concept of time as a continuous unfolding process, rather than a sequence of discrete, static, measurable instants."
+    }
+  ],
+  "anchors": [
+    "Weber would say that every one of these things we’ve been talking about is an example of humanity trying to apply what he calls “rationalization” to the component parts of a society",
+    "no matter how good something sounds at first there may be unintended side-effects that go along with it, that’s going to be common in this episode because it’s a hallmark of Weber’s work",
+    "as our imperative towards greater and greater levels of equality progresses, so too must the citizens of modernity learn to deal with just being a fellow number and not some special human being",
+    "in this position you would at least be able to know who you are. Your identity, at the very least, would not be something that ever caused you too much stress",
+    "as the rate of change becomes faster and faster, it becomes next to impossible for anything to endure in this world long enough for us to feel any sentimental value",
+    "We are specialists without spirit, sensualists without heart; this nullity imagines that it’s attained a level of civilization never before achieved",
+    "it progressively disenchants the universe that we live in for people",
+    "Bergson thought that we as human beings try way too hard to relate to everything in the universe spatially",
+    "you don’t experience what’s on the screen as tens of thousands of little snapshots being run through a projector behind you. The story is just unfolding into the future",
+    "That sand dune is a process not a static thing that can ever be measured"
+  ]
+}

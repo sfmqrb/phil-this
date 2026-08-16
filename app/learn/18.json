@@ -1,0 +1,30 @@
+{
+  "id": 18,
+  "argument": "Avicenna broke from Aristotle's view that mind and body are inseparable, using the flying man thought experiment to argue that a person's self-awareness persists even when totally stripped of all bodily sensation, proving the mind and body are separate entities. This move, similar in spirit to Descartes's later 'I think, therefore I am,' let Avicenna argue for an immortal soul, though it put him at odds with orthodox Islamic belief in bodily resurrection.",
+  "keyIdeas": [
+    "Aristotle held that mind (soul) and body are inseparable, like an iPhone's form and its materials -- melt the materials down and it's no longer an iPhone, and the soul likewise cannot outlast the body.",
+    "This creates a problem for an eternal afterlife: if soul and body are truly one, there's no reason to think the soul survives the body's destruction.",
+    "In the flying man thought experiment, a person created fully formed but with all sensation stripped away -- sight, touch, even awareness of their own limbs -- would still affirm their own existence, showing the self is not identical to the body.",
+    "The thought experiment therefore concludes that the human body and mind are separate from each other, not merely that self-awareness proves existence.",
+    "Avicenna's argument differs from Descartes's 'I think, therefore I am': Descartes's cogito only establishes that thought proves existence, while the flying man goes further to conclude mind and body are separable -- and the episode notes Saint Augustine's earlier refutation of skepticism may deserve credit as an even earlier version of this self-certainty argument."
+  ],
+  "terms": [
+    { "term": "Flying man thought experiment", "def": "Avicenna's scenario of a person created in mid-air with no sensory input, used to show self-awareness persists without any bodily perception." },
+    { "term": "Rational soul", "def": "Aristotle's term for the mind's capacity to reason, which he held was inseparable from the body." },
+    { "term": "Cogito ('I think, therefore I am')", "def": "Descartes's later argument that the act of thinking alone proves one's own existence." },
+    { "term": "The Healing", "def": "Avicenna's most famous work, in which he 'heals' or reconciles Aristotle's philosophy with Islamic theology." },
+    { "term": "Bodily resurrection", "def": "The orthodox Islamic belief, as the episode puts it, that 'both body and mind are resurrected into the afterlife' -- a view Avicenna's flying man argument (implying a body-independent, immortal soul) put him at odds with." }
+  ],
+  "anchors": [
+    "The relationship between mind and body, to Aristotle, is similar to the relationship between an iPhone and its software",
+    "there’s no reason to believe that the soul continues to exist after the body ceases to exist",
+    "It seems reasonable that you’d have some sense of awareness. You just wouldn’t have any idea that you have a body",
+    "What this thought experiment proves to Avicenna is that the human body and the human mind are separate from each other",
+    "As humans, we still see him as existing, albeit in a lesser sense",
+    "most people would be far more likely to end life support on the person who’s brain-dead than the person whose body is next to useless but their brain is still functioning",
+    "I think, therefore my body is separate from my rational soul",
+    "if you want someone to be Descartes before Descartes, I think you’d be better off looking at Saint Augustine",
+    "he was going directly against the orthodox Muslims of his time period who believed that both body and mind are resurrected into the afterlife",
+    "one of these people that stirred up the fire of philosophy again"
+  ]
+}

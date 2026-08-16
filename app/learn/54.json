@@ -1,0 +1,30 @@
+{
+  "id": 54,
+  "argument": "Hume argues that denying an objective, cosmic standard of beauty doesn't mean every person's judgment of art is equally valid; those are two separate questions people often conflate. Just as we consult a trained expert for a scientific disagreement even without an absolute cosmic standard, Hume thinks a cultivated 'ideal critic' can judge art better than an untrained person. In his essay 'Of the Standard of Taste,' he lays out five qualities such a critic needs, while also warning against common false criteria people mistake for genuine markers of quality, like nostalgia, novelty, and complexity.",
+  "keyIdeas": [
+    "People often confuse two separate questions: whether there's an objective cosmic standard of beauty, and whether people's ability to judge art well is equally developed; a 'no' to the first doesn't mean 'no' to the second.",
+    "Hume justifies the idea of an ideal critic by analogy to scientific expertise: years of cultivated skill can make one person's judgment more reliable than another's, even without an absolute standard to measure against.",
+    "Common but faulty criteria people use to justify their taste include nostalgia (which reveals personal history, not quality in the art), false novelty (mistaking unfamiliarity for genuine originality), and complexity (which doesn't necessarily imply superiority over simplicity).",
+    "Hume's five qualities of the ideal critic are: delicate sentiment (perceiving fine details accurately), practice, comparison (context from wide exposure to other art), freedom from prejudice (about the artist, not just the art), and strong sense (basic sensory access to the work).",
+    "Hume notes a near-paradox: though taste seems deeply subjective, truly great art (Shakespeare, da Vinci, Homer) has a timeless consistency that even more 'objective' fields like science and philosophy lack, since their giants get superseded."
+  ],
+  "terms": [
+    { "term": "Of the Standard of Taste", "def": "Hume's essay arguing that while there's no objective standard of beauty, some critical judgments are still better than others." },
+    { "term": "ideal critic", "def": "Hume's concept of a tastemaker whose cultivated skills (comparable to a scientist's expertise) make their aesthetic judgments more reliable than an untrained person's." },
+    { "term": "delicate sentiment", "def": "The ability to perceive the finer details and choices in a work of art accurately, without missing details or reading meaning into things that aren't there." },
+    { "term": "radical subjectivism", "def": "The view, which Hume rejects as incomplete, that no art is better or worse than any other on a cosmic level, purely personal preference." },
+    { "term": "strong sense", "def": "Basic, undistorted sensory access to a work of art, the foundational requirement before any other critical skill can apply." }
+  ],
+  "anchors": [
+    "someone’s opinion about what good music is and whether good music is something objective at all are two completely different conversations to be having",
+    "Well, you consult an expert on the matter. You go and ask a scientist.",
+    "How well a piece of art evokes these subjective emotional experiences within you really has nothing to do with how good or bad the art is, necessarily.",
+    "I couldn’t bring myself to tell the guy that “concrete jungle” is a common phrase that people use.",
+    "The problem with this thinking is that complexity does not necessarily imply superiority.",
+    "actually seeing all the details as opposed to just believing that you’re seeing all the details",
+    "If the only movie you’ve ever seen in your entire life is Fight Club, how could you ever possibly know whether that was a good movie",
+    "Think of how tempting it would be to hate a TV show that was produced by a member of the KKK.",
+    "if somebody’s hearing impaired, they’re probably not going to be the best judge of music that we could possibly find",
+    "the da Vincis, the Homers, the Shakespeares—the brilliance of these people is oddly timeless"
+  ]
+}

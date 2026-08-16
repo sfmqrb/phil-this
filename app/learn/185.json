@@ -1,0 +1,30 @@
+{
+  "id": 185,
+  "argument": "The episode asks whether generative AI is truly a revolution on the scale of the Industrial Revolution, opening with a peasant-farmer thought experiment to argue that someone standing right before a massive transformation has no way of grasping its scale, which mirrors our position now. It lays out both the optimist's case (AI can scale one expert's time to everyone, from tutoring to diagnostics to traffic management) and the pessimist's case (the same capabilities can manipulate and predate on people, undermine democratic deliberation, and eliminate jobs by raising the baseline standard of efficiency rather than just supplementing human work). It closes by arguing that, like the Stoics who built tools for coping with instability after Alexander the Great's death fractured the known world, we now need new philosophical resources to face a period of comparably fast, disorienting change.",
+  "keyIdeas": [
+    "The opening thought experiment of a peasant reading a novel called '2024' argues that someone living right before a massive transformation has no way of grasping its scale, which mirrors our own position facing AI today.",
+    "Before 2017, AI research was fragmented into separate fields; the invention of the transformer unified them, so that a breakthrough in one area (like language) became a breakthrough across the board, explaining the acceleration in progress since.",
+    "Unlike earlier 'ranking' AI, which sorted and distributed content people already made (as in social media feeds), generative AI creates entirely new content itself at near-zero cost, which is the key shift the episode argues makes this moment different.",
+    "The Microsoft Word analogy argues that a technology doesn't need to fully replace a skill to be disruptive: it just needs to raise the baseline efficiency standard, leaving people who don't adopt it behind, the same way everyone eventually had to learn word processing.",
+    "The same personalization capabilities that could power AI tutoring or diagnostics could equally be used predatorily, learning a person's fears and biases to manipulate or sell to them, which raises doubts about whether democracies, built to move slowly, can keep pace with a technology that changes this fast."
+  ],
+  "terms": [
+    { "term": "Transformer", "def": "The AI architecture introduced in 2017 (the 'T' in ChatGPT) that unified previously separate fields of AI research and drove the recent acceleration in capability." },
+    { "term": "Ranking AI", "def": "Earlier-generation AI, as in social media and search, that sorted and distributed human-created content rather than generating new content itself." },
+    { "term": "Generative AI", "def": "AI trained on data to learn a probability distribution and then generate new content (text, images, etc.) similar to what it was trained on." },
+    { "term": "Aza Raskin and Tristan Harris's three-part framework", "def": "The claim that new technology creates new responsibilities, that if it confers power a race to possess it begins, and that an uncoordinated race for power usually ends in tragedy." },
+    { "term": "Fourth Industrial Revolution", "def": "The World Economic Forum's term for the current wave of AI-driven technological change, compared in the episode to the disruption of the original Industrial Revolution." }
+  ],
+  "anchors": [
+    "there is NO WAY someone could’ve known back then how ALIEN life was going to look like for someone living just two generations from them in the future",
+    "a breakthrough in ONE compartment of AI… becomes a breakthrough in EVERY compartment of AI",
+    "it seems BOTH sides can agree… that the level of REVOLUTION this technology is capable of directly corresponds to its capabilities",
+    "if there is no coordination by the people that are racing for it…that race will usually end in tragedy",
+    "is that AI can GENERATE things now, not just RANK them like in a search engine",
+    "the technology RAISED the former STANDARD for what the bare minimum was in terms of efficiency",
+    "we just can’t DO it right now because it’s not scalable. But what if we COULD?",
+    "these things know every interest that you have, every bias that you have, every FEAR that you have",
+    "now the mold they were arguing about originally has gotten WORSE; now it’s SPREAD into the foundation of the house",
+    "what EMERGES… are schools of thought that try to DEAL with that constant change…for STOICISM specifically with your inability to control anything other than your RESPONSE to things"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 14,
+  "argument": "As the Hellenistic Age gave way to late antiquity, Athens lost its philosophical dominance to Rome and Alexandria, and philosophy itself shifted from the skeptical Academy's questioning back toward a dogmatic reading of Plato, largely because people disillusioned by chaos looked to a complete system from the past for stability. The 'middle Platonists,' represented here by Philo of Alexandria and Plutarch, unknowingly built toward Neoplatonism by fusing compatible ideas from rival schools onto a Platonist framework -- Philo reconciling Plato's Timaeus with Jewish monotheism, Plutarch reconciling apparent contradictions within Plato's own texts and developing an influential account of how to distinguish a true friend from a self-interested flatterer.",
+  "keyIdeas": [
+    "Pyrrhus of Epirus won costly victories against Rome but was undone because Rome could replenish its forces far faster than his allies could, giving us the phrase 'pyrrhic victory' and serving as a microcosm of the whole Hellenistic Age: Rome's overwhelming ability to recover made resistance ultimately unsustainable.",
+    "Philosophy shifted back toward a dogmatic reading of Plato because, like the Warring States thinkers in China, people disillusioned by chaos looked to a complete system from the past for stability rather than continuing the Academy's skepticism.",
+    "The 'middle Platonists' acted like mad scientists, combining compatible ideas from rival schools (like stoicism) onto a Platonist framework without realizing they were building toward what would become Neoplatonism.",
+    "Philo of Alexandria reconciled Plato's Timaeus with Jewish monotheism by placing the world of forms inside God's mind rather than in a separate realm God merely consults, since a separate world of forms put God and the forms on the same level.",
+    "Plutarch's How to Tell a Flatterer from a Friend argues that a true friend can be identified by testing them: offer deliberately bad advice or work, and if they praise it instead of pushing back, that agreement reveals they are a flatterer appealing to the irrational part of the soul rather than a friend acting in your genuine best interest."
+  ],
+  "terms": [
+    { "term": "Middle Platonism", "def": "The philosophical movement between the skeptical Academy and Neoplatonism that combined ideas from rival schools onto a Platonist framework." },
+    { "term": "Neoplatonism", "def": "The system founded later by Plotinus that emerged from the middle Platonists' unwitting synthesis of Plato with other schools." },
+    { "term": "Pyrrhic victory", "def": "A victory won at such a devastating cost that it is functionally equivalent to a defeat, named after Pyrrhus of Epirus's costly wins over Rome." },
+    { "term": "World of forms", "def": "In Plato's Timaeus, the pre-existing blueprint a divine craftsman consults when creating the physical universe; Philo relocated it into God's mind to preserve monotheism." },
+    { "term": "Flatterer", "def": "In Plutarch's account, someone who falsely represents themselves as a friend for personal gain, appealing to the irrational part of the soul rather than offering honest counsel." }
+  ],
+  "anchors": [
+    "as from a fountain continually flowing out of the city, the Roman camp was quickly and plentifully filled up with fresh men",
+    "people eventually started becoming disappointed with the chaotic time period that they were living in, and they started looking to the past for things from when times were better.",
+    "The Frankenstein monster that they were making was Neoplatonism, but they didn’t know it.",
+    "Philo also thought that Pythagoras was taught and heavily influenced by the followers of Moses.",
+    "Think of the bookshelf you put together as the inferior copy of that bookshelf, or the physical world full of inferior copies as created by the master craftsman of Plato’s Timaeus.",
+    "Philo says that God is in fact a supreme being and that the forms really only exist in his mind.",
+    "Philo said that this is why God created the physical world on day 6, that perfection; it’s a perfect number.",
+    "the master craftsman does make a rational soul for the entire universe.",
+    "Well, problems didn’t just stop happening. People just stopped telling him about the problems. So, eventually, Hitler didn’t even have the ability to fix anything because he didn’t have anyone that was willing to tell him the truth",
+    "give him a very absurd advice, and to animadvert as impertinently as may be upon his works"
+  ]
+}

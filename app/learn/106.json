@@ -1,0 +1,30 @@
+{
+  "id": 106,
+  "argument": "De Beauvoir extends Sartre's facticity/transcendence duality into a fuller thesis of 'the ambiguity of human existence': we are irreducibly both sides of many simultaneous dualities (subject/object, individual/collective, mind/matter), and historical philosophical and religious systems that collapse one side are, structurally, bad faith institutionalized at a cultural scale. Answering the relativism objection, she argues that freedom is not chosen but an inescapable structural fact -- Sartre's 'condemned to be free' -- which grounds ethics without appeal to objective good or evil, since moral accountability scales with the freedom actually available (the skateboard/semi-truck example) and 'you don't offer an ethics to a god' or to someone genuinely powerless. She then catalogs bad-faith personality types along a ladder of freedom, including the apathetic, mob-prone 'sub-man' and the most common type, the 'serious man,' who fills the lack in existence by attaching total, fixed identity to an external cause, arguing ultimately that meaning is never handed down but continuously chosen and enacted.",
+  "keyIdeas": [
+    "De Beauvoir's 'ambiguity of human existence' extends beyond facticity/transcendence to many simultaneous dualities (subject/object, individual/collective, mind/matter, self/other); to be human is to be irreducibly both sides of each at once, producing permanent tension. Historical philosophical and religious systems (Platonic forms, mind/body dualism, nationalism) are strategies that oversimplify existence by collapsing one side -- structurally identical to individual bad faith, just institutionalized at a cultural scale.",
+    "Answering the relativism objection to existentialist ethics, de Beauvoir argues (via Sartre's 'condemned to be free') that freedom isn't chosen but is an inescapable structural fact of the human condition, giving ethics a non-arbitrary foundation without appeal to objective good or evil.",
+    "Moral accountability scales with the freedom actually available in a situation, as the skateboard/semi-truck thought experiment shows; correspondingly, 'you don't offer an ethics to a god' nor to someone who believes themselves wholly powerless.",
+    "The 'sub-man,' lowest on de Beauvoir's ladder of bad faith, is apathetic, believing nothing merits desire or effort -- denying any inner tension by disengaging, which makes him socially dangerous as malleable, mob-prone fodder for others' projects; the 'serious man,' the most common type, instead fills the ambiguity/lack by attaching total, permanent identity to an external cause, treating a chosen, revisable commitment as a fixed essence.",
+    "De Beauvoir's final argument is that meaning was never handed down cosmically -- it is continuously chosen and enacted, and you cannot escape having some meaning, since even declaring life meaningless (the nihilist's error, forgetting it is up to him to justify the world) is itself a meaning-making act."
+  ],
+  "terms": [
+    { "term": "Ambiguity of existence", "def": "De Beauvoir's thesis that to be human is to be irreducibly both sides of many simultaneous dualities at once, producing permanent, unresolvable tension." },
+    { "term": "Condemned to be free", "def": "Sartre's phrase, adopted by de Beauvoir, for the claim that freedom is not chosen but an inescapable structural fact of the human condition." },
+    { "term": "Sub-man", "def": "The lowest rung on de Beauvoir's ladder of bad faith: apathetic, believing nothing merits desire or effort, and thus malleable and mob-prone." },
+    { "term": "Serious man", "def": "The most common bad-faith type, who fills existence's ambiguity by attaching total, fixed identity to an external cause." },
+    { "term": "Nihilist", "def": "A type who correctly perceives ambiguity but concludes life is meaningless, forgetting that it is up to him to justify the world." }
+  ],
+  "anchors": [
+    "Mind and matter, self and other, the examples of these dualities that we exist between go on over the horizon.",
+    "Simone de Beauvoir would say that, when you look back at the history of philosophy and religion, so many of the ideas that have been laid out over the years have been people trying to reduce one side of these dualities so that we can simplify the world",
+    "It’s the idea that “Man is condemned to be free.”",
+    "Let’s say they look at you; they look at the skateboard, hands on their knees, smiling as they stare at the skateboard plummeting into the ocean.",
+    "you don’t offer an ethics to a god. You don’t offer ethics to someone who thinks they can’t make mistakes or, on the other hand, somebody who thinks they’re so powerless they can’t make choices.",
+    "they feel “like nothing merits desire or effort,”",
+    "The serious man is something familiar. It’s any version of somebody that denies their transcendence and turns themself into pure facticity for the sake of a cause.",
+    "he forgets that it is up to him to justify the world and to make himself exist validly.",
+    "You can’t help but have a meaning to your life, to Simone de Beauvoir. It is created and recreated by your actions in each passing moment.",
+    "what they become are potential members of a mob."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": 82,
+  "argument": "The Austrian school economists challenge Marx's labor theory of value, which underpins his claim that profit is theft, by arguing that value is subjective rather than determined by the labor time a good requires. Using the diamond-water paradox and the marginal, circumstance-dependent nature of value, they argue prices reflect individuals' subjective judgments, not objective labor input. But refuting the labor theory of value doesn't by itself justify capitalist profit, so the Austrians separately argue that profit compensates capitalists and investors for risk, ingenuity, and forgone consumption over time, and that a free price system is essential for communicating information about scarcity that a system without private property could not replicate.",
+  "keyIdeas": [
+    "Disagreement with Marx splits into two independent axes - his economics and communism as a political ideology - producing a 'square of opposition' with four combinations, and refuting his economics also undercuts the justification for communism as a political program.",
+    "The labor theory of value says a commodity's worth comes from the labor required to produce it; Austrians reject this in favor of the subjective theory of value, where worth is a personal, circumstance-dependent judgment (illustrated by the Sahara Desert version of the diamond-water paradox).",
+    "Even if the subjective theory of value defeats the labor theory of value, it doesn't on its own explain why it's justified to pay workers less than the value they produce; the Austrian answer is the 'magnifying glass of value' argument, that profit is a wage paid to capitalists for the risk, ingenuity, and ongoing labor of building and sustaining a factory that lets workers produce far more per hour than they otherwise could.",
+    "Interest and dividends are justified by an opportunity-cost argument (illustrated by the delayed running-shoes example): people who tie up money for years are subjectively sacrificing consumption now for consumption later, and that sacrifice deserves compensation.",
+    "Hayek's tin-shortage example shows that prices aren't just numbers but carry information about scarcity to everyone who needs it automatically, and this only works within a system of private property and free exchange."
+  ],
+  "terms": [
+    { "term": "labor theory of value", "def": "The idea, drawn on by Marx, that the value of a commodity is directly related to the amount of labor it took to produce." },
+    { "term": "subjective theory of value", "def": "The Austrian view that value is not objective but a personal judgment individuals make based on their particular circumstances." },
+    { "term": "marginalism", "def": "The branch of economics, named for the 'margin,' concerned with the added value an individual assigns to having one more unit of something in their given circumstances." },
+    { "term": "diamond-water paradox", "def": "The classic puzzle of why water, essential to life, is cheap while diamonds, which are not needed for survival, are expensive." },
+    { "term": "square of opposition", "def": "A framework showing that agreeing or disagreeing with Marx's economics is logically independent from agreeing or disagreeing with communism, yielding four possible combinations." },
+    { "term": "opportunity cost", "def": "The value of forgone alternatives (like consumption now) that a person sacrifices by choosing to save, invest, or wait." }
+  ],
+  "anchors": [
+    "One side of the square would be people that agree with Marx’s economic views but disagree with communism",
+    "it takes much more labor to produce one diamond than to produce one glass of water",
+    "do the vendors have dozens of cases of water in the back that just aren’t on the shelves yet",
+    "you’d change your mind and say that the diamond is more valuable",
+    "it doesn’t explain why we shouldn’t pay workers the total value of what they produce",
+    "profit is really just the wage that the capitalist is being paid to magnify and sustain all of this additional value their sacrifice is providing",
+    "That guy never stepped foot in a factory. Did that money just appear out of thin air?",
+    "your subjective value of shoes now versus shoes three years from now would be very different",
+    "these people have to sacrifice years of being able to buy something else by having that money in the bank",
+    "the price system automatically sends the message to the people that matter, the consumers interested in consuming things made out of tin"
+  ]
+}

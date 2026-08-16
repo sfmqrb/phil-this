@@ -1,0 +1,30 @@
+{
+  "id": 13,
+  "argument": "Skepticism emerged by pressing on a weak point in stoic epistemology: the stoics believed certain knowledge was possible through 'cognitive impressions' so clear they seemed self-evidently true, but Pyrrho and later Arkesilaos argued that any such impression is, in principle, indistinguishable from a false one that would feel exactly the same. Pyrrho concluded we should suspend judgment on everything to reach tranquility, a position later softened by Arkesilaos's Academic skepticism, which allowed acting on reasonable appearances without claiming certainty. The episode's deeper ethical payoff is that judgments, not events themselves, are what disturb us -- so withholding confident judgment about what's 'good' or 'bad' can itself be a path to peace of mind.",
+  "keyIdeas": [
+    "The stoics distinguished impression (raw sense data), assent (a voluntary belief about that impression), and cognitive impression (an impression so clear a wise person could rationally treat it as certain) -- visualized by Zeno's open-palm-to-closed-fist hand gesture.",
+    "Skeptics attacked the idea of a self-evidently 'cognitive' impression: no true impression can be guaranteed distinguishable from a false one that would feel identical, so nothing can be proven certain.",
+    "Pyrrho's radical skepticism (epoché) held that since sensations and opinions never yield certain truth or falsehood, one should remain totally unopinionated, which Timon claimed leads first to speechlessness and then to ataraxia.",
+    "Critics charged Pyrrho's position with self-contradiction: claiming certainty that nothing can be known for certain is itself an act of unwarranted certainty.",
+    "Arkesilaos resolved this with a practical concession -- an ideal skeptic can suspend judgment about ultimate truth while still acting on what reasonably seems to be the case (e.g., fleeing a charging tiger) -- which split skepticism into Pyrrhonism (rejecting everything) and Academic Skepticism (acting on appearances)."
+  ],
+  "terms": [
+    { "term": "Ataraxia", "def": "Freedom from disturbance; the shared goal of the Hellenistic schools, sought here through suspending judgment." },
+    { "term": "Epoché", "def": "Pyrrho's practice of suspending judgment about everything, since certainty is unattainable." },
+    { "term": "Cognitive impression", "def": "The stoic notion of an impression so vivid and clear it is self-evidently true; the skeptics' main target." },
+    { "term": "Academic Skepticism", "def": "Arkesilaos's school, based at Plato's Academy, which suspended judgment on certainty but allowed acting on reasonable appearances." },
+    { "term": "Pyrrhonism", "def": "The die-hard branch of skepticism modeled on Pyrrho that rejected assenting to anything as true." }
+  ],
+  "anchors": [
+    "Zeno would be giving a lecture in the Painted Stoa, and he’d hold his hand out, palm completely open. And he’d say, this is perception.",
+    "it’s your decision to assent to that impression",
+    "Severus said that he didn’t assent to the fact that they were pomegranates. He only assented to the idea that it was reasonable to assume that they were pomegranates.",
+    "every cognitive impression, no matter how solid it may seem, will be indistinguishable from some other impression",
+    "The outcome for those who actually adopt this attitude, says Timon, will first be speechlessness, and then freedom from disturbance.",
+    "how can you claim to know it’s impossible to be certain? You should suspend judgment on that too, right?",
+    "No impression arising from something true is such that an impression arising from something false could not also be just like it.",
+    "Arkesilaos would say that this doesn’t mean that you’re certain that there’s a tiger there; you’re just acting in accordance with the way things seem.",
+    "This die-hard group of people became known as one type of skepticism known as Pyrrhonism.",
+    "If every time you ever wanted something, even for a split second, it just appeared in front of you, think of all the great feelings you’d miss out on over the course of your life."
+  ]
+}

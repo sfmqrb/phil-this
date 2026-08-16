@@ -1,0 +1,30 @@
+{
+  "id": 63,
+  "argument": "Building on Kant's split between the phenomenal and noumenal worlds, the episode argues that even total scientific knowledge would only ever amount to total knowledge of human experience, never of things as they truly are, because our minds and senses are an evolved 'experience machine' built for survival, not for perceiving ultimate reality. Kant uses this limit to demolish traditional proofs of God (the ontological and cosmological arguments) while still leaving room for faith in God, souls, and free will as legitimate, since these lie permanently beyond what any human apparatus could ever know. The episode closes by asking whether knowledge itself is really the end goal people are after, or just a bridge to something else.",
+  "keyIdeas": [
+    "Kant distinguishes truth from knowledge: even a Laplace-style total knowledge of every atom's location would still only be total knowledge of human experience, not of the noumenal 'things in themselves.'",
+    "What our mind and senses produce is described as a 'crude map' of the noumenal world — a limited, practical representation built for navigation, not a picture of reality itself.",
+    "The post-apocalyptic WIFI-signal example shows that what we can and can't perceive is an arbitrary product of what happened to aid survival, not evidence of everything that actually exists.",
+    "Kant debunks Anselm's ontological argument and, agreeing with Hume, treats the cosmological 'prime mover' argument's assumption that the universe needed a cause as a feature of how our minds organize experience rather than a fact about reality itself.",
+    "Kant distinguishes superstitious faith (belief about something that could in principle be investigated and known) from legitimate faith (belief about something permanently unknowable to the human mind), illustrated by tribespeople blaming volcanic eruptions on human sacrifice."
+  ],
+  "terms": [
+    { "term": "Noumenal world", "def": "The world of things as they truly are, in themselves, permanently beyond direct human access." },
+    { "term": "Phenomenal world", "def": "The world of appearances that our mind and senses construct — a practical, limited 'map' of the noumenal world, not reality itself." },
+    { "term": "Experience machine", "def": "The episode's term for the human mind and senses as an apparatus built to depict whatever is useful for survival, not to perceive things in themselves." },
+    { "term": "Ontological argument", "def": "Anselm's proof that God, as 'that than which nothing greater can be conceived,' must exist because existing is greater than not existing; Kant debunks it." },
+    { "term": "Superstitious faith vs. legitimate faith", "def": "Kant's distinction: faith about something knowable through investigation is superstition, while faith about something permanently unknowable to us is legitimate." }
+  ],
+  "anchors": [
+    "all we could ever have is not total knowledge of everything there is out there but total knowledge of human experience",
+    "the crude map of that more real world out there that our mind and senses produce",
+    "the fact that you can’t see WIFI signals right now and you can see light rays is equally as arbitrary",
+    "not necessarily depicting the world as it truly is but just the information that’s useful to you",
+    "This is the same Kant to finally debunk Anselm’s proof of God’s existence.",
+    "we are assuming that the universe needed to have a cause, unjustly",
+    "even by mentioning the ideas of right or wrong implies that we have some sort of choice in the matter",
+    "to make part of the criteria of whether you get into heaven or not a belief in whether it exists",
+    "having faith about something that is unknowable to us can never be a justification for laziness",
+    "Maybe knowledge is a bridge to something else that you want."
+  ]
+}
