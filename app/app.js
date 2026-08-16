@@ -570,21 +570,26 @@
     });
   }
 
-  // The transcript body as <p> elements, split on blank lines. Returns the
-  // paragraph elements so a caller can hunt for an anchor inside them.
-  function renderTranscriptBody(text) {
+  // A transcript body as <p> elements appended to `container`, split on blank
+  // lines. Returns the paragraph elements so a caller can hunt for an anchor
+  // inside them.
+  function appendTranscriptParagraphs(container, text) {
     var paragraphs = [];
-    transcriptReaderBodyEl.innerHTML = "";
     String(text).split(/\n{2,}/).forEach(function (chunk) {
       var trimmed = chunk.trim();
       if (!trimmed) return;
       var p = document.createElement("p");
       p.className = "transcript-para";
       p.textContent = trimmed;
-      transcriptReaderBodyEl.appendChild(p);
+      container.appendChild(p);
       paragraphs.push(p);
     });
     return paragraphs;
+  }
+
+  function renderTranscriptBody(text) {
+    transcriptReaderBodyEl.innerHTML = "";
+    return appendTranscriptParagraphs(transcriptReaderBodyEl, text);
   }
 
   // Exact match first (anchors are verbatim quotes), then a case-insensitive
@@ -895,15 +900,63 @@
       teaser.textContent = ep.teaser;
       body.appendChild(title);
       body.appendChild(teaser);
+      // Inline "Transcript" shortcut, same pattern as the key-ideas toggle:
+      // the full transcript expands in a scrollable box right in the list.
+      var txBox = null;
       if (ep.transcriptFile) {
-        var link = document.createElement("a");
-        link.className = "ep-transcript-link mono";
-        link.href = ep.transcriptFile;
-        link.target = "_blank";
-        link.rel = "noopener";
-        link.textContent = "Read full transcript ↗";
-        link.addEventListener("click", function (e) { e.stopPropagation(); });
-        body.appendChild(link);
+        var txToggle = document.createElement("button");
+        txToggle.className = "ep-transcript-link ep-learn-toggle mono";
+        txToggle.type = "button";
+        txToggle.textContent = "Transcript ▾";
+        txBox = document.createElement("div");
+        txBox.className = "ep-learn";
+        txBox.style.display = "none";
+        txToggle.addEventListener("keydown", function (e) { e.stopPropagation(); });
+        txToggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          if (txBox.style.display !== "none") {
+            txBox.style.display = "none";
+            txToggle.textContent = "Transcript ▾";
+            return;
+          }
+          txBox.style.display = "";
+          txToggle.textContent = "Transcript ▴";
+          if (txBox.hasChildNodes()) return;
+          var loading = document.createElement("p");
+          loading.className = "ep-learn-status mono";
+          loading.textContent = "Loading…";
+          txBox.appendChild(loading);
+          fetch(ep.transcriptFile)
+            .then(function (res) { if (!res.ok) throw new Error("fetch failed"); return res.text(); })
+            .then(function (raw) {
+              txBox.innerHTML = "";
+              var readerBtn = document.createElement("button");
+              readerBtn.className = "search-row-link";
+              readerBtn.type = "button";
+              readerBtn.textContent = "Open in reader →";
+              readerBtn.addEventListener("click", function () {
+                var entry = getAllTranscripts().find(function (t) { return t.id === ep.id; });
+                if (!entry) return;
+                showTranscriptsTab();
+                openTranscriptReader(entry);
+              });
+              var scroll = document.createElement("div");
+              scroll.className = "ep-transcript-inline";
+              appendTranscriptParagraphs(scroll, stripTranscriptHeader(raw));
+              txBox.appendChild(readerBtn);
+              txBox.appendChild(scroll);
+            })
+            .catch(function () {
+              txBox.innerHTML = "";
+              var failed = document.createElement("p");
+              failed.className = "ep-learn-status mono";
+              failed.textContent = "Could not load this transcript. Is the server still running?";
+              txBox.appendChild(failed);
+            });
+        });
+        txBox.addEventListener("click", function (e) { e.stopPropagation(); });
+        txBox.addEventListener("keydown", function (e) { e.stopPropagation(); });
+        body.appendChild(txToggle);
       }
       if (ep.url) {
         var originalLink = document.createElement("a");
@@ -958,6 +1011,7 @@
       learnBox.addEventListener("click", function (e) { e.stopPropagation(); });
       learnBox.addEventListener("keydown", function (e) { e.stopPropagation(); });
       body.appendChild(learnToggle);
+      if (txBox) body.appendChild(txBox);
       body.appendChild(learnBox);
 
       var status = document.createElement("div");

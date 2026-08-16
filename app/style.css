@@ -769,10 +769,21 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   padding: 0;
   cursor: pointer;
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  margin-left: 12px;
 }
+.ep-body .ep-transcript-link { margin-right: 12px; }
 .ep-learn { margin-top: 10px; cursor: default; }
 .ep-learn .learn-panel { background: var(--paper); }
+.ep-transcript-inline {
+  margin-top: 8px;
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--paper);
+  padding: 14px 16px;
+  line-height: 1.7;
+  font-size: 15px;
+}
 .ep-learn-status {
   margin: 0;
   font-size: 12px;
