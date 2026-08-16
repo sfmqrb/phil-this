@@ -112,7 +112,8 @@
     }
 
     episodeList.innerHTML = "";
-    QUIZ_DATA.forEach(function (ep) {
+    var sortedEpisodes = QUIZ_DATA.slice().sort(function (a, b) { return a.id - b.id; });
+    sortedEpisodes.forEach(function (ep) {
       var record = scores[String(ep.id)];
       var card = document.createElement("div");
       card.className = "ep-card";
@@ -279,6 +280,152 @@
     });
   }
 
+  // ---------- transcript search ----------
+  // Full-text, case-insensitive search across every transcript (not just the
+  // ones with quizzes). Uses the server's /api/search when available (fast —
+  // the server indexes all 245 files at startup); falls back to fetching and
+  // caching transcripts client-side when the app is opened via file://.
+
+  var transcriptSearchInput = document.getElementById("transcriptSearch");
+  var searchStatus = document.getElementById("searchStatus");
+  var searchResultsEl = document.getElementById("searchResults");
+  var searchDebounceTimer = null;
+  var clientTranscriptIndex = null;
+  var clientIndexBuilding = false;
+
+  function renderSearchResults(data) {
+    searchResultsEl.innerHTML = "";
+    var query = data.query || "";
+    if (!query) { searchStatus.textContent = ""; return; }
+    if (!data.results || !data.results.length) {
+      searchStatus.textContent = "No matches for “" + query + "”.";
+      return;
+    }
+    var shown = data.results.length;
+    var total = data.totalMatches || shown;
+    searchStatus.textContent = shown + (total > shown ? " of " + total : "") +
+      (shown === 1 ? " episode matches " : " episodes match ") + "“" + query + "”.";
+
+    var covered = getCoveredIds();
+    data.results.forEach(function (r) {
+      var row = document.createElement("div");
+      row.className = "search-row";
+
+      var head = document.createElement("div");
+      head.className = "search-row-head";
+      var titleEl = document.createElement("span");
+      titleEl.className = "search-row-title";
+      titleEl.textContent = "#" + r.id + " — " + r.title;
+      var countEl = document.createElement("span");
+      countEl.className = "search-row-count mono";
+      countEl.textContent = r.count + (r.count === 1 ? " match" : " matches");
+      head.appendChild(titleEl);
+      head.appendChild(countEl);
+
+      var snippet = document.createElement("p");
+      snippet.className = "search-row-snippet";
+      snippet.appendChild(document.createTextNode(r.pre + " "));
+      var mark = document.createElement("mark");
+      mark.textContent = r.match;
+      snippet.appendChild(mark);
+      snippet.appendChild(document.createTextNode(" " + r.post));
+
+      var actions = document.createElement("div");
+      actions.className = "search-row-actions";
+      if (covered[r.id]) {
+        var quizBtn = document.createElement("button");
+        quizBtn.className = "search-row-link";
+        quizBtn.type = "button";
+        quizBtn.textContent = "Take quiz →";
+        quizBtn.addEventListener("click", function () { startQuiz(r.id); });
+        actions.appendChild(quizBtn);
+      }
+      var transcriptA = document.createElement("a");
+      transcriptA.className = "search-row-link";
+      transcriptA.href = "../transcripts/" + r.file;
+      transcriptA.target = "_blank";
+      transcriptA.rel = "noopener";
+      transcriptA.textContent = "Read transcript ↗";
+      actions.appendChild(transcriptA);
+
+      row.appendChild(head);
+      row.appendChild(snippet);
+      row.appendChild(actions);
+      searchResultsEl.appendChild(row);
+    });
+  }
+
+  function searchClientSide(query) {
+    if (!clientTranscriptIndex) {
+      if (clientIndexBuilding) return;
+      clientIndexBuilding = true;
+      searchStatus.textContent = "Loading all transcripts for offline search (first search only)…";
+      var entries = (typeof EPISODE_INDEX !== "undefined") ? EPISODE_INDEX : [];
+      Promise.all(entries.map(function (e) {
+        return fetch("../transcripts/" + e.file)
+          .then(function (r) { return r.ok ? r.text() : ""; })
+          .then(function (raw) {
+            var lines = raw.split(/\r?\n/);
+            var headerEnd = -1;
+            for (var i = 0; i < lines.length; i++) {
+              if (lines[i].trim() === "---") { headerEnd = i; break; }
+            }
+            var text = headerEnd >= 0 ? lines.slice(headerEnd + 1).join("\n") : raw;
+            var quizMatch = QUIZ_DATA.filter(function (q) { return q.id === e.id; })[0];
+            return { id: e.id, file: e.file, title: quizMatch ? quizMatch.title : e.label, text: text, textLower: text.toLowerCase() };
+          })
+          .catch(function () { return null; });
+      })).then(function (list) {
+        clientTranscriptIndex = list.filter(Boolean);
+        clientIndexBuilding = false;
+        performSearch(transcriptSearchInput.value);
+      });
+      return;
+    }
+
+    var qLower = query.toLowerCase();
+    var results = clientTranscriptIndex.map(function (entry) {
+      var count = 0, pos = 0, idx;
+      while ((idx = entry.textLower.indexOf(qLower, pos)) !== -1) { count++; pos = idx + qLower.length; }
+      if (!count) return null;
+      var firstIdx = entry.textLower.indexOf(qLower);
+      var padding = 70;
+      var start = Math.max(0, firstIdx - padding);
+      var end = Math.min(entry.text.length, firstIdx + query.length + padding);
+      var pre = entry.text.slice(start, firstIdx).replace(/\s+/g, " ").trim();
+      var match = entry.text.slice(firstIdx, firstIdx + query.length);
+      var post = entry.text.slice(firstIdx + query.length, end).replace(/\s+/g, " ").trim();
+      if (start > 0) pre = "…" + pre;
+      if (end < entry.text.length) post = post + "…";
+      return { id: entry.id, title: entry.title, file: entry.file, count: count, pre: pre, match: match, post: post };
+    }).filter(Boolean);
+
+    results.sort(function (a, b) { return b.count - a.count || a.id - b.id; });
+    renderSearchResults({ query: query, results: results.slice(0, 50), totalMatches: results.length });
+  }
+
+  function performSearch(rawQuery) {
+    var query = (rawQuery || "").trim();
+    if (!query) { searchResultsEl.innerHTML = ""; searchStatus.textContent = ""; return; }
+    searchStatus.textContent = "Searching…";
+    if (serverAvailable) {
+      fetch("/api/search?q=" + encodeURIComponent(query))
+        .then(function (r) { return r.json(); })
+        .then(renderSearchResults)
+        .catch(function () { searchStatus.textContent = "Search failed — is the server still running?"; });
+    } else {
+      searchClientSide(query);
+    }
+  }
+
+  if (transcriptSearchInput) {
+    transcriptSearchInput.addEventListener("input", function () {
+      clearTimeout(searchDebounceTimer);
+      var val = transcriptSearchInput.value;
+      searchDebounceTimer = setTimeout(function () { performSearch(val); }, 300);
+    });
+  }
+
   // ---------- quiz engine ----------
 
   var currentEpisode = null;
@@ -305,6 +452,8 @@
     missedWrap: document.getElementById("missedWrap"),
     backBtn: document.getElementById("backBtn"),
     transcriptLink: document.getElementById("quizTranscriptLink"),
+    wordcloudLink: document.getElementById("quizWordcloudLink"),
+    wordcloudImg: document.getElementById("quizWordcloudImg"),
     retakeBtn: document.getElementById("retakeBtn"),
     doneBtn: document.getElementById("doneBtn")
   };
@@ -320,6 +469,13 @@
     qEls.results.classList.remove("show");
     qEls.quizBody.style.display = "";
     qEls.epLabel.textContent = "Episode " + currentEpisode.id + " — " + currentEpisode.title;
+    if (currentEpisode.wordcloud) {
+      qEls.wordcloudImg.src = currentEpisode.wordcloud;
+      qEls.wordcloudLink.href = currentEpisode.wordcloud;
+      qEls.wordcloudLink.style.display = "";
+    } else {
+      qEls.wordcloudLink.style.display = "none";
+    }
     if (currentEpisode.transcriptFile) {
       qEls.transcriptLink.href = currentEpisode.transcriptFile;
       qEls.transcriptLink.style.display = "";

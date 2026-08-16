@@ -6,6 +6,7 @@ const QUIZ_DATA = [
   {
     id: 4,
     transcriptFile: "../transcripts/004-plato-episode-4-transcript.md",
+    wordcloud: "wordclouds/4.png",
     title: "Plato: Forms, the Cave, and the Ideal City",
     teaser: "Why perfect Beauty can't be found in any single beautiful thing, and what makes philosopher-kings fit to rule.",
     questions: [
@@ -124,6 +125,7 @@ const QUIZ_DATA = [
   {
     id: 22,
     transcriptFile: "../transcripts/022-renaissance-philosophy-episode-22-transcript.md",
+    wordcloud: "wordclouds/22.png",
     title: "Erasmus and the Renaissance Case Against Religious Excess",
     teaser: "Why treating theology as an intellectual game corrupted the Church's ethical core, according to Erasmus.",
     questions: [
@@ -242,6 +244,7 @@ const QUIZ_DATA = [
   {
     id: 34,
     transcriptFile: "../transcripts/034-spinoza-pt-2-transcript.md",
+    wordcloud: "wordclouds/34.png",
     title: "Spinoza: One Substance, No Free Will",
     teaser: "God, Nature, and the argument that everything — including your choices — is one unbroken causal chain.",
     questions: [
@@ -360,6 +363,7 @@ const QUIZ_DATA = [
   {
     id: 71,
     transcriptFile: "../transcripts/071-episode-071-transcript.md",
+    wordcloud: "wordclouds/71.png",
     title: "The Ethics of Eating Animals",
     teaser: "Testing every justification for killing animals for food against a single generalization test.",
     questions: [
@@ -478,6 +482,7 @@ const QUIZ_DATA = [
   {
     id: 73,
     transcriptFile: "../transcripts/073-episode-73-transcript.md",
+    wordcloud: "wordclouds/73.png",
     title: "A Field Guide to Logical Fallacies",
     teaser: "Eight recurring flawed argument patterns behind almost every everyday disagreement.",
     questions: [
@@ -596,6 +601,7 @@ const QUIZ_DATA = [
   {
     id: 83,
     transcriptFile: "../transcripts/083-episode-83-transcript.md",
+    wordcloud: "wordclouds/83.png",
     title: "Emerson, Thoreau, and the Case for Self-Reliance",
     teaser: "Why society rewards conformity, and what civil disobedience actually requires.",
     questions: [
@@ -714,6 +720,7 @@ const QUIZ_DATA = [
   {
     id: 97,
     transcriptFile: "../transcripts/097-episode-97-transcript.md",
+    wordcloud: "wordclouds/97.png",
     title: "Wittgenstein, Language, and the Limits of What Can Be Said",
     teaser: "The picture theory, “whereof one cannot speak,” and the later turn toward language-games and family resemblance.",
     questions: [
@@ -822,6 +829,7 @@ const QUIZ_DATA = [
   {
     id: 181,
     transcriptFile: "../transcripts/181-episode-181-transcript.md",
+    wordcloud: "wordclouds/181.png",
     title: "Illusionism and the Puzzle of Consciousness",
     teaser: "Is your subjective experience exactly what it seems, or a simplified interface to something stranger?",
     questions: [
@@ -940,6 +948,7 @@ const QUIZ_DATA = [
   {
     id: 193,
     transcriptFile: "../transcripts/193-episode-193-transcript.md",
+    wordcloud: "wordclouds/193.png",
     title: "Bookchin's Social Ecology",
     teaser: "Why Bookchin thinks ecological and social crises share one root cause: hierarchy.",
     questions: [
@@ -1058,6 +1067,7 @@ const QUIZ_DATA = [
   {
     id: 196,
     transcriptFile: "../transcripts/196-episode-196-transcript.md",
+    wordcloud: "wordclouds/196.png",
     title: "Introducing Žižek: Ideology All the Way Down",
     teaser: "Why there's no neutral, ideology-free vantage point — including the one you think you're standing on.",
     questions: [
@@ -1176,6 +1186,7 @@ const QUIZ_DATA = [
   {
     id: 234,
     transcriptFile: "../transcripts/234-episode-234-transcript.md",
+    wordcloud: "wordclouds/234.png",
     title: "Kundera: Lightness, Heaviness, and Kitsch",
     teaser: "What The Unbearable Lightness of Being says about identity, kitsch, and testing moral character.",
     questions: [
@@ -1294,6 +1305,7 @@ const QUIZ_DATA = [
   {
     id: 44,
     transcriptFile: "../transcripts/044-episode-44-transcript.md",
+    wordcloud: "wordclouds/44.png",
     title: "The Great Slavery Debate: Aristotle, Augustine & Aquinas vs. Rousseau",
     teaser: "A follow-up to the Belief episode — what's at stake when a lazy belief becomes a moral catastrophe.",
     questions: [
@@ -1412,6 +1424,7 @@ const QUIZ_DATA = [
   {
     id: 197,
     transcriptFile: "../transcripts/197-episode-197-transcript.md",
+    wordcloud: "wordclouds/197.png",
     title: "Žižek, Ideology, and the Case for Cosmic Purpose",
     teaser: "Material reductionism as an unnoticed ideology, plus Thomas Nagel and Philip Goff's fine-tuning argument.",
     questions: [
@@ -1530,6 +1543,7 @@ const QUIZ_DATA = [
   {
     id: 223,
     transcriptFile: "../transcripts/223-episode-223-transcript.md",
+    wordcloud: "wordclouds/223.png",
     title: "Nishitani, Schelling & the Duck-Rabbit of Religion and Philosophy",
     teaser: "Why the Kyoto School says philosophy without religion is vacuous, and religion without philosophy is blind.",
     questions: [
@@ -1648,6 +1662,7 @@ const QUIZ_DATA = [
   {
     id: 229,
     transcriptFile: "../transcripts/229-episode-229-transcript.md",
+    wordcloud: "wordclouds/229.png",
     title: "Kafka's Bureaucratic Nightmares: Adorno and Arendt",
     teaser: "Why Adorno reads Kafka literally, and how Arendt saw The Trial and The Castle as blueprints for totalitarianism.",
     questions: [
@@ -1766,6 +1781,7 @@ const QUIZ_DATA = [
   {
     id: 239,
     transcriptFile: "../transcripts/239-episode-239-transcript.md",
+    wordcloud: "wordclouds/239.png",
     title: "Charles Taylor and the Genealogy of Authenticity",
     teaser: "Tracing the self from Athenian roles through Augustine, Descartes, Locke, Hume, and Rousseau to modern authenticity.",
     questions: [
@@ -1884,6 +1900,7 @@ const QUIZ_DATA = [
   {
     id: 3,
     transcriptFile: "../transcripts/003-socrates-sophists-episode-3-transcript.md",
+    wordcloud: "wordclouds/3.png",
     title: "Socrates vs. the Sophists",
     teaser: "Why relativism undoes itself, and what the elenchus actually proves when a definition collapses.",
     questions: [
@@ -2002,6 +2019,7 @@ const QUIZ_DATA = [
   {
     id: 5,
     transcriptFile: "../transcripts/005-episode-5-aristotles-ethics-transcript.md",
+    wordcloud: "wordclouds/5.png",
     title: "Aristotle's Ethics: The Structure of a Well-Lived Life",
     teaser: "Real goods vs. apparent goods, and why virtue has to be practiced, not just possessed.",
     questions: [
@@ -2120,6 +2138,7 @@ const QUIZ_DATA = [
   {
     id: 9,
     transcriptFile: "../transcripts/009-episode-009-transcript.md",
+    wordcloud: "wordclouds/9.png",
     title: "The Buddha: The Four Noble Truths",
     teaser: "Why dissatisfaction is the default setting of the mind, and what 'no-self' actually claims.",
     questions: [
@@ -2238,6 +2257,7 @@ const QUIZ_DATA = [
   {
     id: 13,
     transcriptFile: "../transcripts/013-skeptics-episode-13-transcript.md",
+    wordcloud: "wordclouds/13.png",
     title: "The Skeptics: Suspending Judgment",
     teaser: "Why Arkesilaos thought you could flee a tiger without ever claiming certainty about anything.",
     questions: [
@@ -2356,6 +2376,7 @@ const QUIZ_DATA = [
   {
     id: 15,
     transcriptFile: "../transcripts/015-philosophy-of-plotinus-episode-15-transcript.md",
+    wordcloud: "wordclouds/15.png",
     title: "Plotinus: Evil as the Absence of Good",
     teaser: "Why nothing can be wholly evil, and how degrees of unity become degrees of reality.",
     questions: [
@@ -2474,6 +2495,7 @@ const QUIZ_DATA = [
   {
     id: 26,
     transcriptFile: "../transcripts/026-hobbes-pt-1-transcript.md",
+    wordcloud: "wordclouds/26.png",
     title: "Hobbes: The State of Nature and the Social Contract",
     teaser: "Why Hobbes thinks life without a sovereign is 'solitary, poor, nasty, brutish, and short.'",
     questions: [
@@ -2592,6 +2614,7 @@ const QUIZ_DATA = [
   {
     id: 53,
     transcriptFile: "../transcripts/053-episode-53-transcript.md",
+    wordcloud: "wordclouds/53.png",
     title: "Hume: The Bundle Theory of Self",
     teaser: "Why introspection never actually reveals a unified 'you' — only a bundle of passing thoughts.",
     questions: [
@@ -2710,6 +2733,7 @@ const QUIZ_DATA = [
   {
     id: 68,
     transcriptFile: "../transcripts/068-episode-068-transcript.md",
+    wordcloud: "wordclouds/68.png",
     title: "Moodiness and the Stoic Theory of Emotional Regulation",
     teaser: "Is being 'moody' a fixed trait, or an untrained skill — and does the difference matter morally?",
     questions: [
@@ -2828,6 +2852,7 @@ const QUIZ_DATA = [
   {
     id: 69,
     transcriptFile: "../transcripts/069-episode-069-transcript.md",
+    wordcloud: "wordclouds/69.png",
     title: "Belief, Certainty, and Kant's Call to 'Dare to Be Wise'",
     teaser: "Why Kant thought immaturity was self-incurred, and the courage it takes to think for yourself.",
     questions: [
@@ -2946,6 +2971,7 @@ const QUIZ_DATA = [
   {
     id: 88,
     transcriptFile: "../transcripts/088-episode-088-transcript.md",
+    wordcloud: "wordclouds/88.png",
     title: "Sartre vs. Camus: Can Violence Serve a Better Future?",
     teaser: "The 1952 rupture over whether history justifies sacrificing innocents for a hoped-for outcome.",
     questions: [
@@ -3064,6 +3090,7 @@ const QUIZ_DATA = [
   {
     id: 102,
     transcriptFile: "../transcripts/102-episode-102-transcript.md",
+    wordcloud: "wordclouds/102.png",
     title: "Heidegger: Authenticity and Being-Toward-Death",
     teaser: "Why confronting your own mortality strips away every role you've ever played.",
     questions: [
@@ -3182,6 +3209,7 @@ const QUIZ_DATA = [
   {
     id: 107,
     transcriptFile: "../transcripts/107-episode-107-transcript.md",
+    wordcloud: "wordclouds/107.png",
     title: "Simone de Beauvoir: The Ethics of Ambiguity",
     teaser: "Why true freedom requires willing the freedom of others, not just your own.",
     questions: [
@@ -3300,6 +3328,7 @@ const QUIZ_DATA = [
   {
     id: 119,
     transcriptFile: "../transcripts/119-episode-119-transcript.md",
+    wordcloud: "wordclouds/119.png",
     title: "Derrida: There Is Nothing Outside the Text",
     teaser: "Why every act of speaking, for Derrida, involves a kind of necessary concealment.",
     questions: [
@@ -3418,6 +3447,7 @@ const QUIZ_DATA = [
   {
     id: 120,
     transcriptFile: "../transcripts/120-episode-120-transcript.md",
+    wordcloud: "wordclouds/120.png",
     title: "Logical Positivism and Its Critics",
     teaser: "Popper, Quine, and Kuhn — three ways the verification principle came apart at the seams.",
     questions: [
@@ -3536,6 +3566,7 @@ const QUIZ_DATA = [
   {
     id: 144,
     transcriptFile: "../transcripts/144-episode-144-transcript.md",
+    wordcloud: "wordclouds/144.png",
     title: "Weber's Iron Cage and Bergson's Duration",
     teaser: "What rationalization costs us, and why Bergson thinks we misunderstand time itself.",
     questions: [
@@ -3654,6 +3685,7 @@ const QUIZ_DATA = [
   {
     id: 150,
     transcriptFile: "../transcripts/150-episode-150-transcript.md",
+    wordcloud: "wordclouds/150.png",
     title: "Erich Fromm: The Art of Loving",
     teaser: "Why Fromm thinks love is a discipline to be mastered, not a feeling that simply happens to you.",
     questions: [
@@ -3772,6 +3804,7 @@ const QUIZ_DATA = [
   {
     id: 191,
     transcriptFile: "../transcripts/191-episode-191-transcript.md",
+    wordcloud: "wordclouds/191.png",
     title: "Agamben: Bare Life and the State of Exception",
     teaser: "Why 'human rights' can mask domination, and how emergency powers became the rule rather than the exception.",
     questions: [
@@ -3890,6 +3923,7 @@ const QUIZ_DATA = [
   {
     id: 213,
     transcriptFile: "../transcripts/213-episode-213-transcript.md",
+    wordcloud: "wordclouds/213.png",
     title: "Deleuze's Nietzsche: Difference, Not Dialectic",
     teaser: "Why philosophy, for Deleuze, should be about creating concepts — not measuring them against old ones.",
     questions: [
@@ -4008,6 +4042,7 @@ const QUIZ_DATA = [
   {
     id: 225,
     transcriptFile: "../transcripts/225-episode-225-transcript.md",
+    wordcloud: "wordclouds/225.png",
     title: "Camus's The Plague: Lucidity as Communal Revolt",
     teaser: "Why solidarity, for Camus, doesn't require smuggling in a moral system he otherwise rejects.",
     questions: [
@@ -4126,6 +4161,7 @@ const QUIZ_DATA = [
   {
     id: 242,
     transcriptFile: "../transcripts/242-episode-242-transcript.md",
+    wordcloud: "wordclouds/242.png",
     title: "Romeo and Juliet: Honor, Authority, and the Logic of Love",
     teaser: "Why the play tests state power, religion, and love itself as ways to stop feud violence — and shows all three failing.",
     questions: [
@@ -4238,6 +4274,1553 @@ const QUIZ_DATA = [
         ],
         correct: 3,
         note: "This flags Friar Laurence's overconfident scheming as a cautionary case of misapplied Stoic self-assurance."
+      }
+    ]
+  },
+  {
+    id: 95,
+    transcriptFile: "../transcripts/095-episode-095-transcript.md",
+    wordcloud: "wordclouds/95.png",
+    title: "Bostrom's Simulation Argument",
+    teaser: "Why the trilemma, not direct evidence, is what makes the case for living in a simulation.",
+    questions: [
+      {
+        q: "What is Bostrom's simulation argument actually claiming, structurally?",
+        options: [
+          "That we are definitely living in a computer simulation",
+          "That at least one of three propositions must be true: civilizations go extinct before reaching simulation-capable technology, they reach it but choose not to run such simulations, or they run many — making simulated observers vastly outnumber non-simulated ones",
+          "That simulations are scientifically impossible to create",
+          "That only advanced civilizations can prove they are not simulated"
+        ],
+        correct: 1,
+        note: "Bostrom deliberately avoids asserting 'we are simulated' — his argument is a disjunctive trilemma, which is what makes it harder to dismiss than a bare claim."
+      },
+      {
+        q: "Why does 'inverted Cartesian doubt' function as the conceptual bridge from Descartes to Bostrom's argument?",
+        options: [
+          "Because Descartes believed in simulations",
+          "Because Bostrom rejects all forms of doubt",
+          "Because Descartes' evil demon was a literal supercomputer",
+          "Descartes doubted the external world's reality to find indubitable certainty; the simulation argument takes the same willingness to doubt reality but points it toward treating observed anomalies as potential evidence of an artificial substrate, rather than problems to be explained away"
+        ],
+        correct: 3,
+        note: "This reframes classical radical doubt as a tool for taking simulation seriously, rather than dismissing it."
+      },
+      {
+        q: "What is the core reasoning behind the third horn of the trilemma — that simulated minds would vastly outnumber 'base reality' minds?",
+        options: [
+          "If any civilization ever runs many simulations of conscious minds, there is only one base reality but potentially astronomically many simulated ones, and since a simulated mind can't introspectively tell it's simulated, the statistically rational bet is that any given observer is simulated",
+          "Because computers are more common than humans",
+          "Because simulated minds are provably smarter than real ones",
+          "Because base reality doesn't actually contain any minds"
+        ],
+        correct: 0,
+        note: "This is a sampling/numbers argument — the conclusion follows from sheer statistical proportion, not from any direct evidence of being simulated."
+      },
+      {
+        q: "How does the Fermi Paradox function as support for the first horn of the trilemma (civilizations tend to go extinct before reaching simulation-capable technology)?",
+        options: [
+          "It doesn't relate to the trilemma at all",
+          "It proves aliens have already made contact",
+          "Given how many potentially habitable planets should exist, the absence of detected alien civilizations is puzzling — one explanation (the 'Great Filter') is that civilizations reliably self-destruct before reaching advanced technology, supporting the extinction horn",
+          "It shows that simulations are impossible to detect"
+        ],
+        correct: 2,
+        note: "The Fermi Paradox doesn't directly discuss simulations, but its 'Great Filter' explanation lends independent plausibility to civilizational self-destruction."
+      },
+      {
+        q: "What is the Doomsday Argument's urn analogy meant to illustrate?",
+        options: [
+          "That urns are a good model for computer simulations",
+          "An urn containing either 10 or 1,000,000 numbered balls: drawing a low number makes it statistically more rational to believe the urn holds only 10 — applied to humanity, a 'low' birth-rank among all humans who will ever live statistically favors a smaller total future population, i.e., likely extinction sooner rather than later",
+          "That doomsday can be predicted with certainty",
+          "That population size has no bearing on probability"
+        ],
+        correct: 1,
+        note: "This self-sampling argument gives independent statistical grounds for expecting human extinction sooner rather than later, supporting the first horn of the trilemma."
+      },
+      {
+        q: "Why is the ethics of creating simulated conscious suffering discussed as relevant to the second horn of the trilemma (civilizations reach the capability but choose not to use it)?",
+        options: [
+          "Because creating simulations is illegal in most legal systems",
+          "Because simulated beings are incapable of suffering",
+          "Because the ethics question has already been definitively resolved",
+          "If creating simulations means creating conscious beings who will suffer, a civilization might collectively refuse to build them on ethical grounds — offering a non-technical reason 'convergence' toward not simulating could occur"
+        ],
+        correct: 3,
+        note: "This ethical impasse is offered as a candidate mechanism for why mature civilizations might collectively decide not to run ancestor-simulations."
+      },
+      {
+        q: "Why is the ethics of creating simulated suffering argued to be harder than the abortion debate, as discussed in the episode?",
+        options: [
+          "Because there's no bodily-autonomy argument available to the creator, and the stakes involve every conscious being the simulation would contain, not a single potential person",
+          "Because simulations are more expensive to create than raising a child",
+          "Because there is no philosophical disagreement about abortion",
+          "Because simulated beings have no capacity for experience at all"
+        ],
+        correct: 0,
+        note: "The abortion debate's bodily-autonomy framing doesn't transfer to a simulation creator, and the ethical stakes scale up dramatically since a whole simulated population is at issue."
+      },
+      {
+        q: "What is the distinction between the 'hardware' and 'software/knowledge' limits on simulation-building discussed in the episode?",
+        options: [
+          "Hardware limits apply only to biological life; software limits apply only to machines",
+          "There is no meaningful distinction between the two",
+          "One view holds that an accurate simulation requires near-complete understanding of physics (a serious obstacle given how much of the universe, like dark matter, remains unexplained); another view holds that only enough understanding to produce the specific phenomena being studied is required — a much lower bar",
+          "Hardware limits were solved decades ago; only software limits remain relevant today"
+        ],
+        correct: 2,
+        note: "This distinction supports the second horn of the trilemma by giving a non-ethical reason technological maturity toward simulation might stall."
+      },
+      {
+        q: "Why does the episode flag various 'purpose of the simulation' theories (e.g., testing inventions safely, maximizing conscious life) as different in kind from Bostrom's actual trilemma?",
+        options: [
+          "Because those theories have been scientifically proven true",
+          "These purpose-theories are unfalsifiable speculation about why a simulation might exist, contrasted with Bostrom's more rigorous disjunctive structure that doesn't require guessing at motives",
+          "Because Bostrom personally endorses all of them",
+          "Because they were proposed before Bostrom's argument existed"
+        ],
+        correct: 1,
+        note: "The episode uses these purpose-theories as an example of what does NOT count as a rigorous argument, unlike the trilemma's careful logical structure."
+      },
+      {
+        q: "What is the 'practical indifference' point raised near the end of the episode?",
+        options: [
+          "That the simulation argument is completely worthless",
+          "That most philosophers reject the argument outright",
+          "That simulations have already been proven to not exist",
+          "Even if true, learning we're simulated likely wouldn't change daily behavior — paralleling how Descartes's inability to disprove the evil demon didn't actually change how he lived his life"
+        ],
+        correct: 3,
+        note: "This echoes a broader theme: some unfalsifiable metaphysical claims about reality's nature can be true (or false) without being practically actionable."
+      }
+    ]
+  },
+  {
+    id: 96,
+    transcriptFile: "../transcripts/096-episode-096-transcript.md",
+    wordcloud: "wordclouds/96.png",
+    title: "Ayn Rand and Objectivism",
+    teaser: "Whether her system is genuinely derived from first principles, or reverse-engineered from her politics.",
+    questions: [
+      {
+        q: "What is Rand's critique of altruism, and what motivates it?",
+        options: [
+          "That self-sacrifice is scientifically impossible",
+          "That altruism was invented by capitalists",
+          "Altruism treats self-sacrifice as the paradigm of virtue; Rand worries that a population taught self-sacrifice-for-the-collective is virtuous can be induced to commit atrocities 'for the greater good' — a concern rooted in what she witnessed under Soviet communism",
+          "That altruism and self-interest are identical concepts"
+        ],
+        correct: 2,
+        note: "Her critique is fundamentally political — altruism, applied at the level of the state, makes the individual a means to the collective's ends."
+      },
+      {
+        q: "What does Rand mean by naming her philosophical system 'Objectivism,' and what problem is it meant to solve?",
+        options: [
+          "She believed philosophy had abandoned the possibility of objective truth, mired in subjectivism and relativism, and set out to construct a complete system restoring objectivity",
+          "She meant it as a purely descriptive label with no larger ambition",
+          "She meant it as a critique of scientific objectivity",
+          "She borrowed the term directly from Kant's philosophy"
+        ],
+        correct: 0,
+        note: "This self-conception — rescuing objective truth from relativism — frames her explicit motivation for building the whole system."
+      },
+      {
+        q: "What is Rand's account of 'concept formation'?",
+        options: [
+          "The claim that concepts are entirely arbitrary and culturally invented",
+          "The claim that only scientists can form valid concepts",
+          "The claim that animals form concepts identically to humans",
+          "The process by which humans take raw perceptual experience and classify it into mental shorthand ('concepts') — a process Rand treats as what separates humans from animals and rigorous thinkers from sloppy ones"
+        ],
+        correct: 3,
+        note: "Mastering this process, for Rand, is a marker of intellectual seriousness, not just a neutral cognitive function."
+      },
+      {
+        q: "What does Rand mean by a thing's 'essential property,' and how does she use this idea to define 'human being'?",
+        options: [
+          "An essential property is any property a majority of people associate with a thing; she defines humans by their capacity for language",
+          "An essential property is what makes a thing that thing — remove it and the thing ceases to be itself; applying rigorous conceptual refinement, she concludes the essential property of humans is rationality",
+          "An essential property is whatever a government decides is legally significant",
+          "An essential property applies only to physical objects, never to living beings"
+        ],
+        correct: 1,
+        note: "This method — refining a concept until only its non-negotiable core remains — is what lets Rand claim 'rational animal' as humanity's true, discoverable definition."
+      },
+      {
+        q: "Why does Rand argue morality's function is to ensure survival specifically 'while remaining rational,' rather than survival by any means?",
+        options: [
+          "Because irrational survival is impossible in practice",
+          "Because rationality is legally required for survival",
+          "Because humans are essentially rational animals (per her essential-property analysis), surviving in a way that abandons rationality wouldn't preserve what actually makes someone human",
+          "Because Rand believed morality has nothing to do with survival"
+        ],
+        correct: 2,
+        note: "This ties her ethics directly back to her essentialist definition of 'human being' as 'rational animal.'"
+      },
+      {
+        q: "How does Rand's intrinsic/subjective/objective trichotomy differ from Kant's phenomena/noumena dichotomy?",
+        options: [
+          "Rand rejects Kant's two-category split and inserts a third: the 'objective' — what remains once cultural whims and unexamined intuition are stripped away by sufficiently rigorous reason, which she claims rational people would converge on identically",
+          "Rand agrees completely with Kant's framework and adds no new categories",
+          "Rand argues noumena and phenomena are the same thing",
+          "Rand rejects the existence of any external reality at all"
+        ],
+        correct: 0,
+        note: "This trichotomy is central to Rand's claim that concepts are discovered/excavated through reason, not merely invented by convention."
+      },
+      {
+        q: "How does Rand argue from rational self-interest to a specific political conclusion?",
+        options: [
+          "She argues rational self-interest leads to a fully centrally planned economy",
+          "She argues rational self-interest is incompatible with any political system",
+          "She argues rational self-interest requires strict wealth redistribution",
+          "She argues laissez-faire capitalism is the only system that respects rational agents making mutually beneficial exchanges, without a 'ruling class vs. exploited class' dynamic"
+        ],
+        correct: 3,
+        note: "This is the political conclusion at the top of her system, which critics argue she may have reasoned toward first and then justified philosophically."
+      },
+      {
+        q: "What is the 'tennis without a net' critique of Rand's system?",
+        options: [
+          "That Rand never actually wrote about tennis",
+          "Critics argue Rand stipulatively defines 'human' as 'rational,' then claims all truly rational people will agree with her specific conclusions — so anyone who rationally disagrees can simply be redefined as 'not rational,' making the system unfalsifiable by design",
+          "That Rand's arguments are too rigorously structured to critique",
+          "That Rand agreed her system had no logical structure at all"
+        ],
+        correct: 1,
+        note: "This is the episode's central critical counterargument — that Rand's system smuggles its conclusion into its premises rather than genuinely arguing for it."
+      },
+      {
+        q: "What two competing definitions of 'philosophy' does the episode use to frame the 'is Rand a real philosopher?' debate?",
+        options: [
+          "Ancient versus modern philosophy",
+          "Eastern versus Western philosophy",
+          "A broad Pythagorean sense (love of wisdom/thinking generally, broad enough to include almost any reflective person) versus a narrower sense (rigorous, methodical justification of claims, as practiced by Hume, Descartes, or Plato)",
+          "Academic versus popular philosophy"
+        ],
+        correct: 2,
+        note: "The episode's stance is that whether Rand counts as a 'real' philosopher hinges entirely on which definition is adopted — and professional discourse tends to use the narrower one."
+      },
+      {
+        q: "Why does the episode present Rand's system 'top-down' (politics first, then ethics, then epistemology, then metaphysics) instead of the usual bottom-up order?",
+        options: [
+          "To let the audience directly weigh the 'is she a philosopher?' debate by seeing whether her metaphysics and epistemology genuinely support her political conclusions, or whether the political conclusions seem to have come first",
+          "Because Rand herself insisted her books be summarized this way",
+          "Because bottom-up presentation is impossible for any philosophical system",
+          "Because politics is the least important part of her system"
+        ],
+        correct: 0,
+        note: "The top-down structure is a deliberate choice that sets up the episode's central question about whether Rand's system is genuinely derived or reverse-engineered."
+      }
+    ]
+  },
+  {
+    id: 98,
+    transcriptFile: "../transcripts/098-episode-98-transcript.md",
+    wordcloud: "wordclouds/98.png",
+    title: "Schopenhauer: The Will and the Scam of Love",
+    teaser: "Why Schopenhauer thinks all reality is one restless, blind striving force — and love is its trick.",
+    questions: [
+      {
+        q: "What is Kant's phenomena/noumena distinction, as used to set up Schopenhauer's metaphysics?",
+        options: [
+          "Phenomena are illusions; noumena are dreams",
+          "The senses provide raw data that the mind organizes via built-in categories (space, time, causality) into the world as experienced (phenomena); the world as it is independent of this processing (the 'thing in itself,' noumena) is permanently inaccessible",
+          "Phenomena and noumena are simply two words for the same concept",
+          "Noumena refers only to mathematical objects"
+        ],
+        correct: 1,
+        note: "Schopenhauer accepts this framework but challenges one of Kant's underlying assumptions about it."
+      },
+      {
+        q: "What does Schopenhauer question about Kant's assumption that the noumenal realm ('things in themselves') contains many separate things?",
+        options: [
+          "He questions whether things in themselves exist at all",
+          "He argues Kant invented the noumenal realm to avoid criticism",
+          "He argues the noumenal realm is identical to the phenomenal realm",
+          "He argues that plurality/individuation (things being separate from one another) might itself be a feature of human perception (imposed by space, time, and causality), not necessarily a feature of reality independent of the mind — opening the door to metaphysical monism"
+        ],
+        correct: 3,
+        note: "This move from 'things-in-themselves are separate' to 'maybe they're not' is what allows Schopenhauer to argue for an underlying unity to all reality."
+      },
+      {
+        q: "Why does Schopenhauer turn to introspection rather than studying external objects to access the noumenal realm?",
+        options: [
+          "He argues we have direct, intimate access to at least one thing-in-itself — ourselves — making introspection a 'subterranean passage' into noumenal reality that external study can't provide",
+          "Because external objects don't actually exist",
+          "Because introspection was required by his university",
+          "Because he believed noumena could only be accessed through dreams"
+        ],
+        correct: 0,
+        note: "This is a different route to noumenal knowledge than earlier philosophers attempted — inward rather than outward."
+      },
+      {
+        q: "What does Schopenhauer discover through introspection, which he calls the 'Will'?",
+        options: [
+          "A rational, deliberate faculty of personal choice",
+          "A divine plan guiding human behavior",
+          "A subconscious, restless striving underlying all action — always wanting the next thing — which he generalizes into a single blind, non-rational cosmic force underlying all of reality",
+          "A purely physical, measurable brain process"
+        ],
+        correct: 2,
+        note: "Crucially, the Will is not a soul, personal choice, or divine plan — it's a blind, purposeless striving force, and Schopenhauer is explicitly an atheist about it."
+      },
+      {
+        q: "What is Schopenhauer's metaphysical monism, as applied beyond human psychology?",
+        options: [
+          "That only humans possess a Will; other things are purely mechanical",
+          "Not just humans, but everything — an asteroid 'wills' to be an asteroid, a raccoon 'wills' to be a raccoon — are all manifestations of one single underlying Will, apparently separate only because of how space, time, and causality structure our perception",
+          "That monism only applies to religious contexts",
+          "That all animals share one Will but plants do not"
+        ],
+        correct: 1,
+        note: "This extends the Will from a psychological observation into a full cosmology in which all apparently separate things are ultimately one."
+      },
+      {
+        q: "What is the 'dark implication' Schopenhauer draws from metaphysical monism regarding suffering?",
+        options: [
+          "That suffering will eventually be eliminated through technology",
+          "That suffering only affects a small minority of beings",
+          "That suffering is entirely illusory once monism is understood",
+          "Since all beings are one Will restlessly striving, and survival requires consuming other striving beings, existence necessarily involves the Will 'cannibalizing' itself — and because we are ultimately one, all suffering witnessed is, in effect, our own"
+        ],
+        correct: 3,
+        note: "This is the pessimistic payoff of Schopenhauer's monism — oneness, for him, is horrifying rather than comforting, given universal conflict and need."
+      },
+      {
+        q: "According to Schopenhauer, why do people believe they pursue marriage and children out of rational, personal choice?",
+        options: [
+          "Love is the irrational, temporarily 'insanity'-inducing feeling the Will manufactures to override rational self-interest and compel reproduction — since a clear-eyed cost-benefit analysis of raising children would rarely justify it",
+          "Because reproduction is always a rational and carefully calculated decision",
+          "Because society legally mandates having children",
+          "Because Schopenhauer believed love and reproduction are unrelated"
+        ],
+        correct: 0,
+        note: "Love, for Schopenhauer, is essentially an 'elaborate scam' the Will runs on individuals to secure the species' propagation."
+      },
+      {
+        q: "What is Schopenhauer's account of why we're attracted to specific individuals (the 'complementary trait' or sexual selection criterion)?",
+        options: [
+          "We are drawn to partners who share identical personality traits with us",
+          "Attraction is entirely random and has no underlying pattern",
+          "We're subconsciously drawn to partners whose strengths offset our own weaknesses (e.g., pairing tall with short, meek with courageous), because this tends to produce more balanced offspring — not because of genuine personal compatibility",
+          "Attraction always tracks long-term relationship compatibility directly"
+        ],
+        correct: 2,
+        note: "This criterion (balanced offspring) is explicitly different from the criteria that would predict lasting personal compatibility — setting up the 'sack of snakes' argument."
+      },
+      {
+        q: "What does Schopenhauer's 'sack of snakes' argument claim about marrying for love?",
+        options: [
+          "That marrying for love always produces happy marriages",
+          "Because attraction criteria (aimed at producing balanced offspring) differ from compatibility criteria (aimed at shared happiness), marrying for passionate love is like blindly reaching into a sack of snakes hoping to find an eel — passionate love and lasting compatibility rarely coincide",
+          "That all romantic relationships are equally likely to succeed regardless of basis",
+          "That arranged marriages are always superior to love matches"
+        ],
+        correct: 1,
+        note: "This vivid image captures Schopenhauer's claim that species-interest (driving attraction) and individual welfare (driving lasting happiness) can diverge sharply."
+      },
+      {
+        q: "What is Schopenhauer's closing distinction between happiness and love?",
+        options: [
+          "That happiness and love are simply two words for the identical experience",
+          "That love always guarantees happiness once achieved",
+          "That happiness is impossible without romantic love",
+          "One can be happy without love and love without being happy — they are separate, non-identical processes, and people mistakenly conflate finding love with achieving lasting well-being"
+        ],
+        correct: 3,
+        note: "Love, for Schopenhauer, is a mechanism serving the species' reproductive interest, not a guarantee of the individual's happiness."
+      }
+    ]
+  },
+  {
+    id: 99,
+    transcriptFile: "../transcripts/099-episode-99-transcript.md",
+    wordcloud: "wordclouds/99.png",
+    title: "Schopenhauer: Suffering, Beauty, and the Sage",
+    teaser: "Why pleasure is just the absence of pain, and what it would take to escape the Will entirely.",
+    questions: [
+      {
+        q: "How does Schopenhauer explain the near-universal human experience of restless dissatisfaction, even after achieving goals?",
+        options: [
+          "Because most people set unrealistic goals",
+          "Because society conditions people to always want more",
+          "Achieving a goal never produces lasting satisfaction because the will to life immediately generates a new object of desire — restless striving, not any particular unmet want, is the default state",
+          "Because human brains are incapable of feeling satisfaction"
+        ],
+        correct: 2,
+        note: "This restlessness is structural to the Will itself, not a personal failing or a fixable circumstance."
+      },
+      {
+        q: "What does the 'dark cloud' analogy illustrate about happiness?",
+        options: [
+          "Happiness is like sunlight visible all around, but a personal cloud (constant desire/striving) always shadows the individual no matter how fast they run toward the light — happiness is structurally, not just practically, unreachable",
+          "That happiness is purely a matter of weather and mood",
+          "That clouds represent temporary sadness that always passes",
+          "That happiness can be achieved by moving to a sunnier location"
+        ],
+        correct: 0,
+        note: "This image captures why Schopenhauer thinks happiness isn't just hard to get, but structurally out of reach given how the Will operates."
+      },
+      {
+        q: "What is Schopenhauer's account of what pleasure actually is, upon getting a desired thing?",
+        options: [
+          "Pleasure is the accumulation of many small happy moments over a lifetime",
+          "Pleasure is a purely social construct with no basis in individual experience",
+          "Pleasure is identical to happiness and produces lasting well-being",
+          "Pleasure is merely the subtraction/temporary removal of suffering, not the addition of a positive state called happiness — it reveals a 'normal' baseline rather than elevating you above it"
+        ],
+        correct: 3,
+        note: "This explains why the good feeling from acquiring something fades — it was never happiness to begin with, just temporary relief from striving."
+      },
+      {
+        q: "What does the war-veteran analogy (habituation to chronic pain) illustrate about everyday human suffering?",
+        options: [
+          "That war veterans are uniquely subject to Schopenhauer's philosophy",
+          "A veteran with permanent nerve damage learns to tune out constant low-grade pain until barely noticing it, but the pain is still objectively present — similarly, humans habituate to background suffering and mistake not noticing it for its absence",
+          "That physical pain is entirely psychological and can be eliminated through willpower",
+          "That pain only matters if consciously noticed at every moment"
+        ],
+        correct: 1,
+        note: "This answers the objection 'if life is really that bad, why don't I feel miserable all the time?' — habituation masks but doesn't remove the underlying suffering."
+      },
+      {
+        q: "What are Schopenhauer's two dominant categories of human life, and what problem does each face?",
+        options: [
+          "The wealthy and the poor, who each face only financial problems",
+          "The educated and the uneducated, who each face only intellectual problems",
+          "Ceaseless strivers, who suffer but distract themselves with constant pursuit, and the goal-less, who become bored, anxious, or depressed because the will to life still drives them subconsciously but has no object to attach to",
+          "The religious and the secular, who face only spiritual problems"
+        ],
+        correct: 2,
+        note: "This framework explains modern maladies like boredom and anxiety as arising from a lack of striving-targets, not from having somehow 'solved' desire."
+      },
+      {
+        q: "How does aesthetic experience (contemplating beauty, art, or an immersive view) function as an escape from suffering, according to Schopenhauer?",
+        options: [
+          "Total absorption in the present moment momentarily halts the mind's habitual projection toward future wants, temporarily stopping the machinery of striving and desire — not because of any evolutionary fitness cue",
+          "Because beautiful things are inherently valuable in the marketplace",
+          "Because art always contains a hidden moral lesson",
+          "Because beauty triggers evolved mating-related pleasure responses"
+        ],
+        correct: 0,
+        note: "The episode explicitly sets aside evolutionary/adaptive explanations of beauty appreciation in favor of this present-moment-absorption account."
+      },
+      {
+        q: "What reasoning leads the rare 'sage' figure to pursue an ascetic life of renouncing sex, wealth, food, and fame?",
+        options: [
+          "The sage believes asceticism will lead to social status",
+          "The sage is simply naturally less interested in pleasure than others",
+          "The sage renounces desire temporarily, planning to return to normal striving later",
+          "Recognizing metaphysical monism (all suffering is ultimately one's own suffering), the sage wages an internal 'war' against the Will itself — since this addresses the root cause of suffering rather than its symptoms, it's the only complete, rather than temporary, escape"
+        ],
+        correct: 3,
+        note: "Unlike strivers (who distract from suffering) or the aesthetic escape (which is only temporary), the sage's asceticism targets the underlying cause directly."
+      },
+      {
+        q: "How does Nietzsche's response to Schopenhauer's pessimism differ, despite sharing the premise that suffering is unavoidable?",
+        options: [
+          "Nietzsche agrees completely and adopts the same ascetic solution",
+          "Nietzsche denies that suffering exists at all",
+          "Rather than trying to eliminate or escape suffering (as the sage does), Nietzsche argues one should embrace and even feel privileged by suffering as a resource that builds strength — 'that which does not kill me makes me stronger'",
+          "Nietzsche argues suffering should be eliminated through political revolution"
+        ],
+        correct: 2,
+        note: "Both start from the same premise about suffering's inevitability but reach opposite practical conclusions — flight versus embrace."
+      },
+      {
+        q: "What is the philosophical function of metaphysical monism in Schopenhauer's ethics, specifically for the sage's motivation?",
+        options: [
+          "It has no bearing on ethics, only metaphysics",
+          "It suggests different people have entirely separate, unrelated fates",
+          "Because individuation is only apparent, not ultimate, the sage's compassionate identification with all suffering everywhere becomes logically necessary rather than merely sentimental — all suffering is, in a real sense, one's own",
+          "It proves that only the sage's own suffering matters"
+        ],
+        correct: 2,
+        note: "The metaphysics (oneness) and the ethics (universal compassion, ascetic renunciation) are directly linked, not separate claims."
+      },
+      {
+        q: "What does Schopenhauer's closing line — 'there is only one inborn error, and that is the notion that we exist in order to be happy' — encapsulate?",
+        options: [
+          "That the whole episode's thesis is that disappointment stems from a false assumption about life's purpose, not from bad luck or personal failure",
+          "That happiness is achievable if you simply avoid all errors in judgment",
+          "That Schopenhauer believed humans have no purpose whatsoever",
+          "That only wealthy people mistakenly believe they should be happy"
+        ],
+        correct: 0,
+        note: "This line reframes the entire pessimistic system as correcting a single false premise people carry into life, rather than describing an unfixable tragedy."
+      }
+    ]
+  },
+  {
+    id: 100,
+    transcriptFile: "../transcripts/100-episode-100-transcript.md",
+    wordcloud: "wordclouds/100.png",
+    title: "Heidegger: From Husserl's Phenomenology to Being-in-the-World",
+    teaser: "Why Heidegger thinks even careful philosophers smuggle in an unexamined idea of what it means to exist.",
+    questions: [
+      {
+        q: "What is 'ontology,' as defined in this episode?",
+        options: [
+          "The study of moral obligations",
+          "The branch of philosophy asking what it means to be or exist — not just 'what is a human being' but what existence itself means, and at what point something can be said to exist",
+          "The study of the physical structure of the brain",
+          "A synonym for epistemology"
+        ],
+        correct: 1,
+        note: "Heidegger considers these questions about the meaning of Being to be the most important yet most neglected in philosophy's history."
+      },
+      {
+        q: "What does Diogenes' 'plucked chicken' response to Plato's circle's definition of 'human being' as a 'featherless biped' illustrate?",
+        options: [
+          "That Diogenes disagreed with Plato about politics",
+          "That definitions should always include as many species as possible",
+          "That chickens are philosophically significant animals",
+          "A definition can satisfy the surface criteria of a concept while completely missing the thing's actual essence — a foundational problem that ontology is meant to address"
+        ],
+        correct: 3,
+        note: "This genuine historical counterexample recurs as an example of what happens when philosophers build entire systems on an unexamined or superficial ontological starting point."
+      },
+      {
+        q: "What is the goal of Husserl's phenomenology?",
+        options: [
+          "To achieve certainty not by studying the external world directly, but by rigorously examining the structure of human consciousness/experience itself — the 'lens' through which all objects are perceived",
+          "To prove that the external world does not exist",
+          "To replace philosophy entirely with experimental psychology",
+          "To catalog every possible physical object in existence"
+        ],
+        correct: 0,
+        note: "Since raw sense-data is always filtered through subjective mental categories (per Kant/Hume), Husserl argues no claim to objective truth is possible without first examining that filter."
+      },
+      {
+        q: "What is the 'natural attitude,' as contrasted with the phenomenological attitude?",
+        options: [
+          "A rare, specially cultivated meditative state",
+          "A stance only professional philosophers can achieve",
+          "The default, unreflective human stance of simply taking the external world's existence for granted and going about life without examining underlying assumptions — contrasted with the deliberately cultivated phenomenological attitude",
+          "A stance found only in non-Western philosophical traditions"
+        ],
+        correct: 2,
+        note: "Phenomenology requires deliberately stepping outside this default, unreflective stance in order to examine it."
+      },
+      {
+        q: "What is 'bracketing' (epoché) in Husserl's method?",
+        options: [
+          "A technique for physically isolating oneself from society",
+          "A method for proving God's existence",
+          "A form of memorization used to master philosophical texts",
+          "The technique of suspending — not denying — belief in the natural attitude, in order to notice the assumptions and biases built into it, marking them off from raw phenomena"
+        ],
+        correct: 3,
+        note: "Bracketing doesn't deny the external world exists — it simply sets aside unreflective assumptions about it so they can be examined."
+      },
+      {
+        q: "What does Husserl's 'eidetic reduction' (imaginative variation) do, illustrated by Descartes' wax example?",
+        options: [
+          "It isolates a thing's 'essence' — its necessary, invariable properties — by imaginatively varying its features (color, smell, shape) until it stops being that thing (e.g., melted wax turned to water is no longer wax), pinpointing what's essential versus merely accidental",
+          "It proves that all objects are fundamentally identical",
+          "It replaces the need for any empirical observation",
+          "It applies only to liquids and cannot be used for solid objects"
+        ],
+        correct: 0,
+        note: "This method distinguishes a thing's essential properties from its incidental ones — a genuine philosophical technique, not incidental narrative color."
+      },
+      {
+        q: "What is Heidegger's 'universality' critique of Husserl's phenomenology?",
+        options: [
+          "That phenomenology is too universally accepted to critique",
+          "That Husserl never published his work widely enough",
+          "Even if phenomenology accurately maps the structure of human thought, why assume that structure is specifically and uniformly human, rather than general to other minds or varying across different humans and cultures?",
+          "That phenomenology should be applied to non-conscious objects as well"
+        ],
+        correct: 2,
+        note: "This challenges an unexamined assumption in Husserl's method — that the structures of experience he identifies are universal to all humans specifically."
+      },
+      {
+        q: "What is Heidegger's deeper critique of Husserl, beyond the universality problem?",
+        options: [
+          "Husserl studies the structures underlying our experience of objects, but never asks what underlies the very ability to study anything at all — existence itself; phenomenology smuggles in an unexamined subject-studying-objects ontology",
+          "That Husserl's method takes too long to teach students",
+          "That Husserl completely ignored the existence of consciousness",
+          "That Husserl's method only works for mathematical objects"
+        ],
+        correct: 0,
+        note: "This is Heidegger's foundational move — phenomenology examines experience but never questions the deeper fact of existence that makes any experience possible at all."
+      },
+      {
+        q: "How does Heidegger critique Descartes' 'I think, therefore I am' (cogito) as a starting point for philosophy?",
+        options: [
+          "He argues thinking doesn't actually prove anything",
+          "Conceiving of yourself as 'a thinking thing' already presupposes a prior, more basic experience: simply being there (existing) at all — the abstraction of 'thinking thing' comes after, not before, this more fundamental fact",
+          "He argues Descartes never actually wrote this line",
+          "He argues the cogito applies only to God, not individual humans"
+        ],
+        correct: 1,
+        note: "For Heidegger, Descartes treats a derived abstraction as if it were the most basic starting point, when something more fundamental precedes it."
+      },
+      {
+        q: "What does Heidegger mean by 'Being-in-the-World,' and how does it differ from the traditional subject/object framework shared by Descartes, Locke, Kant, and Husserl?",
+        options: [
+          "It means humans are physically located inside a container called 'the world'",
+          "It is simply another term for consciousness",
+          "It applies only to non-human animals",
+          "Being and world are not separable into a subject navigating a separate external world — they form a unified, hyphenated whole, analogous to 'being in love' rather than being spatially positioned in a container, directly rejecting the subject-object dualism of the prior tradition"
+        ],
+        correct: 3,
+        note: "This term (along with 'Dasein') is Heidegger's attempt to describe existence prior to, and outside of, the subject/object split assumed by the entire preceding philosophical tradition."
+      }
+    ]
+  },
+  {
+    id: 101,
+    transcriptFile: "../transcripts/101-episode-101-transcript.md",
+    wordcloud: "wordclouds/101.png",
+    title: "Heidegger: Technology as a Way of Revealing",
+    teaser: "Why modern technology doesn't just use nature, but reduces it to a standing reserve.",
+    questions: [
+      {
+        q: "What is Heidegger's 'alienation from Being' thesis?",
+        options: [
+          "That philosophy and science have made no progress in understanding existence",
+          "For roughly 2,500 years, philosophy and science have functioned as humanity's tools for confronting the mystery of existence, but have progressively convinced us that measurable facts about entities amount to understanding Being itself, when they don't",
+          "That only religious traditions can access Being",
+          "That technology has nothing to do with philosophy"
+        ],
+        correct: 1,
+        note: "This explains why technological and scientific progress can coexist with a felt sense of spiritual emptiness."
+      },
+      {
+        q: "What is the distinction between 'Being' (Sein) and 'beings/entities' (Seiendes)?",
+        options: [
+          "Being refers only to human existence; entities refers to everything else",
+          "They are simply two words for the same concept",
+          "Being applies only to physical objects; entities applies only to abstract ideas",
+          "Traditional philosophy treats existence as a field of discrete spatiotemporal entities relating to one another; Being itself — the sheer fact that things are, at all — is distinct from any particular entity"
+        ],
+        correct: 3,
+        note: "This distinction explains why something like consciousness is a perennial puzzle — it doesn't fit neatly as one entity among others."
+      },
+      {
+        q: "Why does Heidegger use the term 'Dasein' instead of 'consciousness' or 'subject' for human existence?",
+        options: [
+          "Because those terms already presuppose a mind separate from the world, smuggling in a subject/object split Heidegger wants to dissolve rather than solve within the old framework",
+          "Because 'Dasein' is simply the German translation of 'consciousness'",
+          "Because Heidegger believed only Germans could understand the concept",
+          "Because 'consciousness' was a term invented after his death"
+        ],
+        correct: 0,
+        note: "Dasein names a unified being-in-the-world, avoiding Cartesian dualism's separation of an inner mind from an outer world."
+      },
+      {
+        q: "How does Heidegger's phenomenological method differ from a traditional, 'outsider' scientific inquiry into human beings?",
+        options: [
+          "It relies entirely on laboratory experiments",
+          "It rejects the study of humans altogether",
+          "Rather than objectively asking 'what is a human being,' Heidegger asks what it is like to be the entity for whom being is an issue — since we ourselves are the entities to be analyzed, an outsider/objective stance already assumes the very entity-framework in question",
+          "It only applies to non-human animals"
+        ],
+        correct: 2,
+        note: "This 'insider' approach is why Heidegger thinks an objective, third-person science of humans can't actually grasp Being."
+      },
+      {
+        q: "How does Heidegger's revival of Aristotle's four causes (material, formal, efficient, final) set up his account of technology?",
+        options: [
+          "It doesn't relate to technology at all",
+          "Post-Cartesian thought reduced causation to the efficient cause alone (who/what made a thing); Heidegger argues all four causes are interdependent, and the final cause (purpose) is what motivates the efficient cause to act — so a thing is only revealed as possible when all four causes converge in Dasein's conception of it",
+          "It proves that only material causes are real",
+          "It shows that formal causes are identical to efficient causes"
+        ],
+        correct: 1,
+        note: "This sets up Heidegger's claim that technology is fundamentally about revealing possibility, not mere manufacture."
+      },
+      {
+        q: "What is the deeper essence of technology (techne), beyond the standard 'means to an end' definition, according to Heidegger?",
+        options: [
+          "Pure means-end efficiency with no other dimension",
+          "A purely modern invention with no historical precedent",
+          "Something entirely unrelated to nature",
+          "Bringing forth latent potentialities already present in nature (e.g., a rolling pin latent within a tree) — traditionally resembling artisanal craftsmanship (poiesis), involving a respectful relationship between Dasein and material"
+        ],
+        correct: 3,
+        note: "This is the baseline 'technology in general' against which modern technology can be shown to differ in kind, not just degree."
+      },
+      {
+        q: "What does Heidegger mean by 'Enframing' (Gestell), and how does it differ from traditional craftsmanship's relationship to nature?",
+        options: [
+          "Modern technology reveals nature not through craftsmanlike bringing-forth but through 'challenging' — demanding nature supply energy that can be extracted and stored (e.g., a river becomes a hydroelectric resource) — reducing nature to pure utility for human purposes",
+          "Enframing refers only to picture frames used in art",
+          "Enframing means treating nature with the same respect as traditional craftsmanship",
+          "Enframing only applies to digital technology"
+        ],
+        correct: 0,
+        note: "Heidegger contrasts this with a peasant's relationship to soil, which 'does not challenge' the land the way industrial agriculture does."
+      },
+      {
+        q: "What is 'standing-reserve' (Bestand)?",
+        options: [
+          "A term for stored agricultural surplus specifically",
+          "A financial reserve fund",
+          "Under Enframing, nature becomes inventory sitting ready for human consumption, valuable only insofar as it's useful to humans — raising the extrapolated concern that this logic could extend to treating human labor as an exploitable resource too",
+          "A term describing untouched wilderness"
+        ],
+        correct: 2,
+        note: "This is the endpoint of Enframing's logic — nature (and potentially people) reduced to a standing supply for extraction."
+      },
+      {
+        q: "How does the contrast between Heidegger and John Dewey illustrate that Heidegger is not simply 'anti-technology'?",
+        options: [
+          "Dewey and Heidegger held identical views on technology",
+          "Dewey held that science and technology liberate humans from domination by nature (e.g., reduced infant mortality); Heidegger concedes this liberation is real but argues it cost us something — a piece of what it means to be human, namely our attunement to the mystery of Being",
+          "Dewey argued technology should be banned entirely",
+          "Heidegger denied that technology has ever produced any real benefits"
+        ],
+        correct: 1,
+        note: "This shows Heidegger's critique is about what liberation costs, not a blanket rejection of technological progress."
+      },
+      {
+        q: "What does Heidegger mean by humans as fundamentally 'ontological beings'?",
+        options: [
+          "That humans are defined by their tool-using capacity alone",
+          "That humans are purely biological organisms with no distinct capacities",
+          "That only philosophers qualify as ontological beings",
+          "Humans are the kind of beings who can ask what it means to exist at all — who can be struck by the sheer mystery of existence — a capacity modern life, with science and technology providing ready-made explanations, has largely displaced"
+        ],
+        correct: 3,
+        note: "This ties back to the idea that a person confronting an unexplained natural event without modern explanations has an unmediated encounter with Being that a modern person, who can 'just look it up,' no longer has."
+      }
+    ]
+  },
+  {
+    id: 103,
+    transcriptFile: "../transcripts/103-episode-103-transcript.md",
+    wordcloud: "wordclouds/103.png",
+    title: "From Descartes to Sartre: The Search for Certainty",
+    teaser: "How doubt, idealism, and phenomenology set the stage for Sartre's theory of consciousness.",
+    questions: [
+      {
+        q: "What is Descartes' rationalist method aiming to achieve, and what standard does it set?",
+        options: [
+          "Poetic beauty in philosophical writing",
+          "Agreement among as many philosophers as possible",
+          "Mathematical-style certainty (like 1+1=2), governed by the rule to never assert anything not 'clear' (nothing obscure) and 'distinct' (nothing confused) — a reaction against 2,000 years of unrigorous philosophical speculation",
+          "Certainty derived purely from religious authority"
+        ],
+        correct: 2,
+        note: "Descartes wants to replace disagreement-prone speculation with a rigorous, mathematics-like foundation for knowledge."
+      },
+      {
+        q: "What does Descartes' method of doubt conclude with 'I think, therefore I am'?",
+        options: [
+          "By doubting everything, including his own existence, Descartes realizes the very act of doubting/thinking proves a thinking thing exists — this becomes the one thing he has direct, rather than indirect, awareness of",
+          "That doubt itself is impossible",
+          "That only God's existence can be doubted",
+          "That thinking requires no thinker at all"
+        ],
+        correct: 0,
+        note: "This is Descartes' foundational certainty, contrasted with our merely indirect awareness of the external world."
+      },
+      {
+        q: "What does Descartes conclude about our awareness of external objects, illustrated by sensory-error examples like a stick appearing bent in water?",
+        options: [
+          "That external objects definitely do not exist",
+          "That sensory errors never actually occur",
+          "That external objects can be known with total certainty through the senses",
+          "We are never directly aware of external objects themselves, only of how they appear to us (phenomena) — the origin of the phenomena/reality distinction that later phenomenology builds on"
+        ],
+        correct: 3,
+        note: "This distinction between appearance and thing-itself becomes the central problem the rest of the philosophical lineage in this episode tries to resolve."
+      },
+      {
+        q: "What escape route does Descartes attempt to avoid solipsism (being certain only of his own existence), and how is it received?",
+        options: [
+          "He attempts a proof of a non-deceiving God who guarantees an external world exists — a move the episode notes 'nobody was buying'",
+          "He simply asserts the external world exists without argument",
+          "He appeals to majority opinion among philosophers",
+          "He claims solipsism is scientifically impossible"
+        ],
+        correct: 0,
+        note: "This weak point in Descartes' system is exactly what later thinkers exploit to push his logic in more radical directions."
+      },
+      {
+        q: "What is Kant's 'Copernican turn,' correcting Descartes?",
+        options: [
+          "Kant argues the mind is entirely passive, exactly like Descartes claimed",
+          "Kant rejects the existence of the external world entirely",
+          "Rather than the mind passively receiving phenomena as Descartes assumed, Kant argues the mind actively organizes and structures incoming phenomena via its own mental faculties",
+          "Kant argues phenomena and noumena are identical"
+        ],
+        correct: 2,
+        note: "This active-mind model is Kant's key correction to Descartes' passive-observer picture of consciousness."
+      },
+      {
+        q: "What is Kant's phenomena/noumena distinction, and what does it imply about knowledge?",
+        options: [
+          "Phenomena is the world of human experience, structured by the mind; noumena is the unknowable world of 'things-in-themselves' — we can only ever know the former, directly motivating Kant's transcendental idealism",
+          "Phenomena and noumena are simply synonyms",
+          "Noumena refers only to mathematical objects",
+          "Phenomena refers only to dreams and hallucinations"
+        ],
+        correct: 0,
+        note: "This distinction sets sharp limits on what we can claim to know about reality as it exists independent of our minds."
+      },
+      {
+        q: "How did post-Kantian idealists push Kant's own logic further than Kant himself intended?",
+        options: [
+          "They rejected Kant's framework entirely and returned to Cartesian rationalism",
+          "They argued phenomena and noumena were provably identical",
+          "They ignored the phenomena/noumena distinction altogether",
+          "If we can never access things-in-themselves, we can't even be certain such a world exists at all, that there's more than one 'thing' causing phenomena, or that causality (itself a mental category) applies to it — conclusions Kant resisted but that follow from his own premises"
+        ],
+        correct: 3,
+        note: "This is a strong example of thinkers using a predecessor's own logical structure to reach more radical conclusions than the predecessor accepted."
+      },
+      {
+        q: "What is Husserl's phenomenology attempting to rescue, in reaction to idealism?",
+        options: [
+          "Husserl wants a rigorous method that still secures certainty about the external, physical world — not merely certainty confined to one's own mind — achieved by studying the very structure of consciousness itself",
+          "Husserl wants to prove that certainty is entirely impossible",
+          "Husserl wants to eliminate the study of consciousness from philosophy",
+          "Husserl wants to return philosophy fully to Cartesian dualism"
+        ],
+        correct: 0,
+        note: "Husserl's radical move is turning phenomenology into a rigorous science of consciousness's own structure, hoping this yields the objectivity idealism couldn't."
+      },
+      {
+        q: "What is the distinction between the 'phenomenological attitude' and the 'natural attitude,' and why are they mutually exclusive?",
+        options: [
+          "They are not actually distinct — the same mental state under two names",
+          "The natural attitude applies only to scientists; the phenomenological attitude applies only to philosophers",
+          "The phenomenological attitude is Descartes' rigorous doubt-everything mode; the natural attitude is the default, presupposition-laden mode everyone (including scientists) normally operates in — you can't hold both simultaneously, since one doubts what the other simply assumes",
+          "The phenomenological attitude only applies to dreams"
+        ],
+        correct: 2,
+        note: "This distinction addresses how to validate everyday/scientific life without abandoning philosophical rigor, and vice versa."
+      },
+      {
+        q: "What is Sartre's key modification to Heidegger's rejection of the subject/object split, and how does the Flaubert argument support his broader project?",
+        options: [
+          "Sartre agrees being and world are unified and rejects subject-acting-on-object, but unlike Heidegger, he retains the concept of consciousness itself as inseparable from the world (not an empty container, but always actional and referential); the Flaubert argument shows that reducing a person to universal psychological drives leaves unexplained why those drives produced this specific individual's choices, motivating Sartre's rejection of universal-essence explanations",
+          "Sartre rejects consciousness as a useful concept entirely",
+          "Sartre argues Flaubert had no distinctive individual psychology",
+          "Sartre agrees completely with Heidegger and adds nothing new"
+        ],
+        correct: 0,
+        note: "The Flaubert example is Sartre's own argument (not host color) showing that universal-essence explanations can't fully account for an individual's specific, concrete choices."
+      }
+    ]
+  },
+  {
+    id: 104,
+    transcriptFile: "../transcripts/104-episode-104-transcript.md",
+    wordcloud: "wordclouds/104.png",
+    title: "Sartre: Consciousness Is Freedom",
+    teaser: "Why nothingness, not any fixed nature, is what makes you radically free.",
+    questions: [
+      {
+        q: "What is the 'prisoner in a cell' problem that Sartre inherits from the Cartesian tradition, and how does he respond to it?",
+        options: [
+          "A literal historical account of Sartre's imprisonment",
+          "Since Descartes, philosophy has treated consciousness as sealed off from the world, aware only of appearances/representations rather than things themselves; Sartre rejects this cage metaphor entirely rather than trying to escape it via idealism or studying the cage's structure",
+          "A problem Sartre considers already fully solved by Descartes",
+          "A metaphor Sartre uses only to describe political imprisonment"
+        ],
+        correct: 1,
+        note: "Unlike solipsism, idealism, or Husserl's study of consciousness's structure, Sartre rejects the cage metaphor as the wrong picture entirely."
+      },
+      {
+        q: "What is 'being-in-itself' (être-en-soi), and what earlier philosopher's concept is it modeled on?",
+        options: [
+          "Sartre's term for consciousness, modeled on Heidegger's Dasein",
+          "A term for divine beings, modeled on medieval theology",
+          "A term describing only human bodies",
+          "Sartre's term for the world/matter, modeled on Parmenides: full positivity, what-is-is and what-is-not-is-not, timeless, without becoming or otherness"
+        ],
+        correct: 3,
+        note: "This gives a name to the non-conscious side of reality without smuggling in Cartesian dualism."
+      },
+      {
+        q: "What is 'being-for-itself' (être-pour-soi), and how does it differ from Descartes' model of the mind?",
+        options: [
+          "Sartre's term for consciousness — not a container or box holding representations, but pure activity, pure directedness toward being-in-itself; its objects ARE the things of the world directly, cutting out Descartes' middle step of a mind decoding internal appearances",
+          "It is identical to Descartes' model of the mind as a representation-processing box",
+          "It refers only to unconscious mental processes",
+          "It applies only to non-human animals"
+        ],
+        correct: 0,
+        note: "This reconciles Cartesian distinction-making (consciousness vs. world) with Heideggerian unity (consciousness directly engaged with the world, not sealed off from it)."
+      },
+      {
+        q: "Why does Sartre argue 'consciousness is nothingness'?",
+        options: [
+          "Because consciousness doesn't actually exist",
+          "Because consciousness is identical to being-in-itself",
+          "Since being-in-itself is fully positive/affirmative (all 'is,' no 'is not'), and consciousness can conceive of absence and negation, consciousness cannot itself be part of being-in-itself — it has no positive content of its own, only its relation of revealing objects",
+          "Because nothingness is a purely religious concept"
+        ],
+        correct: 2,
+        note: "This is the bridge concept connecting being-in-itself/for-itself to Sartre's ultimate claim about human freedom."
+      },
+      {
+        q: "What does the 'lack of Pierre' example (walking into a bar expecting to meet Pierre, finding him absent) illustrate?",
+        options: [
+          "That Pierre never actually existed",
+          "You don't perceive an inventory of objects that simply excludes Pierre — you directly perceive an 'absence of Pierre,' a genuine negative fact, proving that nothingness/negation originates from consciousness, not from being-in-itself (which Parmenides held could contain no negative facts)",
+          "That bars are inherently philosophical locations",
+          "That absence can never actually be perceived"
+        ],
+        correct: 1,
+        note: "This is Sartre's own thought experiment (from Being and Nothingness), directly supporting his claim that consciousness is the 'source of nothingness' in experience."
+      },
+      {
+        q: "What do the gambler and vertigo-at-the-cliff-edge thought experiments both illustrate about freedom?",
+        options: [
+          "That gambling and heights are inherently dangerous activities",
+          "That people should avoid risky situations",
+          "That fear is always irrational",
+          "A gambler's past resolution not to gamble doesn't bind his present self unless renewed now; fear at a cliff edge is fear of the possibility of choosing to jump — in both cases, nothing (no fixed essence, no past self) determines the next action, which is exactly what makes humans radically free"
+        ],
+        correct: 3,
+        note: "Both are Sartre's own examples establishing that nothingness (the absence of any fixed, determining essence) is what freedom actually consists of."
+      },
+      {
+        q: "What is 'anguish' (angoisse), and how does it differ from what one might naively expect upon discovering radical freedom?",
+        options: [
+          "The feeling produced when confronting the full reality of one's freedom and responsibility — not liberating euphoria but terror, since every moment is an open, undetermined choice toward one's best or worst possible self",
+          "A purely physical sensation with no philosophical significance",
+          "The feeling of relief that comes from escaping all responsibility",
+          "A feeling experienced only by people with mental illness"
+        ],
+        correct: 0,
+        note: "Sartre contrasts this with the naive expectation that discovering radical freedom would feel like 'getting out of jail.'"
+      },
+      {
+        q: "How does Sartre critique the Freudian unconscious as an excuse-generating mechanism, using the 'helping the bleeding girl' example?",
+        options: [
+          "Sartre agrees fully with Freud's model of the unconscious",
+          "Sartre denies that self-interested motives ever exist",
+          "The supposedly hidden, self-interested motive isn't inaccessible in a Freudian unconscious — it's known via 'non-positional' awareness rather than reflective 'positional' awareness, eliminating the need for an unconscious as a way to offload responsibility for one's true motives",
+          "Sartre argues the unconscious is a purely modern invention"
+        ],
+        correct: 2,
+        note: "This distinction between positional and non-positional consciousness is Sartre's alternative to the Freudian unconscious as a bad-faith excuse."
+      },
+      {
+        q: "What is Sartre's account of emotions, against the standard 'perception → physiological response → passive emotion' model?",
+        options: [
+          "Emotions have no relationship to intentionality or choice",
+          "Emotions are intentional (always about something) and function as strategies deployed to escape or transform an unpleasant state of affairs — e.g., getting angry at a driver who cut you off transforms a degraded, 'insect' status into indignant moral superiority, a more bearable alternative than humiliation",
+          "Emotions are purely random neurological events",
+          "Emotions are entirely determined by upbringing with no room for choice"
+        ],
+        correct: 1,
+        note: "This implies that claiming 'I'm just an angry person' is itself an act of bad faith — one repeatedly chooses anger as a coping strategy rather than possessing a fixed emotional essence."
+      },
+      {
+        q: "What connects the Pierre example, the gambler, and the vertigo example as a unified argument?",
+        options: [
+          "They are unrelated anecdotes with no common thread",
+          "They all involve physical danger",
+          "They all take place in France",
+          "Each shows, from a different angle, that nothingness (the absence of any fixed essence, past self, or predetermined content) is woven into conscious experience — and this same nothingness is what constitutes human freedom"
+        ],
+        correct: 3,
+        note: "Together these examples build Sartre's central claim: consciousness's fundamental nothingness is precisely what makes radical freedom possible."
+      }
+    ]
+  },
+  {
+    id: 105,
+    transcriptFile: "../transcripts/105-episode-105-transcript.md",
+    wordcloud: "wordclouds/105.png",
+    title: "Sartre: Facticity, Transcendence, and the Self",
+    teaser: "Why you are not a hidden soul, but the sum of everything you've actually done.",
+    questions: [
+      {
+        q: "What is the 'hidden soul' model of the self that Sartre argues against?",
+        options: [
+          "Sartre's own theory of the self",
+          "A theory found only in Buddhist philosophy",
+          "The popular/Christian-derived view that your 'true self' is a stable, private inner personality or soul, accessible only to you (and perhaps intimates), distinct from the social 'mask' worn publicly",
+          "A purely modern psychological theory with no religious roots"
+        ],
+        correct: 2,
+        note: "This is the foil Sartre's entire theory of the self is built to reject."
+      },
+      {
+        q: "What is 'facticity,' and what is it analogous to in Sartre's earlier ontology?",
+        options: [
+          "The totality of objective facts currently true about a person (height, job, past actions) — analogous to being-in-itself, 'is what it is'",
+          "A person's future possibilities and potential",
+          "A purely legal concept with no philosophical use",
+          "The feeling of anxiety produced by freedom"
+        ],
+        correct: 0,
+        note: "Only a corpse is pure facticity — a living person is never reducible to facts alone."
+      },
+      {
+        q: "What is 'transcendence,' and how does it relate to facticity?",
+        options: [
+          "Transcendence refers only to religious experiences",
+          "Transcendence and facticity are identical concepts",
+          "Transcendence applies only to artists and creative people",
+          "A person's capacity to change and the possibilities open to them — analogous to being-for-itself, 'is what it is not' — mutually entangled with facticity, since facts constrain possibilities while choices generate new facts"
+        ],
+        correct: 3,
+        note: "Facticity and transcendence limit and define each other rather than existing as fully separate domains."
+      },
+      {
+        q: "What does the haiku analogy illustrate about the relationship between facticity and transcendence?",
+        options: [
+          "That poetry has no relationship to philosophy",
+          "Freedom is never absolute — it's 'freedom within limitations,' and those limitations (facticity) are what give choices meaning, just as a haiku's strict syllable constraints are what make the art form meaningful",
+          "That haikus are the only valid philosophical art form",
+          "That transcendence eliminates the need for any constraints"
+        ],
+        correct: 1,
+        note: "This illustrates that transcendence operates within facticity's limits, not despite or separate from them."
+      },
+      {
+        q: "What is 'bad faith,' in this account of the self?",
+        options: [
+          "A purely religious sin with no secular meaning",
+          "A synonym for lying to other people",
+          "The tactic of fleeing the anxiety-inducing duality of facticity and transcendence by collapsing oneself entirely into one or the other — pretending to be pure facticity (a fixed role/essence) or pure transcendence (unlimited open possibility)",
+          "A term describing only professional dishonesty"
+        ],
+        correct: 2,
+        note: "Bad faith is an escape from the discomfort of holding facticity and transcendence together, rather than a moral failing in the ordinary sense."
+      },
+      {
+        q: "What does Sartre's café waiter example illustrate?",
+        options: [
+          "A waiter who performs 'waiterliness' so completely that he reduces himself to pure facticity (just a role), denying his own transcendence — Sartre's own illustration of bad faith",
+          "That waiters are incapable of philosophical reflection",
+          "That all service jobs are inherently degrading",
+          "That facticity doesn't apply to professional roles"
+        ],
+        correct: 0,
+        note: "This is Sartre's own thought experiment from Being and Nothingness, not incidental narrative color — legitimate material for a 'which scenario illustrates bad faith' question."
+      },
+      {
+        q: "What does Sartre mean by claiming the covert desire behind bad faith is to 'become God'?",
+        options: [
+          "That bad faith is a purely areligious concept",
+          "That people literally believe they are divine",
+          "That Sartre was arguing for the literal existence of God",
+          "The traditional God is imagined as simultaneously perfect/complete (pure facticity — nothing left to change) and omnipotent (pure transcendence — able to become anything); bad faith covertly seeks both at once, tying the whole phenomenon back to residual Christian conceptual inheritance"
+        ],
+        correct: 3,
+        note: "This explains why people gravitate toward bad faith — it echoes an inherited ideal of being both fixed/complete and infinitely capable at the same time."
+      },
+      {
+        q: "What is 'being-for-others,' the third ontological category Sartre adds alongside being-in-itself and being-for-itself?",
+        options: [
+          "A purely social contract explaining political obligation",
+          "The self is not purely internal, but partly constituted by how others perceive and judge us (e.g., being seen as trustworthy, or as 'the guy in the weird shoes') — resolving the question of where the self is 'located' by showing it's partly external and relational",
+          "A concept identical to facticity",
+          "A term applying only to romantic relationships"
+        ],
+        correct: 1,
+        note: "This third category shows Sartre rejecting both the 'hidden soul' view and a purely internal, self-determined view of identity."
+      },
+      {
+        q: "According to Sartre, what actually constitutes 'who you are,' rather than introspection or self-narrative?",
+        options: [
+          "Your genetic inheritance alone",
+          "Whatever story you privately tell yourself about your character",
+          "The self is 'the conglomeration of all the things you've ever actually done' — an abstraction outside you, partly requiring others' perspectives to be known, since others sometimes have better epistemic access to who you really are than your own self-belief",
+          "Whatever your parents decided about your identity in childhood"
+        ],
+        correct: 2,
+        note: "This is illustrated by the Napoleon-delusion and the would-be-hero-who-flees examples — cases where self-belief and actual action diverge, and action is what actually reveals the self."
+      },
+      {
+        q: "What do the 'Napoleon delusion' and 'Walmart hero' examples both illustrate?",
+        options: [
+          "That psychological delusions have no philosophical relevance",
+          "That self-belief is always more reliable than external judgment",
+          "That heroism is impossible to define",
+          "Self-reports and self-narratives can be false, and outsiders can have superior epistemic access to 'who someone really is,' since the self is measured by actions, not by sincere self-belief"
+        ],
+        correct: 3,
+        note: "A man sincerely believing he's Napoleon, and a man who claims he'd be heroic but flees when tested, both show that Sartre locates the true self in enacted behavior, not private conviction."
+      }
+    ]
+  },
+  {
+    id: 106,
+    transcriptFile: "../transcripts/106-episode-106-transcript.md",
+    wordcloud: "wordclouds/106.png",
+    title: "de Beauvoir: The Ambiguity of Existence",
+    teaser: "Why freedom, not certainty, has to be the foundation of an ethics without God.",
+    questions: [
+      {
+        q: "What is de Beauvoir's central thesis of 'the ambiguity of human existence'?",
+        options: [
+          "That human existence is entirely meaningless",
+          "It's not just one duality (facticity/transcendence) but many simultaneous ones — subject/object, individual/collective, mind/matter, self/other — and to be human is to be irreducibly both sides of each duality at once, producing permanent, unresolvable tension",
+          "That ambiguity only applies to abstract philosophical concepts, not lived experience",
+          "That humans should strive to eliminate all ambiguity from their lives"
+        ],
+        correct: 1,
+        note: "This is the foundational concept the whole book builds from — an extension of Sartre's single facticity/transcendence duality into many simultaneous dualities."
+      },
+      {
+        q: "How does de Beauvoir characterize historical philosophical and religious systems (Platonic forms, mind/body dualism, nationalism) in relation to ambiguity?",
+        options: [
+          "As strategies to oversimplify existence by collapsing one side of a duality — structurally identical to individual bad faith, just institutionalized at a cultural scale",
+          "As entirely unrelated to the problem of ambiguity",
+          "As the only valid ways of resolving ambiguity",
+          "As purely arbitrary historical accidents with no common structure"
+        ],
+        correct: 0,
+        note: "Her own project, by contrast, is to embrace ambiguity rather than resolve it through any of these historical strategies."
+      },
+      {
+        q: "What does Sartre's phrase 'condemned to be free,' adopted by de Beauvoir, answer?",
+        options: [
+          "A purely legal question about criminal responsibility",
+          "A question about religious salvation",
+          "The claim that freedom can be permanently escaped through effort",
+          "The relativism objection — if existence precedes essence, how can any values be wrong? De Beauvoir's answer: freedom isn't chosen, it's an inescapable structural fact of the human condition (even choosing to do nothing is a choice), giving her ethics a non-arbitrary foundation without appeal to objective good/evil"
+        ],
+        correct: 3,
+        note: "This inescapable freedom becomes the grounding point for her entire ethical system."
+      },
+      {
+        q: "What does the skateboard/semi-truck thought experiment illustrate about moral responsibility?",
+        options: [
+          "That all outcomes are equally blameworthy regardless of ability to prevent them",
+          "That vehicles are inherently more dangerous than skateboards",
+          "A friend who could easily stop a runaway skateboard but doesn't is blameworthy; a friend facing a runaway 18-wheeler, genuinely powerless to stop it, is not — moral accountability scales with the freedom actually available in a given situation",
+          "That moral responsibility has nothing to do with ability to act"
+        ],
+        correct: 2,
+        note: "This is de Beauvoir's own argument/illustration, directly supporting her claim that ethics presupposes real, limited (not infinite, not zero) freedom."
+      },
+      {
+        q: "What does de Beauvoir mean by 'you don't offer an ethics to a god' — nor to someone who believes themselves wholly powerless?",
+        options: [
+          "That ethics is a purely human invention with no cosmic significance",
+          "Ethics presupposes genuine, limited freedom — a being with infinite power (a god) has no real choices to be evaluated, and a being who believes itself to have zero power cannot be held accountable either; morality only applies in the space between these extremes",
+          "That gods are subject to the exact same moral rules as humans",
+          "That only religious people can be moral"
+        ],
+        correct: 1,
+        note: "This maxim ties her ethics directly to the amount of actual freedom available to an agent in a given situation."
+      },
+      {
+        q: "What is the 'sub-man,' the first type on de Beauvoir's ladder of bad-faith personalities?",
+        options: [
+          "Someone who is apathetic, believing 'nothing merits desire or effort' — denying that any tension or lack exists in them by disengaging entirely, making them socially dangerous since they're malleable and can be co-opted by others' projects (mob-prone)",
+          "Someone who has achieved the highest level of authentic freedom",
+          "A person who has no relationship to bad faith whatsoever",
+          "A term describing only physically weak individuals"
+        ],
+        correct: 0,
+        note: "The sub-man's total disengagement from possibility, rather than confrontation with it, makes them especially susceptible to being absorbed into others' causes."
+      },
+      {
+        q: "What is the 'serious man,' described as the most common bad-faith type (around 70% of people, per the episode)?",
+        options: [
+          "Someone who never holds any beliefs at all",
+          "Someone who correctly perceives ambiguity but concludes existence is meaningless",
+          "A purely fictional type with no real-world examples",
+          "Someone who acknowledges the ambiguity/lack in existence but 'fills' it by attaching total, permanent identity to an external cause (e.g., treating 'I am a lifelong member of X' as a fixed, unchangeable essence rather than a chosen, revisable commitment)"
+        ],
+        correct: 3,
+        note: "The error isn't holding beliefs — it's treating one's facticity (a chosen commitment) as one's whole, permanent identity, denying transcendence."
+      },
+      {
+        q: "What is de Beauvoir's critique of the 'nihilist' type, who correctly perceives ambiguity but concludes life is meaningless?",
+        options: [
+          "The nihilist 'forgets that it is up to him to justify the world' — they reject existence yet cannot escape being alive and continuing to transcend themselves; their rejection can curdle into a 'positive desire for destruction,' making them a tyranny freedom must stand against",
+          "De Beauvoir has no critique of the nihilist and considers their position correct",
+          "The nihilist is simply a more honest version of the serious man",
+          "Nihilism is presented as the ideal endpoint of her ethics"
+        ],
+        correct: 0,
+        note: "The nihilist commits structurally the same error as the serious man — declaring a cosmic verdict ('there is/isn't meaning') as if speaking for the universe, just with opposite content."
+      },
+      {
+        q: "What is de Beauvoir's final argument about the source of meaning?",
+        options: [
+          "Meaning is entirely absent from human existence",
+          "Meaning is fixed at birth and cannot be changed",
+          "Meaning was never something to be handed down cosmically — it's something continuously chosen and enacted, like a career or relationship; you cannot escape having some meaning, since even declaring life meaningless is itself a meaning-making act",
+          "Meaning can only be granted by religious authority"
+        ],
+        correct: 2,
+        note: "This directly refutes the nihilist's position — even nihilism is itself an act of assigning meaning, just a self-undermining one."
+      },
+      {
+        q: "Why does de Beauvoir consider both the sub-man and the serious man socially dangerous, despite being very different types?",
+        options: [
+          "The sub-man's total disengagement makes him malleable and mob-prone (easily absorbed into others' causes), while the serious man's totalizing commitment to an external cause has historically been linked to ideological violence — both evade the harder work of embracing ambiguity",
+          "Because both types are physically violent by nature",
+          "Because both types reject all forms of belief",
+          "Because neither type is capable of holding a job"
+        ],
+        correct: 0,
+        note: "Both figures illustrate how evading ambiguity — whether through total disengagement or total commitment — can have real social and political costs."
+      }
+    ]
+  },
+  {
+    id: 108,
+    transcriptFile: "../transcripts/108-episode-108-transcript.md",
+    wordcloud: "wordclouds/108.png",
+    title: "God, Ideology, and the Absurd: From Nietzsche to Camus",
+    teaser: "What fills the void after 'God is dead,' and why Sisyphus might be happy after all.",
+    questions: [
+      {
+        q: "What does Nietzsche's 'God is dead' actually claim, correctly interpreted?",
+        options: [
+          "A triumphant celebration that religion has ended",
+          "A historical/psychological observation: post-Copernicus, post-Darwin, post-Freud, it has become effectively impossible for a 'reasonable person' to sincerely hold pre-scientific religious/mythological beliefs — stated with fear and regret, not celebration",
+          "A prediction that science will replace all human need for meaning",
+          "A purely biographical remark about Nietzsche's own atheism"
+        ],
+        correct: 1,
+        note: "This corrects a common misreading — Nietzsche's tone toward this development was concerned, not triumphant."
+      },
+      {
+        q: "Why does the episode compare religion/mythology to independently invented tools like carts or animal-drawn sleds across different cultures?",
+        options: [
+          "To argue that religion has no real function",
+          "To argue that all cultures eventually abandon religion",
+          "To argue that mythology and technology are identical",
+          "To illustrate that different cultures independently invented mythology/religion to solve the same universal problem — a craving for meaning — explaining why losing religion is experienced as a crisis, not simply a liberation"
+        ],
+        correct: 3,
+        note: "This frames religion as one contingent solution among possible others to a genuine, universal human need, not as an inherently necessary belief."
+      },
+      {
+        q: "What does Nietzsche predict fills the 'void' left after the loss of religious meaning?",
+        options: [
+          "The void gets filled by something else — nationalism, Marxism, capitalism, ideology generally — since losing religion doesn't erase the underlying human need for meaning and tribal belonging; Nietzsche predicted this would lead to mass death in the 20th century",
+          "Nothing fills the void; humans simply learn to live without any belief system",
+          "Science alone naturally and peacefully fills the void",
+          "The void is permanently unfillable and causes no further consequences"
+        ],
+        correct: 0,
+        note: "This is the causal bridge explaining why the 20th century became, in this telling, a story of competing ideologies."
+      },
+      {
+        q: "Why did many Marxists in the 1920s begin doubting classical Marxism?",
+        options: [
+          "Because Marx's writings were lost and could no longer be studied",
+          "Because capitalism had been entirely abolished by that point",
+          "The predicted proletariat revolution didn't occur in industrialized Germany (the Weimar Republic prevailed instead), and the one actual communist revolution occurred in agrarian Russia — not an industrial society as Marx predicted — and devolved into Leninist authoritarianism",
+          "Because Marx himself renounced his own theory"
+        ],
+        correct: 2,
+        note: "These disconfirming facts set up the Frankfurt School's project: revise rather than abandon or blindly repeat classical Marxism."
+      },
+      {
+        q: "What was the Frankfurt School's core critique of Marx?",
+        options: [
+          "That Marx's economics were entirely correct and needed no revision",
+          "Marx neglected personal/individual liberty and the individual generally, treating people as interchangeable class members rather than distinct individuals — a blind spot shared with the era's broader skepticism of Enlightenment rationalism",
+          "That Marx focused too much on individual psychology and not enough on economics",
+          "That Marx's theory had no relationship to the working class at all"
+        ],
+        correct: 1,
+        note: "This critique aims to preserve what the Frankfurt School saw as correct in Marxism while addressing its neglect of individual experience."
+      },
+      {
+        q: "How does existentialist freedom and responsibility (Sartre/de Beauvoir) respond to the historical moment of Nazi-occupied France?",
+        options: [
+          "By arguing that group identity fully excuses individual moral responsibility",
+          "By arguing that moral responsibility applies only to political leaders",
+          "By denying that choice exists under oppressive conditions",
+          "Against the excuse of 'just following orders' or 'just being a member of my group,' existentialists insist a person always had a choice and is responsible for it, even when the alternative was costly — group identity displacing individual responsibility is itself a form of evasion"
+        ],
+        correct: 3,
+        note: "This is essentially the concept of bad faith (though not named as such here), applied directly to the historical crisis of the moment."
+      },
+      {
+        q: "What is the central image of Camus's Myth of Sisyphus, and what does it represent?",
+        options: [
+          "Sisyphus, condemned to eternally push a boulder up a hill only to watch it roll back down, represents human existence: effort expended in a universe indifferent to outcomes — the mismatch between human desire for meaning and the universe's silence on the question is what Camus calls 'the absurd'",
+          "A myth about divine punishment with no relevance to modern life",
+          "An argument that physical labor is inherently degrading",
+          "A metaphor for the inevitability of scientific progress"
+        ],
+        correct: 0,
+        note: "This central thought experiment anchors Camus's account of the absurd condition."
+      },
+      {
+        q: "According to Camus, when does the feeling of meaninglessness actually arise for Sisyphus?",
+        options: [
+          "Meaninglessness is felt constantly and without interruption",
+          "Meaninglessness only appears when Sisyphus stops and reflects ('why am I pushing this boulder?'); while simply engaged in the act, the question doesn't arise — reason, for Camus, is the wrong tool for determining life's ultimate meaning",
+          "Meaninglessness never arises for Sisyphus under any circumstance",
+          "Meaninglessness arises only when others are watching"
+        ],
+        correct: 1,
+        note: "Camus's 'Allen wrench for a space shuttle' analogy makes this point: reason is suited to practical tasks, not to imposing cosmic purpose."
+      },
+      {
+        q: "How does Kierkegaard's kissing-couple example (referenced in this episode) support Camus's reflection-versus-engagement distinction?",
+        options: [
+          "It shows that romantic love is inherently irrational and should be avoided",
+          "It has no relevance to the reflection/engagement distinction",
+          "It proves that all human relationships are absurd",
+          "From the outside, intimacy looks absurd when reflected upon and analyzed; only full engagement/immersion in the moment reveals its actual significance — paralleling how over-reflection on Sisyphus's task would strip it of meaning that immersion in the act preserves"
+        ],
+        correct: 3,
+        note: "This borrowed example supports Camus's broader claim that detached reflection, not lived engagement, is what generates the sense of absurdity."
+      },
+      {
+        q: "What strategy does Camus propose for responding to the absurd, illustrated by 'making his rock his thing'?",
+        options: [
+          "Complete withdrawal from all activity and effort",
+          "Since reflection can't yield a satisfying answer about ultimate meaning, and over-reflection actively degrades quality of life, the remedy is full engagement in one's tasks and relationships — learning the rock's grooves, one's own posture and patterns — rather than standing outside evaluating them",
+          "Seeking a religious solution to replace the absurd",
+          "Convincing oneself that the boulder will eventually stay at the top"
+        ],
+        correct: 1,
+        note: "This is the one fully covered 'strategy' for engaging the absurd in this episode — a second strategy is only promised for a future episode."
+      }
+    ]
+  },
+  {
+    id: 109,
+    transcriptFile: "../transcripts/109-episode-109-transcript.md",
+    wordcloud: "wordclouds/109.png",
+    title: "The Frankfurt School: False Consciousness and Marcuse",
+    teaser: "Why Marcuse thought a free society could still be quietly totalitarian.",
+    questions: [
+      {
+        q: "Why does the Frankfurt School see Marx's failure to predict a Western proletariat revolution as a problem to be explained?",
+        options: [
+          "Because Marx never actually made such a prediction",
+          "Because the revolution did occur exactly as predicted",
+          "Marx over-relied on pure economics and ignored individual psychology; workers weren't rising up because they'd been conditioned (via media, false needs, alienation) to accept their role as workers/consumers as simply 'how the world is' — a phenomenon they call false consciousness",
+          "Because capitalism had already been abolished by the time of their writing"
+        ],
+        correct: 2,
+        note: "This reframes the missing revolution as a psychological/ideological problem, not just an economic miscalculation."
+      },
+      {
+        q: "How does the Frankfurt School characterize ideology, using examples like a sincere capitalist and a sincere Marxist each accusing the other of being deluded?",
+        options: [
+          "Ideology operates through sincere, good-faith belief rather than deliberate deception — people on both sides genuinely believe they're doing good, and false consciousness works through good-faith immersion in a system, not conspiracy",
+          "Ideology is always the product of a deliberate, conspiratorial deception by elites",
+          "Only one side of any ideological conflict can ever be sincere",
+          "Ideology has no bearing on how ordinary people think"
+        ],
+        correct: 0,
+        note: "This distinguishes their theory from a 'cabal pulling strings' conspiracy model — sincerity, not deception, is what makes ideology so effective."
+      },
+      {
+        q: "How does the Frankfurt School characterize Enlightenment reason as 'instrumental' rather than neutral?",
+        options: [
+          "Reason has no relationship to the natural world",
+          "Reason is purely a religious concept dressed up in secular language",
+          "Reason applies only to mathematics and formal logic",
+          "Reason, since the Enlightenment, has always been oriented toward controlling nature for human benefit (e.g., studying a plant to heal wounds) rather than being neutral, disinterested truth-seeking"
+        ],
+        correct: 3,
+        note: "This control-orientation is what later gets extended, worryingly, from nature onto human beings themselves."
+      },
+      {
+        q: "What is the 'Enlightenment to fascism' argument?",
+        options: [
+          "Fascism has no relationship whatsoever to Enlightenment thought",
+          "Because humans are part of nature, the same instrumentalizing reason used to control nature (sorting into categories, optimizing for control) can be turned onto organizing human society — a natural, though not inevitable, path from Enlightenment rationality toward totalitarian control, especially without a moral substrate to stop it",
+          "Fascism is presented as the logical conclusion of all religious thinking",
+          "The argument claims reason should never be applied to society at all"
+        ],
+        correct: 1,
+        note: "This is a provocative claim about how the same rational tools used to master nature can, without a moral check, be turned toward controlling people."
+      },
+      {
+        q: "How does Marcuse redefine 'totalitarian' in One-Dimensional Man?",
+        options: [
+          "A society can be totalitarian without terror or a single party, if it achieves 'non-terroristic economic-technical coordination' through the manipulation of needs by vested interests — contrasted with the classic definition requiring violent suppression of dissent",
+          "Totalitarianism requires, by definition, a single ruling party and violent suppression",
+          "Marcuse argues true totalitarianism no longer exists anywhere",
+          "Totalitarianism, for Marcuse, applies only to explicitly communist states"
+        ],
+        correct: 0,
+        note: "This redefinition lets Marcuse argue that even ostensibly free, consumer-driven societies can exhibit a form of totalitarian control through conditioning rather than coercion."
+      },
+      {
+        q: "What is Marcuse's 'illusion of political choice' argument?",
+        options: [
+          "That political choice is entirely genuine and unconstrained in democratic societies",
+          "That voting should be abolished entirely",
+          "That third parties always receive equal media coverage to major parties",
+          "Money and political power are conflated under capitalism; major parties disagree on surface issues but agree on preserving the existing economic framework, so bipartisan consensus amounts to no real underlying choice, while third parties offer only the illusion of pluralism without genuine access"
+        ],
+        correct: 3,
+        note: "This operationalizes Marcuse's redefinition of totalitarianism — control without terror, achieved partly through a managed illusion of political choice."
+      },
+      {
+        q: "What is Marcuse's 'forced altruism' critique of capitalism's usual defense (mutually beneficial voluntary exchange)?",
+        options: [
+          "Marcuse rejects the premise that capitalism involves any exchange at all",
+          "Marcuse argues capitalism is purely and simply beneficial with no downsides",
+          "Marcuse concedes the description (you must satisfy existing demand to survive) but argues this forces conformity — since profit requires meeting existing demand, no idea or activity too far outside the cultural status quo can be pursued, locking in the status quo rather than allowing genuine exploration of alternatives",
+          "Marcuse argues altruism is impossible under any economic system"
+        ],
+        correct: 2,
+        note: "Marcuse agrees with the standard description of market exchange but inverts its evaluation — mutual benefit becomes a mechanism of conformity, not liberation."
+      },
+      {
+        q: "What is Marcuse's response to the 'but the system works and delivers prosperity' objection?",
+        options: [
+          "Marcuse has no response to this objection",
+          "That very 'it works' attitude is itself a product of and reinforcement for the system — a rational-sounding complacency — and the real question is what or who is sacrificed for that progress, since progress for the system isn't necessarily progress for humanity",
+          "Marcuse fully concedes the objection and abandons his critique",
+          "Marcuse argues the system has never actually delivered any prosperity"
+        ],
+        correct: 1,
+        note: "This response reframes even the seemingly neutral, common-sense defense of the system as itself ideologically shaped."
+      },
+      {
+        q: "Why does Marcuse explicitly oppose abrupt, revolutionary abolition of capitalism, despite his sharp critique of it?",
+        options: [
+          "Because people conditioned into worker/consumer identity aren't prepared for a radically different system overnight — he calls instead for slow, generational 're-education' that raises awareness of the conditioning itself, rather than sudden upheaval",
+          "Because Marcuse believed capitalism was actually beneficial and shouldn't be changed",
+          "Because Marcuse rejected all forms of social critique",
+          "Because Marcuse believed revolution was scientifically impossible"
+        ],
+        correct: 0,
+        note: "This distinguishes Marcuse from a Marxist-revolution advocate — he's a critic of ideology who favors gradual awareness-raising over abrupt upheaval."
+      },
+      {
+        q: "How does the episode illustrate 'life as instrumental, not an end in itself' under capitalism?",
+        options: [
+          "People are said to enjoy complete freedom from any economic pressure",
+          "The example given involves only wealthy business owners",
+          "This concept has no everyday illustration in the episode",
+          "In this system, one must 'earn the right to life' by producing goods or services, and identity becomes fused with work and consumption — illustrated by how 'tell me about yourself' defaults to talking about one's job"
+        ],
+        correct: 3,
+        note: "This is the everyday, subjective correlate of the broader false-consciousness thesis — identity itself gets absorbed into economic role."
+      }
+    ]
+  },
+  {
+    id: 110,
+    transcriptFile: "../transcripts/110-episode-110-transcript.md",
+    wordcloud: "wordclouds/110.png",
+    title: "Adorno and Horkheimer: The Culture Industry",
+    teaser: "Why even your leisure time might be manufacturing demand, not escaping it.",
+    questions: [
+      {
+        q: "How does the episode use the well-digger/'Steve the clockmaker' versus the 100-person assembly line to illustrate Marx's concept of alienated labor?",
+        options: [
+          "It shows that all manual labor is equally alienating regardless of context",
+          "Connected, whole work (an individual craftsman making a complete product) preserves a felt link between task and creative agency or social benefit; disconnected work (one of a hundred workers each performing a tiny repetitive step in mass clock production) severs that felt connection, producing alienation despite greater material output",
+          "It argues that assembly lines are always more efficient than individual craftsmanship",
+          "It shows that alienation only affects business owners, not workers"
+        ],
+        correct: 1,
+        note: "This illustrates why material abundance can coexist with historically unprecedented alienation from one's own labor."
+      },
+      {
+        q: "What false dichotomy do Adorno and Horkheimer identify between work time and leisure time?",
+        options: [
+          "People believe they 'become themselves' in leisure after suppressing individuality at work, but examining what people actually do with leisure (low-effort, undemanding consumption) suggests leisure itself has been colonized by capitalism's need to generate demand, not freed from work's alienation",
+          "Work and leisure are entirely identical activities with no meaningful distinction",
+          "Leisure is presented as completely separate from and unrelated to capitalism",
+          "Leisure time doesn't actually exist under capitalism"
+        ],
+        correct: 0,
+        note: "This sets up their central claim that leisure itself has become another site of ideological conditioning, not an escape from it."
+      },
+      {
+        q: "What is the 'culture industry,' the central thesis of this episode?",
+        options: [
+          "A government agency that regulates the arts",
+          "A term for museums and traditional cultural institutions",
+          "A synonym for the entertainment industry with no further critical content",
+          "When art becomes a product sold for profit, artistic production reorganizes around what will sell to mass audiences rather than around artistic merit — 'pop culture' is manufactured to be demanded, not something that arises organically from spontaneous mass demand"
+        ],
+        correct: 3,
+        note: "This mechanism explains, for Adorno and Horkheimer, why entertainment is often formulaic and undemanding."
+      },
+      {
+        q: "What is 'pseudo-individualization,' illustrated by the similarity between romcoms, Westerns, and sitcoms?",
+        options: [
+          "A term describing genuinely unique, non-formulaic artistic works",
+          "A phenomenon found only in music, not film",
+          "Cultural products are produced via repeatable underlying formulas, with only superficial details varied (actors, settings, riffs) to manufacture an illusion of novelty, while audiences repeatedly consume the same underlying structure",
+          "A term for products that are entirely identical with no variation whatsoever"
+        ],
+        correct: 2,
+        note: "This explains why audiences experience a feeling of 'difference' while actually consuming standardized products over and over."
+      },
+      {
+        q: "How does the episode draw a parallel between Nietzsche's critique of 'true world' metaphysical theories and the culture industry?",
+        options: [
+          "There is no meaningful parallel drawn between the two",
+          "Mass media provides 'substitute images of the divine' through pseudo-culture (Hollywood idols, soap operas, genre films), functioning the way religious/metaphysical 'other worlds' functioned for Nietzsche — directing attention away from problems in this world",
+          "Nietzsche is claimed to have directly predicted the invention of cinema",
+          "The parallel is that both Nietzsche and the culture industry reject all forms of belief"
+        ],
+        correct: 1,
+        note: "This is explicitly framed as an analogy, not a claim that Nietzsche's critique and the culture industry critique are identical."
+      },
+      {
+        q: "How does advertising exploit the felt lack of genuine community, according to this account?",
+        options: [
+          "Advertising has no relationship to feelings of community or connection",
+          "Advertising only targets purely rational, informed purchasing decisions",
+          "Advertising is presented as an entirely honest and transparent industry",
+          "Advertising links products to promises of belonging (the beverage-with-friends, the barbecue-with-community); because these promises are never truly fulfilled by the product itself, consumers cycle endlessly between emptiness and further consumption"
+        ],
+        correct: 3,
+        note: "This explains the self-perpetuating nature of consumer capitalism — it doesn't need to satisfy needs, only to keep manufacturing desire."
+      },
+      {
+        q: "What is Adorno's distinction between genuine art and commodified/culture-industry art?",
+        options: [
+          "Real art should be difficult, demand concentration, and offer an alternative perspective on the world — Adorno explicitly denies that popularity or ease of consumption should determine art's value, unlike commodified art designed for easy, relaxing consumption",
+          "Adorno believes all art, regardless of origin, has identical value",
+          "Adorno argues commercial success is always a sign of artistic quality",
+          "Adorno rejects the very category of 'art' as meaningless"
+        ],
+        correct: 0,
+        note: "This normative distinction is why Adorno reserves particular criticism for the culture industry specifically, while being comparatively unbothered by ordinary consumer goods responding to market demand."
+      },
+      {
+        q: "Why do Adorno and Horkheimer insist their critique of the culture industry doesn't require a conspiracy of any kind?",
+        options: [
+          "Because no advertiser, writer, or executive needs to intend alienation — the outcomes emerge naturally, as an emergent structural effect, from profit-maximizing behavior within a system that already frames people as workers and consumers",
+          "Because they believe there actually is a secret cabal responsible",
+          "Because conspiracies are, in their view, scientifically impossible",
+          "Because their critique applies only to specific individuals, not systems"
+        ],
+        correct: 0,
+        note: "This methodological point distinguishes their structural/systemic critique from a crude conspiracy-theory account of how media manipulates people."
+      },
+      {
+        q: "How does the episode argue that mass entertainment narratives shape personal life-goals ('life imitates art')?",
+        options: [
+          "Entertainment narratives are argued to have no influence on real-life goals or values",
+          "The ubiquity of romantic-love plots conditions people to view individual romantic fulfillment, rather than communal belonging, as life's culminating goal — reinforcing isolation even as people furnish their private 'boxes' (homes)",
+          "This concept applies only to children's media",
+          "Mass narratives are argued to always promote communal, not individual, values"
+        ],
+        correct: 1,
+        note: "This extends the alienation thesis beyond production and consumption into how mass narrative structures shape personal aspirations."
+      },
+      {
+        q: "How does Adorno's proposed response to oppression differ from the model attributed to Simone de Beauvoir in this episode's closing comparison?",
+        options: [
+          "Adorno and de Beauvoir are presented as holding identical views on how to respond to oppression",
+          "Adorno argues oppression should simply be endured without any response",
+          "Adorno rejects the very existence of oppression as a category",
+          "Adorno rejects the idea that overthrowing oppression requires the oppressed to become oppressors in turn, proposing instead that true (non-commodified) art can serve as a nonviolent tool for social change"
+        ],
+        correct: 3,
+        note: "This closing contrast positions genuine art, for Adorno, as an alternative path to social change that doesn't require reproducing cycles of domination."
       }
     ]
   }

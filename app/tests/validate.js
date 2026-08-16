@@ -51,6 +51,13 @@ QUIZ_DATA.forEach(function (ep, epIdx) {
     check(fs.existsSync(resolved), where + ": transcriptFile does not exist on disk (" + ep.transcriptFile + ")");
   }
 
+  check(typeof ep.wordcloud === "string" && ep.wordcloud.length > 0, where + ": wordcloud must be set");
+  if (typeof ep.wordcloud === "string") {
+    var resolvedCloud = path.join(APP_DIR, ep.wordcloud);
+    check(fs.existsSync(resolvedCloud), where + ": wordcloud image does not exist on disk (" + ep.wordcloud + ")");
+    check(fs.existsSync(resolvedCloud) && fs.statSync(resolvedCloud).size > 500, where + ": wordcloud image looks empty/corrupt (" + ep.wordcloud + ")");
+  }
+
   check(Array.isArray(ep.questions), where + ": questions must be an array");
   check(ep.questions && ep.questions.length === 10, where + ": expected exactly 10 questions, found " + (ep.questions ? ep.questions.length : "none"));
 

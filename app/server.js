@@ -3,8 +3,9 @@
 // Run:  node server.js [port]      (defaults to 4173)
 // Then open http://localhost:4173/ instead of double-clicking index.html.
 //
-// GET  /api/store   -> { scores, requests } currently saved on disk
-// POST /api/store   -> body { scores, requests }, overwrites store.json
+// GET  /api/store    -> { scores, requests } currently saved on disk
+// POST /api/store    -> body { scores, requests }, overwrites store.json
+// GET  /api/search?q=<term> -> case-insensitive full-text search across every transcript
 "use strict";
 
 var http = require("http");
@@ -14,6 +15,7 @@ var path = require("path");
 var PORT = Number(process.argv[2]) || 4173;
 var APP_DIR = __dirname;
 var ROOT_DIR = path.join(APP_DIR, "..");
+var TRANSCRIPTS_DIR = path.join(ROOT_DIR, "transcripts");
 var STORE_FILE = path.join(APP_DIR, "store.json");
 
 var MIME = {
@@ -37,6 +39,113 @@ function writeStore(data) {
 }
 
 if (!fs.existsSync(STORE_FILE)) writeStore({ scores: {}, requests: [] });
+
+// ---------- transcript search index ----------
+// Built once at startup: every transcript's body (markdown header stripped),
+// kept in memory so /api/search can scan all ~245 episodes instantly.
+
+function stripHeader(raw) {
+  var lines = raw.split("\n");
+  var i = 0;
+  for (; i < lines.length; i++) {
+    if (lines[i].trim() === "---") { i++; break; }
+  }
+  return lines.slice(i).join("\n");
+}
+
+function titleFor(id, fallbackLabel) {
+  try {
+    var quizData = require(path.join(APP_DIR, "data.js"));
+    var match = quizData.filter(function (e) { return e.id === id; })[0];
+    if (match) return match.title;
+  } catch (e) {}
+  return fallbackLabel || ("Episode " + id);
+}
+
+function buildTranscriptIndex() {
+  var labelById = {};
+  try {
+    var episodeIndex = require(path.join(APP_DIR, "episode-index.js"));
+    episodeIndex.forEach(function (e) { labelById[e.id] = e.label; });
+  } catch (e) {}
+
+  var files = fs.readdirSync(TRANSCRIPTS_DIR).filter(function (f) { return f.endsWith(".md"); });
+  var index = [];
+  files.forEach(function (file) {
+    var m = file.match(/^(\d+)-/);
+    if (!m) return;
+    var id = Number(m[1]);
+    var raw;
+    try {
+      raw = fs.readFileSync(path.join(TRANSCRIPTS_DIR, file), "utf8");
+    } catch (e) {
+      return;
+    }
+    var text = stripHeader(raw);
+    index.push({
+      id: id,
+      file: file,
+      title: titleFor(id, labelById[id]),
+      text: text,
+      textLower: text.toLowerCase()
+    });
+  });
+  index.sort(function (a, b) { return a.id - b.id; });
+  return index;
+}
+
+var TRANSCRIPT_INDEX = buildTranscriptIndex();
+console.log("Indexed " + TRANSCRIPT_INDEX.length + " transcripts for search.");
+
+function countOccurrences(haystackLower, needleLower) {
+  if (!needleLower) return 0;
+  var count = 0;
+  var pos = 0;
+  while (true) {
+    var idx = haystackLower.indexOf(needleLower, pos);
+    if (idx === -1) break;
+    count++;
+    pos = idx + needleLower.length;
+  }
+  return count;
+}
+
+function makeSnippet(text, matchIndex, matchLen) {
+  var padding = 70;
+  var start = Math.max(0, matchIndex - padding);
+  var end = Math.min(text.length, matchIndex + matchLen + padding);
+  var pre = text.slice(start, matchIndex).replace(/\s+/g, " ").trim();
+  var match = text.slice(matchIndex, matchIndex + matchLen);
+  var post = text.slice(matchIndex + matchLen, end).replace(/\s+/g, " ").trim();
+  if (start > 0) pre = "…" + pre;
+  if (end < text.length) post = post + "…";
+  return { pre: pre, match: match, post: post };
+}
+
+function searchTranscripts(query) {
+  var q = (query || "").trim();
+  if (!q) return { query: q, results: [] };
+  var qLower = q.toLowerCase();
+
+  var results = TRANSCRIPT_INDEX.map(function (entry) {
+    var count = countOccurrences(entry.textLower, qLower);
+    if (!count) return null;
+    var firstIdx = entry.textLower.indexOf(qLower);
+    var snippet = makeSnippet(entry.text, firstIdx, q.length);
+    return {
+      id: entry.id,
+      title: entry.title,
+      file: entry.file,
+      count: count,
+      pre: snippet.pre,
+      match: snippet.match,
+      post: snippet.post
+    };
+  }).filter(Boolean);
+
+  results.sort(function (a, b) { return b.count - a.count || a.id - b.id; });
+  return { query: q, results: results.slice(0, 50), totalMatches: results.length };
+}
 
 function sendJson(res, status, obj) {
   var body = JSON.stringify(obj);
@@ -85,6 +194,12 @@ function serveFile(res, filePath) {
 
 var server = http.createServer(function (req, res) {
   var pathname = decodeURIComponent(req.url.split("?")[0]);
+
+  if (pathname === "/api/search" && req.method === "GET") {
+    var parsedUrl = new URL(req.url, "http://localhost");
+    sendJson(res, 200, searchTranscripts(parsedUrl.searchParams.get("q")));
+    return;
+  }
 
   if (pathname === "/api/store" && req.method === "GET") {
     sendJson(res, 200, readStore());

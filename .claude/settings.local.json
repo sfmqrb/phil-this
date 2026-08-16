@@ -11,7 +11,24 @@
       "Bash(kill %1)",
       "Bash(jobs)",
       "Bash(ps -p 60719 -o pid,cmd)",
-      "Bash(kill 60719)"
+      "Bash(kill 60719)",
+      "Bash(python3 -c \"import wordcloud, matplotlib; print\\('ok', wordcloud.__file__\\)\")",
+      "Bash(python3 -m pip --version)",
+      "Bash(python3 -m pip install --quiet wordcloud)",
+      "Bash(python3 -c \"import wordcloud; print\\('wordcloud', wordcloud.__version__\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(python3 generate_wordclouds.py)",
+      "Bash(node -e \"const Q=require\\('./data.js'\\); console.log\\(Q.length, Q[0]\\);\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4173/wordclouds/97.png)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4173/api/store)",
+      "Bash(lsof -i :4173 -sTCP:LISTEN -t)",
+      "Bash(xargs -r kill)",
+      "Bash(curl -s \"http://localhost:4173/api/search?q=Wittgenstein\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s \"http://localhost:4173/api/search?q=WITTGENSTEIN\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('results:', len\\(d['results']\\), 'totalMatches:', d['totalMatches']\\)\")",
+      "Bash(curl -s \"http://localhost:4173/api/search?q=wittgenstein\")",
+      "Bash(node -e \"const Q=require\\('./data.js'\\); console.log\\('total:', Q.length, 'with wordcloud:', Q.filter\\(e=>e.wordcloud\\).length\\);\")"
     ]
   }
 }

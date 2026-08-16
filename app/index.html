@@ -22,6 +22,14 @@
     <p class="ledger-title">Episodes</p>
     <div class="ep-list" id="episodeList"></div>
 
+    <p class="ledger-title">Search transcripts</p>
+    <p class="request-intro">Search the full text of all 245 episode transcripts — not just titles. Case doesn't matter.</p>
+    <div class="search-panel">
+      <input class="request-search mono" id="transcriptSearch" type="text" placeholder="Search every transcript for a word or phrase…" />
+      <p class="search-status mono" id="searchStatus"></p>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+
     <p class="ledger-title">Request more quizzes</p>
     <p class="request-intro">Pick episodes from the full 245-episode archive that don't have a quiz yet. Save your list, then hand the copied episode numbers to Claude in a future session to have quizzes written for them.</p>
     <div class="request-panel">
@@ -44,6 +52,10 @@
       <p class="eyebrow" id="quizEpLabel"></p>
       <a class="transcript-link mono" id="quizTranscriptLink" href="#" target="_blank" rel="noopener">Read full transcript ↗</a>
     </div>
+
+    <a class="wordcloud-frame" id="quizWordcloudLink" href="#" target="_blank" rel="noopener" style="display:none">
+      <img class="wordcloud-img" id="quizWordcloudImg" alt="Top 20 words from this episode, as a word cloud" />
+    </a>
 
     <div id="quizBody">
       <div class="progress-row">
