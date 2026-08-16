@@ -20,16 +20,16 @@
     <header class="masthead">
       <p class="eyebrow">Philosophize This! · Quiz Ledger</p>
       <h1>Test the philosophy, not the podcast</h1>
-      <p class="subtitle">Ten questions per episode on the underlying ideas and arguments — not the host's stories or turns of phrase. Sign in to save scores to an account; otherwise they stay on this device only.</p>
+      <p class="subtitle">Ten questions per episode on the underlying ideas and arguments, not the host's stories or one-liners.</p>
     </header>
     <hr class="rule" />
 
     <div class="account-bar" id="accountBar">
       <div class="account-guest" id="accountGuest">
-        <span class="account-status-text mono">Playing as guest — scores stay on this device.</span>
+        <span class="account-status-text mono">Playing as guest. Scores stay on this device unless you sign in.</span>
         <div class="account-actions">
           <button class="pill" id="showLoginBtn" type="button">Sign in</button>
-          <button class="restart" id="showRegisterBtn" type="button">Create account</button>
+          <button class="text-link mono" id="showRegisterBtn" type="button">or create an account</button>
         </div>
       </div>
 
@@ -101,7 +101,7 @@
     <div class="topic-other" id="topicOther" style="display:none"></div>
 
     <p class="ledger-title">Search transcripts</p>
-    <p class="request-intro">Search the full text of all 245 episode transcripts — not just titles. Case doesn't matter.</p>
+    <p class="request-intro">Search the full text of all 245 transcripts, not just titles. Case doesn't matter.</p>
     <div class="search-panel">
       <input class="request-search mono" id="transcriptSearch" type="text" placeholder="Search every transcript for a word or phrase…" />
       <p class="search-status mono" id="searchStatus"></p>
@@ -111,9 +111,8 @@
 
   <div id="transcriptsView" class="transcripts-view">
     <header class="masthead">
-      <p class="eyebrow">Philosophize This! · Transcripts</p>
       <h1>Every episode transcript, by title</h1>
-      <p class="subtitle">Browse all 245 transcripts and read them right here — no quiz required.</p>
+      <p class="subtitle">Browse all 245 transcripts and read them right here. No quiz required.</p>
     </header>
     <hr class="rule" />
 
@@ -125,7 +124,7 @@
       <div class="quiz-header-row">
         <p class="eyebrow" id="transcriptReaderTitle"></p>
         <div class="transcript-reader-actions">
-          <button class="transcript-link mono" id="transcriptReaderQuizBtn" type="button" style="display:none">Take quiz ↗</button>
+          <button class="transcript-link mono" id="transcriptReaderQuizBtn" type="button" style="display:none">Take quiz</button>
           <button class="transcript-link mono" id="transcriptCopyBtn" type="button">Copy transcript</button>
           <a class="transcript-link mono" id="transcriptReaderLink" href="#" target="_blank" rel="noopener">Open raw ↗</a>
           <a class="transcript-link mono" id="transcriptReaderOriginalLink" href="#" target="_blank" rel="noopener" style="display:none">Original episode ↗</a>
@@ -138,14 +137,13 @@
 
   <div id="creditView" class="credit-view">
     <header class="masthead">
-      <p class="eyebrow">Philosophize This! · Credit</p>
       <h1>Who made what here</h1>
-      <p class="subtitle">This quiz ledger is an unofficial, fan-made project — not affiliated with or endorsed by the show.</p>
+      <p class="subtitle">An unofficial, fan-made project. Not affiliated with or endorsed by the show.</p>
     </header>
     <hr class="rule" />
 
     <p class="ledger-title">This site</p>
-    <p class="credit-text">This quiz ledger — the episode quizzes, transcript browser, search, and accounts — was vibecoded: built by describing what it should do to an AI coding assistant (Claude) and iterating from there, rather than written by hand line by line. It is an independent, unofficial companion to the podcast, made by a fan.</p>
+    <p class="credit-text">I built this by describing what I wanted to Claude and iterating from there, not by writing every line by hand. Quizzes, transcript browser, search, accounts — all of it. It's a fan project, unaffiliated with the show, made because I wanted a way to actually test what I'd absorbed from the podcast instead of just nodding along.</p>
 
     <p class="ledger-title">Philosophize This!</p>
     <p class="credit-text">All podcast content, transcripts, and episode titles referenced on this site belong to <strong>Philosophize This!</strong>, written and hosted by Stephen West. Please support the source material directly through the links below.</p>
@@ -168,7 +166,7 @@
     <p class="credit-text credit-quote">"My only goal in life is to make a podcast that brightens people's lives a little bit. I want to be the notification on your phone that doesn't induce any stress." &mdash; Stephen West</p>
 
     <p class="ledger-title">Listen to the show</p>
-    <p class="credit-text">Apple &middot; Stitcher &middot; Spotify &middot; Google Play &middot; Libsyn &middot; YouTube — find links to all of these on the official site below.</p>
+    <p class="credit-text">Apple, Stitcher, Spotify, Google Play, Libsyn, YouTube. Links to all of these on the official site below.</p>
 
     <a class="credit-back-link" href="https://www.philosophizethis.org/" target="_blank" rel="noopener">philosophizethis.org &rarr;</a>
   </div>
@@ -193,7 +191,7 @@
     <div id="quizBody">
       <div class="progress-row">
         <span id="progressLabel">§ 1 / 10</span>
-        <span id="scoreLive">correct so far — 0</span>
+        <span id="scoreLive">0 correct so far</span>
       </div>
       <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
 

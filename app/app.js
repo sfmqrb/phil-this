@@ -196,7 +196,7 @@
         if (!res.ok) { loginErrorEl.textContent = res.data.error || "Sign in failed."; return; }
         loginForm.reset();
         onAuthSuccess(res.data.user);
-      }).catch(function () { loginErrorEl.textContent = "Network error — is the server running?"; });
+      }).catch(function () { loginErrorEl.textContent = "Network error. Is the server running?"; });
     });
   }
 
@@ -212,7 +212,7 @@
         if (!res.ok) { registerErrorEl.textContent = res.data.error || "Could not create account."; return; }
         registerForm.reset();
         onAuthSuccess(res.data.user);
-      }).catch(function () { registerErrorEl.textContent = "Network error — is the server running?"; });
+      }).catch(function () { registerErrorEl.textContent = "Network error. Is the server running?"; });
     });
   }
 
@@ -237,7 +237,7 @@
         profileSuccessEl.textContent = "Saved.";
         profileCurrentPasswordInput.value = "";
         profileNewPasswordInput.value = "";
-      }).catch(function () { profileErrorEl.textContent = "Network error — is the server running?"; });
+      }).catch(function () { profileErrorEl.textContent = "Network error. Is the server running?"; });
     });
   }
 
@@ -377,7 +377,7 @@
         var quizLink = document.createElement("button");
         quizLink.className = "transcript-row-quiz-link";
         quizLink.type = "button";
-        quizLink.textContent = "Take quiz ↗";
+        quizLink.textContent = "Take quiz";
         quizLink.addEventListener("click", function (ev) {
           ev.stopPropagation();
           showEpisodesTab();
@@ -395,7 +395,7 @@
     transcriptTitleListEl.style.display = "none";
     if (transcriptListFilterInput) transcriptListFilterInput.style.display = "none";
     transcriptReaderEl.style.display = "";
-    transcriptReaderTitleEl.textContent = "#" + entry.id + " — " + entry.title;
+    transcriptReaderTitleEl.textContent = "#" + entry.id + " · " + entry.title;
     transcriptReaderLinkEl.href = "../transcripts/" + entry.file;
     if (transcriptReaderOriginalLinkEl) {
       transcriptReaderOriginalLinkEl.href = entry.url || "#";
@@ -415,7 +415,7 @@
         transcriptReaderBodyEl.textContent = stripTranscriptHeader(raw);
       })
       .catch(function () {
-        transcriptReaderStatusEl.textContent = "Could not load this transcript — is the server still running?";
+        transcriptReaderStatusEl.textContent = "Could not load this transcript. Is the server still running?";
       });
   }
 
@@ -637,13 +637,13 @@
     topicOtherEl.style.display = "";
     var heading = document.createElement("p");
     heading.className = "topic-other-title mono";
-    heading.textContent = "Also on “" + query + "” — no quiz yet";
+    heading.textContent = "Also on “" + query + "” (no quiz yet)";
     topicOtherEl.appendChild(heading);
     matches.forEach(function (ep) {
       var row = document.createElement("div");
       row.className = "topic-other-row";
       var text = document.createElement("span");
-      text.textContent = "#" + ep.id + " — " + ep.label;
+      text.textContent = "#" + ep.id + " · " + ep.label;
       var link = document.createElement("a");
       link.className = "search-row-link";
       link.href = "../transcripts/" + ep.file;
@@ -697,7 +697,7 @@
     var total = data.totalMatches || shown;
     searchStatus.textContent = shown + (total > shown ? " of " + total : "") +
       (shown === 1 ? " episode matches " : " episodes match ") + "“" + query + "”." +
-      (data.fuzzy ? " (no exact hits — showing close/typo matches)" : "");
+      (data.fuzzy ? " (no exact hits, showing close/typo matches)" : "");
 
     var covered = getCoveredIds();
     data.results.forEach(function (r) {
@@ -708,7 +708,7 @@
       head.className = "search-row-head";
       var titleEl = document.createElement("span");
       titleEl.className = "search-row-title";
-      titleEl.textContent = "#" + r.id + " — " + r.title;
+      titleEl.textContent = "#" + r.id + " · " + r.title;
       var countEl = document.createElement("span");
       countEl.className = "search-row-count mono";
       countEl.textContent = r.fuzzy ? "approximate match" : (r.count + (r.count === 1 ? " match" : " matches"));
@@ -729,7 +729,7 @@
         var quizBtn = document.createElement("button");
         quizBtn.className = "search-row-link";
         quizBtn.type = "button";
-        quizBtn.textContent = "Take quiz →";
+        quizBtn.textContent = "Take quiz";
         quizBtn.addEventListener("click", function () { startQuiz(r.id); });
         actions.appendChild(quizBtn);
       }
@@ -791,7 +791,7 @@
       fetch("/api/search?q=" + encodeURIComponent(query))
         .then(function (r) { return r.json(); })
         .then(renderSearchResults)
-        .catch(function () { searchStatus.textContent = "Search failed — is the server still running?"; });
+        .catch(function () { searchStatus.textContent = "Search failed. Is the server still running?"; });
     } else {
       searchClientSide(query);
     }
@@ -862,7 +862,7 @@
     quizView.classList.add("show");
     qEls.results.classList.remove("show");
     qEls.quizBody.style.display = "";
-    qEls.epLabel.textContent = "Episode " + currentEpisode.id + " — " + currentEpisode.title;
+    qEls.epLabel.textContent = "Episode " + currentEpisode.id + " · " + currentEpisode.title;
 
     if (qEls.resumeBanner) {
       if (resumed) {
@@ -914,7 +914,7 @@
     answered = false;
     var total = currentEpisode.questions.length;
     qEls.progressLabel.textContent = "§ " + (currentIndex + 1) + " / " + total;
-    qEls.scoreLive.textContent = "correct so far — " + currentScore;
+    qEls.scoreLive.textContent = currentScore + " correct so far";
     qEls.progressFill.style.width = ((currentIndex / total) * 100) + "%";
     qEls.qNumber.textContent = String(currentIndex + 1) + ".";
     qEls.questionText.textContent = item.q;
@@ -959,7 +959,7 @@
     qEls.note.innerHTML = "<strong>" + (isCorrect ? "Right." : "Not quite.") + "</strong> " + item.note;
     qEls.note.classList.add("show");
     qEls.nextRow.classList.add("show");
-    qEls.scoreLive.textContent = "correct so far — " + currentScore;
+    qEls.scoreLive.textContent = currentScore + " correct so far";
     qEls.nextBtn.focus();
   }
 

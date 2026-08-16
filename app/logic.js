@@ -164,7 +164,7 @@
       var pick = untaken[Math.floor(Math.random() * untaken.length)];
       return {
         episode: pick,
-        text: "You haven't quizzed on <strong>Episode " + pick.id + "</strong> yet — " + escapeHtml(pick.title) + ".",
+        text: "You haven't quizzed on <strong>Episode " + pick.id + "</strong> yet: " + escapeHtml(pick.title) + ".",
         cta: "Take it"
       };
     }
@@ -191,7 +191,7 @@
 
     return {
       episode: null,
-      text: "Perfect scores across every episode. Impressive — nothing left to suggest.",
+      text: "Perfect scores across every episode. Nothing left to suggest.",
       cta: null
     };
   }
@@ -200,7 +200,7 @@
     var p = pct(n, total);
     if (p === 100) return "Perfect score. You could teach this episode.";
     if (p >= 80) return "Solid grasp of the episode's core arguments.";
-    if (p >= 60) return "Good foundation — a couple of details slipped through.";
+    if (p >= 60) return "Good foundation. A couple of details slipped through.";
     if (p >= 40) return "Worth a re-listen for the finer points.";
     return "This one's worth listening to again from the top.";
   }
