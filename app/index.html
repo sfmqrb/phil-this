@@ -159,6 +159,11 @@
 
     <p class="ledger-title">Your deck</p>
     <p class="review-status mono" id="reviewStatus"></p>
+    <div class="resume-banner mono" id="reviewResumeRow" style="display:none">
+      <span id="reviewResumeText"></span>
+      <button class="search-row-link" id="reviewResumeBtn" type="button">Resume</button>
+      <button class="search-row-link" id="reviewResumeDiscardBtn" type="button">Discard</button>
+    </div>
     <div class="review-start-row" id="reviewStartRow" style="display:none">
       <button class="pill" id="reviewStartBtn" type="button">Start review</button>
     </div>
@@ -200,6 +205,7 @@
 
     <p class="ledger-title">This site</p>
     <p class="credit-text">Philosophitor is a tool I built for myself. I noticed I could listen to an episode of Philosophize This!, nod along the whole time, and still not be able to explain the argument if you asked me about it the next day. This quizzes you on whether an idea actually stuck. It also lets you search the full text of every transcript. I built it by describing what I wanted to Claude and iterating from there, not by writing every line by hand.</p>
+    <p class="credit-text">Built by <a class="credit-inline-link" href="https://www.cs.utoronto.ca/~smaghrebi/" target="_blank" rel="noopener">Sajad Faghfoor Maghrebi</a>.</p>
 
     <p class="ledger-title">Philosophize This!</p>
     <p class="credit-text">All podcast content, transcripts, and episode titles referenced on this site belong to <strong>Philosophize This!</strong>, written and hosted by Stephen West. Please support the source material directly through the links below.</p>
@@ -231,7 +237,7 @@
     <button class="back-link mono" id="backBtn">&larr; all episodes</button>
     <div class="quiz-header-row">
       <p class="eyebrow" id="quizEpLabel"></p>
-      <a class="transcript-link mono" id="quizTranscriptLink" href="#" target="_blank" rel="noopener">Read full transcript ↗</a>
+      <a class="transcript-link mono" id="quizTranscriptLink" href="#">Read transcript →</a>
       <a class="transcript-link mono" id="quizOriginalLink" href="#" target="_blank" rel="noopener" style="display:none">Original episode ↗</a>
     </div>
 

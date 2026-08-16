@@ -55,6 +55,14 @@
   function loadReview() { return readJson(scopedKey(REVIEW_KEY), {}); }
   function writeReviewLocal(deck) { localStorage.setItem(scopedKey(REVIEW_KEY), JSON.stringify(deck)); }
 
+  // In-progress review session, so a refresh mid-session resumes where you
+  // were instead of dropping you back to the deck status.
+  // { keys: ["epId:qIndex", ...], index, score }
+  var REVIEW_SESSION_KEY = "phil-this-quiz-review-session-v1";
+  function loadReviewSession() { return readJson(scopedKey(REVIEW_SESSION_KEY), null); }
+  function writeReviewSession(state) { localStorage.setItem(scopedKey(REVIEW_SESSION_KEY), JSON.stringify(state)); }
+  function clearReviewSession() { localStorage.removeItem(scopedKey(REVIEW_SESSION_KEY)); }
+
   // Grades one answer into the deck (from the quiz or a review session) and
   // persists it locally + upstream.
   function recordReviewAnswer(episodeId, qIndex, isCorrect) {
@@ -135,7 +143,17 @@
       .then(function (data) {
         writeScoresLocal(data.scores || {});
         writeProgressLocal(data.progress || {});
-        writeReviewLocal(data.review || {});
+        // The deck merges instead of overwriting: a server that predates the
+        // review feature (or that missed our pushes while it was down) must
+        // not wipe the local deck on every refresh. Server wins per entry;
+        // entries it doesn't know about survive and get pushed back up.
+        if (data.review && typeof data.review === "object") {
+          var localDeck = loadReview();
+          var merged = Object.assign({}, localDeck, data.review);
+          writeReviewLocal(merged);
+          var onlyLocal = Object.keys(localDeck).some(function (k) { return !(k in data.review); });
+          if (onlyLocal) pushReviewToServer();
+        }
       })
       .catch(function () {});
   }
@@ -1311,6 +1329,10 @@
     status: document.getElementById("reviewStatus"),
     startRow: document.getElementById("reviewStartRow"),
     startBtn: document.getElementById("reviewStartBtn"),
+    resumeRow: document.getElementById("reviewResumeRow"),
+    resumeText: document.getElementById("reviewResumeText"),
+    resumeBtn: document.getElementById("reviewResumeBtn"),
+    resumeDiscardBtn: document.getElementById("reviewResumeDiscardBtn"),
     session: document.getElementById("reviewSession"),
     progressLabel: document.getElementById("reviewProgressLabel"),
     scoreLive: document.getElementById("reviewScoreLive"),
@@ -1356,6 +1378,22 @@
     return days === 1 ? "The next question comes due tomorrow." : "The next question comes due in " + days + " days.";
   }
 
+  // The cached session, but only if it still has unanswered questions that
+  // resolve against the current quiz bank; anything stale is cleared.
+  function pendingReviewSession() {
+    var cached = loadReviewSession();
+    if (!cached || !Array.isArray(cached.keys)) return null;
+    var index = Number(cached.index) || 0;
+    if (index >= cached.keys.length) { clearReviewSession(); return null; }
+    var remaining = cached.keys.slice(index).filter(function (key) {
+      var parsed = QuizLogic.parseReviewKey(key);
+      var episode = parsed && QUIZ_DATA.find(function (ep) { return ep.id === parsed.epId; });
+      return !!(episode && episode.questions[parsed.qIndex]);
+    });
+    if (!remaining.length) { clearReviewSession(); return null; }
+    return cached;
+  }
+
   function renderReviewStatus() {
     refreshReviewBadge();
     reviewSessionActive = false;
@@ -1372,7 +1410,17 @@
         rEls.status.textContent = "0 due now · " + counts.total + " in your deck. " + nextDueLine(deck);
       }
     }
-    if (rEls.startRow) rEls.startRow.style.display = counts.due ? "" : "none";
+    var cached = pendingReviewSession();
+    if (rEls.resumeRow) {
+      if (cached) {
+        rEls.resumeText.textContent = "Session in progress · question " + ((Number(cached.index) || 0) + 1) +
+          " of " + cached.keys.length + " · " + (Number(cached.score) || 0) + " correct so far.";
+        rEls.resumeRow.style.display = "";
+      } else {
+        rEls.resumeRow.style.display = "none";
+      }
+    }
+    if (rEls.startRow) rEls.startRow.style.display = counts.due && !cached ? "" : "none";
   }
 
   function shuffled(list) {
@@ -1408,16 +1456,56 @@
     reviewQueue = shuffled(resolved).slice(0, REVIEW_SESSION_MAX);
     reviewIndex = 0;
     reviewScore = 0;
+    saveReviewSessionState();
+    showReviewSessionUi();
+  }
+
+  function saveReviewSessionState() {
+    writeReviewSession({
+      keys: reviewQueue.map(function (item) { return QuizLogic.reviewKey(item.epId, item.qIndex); }),
+      index: reviewIndex,
+      score: reviewScore
+    });
+  }
+
+  function showReviewSessionUi() {
     reviewSessionActive = true;
     setUrl("/review");
     showView("review");
     if (rEls.results) rEls.results.classList.remove("show");
     if (rEls.startRow) rEls.startRow.style.display = "none";
+    if (rEls.resumeRow) rEls.resumeRow.style.display = "none";
     if (rEls.status) {
       rEls.status.textContent = reviewQueue.length + (reviewQueue.length === 1 ? " question" : " questions") + " in this session.";
     }
     if (rEls.session) rEls.session.style.display = "";
     renderReviewQuestion();
+  }
+
+  // Rebuilds the queue a refresh threw away. Questions that no longer resolve
+  // are dropped; the position shifts down by however many disappeared before it.
+  function resumeReviewSession() {
+    var cached = pendingReviewSession();
+    if (!cached) { renderReviewStatus(); return; }
+    var savedIndex = Number(cached.index) || 0;
+    var queue = [];
+    var index = savedIndex;
+    cached.keys.forEach(function (key, i) {
+      var parsed = QuizLogic.parseReviewKey(key);
+      var episode = parsed && QUIZ_DATA.find(function (ep) { return ep.id === parsed.epId; });
+      var question = episode && episode.questions[parsed.qIndex];
+      if (!question) {
+        if (i < savedIndex) index--;
+        return;
+      }
+      queue.push({ epId: parsed.epId, qIndex: parsed.qIndex, episode: episode, question: question });
+    });
+    if (index >= queue.length) { clearReviewSession(); renderReviewStatus(); return; }
+    reviewQueue = queue;
+    reviewIndex = index;
+    reviewScore = Number(cached.score) || 0;
+    saveReviewSessionState();
+    showReviewSessionUi();
   }
 
   function renderReviewQuestion() {
@@ -1469,6 +1557,17 @@
     }
 
     recordReviewAnswer(item.epId, item.qIndex, isCorrect);
+    // Persist the position so a refresh resumes at the next unanswered
+    // question; the last answer clears the cache instead.
+    if (reviewIndex + 1 >= reviewQueue.length) {
+      clearReviewSession();
+    } else {
+      writeReviewSession({
+        keys: reviewQueue.map(function (q) { return QuizLogic.reviewKey(q.epId, q.qIndex); }),
+        index: reviewIndex + 1,
+        score: reviewScore
+      });
+    }
 
     if (rEls.note) {
       rEls.note.innerHTML = "<strong>" + (isCorrect ? "Right." : "Not quite.") + "</strong> " + item.question.note;
@@ -1492,6 +1591,7 @@
   }
 
   function finishReviewSession() {
+    clearReviewSession();
     reviewSessionActive = false;
     if (rEls.session) rEls.session.style.display = "none";
     if (rEls.results) rEls.results.classList.add("show");
@@ -1503,6 +1603,11 @@
   if (rEls.startBtn) rEls.startBtn.addEventListener("click", startReviewSession);
   if (rEls.nextBtn) rEls.nextBtn.addEventListener("click", nextReviewQuestion);
   if (rEls.backBtn) rEls.backBtn.addEventListener("click", renderReviewStatus);
+  if (rEls.resumeBtn) rEls.resumeBtn.addEventListener("click", resumeReviewSession);
+  if (rEls.resumeDiscardBtn) rEls.resumeDiscardBtn.addEventListener("click", function () {
+    clearReviewSession();
+    renderReviewStatus();
+  });
 
   // ---------- quiz engine ----------
 
@@ -1605,6 +1710,7 @@
       qEls.wordcloudLink.style.display = "none";
     }
     if (currentEpisode.transcriptFile) {
+      // href is only the no-JS fallback; the click opens the in-app reader.
       qEls.transcriptLink.href = currentEpisode.transcriptFile;
       qEls.transcriptLink.style.display = "";
     } else {
@@ -1766,6 +1872,16 @@
 
   qEls.nextBtn.addEventListener("click", nextQuestion);
   qEls.backBtn.addEventListener("click", goToDashboard);
+  if (qEls.transcriptLink) {
+    qEls.transcriptLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (!currentEpisode) return;
+      var entry = getAllTranscripts().find(function (t) { return t.id === currentEpisode.id; });
+      if (!entry) return;
+      showView("transcripts");
+      openTranscriptReader(entry);
+    });
+  }
   qEls.doneBtn.addEventListener("click", goToDashboard);
   qEls.retakeBtn.addEventListener("click", function () {
     if (currentEpisode) startQuiz(currentEpisode.id, true);
