@@ -59,7 +59,7 @@ QUIZ_DATA.forEach(function (ep, epIdx) {
   }
 
   check(Array.isArray(ep.questions), where + ": questions must be an array");
-  check(ep.questions && ep.questions.length === 10, where + ": expected exactly 10 questions, found " + (ep.questions ? ep.questions.length : "none"));
+  check(ep.questions && ep.questions.length === 20, where + ": expected exactly 20 questions, found " + (ep.questions ? ep.questions.length : "none"));
 
   var epCorrectCounts = [0, 0, 0, 0];
 

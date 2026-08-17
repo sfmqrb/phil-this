@@ -374,6 +374,47 @@
     });
   }
 
+  // ---------- background scene toggle ----------
+  // Same shape as the theme toggle: motion (default) → still (art frozen)
+  // → hidden (no background art at all). Persisted device-level; the inline
+  // <head> script re-applies it before first paint.
+  var sceneToggleBtn = document.getElementById("sceneToggleBtn");
+  var SCENE_KEY = "phil-this-scene";
+
+  function currentSceneChoice() {
+    try {
+      var s = localStorage.getItem(SCENE_KEY);
+      return s === "still" || s === "hidden" ? s : "motion";
+    } catch (e) { return "motion"; }
+  }
+
+  function applySceneChoice(choice) {
+    if (choice === "still" || choice === "hidden") {
+      document.documentElement.setAttribute("data-scene", choice);
+      try { localStorage.setItem(SCENE_KEY, choice); } catch (e) {}
+    } else {
+      document.documentElement.removeAttribute("data-scene");
+      try { localStorage.removeItem(SCENE_KEY); } catch (e) {}
+    }
+    if (sceneToggleBtn) {
+      sceneToggleBtn.textContent =
+        choice === "still" ? "✳ still" : choice === "hidden" ? "✳ hidden" : "✳ motion";
+      sceneToggleBtn.title =
+        choice === "still" ? "Background scene: frozen in place"
+        : choice === "hidden" ? "Background scene: hidden"
+        : "Background scene: animated";
+    }
+  }
+
+  if (sceneToggleBtn) {
+    applySceneChoice(currentSceneChoice());
+    sceneToggleBtn.addEventListener("click", function () {
+      var order = ["motion", "still", "hidden"];
+      var next = order[(order.indexOf(currentSceneChoice()) + 1) % order.length];
+      applySceneChoice(next);
+    });
+  }
+
   var VIEW_ORDER = ["dashboard", "quiz", "transcripts", "review", "credit"];
   var currentViewName = null;
 

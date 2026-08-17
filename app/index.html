@@ -16,6 +16,8 @@
   try {
     var t = localStorage.getItem("phil-this-theme");
     if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    var s = localStorage.getItem("phil-this-scene");
+    if (s === "still" || s === "hidden") document.documentElement.setAttribute("data-scene", s);
   } catch (e) {}
 })();
 </script>
@@ -103,6 +105,7 @@
     <button class="view-tab" id="tabReviewBtn" type="button">Review<span class="review-badge mono" id="reviewDueBadge" style="display:none"></span></button>
     <button class="view-tab" id="tabCreditBtn" type="button">Credit</button>
     <button class="theme-toggle" id="themeToggleBtn" type="button" title="Theme: follows your system">◐ auto</button>
+    <button class="theme-toggle scene-toggle" id="sceneToggleBtn" type="button" title="Background scene: animated">✳ motion</button>
   </nav>
 
   <!-- Five top-level views, all hidden by CSS until app.js's showView() gives

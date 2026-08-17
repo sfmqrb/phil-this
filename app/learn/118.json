@@ -9,11 +9,26 @@
     "Grand narratives create 'points of unity' that people gather around, attach identity to, and use to marginalize other groups, so postmodernists favor fragmentation of society over unity."
   ],
   "terms": [
-    { "term": "structuralism", "def": "The view that culture and thought are shaped by underlying, often binary, structures given by a narrow cultural climate." },
-    { "term": "postmodernism / post-structuralism", "def": "A movement questioning structuralism's own objectivity and the Enlightenment's assumptions about truth, self, and knowledge." },
-    { "term": "grand narrative", "def": "A totalizing, unified theory that claims to explain reality or human nature for everyone." },
-    { "term": "points of unity", "def": "The shared ideas grand narratives produce that people organize groups and identity around, and marginalize others on behalf of." },
-    { "term": "binary opposition", "def": "A cultural tool (like presence versus absence) used to categorize things into two poles, always privileging one side over the other." }
+    {
+      "term": "structuralism",
+      "def": "The view that culture and thought are shaped by underlying, often binary, structures given by a narrow cultural climate."
+    },
+    {
+      "term": "postmodernism / post-structuralism",
+      "def": "A movement questioning structuralism's own objectivity and the Enlightenment's assumptions about truth, self, and knowledge."
+    },
+    {
+      "term": "grand narrative",
+      "def": "A totalizing, unified theory that claims to explain reality or human nature for everyone."
+    },
+    {
+      "term": "points of unity",
+      "def": "The shared ideas grand narratives produce that people organize groups and identity around, and marginalize others on behalf of."
+    },
+    {
+      "term": "binary opposition",
+      "def": "A cultural tool (like presence versus absence) used to categorize things into two poles, always privileging one side over the other."
+    }
   ],
   "anchors": [
     "Didn’t the ideas of structuralism emerge out of that very same narrow climate?",
@@ -25,6 +40,16 @@
     "society does not need to be as unified as it has been historically to be able to function well",
     "There’s always a middle ground and practically an infinite number of points of possible delineation",
     "it may be impossible to use these cultural tools without bringing privilege to one side of a binary opposition",
-    "what a coincidence that so many Enlightenment rationalists talk about Truth with a capital T the same way their ancestors talked about God with a capital G"
+    "what a coincidence that so many Enlightenment rationalists talk about Truth with a capital T the same way their ancestors talked about God with a capital G",
+    "to history, a core group of them would eventually become known as postmodernist philosophers",
+    "even within groups of postmodern thinkers, there are often huge variances in terms of what they believe",
+    "within philosophical discourse, the word “modernity” has been used for centuries by this point to specifically reference the goals, projects, and attitudes of the Enlightenment",
+    "many of the assumptions Enlightenment-era thinkers made are really just extensions of assumptions made in religious societies that their societies structurally emerged from",
+    "It allows nice, convenient, catch-all maxims to be created: man is condemned to be free and things like that",
+    "No matter how convenient it would be for that to be true, reality is nowhere near as convenient, to a postmodernist",
+    "what we mean when we say something is true really just means that it’s passed a particular culture’s methods for verifying what a true statement is",
+    "this constantly changing, fleeting collection of thoughts and feelings and actions that vary in massive ways",
+    "especially when considering those binary oppositions were created arbitrarily by people that were trying to come up with some grand, ultimate theory for what it is to be a self",
+    "fragmentation of economic or political ideology, Marxism, capitalism, nationalism"
   ]
 }

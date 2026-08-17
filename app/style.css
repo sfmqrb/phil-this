@@ -153,6 +153,13 @@ a { color: inherit; }
   .bg-geometry * { animation: none; }
 }
 
+/* the scene toggle's two off-states: frozen in place, or gone entirely */
+:root[data-scene="still"] .bg-geometry * { animation: none; }
+:root[data-scene="hidden"] .bg-geometry { display: none; }
+
+/* the second toggle sits right beside the theme toggle, not pushed apart */
+.scene-toggle { margin-left: 0; }
+
 /* ---------- top-level views ---------- */
 /* All five are hidden until exactly one gets .show. Only showView() in app.js
    ever adds or removes that class, so two views can never be on screen at
