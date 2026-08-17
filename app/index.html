@@ -131,7 +131,13 @@
     <div class="transcript-list" id="transcriptTitleList"></div>
 
     <div class="transcript-reader" id="transcriptReader" style="display:none">
-      <button class="back-link mono" id="transcriptReaderBackBtn">&larr; all transcripts</button>
+      <div class="pager-row">
+        <button class="back-link mono" id="transcriptReaderBackBtn">&larr; all transcripts</button>
+        <div class="pager-nav">
+          <button class="back-link mono" id="transcriptPrevBtn" type="button">&larr; prev</button>
+          <button class="back-link mono" id="transcriptNextBtn" type="button">next &rarr;</button>
+        </div>
+      </div>
       <div class="quiz-header-row">
         <p class="eyebrow" id="transcriptReaderTitle"></p>
         <div class="transcript-reader-actions">
@@ -234,7 +240,13 @@
   </div>
 
   <div id="quizView" class="quiz-view">
-    <button class="back-link mono" id="backBtn">&larr; all episodes</button>
+    <div class="pager-row">
+      <button class="back-link mono" id="backBtn">&larr; all episodes</button>
+      <div class="pager-nav">
+        <button class="back-link mono" id="quizPrevBtn" type="button">&larr; prev</button>
+        <button class="back-link mono" id="quizNextBtn" type="button">next &rarr;</button>
+      </div>
+    </div>
     <div class="quiz-header-row">
       <p class="eyebrow" id="quizEpLabel"></p>
       <a class="transcript-link mono" id="quizTranscriptLink" href="#">Read transcript →</a>

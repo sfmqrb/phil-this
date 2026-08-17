@@ -985,6 +985,18 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 }
 .back-link:hover { color: var(--accent); }
 
+/* back-link on the left, prev/next episode pager on the right */
+.pager-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pager-nav { display: flex; gap: 18px; }
+.pager-nav .back-link:disabled { opacity: 0.35; cursor: default; }
+.pager-nav .back-link:disabled:hover { color: var(--ink-soft); }
+
 .progress-row {
   display: flex;
   align-items: baseline;

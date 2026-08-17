@@ -521,6 +521,8 @@
   var transcriptReaderBackBtn = document.getElementById("transcriptReaderBackBtn");
   var transcriptCopyBtn = document.getElementById("transcriptCopyBtn");
   var transcriptReaderQuizBtn = document.getElementById("transcriptReaderQuizBtn");
+  var transcriptPrevBtn = document.getElementById("transcriptPrevBtn");
+  var transcriptNextBtn = document.getElementById("transcriptNextBtn");
   var transcriptLearnBox = document.getElementById("transcriptLearnBox");
   var transcriptLearnBodyEl = document.getElementById("transcriptLearnBody");
   var transcriptReaderId = null; // which episode the reader is currently showing
@@ -546,6 +548,24 @@
       return { id: e.id, file: e.file, url: e.url, title: titleById[e.id] || e.label, hasQuiz: !!titleById[e.id] };
     }).sort(function (a, b) { return a.id - b.id; });
     return ALL_TRANSCRIPTS;
+  }
+
+  // Points a prev/next pager button at `neighbor` (any object with an id and
+  // title), or disables it in place when there's no neighbor in that
+  // direction, so the first/last episode keeps a stable two-button pager.
+  function wirePagerButton(btn, neighbor, dir, go) {
+    if (!btn) return;
+    if (!neighbor) {
+      btn.disabled = true;
+      btn.textContent = dir === "prev" ? "← prev" : "next →";
+      btn.removeAttribute("title");
+      btn.onclick = null;
+      return;
+    }
+    btn.disabled = false;
+    btn.textContent = dir === "prev" ? "← #" + neighbor.id : "#" + neighbor.id + " →";
+    btn.title = neighbor.title || "";
+    btn.onclick = function () { go(neighbor); };
   }
 
   function renderTranscriptList() {
@@ -669,6 +689,13 @@
       transcriptReaderQuizBtn.style.display = entry.hasQuiz ? "" : "none";
       transcriptReaderQuizBtn.onclick = function () { startQuiz(entry.id); };
     }
+
+    // Prev/next walk the full transcript list in id order. A disabled button
+    // (first/last episode) keeps its slot so the pager doesn't jump around.
+    var all = getAllTranscripts();
+    var pos = all.findIndex(function (e) { return e.id === entry.id; });
+    wirePagerButton(transcriptPrevBtn, pos > 0 ? all[pos - 1] : null, "prev", function (n) { openTranscriptReader(n); });
+    wirePagerButton(transcriptNextBtn, pos !== -1 && pos < all.length - 1 ? all[pos + 1] : null, "next", function (n) { openTranscriptReader(n); });
 
     // The key ideas sit above the transcript and start open: they're the point,
     // the transcript is the evidence.
@@ -1645,7 +1672,9 @@
     resumeBannerText: document.getElementById("resumeBannerText"),
     resumeRestartBtn: document.getElementById("resumeRestartBtn"),
     learnBox: document.getElementById("quizLearnBox"),
-    learnBody: document.getElementById("quizLearnBody")
+    learnBody: document.getElementById("quizLearnBody"),
+    prevBtn: document.getElementById("quizPrevBtn"),
+    nextEpBtn: document.getElementById("quizNextBtn")
   };
 
   // Fills the "Key ideas" box at the top of the quiz view for this episode.
@@ -1692,6 +1721,15 @@
     qEls.results.classList.remove("show");
     qEls.quizBody.style.display = "";
     qEls.epLabel.textContent = "Episode " + currentEpisode.id + " · " + currentEpisode.title;
+
+    // Prev/next step through quizzed episodes in id order (data.js order is
+    // insertion order, not episode order).
+    var quizIds = QUIZ_DATA.map(function (ep) { return ep.id; }).sort(function (a, b) { return a - b; });
+    var qPos = quizIds.indexOf(currentEpisode.id);
+    var prevEp = qPos > 0 ? QUIZ_DATA.find(function (ep) { return ep.id === quizIds[qPos - 1]; }) : null;
+    var nextEp = qPos !== -1 && qPos < quizIds.length - 1 ? QUIZ_DATA.find(function (ep) { return ep.id === quizIds[qPos + 1]; }) : null;
+    wirePagerButton(qEls.prevBtn, prevEp, "prev", function (n) { startQuiz(n.id); });
+    wirePagerButton(qEls.nextEpBtn, nextEp, "next", function (n) { startQuiz(n.id); });
 
     if (qEls.resumeBanner) {
       if (resumed) {
