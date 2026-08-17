@@ -1,3 +1,6 @@
+/* Theme: light palette on bare :root; dark repeated twice — once under the
+   system preference (guarded so an explicit data-theme="light" wins), once
+   under an explicit data-theme="dark" so the in-page toggle wins both ways. */
 :root {
   --paper: #eae6dc;
   --paper-raised: #f3f0e7;
@@ -9,10 +12,11 @@
   --warm: #b34632;
   --warm-soft: #f3e2dc;
   --focus: #2f5d50;
+  --pill-bg: #1b1b1f;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --paper: #15171a;
     --paper-raised: #1c1f23;
     --ink: #e8e6de;
@@ -23,7 +27,22 @@
     --warm: #e0836c;
     --warm-soft: #2c211d;
     --focus: #7fb3a0;
+    --pill-bg: #7fb3a0;
   }
+}
+
+:root[data-theme="dark"] {
+  --paper: #15171a;
+  --paper-raised: #1c1f23;
+  --ink: #e8e6de;
+  --ink-soft: #a3a196;
+  --rule: #34383d;
+  --accent: #7fb3a0;
+  --accent-soft: #1f2b26;
+  --warm: #e0836c;
+  --warm-soft: #2c211d;
+  --focus: #7fb3a0;
+  --pill-bg: #7fb3a0;
 }
 
 * { box-sizing: border-box; }
@@ -51,6 +70,87 @@ a { color: inherit; }
   max-width: 760px;
   margin: 0 auto;
   padding: 44px 20px 90px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- ambient background geometry ----------
+   Five philosophical vignettes in slow line art behind everything:
+   Ptolemy's celestial spheres, Plato's cave, the dialectic as a breathing
+   vesica, Zeno's dichotomy, and Sisyphus. Ink-colored and translucent, so it
+   reads as texture behind the content, never competing with it. */
+
+.bg-geometry {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--ink-soft);
+  opacity: 0.28;
+}
+.bg-geometry * {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+/* accent-colored bodies: the wandering planet and Sisyphus's boulder */
+.geo-planet { fill: var(--accent); }
+.geo-roll circle, .geo-roll line { stroke: var(--accent); }
+
+@keyframes geo-spin { to { transform: rotate(360deg); } }
+
+/* Sisyphus's climb: the scene follows the curved hill, tilting with the
+   slope and decelerating the whole way up; it hangs an instant below the
+   summit, then the return is nearly instant. */
+@keyframes geo-climb {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  18%  { transform: translate(78px, -26px) rotate(-6deg); }
+  38%  { transform: translate(158px, -72px) rotate(-9deg); }
+  58%  { transform: translate(228px, -124px) rotate(-12deg); }
+  76%  { transform: translate(278px, -165px) rotate(-14deg); }
+  88%  { transform: translate(300px, -188px) rotate(-15deg); }
+  91%  { transform: translate(300px, -188px) rotate(-15deg); }
+  96%  { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* the figure strains: a small, endless bob against the boulder */
+@keyframes geo-toil {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(1.5px, -2.5px); }
+}
+
+/* the boulder turns under the push */
+@keyframes geo-roll-spin { to { transform: rotate(360deg); } }
+
+/* Zeno's dichotomy: equal time per hop, half the remaining distance each
+   hop, so the runner visibly decelerates; it fades before "arriving" */
+@keyframes geo-zeno {
+  0%   { transform: translateX(0);     opacity: 0; }
+  6%   { opacity: 1; }
+  22%  { transform: translateX(240px); }
+  42%  { transform: translateX(360px); }
+  60%  { transform: translateX(420px); }
+  76%  { transform: translateX(450px); }
+  88%  { transform: translateX(465px); }
+  94%  { transform: translateX(471px); opacity: 1; }
+  100% { transform: translateX(474px); opacity: 0; }
+}
+
+.geo-sphere   { animation: geo-spin 90s linear infinite; }
+.geo-climb    { animation: geo-climb 34s linear infinite; }
+.geo-toil     { animation: geo-toil 1.6s ease-in-out infinite; }
+.geo-roll     { animation: geo-roll-spin 7s linear infinite; }
+.geo-zeno-dot { animation: geo-zeno 24s linear infinite; }
+
+.bg-geometry text {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  fill: currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-geometry * { animation: none; }
 }
 
 /* ---------- top-level views ---------- */
@@ -226,15 +326,12 @@ button.pill {
   font-size: 12.5px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  background: var(--ink);
+  background: var(--pill-bg);
   color: var(--paper);
   border: none;
   padding: 10px 16px;
   border-radius: 2px;
   cursor: pointer;
-}
-@media (prefers-color-scheme: dark) {
-  button.pill { background: var(--accent); color: var(--paper); }
 }
 button.pill:hover { opacity: 0.88; }
 button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
@@ -669,7 +766,23 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   display: flex;
   gap: 6px;
   margin-bottom: 8px;
+  align-items: center;
 }
+
+/* light/dark toggle: sits at the right end of the tab row; the glyph is the
+   state (◐ system, ○ light, ● dark) */
+.theme-toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
 .view-tab {
   background: none;

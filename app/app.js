@@ -334,6 +334,46 @@
   var tabReviewBtn = document.getElementById("tabReviewBtn");
   var tabCreditBtn = document.getElementById("tabCreditBtn");
 
+  // ---------- theme toggle ----------
+  // Three states cycling system → light → dark. An explicit choice sets
+  // data-theme on <html> and persists (device-level, deliberately not scoped
+  // per account); "system" clears both so prefers-color-scheme decides. The
+  // inline <head> script re-applies the saved choice before first paint.
+  var themeToggleBtn = document.getElementById("themeToggleBtn");
+  var THEME_KEY = "phil-this-theme";
+
+  function currentThemeChoice() {
+    try {
+      var t = localStorage.getItem(THEME_KEY);
+      return t === "light" || t === "dark" ? t : "system";
+    } catch (e) { return "system"; }
+  }
+
+  function applyThemeChoice(choice) {
+    if (choice === "light" || choice === "dark") {
+      document.documentElement.setAttribute("data-theme", choice);
+      try { localStorage.setItem(THEME_KEY, choice); } catch (e) {}
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+      try { localStorage.removeItem(THEME_KEY); } catch (e) {}
+    }
+    if (themeToggleBtn) {
+      themeToggleBtn.textContent =
+        choice === "light" ? "○ light" : choice === "dark" ? "● dark" : "◐ auto";
+      themeToggleBtn.title =
+        choice === "system" ? "Theme: follows your system" : "Theme: always " + choice;
+    }
+  }
+
+  if (themeToggleBtn) {
+    applyThemeChoice(currentThemeChoice());
+    themeToggleBtn.addEventListener("click", function () {
+      var order = ["system", "light", "dark"];
+      var next = order[(order.indexOf(currentThemeChoice()) + 1) % order.length];
+      applyThemeChoice(next);
+    });
+  }
+
   var VIEW_ORDER = ["dashboard", "quiz", "transcripts", "review", "credit"];
   var currentViewName = null;
 

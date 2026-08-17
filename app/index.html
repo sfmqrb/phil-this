@@ -9,10 +9,92 @@
      /episode/ instead and 404. -->
 <base href="/" />
 <title>Philosophitor</title>
+<script>
+// Apply a saved explicit theme before the stylesheet paints, so switching
+// themes never flashes the wrong palette on load. "system" saves nothing.
+(function () {
+  try {
+    var t = localStorage.getItem("phil-this-theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%A6%89</text></svg>" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- Ambient background, three vignettes: Ptolemy's celestial spheres (top
+     right); an impressionist Sisyphus, sketched in layered broken strokes,
+     laboring up a curved hill (bottom right); and Zeno's dichotomy (bottom
+     center). Decorative only. -->
+<svg class="bg-geometry" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+
+  <!-- I. The celestial spheres: nested dashed orbits, one accent-colored
+       wanderer riding the outer sphere -->
+  <g class="geo-sphere">
+    <circle cx="1280" cy="120" r="300" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 8" />
+    <circle cx="1280" cy="120" r="190" fill="none" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2 8" />
+    <circle cx="1280" cy="120" r="95" fill="none" stroke="currentColor" stroke-width="0.7" stroke-dasharray="1 7" />
+    <circle class="geo-planet" cx="1280" cy="-180" r="6" />
+  </g>
+
+  <!-- II. Sisyphus. The hill is three overlapping freehand strokes (no two
+       passes of a brush agree); the figure is a handful of gestural lines
+       leaning into an accent-colored boulder sketched as broken arcs. The
+       whole scene climbs the curve, tilting with the slope, hangs a moment
+       below the dashed summit, and is instantly back at the bottom. -->
+  <g>
+    <path d="M960,878 C1090,852 1230,762 1345,650" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
+    <path d="M958,882 C1085,858 1222,770 1338,658" fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round" stroke-dasharray="26 5 14 4" />
+    <path d="M964,874 C1096,847 1238,756 1352,644" fill="none" stroke="currentColor" stroke-width="0.7" stroke-opacity="0.35" stroke-linecap="round" stroke-dasharray="12 6 30 5" />
+    <line x1="1348" y1="648" x2="1412" y2="648" stroke="currentColor" stroke-width="1" stroke-dasharray="3 6" />
+
+    <g class="geo-climb">
+      <!-- the toiling figure: spine drawn twice (no single true outline),
+           two reaching arms, striding legs, an open head -->
+      <g class="geo-toil">
+        <path d="M984,851 C990,836 1000,827 1013,823" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        <path d="M982,854 C989,838 999,829 1012,826" fill="none" stroke="currentColor" stroke-width="0.8" stroke-opacity="0.45" stroke-linecap="round" />
+        <circle cx="1017" cy="817" r="4.5" fill="none" stroke="currentColor" stroke-width="1.4" />
+        <path d="M1010,826 L1028,838" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        <path d="M1006,831 L1025,844" stroke="currentColor" stroke-width="1" stroke-opacity="0.6" stroke-linecap="round" />
+        <path d="M985,852 C981,860 976,866 970,872" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M991,851 C993,859 996,866 999,872" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </g>
+      <!-- the boulder: two disagreeing arcs and a radial scar, rolling -->
+      <g class="geo-roll">
+        <circle cx="1038" cy="842" r="12" fill="none" stroke-width="1.6" stroke-dasharray="46 7 18 5" />
+        <circle cx="1038" cy="842" r="9" fill="none" stroke-width="0.9" stroke-opacity="0.55" stroke-dasharray="9 6" />
+        <line x1="1038" y1="833" x2="1038" y2="839" stroke-width="1" />
+      </g>
+    </g>
+  </g>
+
+  <!-- III. Zeno's dichotomy, bottom center: dashed arcs trace each halved
+       hop, ticks shrink with the remainder, and the runner decelerates
+       forever without arriving -->
+  <g>
+    <line x1="480" y1="845" x2="960" y2="845" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" />
+    <path d="M480,845 A120,74 0 0 1 720,845" fill="none" stroke="currentColor" stroke-width="0.9" stroke-dasharray="1 5" />
+    <path d="M720,845 A60,40 0 0 1 840,845" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="1 5" />
+    <path d="M840,845 A30,22 0 0 1 900,845" fill="none" stroke="currentColor" stroke-width="0.7" stroke-dasharray="1 5" />
+    <path d="M900,845 A15,12 0 0 1 930,845" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="1 5" />
+    <path d="M930,845 A7.5,6.5 0 0 1 945,845" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="1 4" />
+    <line x1="720" y1="838" x2="720" y2="852" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="840" y1="840" x2="840" y2="850" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" />
+    <line x1="900" y1="841.5" x2="900" y2="848.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" />
+    <line x1="930" y1="842.5" x2="930" y2="847.5" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" />
+    <line x1="960" y1="837" x2="960" y2="853" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+    <text x="714" y="869" font-size="13">½</text>
+    <text x="835" y="869" font-size="12">¼</text>
+    <text x="896" y="869" font-size="11">⅛</text>
+    <text x="938" y="869" font-size="11">⋯</text>
+    <circle class="geo-zeno-dot" cx="480" cy="845" r="4.5" fill="currentColor" />
+  </g>
+
+</svg>
+
 <div class="wrap">
 
   <nav class="view-tabs" id="viewTabs">
@@ -20,6 +102,7 @@
     <button class="view-tab" id="tabTranscriptsBtn" type="button">Transcripts</button>
     <button class="view-tab" id="tabReviewBtn" type="button">Review<span class="review-badge mono" id="reviewDueBadge" style="display:none"></span></button>
     <button class="view-tab" id="tabCreditBtn" type="button">Credit</button>
+    <button class="theme-toggle" id="themeToggleBtn" type="button" title="Theme: follows your system">◐ auto</button>
   </nav>
 
   <!-- Five top-level views, all hidden by CSS until app.js's showView() gives
