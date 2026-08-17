@@ -1,0 +1,31 @@
+{
+  "id": 214,
+  "argument": "Heidegger agreed with Nietzsche that philosophy must move beyond metaphysics, but argued Nietzsche didn't go far enough: concepts like the will to power still rest on the unquestioned Cartesian assumption that we are subjects navigating a world of objects. Against this, Being and Time reframes human existence as Dasein, being-in-the-world, a being always already immersed in a meaningful world, for whom the detached subject/object stance is only a secondary theoretical abstraction. Under this framing, classic problems like free will versus determinism and finding meaning in a cold universe dissolve as category errors, while cultural, linguistic, and historical 'biases' turn out to be the very conditions that let being reveal itself to us at all. The modern trap is over-indexing on the single subject/object framing, which breeds nihilism, confusion, and a technological enframing that treats people and the world as objects to optimize.",
+  "keyIdeas": [
+    "Heidegger claims Nietzsche was the last great metaphysician because concepts like the will to power were built on top of the subject/object framing he never questioned.",
+    "The modern version of being trapped in Plato's cave is believing that fully stripping away cultural, linguistic, and historical bias will finally give you access to objective truth; for Heidegger those are the very things that make any partial revealing of being possible.",
+    "Our primary experience of the world is ready-to-hand equipment fading into the background of tasks we care about; things only become present-at-hand objects with properties when we step back into theoretical abstraction, as when a keyboard breaks.",
+    "Problems like free will versus determinism dissolve because they apply causal, ontic terms for how things relate to things to Dasein, which exists ontologically; thrown into a world not of its making and projecting itself into the future, agency is part of Dasein's very structure.",
+    "Fixing capitalism or replacing it with a new system would likely reproduce similar outcomes, since any replacement would be designed by people still locked into the technological enframing that treats the world as a warehouse of objects to optimize; by career's end Heidegger saw Being and Time itself as a proof of concept for loosening that grip."
+  ],
+  "terms": [
+    { "term": "Dasein", "def": "Heidegger's word for our kind of existence, translated being-there or being-in-the-world, a who rather than a what, understood through existential structures rather than as a mind detached from a body." },
+    { "term": "Being-in-the-world", "def": "The existential structure whereby Dasein is always already immersed and involved in a meaningful world, never a detached subject that occasionally reflects on external objects." },
+    { "term": "Ready-to-hand", "def": "The mode in which things like a keyboard or floor function as equipment that fades into the background as an extension of us while we pursue tasks that matter." },
+    { "term": "Present-at-hand", "def": "The secondary, abstract mode in which something becomes a theoretical object with properties to study, as when equipment breaks and we step back to look at it." },
+    { "term": "Ontic vs. ontological", "def": "The ontic is the study of beings and how things relate to other things, as in science, while the ontological is the study of being itself; mixing the two produces category errors like the free will problem." },
+    { "term": "Technological enframing", "def": "Technology as a way of thinking that sees people and things as present-at-hand objects to be understood, controlled, manipulated, and optimized for particular outcomes." }
+  ],
+  "anchors": [
+    "he thinks that Nietzsche…in CREATING concepts like the will to power…BUILDS on top of a metaphysics…that BEGINS from this subject/object THINKING",
+    "and that if ONLY you can do that FULLY…then you’ll eventually get access to the TRUTH that lies on the other side of all these barriers.",
+    "However, when something HAPPENS to that keyboard, say it breaks or something, and we take a step back, and we SEE that keyboard in more of an abstract, theoretical way as an OBJECT.",
+    "To Heidegger it’s trying to apply CAUSAL explanations that work at the ONTIC level, to something like Dasein which exists ONTOLOGICALLY.",
+    "What I mean is four miles is not always JUST four miles to Dasein.",
+    "are not BARRIERS that are in the WAY of that process…but they’re the very THINGS that make it POSSIBLE… for me to EXPERIENCE being, in a PARTIAL way, whatsoever.",
+    "it then PROJECTS itself into the FUTURE… based on the possibilities that are available TO it. What this MEANS is: Agency… is literally part of the STRUCTURE of what MAKES Dasein the type of being that it is.",
+    "FINDING your authentic self…is ONLY made possible through confronting DEATH… and more IMPORTANTLY the finite nature of the time you HAVE here as a being.",
+    "that NEW system would be CREATED by people that were overly indexed in the subject/object framing of things as WELL.",
+    "Being and Time, is kind of like a proof of concept. It’s an exercise in REFRAMING what BEING IS in ONE potential way"
+  ]
+}

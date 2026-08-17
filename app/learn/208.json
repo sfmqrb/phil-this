@@ -1,0 +1,31 @@
+{
+  "id": 208,
+  "argument": "The episode tracks Peter Singer's moral evolution across fifty years, from an Emotivist Hedonistic Utilitarian graduate student who denied the existence of moral facts to a philosopher who now defends a modest objective morality. Doubts about emotivism's picture of moral talk as mere preference push him toward Hare's prescriptivism and preference utilitarianism, while Nozick's experience machine undermines pure hedonism. Later, Parfit's thought experiments show that not all preferences are worth maximizing, and Sidgwick's arguments convince him that rational reflection on moral concepts can yield self-evident axioms of value, collapsing preference utilitarianism back into a hedonistic utilitarianism now grounded in an objectivist metaethics. His willingness to change his mind, and to defend the best position he knows, is offered as a model of intellectual maturity.",
+  "keyIdeas": [
+    "A moral outlook has two distinct parts: a normative position giving the criteria for what is good or bad, and a metaethical position describing what we are even doing when we make moral claims at all.",
+    "Following Hume, the early Singer held that moral judgments are made at the level of feeling first, with reasons constructed afterward to justify them, so a claim like stealing is bad is really just an emotive expression with no truth content.",
+    "Recognizing that moral statements are action-guiding, more like the imperative shut the door than a statement of taste, moves Singer to prescriptivism, since imperatives can be supported by rational argument in a way preferences cannot.",
+    "Hare's universalizability requirement, that the same judgment must hold in any situation with the same facts, turns prescriptivism into preference utilitarianism, but Parfit's altruistic drug dealer and Random Tuesday cases show that satisfying preferences does not always make anyone better off.",
+    "Sidgwick's insight that rational preferences converge on well-being makes preference utilitarianism consume itself, leaving Singer an Objectivist Hedonistic Utilitarian who thinks reflection on concepts like suffering yields a priori, self-evident axioms of value akin to mathematics."
+  ],
+  "terms": [
+    { "term": "Emotivism", "def": "The metaethical view Singer began with, on which a moral statement like stealing is bad is simply an expression of preference or taste with no truth content, close to shouting Boo, stealing." },
+    { "term": "Noncognitivism", "def": "A branch of moral antirealism holding that moral statements only look like factual claims on the surface, and are really a different kind of statement, emotive or imperative, that cannot be true or false." },
+    { "term": "Prescriptivism", "def": "Hare's rationalist non-descriptivism, on which moral statements are prescriptions for ourselves and others, subject to logical constraints like universalizability even though they are not descriptive." },
+    { "term": "Hedonistic utilitarianism", "def": "The normative view that the right act is whatever maximizes pleasure and minimizes pain for the greatest number of people affected." },
+    { "term": "Preference utilitarianism", "def": "The view that we should maximize the satisfaction of people's preferences rather than pleasure, on the thinking that preferences typically include one's own well-being." },
+    { "term": "Experience machine", "def": "Nozick's thought experiment showing most people would not plug into a machine of maximum pleasure, since they value authenticity and an unmanipulated life more than just feeling good." }
+  ],
+  "anchors": [
+    "Think of Hedonistic Utilitarian…as Peter Singer’s NORMATIVE ethical position, that is the criteria he uses to determine which THINGS are good or bad and WHY they’re good or bad.",
+    "that you FEEL that it is wrong in the FIRST place…and then these REASONS…are ARGUMENTS you’ve come up with AFTER the fact, to JUSTIFY why it’s wrong to you?",
+    "stealing is bad, is REALLY just the EQUIVALENT of saying Booo! Stealing! Freaking boooo stealing you suck!",
+    "if somebody tells you to shut the door…that MAY NOT be the kind of statement that can be PROVED by rational argument or facts…but it IS a kind of statement that can be SUPPORTED by rational argument and facts.",
+    "Robert Nozick says that MOST people if you REALLY PRESSED them on it…value things like authenticity, personal freedom, the ability to live a life that ISN’T being artificially manipulated",
+    "The THINKING is: MAXIMIZE people’s preferences…and you’ll LIKELY be maximizing their well being.",
+    "If I want to take the position that it’s okay for you to be my slave. Then I need to ALSO think its okay…for me to be a slave myself.",
+    "The POINT for him…is that not everyone’s PREFERENCES…are EQUALLY worth trying to maximize.",
+    "if RATIONAL preferences are just hedonistic ones…then the ENTIRE position, of PREFERENCE utilitarianism… would just consume itself…it would become unnecessary.",
+    "This is a rational INSIGHT, it’s A priori. Suffering is DISTINCT… as a THING… BECAUSE of its undesirability."
+  ]
+}

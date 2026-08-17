@@ -1,0 +1,30 @@
+{
+  "id": 245,
+  "argument": "Starting from the premise that there is no 'view from nowhere' in moral claims, MacIntyre argues in Three Rival Versions of Moral Enquiry that all modern moral conversation runs on one of three inherited sets of assumptions: the encyclopedic viewpoint, which treats moral disagreement as a technical problem solvable by neutral rational convergence; the genealogical viewpoint, which traces moral ideas to their historical origins and power functions but gets stuck consuming itself in endless critique; and the tradition based viewpoint, which holds that all moral reasoning happens from within a way of life. The deepest moral disagreements, he claims, occur not at the level of conclusions but in these underlying criteria — what counts as evidence, a decisive reason, or morality itself. MacIntyre defends the tradition based view against the charge of relativism by arguing that traditions face a real-world stress test — answering crises, surviving critique, integrating rival insights, forming moral subjects — and some traditions simply do these jobs worse than others.",
+  "keyIdeas": [
+    "There is no view from nowhere: every moral claim is made from a host of assumptions we largely inherit from our education, whether we realize it or not.",
+    "The encyclopedic viewpoint treats moral disagreement as a technical problem of bad information or bias, yet it is a strange moral tradition whose identity is believing it has no moral identity — which leaves it incapable of real moral leadership in a crisis and drifting into bureaucracy and performative debate.",
+    "The genealogical viewpoint asks what ideas today's morality emerged from and who benefits from them, but because it is rooted in critique it consumes itself, as when each newly constructed identity box must itself be traced and replaced without end.",
+    "Apparent disagreements over conclusions, like whether to ban a campus speaker, are really located in underlying criteria: what counts as evidence, a decisive reason, or morality itself.",
+    "The tradition based view — that morality is the formation of a person with good judgment from within shared practices and communities — escapes relativism because traditions face a real-world stress test that some traditions simply fail, and proper debate requires learning your opponent's assumptions at least as well as they know them."
+  ],
+  "terms": [
+    { "term": "View from nowhere", "def": "The supposedly neutral, assumption-free standpoint for moral claims that MacIntyre insists does not exist — the premise grounding all the rest of his work." },
+    { "term": "Encyclopedic viewpoint", "def": "The quasi-scientific approach, named for the 9th edition of the Encyclopedia Britannica, which expects rational convergence on moral answers and treats persistent disagreement as confusion or ignorance." },
+    { "term": "Genealogical viewpoint", "def": "The approach, associated with Nietzsche and Foucault, that treats moral ideas as historically emerged constructs to be traced, asking how they function and who benefits or becomes a victim while they dominate." },
+    { "term": "Tradition based viewpoint", "def": "MacIntyre's preferred view that all moral reasoning happens from within a way of life, so morality becomes the formation of a person capable of good judgment without needing a set of rules." },
+    { "term": "Stress-test", "def": "The real-world trial every moral tradition faces — providing answers in crisis, handling internal contradictions, surviving critique, integrating rival insights, and forming moral subjects — by which some traditions prove simply worse." }
+  ],
+  "anchors": [
+    "If two people don’t see eye to eye on something… one of them must just have bad information…they must have bad arguments at some level, personal bias they can’t see past",
+    "this is a civilization… where a KEY piece of their whole moral identity…is that they don’t really HAVE a moral identity.",
+    "You’re not doing something WRONG by having standards you adhere to. You’re just ENGAGING in what morality IS, and has always been.",
+    "because you’d have no real moral tradition to stand on to give a strong critique to rival viewpoints.",
+    "what ideas LED to these OTHER moral ideas that we see today. Can we trace them through history? How do they function, in relation to OTHER ideas that are going on",
+    "well NOW you’ve just replaced ONE identity box…with ANOTHER identity box that YOU’VE created.",
+    "the REAL LOCATION, of this moral disagreement going on…are in these underlying assumptions…what counts as morality, what counts as evidence, what counts as a decisive reason or for what human life is even FOR.",
+    "The tradition based view of morality…BEGINS from the place…that ANY time you’re doing morality in ANY capacity…you are doing so from within a way of life.",
+    "they create a kind of “stress-test” that goes on in the REAL world. And not every moral tradition out there ACCOMPLISHES these things… at the same level.",
+    "PROPER, moral debate… HAS to be something that goes ON from a place…where someone’s done a LOT of work BEFOREHAND…to understand the opposing person’s set of assumptions…at LEAST as well as THEY do."
+  ]
+}

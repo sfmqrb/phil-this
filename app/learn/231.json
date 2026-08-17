@@ -1,0 +1,30 @@
+{
+  "id": 231,
+  "argument": "Starting from the internet debate master who demands a perfect definition before any conversation can begin, the episode lays out late Wittgenstein's case that this demand misunderstands how language works. Against the Augustinian picture where every word points to an object with a discoverable essence, Wittgenstein argues that meaning arises only through use within a linguistic community, where forms of life ground rules and practices that crystallize into a grammar. Different domains like geometry, chess, or ordinary talk are different language games, so demanding an essence imports the grammar of one game into another; ordinary concepts instead share blurry-edged family resemblances, which is why people talk past each other and why philosophy becomes a therapy of describing and mapping uses rather than explaining hidden essences.",
+  "keyIdeas": [
+    "The debate master's demand for a definition works as rhetoric because it assigns an impossible task, importing a demand from a different language game, and then lets you poke holes as your opponent scrambles.",
+    "The Augustinian theory treats a sentence as a list of names pointing to objects, but pointing underdetermines meaning, as the baby and the red fire truck show, without context from a linguistic community.",
+    "Meaning arises through a layered process: forms of life ground community rules and practices, those crystallize into a grammar, and a word means something only when it is publicly used in a community.",
+    "Even geometry's a priori certainty belongs to a specific language game whose grammar of axioms and proof rests on communally upheld practices, and transposing one game's grammar onto another domain, like chess rules onto dating or math onto metaphysics, is a category error.",
+    "Ordinary concepts have blurred edges held together by family resemblance rather than an essence, so the philosopher's job becomes therapy: surveying and laying out uses side by side like a cartographer, so that explanation gives way to description."
+  ],
+  "terms": [
+    { "term": "Language game", "def": "A domain of communication, like geometry, chess, or ordinary talk, with its own grammar of rules and practices that determines what counts as a coherent statement in it." },
+    { "term": "Augustinian theory of language", "def": "The picture Wittgenstein critiques, on which a sentence is a list of names and every word stands for an object that can be pointed to somewhere in the universe." },
+    { "term": "Grammar", "def": "The community generated, pretheoretical rules and practices that crystallize into the criteria making any statement seem coherent or not." },
+    { "term": "Forms of life", "def": "The natural human tendencies, like caring for loved ones, joking, or mourning the dead, that undercurrent everything we ever want to say meaningfully." },
+    { "term": "Family resemblance", "def": "The overlapping, blurry-edged similarities among a concept's instances, like relatives in a family album, with no single characteristic or essence making the resemblance what it is." }
+  ],
+  "anchors": [
+    "you’re GIVING your opponent an impossible TASK, something that makes sense in a TOTALLY DIFFERENT LANGUAGE GAME…and then you can just sit back, relax and point out all the exceptions to it as they scramble for answers",
+    "Meaning a sentence is quite LITERALLY…a list of the names of various THINGS… that can be POINTED to out in the universe somewhere.",
+    "that baby would have NO way of knowing… whether red is a color…is red the truck itself? Is red the sound the firetruck is making?",
+    "The rules and practices crystallize into a grammar of what makes anything coherent. And then FINALLY, after ALL THAT…the MEANING of a word ONLY arises for Wittgenstein… when a person decides to SPEAK it…and USE it PUBLICLY…IN a community setting.",
+    "And notice…how everything ABOUT this different GRAMMAR…is similarly grounded…in a PRACTICE, of communally agreed upon criteria… and how all of these as RULES…only hold UP because there are other people that are willing to go along with them.",
+    "these are people whose projects came up short…NOT because they’re stupid…but because they’re LITERALLY trying to do the impossible. They’re applying a grammar that lies at the heart of ONE language game…to a completely different language game.",
+    "despite the people in the photo album all bearing SOME kind of resemblance…there’s no SINGLE characteristic about them or ESSENCE…that MAKES that resemblance what it IS.",
+    "these are two people COMING to the table using two VERY different language games…and as long as they remain rooted in only theirs…they will never see eye to eye on this stuff.",
+    "Then once they SURVEY the different usages of a word…their job is to lay them out, side by side so that they can be compared by people.",
+    "hey, first let’s clarify what each of us means BY insurrection in this context. Isn’t that a little DIFFERENT?"
+  ]
+}

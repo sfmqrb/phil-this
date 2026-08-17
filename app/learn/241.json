@@ -1,0 +1,30 @@
+{
+  "id": 241,
+  "argument": "Using Shakespeare's The Tragedy of Julius Caesar as a guide, the episode follows how Cassius recruits the honorable Stoic Brutus into an assassination plot with flattery and forged letters, and how the killing backfires into civil war and the end of the republic. Shakespeare's point is that political violence in a republic is naive and hypocritical: like Camus's case against the death penalty, killing to preserve a peaceful republic erodes the very ideal it claims to protect, and it is done in the name of an idealized Rome that never really existed. The play also shows how honor, as adherence to an externally received code, makes a person like Brutus easy to manipulate, and how in a republic the real battle for political power is fought at the level of rhetoric, as Marc Antony's emotional funeral speech crushes Brutus's rational one, leaving listeners with the responsibility to study how truth gets manufactured.",
+  "keyIdeas": [
+    "The play opens with two elected officials alarmed that a crowd cheering Caesar's defeat of fellow Romans is behaving like subjects of a monarchy rather than citizens of a republic.",
+    "Cassius needs Brutus because Brutus is publicly seen as a moral, stoic senator who loves Rome, and it is Cassius's forged letters from supposed citizens that finally convince Brutus the killing is what Rome demands.",
+    "Political violence in a republic is naive about political reality: it almost never accomplishes what was intended, instead angering the victim's supporters and turning the victim into a symbol of a greater cause, and like Camus's case against the death penalty it is hypocrisy that erodes the ideal it claims to protect.",
+    "Honor is a surprisingly open-ended virtue that externalizes moral decision-making into a code received from other people, which is why a persuader like Cassius only needs to convince an honorable man that what he wants is what the code demands.",
+    "In a republic the battle for political power is won and lost at the level of rhetoric, and Brutus's rational speech fails against Marc Antony's appeal to fear, envy, and disgust because the angry crowd's elevated emotions made emotional rhetoric more potent than reason, regardless of the truth."
+  ],
+  "terms": [
+    { "term": "Republic", "def": "A political setup where no one person runs everything, power is spread across offices and councils, and citizens are supposed to show up and argue for what is best for the society." },
+    { "term": "Stoicism", "def": "The philosophical approach Brutus represents, in the Cicero-inflected form emphasizing service to your country, which leaves him at war within himself between duty to Rome and loyalty to Caesar." },
+    { "term": "Honor", "def": "Adherence to a code received from other people and tied to public reputation, which externalizes moral decision-making and makes the honorable person easier to manipulate." },
+    { "term": "Rhetoric", "def": "The skill of persuasion that in a republic becomes one of the most politically powerful abilities, used differently by Brutus, Marc Antony, Cassius, and Caesar." },
+    { "term": "Tragedy", "def": "A play in the ancient Greek sense with no clear good guy or bad guy, calling the audience to consider the situation without idealizing or demonizing anyone." }
+  ],
+  "anchors": [
+    "what kind of crowd…CELEBRATES the defeat of their fellow Romans and neighbors so much? Again, this DOESN’T look like people that are part of a republic anymore.",
+    "he KNOWS that Brutus is SEEN by the people as a very moral, stoic, senator that LOVES Rome, and the people think that he would NEVER do anything if it wasn’t what’s best for ROME!",
+    "it’s this FAKE PICTURE, that Cassius MANUFACTURES of what’s going ON in the world, this BECOMES the thing that CONVINCES Brutus…that he needs to JOIN the plot…in the name of SAVING the republic.",
+    "Political violence will almost ALWAYS…futher anger and embolden the people that were behind that person in the first place…they also often TURN that person into a symbol for a CAUSE… that’s much GREATER than simply the one person.",
+    "this is the DEFINITION, of stepping OUTSIDE of a peaceful way of working through political differences, to supposedly PRESERVE the sanctity of the peaceful political setup.",
+    "they’re doing so to stop the world from changing into something, that in many ways it already IS, and has always BEEN.",
+    "they become someone who’s FAR more easily manipulated… by anyone that’s persuasive enough… to convince them that what they want them to DO…is exactly what their code demands of them.",
+    "in a republic. THIS IS, ACTUALLY where the battle for political power is won and lost. It’s at the level of rhetoric.",
+    "The people were angry… and when their emotions were already elevated in the crazy spot Rome was IN at the time…APPEALING to those emotions… just became a MUCH more POTENT form of rhetoric, REGARDLESS of whatever the truth was.",
+    "this is the tragic end of a person, who never really becomes the emotionless Stoic sage he wants to be, and never quite finds a way to live at peace with the compassion that keeps disrupting the Stoic ideal he’s trying to live by."
+  ]
+}

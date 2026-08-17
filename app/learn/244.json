@@ -1,0 +1,31 @@
+{
+  "id": 244,
+  "argument": "Opening with a thought experiment about a world that abandons the scientific method but keeps using scientific vocabulary, MacIntyre argues in After Virtue that modern moral talk is a 'simulacra of morality': we still use words like good, justice, and virtue, but the Enlightenment removed the teleology — a shared end for human life — that once made those words intelligible. He traces a genealogy from Homeric role-based virtue, through the Greek tragedies and Plato's universal Good, to Aristotle's breakthrough idea that humans, like knives, have a function, and shows how every Enlightenment attempt to rebuild morality without ends (Kant, utilitarianism, sentiment) fails, leaving us in an emotivist culture of persuasion and manipulation where managers, therapists, and protestors gain power. His proposed way forward is shared practices like farming or chess, whose internal goods and communities can make virtues function as teleologies again without requiring Aristotle's ancient metaphysics.",
+  "keyIdeas": [
+    "In Homeric morality, being virtuous simply meant performing your social role well, with stories rather than theoretical argument providing models of excellence.",
+    "The Greek tragedies exposed that people occupy many roles demanding conflicting virtues, forcing the question of how anyone decides which role takes priority — a tension Plato answered by making all virtues individual expressions of one universal Good.",
+    "Aristotle's teleology holds that humans, like knives, have a function, so with an agreed end for human life moral discussion becomes intelligible and virtues become a bridge from the person you are to the person you could be.",
+    "The Enlightenment threw out teleology but kept the moral vocabulary it grounded, and every attempt to rebuild morality from zero — Kant's reason, utilitarian happiness, sentiment — either fails or smuggles ends back in, a poverty Hume's is/ought distinction honestly names.",
+    "In the resulting emotivist culture, where moral claims are just 'boo' and 'yay', managers, therapists, and protestors gain power, and MacIntyre's remedy is shared practices with internal goods, sustained by communities, that let virtues work as teleologies again."
+  ],
+  "terms": [
+    { "term": "Emotivism", "def": "The meta-ethical, anti-realist view that moral statements have no truth content and are really just emotive expressions, like saying 'boo, murder!' or 'yay, charity!'." },
+    { "term": "Teleology", "def": "An end or purpose that something's existence should be aiming for — for humans, a correct way for our kind of creature to exist in our kind of universe, which makes moral discussion intelligible." },
+    { "term": "Simulacra of morality", "def": "MacIntyre's name for the Enlightenment's product: continuing to use terms like good, justice, and virtue while cutting out the moral tradition that gave rise to them." },
+    { "term": "Incommensurable", "def": "MacIntyre's description of moral disputes that cannot be rationally adjudicated because nothing is grounded in a shared conception of the good, as with Rawls versus Nozick on property." },
+    { "term": "Shared practice", "def": "A complex, cooperative activity like farming or chess with learned standards and internal goods of its own — 'planting turnips is not a practice; farming is'." },
+    { "term": "Internal goods", "def": "The outcomes and excellences achievable only within a practice itself, unlocked by virtues like patience or honesty, as opposed to external rewards like candy, money, or fame." }
+  ],
+  "anchors": [
+    "imagine they USE these scientific TERMS… without the foundation that made SENSE of these things in the first place.",
+    "How is ANYONE… supposed to differentiate between WHICH of these roles takes priority over any other?",
+    "there is a universal GOOD, that all these virtues stem from… a higher FORM of the good, FROM which everything we consider to be a virtue, is SUBORDINATE to.",
+    "It requires you to believe that there is some END, or a “teleology”, that is just the CORRECT WAY, for the KIND of creature a human being is…to EXIST in the kind of UNIVERSE we LIVE in.",
+    "the virtues become a bridge for a person to go from as they ARE…to a person as they COULD be.",
+    "“happiness”, like this, can’t ever actually function as a SINGLE standard that settles conflicts between different ideas of the good.",
+    "there are no ends that we can draw from to determine which action is better or worse than any other…then… yes, you CAN’T derive an ought from an is.",
+    "never able to make any progress, because they have no common END, that they can use the tool of rationality, to try to get CLOSER to.",
+    "of being able to take a conflict about what matters… and translate it into a ‘just-do-your-job’ kind of technical problem…that becomes super valuable in a world where nobody can rationally settle what the ends “should” be about.",
+    "they would HAVE to be doing things that LEAD to better outcomes, INTERNAL to the practice itself."
+  ]
+}

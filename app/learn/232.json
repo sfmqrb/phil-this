@@ -1,0 +1,30 @@
+{
+  "id": 232,
+  "argument": "In The Crisis of Narration, Byung Chul Han argues that real stories — selective narratives that link past, present, and future, bind people together, and help someone understand who they are — have been in sickening decline since the early 20th century. Where Walter Benjamin's modern world merely trained people not to reflect deeply, our world of social media, 24/7 news, and data-driven apps is deliberately hostile to storytelling: it keeps people in a reactive, emotional state, replaces memory with file storage, and swaps storytelling for storyselling and narrative performance. The existential cost is a crisis of the self, since without stories people cannot integrate their experiences, heal from suffering, or feel connected to anything larger — and AI, being pure information processing rather than spirit, cannot write those stories for us.",
+  "keyIdeas": [
+    "Benjamin's line about people caring more about a fire in a Paris attic than a revolution in Madrid marks the distinction between immediate, superficial emotional reactions and experiences that require narrative context and reflection.",
+    "Instagram 'Stories' are not real stories: they are fragmented present moments with no link between past, present, and future, produced by apps designed to generate data rather than meaning.",
+    "Saving pictures on a phone is a context-free total recall stored as data, unlike memory, which selectively interprets moments and links them to a meaningful narrative.",
+    "We have gone from storytelling to storyselling: brands, news outlets, and politicians exploit our craving for stories, and the lack of real political stories helps explain the rise of conspiracy theories.",
+    "Healing from painful experiences and even theory itself require story — data can show that two things happen together but cannot say what they mean, and AI as pure Intelligenz lacks the risk, imagination, and existential connection real storytelling demands."
+  ],
+  "terms": [
+    { "term": "Storyselling", "def": "Han's name for the replacement of storytelling by short-lived, easily replaceable stories that brands, news outlets, and politicians sell to manipulate emotion and reinforce the existing system." },
+    { "term": "Gaplessness", "def": "The lack of distance Han says we experience when information is thrown in our faces with no time to let an experience settle and reflect on what it means." },
+    { "term": "Narrative performance", "def": "What has replaced narration: curating stories about ourselves on social media that look like the way we want other people to think we are, instead of discovering our identity within a larger whole." },
+    { "term": "Bare life", "def": "A term Han borrows from Giorgio Agamben for the reduced existence of people whose lives become metrics and data without stories that connect them to anything." },
+    { "term": "Intelligenz vs. Geist", "def": "A distinction from German Idealism between information processing and spirit or creativity; Han says current AI is pure Intelligenz and so cannot really tell stories." }
+  ],
+  "anchors": [
+    "One is more immediate and superficial. The other requires more narrative context and reflection.",
+    "the world WE live in, in 2025…is deliberately HOSTILE to this whole process of storytelling",
+    "What you get are not stories then…but a bunch of fragmented present moments",
+    "you’re always linking very selective events… to some kind of narrative that is meaningful to you.",
+    "Most news, especially in its 24/7 digital form… is a bunch of fragmented, bits of information.",
+    "the RISE of certain a KIND of story in conspiracy theories…can be explained by there being such a LACK of real stories coming from the political space.",
+    "we CREATE stories about ourselves…that LOOK like the way we want other people to THINK we are.",
+    "how do we HEAL, asks Byung Chul Han, other than with a STORY that helps us INTEGRATE painful experiences into a meaningful whole.",
+    "It can tell you THAT two things are happening together. But it can’t tell you what they MEAN.",
+    "It processes information at CRAZY levels, it’s WONDERFUL at doing THAT…but it is incapable of doing SEVERAL things that allow for real creativity or storytelling."
+  ]
+}

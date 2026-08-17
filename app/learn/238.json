@@ -1,0 +1,30 @@
+{
+  "id": 238,
+  "argument": "The episode reads Mary Shelley's Frankenstein as a work of philosophical literature about creation without responsibility: Victor Frankenstein combines Romantic wonder at nature with the Enlightenment drive to master it, and because he sequesters himself off and creates without the checks and balances of a community, the result is horror rather than triumph, followed by his attempt to forget his creation ever happened. Echoing Bruno Latour's point that technology is never a neutral tool, Shelley insists scientific progress must always be mediated by ethics and community, whether the creation is a new technology, an AI, or a child. The creature itself begins gentle and turns violent only after repeated ostracism based on how he looks, which lets Shelley question the moral dualism of liberal individualism, the treatment of ostracized groups, and society's obligation to give its members recognition, while the 1831 revision reframes Victor's actions as fate rather than free will, likely reflecting the tragedies of Shelley's own intervening years.",
+  "keyIdeas": [
+    "The truly significant thing in the creation scene is not the vague mechanism but Victor's reaction: instead of triumph he feels horror and disgust, and he immediately begins trying to forget what he has done.",
+    "Neither Romantic wonder nor Enlightenment mastery is bad in itself, but combined in someone who creates in isolation without the checks and balances of a community, as the full title The Modern Prometheus signals, they exact a price, a warning the episode extends to AI companies creating a new species behind NDAs.",
+    "Following Bruno Latour, technology is never simply a neutral tool: it carries a latent morality embedded in its very potential, so the inventions themselves must always be examined ethically, not just their users.",
+    "The creature begins life gentle, vegetarian, and helpful, and turns to anger, resentment, and violence only after repeated ostracism based purely on appearance, which the trial of Justine extends by showing a supposedly neutral court abandoning unbiased justice over mere appearance.",
+    "Shelley questions the moral dualism of individualism, asking whether a creation's actions are really separable from its creator's neglect, and scholarly readings see Victor's experiment as a masculine attempt to remove maternal care and the woman from creation, leaving him a horrible father and mother at once."
+  ],
+  "terms": [
+    { "term": "The Modern Prometheus", "def": "The book's full subtitle, comparing Victor to the titan who stole fire from Zeus: he seizes a world-changing power and pays a price for doing it in an isolated and reckless way." },
+    { "term": "Latent morality", "def": "Bruno Latour's idea that a technology is never a neutral tool but carries a kind of morality embedded in its very potential, requiring the invention itself to be examined ethically." },
+    { "term": "Moral dualism", "def": "The assumption, especially in individualist liberal society, that a creation's actions are cleanly separate from its creator's, which Shelley questions through Victor's neglect of the creature." },
+    { "term": "Galvanism", "def": "The cutting-edge science of Shelley's time of running electricity through dead bodies, mentioned in the 1831 introduction as a possible method and the source of the popular electricity image." },
+    { "term": "Romantic wonder vs Enlightenment mastery", "def": "The two dominant attitudes of Shelley's era, awe at nature's mystery versus confidence that rational method can master nature, which become dangerous when combined in an isolated creator like Victor." }
+  ],
+  "anchors": [
+    "the REAL significant thing that’s going ON in this moment for Shelley…is that ONCE Frankenstein brings this creature to LIFE…he doesn’t have the feeling that he expected to have: he doesn’t feel TRIUMPH",
+    "in someone like Frankenstein, who sequesters himself off from the public and from his colleagues and CREATES this creature WITHOUT the checks and balances of a community",
+    "Victor Frankenstein wants to DO science and get ACCESS to this INCREDIBLE ability to of being able to BREATHE LIFE into things. And that JUST like PROMETHEUS…he’s gonna pay a PRICE when he decides to do this in an isolated and reckless way.",
+    "when a technology is created…it carries WITH it…a kind of latent morality, embedded into the POTENTIAL of the technology itself. And that MORE than that, we always need to be examining these inventions ETHICALLY, if we want to be doing things responsibly.",
+    "it’s NOT until… it starts trying to talk to PEOPLE…who then OSTRACIZE the thing and consider it to be a MONSTER…it’s ONLY THEN that the CREATURE turns angry, resentful, and then resorts to VIOLENCE as a way to get social recognition from his creator.",
+    "the mere, APPEARANCE, of Justine as a poor woman who HAD the locket in her possession…JUST THIS was enough for the courts to ABANDON…what they CLAIM is their highest IDEAL in delivering unbiased justice.",
+    "ARE the creature’s ACTIONS…REALLY so clearly SEPARATE… from VICTOR’S actions of creating something so powerful and then NEGLECTING it so severely?",
+    "an OVERLY masculine attempt to USE domination over nature, to REMOVE maternal care and the woman, from the whole PROCESS of creating a being.",
+    "making almost the EXACT same mistake he did before: bringing yet ANOTHER creature into existence, without their consent in the matter, and THIS time essentially SENTENCING this one to be the ROMANTIC partner of this OTHER thing he created",
+    "she frames them more in terms of this all being his FATE…DETERMINISTIC and OUT of his CONTROL…INSTEAD of this being a matter of his own free will."
+  ]
+}

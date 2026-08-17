@@ -1,0 +1,31 @@
+{
+  "id": 240,
+  "argument": "Charles Taylor's The Varieties of Religion Today takes William James's famous claim that religion is at its core a personal experience of the divine and argues that, while James brilliantly predicted how modern people would see religion, his view is too narrow because it ignores religion's sociological role. Tracing religion's evolution from paleo-Durkheim societies where living at all meant participating in religion, through neo-Durkheim societies like the United States, to a post-Durkheim world where expressive individualism makes religion an a la carte personal choice, Taylor shows what is lost when the community element disappears: accountability to something greater than one's own opinion, and the group settings that often lead to divine experience in the first place. He closes by describing the uniquely modern fragility of belief and unbelief in a structurally pluralistic world, where more and more people live on the cusp between the two, buffeted by cross-pressures that make deep commitment harder than ever.",
+  "keyIdeas": [
+    "William James defined religion as a personal experience in the heart of an individual connecting to the divine, and saw institutional forms as distortions that arise when a founder's insight must be retold, written down, and turned into doctrine for everybody.",
+    "There are two valid answers to whether to live as though there is something transcendent: a closed, immanence-based stance that derives values from this world, and James's open stance that some knowledge, like trust, only becomes visible once you participate and commit.",
+    "The criticism that religion is just a security blanket against meaninglessness projects a modern bias onto history; for a medieval Dominican monk, cosmic meaning was so baked into everything that the thought of meaninglessness simply was not persuasive.",
+    "Religion's sociological function has evolved from paleo-Durkheim societies where participating in society was participating in religion, through neo-Durkheim societies where religion still unifies but is not required, to a post-Durkheim world where expressive individualism makes religion as a la carte as fashion or a toaster.",
+    "Without a community holding you accountable to something higher, whether religious or secular like a scientist's or activist's community, people settle for cheap pseudo-spiritual substitutes and endless self-excuses, while structural pluralism leaves belief and unbelief more fragile than ever, with modern people living on the cusp between them."
+  ],
+  "terms": [
+    { "term": "Transcendence", "def": "The idea that there is something beyond this world which, though not directly accessible, gives meaning and order to the things in this world." },
+    { "term": "Immanence", "def": "Deriving meaning and values entirely from this world as it unfolds in front of us, from things already happening that we already care about." },
+    { "term": "Closed stance", "def": "Taylor's name for the agnostic veto: a refusal on principle to believe in transcendent things that lack evidence, holding that this world is enough as it is." },
+    { "term": "Paleo-Durkheim religion", "def": "An earlier form of society where doing almost anything meaningful, from marriage to school, assumed an embedded religion, so living in the society was itself participating in religion." },
+    { "term": "Post-Durkheim religion", "def": "The modern condition where being part of society requires no religious participation at all, so religion becomes an entirely personal, a la carte choice made by the individual." },
+    { "term": "Expressive individualism", "def": "The modern trend, tied to the age of authenticity and consumerism, in which every choice from fashion to religion becomes a personal statement about who you are deep down." }
+  ],
+  "anchors": [
+    "It’s a PERSONAL EXPERIENCE, when an INDIVIDUAL feels a CONNECTION to WHATEVER it is they call the divine.",
+    "the story has to get RETOLD, which means it gets watered down, eventually it needs to get WRITTEN down, eventually turned into a doctrine. Doctrine that has to apply to EVERYBODY now.",
+    "If this person CAN’T find meaning in something TRANSCENDENT…then they will HAVE to find the meaning in their life through IMMANENCE.",
+    "there’s KINDS of knowledge… that REQUIRE the participation of the KNOWER IN something, for the knower to able to RECEIVE that knowledge.",
+    "the thought that everything is meaningless, doesn’t even FEEL to them like a philosophical POSITION that it’s worth losing SLEEP over.",
+    "a society where religion is STILL a part of what UNIFIES people in it, broadly speaking…but the actual PARTICIPATION in the RELIGION…is not REQUIRED of people as much as it was before.",
+    "why WOULDN’T religion become something to us that’s AS a la carte…as what kind of WATCH you are gonna wear or something?",
+    "Consider how a scientist for example…needs a COMMUNITY of other SCIENTISTS, all WORKING toward a similar GOAL, and all holding each other ACCOUNTABLE to an ideal of truth.",
+    "modern people can SETTLE, for a cheap kind of PSEUDO-spiritual experience, that they MISTAKE as the pinnacle of what’s POSSIBLE, because it’s just the most they’ve ever demanded of themselves.",
+    "there’s so MANY different valid ways of viewing reality that we can be EXPOSED to…that this makes belief on either SIDE of this question, something very fragile in practice."
+  ]
+}

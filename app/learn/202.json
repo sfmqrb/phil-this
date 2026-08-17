@@ -1,0 +1,30 @@
+{
+  "id": 202,
+  "argument": "Mark Fisher names our situation Capitalist Realism: not a set of positions but a state of affairs, a cultural logic or psychic infrastructure that weakens people's ability to imagine any social future other than capitalism. The episode traces one half of the blend that produced it — the history of liberal economic thought from classical liberalism's faith in naturally self-correcting markets, through the Great Depression's turn to government regulation of markets as human constructions, to the neoliberal backlash of Hayek and von Mises that triumphed in the 70s and 80s by metabolizing the era's revolutionary desire for freedom better than the left did. Critics argue neoliberalism only masquerades as classical liberalism: its goal is competition rather than mutual benefit, and minimizing government — the people's only tool for intervening in the economy — structurally prevents solidarity, while producing self-commodification, audit culture, and the privatization of depression.",
+  "keyIdeas": [
+    "Capitalist Realism is not an ism like feminism or Buddhism but a state of affairs — a cultural logic and psychic infrastructure of common attitudes that clouds people's view of the world and weakens their ability to imagine different social futures.",
+    "Classical liberals favored laissez-faire markets because they saw them as naturally occurring, self-correcting phenomena like a healing body or adapting ecosystem, but the Great Depression recast markets as human constructions that government, another human construction, must regulate to ensure desired outcomes.",
+    "Thinkers like Hayek and von Mises objected that New Deal intervention breeds a welfare-state reliance and collectivist mentality, and that no central planner can out-manage the aggregate of free choices — and neoliberalism won in the 70s and 80s by metabolizing the revolutionary, libidinal desire for freedom far better than communism did.",
+    "Critics say neoliberalism presents itself as classical liberalism but abandons its goal of mutual benefit for competition itself, resembling social Darwinism, and since in a democracy the government effectively is the people, minimizing it removes their only tool to stop what harms them — which is why preventing solidarity is not a conspiratorial claim.",
+    "The neoliberal message that anything missing in your life is on you drives people to commodify themselves and others as high or low value, produces an audit culture where quantifiable metrics matter more than actual work, and privatizes depression as a chemical imbalance while ignoring what society does to cause it."
+  ],
+  "terms": [
+    { "term": "Capitalist Realism", "def": "The state of affairs in which people quite literally cannot imagine an alternative future to the capitalist system they are living in." },
+    { "term": "Neoliberalism", "def": "The economic and political ideology, dominant since the 70s and 80s, of free-market capitalism, minimal state intervention, and individual entrepreneurial freedom, with competition as society's organizing principle." },
+    { "term": "Classical liberalism", "def": "The Enlightenment ideology of the primacy of the individual whose free markets were built around a goal of mutual benefit and social responsibility." },
+    { "term": "Laissez-faire capitalism", "def": "The early classical liberal practice of almost zero regulations interfering with market forces, justified by the belief that markets are natural and self-correcting." },
+    { "term": "Audit culture", "def": "Fisher's term for the spreading condition in which quantifiable metrics demonstrating that work is being done matter more than actually doing good work." }
+  ],
+  "anchors": [
+    "Capitalist Realism is a state of affairs. It’s a cultural logic that’s accepted among people",
+    "just like the human BODY has processes that turn on to heal things that are going wrong with it, or just like an ECOSYSTEM finds a way to adapt…so too will the market",
+    "NOW people are thinking markets are not NATURALLY occurring phenomena that are self correcting…markets are HUMAN constructions",
+    "An expectation in people’s HEADS that it’s the government’s job to take care of you… which would then lead to a more collectivist mentality overall",
+    "this VISION of neoliberalism, to Mark Fisher…METABOLIZED this revolutionary spirit among the PEOPLE in the west…FAR BETTER than COMMUNISM was doing back in the 1980’s",
+    "Which then leads people to look at other people AROUND them in terms of them being a commodity as well",
+    "during classical liberalism as it was going on…there was always a GOAL built into these free markets that they were ULTIMATELY for the sake of mutual benefit",
+    "because if you REMOVE the GOVERNMENT…you REMOVE the ability to intervene and apply regulations to things that are HURTING people",
+    "what MATTERS is that there’s a quantifiable metric that can DEMONSTRATE to the auditors that work is being DONE…EVEN when it’s not actually, REALLY being done that much",
+    "We KNOW they’ve taken depressed people out of one environment, MOVED them to a different environment and their depression gets better"
+  ]
+}

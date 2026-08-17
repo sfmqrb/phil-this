@@ -1,0 +1,30 @@
+{
+  "id": 204,
+  "argument": "Working through Michael Sandel's book Justice: What's the Right Thing to Do?, the episode argues that change in capitalist societies doesn't have to mean overthrowing the system — it can mean rethinking the entire orientation of society, treating capitalism as an engine whose direction needs to change through a change in people's thinking. Sandel lays out three historic approaches to justice — utilitarianism, libertarianism, and virtue ethics — and shows that utilitarianism collapses when individual rights enter the picture, while libertarianism's apparent neutrality hides non-neutral judgments about which virtues deserve reward. Drawing on Aristotle, Sandel argues a just society must cultivate civically engaged citizens who deliberate about the common good, because when supposedly neutral approaches dominate, market norms quietly replace social norms; the book's covert point is that it's really about democratic citizenship.",
+  "keyIdeas": [
+    "Beyond reforming policy with existing tools, capitalist societies can change at another level: rethinking their entire orientation, treating capitalism as an engine whose direction of movement needs to change through a fundamental shift in people's thinking.",
+    "Practicing philosophy through hypothetical dilemmas is what Simon Blackburn calls conceptual engineering — testing whether an idea's materials are sound and which parts of its structure can bear weight — and the cleanliness of hypotheticals is a feature, since discussion never stalls on disputed facts.",
+    "Utilitarianism seems convincing in the trolley case but starts failing the moment individual rights matter, as Sandel's organ transplant and Roman coliseum examples show — there is obviously more to morality than a calculus of happiness.",
+    "The libertarian 'team freedom' approach splits internally over how many background conditions (like the sweatshop worker's desperation) must be met before someone counts as truly free, and its supposed neutrality masks non-neutral judgments — outrage at the bank bailouts rests on the virtue judgment that greed is a vice that shouldn't be rewarded.",
+    "For Sandel, markets are not perfect arbiters of value (a CEO didn't become eight times more valuable between 1980 and 2010), and a just democratic society needs good-faith civic conversations that produce a mutual understanding of common purposes even amid deep disagreement — a task of spotting problems that, like Zizek's asteroid, doesn't require the spotter to also be the engineer."
+  ],
+  "terms": [
+    { "term": "Conceptual engineering", "def": "Simon Blackburn's description of what philosophers do: examining ideas the way an engineer examines a bridge — testing the materials, how the pieces connect, and which sections can bear weight." },
+    { "term": "Utilitarianism", "def": "The approach to justice that seeks the greatest happiness (or utility) for the greatest number by weighing suffering and pleasure as a moral calculation." },
+    { "term": "Team Libertarianism", "def": "The 'team freedom' view that justice means respecting people's rights to choose for themselves what ends to pursue and what lives to live, split between market-freedom and background-conditions camps." },
+    { "term": "Common good", "def": "The shared ends a political community is aiming for together — what Aristotle-inspired virtue ethics says a just society must cultivate citizens to recognize and bring about." },
+    { "term": "Market norms", "def": "Market-driven standards of value that, in a society over-indexed on markets, bleed into areas like healthcare, education, and war and replace the social norms that set expectations for behavior." }
+  ],
+  "anchors": [
+    "the OTHER way to change things… is to RETHINK, the entire ORIENTATION of a capitalist society altogether.",
+    "PART of the job of that engineer is to know all the materials the bridge is made out of, how the pieces connect together, what sections of the bridge bear weight",
+    "there’s a CLEANLINESS to HAVING these sorts of discussions in this hypothetical environment…where you’re never going to get held UP in one of these discussions with someone because you can’t agree on what the facts are.",
+    "Utilitarianism…starts to run into PROBLEMS…when it comes to the consideration of individual rights.",
+    "Then okay, he says EVEN if that is TRUE…is that the REASON… that it’s NOT OKAY to THROW innocent people to the lions?",
+    "the TENSION between these two CAMPS in team freedom OFTEN times becomes about determining how many of these background conditions need to be in place before we can CONSIDER people truly free.",
+    "Greed… is a VICE… and now that’s gonna be something that we're REWARDING in our society? That’s WRONG. That’s not JUSTICE.",
+    "is a CEO in the year 2010…EIGHT TIMES more VALUABLE to a company than a CEO was in 1980?",
+    "what you’ll GET to at the END of it… are the COMMON purposes or ENDS…that both of you are aiming for IN this political project you’re both a part of.",
+    "it’s unreasonable to expect someone to be NOT ONLY the one that SPOTS the asteroid headed towards earth…but ALSO the one that builds the rocket ship"
+  ]
+}
