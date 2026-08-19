@@ -88,7 +88,7 @@
         method: "POST",
         credentials: "same-origin",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ episodeId: episodeId, currentIndex: data.currentIndex, score: data.score, missed: data.missed })
+        body: JSON.stringify({ episodeId: episodeId, currentIndex: data.currentIndex, score: data.score, missed: data.missed, sample: data.sample })
       }).catch(function () {});
     }
   }
@@ -914,7 +914,6 @@
   var pathsStripEl = document.getElementById("pathsStrip");
   var pathBlurbEl = document.getElementById("pathBlurb");
   var selectedPathKey = null;
-  var PATH_PASS_RATIO = 0.7;
 
   function getPaths() {
     return (typeof LEARNING_PATHS !== "undefined" && Array.isArray(LEARNING_PATHS)) ? LEARNING_PATHS : [];
@@ -926,16 +925,13 @@
   }
 
   // Of this path's episodes that actually have a quiz, how many has the user
-  // passed (best score >= 70%)?
+  // passed (some attempt at 80%+ — i.e. 8 of the 10 sampled questions)?
   function pathProgress(path, scores) {
     var covered = getCoveredIds();
     var quizzed = (path.episodes || []).filter(function (id) { return covered[id]; });
     var done = 0;
     quizzed.forEach(function (id) {
-      var record = scores[String(id)];
-      var episode = getEpisodeById(id);
-      if (!record || !episode || !episode.questions.length) return;
-      if (record.best / episode.questions.length >= PATH_PASS_RATIO) done++;
+      if (episodePassed(scores[String(id)])) done++;
     });
     return { done: done, total: quizzed.length };
   }
@@ -1185,14 +1181,22 @@
       if (inProgress) {
         var badge = document.createElement("span");
         badge.className = "in-progress-badge";
-        badge.textContent = "in progress · Q" + (inProgress.currentIndex + 1) + "/" + ep.questions.length;
+        var progressTotal = Array.isArray(inProgress.sample) && inProgress.sample.length ? inProgress.sample.length : QUIZ_SAMPLE_SIZE;
+        badge.textContent = "in progress · Q" + (inProgress.currentIndex + 1) + "/" + progressTotal;
         status.appendChild(badge);
       }
       if (record) {
-        var p = pct(record.best, ep.questions.length);
+        var best = bestAttempt(record);
         var bestLine = document.createElement("span");
-        bestLine.className = "best" + (p === 100 ? " perfect" : "");
-        bestLine.textContent = record.best + "/" + ep.questions.length;
+        if (best) {
+          var passedEver = episodePassed(record);
+          bestLine.className = "best" + (passedEver ? " perfect" : "");
+          bestLine.textContent = best.score + "/" + best.total + (passedEver ? " ✓" : "");
+        } else {
+          // legacy record with no per-attempt totals
+          bestLine.className = "best";
+          bestLine.textContent = record.best + "/" + ep.questions.length;
+        }
         var attemptsLine = document.createElement("span");
         attemptsLine.textContent = record.attempts.length + (record.attempts.length === 1 ? " attempt" : " attempts");
         status.appendChild(bestLine);
@@ -1725,6 +1729,54 @@
   var missed = [];
   var answered = false;
 
+  // Each attempt is a random sample of QUIZ_SAMPLE_SIZE of the episode's 20
+  // questions, in shuffled order, with the four options shuffled per question
+  // too. currentSample holds ORIGINAL question indices (so the review deck and
+  // passage anchors, both keyed by original index, stay correct);
+  // currentOptionOrder maps displayed option position -> original position for
+  // the question on screen. Passing an attempt means PASS_SCORE or more right.
+  var QUIZ_SAMPLE_SIZE = 10;
+  var PASS_SCORE = 8;
+  var currentSample = [];
+  var currentOptionOrder = [0, 1, 2, 3];
+
+  function shuffledRange(n) {
+    var a = [];
+    for (var i = 0; i < n; i++) a.push(i);
+    for (var j = a.length - 1; j > 0; j--) {
+      var k = Math.floor(Math.random() * (j + 1));
+      var tmp = a[j]; a[j] = a[k]; a[k] = tmp;
+    }
+    return a;
+  }
+
+  function drawSample(episode) {
+    return shuffledRange(episode.questions.length).slice(0, Math.min(QUIZ_SAMPLE_SIZE, episode.questions.length));
+  }
+
+  // The question object and original index behind the current position.
+  function activeQIndex() { return currentSample[currentIndex]; }
+  function activeQuestion() { return currentEpisode.questions[activeQIndex()]; }
+
+  // Did any attempt pass (>= 80% right)? Works for both the current 10-question
+  // sampled attempts (8/10) and any legacy full-length attempts on record.
+  function episodePassed(record) {
+    if (!record || !record.attempts) return false;
+    return record.attempts.some(function (a) { return a && a.total > 0 && a.score / a.total >= 0.8; });
+  }
+
+  // The attempt with the highest ratio, for the "best" line in the ledger.
+  function bestAttempt(record) {
+    var best = null;
+    ((record && record.attempts) || []).forEach(function (a) {
+      if (!a || !a.total) return;
+      if (!best || a.score / a.total > best.score / best.total) best = a;
+    });
+    // Legacy records predating per-attempt totals: fall back to best-of-20.
+    if (!best && record && typeof record.best === "number") return null;
+    return best;
+  }
+
   var qEls = {
     epLabel: document.getElementById("quizEpLabel"),
     progressLabel: document.getElementById("progressLabel"),
@@ -1740,6 +1792,7 @@
     results: document.getElementById("results"),
     scoreLine: document.getElementById("scoreLine"),
     scoreLabel: document.getElementById("scoreLabel"),
+    passVerdict: document.getElementById("passVerdict"),
     missedWrap: document.getElementById("missedWrap"),
     resultsLearn: document.getElementById("resultsLearn"),
     backBtn: document.getElementById("backBtn"),
@@ -1786,16 +1839,20 @@
     renderQuizLearnBox(episodeId);
 
     var cached = !forceRestart ? loadProgress()[String(episodeId)] : null;
-    var resumed = !!(cached && cached.currentIndex > 0 && cached.currentIndex < currentEpisode.questions.length);
+    var cachedSampleOk = !!(cached && Array.isArray(cached.sample) && cached.sample.length > 0 &&
+      cached.sample.every(function (i) { return typeof i === "number" && i >= 0 && i < currentEpisode.questions.length; }));
+    var resumed = !!(cached && cachedSampleOk && cached.currentIndex > 0 && cached.currentIndex < cached.sample.length);
     if (resumed) {
+      currentSample = cached.sample;
       currentIndex = cached.currentIndex;
       currentScore = cached.score || 0;
       missed = cached.missed || [];
     } else {
+      currentSample = drawSample(currentEpisode);
       currentIndex = 0;
       currentScore = 0;
       missed = [];
-      if (forceRestart) clearEpisodeProgress(episodeId);
+      if (forceRestart || cached) clearEpisodeProgress(episodeId);
     }
 
     showView("quiz");
@@ -1859,9 +1916,9 @@
   }
 
   function renderQuestion() {
-    var item = currentEpisode.questions[currentIndex];
+    var item = activeQuestion();
     answered = false;
-    var total = currentEpisode.questions.length;
+    var total = currentSample.length;
     qEls.progressLabel.textContent = "§ " + (currentIndex + 1) + " / " + total;
     qEls.scoreLive.textContent = currentScore + " correct so far";
     qEls.progressFill.style.width = ((currentIndex / total) * 100) + "%";
@@ -1871,41 +1928,49 @@
     qEls.note.innerHTML = "";
     qEls.nextRow.classList.remove("show");
 
+    // Fresh option shuffle each time the question is shown, so neither the
+    // authored position nor a remembered layout gives the answer away.
+    currentOptionOrder = shuffledRange(item.options.length);
+
     qEls.options.innerHTML = "";
-    item.options.forEach(function (opt, idx) {
+    currentOptionOrder.forEach(function (origIdx, displayIdx) {
       var btn = document.createElement("button");
       btn.className = "option";
       btn.type = "button";
       var letterEl = document.createElement("span");
       letterEl.className = "letter";
-      letterEl.textContent = LETTERS[idx];
+      letterEl.textContent = LETTERS[displayIdx];
       var labelEl = document.createElement("span");
-      labelEl.textContent = opt;
+      labelEl.textContent = item.options[origIdx];
       btn.appendChild(letterEl);
       btn.appendChild(labelEl);
-      btn.addEventListener("click", function () { selectAnswer(idx); });
+      btn.addEventListener("click", function () { selectAnswer(displayIdx); });
       qEls.options.appendChild(btn);
     });
   }
 
-  function selectAnswer(idx) {
+  function selectAnswer(displayIdx) {
     if (answered) return;
     answered = true;
-    var item = currentEpisode.questions[currentIndex];
+    var item = activeQuestion();
+    var origQIndex = activeQIndex();
     var buttons = qEls.options.querySelectorAll(".option");
-    var isCorrect = idx === item.correct;
+    var chosenOrig = currentOptionOrder[displayIdx];
+    var isCorrect = chosenOrig === item.correct;
+    var correctDisplayIdx = currentOptionOrder.indexOf(item.correct);
 
     if (isCorrect) currentScore++;
-    else missed.push({ q: item.q, note: item.note, qIndex: currentIndex });
+    else missed.push({ q: item.q, note: item.note, qIndex: origQIndex });
 
     // A miss enrols this question in the review deck; a hit on a question
     // already enrolled moves it one rung up the spaced-repetition ladder.
-    recordReviewAnswer(currentEpisode.id, currentIndex, isCorrect);
+    // Keyed by the ORIGINAL question index, not the sampled position.
+    recordReviewAnswer(currentEpisode.id, origQIndex, isCorrect);
 
     buttons.forEach(function (b, i) {
       b.disabled = true;
-      if (i === item.correct) b.classList.add("correct");
-      else if (i === idx) b.classList.add("wrong");
+      if (i === correctDisplayIdx) b.classList.add("correct");
+      else if (i === displayIdx) b.classList.add("wrong");
       else b.classList.add("dim");
     });
 
@@ -1913,9 +1978,9 @@
     qEls.note.classList.add("show");
     if (!isCorrect) {
       var epId = currentEpisode.id;
-      var qIdx = currentIndex;
-      appendPassageLink(qEls.note, epId, qIdx, function () {
-        return answered && !!currentEpisode && currentEpisode.id === epId && currentIndex === qIdx;
+      var posSnapshot = currentIndex;
+      appendPassageLink(qEls.note, epId, origQIndex, function () {
+        return answered && !!currentEpisode && currentEpisode.id === epId && currentIndex === posSnapshot;
       });
     }
     qEls.nextRow.classList.add("show");
@@ -1925,10 +1990,10 @@
 
   function nextQuestion() {
     currentIndex++;
-    if (currentIndex >= currentEpisode.questions.length) {
+    if (currentIndex >= currentSample.length) {
       finishQuiz();
     } else {
-      setEpisodeProgress(currentEpisode.id, { currentIndex: currentIndex, score: currentScore, missed: missed });
+      setEpisodeProgress(currentEpisode.id, { currentIndex: currentIndex, score: currentScore, missed: missed, sample: currentSample });
       renderQuestion();
     }
   }
@@ -1936,7 +2001,8 @@
   var scoreCommentary = QuizLogic.scoreCommentary;
 
   function finishQuiz() {
-    var total = currentEpisode.questions.length;
+    var total = currentSample.length;
+    var passed = currentScore >= Math.min(PASS_SCORE, total);
     recordResult(currentEpisode.id, currentScore, total);
     clearEpisodeProgress(currentEpisode.id);
 
@@ -1944,6 +2010,12 @@
     qEls.results.classList.add("show");
     qEls.scoreLine.textContent = currentScore + " / " + total;
     qEls.scoreLabel.textContent = scoreCommentary(currentScore, total);
+    if (qEls.passVerdict) {
+      qEls.passVerdict.textContent = passed
+        ? "Passed · " + PASS_SCORE + "/" + total + " needed"
+        : "Not passed · " + PASS_SCORE + "/" + total + " needed";
+      qEls.passVerdict.className = "pass-verdict mono " + (passed ? "pass" : "fail");
+    }
 
     var episodeId = currentEpisode.id;
     var missedRows = [];

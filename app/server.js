@@ -331,7 +331,8 @@ var server = http.createServer(function (req, res) {
       db.saveProgress(progressSession.user.id, body.episodeId, {
         currentIndex: body.currentIndex,
         score: body.score,
-        missed: body.missed
+        missed: body.missed,
+        sample: body.sample
       });
       sendJson(res, 200, { ok: true });
     });

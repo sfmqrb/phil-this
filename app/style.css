@@ -1241,6 +1241,17 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 }
 .score-label { color: var(--ink-soft); font-size: 14px; margin: 0 0 26px; }
 
+/* pass/fail verdict under the score: each attempt samples 10 of the
+   episode's 20 questions and needs 8 right to pass */
+.pass-verdict {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.pass-verdict.pass { color: var(--accent); }
+.pass-verdict.fail { color: var(--warm); }
+
 .missed-title {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 11.5px;
