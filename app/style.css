@@ -75,24 +75,41 @@ a { color: inherit; }
 }
 
 /* ---------- ambient background geometry ----------
-   Five philosophical vignettes in slow line art behind everything:
-   Ptolemy's celestial spheres, Plato's cave, the dialectic as a breathing
-   vesica, Zeno's dichotomy, and Sisyphus. Ink-colored and translucent, so it
-   reads as texture behind the content, never competing with it. */
+   Philosophical vignettes in slow line art behind everything: Ptolemy's
+   celestial spheres, Zeno's dichotomy, and Sisyphus. Ink-colored and
+   translucent, so it reads as texture behind the content, never competing
+   with it. Each vignette is its own SVG at a fixed pixel size, anchored to a
+   viewport corner — rendering and animation are identical on every display
+   size and aspect ratio (only the small-screen tier below differs). */
 
 .bg-geometry {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
   z-index: 0;
+  overflow: hidden;
   pointer-events: none;
   color: var(--ink-soft);
   opacity: 0.28;
 }
-.bg-geometry * {
+.bg-geometry svg {
+  position: absolute;
+  display: block;
+}
+.bg-geometry svg * {
   transform-box: fill-box;
   transform-origin: center;
+}
+/* offsets reproduce the original 1440×900 composition at 1:1 scale */
+.geo-vig-spheres  { top: -193px; right: -150px; width: 620px; height: 620px; }
+.geo-vig-sisyphus { bottom: 12px; right: 22px; width: 466px; height: 273px; }
+.geo-vig-zeno     { bottom: 23px; left: 50%; margin-left: -248px; width: 496px; height: 112px; }
+
+/* small screens: same vignettes at half scale, Zeno lifted above Sisyphus
+   so the two bottom scenes never overlap */
+@media (max-width: 768px) {
+  .geo-vig-spheres  { top: -97px; right: -75px; width: 310px; height: 310px; }
+  .geo-vig-sisyphus { bottom: 8px; right: 12px; width: 233px; height: 137px; }
+  .geo-vig-zeno     { bottom: 168px; margin-left: -124px; width: 248px; height: 56px; }
 }
 /* accent-colored bodies: the wandering planet and Sisyphus's boulder */
 .geo-planet { fill: var(--accent); }

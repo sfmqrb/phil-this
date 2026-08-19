@@ -29,23 +29,28 @@
 <!-- Ambient background, three vignettes: Ptolemy's celestial spheres (top
      right); an impressionist Sisyphus, sketched in layered broken strokes,
      laboring up a curved hill (bottom right); and Zeno's dichotomy (bottom
-     center). Decorative only. -->
-<svg class="bg-geometry" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+     center). Decorative only. Each vignette is its own fixed-size SVG anchored
+     to a viewport corner, so the scene never depends on the display's size or
+     aspect ratio. -->
+<div class="bg-geometry" aria-hidden="true">
 
   <!-- I. The celestial spheres: nested dashed orbits, one accent-colored
        wanderer riding the outer sphere -->
+  <svg class="geo-vig-spheres" viewBox="970 -193 620 620" focusable="false">
   <g class="geo-sphere">
     <circle cx="1280" cy="120" r="300" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 8" />
     <circle cx="1280" cy="120" r="190" fill="none" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2 8" />
     <circle cx="1280" cy="120" r="95" fill="none" stroke="currentColor" stroke-width="0.7" stroke-dasharray="1 7" />
     <circle class="geo-planet" cx="1280" cy="-180" r="6" />
   </g>
+  </svg>
 
   <!-- II. Sisyphus. The hill is three overlapping freehand strokes (no two
        passes of a brush agree); the figure is a handful of gestural lines
        leaning into an accent-colored boulder sketched as broken arcs. The
        whole scene climbs the curve, tilting with the slope, hangs a moment
        below the dashed summit, and is instantly back at the bottom. -->
+  <svg class="geo-vig-sisyphus" viewBox="952 615 466 273" focusable="false">
   <g>
     <path d="M960,878 C1090,852 1230,762 1345,650" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
     <path d="M958,882 C1085,858 1222,770 1338,658" fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round" stroke-dasharray="26 5 14 4" />
@@ -72,10 +77,12 @@
       </g>
     </g>
   </g>
+  </svg>
 
   <!-- III. Zeno's dichotomy, bottom center: dashed arcs trace each halved
        hop, ticks shrink with the remainder, and the runner decelerates
        forever without arriving -->
+  <svg class="geo-vig-zeno" viewBox="472 765 496 112" focusable="false">
   <g>
     <line x1="480" y1="845" x2="960" y2="845" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" />
     <path d="M480,845 A120,74 0 0 1 720,845" fill="none" stroke="currentColor" stroke-width="0.9" stroke-dasharray="1 5" />
@@ -94,8 +101,9 @@
     <text x="938" y="869" font-size="11">⋯</text>
     <circle class="geo-zeno-dot" cx="480" cy="845" r="4.5" fill="currentColor" />
   </g>
+  </svg>
 
-</svg>
+</div>
 
 <div class="wrap">
 

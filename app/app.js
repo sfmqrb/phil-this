@@ -6,6 +6,17 @@
   var serverAvailable = false;
   var currentUser = null; // { id, email, name } | null — guests use local-only, unscoped keys
 
+  // Only some QUIZ_DATA entries carry a url of their own; EPISODE_INDEX has a
+  // link for every episode, so backfill the gaps — otherwise the "Original
+  // episode" link silently disappears for most episodes on the main page.
+  if (typeof EPISODE_INDEX !== "undefined" && typeof QUIZ_DATA !== "undefined") {
+    var episodeUrlById = {};
+    EPISODE_INDEX.forEach(function (e) { episodeUrlById[e.id] = e.url; });
+    QUIZ_DATA.forEach(function (ep) {
+      if (!ep.url && episodeUrlById[ep.id]) ep.url = episodeUrlById[ep.id];
+    });
+  }
+
   // Shareable URLs: /episode/N opens that episode's quiz, /episode/N/transcript
   // opens its transcript, /transcripts and /credit open those tabs. setUrl no-ops
   // when already at that path, so calling it from both a click handler and from
