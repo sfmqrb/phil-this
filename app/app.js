@@ -295,8 +295,8 @@
   // Ogg/Opus can't be decoded. Only one thing plays at a time; the panel that
   // started it is the one whose button shows "Stop" and whose player bar is
   // visible.
-  var SPEECH_SUMMARY_LABEL = "\u25B6 Hear summary";
-  var SPEECH_FULL_LABEL = "\u25B6 Hear everything";
+  var SPEECH_SUMMARY_LABEL = "\u25B6 Listen to the summary";
+  var SPEECH_FULL_LABEL = "\u25B6 Listen to summary, ideas & terms";
   var SPEECH_LOADING_LABEL = "\u2026 Loading";
   var SPEECH_ACTIVE_LABEL = "\u25A0 Stop";
   var SPEECH_PLAY_ICON = "\u25B6";
