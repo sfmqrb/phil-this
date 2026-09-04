@@ -901,6 +901,8 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 .learn-player-btn:hover { border-color: var(--accent); }
 .learn-player-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .learn-player-pause { min-width: 2.4em; }
+/* Wide enough for "1.5×" so the label change does not shift the bar */
+.learn-player-speed { min-width: 3.8em; text-align: center; }
 .learn-player-range {
   flex: 1 1 140px;
   min-width: 100px;

@@ -306,6 +306,43 @@
   // Chrome's network voices go silent partway through any single utterance
   // longer than about 15 seconds, so long texts are spoken in pieces.
   var SPEECH_UTTERANCE_CHARS = 220;
+  // Playback speeds the speed button cycles through, in order; 2\u00D7 wraps to 1\u00D7.
+  var SPEECH_SPEEDS = [1, 1.2, 1.5, 1.8, 2];
+  var SPEED_KEY = "phil-this-speed";
+
+  // The chosen speed is one preference for the whole site, not per panel: it
+  // is read once here, applied to the shared Audio element (and to every
+  // utterance the browser voice gets), and saved on each change.
+  function loadSpeechSpeed() {
+    try {
+      var speed = Number(localStorage.getItem(SPEED_KEY));
+      return SPEECH_SPEEDS.indexOf(speed) === -1 ? 1 : speed;
+    } catch (e) { return 1; }
+  }
+  var speechSpeed = loadSpeechSpeed();
+
+  function speechSpeedLabel() {
+    return String(speechSpeed) + "\u00D7";
+  }
+
+  // Puts the current speed on the file player. Both rates: load() resets
+  // playbackRate to defaultPlaybackRate, and assigning src runs load().
+  function applySpeechSpeed(audio) {
+    audio.defaultPlaybackRate = speechSpeed;
+    audio.playbackRate = speechSpeed;
+  }
+
+  // Next speed in the list, applied at once to whatever is playing. The file
+  // retunes on the spot; a running utterance cannot, so the browser voice
+  // picks the new speed up at its next sentence.
+  function cycleSpeechSpeed(player) {
+    var next = SPEECH_SPEEDS[(SPEECH_SPEEDS.indexOf(speechSpeed) + 1) % SPEECH_SPEEDS.length];
+    speechSpeed = next;
+    try { localStorage.setItem(SPEED_KEY, String(next)); } catch (e) {}
+    if (summaryAudio) applySpeechSpeed(summaryAudio);
+    if (speechState.player && speechState.player !== player) syncSpeechPlayer(speechState.player);
+    syncSpeechPlayer(player);
+  }
 
   // Everything about the current playback. player: the panel's controls (see
   // buildSpeechPlayer); mode: "summary" | "full"; source: "audio" | "speech";
@@ -350,6 +387,8 @@
     if (summaryAudio) return summaryAudio;
     var audio = new window.Audio();
     audio.preload = "auto";
+    // Faster without turning the voice into a chipmunk.
+    if ("preservesPitch" in audio) audio.preservesPitch = true;
     function owned() {
       return !!speechState.player && speechState.source === "audio";
     }
@@ -527,7 +566,7 @@
     chunks.forEach(function (chunk, i) {
       var utterance = new window.SpeechSynthesisUtterance(chunk);
       utterance.lang = "en-US";
-      utterance.rate = 1;
+      utterance.rate = speechSpeed;
       if (voice) utterance.voice = voice;
       if (i === chunks.length - 1) utterance.onend = done;
       utterance.onerror = done;
@@ -563,6 +602,7 @@
     var audio = getSummaryAudio();
     var file = encodeURIComponent(String(data.id)) + (mode === "full" ? "-full.ogg" : ".ogg");
     audio.src = "audio/" + file;
+    applySpeechSpeed(audio);
     var p = audio.play();
     if (p && typeof p.catch === "function") {
       p.catch(function (err) {
@@ -635,6 +675,11 @@
     setSpeechButton(player.summaryBtn, owns && speechState.mode === "summary" ? speechState.phase : "idle", SPEECH_SUMMARY_LABEL);
     setSpeechButton(player.fullBtn, owns && speechState.mode === "full" ? speechState.phase : "idle", SPEECH_FULL_LABEL);
     player.bar.hidden = !owns;
+    // The speed is global, so every bar shows it, including one built while
+    // another panel is playing.
+    player.speedBtn.textContent = speechSpeedLabel();
+    player.speedBtn.setAttribute("aria-label", "Playback speed, currently " + speechSpeedLabel());
+    player.speedBtn.title = "Playback speed, currently " + speechSpeedLabel();
     if (!owns) return;
 
     var paused = audio ? audio.paused : speechState.paused;
@@ -740,6 +785,11 @@
     player.fwdBtn = makeSpeechIconButton("learn-player-skip", "Forward " + SPEECH_SKIP_SECONDS + " seconds", "+" + SPEECH_SKIP_SECONDS + "s");
     player.fwdBtn.addEventListener("click", function () { skipSpeech(player, SPEECH_SKIP_SECONDS); });
     bar.appendChild(player.fwdBtn);
+
+    // Label, aria-label and title are filled in by syncSpeechPlayer().
+    player.speedBtn = makeSpeechIconButton("learn-player-skip learn-player-speed", "Playback speed", "");
+    player.speedBtn.addEventListener("click", function () { cycleSpeechSpeed(player); });
+    bar.appendChild(player.speedBtn);
 
     var range = document.createElement("input");
     range.type = "range";
