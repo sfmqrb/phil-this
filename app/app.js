@@ -320,16 +320,46 @@
     return anchor;
   }
 
-  // "Hear this": plays the pre-generated neural reading of the episode
-  // summary (audio/<id>.ogg) and falls back to the browser's own speech
-  // synthesis when the file is missing or Ogg/Opus can't be decoded. Only one
-  // thing plays at a time, and the button that started it is the one that
-  // shows "Stop".
-  var SPEECH_IDLE_LABEL = "\u25B6 Hear this";
+  // "Hear this": plays a pre-generated neural reading of the episode, either
+  // the summary alone (audio/<id>.ogg) or the whole panel (audio/<id>-full.ogg,
+  // with audio/<id>-full.json marking where each section starts), and falls
+  // back to the browser's own speech synthesis when the file is missing or
+  // Ogg/Opus can't be decoded. Only one thing plays at a time; the panel that
+  // started it is the one whose button shows "Stop" and whose player bar is
+  // visible.
+  var SPEECH_SUMMARY_LABEL = "\u25B6 Hear summary";
+  var SPEECH_FULL_LABEL = "\u25B6 Hear everything";
   var SPEECH_LOADING_LABEL = "\u2026 Loading";
   var SPEECH_ACTIVE_LABEL = "\u25A0 Stop";
-  var speechState = { btn: null };
+  var SPEECH_PLAY_ICON = "\u25B6";
+  var SPEECH_PAUSE_ICON = "\u23F8";
+  var SPEECH_SKIP_SECONDS = 5;
+  var SPEECH_NOTE = "browser voice, no seeking";
+  // Chrome's network voices go silent partway through any single utterance
+  // longer than about 15 seconds, so long texts are spoken in pieces.
+  var SPEECH_UTTERANCE_CHARS = 220;
+
+  // Everything about the current playback. player: the panel's controls (see
+  // buildSpeechPlayer); mode: "summary" | "full"; source: "audio" | "speech";
+  // phase: "loading" | "playing". token goes up on every play request and on
+  // every stop, and every asynchronous callback compares it before touching
+  // anything, so leftovers from an abandoned playback (a rejected play()
+  // promise, a cancelled utterance, a late sidecar fetch) are ignored.
+  var speechState = {
+    token: 0,
+    player: null,
+    mode: null,
+    source: null,
+    phase: null,
+    paused: false,
+    text: "",
+    sections: null,
+    // Sidecar duration: stands in for audio.duration while the browser
+    // reports Infinity (a server without range requests, still streaming).
+    duration: 0
+  };
   var summaryAudio = null;
+  var speechSectionCache = {};
 
   function speechSupported() {
     return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
@@ -341,26 +371,146 @@
     return !!(probe.canPlayType && probe.canPlayType('audio/ogg; codecs="opus"'));
   }
 
-  // Shared element so a second summary can never play over the first.
+  // Shared element so a second reading can never play over the first. Its
+  // listeners go on once, here, and read speechState on every event. (They
+  // used to be attached per playback and detached on "emptied", which broke
+  // the second play: stopSpeaking()'s load() leaves the element in
+  // NETWORK_NO_SOURCE, so assigning src right after queues an asynchronous
+  // "emptied" that fired after the fresh listeners were on and stripped them
+  // off again, leaving the button on "Loading" forever.)
   function getSummaryAudio() {
-    if (!summaryAudio) {
-      summaryAudio = new window.Audio();
-      summaryAudio.preload = "auto";
+    if (summaryAudio) return summaryAudio;
+    var audio = new window.Audio();
+    audio.preload = "auto";
+    function owned() {
+      return !!speechState.player && speechState.source === "audio";
     }
-    return summaryAudio;
+    audio.addEventListener("playing", function () {
+      if (!owned()) return;
+      speechState.phase = "playing";
+      syncSpeechPlayer(speechState.player);
+    });
+    ["play", "pause", "timeupdate", "durationchange", "loadedmetadata"].forEach(function (type) {
+      audio.addEventListener(type, function () {
+        if (owned()) syncSpeechPlayer(speechState.player);
+      });
+    });
+    audio.addEventListener("ended", function () {
+      if (owned()) stopSpeaking();
+    });
+    // 404, decode failure, network drop: try the robotic voice instead.
+    audio.addEventListener("error", function () {
+      if (!owned()) return;
+      audio.removeAttribute("src");
+      audio.load();
+      speakCurrentText();
+    });
+    summaryAudio = audio;
+    return audio;
+  }
+
+  // audio/<id>-full.json: where the summary, key ideas and terms start in the
+  // -full.ogg file. Resolves to {duration, sections: [{id, label, start,
+  // end}]} (sections null when none parsed), or null when the sidecar is
+  // missing or malformed; fetched once per episode.
+  function getSpeechSections(episodeId) {
+    var key = String(episodeId);
+    if (speechSectionCache[key]) return speechSectionCache[key];
+    speechSectionCache[key] = fetch("audio/" + encodeURIComponent(key) + "-full.json")
+      .then(function (res) { if (!res.ok) throw new Error("no sections"); return res.json(); })
+      .then(function (data) {
+        var list = data && Array.isArray(data.sections) ? data.sections : [];
+        var sections = [];
+        list.forEach(function (s) {
+          if (!s || typeof s.start !== "number" || typeof s.end !== "number" || !s.label) return;
+          sections.push({ id: String(s.id || ""), label: String(s.label), start: s.start, end: s.end });
+        });
+        var duration = data && typeof data.duration === "number" ? data.duration : 0;
+        if (!sections.length && !duration) return null;
+        return { duration: duration, sections: sections.length ? sections : null };
+      })
+      .catch(function () { return null; });
+    return speechSectionCache[key];
+  }
+
+  // The section that contains `time` (the last one that has started).
+  function speechSectionAt(sections, time) {
+    var current = null;
+    for (var i = 0; i < sections.length; i++) {
+      if (time >= sections[i].start) current = sections[i];
+    }
+    return current;
+  }
+
+  // 287.7 -> "4:47"
+  function formatClock(seconds) {
+    var total = Math.max(0, Math.floor(seconds || 0));
+    var s = total % 60;
+    return Math.floor(total / 60) + ":" + (s < 10 ? "0" : "") + s;
+  }
+
+  // Sentence-terminate a fragment so the browser voice pauses after it.
+  function speechSentence(text) {
+    var s = String(text || "").trim();
+    return !s || /[.!?]["')\]]*$/.test(s) ? s : s + ".";
+  }
+
+  // What the browser voice reads for "Hear everything": the same script as
+  // the -full.ogg files.
+  function fullSpeechText(data) {
+    var parts = [speechSentence(data.argument)];
+    var ideas = Array.isArray(data.keyIdeas) ? data.keyIdeas : [];
+    if (ideas.length) {
+      parts.push("Key ideas.");
+      ideas.forEach(function (idea) { if (idea) parts.push(speechSentence(idea)); });
+    }
+    var terms = Array.isArray(data.terms) ? data.terms : [];
+    if (terms.length) {
+      parts.push("Terms.");
+      terms.forEach(function (t) {
+        if (t && t.term) parts.push(speechSentence(t.term) + " " + speechSentence(t.def));
+      });
+    }
+    return parts.join(" ");
+  }
+
+  // Sentence-sized pieces, merged up to SPEECH_UTTERANCE_CHARS characters.
+  function splitForSpeech(text) {
+    var sentences = String(text).match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) || [String(text)];
+    var chunks = [];
+    var current = "";
+    sentences.forEach(function (sentence) {
+      if (current && (current + sentence).length > SPEECH_UTTERANCE_CHARS) {
+        chunks.push(current.trim());
+        current = "";
+      }
+      current += sentence;
+    });
+    if (current.trim()) chunks.push(current.trim());
+    return chunks;
   }
 
   // state: "idle" | "loading" | "playing"
-  function setSpeechButton(btn, state) {
+  function setSpeechButton(btn, state, idleLabel) {
     if (!btn) return;
     var active = state === "loading" || state === "playing";
     btn.textContent = state === "playing" ? SPEECH_ACTIVE_LABEL :
-      state === "loading" ? SPEECH_LOADING_LABEL : SPEECH_IDLE_LABEL;
+      state === "loading" ? SPEECH_LOADING_LABEL : idleLabel;
     btn.setAttribute("aria-pressed", active ? "true" : "false");
   }
 
   // Safe to call at any time, including when nothing is playing.
   function stopSpeaking() {
+    speechState.token += 1;
+    var player = speechState.player;
+    speechState.player = null;
+    speechState.mode = null;
+    speechState.source = null;
+    speechState.phase = null;
+    speechState.paused = false;
+    speechState.text = "";
+    speechState.sections = null;
+    speechState.duration = 0;
     if (summaryAudio) {
       summaryAudio.pause();
       // Dropping src aborts a download still in flight.
@@ -368,107 +518,312 @@
       summaryAudio.load();
     }
     if (speechSupported()) window.speechSynthesis.cancel();
-    setSpeechButton(speechState.btn, "idle");
-    speechState.btn = null;
+    // The panel that was playing goes back to idle.
+    if (player) syncSpeechPlayer(player);
   }
 
-  // Browser speech synthesis. Assumes the caller has already stopped whatever
-  // was playing and owns btn (speechState.btn === btn).
-  function speakText(text, btn) {
-    if (!speechSupported() || !text) {
-      stopSpeaking();
-      return;
-    }
-    var utterance = new window.SpeechSynthesisUtterance(text);
-    utterance.lang = "en-US";
-    utterance.rate = 1;
+  function englishVoice() {
     // Prefer an English voice when the list is already loaded; don't wait on
     // voiceschanged, the default voice is fine as a fallback.
     var voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
     for (var i = 0; i < voices.length; i++) {
-      if (voices[i].lang && voices[i].lang.indexOf("en") === 0) {
-        utterance.voice = voices[i];
-        break;
-      }
+      if (voices[i].lang && voices[i].lang.indexOf("en") === 0) return voices[i];
     }
-    function done() {
-      // Ignore late callbacks from an utterance another button replaced.
-      if (speechState.btn !== btn) return;
-      setSpeechButton(btn, "idle");
-      speechState.btn = null;
-    }
-    utterance.onend = done;
-    utterance.onerror = done;
-
-    setSpeechButton(btn, "playing");
-    speechState.btn = btn;
-    // Chrome sometimes swallows speak() unless the queue was just cancelled.
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
+    return null;
   }
 
-  // Entry point for the button: pre-generated file first, synthesis second.
-  function playSummary(episodeId, text, btn) {
-    if (!text) return;
-    // Clicking the button that is already playing toggles it off.
-    if (btn && btn === speechState.btn) {
+  // Browser speech synthesis for the current request (speechState.text).
+  // Assumes the caller has set up speechState and stopped whatever else was
+  // playing.
+  function speakCurrentText() {
+    var player = speechState.player;
+    var text = speechState.text;
+    if (!player || !text || !speechSupported()) {
+      stopSpeaking();
+      return;
+    }
+    var token = speechState.token;
+    speechState.source = "speech";
+    speechState.phase = "playing";
+    speechState.paused = false;
+    speechState.sections = null;
+    speechState.duration = 0;
+    var voice = englishVoice();
+    var chunks = splitForSpeech(text);
+    function done() {
+      // Ignore late callbacks from an utterance another request replaced.
+      if (token === speechState.token) stopSpeaking();
+    }
+    // Chrome sometimes swallows speak() unless the queue was just cancelled.
+    window.speechSynthesis.cancel();
+    chunks.forEach(function (chunk, i) {
+      var utterance = new window.SpeechSynthesisUtterance(chunk);
+      utterance.lang = "en-US";
+      utterance.rate = 1;
+      if (voice) utterance.voice = voice;
+      if (i === chunks.length - 1) utterance.onend = done;
+      utterance.onerror = done;
+      window.speechSynthesis.speak(utterance);
+    });
+    syncSpeechPlayer(player);
+  }
+
+  // Entry point for the two text buttons: pre-generated file first, synthesis
+  // second. Clicking the button that is already playing toggles it off.
+  function playSpeech(player, mode) {
+    if (speechState.player === player && speechState.mode === mode) {
       stopSpeaking();
       return;
     }
     stopSpeaking();
-    var hasId = episodeId !== undefined && episodeId !== null && episodeId !== "";
+    var data = player.data;
+    var text = mode === "full" ? fullSpeechText(data) : String(data.argument || "");
+    if (!text) return;
+    speechState.token += 1;
+    var token = speechState.token;
+    speechState.player = player;
+    speechState.mode = mode;
+    speechState.text = text;
+    speechState.phase = "loading";
+    var hasId = data.id !== undefined && data.id !== null && data.id !== "";
     if (!hasId || !audioSupported()) {
-      speechState.btn = btn;
-      speakText(text, btn);
+      speakCurrentText();
       return;
     }
 
+    speechState.source = "audio";
     var audio = getSummaryAudio();
-    speechState.btn = btn;
-    setSpeechButton(btn, "loading");
-
-    // Every handler checks it still owns the button: a click elsewhere may
-    // have replaced this playback before the event fired.
-    function onPlaying() {
-      if (speechState.btn !== btn) return;
-      setSpeechButton(btn, "playing");
-    }
-    function onEnded() {
-      if (speechState.btn !== btn) return;
-      setSpeechButton(btn, "idle");
-      speechState.btn = null;
-    }
-    // 404, decode failure, network drop: try the robotic voice instead.
-    function onError() {
-      if (speechState.btn !== btn) return;
-      cleanup();
-      audio.removeAttribute("src");
-      audio.load();
-      speakText(text, btn);
-    }
-    function cleanup() {
-      audio.removeEventListener("playing", onPlaying);
-      audio.removeEventListener("ended", onEnded);
-      audio.removeEventListener("error", onError);
-      audio.removeEventListener("emptied", cleanup);
-    }
-    audio.addEventListener("playing", onPlaying);
-    audio.addEventListener("ended", onEnded);
-    audio.addEventListener("error", onError);
-    // stopSpeaking()'s load() fires "emptied"; that's our cue to detach so
-    // the next playback's listeners are the only ones on the element.
-    audio.addEventListener("emptied", cleanup);
-
-    audio.src = "audio/" + encodeURIComponent(String(episodeId)) + ".ogg";
+    var file = encodeURIComponent(String(data.id)) + (mode === "full" ? "-full.ogg" : ".ogg");
+    audio.src = "audio/" + file;
     var p = audio.play();
     if (p && typeof p.catch === "function") {
       p.catch(function (err) {
-        if (speechState.btn !== btn) return;
+        // A stop or a newer request superseded this one; the AbortError that
+        // interrupting a load produces means nothing now.
+        if (token !== speechState.token) return;
         // Autoplay blocked or similar: nothing more we can do this click.
         // A source failure surfaces via "error" and falls back there.
         if (err && err.name === "NotAllowedError") stopSpeaking();
       });
     }
+    if (mode === "full") {
+      getSpeechSections(data.id).then(function (meta) {
+        if (token !== speechState.token || speechState.source !== "audio") return;
+        speechState.sections = meta ? meta.sections : null;
+        speechState.duration = meta ? meta.duration : 0;
+        syncSpeechPlayer(player);
+      });
+    }
+    syncSpeechPlayer(player);
+  }
+
+  function toggleSpeechPause(player) {
+    if (speechState.player !== player) return;
+    if (speechState.source === "audio") {
+      var audio = getSummaryAudio();
+      if (audio.paused) {
+        var p = audio.play();
+        if (p && typeof p.catch === "function") p.catch(function () {});
+      } else {
+        audio.pause();
+      }
+    } else if (speechSupported()) {
+      if (speechState.paused) window.speechSynthesis.resume();
+      else window.speechSynthesis.pause();
+      speechState.paused = !speechState.paused;
+    }
+    syncSpeechPlayer(player);
+  }
+
+  // Track length in seconds, 0 while unknown.
+  function speechDuration(audio) {
+    if (isFinite(audio.duration) && audio.duration > 0) return audio.duration;
+    return speechState.duration || 0;
+  }
+
+  // Seeks the file to `time`, clamped to the track. No-op for the browser
+  // voice, which cannot seek.
+  function seekSpeech(player, time) {
+    if (speechState.player !== player || speechState.source !== "audio") return;
+    var audio = getSummaryAudio();
+    var duration = speechDuration(audio);
+    var target = Math.max(0, time);
+    if (duration) target = Math.min(target, duration);
+    audio.currentTime = target;
+    syncSpeechPlayer(player);
+  }
+
+  function skipSpeech(player, seconds) {
+    if (speechState.player !== player || speechState.source !== "audio") return;
+    seekSpeech(player, (getSummaryAudio().currentTime || 0) + seconds);
+  }
+
+  // Renders speechState into one panel's controls: called for the owning
+  // panel on every event, and once for a panel that just lost ownership so
+  // it goes back to idle.
+  function syncSpeechPlayer(player) {
+    var owns = speechState.player === player;
+    var audio = owns && speechState.source === "audio" ? getSummaryAudio() : null;
+    setSpeechButton(player.summaryBtn, owns && speechState.mode === "summary" ? speechState.phase : "idle", SPEECH_SUMMARY_LABEL);
+    setSpeechButton(player.fullBtn, owns && speechState.mode === "full" ? speechState.phase : "idle", SPEECH_FULL_LABEL);
+    player.bar.hidden = !owns;
+    if (!owns) return;
+
+    var paused = audio ? audio.paused : speechState.paused;
+    player.pauseBtn.textContent = paused ? SPEECH_PLAY_ICON : SPEECH_PAUSE_ICON;
+    player.pauseBtn.setAttribute("aria-label", paused ? "Resume" : "Pause");
+
+    // Seeking only makes sense for the file; the browser voice gets a note.
+    var seekable = !!audio;
+    player.backBtn.hidden = !seekable;
+    player.fwdBtn.hidden = !seekable;
+    player.range.hidden = !seekable;
+    player.timeEl.hidden = !seekable;
+    player.note.hidden = seekable;
+    var sections = seekable && speechState.mode === "full" ? speechState.sections : null;
+    player.sectionsEl.hidden = !sections;
+    if (!seekable) return;
+
+    var duration = speechDuration(audio);
+    var time = audio.currentTime || 0;
+    // While the user drags the scrubber, leave its position to them.
+    if (!player.scrubbing) {
+      player.range.max = duration ? duration.toFixed(1) : "0";
+      player.range.value = time.toFixed(1);
+    }
+    player.range.disabled = !duration;
+    var clock = formatClock(time) + (duration ? " / " + formatClock(duration) : "");
+    player.timeEl.textContent = clock;
+    player.range.setAttribute("aria-valuetext", clock);
+
+    if (!sections) return;
+    if (player.jumpsFor !== sections) buildSpeechJumps(player, sections);
+    var current = speechSectionAt(sections, time);
+    player.sectionLabel.textContent = current ? current.label : "";
+    player.jumpLinks.forEach(function (link) {
+      if (link.section === current) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  // "Summary \u00B7 Key ideas \u00B7 Terms" links that jump to a section's start.
+  function buildSpeechJumps(player, sections) {
+    player.jumpsFor = sections;
+    player.jumpLinks = [];
+    player.jumpsEl.innerHTML = "";
+    sections.forEach(function (section, i) {
+      if (i) player.jumpsEl.appendChild(document.createTextNode(" \u00B7 "));
+      var link = document.createElement("button");
+      link.type = "button";
+      link.className = "search-row-link learn-player-jump";
+      link.textContent = section.label;
+      link.section = section;
+      link.addEventListener("click", function () {
+        seekSpeech(player, section.start);
+      });
+      player.jumpLinks.push(link);
+      player.jumpsEl.appendChild(link);
+    });
+  }
+
+  function makeSpeechIconButton(className, label, text) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "learn-player-btn " + className;
+    btn.setAttribute("aria-label", label);
+    btn.textContent = text;
+    return btn;
+  }
+
+  // The two text buttons plus the player bar for one learn panel. The whole
+  // thing is drawn from speechState by syncSpeechPlayer(); the only state
+  // kept here is the scrubbing flag and the jump links already built.
+  function buildSpeechPlayer(data, withFull) {
+    var player = { data: data, scrubbing: false, jumpsFor: null, jumpLinks: [] };
+    var actions = document.createElement("div");
+    actions.className = "learn-actions";
+    player.root = actions;
+
+    player.summaryBtn = document.createElement("button");
+    player.summaryBtn.type = "button";
+    player.summaryBtn.className = "search-row-link learn-hear-btn";
+    player.summaryBtn.addEventListener("click", function () { playSpeech(player, "summary"); });
+    actions.appendChild(player.summaryBtn);
+
+    player.fullBtn = document.createElement("button");
+    player.fullBtn.type = "button";
+    player.fullBtn.className = "search-row-link learn-hear-btn";
+    player.fullBtn.addEventListener("click", function () { playSpeech(player, "full"); });
+    if (withFull) actions.appendChild(player.fullBtn);
+
+    var bar = document.createElement("div");
+    bar.className = "learn-player";
+    bar.hidden = true;
+    player.bar = bar;
+
+    player.pauseBtn = makeSpeechIconButton("learn-player-pause", "Pause", SPEECH_PAUSE_ICON);
+    player.pauseBtn.addEventListener("click", function () { toggleSpeechPause(player); });
+    bar.appendChild(player.pauseBtn);
+
+    player.backBtn = makeSpeechIconButton("learn-player-skip", "Back " + SPEECH_SKIP_SECONDS + " seconds", "\u2212" + SPEECH_SKIP_SECONDS + "s");
+    player.backBtn.addEventListener("click", function () { skipSpeech(player, -SPEECH_SKIP_SECONDS); });
+    bar.appendChild(player.backBtn);
+
+    player.fwdBtn = makeSpeechIconButton("learn-player-skip", "Forward " + SPEECH_SKIP_SECONDS + " seconds", "+" + SPEECH_SKIP_SECONDS + "s");
+    player.fwdBtn.addEventListener("click", function () { skipSpeech(player, SPEECH_SKIP_SECONDS); });
+    bar.appendChild(player.fwdBtn);
+
+    var range = document.createElement("input");
+    range.type = "range";
+    range.className = "learn-player-range";
+    range.min = "0";
+    range.max = "0";
+    range.step = "0.1";
+    range.value = "0";
+    range.setAttribute("aria-label", "Position");
+    // Between grabbing the thumb (or pressing a key) and letting go, sync
+    // must not push the thumb back to the playhead under the user's hand.
+    function beginScrub() { player.scrubbing = true; }
+    function endScrub() { player.scrubbing = false; }
+    range.addEventListener("pointerdown", beginScrub);
+    range.addEventListener("keydown", beginScrub);
+    ["pointerup", "pointercancel", "keyup", "blur"].forEach(function (type) {
+      range.addEventListener(type, endScrub);
+    });
+    range.addEventListener("input", function () { seekSpeech(player, Number(range.value)); });
+    range.addEventListener("change", function () {
+      endScrub();
+      seekSpeech(player, Number(range.value));
+    });
+    player.range = range;
+    bar.appendChild(range);
+
+    player.timeEl = document.createElement("span");
+    player.timeEl.className = "learn-player-time mono";
+    player.timeEl.textContent = "0:00 / 0:00";
+    bar.appendChild(player.timeEl);
+
+    player.note = document.createElement("span");
+    player.note.className = "learn-player-note";
+    player.note.textContent = SPEECH_NOTE;
+    player.note.hidden = true;
+    bar.appendChild(player.note);
+
+    var sectionsEl = document.createElement("div");
+    sectionsEl.className = "learn-player-sections";
+    sectionsEl.hidden = true;
+    player.sectionLabel = document.createElement("span");
+    player.sectionLabel.className = "learn-player-section";
+    sectionsEl.appendChild(player.sectionLabel);
+    player.jumpsEl = document.createElement("span");
+    player.jumpsEl.className = "learn-player-jumps";
+    sectionsEl.appendChild(player.jumpsEl);
+    player.sectionsEl = sectionsEl;
+    bar.appendChild(sectionsEl);
+
+    actions.appendChild(bar);
+    syncSpeechPlayer(player);
+    return player;
   }
 
   // Fills a container with the argument / key ideas / terms block. Everything
@@ -477,7 +832,7 @@
     if (!container) return;
     // Re-rendering the panel that is currently being read aloud would leave
     // a detached "Stop" button behind, so stop first.
-    if (speechState.btn && container.contains(speechState.btn)) stopSpeaking();
+    if (speechState.player && container.contains(speechState.player.root)) stopSpeaking();
     container.innerHTML = "";
     if (!data) return;
 
@@ -488,17 +843,10 @@
       container.appendChild(lead);
 
       if (audioSupported() || speechSupported()) {
-        var actions = document.createElement("div");
-        actions.className = "learn-actions";
-        var hearBtn = document.createElement("button");
-        hearBtn.type = "button";
-        hearBtn.className = "search-row-link learn-hear-btn";
-        setSpeechButton(hearBtn, "idle");
-        hearBtn.addEventListener("click", function () {
-          playSummary(data.id, data.argument, hearBtn);
-        });
-        actions.appendChild(hearBtn);
-        container.appendChild(actions);
+        // "Hear everything" only when there is more than the summary to hear.
+        var withFull = !!((Array.isArray(data.keyIdeas) && data.keyIdeas.length) ||
+          (Array.isArray(data.terms) && data.terms.length));
+        container.appendChild(buildSpeechPlayer(data, withFull).root);
       }
     }
 
