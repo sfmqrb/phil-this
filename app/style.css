@@ -957,6 +957,20 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   margin: 0 0 12px;
 }
 
+/* Read-aloud controls: sit between the argument and the key-ideas list */
+.learn-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: -4px 0 12px;
+}
+.learn-hear-btn {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  letter-spacing: 0.04em;
+}
+/* While speaking, keep the underline so the button reads as active */
+.learn-hear-btn[aria-pressed="true"] { border-bottom-color: var(--accent); }
+
 .learn-ideas {
   margin: 0 0 12px;
   padding-left: 20px;

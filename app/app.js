@@ -447,6 +447,8 @@
   }
 
   function showView(name) {
+    // Navigating anywhere cuts off a summary being read aloud.
+    stopSpeaking();
     var target = VIEW_ORDER.indexOf(name) === -1 ? "dashboard" : name;
     var activeTab = viewTab(target);
     var changed = currentViewName !== target;
@@ -521,10 +523,74 @@
     return anchor;
   }
 
+  // "Hear this": reads the episode summary aloud with the browser's own
+  // speech synthesis. Only one thing speaks at a time, and the button that
+  // started it is the one that shows "Stop".
+  var SPEECH_IDLE_LABEL = "\u25B6 Hear this";
+  var SPEECH_ACTIVE_LABEL = "\u25A0 Stop";
+  var speechState = { btn: null };
+
+  function speechSupported() {
+    return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
+  }
+
+  function setSpeechButton(btn, speaking) {
+    if (!btn) return;
+    btn.textContent = speaking ? SPEECH_ACTIVE_LABEL : SPEECH_IDLE_LABEL;
+    btn.setAttribute("aria-pressed", speaking ? "true" : "false");
+  }
+
+  // Safe to call at any time, including when nothing is playing.
+  function stopSpeaking() {
+    if (speechSupported()) window.speechSynthesis.cancel();
+    setSpeechButton(speechState.btn, false);
+    speechState.btn = null;
+  }
+
+  function speakText(text, btn) {
+    if (!speechSupported() || !text) return;
+    // Clicking the button that is already speaking toggles it off.
+    if (btn && btn === speechState.btn) {
+      stopSpeaking();
+      return;
+    }
+    stopSpeaking();
+
+    var utterance = new window.SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
+    utterance.rate = 1;
+    // Prefer an English voice when the list is already loaded; don't wait on
+    // voiceschanged, the default voice is fine as a fallback.
+    var voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+    for (var i = 0; i < voices.length; i++) {
+      if (voices[i].lang && voices[i].lang.indexOf("en") === 0) {
+        utterance.voice = voices[i];
+        break;
+      }
+    }
+    function done() {
+      // Ignore late callbacks from an utterance another button replaced.
+      if (speechState.btn !== btn) return;
+      setSpeechButton(btn, false);
+      speechState.btn = null;
+    }
+    utterance.onend = done;
+    utterance.onerror = done;
+
+    setSpeechButton(btn, true);
+    speechState.btn = btn;
+    // Chrome sometimes swallows speak() unless the queue was just cancelled.
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+  }
+
   // Fills a container with the argument / key ideas / terms block. Everything
   // goes in as text — learn data is never treated as HTML.
   function renderLearnPanel(container, data) {
     if (!container) return;
+    // Re-rendering the panel that is currently being read aloud would leave
+    // a detached "Stop" button behind, so stop first.
+    if (speechState.btn && container.contains(speechState.btn)) stopSpeaking();
     container.innerHTML = "";
     if (!data) return;
 
@@ -533,6 +599,20 @@
       lead.className = "learn-argument";
       lead.textContent = data.argument;
       container.appendChild(lead);
+
+      if (speechSupported()) {
+        var actions = document.createElement("div");
+        actions.className = "learn-actions";
+        var hearBtn = document.createElement("button");
+        hearBtn.type = "button";
+        hearBtn.className = "search-row-link learn-hear-btn";
+        setSpeechButton(hearBtn, false);
+        hearBtn.addEventListener("click", function () {
+          speakText(data.argument, hearBtn);
+        });
+        actions.appendChild(hearBtn);
+        container.appendChild(actions);
+      }
     }
 
     var ideas = Array.isArray(data.keyIdeas) ? data.keyIdeas : [];
