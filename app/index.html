@@ -191,10 +191,10 @@
         </div>
       </div>
       <p class="search-status mono" id="transcriptReaderStatus"></p>
-      <details class="learn-details" id="transcriptLearnBox" open style="display:none">
-        <summary class="learn-summary mono">Key ideas</summary>
+      <div class="learn-details" id="transcriptLearnBox" style="display:none">
+        <p class="learn-summary mono">Key ideas</p>
         <div class="learn-panel" id="transcriptLearnBody"></div>
-      </details>
+      </div>
       <div class="transcript-body" id="transcriptReaderBody"></div>
     </div>
   </div>
@@ -302,12 +302,12 @@
     </div>
 
     <!-- Key ideas lead the quiz: what the episode argued, before you're asked
-         whether it stuck. Open by default, collapsible, hidden entirely for
-         episodes with no learn data. -->
-    <details class="learn-details learn-details-lead" id="quizLearnBox" open style="display:none">
-      <summary class="learn-summary mono">Key ideas</summary>
+         whether it stuck. Always open; hidden entirely for episodes with no
+         learn data. -->
+    <div class="learn-details learn-details-lead" id="quizLearnBox" style="display:none">
+      <p class="learn-summary mono">Key ideas</p>
       <div class="learn-panel" id="quizLearnBody"></div>
-    </details>
+    </div>
 
     <div id="quizBody">
       <div class="progress-row">

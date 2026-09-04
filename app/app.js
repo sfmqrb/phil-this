@@ -837,17 +837,19 @@
     if (!data) return;
 
     if (data.argument) {
-      var lead = document.createElement("p");
-      lead.className = "learn-argument";
-      lead.textContent = data.argument;
-      container.appendChild(lead);
-
+      // The listen controls lead the panel, so the choice to hear it comes
+      // before the wall of text rather than after it.
       if (audioSupported() || speechSupported()) {
         // "Hear everything" only when there is more than the summary to hear.
         var withFull = !!((Array.isArray(data.keyIdeas) && data.keyIdeas.length) ||
           (Array.isArray(data.terms) && data.terms.length));
         container.appendChild(buildSpeechPlayer(data, withFull).root);
       }
+
+      var lead = document.createElement("p");
+      lead.className = "learn-argument";
+      lead.textContent = data.argument;
+      container.appendChild(lead);
     }
 
     var ideas = Array.isArray(data.keyIdeas) ? data.keyIdeas : [];
@@ -1108,7 +1110,6 @@
     // the transcript is the evidence.
     if (transcriptLearnBox) {
       transcriptLearnBox.style.display = "none";
-      transcriptLearnBox.open = true;
       if (transcriptLearnBodyEl) transcriptLearnBodyEl.innerHTML = "";
       fetchLearnData(entry.id).then(function (data) {
         if (transcriptReaderId !== entry.id) return; // reader moved on while we fetched
@@ -2135,7 +2136,6 @@
   function renderQuizLearnBox(episodeId) {
     if (!qEls.learnBox) return;
     qEls.learnBox.style.display = "none";
-    qEls.learnBox.open = true;
     if (qEls.learnBody) qEls.learnBody.innerHTML = "";
     fetchLearnData(episodeId).then(function (data) {
       if (!currentEpisode || currentEpisode.id !== episodeId) return; // moved on

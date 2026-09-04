@@ -884,13 +884,13 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
   margin: 0 0 12px;
 }
 
-/* Read-aloud controls: sit between the argument and the key-ideas list */
+/* Read-aloud controls lead the panel, above the summary */
 .learn-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px 16px;
-  margin: -4px 0 12px;
+  margin: 0 0 14px;
 }
 .learn-hear-btn {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -1004,17 +1004,14 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 }
 
 .learn-summary {
-  cursor: pointer;
+  margin: 0;
   font-size: 11.5px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--accent);
 }
 /* The copy that leads a view (quiz, transcript reader) rather than trailing it. */
 .learn-details-lead { margin: 22px 0 28px; }
-
-.learn-summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.learn-details[open] .learn-summary { color: var(--accent); }
 
 .learn-details .learn-panel {
   border: none;
