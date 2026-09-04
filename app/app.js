@@ -3,8 +3,13 @@
   var PROGRESS_KEY = "phil-this-quiz-progress-v1";
   var REVIEW_KEY = "phil-this-quiz-review-v1";
   var LETTERS = ["A", "B", "C", "D"];
-  var serverAvailable = false;
-  var currentUser = null; // { id, email, name } | null — guests use local-only, unscoped keys
+
+  // The site is fully static and may live under a sub-path (GitHub Pages
+  // serves it from /phil-this/). The <base href> in index.html is the one
+  // place that knows that prefix, so derive it from there once: "" when served
+  // from the root, "/phil-this" on Pages. Every absolute path this file builds
+  // or reads goes through setUrl/replaceUrl/routePath, which add and strip it.
+  var BASE_PATH = new URL(document.baseURI).pathname.replace(/\/$/, "");
 
   // Only some QUIZ_DATA entries carry a url of their own; EPISODE_INDEX has a
   // link for every episode, so backfill the gaps — otherwise the "Original
@@ -17,26 +22,40 @@
     });
   }
 
+  // data.js writes transcript paths with a leading "../" (the validator
+  // resolves them from app/ on disk). The built site puts the transcripts at
+  // <site root>/transcripts/, so drop the "../" and let <base> resolve them.
+  if (typeof QUIZ_DATA !== "undefined") {
+    QUIZ_DATA.forEach(function (ep) {
+      if (typeof ep.transcriptFile === "string") ep.transcriptFile = ep.transcriptFile.replace(/^(\.\.\/)+/, "");
+    });
+  }
+
   // Shareable URLs: /episode/N opens that episode's quiz, /episode/N/transcript
-  // opens its transcript, /transcripts and /credit open those tabs. setUrl no-ops
-  // when already at that path, so calling it from both a click handler and from
-  // the initial route dispatch (below) never creates a duplicate history entry.
+  // opens its transcript, /transcripts and /credit open those tabs. Paths are
+  // app-relative; BASE_PATH is prepended here. setUrl no-ops when already at
+  // that path, so calling it from both a click handler and from the initial
+  // route dispatch (below) never creates a duplicate history entry.
   function setUrl(path) {
-    if (location.pathname !== path) history.pushState(null, "", path);
+    var full = BASE_PATH + path;
+    if (location.pathname !== full) history.pushState(null, "", full);
   }
 
   // Rewrites the address bar without adding a history entry — used when a URL
   // points at something that isn't there any more (an episode with no quiz, a
   // typo'd path), so the bar always agrees with the view we fell back to.
   function replaceUrl(path) {
-    if (location.pathname !== path) history.replaceState(null, "", path);
+    var full = BASE_PATH + path;
+    if (location.pathname !== full) history.replaceState(null, "", full);
   }
 
-  // Every browser-storage key is namespaced per signed-in account, so two
-  // people sharing a machine (or a guest, then an account) never see each
-  // other's scores/requests/in-progress quizzes.
-  function scopedKey(base) {
-    return currentUser ? base + ":u" + currentUser.id : base;
+  // The inverse: location.pathname with BASE_PATH stripped and trailing
+  // slashes trimmed, so the router only ever sees app-relative paths and the
+  // bare site root ("" or "/phil-this/") reads as "/".
+  function routePath() {
+    var p = location.pathname;
+    if (BASE_PATH && p.indexOf(BASE_PATH) === 0) p = p.slice(BASE_PATH.length);
+    return p.replace(/\/+$/, "") || "/";
   }
 
   function readJson(key, fallback) {
@@ -48,14 +67,13 @@
     }
   }
 
-  function loadScores() { return readJson(scopedKey(STORAGE_KEY), {}); }
-  function writeScoresLocal(scores) { localStorage.setItem(scopedKey(STORAGE_KEY), JSON.stringify(scores)); }
+  function loadScores() { return readJson(STORAGE_KEY, {}); }
+  function writeScoresLocal(scores) { localStorage.setItem(STORAGE_KEY, JSON.stringify(scores)); }
 
   function recordResult(episodeId, score, total) {
     var scores = loadScores();
     var record = QuizLogic.applyResult(scores, episodeId, score, total);
     writeScoresLocal(scores);
-    pushStoreToServer();
     return record;
   }
 
@@ -63,267 +81,46 @@
   // { "<epId>:<qIndex>": { stage, due, lapses, added } } — every question
   // answered wrong lands here and comes back on a widening schedule.
 
-  function loadReview() { return readJson(scopedKey(REVIEW_KEY), {}); }
-  function writeReviewLocal(deck) { localStorage.setItem(scopedKey(REVIEW_KEY), JSON.stringify(deck)); }
+  function loadReview() { return readJson(REVIEW_KEY, {}); }
+  function writeReviewLocal(deck) { localStorage.setItem(REVIEW_KEY, JSON.stringify(deck)); }
 
   // In-progress review session, so a refresh mid-session resumes where you
   // were instead of dropping you back to the deck status.
   // { keys: ["epId:qIndex", ...], index, score }
   var REVIEW_SESSION_KEY = "phil-this-quiz-review-session-v1";
-  function loadReviewSession() { return readJson(scopedKey(REVIEW_SESSION_KEY), null); }
-  function writeReviewSession(state) { localStorage.setItem(scopedKey(REVIEW_SESSION_KEY), JSON.stringify(state)); }
-  function clearReviewSession() { localStorage.removeItem(scopedKey(REVIEW_SESSION_KEY)); }
+  function loadReviewSession() { return readJson(REVIEW_SESSION_KEY, null); }
+  function writeReviewSession(state) { localStorage.setItem(REVIEW_SESSION_KEY, JSON.stringify(state)); }
+  function clearReviewSession() { localStorage.removeItem(REVIEW_SESSION_KEY); }
 
   // Grades one answer into the deck (from the quiz or a review session) and
-  // persists it locally + upstream.
+  // persists it.
   function recordReviewAnswer(episodeId, qIndex, isCorrect) {
     var deck = loadReview();
     QuizLogic.applyReviewAnswer(deck, episodeId, qIndex, isCorrect, new Date().toISOString());
     writeReviewLocal(deck);
-    pushReviewToServer();
     refreshReviewBadge();
     return deck;
   }
 
   // ---------- in-progress ("half-taken") quiz cache ----------
 
-  function loadProgress() { return readJson(scopedKey(PROGRESS_KEY), {}); }
-  function writeProgressLocal(all) { localStorage.setItem(scopedKey(PROGRESS_KEY), JSON.stringify(all)); }
+  function loadProgress() { return readJson(PROGRESS_KEY, {}); }
+  function writeProgressLocal(all) { localStorage.setItem(PROGRESS_KEY, JSON.stringify(all)); }
 
   function setEpisodeProgress(episodeId, data) {
     var all = loadProgress();
     all[String(episodeId)] = data;
     writeProgressLocal(all);
-    if (currentUser && typeof fetch === "function") {
-      fetch("/api/progress", {
-        method: "POST",
-        credentials: "same-origin",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ episodeId: episodeId, currentIndex: data.currentIndex, score: data.score, missed: data.missed, sample: data.sample })
-      }).catch(function () {});
-    }
   }
 
   function clearEpisodeProgress(episodeId) {
     var all = loadProgress();
     delete all[String(episodeId)];
     writeProgressLocal(all);
-    if (currentUser && typeof fetch === "function") {
-      fetch("/api/progress/" + episodeId, { method: "DELETE", credentials: "same-origin" }).catch(function () {});
-    }
-  }
-
-  // ---------- accounts + server sync ----------
-  // Guests are fully local (localStorage only, exactly like the original
-  // single-device version). Signing in makes the server the source of truth:
-  // on login/register the server's copy overwrites local storage, and every
-  // mutation afterward is pushed back up under that account.
-
-  function pushStoreToServer() {
-    if (!currentUser || typeof fetch !== "function") return;
-    fetch("/api/store", {
-      method: "POST",
-      credentials: "same-origin",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ scores: loadScores() })
-    }).catch(function () {});
-  }
-
-  function pushReviewToServer() {
-    if (!currentUser || typeof fetch !== "function") return;
-    fetch("/api/review", {
-      method: "POST",
-      credentials: "same-origin",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ review: loadReview() })
-    }).catch(function () {});
-  }
-
-  function fetchMe() {
-    if (typeof fetch !== "function") return Promise.resolve(null);
-    return fetch("/api/auth/me", { credentials: "same-origin" })
-      .then(function (r) { if (!r.ok) throw new Error("no server"); return r.json(); })
-      .then(function (data) { serverAvailable = true; return data.user || null; })
-      .catch(function () { serverAvailable = false; return null; });
-  }
-
-  function hydrateStoreFromServer() {
-    if (!currentUser || typeof fetch !== "function") return Promise.resolve();
-    return fetch("/api/store", { credentials: "same-origin" })
-      .then(function (r) { if (!r.ok) throw new Error("store fetch failed"); return r.json(); })
-      .then(function (data) {
-        writeScoresLocal(data.scores || {});
-        writeProgressLocal(data.progress || {});
-        // The deck merges instead of overwriting: a server that predates the
-        // review feature (or that missed our pushes while it was down) must
-        // not wipe the local deck on every refresh. Server wins per entry;
-        // entries it doesn't know about survive and get pushed back up.
-        if (data.review && typeof data.review === "object") {
-          var localDeck = loadReview();
-          var merged = Object.assign({}, localDeck, data.review);
-          writeReviewLocal(merged);
-          var onlyLocal = Object.keys(localDeck).some(function (k) { return !(k in data.review); });
-          if (onlyLocal) pushReviewToServer();
-        }
-      })
-      .catch(function () {});
   }
 
   var pct = QuizLogic.pct;
   var escapeHtml = QuizLogic.escapeHtml;
-
-  // ---------- account bar ----------
-
-  var accountGuestEl = document.getElementById("accountGuest");
-  var accountSignedInEl = document.getElementById("accountSignedIn");
-  var accountNameEl = document.getElementById("accountName");
-  var accountEmailEl = document.getElementById("accountEmail");
-  var showLoginBtn = document.getElementById("showLoginBtn");
-  var showRegisterBtn = document.getElementById("showRegisterBtn");
-  var showProfileBtn = document.getElementById("showProfileBtn");
-  var logoutBtn = document.getElementById("logoutBtn");
-
-  var loginForm = document.getElementById("loginForm");
-  var loginEmailInput = document.getElementById("loginEmail");
-  var loginPasswordInput = document.getElementById("loginPassword");
-  var loginErrorEl = document.getElementById("loginError");
-  var loginCancelBtn = document.getElementById("loginCancelBtn");
-
-  var registerForm = document.getElementById("registerForm");
-  var registerNameInput = document.getElementById("registerName");
-  var registerEmailInput = document.getElementById("registerEmail");
-  var registerPasswordInput = document.getElementById("registerPassword");
-  var registerErrorEl = document.getElementById("registerError");
-  var registerCancelBtn = document.getElementById("registerCancelBtn");
-
-  var profileForm = document.getElementById("profileForm");
-  var profileNameInput = document.getElementById("profileName");
-  var profileEmailInput = document.getElementById("profileEmail");
-  var profileCurrentPasswordInput = document.getElementById("profileCurrentPassword");
-  var profileNewPasswordInput = document.getElementById("profileNewPassword");
-  var profileErrorEl = document.getElementById("profileError");
-  var profileSuccessEl = document.getElementById("profileSuccess");
-  var profileCancelBtn = document.getElementById("profileCancelBtn");
-
-  function hideAllAccountForms() {
-    if (loginForm) loginForm.style.display = "none";
-    if (registerForm) registerForm.style.display = "none";
-    if (profileForm) profileForm.style.display = "none";
-    if (loginErrorEl) loginErrorEl.textContent = "";
-    if (registerErrorEl) registerErrorEl.textContent = "";
-    if (profileErrorEl) profileErrorEl.textContent = "";
-    if (profileSuccessEl) profileSuccessEl.textContent = "";
-  }
-
-  function renderAccountBar() {
-    if (!accountGuestEl) return;
-    if (currentUser) {
-      accountGuestEl.style.display = "none";
-      accountSignedInEl.style.display = "";
-      accountNameEl.textContent = currentUser.name;
-      accountEmailEl.textContent = currentUser.email;
-    } else {
-      accountGuestEl.style.display = "";
-      accountSignedInEl.style.display = "none";
-      hideAllAccountForms();
-    }
-  }
-
-  function onAuthSuccess(user) {
-    currentUser = user;
-    renderAccountBar();
-    hideAllAccountForms();
-    hydrateStoreFromServer().then(renderDashboard);
-  }
-
-  function jsonFetch(url, options) {
-    return fetch(url, options).then(function (r) {
-      return r.json().catch(function () { return {}; }).then(function (data) {
-        return { ok: r.ok, data: data };
-      });
-    });
-  }
-
-  if (showLoginBtn) showLoginBtn.addEventListener("click", function () { hideAllAccountForms(); loginForm.style.display = ""; loginEmailInput.focus(); });
-  if (showRegisterBtn) showRegisterBtn.addEventListener("click", function () { hideAllAccountForms(); registerForm.style.display = ""; registerNameInput.focus(); });
-  if (showProfileBtn) showProfileBtn.addEventListener("click", function () {
-    hideAllAccountForms();
-    profileNameInput.value = currentUser.name;
-    profileEmailInput.value = currentUser.email;
-    profileCurrentPasswordInput.value = "";
-    profileNewPasswordInput.value = "";
-    profileForm.style.display = "";
-  });
-  if (loginCancelBtn) loginCancelBtn.addEventListener("click", hideAllAccountForms);
-  if (registerCancelBtn) registerCancelBtn.addEventListener("click", hideAllAccountForms);
-  if (profileCancelBtn) profileCancelBtn.addEventListener("click", hideAllAccountForms);
-
-  if (loginForm) {
-    loginForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      loginErrorEl.textContent = "";
-      jsonFetch("/api/auth/login", {
-        method: "POST", credentials: "same-origin",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: loginEmailInput.value, password: loginPasswordInput.value })
-      }).then(function (res) {
-        if (!res.ok) { loginErrorEl.textContent = res.data.error || "Sign in failed."; return; }
-        loginForm.reset();
-        onAuthSuccess(res.data.user);
-      }).catch(function () { loginErrorEl.textContent = "Network error. Is the server running?"; });
-    });
-  }
-
-  if (registerForm) {
-    registerForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      registerErrorEl.textContent = "";
-      jsonFetch("/api/auth/register", {
-        method: "POST", credentials: "same-origin",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: registerEmailInput.value, name: registerNameInput.value, password: registerPasswordInput.value })
-      }).then(function (res) {
-        if (!res.ok) { registerErrorEl.textContent = res.data.error || "Could not create account."; return; }
-        registerForm.reset();
-        onAuthSuccess(res.data.user);
-      }).catch(function () { registerErrorEl.textContent = "Network error. Is the server running?"; });
-    });
-  }
-
-  if (profileForm) {
-    profileForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      profileErrorEl.textContent = "";
-      profileSuccessEl.textContent = "";
-      var body = { name: profileNameInput.value, email: profileEmailInput.value };
-      if (profileNewPasswordInput.value) {
-        body.currentPassword = profileCurrentPasswordInput.value;
-        body.newPassword = profileNewPasswordInput.value;
-      }
-      jsonFetch("/api/auth/me", {
-        method: "PATCH", credentials: "same-origin",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body)
-      }).then(function (res) {
-        if (!res.ok) { profileErrorEl.textContent = res.data.error || "Could not save changes."; return; }
-        currentUser = res.data.user;
-        renderAccountBar();
-        profileSuccessEl.textContent = "Saved.";
-        profileCurrentPasswordInput.value = "";
-        profileNewPasswordInput.value = "";
-      }).catch(function () { profileErrorEl.textContent = "Network error. Is the server running?"; });
-    });
-  }
-
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", function () {
-      fetch("/api/auth/logout", { method: "POST", credentials: "same-origin" }).catch(function () {}).then(function () {
-        currentUser = null;
-        renderAccountBar();
-        renderDashboard();
-      });
-    });
-  }
 
   // ---------- the one navigation function ----------
   // Five top-level views live in index.html, all hidden by CSS until they get
@@ -347,9 +144,9 @@
 
   // ---------- theme toggle ----------
   // Three states cycling system → light → dark. An explicit choice sets
-  // data-theme on <html> and persists (device-level, deliberately not scoped
-  // per account); "system" clears both so prefers-color-scheme decides. The
-  // inline <head> script re-applies the saved choice before first paint.
+  // data-theme on <html> and persists device-level; "system" clears both so
+  // prefers-color-scheme decides. The inline <head> script re-applies the
+  // saved choice before first paint.
   var themeToggleBtn = document.getElementById("themeToggleBtn");
   var THEME_KEY = "phil-this-theme";
 
@@ -523,39 +320,65 @@
     return anchor;
   }
 
-  // "Hear this": reads the episode summary aloud with the browser's own
-  // speech synthesis. Only one thing speaks at a time, and the button that
-  // started it is the one that shows "Stop".
+  // "Hear this": plays the pre-generated neural reading of the episode
+  // summary (audio/<id>.ogg) and falls back to the browser's own speech
+  // synthesis when the file is missing or Ogg/Opus can't be decoded. Only one
+  // thing plays at a time, and the button that started it is the one that
+  // shows "Stop".
   var SPEECH_IDLE_LABEL = "\u25B6 Hear this";
+  var SPEECH_LOADING_LABEL = "\u2026 Loading";
   var SPEECH_ACTIVE_LABEL = "\u25A0 Stop";
   var speechState = { btn: null };
+  var summaryAudio = null;
 
   function speechSupported() {
     return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
   }
 
-  function setSpeechButton(btn, speaking) {
+  function audioSupported() {
+    if (typeof window.Audio !== "function") return false;
+    var probe = document.createElement("audio");
+    return !!(probe.canPlayType && probe.canPlayType('audio/ogg; codecs="opus"'));
+  }
+
+  // Shared element so a second summary can never play over the first.
+  function getSummaryAudio() {
+    if (!summaryAudio) {
+      summaryAudio = new window.Audio();
+      summaryAudio.preload = "auto";
+    }
+    return summaryAudio;
+  }
+
+  // state: "idle" | "loading" | "playing"
+  function setSpeechButton(btn, state) {
     if (!btn) return;
-    btn.textContent = speaking ? SPEECH_ACTIVE_LABEL : SPEECH_IDLE_LABEL;
-    btn.setAttribute("aria-pressed", speaking ? "true" : "false");
+    var active = state === "loading" || state === "playing";
+    btn.textContent = state === "playing" ? SPEECH_ACTIVE_LABEL :
+      state === "loading" ? SPEECH_LOADING_LABEL : SPEECH_IDLE_LABEL;
+    btn.setAttribute("aria-pressed", active ? "true" : "false");
   }
 
   // Safe to call at any time, including when nothing is playing.
   function stopSpeaking() {
+    if (summaryAudio) {
+      summaryAudio.pause();
+      // Dropping src aborts a download still in flight.
+      summaryAudio.removeAttribute("src");
+      summaryAudio.load();
+    }
     if (speechSupported()) window.speechSynthesis.cancel();
-    setSpeechButton(speechState.btn, false);
+    setSpeechButton(speechState.btn, "idle");
     speechState.btn = null;
   }
 
+  // Browser speech synthesis. Assumes the caller has already stopped whatever
+  // was playing and owns btn (speechState.btn === btn).
   function speakText(text, btn) {
-    if (!speechSupported() || !text) return;
-    // Clicking the button that is already speaking toggles it off.
-    if (btn && btn === speechState.btn) {
+    if (!speechSupported() || !text) {
       stopSpeaking();
       return;
     }
-    stopSpeaking();
-
     var utterance = new window.SpeechSynthesisUtterance(text);
     utterance.lang = "en-US";
     utterance.rate = 1;
@@ -571,17 +394,81 @@
     function done() {
       // Ignore late callbacks from an utterance another button replaced.
       if (speechState.btn !== btn) return;
-      setSpeechButton(btn, false);
+      setSpeechButton(btn, "idle");
       speechState.btn = null;
     }
     utterance.onend = done;
     utterance.onerror = done;
 
-    setSpeechButton(btn, true);
+    setSpeechButton(btn, "playing");
     speechState.btn = btn;
     // Chrome sometimes swallows speak() unless the queue was just cancelled.
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
+  }
+
+  // Entry point for the button: pre-generated file first, synthesis second.
+  function playSummary(episodeId, text, btn) {
+    if (!text) return;
+    // Clicking the button that is already playing toggles it off.
+    if (btn && btn === speechState.btn) {
+      stopSpeaking();
+      return;
+    }
+    stopSpeaking();
+    var hasId = episodeId !== undefined && episodeId !== null && episodeId !== "";
+    if (!hasId || !audioSupported()) {
+      speechState.btn = btn;
+      speakText(text, btn);
+      return;
+    }
+
+    var audio = getSummaryAudio();
+    speechState.btn = btn;
+    setSpeechButton(btn, "loading");
+
+    // Every handler checks it still owns the button: a click elsewhere may
+    // have replaced this playback before the event fired.
+    function onPlaying() {
+      if (speechState.btn !== btn) return;
+      setSpeechButton(btn, "playing");
+    }
+    function onEnded() {
+      if (speechState.btn !== btn) return;
+      setSpeechButton(btn, "idle");
+      speechState.btn = null;
+    }
+    // 404, decode failure, network drop: try the robotic voice instead.
+    function onError() {
+      if (speechState.btn !== btn) return;
+      cleanup();
+      audio.removeAttribute("src");
+      audio.load();
+      speakText(text, btn);
+    }
+    function cleanup() {
+      audio.removeEventListener("playing", onPlaying);
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("error", onError);
+      audio.removeEventListener("emptied", cleanup);
+    }
+    audio.addEventListener("playing", onPlaying);
+    audio.addEventListener("ended", onEnded);
+    audio.addEventListener("error", onError);
+    // stopSpeaking()'s load() fires "emptied"; that's our cue to detach so
+    // the next playback's listeners are the only ones on the element.
+    audio.addEventListener("emptied", cleanup);
+
+    audio.src = "audio/" + encodeURIComponent(String(episodeId)) + ".ogg";
+    var p = audio.play();
+    if (p && typeof p.catch === "function") {
+      p.catch(function (err) {
+        if (speechState.btn !== btn) return;
+        // Autoplay blocked or similar: nothing more we can do this click.
+        // A source failure surfaces via "error" and falls back there.
+        if (err && err.name === "NotAllowedError") stopSpeaking();
+      });
+    }
   }
 
   // Fills a container with the argument / key ideas / terms block. Everything
@@ -600,15 +487,15 @@
       lead.textContent = data.argument;
       container.appendChild(lead);
 
-      if (speechSupported()) {
+      if (audioSupported() || speechSupported()) {
         var actions = document.createElement("div");
         actions.className = "learn-actions";
         var hearBtn = document.createElement("button");
         hearBtn.type = "button";
         hearBtn.className = "search-row-link learn-hear-btn";
-        setSpeechButton(hearBtn, false);
+        setSpeechButton(hearBtn, "idle");
         hearBtn.addEventListener("click", function () {
-          speakText(data.argument, hearBtn);
+          playSummary(data.id, data.argument, hearBtn);
         });
         actions.appendChild(hearBtn);
         container.appendChild(actions);
@@ -850,7 +737,7 @@
     if (transcriptListFilterInput) transcriptListFilterInput.style.display = "none";
     transcriptReaderEl.style.display = "";
     transcriptReaderTitleEl.textContent = "#" + entry.id + " · " + entry.title;
-    transcriptReaderLinkEl.href = "../transcripts/" + entry.file;
+    transcriptReaderLinkEl.href = "transcripts/" + entry.file;
     if (transcriptReaderOriginalLinkEl) {
       transcriptReaderOriginalLinkEl.href = entry.url || "#";
       transcriptReaderOriginalLinkEl.style.display = entry.url ? "" : "none";
@@ -883,7 +770,7 @@
       });
     }
 
-    fetch("../transcripts/" + entry.file)
+    fetch("transcripts/" + entry.file)
       .then(function (res) { if (!res.ok) throw new Error("fetch failed"); return res.text(); })
       .then(function (raw) {
         if (transcriptReaderId !== entry.id) return;
@@ -897,7 +784,7 @@
         hit.scrollIntoView({ block: "center" });
       })
       .catch(function () {
-        transcriptReaderStatusEl.textContent = "Could not load this transcript. Is the server still running?";
+        transcriptReaderStatusEl.textContent = "Could not load this transcript.";
       });
   }
 
@@ -1244,7 +1131,7 @@
               txBox.innerHTML = "";
               var failed = document.createElement("p");
               failed.className = "ep-learn-status mono";
-              failed.textContent = "Could not load this transcript. Is the server still running?";
+              failed.textContent = "Could not load this transcript.";
               txBox.appendChild(failed);
             });
         });
@@ -1351,7 +1238,7 @@
       text.textContent = "#" + ep.id + " · " + ep.label;
       var link = document.createElement("a");
       link.className = "search-row-link";
-      link.href = "../transcripts/" + ep.file;
+      link.href = "transcripts/" + ep.file;
       link.target = "_blank";
       link.rel = "noopener";
       link.textContent = "Read transcript ↗";
@@ -1388,9 +1275,9 @@
 
   // ---------- transcript search ----------
   // Full-text, typo-tolerant search across every transcript (not just the
-  // ones with quizzes). Uses the server's /api/search when available (fast —
-  // the server indexes all 245 files at startup); falls back to fetching and
-  // caching transcripts client-side when the app is opened via file://.
+  // ones with quizzes). Everything happens in the browser: the first search
+  // fetches all 245 transcript files and builds an in-memory index, which every
+  // later search in the same visit reuses.
 
   var transcriptSearchInput = document.getElementById("transcriptSearch");
   var searchStatus = document.getElementById("searchStatus");
@@ -1449,7 +1336,7 @@
       }
       var transcriptA = document.createElement("a");
       transcriptA.className = "search-row-link";
-      transcriptA.href = "../transcripts/" + r.file;
+      transcriptA.href = "transcripts/" + r.file;
       transcriptA.target = "_blank";
       transcriptA.rel = "noopener";
       transcriptA.textContent = "Read transcript ↗";
@@ -1464,12 +1351,13 @@
 
   function searchClientSide(query) {
     if (!clientTranscriptIndex) {
+      var entries = (typeof EPISODE_INDEX !== "undefined") ? EPISODE_INDEX : [];
+      searchStatus.textContent = "Loading all " + entries.length + " transcripts (first search only)…";
+      // A build already in flight re-runs whatever the box says when it lands.
       if (clientIndexBuilding) return;
       clientIndexBuilding = true;
-      searchStatus.textContent = "Loading all transcripts for offline search (first search only)…";
-      var entries = (typeof EPISODE_INDEX !== "undefined") ? EPISODE_INDEX : [];
       Promise.all(entries.map(function (e) {
-        return fetch("../transcripts/" + e.file)
+        return fetch("transcripts/" + e.file)
           .then(function (r) { return r.ok ? r.text() : ""; })
           .then(function (raw) {
             var lines = raw.split(/\r?\n/);
@@ -1501,14 +1389,7 @@
     var query = (rawQuery || "").trim();
     if (!query) { searchResultsEl.innerHTML = ""; searchStatus.textContent = ""; return; }
     searchStatus.textContent = "Searching…";
-    if (serverAvailable) {
-      fetch("/api/search?q=" + encodeURIComponent(query))
-        .then(function (r) { return r.json(); })
-        .then(renderSearchResults)
-        .catch(function () { searchStatus.textContent = "Search failed. Is the server still running?"; });
-    } else {
-      searchClientSide(query);
-    }
+    searchClientSide(query);
   }
 
   if (transcriptSearchInput) {
@@ -1650,10 +1531,7 @@
       if (!question) { delete deck[entry.key]; pruned = true; return; }
       resolved.push({ epId: entry.epId, qIndex: entry.qIndex, episode: episode, question: question });
     });
-    if (pruned) {
-      writeReviewLocal(deck);
-      pushReviewToServer();
-    }
+    if (pruned) writeReviewLocal(deck);
     if (!resolved.length) { renderReviewStatus(); return; }
 
     reviewQueue = shuffled(resolved).slice(0, REVIEW_SESSION_MAX);
@@ -2170,8 +2048,9 @@
   });
 
   // ---------- routing ----------
-  // Reads location.pathname on load and on back/forward and opens the matching
-  // view. Every branch ends in a showView() (directly, or via startQuiz /
+  // Reads the app-relative path (routePath, i.e. location.pathname minus
+  // BASE_PATH) on load and on back/forward and opens the matching view. Every
+  // branch ends in a showView() (directly, or via startQuiz /
   // openTranscriptReader, which are the same calls the click handlers use), so
   // back and forward always land in a state that matches the URL. Anything
   // unrecognised — a typo'd path, an episode with no quiz, a transcript that
@@ -2184,7 +2063,7 @@
   }
 
   function dispatchRoute() {
-    var pathname = location.pathname.replace(/\/+$/, "") || "/";
+    var pathname = routePath();
     var m = pathname.match(/^\/episode\/(\d+)\/transcript$/);
     if (m) {
       var entry = getAllTranscripts().find(function (e) { return e.id === Number(m[1]); });
@@ -2205,12 +2084,6 @@
   }
   window.addEventListener("popstate", dispatchRoute);
 
-  fetchMe().then(function (user) {
-    currentUser = user;
-    renderAccountBar();
-    return currentUser ? hydrateStoreFromServer() : null;
-  }).then(function () {
-    refreshReviewBadge(); // the tab badge is on screen in every view
-    dispatchRoute();
-  });
+  refreshReviewBadge(); // the tab badge is on screen in every view
+  dispatchRoute();
 })();

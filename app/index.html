@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Every relative URL (style.css, data.js, "../transcripts/x.md", wordcloud
+<!-- Every relative URL (style.css, data.js, "transcripts/x.md", wordcloud
      images) is written relative to the site root. Without this, loading a
      shareable URL like /episode/6 directly would resolve those relative to
-     /episode/ instead and 404. -->
+     /episode/ instead and 404. app.js also derives its BASE_PATH from this
+     tag, so when the site lives under a sub-path (GitHub Pages serves it from
+     /phil-this/) this href is the one thing that changes. -->
 <base href="/" />
 <title>Philosophitor</title>
 <script>
@@ -127,60 +129,7 @@
     </header>
     <hr class="rule" />
 
-    <div class="account-bar" id="accountBar">
-      <div class="account-guest" id="accountGuest">
-        <span class="account-status-text mono">Playing as guest. Scores stay on this device unless you sign in.</span>
-        <div class="account-actions">
-          <button class="pill" id="showLoginBtn" type="button">Sign in</button>
-          <button class="text-link mono" id="showRegisterBtn" type="button">or create an account</button>
-        </div>
-      </div>
-
-      <div class="account-signed-in" id="accountSignedIn" style="display:none">
-        <span class="account-status-text mono">Signed in as <strong id="accountName"></strong> · <span id="accountEmail"></span></span>
-        <div class="account-actions">
-          <button class="restart" id="showProfileBtn" type="button">Profile</button>
-          <button class="restart" id="logoutBtn" type="button">Log out</button>
-        </div>
-      </div>
-
-      <form class="account-form" id="loginForm" style="display:none">
-        <p class="account-form-title mono">Sign in</p>
-        <input class="request-search mono" id="loginEmail" type="email" placeholder="Email" autocomplete="username" required />
-        <input class="request-search mono" id="loginPassword" type="password" placeholder="Password" autocomplete="current-password" required />
-        <p class="account-form-error mono" id="loginError"></p>
-        <div class="account-form-actions">
-          <button class="pill" type="submit">Sign in</button>
-          <button class="restart" type="button" id="loginCancelBtn">Cancel</button>
-        </div>
-      </form>
-
-      <form class="account-form" id="registerForm" style="display:none">
-        <p class="account-form-title mono">Create account</p>
-        <input class="request-search mono" id="registerName" type="text" placeholder="Display name" autocomplete="name" required />
-        <input class="request-search mono" id="registerEmail" type="email" placeholder="Email" autocomplete="username" required />
-        <input class="request-search mono" id="registerPassword" type="password" placeholder="Password (min 8 characters)" autocomplete="new-password" required minlength="8" />
-        <p class="account-form-error mono" id="registerError"></p>
-        <div class="account-form-actions">
-          <button class="pill" type="submit">Create account</button>
-          <button class="restart" type="button" id="registerCancelBtn">Cancel</button>
-        </div>
-      </form>
-
-      <form class="account-form" id="profileForm" style="display:none">
-        <p class="account-form-title mono">Profile</p>
-        <input class="request-search mono" id="profileName" type="text" placeholder="Display name" autocomplete="name" required />
-        <input class="request-search mono" id="profileEmail" type="email" placeholder="Email" autocomplete="username" required />
-        <input class="request-search mono" id="profileCurrentPassword" type="password" placeholder="Current password (only needed to change password)" autocomplete="current-password" />
-        <input class="request-search mono" id="profileNewPassword" type="password" placeholder="New password (leave blank to keep current)" autocomplete="new-password" />
-        <p class="account-form-error mono" id="profileError"></p>
-        <p class="account-form-success mono" id="profileSuccess"></p>
-        <div class="account-form-actions">
-          <button class="pill" type="submit">Save changes</button>
-          <button class="restart" type="button" id="profileCancelBtn">Close</button>
-        </div>
-      </form>
-    </div>
+    <p class="account-status-text mono">Your scores and review deck are saved in this browser.</p>
 
     <p class="ledger-title">Episodes</p>
     <div class="paths-strip" id="pathsStrip" style="display:none"></div>
@@ -206,7 +155,7 @@
     <div class="topic-other" id="topicOther" style="display:none"></div>
 
     <p class="ledger-title">Search transcripts</p>
-    <p class="request-intro">Search the full text of all 245 transcripts, not just titles. Case doesn't matter.</p>
+    <p class="request-intro">Search the full text of all 245 transcripts, not just titles. Case doesn't matter. The first search loads every transcript into your browser; the rest are instant.</p>
     <div class="search-panel">
       <input class="request-search mono" id="transcriptSearch" type="text" placeholder="Search every transcript for a word or phrase…" />
       <p class="search-status mono" id="searchStatus"></p>
