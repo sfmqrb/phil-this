@@ -112,20 +112,19 @@
   <nav class="view-tabs" id="viewTabs">
     <button class="view-tab active" id="tabEpisodesBtn" type="button">Episodes</button>
     <button class="view-tab" id="tabTranscriptsBtn" type="button">Transcripts</button>
-    <button class="view-tab" id="tabReviewBtn" type="button">Review<span class="review-badge mono" id="reviewDueBadge" style="display:none"></span></button>
     <button class="view-tab" id="tabCreditBtn" type="button">Credit</button>
     <button class="theme-toggle" id="themeToggleBtn" type="button" title="Theme: follows your system">◐ auto</button>
     <button class="theme-toggle scene-toggle" id="sceneToggleBtn" type="button" title="Background scene: animated">✳ motion</button>
   </nav>
 
-  <!-- Five top-level views, all hidden by CSS until app.js's showView() gives
+  <!-- Four top-level views, all hidden by CSS until app.js's showView() gives
        exactly one of them the "show" class. The dashboard starts with it so
        the page has something on it before the first dispatchRoute(). -->
   <div id="dashboardView" class="dashboard-view show">
     <header class="masthead">
       <p class="eyebrow">Philosophitor</p>
       <h1>From nodding along to actually knowing</h1>
-      <p class="subtitle">A companion to Philosophize This!. Each episode comes with a summary of its argument, the key ideas and terms, and a narrated version you can listen to. Read or search the full transcripts, then take a short quiz to see what stuck, and let missed questions come back for review until they do.</p>
+      <p class="subtitle">A companion to Philosophize This!. Each episode comes with a summary of its argument, the key ideas and terms, and a narrated version you can listen to. Read or search the full transcripts, then take a short quiz to see what stuck.</p>
     </header>
     <hr class="rule" />
 
@@ -199,52 +198,6 @@
     </div>
   </div>
 
-  <div id="reviewView" class="review-view">
-    <header class="masthead">
-      <h1>The questions you got wrong, back again</h1>
-      <p class="subtitle">Every question you miss joins this deck and returns on a widening schedule — a day later, then three, then a week — until it sticks.</p>
-    </header>
-    <hr class="rule" />
-
-    <p class="ledger-title">Your deck</p>
-    <p class="review-status mono" id="reviewStatus"></p>
-    <div class="resume-banner mono" id="reviewResumeRow" style="display:none">
-      <span id="reviewResumeText"></span>
-      <button class="search-row-link" id="reviewResumeBtn" type="button">Resume</button>
-      <button class="search-row-link" id="reviewResumeDiscardBtn" type="button">Discard</button>
-    </div>
-    <div class="review-start-row" id="reviewStartRow" style="display:none">
-      <button class="pill" id="reviewStartBtn" type="button">Start review</button>
-    </div>
-
-    <div id="reviewSession" style="display:none">
-      <div class="progress-row">
-        <span id="reviewProgressLabel">§ 1 / 1</span>
-        <span id="reviewScoreLive">0 correct so far</span>
-      </div>
-      <div class="progress-track"><div class="progress-fill" id="reviewProgressFill" style="width:0%"></div></div>
-
-      <div class="card">
-        <p class="review-source mono" id="reviewSource"></p>
-        <p class="question-text" id="reviewQuestionText"></p>
-        <div class="options" id="reviewOptions"></div>
-        <div class="note" id="reviewNote"></div>
-        <div class="next-row" id="reviewNextRow">
-          <button class="pill" id="reviewNextBtn">Next &rarr;</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="results" id="reviewResults">
-      <p class="eyebrow">Session complete</p>
-      <p class="score-line mono" id="reviewScoreLine">0 / 0</p>
-      <p class="score-label" id="reviewScoreLabel"></p>
-      <div class="results-actions">
-        <button class="restart" id="reviewBackBtn">Back to your deck</button>
-      </div>
-    </div>
-  </div>
-
   <div id="creditView" class="credit-view">
     <header class="masthead">
       <h1>Who made what here</h1>
@@ -253,31 +206,11 @@
     <hr class="rule" />
 
     <p class="ledger-title">This site</p>
-    <p class="credit-text">Philosophitor is a tool I built for myself. I noticed I could listen to an episode of Philosophize This!, nod along the whole time, and still not be able to explain the argument if you asked me about it the next day. This quizzes you on whether an idea actually stuck. It also lets you search the full text of every transcript. I built it by describing what I wanted to Claude and iterating from there, not by writing every line by hand.</p>
+    <p class="credit-text">Philosophitor is a tool I built for myself. I noticed I could listen to an episode of Philosophize This!, nod along the whole time, and still not be able to explain the argument if you asked me about it the next day. It gives every episode a summary you can read or listen to, lets you search the full text of every transcript, and quizzes you on whether an idea actually stuck. I built it by describing what I wanted to Claude and iterating from there, not by writing every line by hand.</p>
     <p class="credit-text">Built by <a class="credit-inline-link" href="https://www.cs.utoronto.ca/~smaghrebi/" target="_blank" rel="noopener">Sajad Faghfoor Maghrebi</a>.</p>
 
     <p class="ledger-title">Philosophize This!</p>
-    <p class="credit-text">All podcast content, transcripts, and episode titles referenced on this site belong to <strong>Philosophize This!</strong>, written and hosted by Stephen West. Please support the source material directly through the links below.</p>
-
-    <div class="credit-links">
-      <a class="credit-link-card" href="https://www.philosophizethis.org/contribute" target="_blank" rel="noopener">
-        <span class="credit-link-title mono">Patreon</span>
-        <span class="credit-link-desc">Contribute on a per-episode basis, with monthly limits you control.</span>
-      </a>
-      <a class="credit-link-card" href="https://www.philosophizethis.org/contribute" target="_blank" rel="noopener">
-        <span class="credit-link-title mono">PayPal</span>
-        <span class="credit-link-desc">A one-time contribution for whatever you feel the back catalogue is worth.</span>
-      </a>
-      <a class="credit-link-card" href="https://www.philosophizethis.org/merch" target="_blank" rel="noopener">
-        <span class="credit-link-title mono">Merch Store</span>
-        <span class="credit-link-desc">Official Philosophize This! merch, with new designs added regularly.</span>
-      </a>
-    </div>
-
-    <p class="credit-text credit-quote">"My only goal in life is to make a podcast that brightens people's lives a little bit. I want to be the notification on your phone that doesn't induce any stress." &mdash; Stephen West</p>
-
-    <p class="ledger-title">Listen to the show</p>
-    <p class="credit-text">Apple, Stitcher, Spotify, Google Play, Libsyn, YouTube. Links to all of these on the official site below.</p>
+    <p class="credit-text">All podcast content, transcripts, and episode titles referenced on this site belong to <strong>Philosophize This!</strong>, written and hosted by Stephen West. Please support the show directly on its official site.</p>
 
     <a class="credit-back-link" href="https://www.philosophizethis.org/" target="_blank" rel="noopener">philosophizethis.org &rarr;</a>
   </div>

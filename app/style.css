@@ -178,20 +178,18 @@ a { color: inherit; }
 .scene-toggle { margin-left: 0; }
 
 /* ---------- top-level views ---------- */
-/* All five are hidden until exactly one gets .show. Only showView() in app.js
+/* All four are hidden until exactly one gets .show. Only showView() in app.js
    ever adds or removes that class, so two views can never be on screen at
    once. */
 
 .dashboard-view,
 .quiz-view,
 .transcripts-view,
-.review-view,
 .credit-view { display: none; }
 
 .dashboard-view.show,
 .quiz-view.show,
 .transcripts-view.show,
-.review-view.show,
 .credit-view.show { display: block; }
 
 /* ---------- masthead ---------- */
@@ -751,36 +749,6 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 .view-tab.active { color: var(--accent); background: var(--paper-raised); }
 .view-tab:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
-.review-badge {
-  display: inline-block;
-  margin-left: 7px;
-  min-width: 17px;
-  padding: 1px 5px;
-  border-radius: 9px;
-  background: var(--warm);
-  color: var(--paper);
-  font-size: 10px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-/* ---------- review view ---------- */
-
-.review-status {
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin: 0 0 18px;
-}
-
-.review-start-row { margin-bottom: 26px; }
-
-.review-source {
-  font-size: 11.5px;
-  letter-spacing: 0.04em;
-  color: var(--accent);
-  margin: 0 0 14px;
-}
-
 /* ---------- transcripts view ---------- */
 
 .transcript-list { margin-top: 14px; border-bottom: 1px solid var(--rule); }
@@ -1068,35 +1036,6 @@ button.pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px
 }
 .credit-inline-link:hover { border-color: var(--accent); }
 .credit-inline-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-
-.credit-quote {
-  font-style: italic;
-  padding-left: 14px;
-  border-left: 2px solid var(--rule);
-}
-
-.credit-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-
-.credit-link-card {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 12px 14px;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  text-decoration: none;
-  color: inherit;
-}
-.credit-link-card:hover { background: var(--paper-raised); border-color: var(--accent); }
-.credit-link-card:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-
-.credit-link-title { font-size: 13px; color: var(--accent); letter-spacing: 0.04em; }
-.credit-link-desc { font-size: 13.5px; color: var(--ink-soft); }
 
 .credit-back-link {
   display: inline-block;

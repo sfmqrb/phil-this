@@ -1,7 +1,8 @@
 (function () {
   var STORAGE_KEY = "phil-this-quiz-scores-v1";
   var PROGRESS_KEY = "phil-this-quiz-progress-v1";
-  var REVIEW_KEY = "phil-this-quiz-review-v1";
+  // The spaced-repetition review deck was retired; clear whatever it left behind.
+  try { localStorage.removeItem("phil-this-quiz-review-v1"); localStorage.removeItem("phil-this-quiz-review-session-v1"); } catch (e) {}
   var LETTERS = ["A", "B", "C", "D"];
 
   // The site is fully static and may live under a sub-path (GitHub Pages
@@ -77,31 +78,6 @@
     return record;
   }
 
-  // ---------- spaced-repetition review deck ----------
-  // { "<epId>:<qIndex>": { stage, due, lapses, added } } — every question
-  // answered wrong lands here and comes back on a widening schedule.
-
-  function loadReview() { return readJson(REVIEW_KEY, {}); }
-  function writeReviewLocal(deck) { localStorage.setItem(REVIEW_KEY, JSON.stringify(deck)); }
-
-  // In-progress review session, so a refresh mid-session resumes where you
-  // were instead of dropping you back to the deck status.
-  // { keys: ["epId:qIndex", ...], index, score }
-  var REVIEW_SESSION_KEY = "phil-this-quiz-review-session-v1";
-  function loadReviewSession() { return readJson(REVIEW_SESSION_KEY, null); }
-  function writeReviewSession(state) { localStorage.setItem(REVIEW_SESSION_KEY, JSON.stringify(state)); }
-  function clearReviewSession() { localStorage.removeItem(REVIEW_SESSION_KEY); }
-
-  // Grades one answer into the deck (from the quiz or a review session) and
-  // persists it.
-  function recordReviewAnswer(episodeId, qIndex, isCorrect) {
-    var deck = loadReview();
-    QuizLogic.applyReviewAnswer(deck, episodeId, qIndex, isCorrect, new Date().toISOString());
-    writeReviewLocal(deck);
-    refreshReviewBadge();
-    return deck;
-  }
-
   // ---------- in-progress ("half-taken") quiz cache ----------
 
   function loadProgress() { return readJson(PROGRESS_KEY, {}); }
@@ -123,23 +99,21 @@
   var escapeHtml = QuizLogic.escapeHtml;
 
   // ---------- the one navigation function ----------
-  // Five top-level views live in index.html, all hidden by CSS until they get
+  // Four top-level views live in index.html, all hidden by CSS until they get
   // the "show" class. showView() is the ONLY place in this file that touches
-  // those classes: it hides all five, shows exactly one, syncs the tab strip
+  // those classes: it hides all four, shows exactly one, syncs the tab strip
   // (Episodes stays lit for both the dashboard and a quiz, since a quiz is an
   // episode you opened), scrolls back to the top, and refreshes whatever that
   // view renders. Every entry point — tab clicks, startQuiz, goToDashboard,
-  // passage links, "Take quiz" buttons, the review session, dispatchRoute —
-  // goes through it, so the visible view can never drift from the URL.
+  // passage links, "Take quiz" buttons, dispatchRoute — goes through it, so
+  // the visible view can never drift from the URL.
 
   var dashboardView = document.getElementById("dashboardView");
   var quizView = document.getElementById("quizView");
   var transcriptsView = document.getElementById("transcriptsView");
-  var reviewView = document.getElementById("reviewView");
   var creditView = document.getElementById("creditView");
   var tabEpisodesBtn = document.getElementById("tabEpisodesBtn");
   var tabTranscriptsBtn = document.getElementById("tabTranscriptsBtn");
-  var tabReviewBtn = document.getElementById("tabReviewBtn");
   var tabCreditBtn = document.getElementById("tabCreditBtn");
 
   // ---------- theme toggle ----------
@@ -223,14 +197,13 @@
     });
   }
 
-  var VIEW_ORDER = ["dashboard", "quiz", "transcripts", "review", "credit"];
+  var VIEW_ORDER = ["dashboard", "quiz", "transcripts", "credit"];
   var currentViewName = null;
 
   function viewContainer(name) {
     if (name === "dashboard") return dashboardView;
     if (name === "quiz") return quizView;
     if (name === "transcripts") return transcriptsView;
-    if (name === "review") return reviewView;
     if (name === "credit") return creditView;
     return null;
   }
@@ -238,7 +211,6 @@
   function viewTab(name) {
     if (name === "dashboard" || name === "quiz") return tabEpisodesBtn;
     if (name === "transcripts") return tabTranscriptsBtn;
-    if (name === "review") return tabReviewBtn;
     if (name === "credit") return tabCreditBtn;
     return null;
   }
@@ -256,7 +228,7 @@
       if (key === target) el.classList.add("show");
       else el.classList.remove("show");
     });
-    [tabEpisodesBtn, tabTranscriptsBtn, tabReviewBtn, tabCreditBtn].forEach(function (tab) {
+    [tabEpisodesBtn, tabTranscriptsBtn, tabCreditBtn].forEach(function (tab) {
       if (!tab) return;
       if (tab === activeTab) tab.classList.add("active");
       else tab.classList.remove("active");
@@ -274,14 +246,10 @@
 
     if (target === "dashboard") renderDashboard();
     if (target === "transcripts") renderTranscriptList();
-    // A half-finished review session survives a trip to another tab; only a
-    // view with no session running falls back to the deck summary.
-    if (target === "review" && !reviewSessionActive) renderReviewStatus();
   }
 
   if (tabEpisodesBtn) tabEpisodesBtn.addEventListener("click", function () { setUrl("/"); showView("dashboard"); });
   if (tabTranscriptsBtn) tabTranscriptsBtn.addEventListener("click", function () { setUrl("/transcripts"); showView("transcripts"); });
-  if (tabReviewBtn) tabReviewBtn.addEventListener("click", function () { setUrl("/review"); showView("review"); });
   if (tabCreditBtn) tabCreditBtn.addEventListener("click", function () { setUrl("/credit"); showView("credit"); });
 
   // ---------- learn data: arguments, key ideas, terms, passage anchors ----------
@@ -1330,7 +1298,6 @@
 
   function renderDashboard() {
     renderEpisodeList();
-    refreshReviewBadge();
   }
 
   function renderEpisodeList() {
@@ -1749,296 +1716,6 @@
     });
   }
 
-  // ---------- review tab: spaced-repetition sessions ----------
-  // The deck fills up from wrong answers anywhere in the app. A session takes
-  // whatever is due, re-asks it in a shuffled order, and re-grades it through
-  // the same ladder, so a question only leaves your rotation by being right
-  // several times over.
-
-  var REVIEW_SESSION_MAX = 20;
-
-  var rEls = {
-    badge: document.getElementById("reviewDueBadge"),
-    status: document.getElementById("reviewStatus"),
-    startRow: document.getElementById("reviewStartRow"),
-    startBtn: document.getElementById("reviewStartBtn"),
-    resumeRow: document.getElementById("reviewResumeRow"),
-    resumeText: document.getElementById("reviewResumeText"),
-    resumeBtn: document.getElementById("reviewResumeBtn"),
-    resumeDiscardBtn: document.getElementById("reviewResumeDiscardBtn"),
-    session: document.getElementById("reviewSession"),
-    progressLabel: document.getElementById("reviewProgressLabel"),
-    scoreLive: document.getElementById("reviewScoreLive"),
-    progressFill: document.getElementById("reviewProgressFill"),
-    source: document.getElementById("reviewSource"),
-    questionText: document.getElementById("reviewQuestionText"),
-    options: document.getElementById("reviewOptions"),
-    note: document.getElementById("reviewNote"),
-    nextRow: document.getElementById("reviewNextRow"),
-    nextBtn: document.getElementById("reviewNextBtn"),
-    results: document.getElementById("reviewResults"),
-    scoreLine: document.getElementById("reviewScoreLine"),
-    scoreLabel: document.getElementById("reviewScoreLabel"),
-    backBtn: document.getElementById("reviewBackBtn")
-  };
-
-  var reviewQueue = [];
-  var reviewIndex = 0;
-  var reviewScore = 0;
-  var reviewAnswered = false;
-  var reviewSessionActive = false; // a running session survives a trip to another tab
-
-  function refreshReviewBadge() {
-    if (!rEls.badge) return;
-    var counts = QuizLogic.reviewCounts(loadReview(), new Date().toISOString());
-    rEls.badge.textContent = String(counts.due);
-    rEls.badge.style.display = counts.due ? "" : "none";
-  }
-
-  // One line about the soonest entry that isn't due yet.
-  function nextDueLine(deck) {
-    var now = Date.now();
-    var soonest = null;
-    Object.keys(deck).forEach(function (key) {
-      var entry = deck[key];
-      if (!entry || !entry.due) return;
-      var when = new Date(entry.due).getTime();
-      if (when <= now) return;
-      if (soonest === null || when < soonest) soonest = when;
-    });
-    if (soonest === null) return "Nothing is scheduled ahead — your deck is clear.";
-    var days = Math.max(1, Math.ceil((soonest - now) / (24 * 60 * 60 * 1000)));
-    return days === 1 ? "The next question comes due tomorrow." : "The next question comes due in " + days + " days.";
-  }
-
-  // The cached session, but only if it still has unanswered questions that
-  // resolve against the current quiz bank; anything stale is cleared.
-  function pendingReviewSession() {
-    var cached = loadReviewSession();
-    if (!cached || !Array.isArray(cached.keys)) return null;
-    var index = Number(cached.index) || 0;
-    if (index >= cached.keys.length) { clearReviewSession(); return null; }
-    var remaining = cached.keys.slice(index).filter(function (key) {
-      var parsed = QuizLogic.parseReviewKey(key);
-      var episode = parsed && QUIZ_DATA.find(function (ep) { return ep.id === parsed.epId; });
-      return !!(episode && episode.questions[parsed.qIndex]);
-    });
-    if (!remaining.length) { clearReviewSession(); return null; }
-    return cached;
-  }
-
-  function renderReviewStatus() {
-    refreshReviewBadge();
-    reviewSessionActive = false;
-    if (rEls.session) rEls.session.style.display = "none";
-    if (rEls.results) rEls.results.classList.remove("show");
-    var deck = loadReview();
-    var counts = QuizLogic.reviewCounts(deck, new Date().toISOString());
-    if (rEls.status) {
-      if (!counts.total) {
-        rEls.status.textContent = "Your deck is empty. Miss a question in any quiz and it lands here, then comes back until it sticks.";
-      } else if (counts.due) {
-        rEls.status.textContent = counts.due + " due now · " + counts.total + " in your deck.";
-      } else {
-        rEls.status.textContent = "0 due now · " + counts.total + " in your deck. " + nextDueLine(deck);
-      }
-    }
-    var cached = pendingReviewSession();
-    if (rEls.resumeRow) {
-      if (cached) {
-        rEls.resumeText.textContent = "Session in progress · question " + ((Number(cached.index) || 0) + 1) +
-          " of " + cached.keys.length + " · " + (Number(cached.score) || 0) + " correct so far.";
-        rEls.resumeRow.style.display = "";
-      } else {
-        rEls.resumeRow.style.display = "none";
-      }
-    }
-    if (rEls.startRow) rEls.startRow.style.display = counts.due && !cached ? "" : "none";
-  }
-
-  function shuffled(list) {
-    var out = list.slice();
-    for (var i = out.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var swap = out[i];
-      out[i] = out[j];
-      out[j] = swap;
-    }
-    return out;
-  }
-
-  function startReviewSession() {
-    var deck = loadReview();
-    var due = QuizLogic.dueReviewEntries(deck, new Date().toISOString());
-    var resolved = [];
-    var pruned = false;
-    due.forEach(function (entry) {
-      var episode = QUIZ_DATA.find(function (ep) { return ep.id === entry.epId; });
-      var question = episode && episode.questions[entry.qIndex];
-      // The quiz bank grows and changes under decks built weeks earlier, so
-      // quietly drop anything that no longer resolves to a real question.
-      if (!question) { delete deck[entry.key]; pruned = true; return; }
-      resolved.push({ epId: entry.epId, qIndex: entry.qIndex, episode: episode, question: question });
-    });
-    if (pruned) writeReviewLocal(deck);
-    if (!resolved.length) { renderReviewStatus(); return; }
-
-    reviewQueue = shuffled(resolved).slice(0, REVIEW_SESSION_MAX);
-    reviewIndex = 0;
-    reviewScore = 0;
-    saveReviewSessionState();
-    showReviewSessionUi();
-  }
-
-  function saveReviewSessionState() {
-    writeReviewSession({
-      keys: reviewQueue.map(function (item) { return QuizLogic.reviewKey(item.epId, item.qIndex); }),
-      index: reviewIndex,
-      score: reviewScore
-    });
-  }
-
-  function showReviewSessionUi() {
-    reviewSessionActive = true;
-    setUrl("/review");
-    showView("review");
-    if (rEls.results) rEls.results.classList.remove("show");
-    if (rEls.startRow) rEls.startRow.style.display = "none";
-    if (rEls.resumeRow) rEls.resumeRow.style.display = "none";
-    if (rEls.status) {
-      rEls.status.textContent = reviewQueue.length + (reviewQueue.length === 1 ? " question" : " questions") + " in this session.";
-    }
-    if (rEls.session) rEls.session.style.display = "";
-    renderReviewQuestion();
-  }
-
-  // Rebuilds the queue a refresh threw away. Questions that no longer resolve
-  // are dropped; the position shifts down by however many disappeared before it.
-  function resumeReviewSession() {
-    var cached = pendingReviewSession();
-    if (!cached) { renderReviewStatus(); return; }
-    var savedIndex = Number(cached.index) || 0;
-    var queue = [];
-    var index = savedIndex;
-    cached.keys.forEach(function (key, i) {
-      var parsed = QuizLogic.parseReviewKey(key);
-      var episode = parsed && QUIZ_DATA.find(function (ep) { return ep.id === parsed.epId; });
-      var question = episode && episode.questions[parsed.qIndex];
-      if (!question) {
-        if (i < savedIndex) index--;
-        return;
-      }
-      queue.push({ epId: parsed.epId, qIndex: parsed.qIndex, episode: episode, question: question });
-    });
-    if (index >= queue.length) { clearReviewSession(); renderReviewStatus(); return; }
-    reviewQueue = queue;
-    reviewIndex = index;
-    reviewScore = Number(cached.score) || 0;
-    saveReviewSessionState();
-    showReviewSessionUi();
-  }
-
-  function renderReviewQuestion() {
-    var item = reviewQueue[reviewIndex];
-    reviewAnswered = false;
-    var total = reviewQueue.length;
-    if (rEls.progressLabel) rEls.progressLabel.textContent = "§ " + (reviewIndex + 1) + " / " + total;
-    if (rEls.scoreLive) rEls.scoreLive.textContent = reviewScore + " correct so far";
-    if (rEls.progressFill) rEls.progressFill.style.width = ((reviewIndex / total) * 100) + "%";
-    if (rEls.source) rEls.source.textContent = "from #" + item.episode.id + " · " + item.episode.title;
-    if (rEls.questionText) rEls.questionText.textContent = item.question.q;
-    if (rEls.note) { rEls.note.classList.remove("show"); rEls.note.innerHTML = ""; }
-    if (rEls.nextRow) rEls.nextRow.classList.remove("show");
-    if (!rEls.options) return;
-
-    rEls.options.innerHTML = "";
-    item.question.options.forEach(function (opt, idx) {
-      var btn = document.createElement("button");
-      btn.className = "option";
-      btn.type = "button";
-      var letterEl = document.createElement("span");
-      letterEl.className = "letter";
-      letterEl.textContent = LETTERS[idx];
-      var labelEl = document.createElement("span");
-      labelEl.textContent = opt;
-      btn.appendChild(letterEl);
-      btn.appendChild(labelEl);
-      btn.addEventListener("click", function () { selectReviewAnswer(idx); });
-      rEls.options.appendChild(btn);
-    });
-  }
-
-  function selectReviewAnswer(idx) {
-    if (reviewAnswered) return;
-    reviewAnswered = true;
-    var item = reviewQueue[reviewIndex];
-    var isCorrect = idx === item.question.correct;
-
-    if (isCorrect) reviewScore++;
-
-    if (rEls.options) {
-      var buttons = rEls.options.querySelectorAll(".option");
-      buttons.forEach(function (b, i) {
-        b.disabled = true;
-        if (i === item.question.correct) b.classList.add("correct");
-        else if (i === idx) b.classList.add("wrong");
-        else b.classList.add("dim");
-      });
-    }
-
-    recordReviewAnswer(item.epId, item.qIndex, isCorrect);
-    // Persist the position so a refresh resumes at the next unanswered
-    // question; the last answer clears the cache instead.
-    if (reviewIndex + 1 >= reviewQueue.length) {
-      clearReviewSession();
-    } else {
-      writeReviewSession({
-        keys: reviewQueue.map(function (q) { return QuizLogic.reviewKey(q.epId, q.qIndex); }),
-        index: reviewIndex + 1,
-        score: reviewScore
-      });
-    }
-
-    if (rEls.note) {
-      rEls.note.innerHTML = "<strong>" + (isCorrect ? "Right." : "Not quite.") + "</strong> " + item.question.note;
-      rEls.note.classList.add("show");
-      appendPassageLink(rEls.note, item.epId, item.qIndex, function () {
-        return reviewAnswered && reviewQueue[reviewIndex] === item;
-      });
-    }
-    if (rEls.nextRow) rEls.nextRow.classList.add("show");
-    if (rEls.scoreLive) rEls.scoreLive.textContent = reviewScore + " correct so far";
-    if (rEls.nextBtn) rEls.nextBtn.focus();
-  }
-
-  function nextReviewQuestion() {
-    reviewIndex++;
-    if (reviewIndex >= reviewQueue.length) {
-      finishReviewSession();
-    } else {
-      renderReviewQuestion();
-    }
-  }
-
-  function finishReviewSession() {
-    clearReviewSession();
-    reviewSessionActive = false;
-    if (rEls.session) rEls.session.style.display = "none";
-    if (rEls.results) rEls.results.classList.add("show");
-    if (rEls.scoreLine) rEls.scoreLine.textContent = reviewScore + " / " + reviewQueue.length;
-    if (rEls.scoreLabel) rEls.scoreLabel.textContent = nextDueLine(loadReview());
-    refreshReviewBadge();
-  }
-
-  if (rEls.startBtn) rEls.startBtn.addEventListener("click", startReviewSession);
-  if (rEls.nextBtn) rEls.nextBtn.addEventListener("click", nextReviewQuestion);
-  if (rEls.backBtn) rEls.backBtn.addEventListener("click", renderReviewStatus);
-  if (rEls.resumeBtn) rEls.resumeBtn.addEventListener("click", resumeReviewSession);
-  if (rEls.resumeDiscardBtn) rEls.resumeDiscardBtn.addEventListener("click", function () {
-    clearReviewSession();
-    renderReviewStatus();
-  });
-
   // ---------- quiz engine ----------
 
   var currentEpisode = null;
@@ -2049,8 +1726,8 @@
 
   // Each attempt is a random sample of QUIZ_SAMPLE_SIZE of the episode's 20
   // questions, in shuffled order, with the four options shuffled per question
-  // too. currentSample holds ORIGINAL question indices (so the review deck and
-  // passage anchors, both keyed by original index, stay correct);
+  // too. currentSample holds ORIGINAL question indices (so passage anchors,
+  // keyed by original index, stay correct);
   // currentOptionOrder maps displayed option position -> original position for
   // the question on screen. Passing an attempt means PASS_SCORE or more right.
   var QUIZ_SAMPLE_SIZE = 10;
@@ -2279,11 +1956,6 @@
     if (isCorrect) currentScore++;
     else missed.push({ q: item.q, note: item.note, qIndex: origQIndex });
 
-    // A miss enrols this question in the review deck; a hit on a question
-    // already enrolled moves it one rung up the spaced-repetition ladder.
-    // Keyed by the ORIGINAL question index, not the sampled position.
-    recordReviewAnswer(currentEpisode.id, origQIndex, isCorrect);
-
     buttons.forEach(function (b, i) {
       b.disabled = true;
       if (i === correctDisplayIdx) b.classList.add("correct");
@@ -2425,13 +2097,11 @@
       return;
     }
     if (pathname === "/transcripts") { showView("transcripts"); return; }
-    if (pathname === "/review") { showView("review"); return; }
     if (pathname === "/credit") { showView("credit"); return; }
     if (pathname === "/") { showView("dashboard"); return; }
     goHome();
   }
   window.addEventListener("popstate", dispatchRoute);
 
-  refreshReviewBadge(); // the tab badge is on screen in every view
   dispatchRoute();
 })();
