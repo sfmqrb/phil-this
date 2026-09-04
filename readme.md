@@ -17,6 +17,19 @@ Then open http://localhost:4173/. Deep links such as `/episode/94` only work on 
 
 Pushing to `master` runs `.github/workflows/pages.yml`, which builds with `BASE_PATH=/phil-this/` and publishes `dist/` to GitHub Pages at https://sfmqrb.github.io/phil-this/. The workflow can also be started by hand from the Actions tab.
 
+## Adding a new episode
+
+When the show posts a new transcript, one command builds everything for it: the transcript, the summary and key ideas, a 20-question quiz, the archive entry, the word cloud, and both audio files.
+
+```bash
+.venv-tts/bin/pip install anthropic requests beautifulsoup4 wordcloud   # once
+.venv-tts/bin/python add_episode.py --check     # what's new on the site?
+.venv-tts/bin/python add_episode.py             # build every new episode
+.venv-tts/bin/python add_episode.py 246 --path philosophy-literature
+```
+
+The summary and quiz are written by Claude, through the API when `ANTHROPIC_API_KEY` is set or the `claude` CLI otherwise. The script validates the data and stops if anything is off; review the diff, then commit and push to deploy. Run with `--help` for the other options (`--from-json`, `--skip-audio`, `--engine`).
+
 ## Regenerating assets
 
 **Word clouds** (`app/wordclouds/<id>.png`), see the docstring in `app/generate_wordclouds.py`:
