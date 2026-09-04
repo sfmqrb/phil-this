@@ -1,6 +1,6 @@
 {
   "id": 18,
-  "argument": "Avicenna broke from Aristotle's view that mind and body are inseparable, using the flying man thought experiment to argue that a person's self-awareness persists even when totally stripped of all bodily sensation, proving the mind and body are separate entities. This move, similar in spirit to Descartes's later 'I think, therefore I am,' let Avicenna argue for an immortal soul, though it put him at odds with orthodox Islamic belief in bodily resurrection.",
+  "argument": "Stephen West opens with a metaphor for where the show has arrived. Philosophy is like a fire. The pre-Socratics were the spark, Athens and the Hellenistic age the roaring flames, and then the fuel ran out: political trouble, nostalgia for better years, the spread of skepticism, and finally the rise of monotheisms that had little use for searching after a truth they believed they already held. That was a bucket of water on the fire. What follows is a long smoldering phase, where every couple of centuries someone stirs the embers and you feel the heat again. Avicenna is one of those people.\n\nThe host puts us around 950 AD. While Western Europe sat in the Dark Ages, Baghdad was running one of the great knowledge projects in history, translating the world's wisdom into Arabic under the saying that the ink of a scholar is more holy than the blood of a martyr. Without eighth, ninth, and tenth century Baghdad, we might not have Plato and Aristotle at all. Aristotle was the gold standard there. Avicenna, born in a small town in what is now Uzbekistan and largely self-taught, benefited when the Caliphate's central grip loosened and translations spread outward. His independence shows: he read Aristotle, disagreed, and rebuilt. He would not have called it dismantling. His major work translates as The Healing. He healed Aristotle into something compatible with Islam.\n\nThe fight was over mind and body. Aristotle said they are one, against Plato's soul shackled inside a body. His argument is a shrug at the question: no one asks whether the wax and its shape are two things. West updates it. An iPhone's form is not separable from its matter, and strip the software off and you have a shiny brick, not a phone. Blend it into powder and it is only potentially an iPhone. For Aristotle, the rational soul is the form of a human being. The trouble is what follows. No shape survives the melting, so no soul survives the body.\n\nSo Avicenna had to prove separation, and he built the flying man. Imagine being created fully formed in an instant, memories blank, floating in blackness, no sight or sound or smell, limbs suspended apart and touching nothing. Would you affirm that you exist? Clearly yes. Yet you would not know you had a body, or how big you were. The self you are aware of is therefore not the body. West notes we make this judgment constantly, in how we rank the existence of Tuco's paralyzed father in Breaking Bad, mind intact and one working finger, against a brain-dead body whose heart still beats.\n\nThe host separates this from Descartes, centuries later. Avicenna's version is closer to \"I think, therefore I am not only my body,\" and Saint Augustine's refutation of the skeptics is the nearer ancestor of the cogito. Orthodox Muslims attacked Avicenna for it, since they held that body and soul are resurrected together. Later Christian thinkers embraced him. West leaves the question open: does the flying man really work, and can bodily feeling be linked back to the reasoning soul?",
   "keyIdeas": [
     "Aristotle held that mind (soul) and body are inseparable, like an iPhone's form and its materials -- melt the materials down and it's no longer an iPhone, and the soul likewise cannot outlast the body.",
     "This creates a problem for an eternal afterlife: if soul and body are truly one, there's no reason to think the soul survives the body's destruction.",
@@ -9,11 +9,26 @@
     "Avicenna's argument differs from Descartes's 'I think, therefore I am': Descartes's cogito only establishes that thought proves existence, while the flying man goes further to conclude mind and body are separable -- and the episode notes Saint Augustine's earlier refutation of skepticism may deserve credit as an even earlier version of this self-certainty argument."
   ],
   "terms": [
-    { "term": "Flying man thought experiment", "def": "Avicenna's scenario of a person created in mid-air with no sensory input, used to show self-awareness persists without any bodily perception." },
-    { "term": "Rational soul", "def": "Aristotle's term for the mind's capacity to reason, which he held was inseparable from the body." },
-    { "term": "Cogito ('I think, therefore I am')", "def": "Descartes's later argument that the act of thinking alone proves one's own existence." },
-    { "term": "The Healing", "def": "Avicenna's most famous work, in which he 'heals' or reconciles Aristotle's philosophy with Islamic theology." },
-    { "term": "Bodily resurrection", "def": "The orthodox Islamic belief, as the episode puts it, that 'both body and mind are resurrected into the afterlife' -- a view Avicenna's flying man argument (implying a body-independent, immortal soul) put him at odds with." }
+    {
+      "term": "Flying man thought experiment",
+      "def": "Avicenna's scenario of a person created in mid-air with no sensory input, used to show self-awareness persists without any bodily perception."
+    },
+    {
+      "term": "Rational soul",
+      "def": "Aristotle's term for the mind's capacity to reason, which he held was inseparable from the body."
+    },
+    {
+      "term": "Cogito ('I think, therefore I am')",
+      "def": "Descartes's later argument that the act of thinking alone proves one's own existence."
+    },
+    {
+      "term": "The Healing",
+      "def": "Avicenna's most famous work, in which he 'heals' or reconciles Aristotle's philosophy with Islamic theology."
+    },
+    {
+      "term": "Bodily resurrection",
+      "def": "The orthodox Islamic belief, as the episode puts it, that 'both body and mind are resurrected into the afterlife' -- a view Avicenna's flying man argument (implying a body-independent, immortal soul) put him at odds with."
+    }
   ],
   "anchors": [
     "The relationship between mind and body, to Aristotle, is similar to the relationship between an iPhone and its software",

@@ -1,6 +1,6 @@
 {
   "id": 20,
-  "argument": "The episode presents two very different medieval approaches to God: Anselm's ontological argument, which tries to prove God's existence purely from the definition of God as 'that than which nothing greater can be thought,' and the objections it faced from Kant and Gaunilo; and Maimonides' negative theology, which holds that God cannot be positively described in human language at all, since anthropomorphic scripture was written for a people not ready for an abstract, non-human God, and any positive quality wrongly categorizes God the same way it categorizes ordinary things.",
+  "argument": "Philosophy in the Latin West of the eleventh and twelfth centuries was done by people who already believed. Monotheism ran the institutions, so the great minds of the period spent their energy adjusting Plato or Aristotle until the fit was comfortable: Plotinus and Augustine before them, Philo of Alexandria squaring Plato with the Torah. After Rome fell into a Greek Byzantine East and a Latin West, Europe developed scholasticism, less a doctrine than a method, built on dialectic, the conversational back and forth Socrates used. Stephen West opens by insisting that \"God\" is not one fixed idea. Plato meant something different from a modern Christian. The Stoics meant the universe, Plotinus the transcendent One. He describes his own year reading every proof he could find, at 17 and homeless, genuinely open to either answer.\n\nAnselm of Canterbury, called the father of scholasticism, thought in terms of two kinds of existence: things in human understanding alone, and things in reality. An invention still on the drawing board sits in the first category. A lawnmower or a Honda Civic with the muffler removed sits in both. A beetle nobody has found yet, deep in the Amazon, sits in reality without sitting in anyone's mind at all.\n\nFrom that division comes the most famous proof of God's existence ever written. Anselm sets a trap, and the host walks the listener into it. Grant, hypothetically, that God is that than which nothing greater can be thought. Almost everyone grants it, atheists most eagerly, since it sounds like a description of a fantasy. But if you understand the phrase, the thing exists in your thought. And a thing existing in reality is greater than the same thing existing in thought alone. So the greatest conceivable thing cannot exist in thought alone, or it would not be the greatest conceivable thing. Therefore it exists.\n\nMost people sense something wrong and cannot name it. Immanuel Kant named it, centuries later, and gave the argument its label. Why should existing count as greater, other than as a human bias in favor of existing? And existence is not a property the way yellow is. A banana is yellow, thin and calorie dense; adding \"and it exists\" smuggles in the conclusion, like defining a fruit called a washington as green, round, peelable and real. Gaunilo, a monk and a believer, had already made the point with a perfect island. Anselm's defenders answer that there is no perfect number of trees, though there may be perfect goodness.\n\nMoses Maimonides, writing in the 1100s, pushed the other way. The Torah calls God he, father, speaker, because Moses had to reach people who had never heard of one God at all. Maimonides denies God has attributes of any kind, since parts invite the question of what joined them. We can say only what God is not. Helping ducks across a road makes the host benevolent; calling God benevolent in that same word is an insult to both.",
   "keyIdeas": [
     "Atheists who dismiss God by mocking a childhood, popular conception of God are only refuting one narrow definition, ignoring the many other philosophical concepts of God that thinkers have developed.",
     "Anselm distinguishes things that exist only in human understanding from things that exist in reality, then argues that a being 'than which nothing greater can be thought' must exist in reality too, since existing in reality is greater than existing in thought alone.",
@@ -9,11 +9,26 @@
     "Maimonides argued Moses used human, physical language for God because his audience wasn't ready for an abstract God, and that God cannot have any qualities at all -- since qualities imply parts, and parts raise the question of what brought them together -- so it is more accurate to describe God only negatively, e.g. 'not merciless' rather than 'benevolent.'"
   ],
   "terms": [
-    { "term": "Ontological argument", "def": "Anselm's proof that God, defined as the greatest conceivable being, must exist in reality and not merely in thought." },
-    { "term": "Scholasticism", "def": "The medieval method of acquiring knowledge through dialectical reasoning, of which Anselm is considered the father." },
-    { "term": "The 'washington' fruit", "def": "Kant's invented fruit whose definition includes 'and it exists,' used to show that defining existence into a thing doesn't make it real." },
-    { "term": "Gaunilo's perfect island", "def": "A parody of Anselm's argument applying the same logic to 'prove' a perfect island exists, meant to expose a flaw in its form." },
-    { "term": "Negative theology", "def": "Maimonides' view that God can only be described by what he is not, since positive qualities wrongly categorize God's absolute oneness." }
+    {
+      "term": "Ontological argument",
+      "def": "Anselm's proof that God, defined as the greatest conceivable being, must exist in reality and not merely in thought."
+    },
+    {
+      "term": "Scholasticism",
+      "def": "The medieval method of acquiring knowledge through dialectical reasoning, of which Anselm is considered the father."
+    },
+    {
+      "term": "The 'washington' fruit",
+      "def": "Kant's invented fruit whose definition includes 'and it exists,' used to show that defining existence into a thing doesn't make it real."
+    },
+    {
+      "term": "Gaunilo's perfect island",
+      "def": "A parody of Anselm's argument applying the same logic to 'prove' a perfect island exists, meant to expose a flaw in its form."
+    },
+    {
+      "term": "Negative theology",
+      "def": "Maimonides' view that God can only be described by what he is not, since positive qualities wrongly categorize God's absolute oneness."
+    }
   ],
   "anchors": [
     "they were proving God didn’t exist, or at least making fun of the idea of a God existing, based on a very limited view of what God is",

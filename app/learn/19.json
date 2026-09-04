@@ -1,6 +1,6 @@
 {
   "id": 19,
-  "argument": "The episode traces three Islamic philosophers' approaches to reconciling reason and revelation as paths to truth: al-Kindi argued reason and prophecy are compatible, each filling gaps the other leaves; al-Ghazali, after doubting even his own senses and reason, concluded that reason produces only conceptual knowledge while faith delivers direct, first-hand truth; and Averroes proposed a division of labor where philosophy serves the intellectually capable few and religion delivers an accessible version of truth to everyone else, each supporting the other.",
+  "argument": "In the seventh century a new Muslim empire conquered the lands that are now Iran, Iraq and Syria, and two ways of legitimating truth were forced into the same room. Baghdad, soon the imperial capital, sat on centuries of Greek-influenced science and philosophy: truth reached by reason. The conquerors brought truth secured by revelation and by the sword. Non-Muslims could convert or pay a tax most could not afford. Stephen West describes the collision not as an explosion but as two tectonic plates grinding into a mountain, slow and violent at once. The empire faced no military rival, so the real question was cultural. Stamp out the old learning, or find terms on which the two could live together?\n\nThey chose coexistence, and the work of the generations before Avicenna was largely translation, plus commentary meant to make old books speak to living readers. Al-Farabi is the model. He noticed that Aristotle wrote in the words and examples of his own day and was not thinking about anyone else, so his points had gone dark for Arabic speakers centuries later. Al-Farabi updated the examples. The proof is a story Avicenna tells: he read Aristotle's Metaphysics forty times, forty being the old hyperbole for \"more times than I can count,\" and understood nothing until al-Farabi's commentary made it snap into place. Al-Kindi (c. 801 to 873) went further as a peacemaker, even attempting to fuse Plato with Aristotle. His key move was a definition: philosophy is \"the true knowledge of things insofar as is possible for man.\" Reason can carry a person a long way but not everywhere, so revelation fills the remainder. And truth is owed no loyalty test. \"We ought not to be ashamed of appreciating the truth and of acquiring it wherever it comes from,\" he wrote. \"The truth ennobles all.\" The host turns that on partisan cable news, where no commentator ever concedes.\n\nAl-Ghazali (1058 to 1111) came after Avicenna and attacked him. As an adolescent he noticed that Christian children became Christians and Muslim children became Muslims, which made all inherited belief suspect. Seeking certainty, he found only two candidates: sense perception, and necessary truths like a square having four sides. Then he turned the knife on those too. How would he know he was not dreaming? Ten years of skepticism followed, so severe it made him physically ill and drove him from a prestigious teaching post. He returned with an answer: faith opens a sphere beyond reason, as sight is barred from sounds. \"What a difference between knowing the definition of health together with its causes and being healthy.\" Hence The Incoherence of the Philosophers.\n\nAverroes (1126 to 1198) answered with The Incoherence of the Incoherence. His proposal was a division of labor: religion instructs everyone, philosophy serves the few, and each needs the other. The host doubts that most people are incapable of philosophy, only unwilling, then leaves listeners asking what they already accept on faith every day.",
   "keyIdeas": [
     "When two philosophers reach opposing conclusions they both call 'the truth,' the episode argues this reveals a flaw in the method one of them used to arrive at it, not that truth itself is subjective.",
     "Al-Kindi defined philosophy as 'the true knowledge of things insofar as is possible for man,' which let him treat reason and revelation as compatible: use reason as far as it can go, and prophecy to fill in the rest.",
@@ -9,11 +9,26 @@
     "Averroes responded that philosophy and religion each serve different audiences and mutually benefit each other -- religion provides civil order and an accessible truth for the masses, while philosophy serves the few capable of it -- so it is 'downright irresponsible' for philosophers to publicly undermine ordinary people's religious belief."
   ],
   "terms": [
-    { "term": "Al-Farabi's commentary", "def": "Al-Farabi's explanatory work on Aristotle that bridged the cultural and temporal gap between Aristotle's Greek examples and the Islamic world, making his ideas understandable." },
-    { "term": "Authority-based opinions", "def": "Al-Ghazali's term for beliefs people absorb from parents and teachers without independently examining them." },
-    { "term": "Necessary truths", "def": "Truths that hold by definition or essence, such as a square having four sides, which al-Ghazali counted as one of only two things knowable with certainty." },
-    { "term": "The Incoherence of the Philosophers", "def": "Al-Ghazali's most famous work, arguing that philosophers relying solely on reason are ultimately incoherent." },
-    { "term": "The Incoherence of the Incoherence", "def": "Averroes' response to al-Ghazali, defending philosophy's value alongside religion." }
+    {
+      "term": "Al-Farabi's commentary",
+      "def": "Al-Farabi's explanatory work on Aristotle that bridged the cultural and temporal gap between Aristotle's Greek examples and the Islamic world, making his ideas understandable."
+    },
+    {
+      "term": "Authority-based opinions",
+      "def": "Al-Ghazali's term for beliefs people absorb from parents and teachers without independently examining them."
+    },
+    {
+      "term": "Necessary truths",
+      "def": "Truths that hold by definition or essence, such as a square having four sides, which al-Ghazali counted as one of only two things knowable with certainty."
+    },
+    {
+      "term": "The Incoherence of the Philosophers",
+      "def": "Al-Ghazali's most famous work, arguing that philosophers relying solely on reason are ultimately incoherent."
+    },
+    {
+      "term": "The Incoherence of the Incoherence",
+      "def": "Averroes' response to al-Ghazali, defending philosophy's value alongside religion."
+    }
   ],
   "anchors": [
     "it has to be a problem with the method they used to arrive at truth",

@@ -1,6 +1,6 @@
 {
   "id": 16,
-  "argument": "Saint Augustine merged Neo-Platonism with Christianity, becoming the philosopher most responsible for keeping Platonic thought alive into the medieval period. He answered the problem of evil by locating its source in human free will rather than in God or in metaphysical distance from the One, and he developed a radical theory of time in which past and future have no independent existence, existing only as memory and expectation in the mind.",
+  "argument": "Augustine was born in 354 in Thagaste, a town on the coast of Roman North Africa, into a household that was already a religious argument. His father was a pagan. His mother was the formidable Christian later canonized as Saint Monica, the woman Santa Monica in California is named for. Stephen West points out how much pressure that is: most children fold and accept the family faith, sorting out the details later. Augustine did not. He stayed a skeptic through his formative years, in the face of a mother whose reputation in the Roman Catholic Church rests largely on how relentlessly she worked on him. That resistance is what makes his eventual conversion story worth telling.\n\nThe Confessions is where he tells it, and the host notes the strange comedy of the book. Augustine flogs himself for sins that sound entirely ordinary. He indicts his infant hunger for his mother's milk as gluttony, his crying as ingratitude. \"For in your sight no man is free from sin,\" he writes, \"not even a child who has lived only one day on earth.\" Modern readers assume the young are less accountable. Augustine thinks we are tried as adults from birth, which means no one escapes needing grace. Sent away to be educated, he arrived at Carthage and found \"a hissing cauldron of lust,\" a phrase that already sorts the world into bodily pleasure and higher truth in a way Plato and Plotinus would recognize. For a time he found his answer in Manicheism, a Gnostic rival to Christianity in which Good and Evil are two cosmic forces locked in combat, not far from Empedocles on Love and Strife.\n\nThe questions Manicheism could not answer sent him toward Archbishop Ambrose and then, one frustrated afternoon, into a garden. He pulled his hair, hit himself, sat on a bench and wept. A child's voice from a nearby house sang out, \"Pick up and read.\" He opened his Bible to Romans 13, on decency over carousing and the desires of the flesh. For a man raised on exactly that reproach, no passage could have landed harder. He never converted again.\n\nTwo problems then occupied him. First, how evil fits in a world made by a good God. Plotinus had called evil an absence of good, an idea Plato had floated in the Gorgias. Augustine chose a different route: rational creatures must be able to choose, and Adam and Eve were left free to listen to the snake. Evil is the cost of free will, not a fact about God. Second, time. If God made the heavens and earth, what came before? Augustine's answer is that God created time and stands outside it, and that time itself lives in the mind. There is only the present of past things, which is memory, the present of present things, attention, and the present of future things, expectation. What we measure is the impression left behind, as with a poem, a life, or the whole of human history.\n\nBy fusing Plotinus with Christian doctrine, the host argues, Augustine became philosophy's unlikely rescuer. Without that merger, Plato might survive only in fragments. West closes by asking listeners about their own moment of certainty.",
   "keyIdeas": [
     "Augustine held that every human, even an infant, is a sinner from birth, so no age or apparent innocence exempts anyone from needing God's grace.",
     "His language about the 'murk of lust' obscuring the 'clear light of true love' draws on the Platonic/Plotinian distinction between the lower sense-able world and a higher, truer reality.",
@@ -9,11 +9,26 @@
     "Past and future do not exist independently; they exist only in the mind as three 'tenses of times' -- memory, attention, and expectation -- and the mind measures time by measuring the impression a passing thing leaves behind, not the thing itself."
   ],
   "terms": [
-    { "term": "Confessions", "def": "Augustine's autobiographical work in which he recounts his sins and conversion and works out his philosophy of time." },
-    { "term": "Manicheism", "def": "A Gnostic dualist religion Augustine followed before Christianity, holding that good and evil are two opposing cosmic forces." },
-    { "term": "Free will", "def": "The God-given human ability to choose between good and bad courses of action; for Augustine, the source of evil in the world." },
-    { "term": "Christian Platonist", "def": "Augustine's designation for fusing Plotinus's Neo-Platonic philosophy with Christian doctrine." },
-    { "term": "Three tenses of times", "def": "Augustine's idea that past, present, and future are really the present of past things (memory), present of present things (attention), and present of future things (expectation), existing only in the mind." }
+    {
+      "term": "Confessions",
+      "def": "Augustine's autobiographical work in which he recounts his sins and conversion and works out his philosophy of time."
+    },
+    {
+      "term": "Manicheism",
+      "def": "A Gnostic dualist religion Augustine followed before Christianity, holding that good and evil are two opposing cosmic forces."
+    },
+    {
+      "term": "Free will",
+      "def": "The God-given human ability to choose between good and bad courses of action; for Augustine, the source of evil in the world."
+    },
+    {
+      "term": "Christian Platonist",
+      "def": "Augustine's designation for fusing Plotinus's Neo-Platonic philosophy with Christian doctrine."
+    },
+    {
+      "term": "Three tenses of times",
+      "def": "Augustine's idea that past, present, and future are really the present of past things (memory), present of present things (attention), and present of future things (expectation), existing only in the mind."
+    }
   ],
   "anchors": [
     "no man is free from sin, not even a child who has lived only one day on earth",

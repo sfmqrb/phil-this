@@ -1,6 +1,6 @@
 {
   "id": 17,
-  "argument": "Boethius, unjustly condemned to death, wrote The Consolation of Philosophy in prison, using the character of Lady Philosophy to argue that human free will survives divine foreknowledge because God's timeless, eternal way of knowing is fundamentally different from human knowing bound by past, present, and future. He further argues that the wealth, status, and fortune people grieve losing were never truly theirs, and that only virtue -- which fortune cannot touch -- is genuinely one's own.",
+  "argument": "Boethius was a Roman aristocrat in a Rome that had stopped being Rome. By the early sixth century the western empire was gone and the Italian peninsula belonged to the Ostrogoths, led by Theodoric the Great. Stephen West spends real time on how Theodoric came to power, because it explains everything that follows. Theodoric had beaten Odoacer in the field, agreed through a bishop's mediation to share rule with him, then called a banquet to celebrate, stood up, made a toast, and stabbed him in the neck. The Anonymous Valesianus records what came next: Odoacer's army hunted down and killed, his wife Sunigilda stoned, his brother Onoulphus shot by archers while sheltering in a church, his son Thela exiled and later murdered. That man was Boethius' employer. Boethius, orphaned young, adopted into a wealthy family, educated superbly, served as his chief advisor.\n\nThe fall came at a royal council in Verona, where Cyprianus accused Albinus of treason. Boethius defended him: \"The charge of Cyprianus is false, but if Albinus did that, so also have I and the whole senate with one accord done it.\" Nobody applauded. They simply took him away too. Stripped of house, family, office and life, awaiting execution, he wrote The Consolation of Philosophy, having previously produced little but commentaries on Aristotle. The book opens with a Boethius character sunk in self-pity, until a strange woman appears above him, her height shifting, glowing, carrying books in one hand and a scepter in the other, with a Greek theta stitched at the top of her dress for metaphysics and a pi at the bottom for ethics. Lady Philosophy is to Boethius what Socrates was to Plato. The host compares the pairing to a QVC segment: one host who knows an unsettling amount about the rice cooker, one who has never heard of rice. Both, of course, are Boethius.\n\nThe philosophical core answers a problem inherited from Aristotle's On Interpretation and the sea battle. If it is true today that there will be a sea battle tomorrow, then nothing is possible except what actually happens. Christianize that and you get God's foreknowledge swallowing free will, a live worry given Augustine's argument, covered the previous episode, that evil is the price of genuine choice. Boethius separates divine foreknowledge from predestination. Knowing something will happen does not make it happen. And \"everything is known not according to itself but according to the capacity of the knower\": humans see through the narrow slot of past, present and future, like a goldfish mistaking a living room for the ocean, while God inhabits an eternal present. Your friend's knowledge that you are jogging right now does not stop you from doubling over and throwing up.\n\nThen the consolation itself. Lady Philosophy tells Boethius he is pining for lost fortune, and that Fortune is a wheel: the house, the health, the career were never his to keep. Everyone is a gambler at the slots in Las Vegas, superstitious and drinking free, expecting only luck. Only virtue is \"not imperiled by the vicissitudes of fortune.\" Hence the hardest claim: \"All fortune is good fortune; for it either rewards, disciplines, amends, or punishes.\" The host grants that later centuries chip away at the foreknowledge argument, but leaves listeners with something Boethius earned in a cell, asking what fear of theirs is only a shadow on a cave wall.",
   "keyIdeas": [
     "Boethius was condemned to death after defending Albinus against a treason charge, arguing the whole senate was equally guilty; the council used his own defense to convict him too.",
     "Only after losing his wealth, family, and freedom did Boethius, previously privileged, come to truly understand and rely on philosophy, which he personifies as Lady Philosophy correcting his despairing thinking.",
@@ -9,11 +9,26 @@
     "Because Fortune's wheel gives and takes away, the wealth and status people mourn losing never truly belonged to them; true and lasting good fortune is virtue, since whatever happens either rewards, disciplines, corrects, or justly punishes a person, and each outcome serves virtue."
   ],
   "terms": [
-    { "term": "Lady Philosophy", "def": "A personification of wisdom and philosophy who appears to Boethius in prison and corrects his despairing thinking." },
-    { "term": "Divine foreknowledge", "def": "God's knowledge of what will happen, which Boethius distinguishes from predestination -- knowing something is not the same as causing it." },
-    { "term": "Sea battle analogy", "def": "Aristotle's argument that since a statement about tomorrow's sea battle is true or false today, only what actually happens was ever possible." },
-    { "term": "Eternal present", "def": "The timeless mode of existence Boethius attributes to God, who observes all of past, present, and future at once rather than living through them in sequence." },
-    { "term": "Wheel of Fortune", "def": "Lady Philosophy's image for how worldly goods -- wealth, status, freedom -- are constantly given and taken away and were never truly one's own." }
+    {
+      "term": "Lady Philosophy",
+      "def": "A personification of wisdom and philosophy who appears to Boethius in prison and corrects his despairing thinking."
+    },
+    {
+      "term": "Divine foreknowledge",
+      "def": "God's knowledge of what will happen, which Boethius distinguishes from predestination -- knowing something is not the same as causing it."
+    },
+    {
+      "term": "Sea battle analogy",
+      "def": "Aristotle's argument that since a statement about tomorrow's sea battle is true or false today, only what actually happens was ever possible."
+    },
+    {
+      "term": "Eternal present",
+      "def": "The timeless mode of existence Boethius attributes to God, who observes all of past, present, and future at once rather than living through them in sequence."
+    },
+    {
+      "term": "Wheel of Fortune",
+      "def": "Lady Philosophy's image for how worldly goods -- wealth, status, freedom -- are constantly given and taken away and were never truly one's own."
+    }
   ],
   "anchors": [
     "if Albinus did that, so also have I and the whole senate with one accord done it",

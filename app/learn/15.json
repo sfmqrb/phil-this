@@ -1,6 +1,6 @@
 {
   "id": 15,
-  "argument": "Plotinus answers the problem of evil -- how can a good, ordered universe contain so much suffering -- by arguing evil has no positive existence of its own; it is only a privation, an absence of good, not a rival force battling against it. This works because existence itself is a good, so nothing can be wholly evil without ceasing to exist entirely. Underlying this is Plotinus's larger metaphysics: things are real in proportion to how unified they are, giving rise to a hierarchy of being (the One, the Intellect, the Soul, and the physical world) in which the sense-able world we inhabit is simply the most diluted, least unified, and therefore least real and most evil-prone tier.",
+  "argument": "Plotinus lived in the Roman world of about 250 AD, in what historians call the crisis of the third century. War and plague were constant. Stephen West notes that the population of the region is thought to have fallen by a third, and that the survivors still had to pay for the wars. Taxes soared, and people who could not pay were forced to leave and walk somewhere else. Philosophy made its largest strides here, as it had a couple of hundred years earlier in the Hellenistic age, under political collapse.\n\nSomething quieter had shifted too. Earlier Greek thinkers mostly treated the soul as compatible with the physical world, as much a part of you as your hands, the part that reasons or feels. By Plotinus' time, more and more people saw themselves instead as a consciousness imprisoned in a flawed body inside a flawed realm, waiting to get back to a higher one. Your body belongs to you the way a smartphone does, but it is not you. The host likens the mood to crash-landing on a hostile alien planet and scrounging parts to fly home. Christianity was rising in that same soil, offering personal salvation. Borrowing from Luc Ferry's A Brief History of Thought, the host separates religion from philosophy: humans alone dread irreversibility, and religion answers by calling death an illusion, while philosophy is salvation without religion, built from human means alone.\n\nSo imagine carrying the obvious objection to Plotinus, the respected sage of the age: how can a good and powerful God allow evil? He would say evil does not exist, not the way you mean. Bad things are absences of good. Voldemort commits his evil acts only because he has a working body and enough health to chase Harry around, and even his ruined nose is good enough to breathe through. Strip away every good quality and the thing could not exist at all. Plotinus was consistent about the physical world's second-rate status. Asked to sit for a portrait, he replied, \"Is it not enough to have to carry around this image? Must I transmit the image of this image as worthy of attention?\"\n\nThe rest follows from unity. Nothing is a thing without it: no army, no chorus, no house, no ship. A dog's unity is inherent, a clock's was assembled by a clockmaker, a marching band has less still. The more unity, the more real. Plotinus stacks this into a chain of being, pictured as a three-tiered fountain. The One, beyond description, overflows into the Intellect, which holds the perfect forms, pure tree-y-ness with no greenness attached. The Intellect overflows into the Soul, which casts reflections of those forms into crude matter. Our world is a Polaroid of a Polaroid of a Polaroid, which is why good arrives here diluted.\n\nThe advice, then, is to turn away from bodily existence and contemplate the forms. The host flags unity and the hierarchy as what to carry into later Christian and Catholic philosophy, and closes by asking what adversity shaped you.",
   "keyIdeas": [
     "Plotinus's privation theory holds that evil is not a presence but an absence of goodness; nothing can be wholly evil because complete absence of good would mean the thing couldn't exist at all.",
     "Existence itself counts as a good, so anything that exists -- even something monstrous -- retains some minimal good (like basic functioning) that allows it to exist, blocking the idea of 'pure evil' as its own positive force.",
@@ -9,11 +9,26 @@
     "This graded hierarchy reframes evil as a deficiency or falling-away from unity/coherence/goodness, rather than as an independently existing force -- explaining the problem of evil without denying that bad things happen."
   ],
   "terms": [
-    { "term": "Privation theory of evil", "def": "The view that evil is not a real, positive thing but merely an absence or lack of good." },
-    { "term": "The One", "def": "The topmost, indescribable source of unity in Plotinus's hierarchy, sometimes called the Good or God." },
-    { "term": "The Intellect", "def": "The second tier of Plotinus's hierarchy, the realm of the perfect, unified Forms -- true existence." },
-    { "term": "The Soul", "def": "The third tier, which projects reflections of the Forms into physical matter, creating the sense-able world." },
-    { "term": "Hierarchy (chain) of being", "def": "Plotinus's graded ordering of reality by degree of unity, from the One down through Intellect, Soul, and matter." }
+    {
+      "term": "Privation theory of evil",
+      "def": "The view that evil is not a real, positive thing but merely an absence or lack of good."
+    },
+    {
+      "term": "The One",
+      "def": "The topmost, indescribable source of unity in Plotinus's hierarchy, sometimes called the Good or God."
+    },
+    {
+      "term": "The Intellect",
+      "def": "The second tier of Plotinus's hierarchy, the realm of the perfect, unified Forms -- true existence."
+    },
+    {
+      "term": "The Soul",
+      "def": "The third tier, which projects reflections of the Forms into physical matter, creating the sense-able world."
+    },
+    {
+      "term": "Hierarchy (chain) of being",
+      "def": "Plotinus's graded ordering of reality by degree of unity, from the One down through Intellect, Soul, and matter."
+    }
   ],
   "anchors": [
     "how can an all-powerful, loving God exist and still allow evil to exist in the world?",

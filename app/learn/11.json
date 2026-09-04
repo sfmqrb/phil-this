@@ -1,6 +1,6 @@
 {
   "id": 11,
-  "argument": "Stoicism grew out of cynicism but insisted that ethics could not stand alone -- it needed a physics and a logic to justify it, since living virtuously in agreement with nature requires first knowing what nature actually is. Zeno of Citium, shaped by a shipwreck and his cynic training under Crates, built a materialist, pantheistic system in which God, nature, and the universe are identical, animated by an active divine reason (logos) that governs passive matter and produces fate. Humans participate in that reason, and the whole point of logic and physics is to let people reason well enough to live in harmony with this providential, deterministic universe.",
+  "argument": "The Hellenistic Age was a hard time to be Greek. The old city-states had lost their independence, Alexander's empire had fractured, and philosophy turned from politics toward the question of how a person survives circumstances they cannot control. Zeno of Citium, born in 334 BC, thirteen years after Plato died, arrived at that question by accident. He was a merchant. Around 311 BC his ship went down, he swam ashore, and he walked into Athens with nothing. An oracle had once told him to \"take on the complexion of the dead.\" After the wreck, he seems to have decided he knew what that meant.\n\nStephen West tells the bookstore story: Zeno reading Xenophon on Socrates, asking the shopkeeper where a man like that could be found, and the shopkeeper pointing out the window at Crates the Cynic hobbling past. Cynicism was one branch of the Socratic inheritance, founded by Antisthenes and made famous by Diogenes of Sinope, who lived in a tub, barked at people, carried a lantern at noon looking for an honest man, and told Alexander the Great to stop blocking his sunlight. The word meant dog-like. Cynics held that virtue alone is enough for a good life, and that virtue means living in agreement with nature. Zeno kept both ideas. What he could not keep was the Cynic indifference to physics. When Crates smashed the pot of lentil soup Zeno was hiding under his robe and shouted after him, \"Why run away, my little Phoenician? Nothing terrible has befallen you,\" Zeno learned the lesson and also learned its limits.\n\nHis objection was practical. Stoic tranquility rests on accepting fate, and you cannot rest on fate without an account of why it exists. So Zeno went to the Academy, absorbed the Timaeus idea that everything works out for the best, and built a physics. Only bodies exist, since only bodies can act or be acted upon. Things like love, justice and time are real parts of nature without existing, figments of the mind. Nature is God, and God is the universe: a material whole animated by the divine logos, split into passive elements, earth and water, and active ones, fire and air, mixed as pneuma. The cosmos burns down and reassembles forever, always the same perfect way. Hence fate.\n\nThat closes the circle. Human reason is a spark of the logos, so reasoning well is living in agreement with nature, which is virtue, which is happiness, and the freedom from suffering the Stoics called apatheia. West illustrates it with John Locke on Lost telling a withdrawing Charlie that choosing on something other than instinct is all that separates him from the pig in the net. Logic mattered for the same reason: to study argument was to study the logos. Zeno demonstrated it with one hand, open for perception, curled for assent, clenched for comprehension, gripped by the other hand for knowledge.\n\nCleanthes organized these ideas in his \"Hymn to Zeus.\" Chrysippus, credited with over seven hundred books, made Stoic logic serious enough to be argued against Aristotle's. None of their complete works survive, only fragments and later, often hostile, commentary. What survives instead is what the late Stoa did with the ethics, and West leaves the listener there, with Seneca, Epictetus and Marcus Aurelius waiting in the next episode.",
   "keyIdeas": [
     "The stoics pictured logic, physics, and ethics as an egg's shell, yolk, and white: distinct but interdependent, so ethics can't be properly understood without the physics and logic that ground it.",
     "Stoicism evolved directly out of cynicism (Zeno studied under the cynic Crates), keeping the cynic emphasis on virtue and living according to nature but adding the physics and metaphysics cynicism lacked.",
@@ -9,11 +9,26 @@
     "Zeno's hand-gesture demonstration (open palm, closing fingers, closed fist, fist gripped by the other hand) visualized perception, assent, comprehension, and knowledge as increasing degrees of epistemic certainty."
   ],
   "terms": [
-    { "term": "Logos", "def": "The divine reason, will, and fate that pervades and governs the universe; humans' own reason is a spark of it." },
-    { "term": "Apatheia", "def": "The stoic goal of being free from being controlled by disturbing emotion, achieved by reasoning in harmony with nature." },
-    { "term": "Pneuma", "def": "The mixture of fire and air, the fundamental active substance the stoics believed pervaded and structured everything." },
-    { "term": "Passive/active nature", "def": "Passive nature is the raw material (earth and water); active nature is the divine reason/fire and air that shapes it." },
-    { "term": "Stoa Poikile", "def": "The 'painted stoa' in the Athenian Agora where Zeno lectured, giving the stoics their name." }
+    {
+      "term": "Logos",
+      "def": "The divine reason, will, and fate that pervades and governs the universe; humans' own reason is a spark of it."
+    },
+    {
+      "term": "Apatheia",
+      "def": "The stoic goal of being free from being controlled by disturbing emotion, achieved by reasoning in harmony with nature."
+    },
+    {
+      "term": "Pneuma",
+      "def": "The mixture of fire and air, the fundamental active substance the stoics believed pervaded and structured everything."
+    },
+    {
+      "term": "Passive/active nature",
+      "def": "Passive nature is the raw material (earth and water); active nature is the divine reason/fire and air that shapes it."
+    },
+    {
+      "term": "Stoa Poikile",
+      "def": "The 'painted stoa' in the Athenian Agora where Zeno lectured, giving the stoics their name."
+    }
   ],
   "anchors": [
     "it’s impossible to understand where they’re coming from with their ethics without first understanding the other two parts, logic and physics",

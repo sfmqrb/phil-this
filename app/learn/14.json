@@ -1,6 +1,6 @@
 {
   "id": 14,
-  "argument": "As the Hellenistic Age gave way to late antiquity, Athens lost its philosophical dominance to Rome and Alexandria, and philosophy itself shifted from the skeptical Academy's questioning back toward a dogmatic reading of Plato, largely because people disillusioned by chaos looked to a complete system from the past for stability. The 'middle Platonists,' represented here by Philo of Alexandria and Plutarch, unknowingly built toward Neoplatonism by fusing compatible ideas from rival schools onto a Platonist framework -- Philo reconciling Plato's Timaeus with Jewish monotheism, Plutarch reconciling apparent contradictions within Plato's own texts and developing an influential account of how to distinguish a true friend from a self-interested flatterer.",
+  "argument": "Classical antiquity ran from roughly 800 BC, when the first Greek epics were written, to the early centuries AD. Stephen West opens this episode at its far end, with the map of the philosophical world being redrawn. Athens had been the center of that world, sheltered first by its own navy and then by Alexander's army, and that stability was what let people spend whole lives thinking. Then Alexander died and the region became a fight for control. Several Greek states hired the general Pyrrhus of Epirus against Rome, and he won, repeatedly, with an army of 15,000 and war elephants borrowed from Ptolemy II. Plutarch reports his answer to a man congratulating him: one more such victory would utterly undo him. Rome refilled its camp like a fountain; the Greeks could not. A century later Athens was under Roman control, and philosophers were turning up in Alexandria and Rome instead.\n\nPlatonism had its own broken lineage to repair. For 75 years after Plato's death the Academy defended his doctrines, and those dogmatic Platonists were followed by the skeptical Academy, which questioned whether anything could be known at all. Eventually people tired of the skeptics. The host's favorite explanation is that a chaotic age sent people looking backward for a complete system, much as Confucius and Laozi looked to an older order during the Warring States period. What they found in Plato was also compatible with the monotheism spreading around them, in a way Stoic pantheism was not. These middle Platonists worked like mad scientists, grafting the best part of one philosophy onto another, and the creature they were assembling was Neoplatonism, though none of them knew it.\n\nPhilo of Alexandria was the middle Platonist of Judaism, working in a city Alexander founded in 331 BC, with its artificial harbor, its lighthouse and its library. Philo's greatest philosopher was Moses; Pythagoras had learned from Moses, Plato from Pythagoras, and everyone else was restating them. So he read the Torah line by line for the philosophy hidden under the story. God did not need seven days, Philo argued, but the days are a code: the physical world on day six because six is a perfect number, animals on day five for the five senses. To square Genesis with Plato's Timaeus, where a master craftsman builds the world by copying preexisting forms, the host's IKEA showroom of perfect originals, Philo moved the forms inside God's mind. Eden became virtue, and the fruit a surrender to bodily pleasure.\n\nPlutarch, priest of Apollo at Delphi and magistrate of Chaeronea, did the same work for Paganism, reconciling the Timaeus with the Phaedrus by splitting the soul: an irrational one, uncreated, and a rational world soul made by the craftsman. Flatterers, in How to Tell a Flatterer from a Friend, feed the irrational part. He calls them parasites, counterfeit gold. Friends are valuable because they are honest, the outside nose that smells the house you have stopped smelling. Hitler's generals stopped reporting problems. Plutarch's test: offer absurd advice with a straight face and see who agrees.\n\nAristotle came back in this period mostly through commentaries, reheated and quarried for parts. Around 300 AD Plotinus assembles the rest, and the host leaves listeners with a harder question than whether their friends pass Plutarch's test: how many people would say that of them.",
   "keyIdeas": [
     "Pyrrhus of Epirus won costly victories against Rome but was undone because Rome could replenish its forces far faster than his allies could, giving us the phrase 'pyrrhic victory' and serving as a microcosm of the whole Hellenistic Age: Rome's overwhelming ability to recover made resistance ultimately unsustainable.",
     "Philosophy shifted back toward a dogmatic reading of Plato because, like the Warring States thinkers in China, people disillusioned by chaos looked to a complete system from the past for stability rather than continuing the Academy's skepticism.",
@@ -9,11 +9,26 @@
     "Plutarch's How to Tell a Flatterer from a Friend argues that a true friend can be identified by testing them: offer deliberately bad advice or work, and if they praise it instead of pushing back, that agreement reveals they are a flatterer appealing to the irrational part of the soul rather than a friend acting in your genuine best interest."
   ],
   "terms": [
-    { "term": "Middle Platonism", "def": "The philosophical movement between the skeptical Academy and Neoplatonism that combined ideas from rival schools onto a Platonist framework." },
-    { "term": "Neoplatonism", "def": "The system founded later by Plotinus that emerged from the middle Platonists' unwitting synthesis of Plato with other schools." },
-    { "term": "Pyrrhic victory", "def": "A victory won at such a devastating cost that it is functionally equivalent to a defeat, named after Pyrrhus of Epirus's costly wins over Rome." },
-    { "term": "World of forms", "def": "In Plato's Timaeus, the pre-existing blueprint a divine craftsman consults when creating the physical universe; Philo relocated it into God's mind to preserve monotheism." },
-    { "term": "Flatterer", "def": "In Plutarch's account, someone who falsely represents themselves as a friend for personal gain, appealing to the irrational part of the soul rather than offering honest counsel." }
+    {
+      "term": "Middle Platonism",
+      "def": "The philosophical movement between the skeptical Academy and Neoplatonism that combined ideas from rival schools onto a Platonist framework."
+    },
+    {
+      "term": "Neoplatonism",
+      "def": "The system founded later by Plotinus that emerged from the middle Platonists' unwitting synthesis of Plato with other schools."
+    },
+    {
+      "term": "Pyrrhic victory",
+      "def": "A victory won at such a devastating cost that it is functionally equivalent to a defeat, named after Pyrrhus of Epirus's costly wins over Rome."
+    },
+    {
+      "term": "World of forms",
+      "def": "In Plato's Timaeus, the pre-existing blueprint a divine craftsman consults when creating the physical universe; Philo relocated it into God's mind to preserve monotheism."
+    },
+    {
+      "term": "Flatterer",
+      "def": "In Plutarch's account, someone who falsely represents themselves as a friend for personal gain, appealing to the irrational part of the soul rather than offering honest counsel."
+    }
   ],
   "anchors": [
     "as from a fountain continually flowing out of the city, the Roman camp was quickly and plentifully filled up with fresh men",

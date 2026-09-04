@@ -1,6 +1,6 @@
 {
   "id": 12,
-  "argument": "Stoic ethics centers on oikeiosis: the idea that every creature has a natural disposition, and humanity's unique disposition is rationality, so living well means acting in accordance with reason rather than base instinct. From this flows the stoics' most practical teaching -- the sharp distinction between what we control (our own thoughts and actions) and what we don't (everything external, called 'indifferents,' some preferred and some not) -- which underlies their techniques for managing expectations, anger, and grief, and their compatibilist acceptance of fate as something to be met with calm rather than resistance.",
+  "argument": "In 155 BC, Athens owed Rome 500 talents of gold, a fine for having sacked the border town of Oropus. Rather than pay, the city sent the heads of its three philosophical schools to argue for mercy: Carneades of the Academy, Critolaus the Peripatetic, and Diogenes, then head of the Stoic school. They got the fine cut to 100 talents. The more important thing happened while they waited. Romans gathered by the hundreds to hear them talk, and Carneades praised justice as the supreme virtue one day, then argued the opposite the next, saying Rome's empire was built on injustice. The three were sent home quickly. Philosophy stayed.\n\nStephen West notes that university curricula tend to skip the Roman Stoics, partly because a seventeenth century revival gave scholars richer material than ancient fragments, and partly because Seneca, Epictetus and Marcus Aurelius barely argue for their ethics at all. They assume the system is right and ask what living inside it feels like. Their lives supply the range: Epictetus a crippled slave, Seneca a statesman trapped in Nero's service and finally ordered to kill himself, Marcus Aurelius an emperor facing Germanic tribes, Parthians, plague, chronic illness, and the death of all but one of his children.\n\nEverything starts from oikeiosis, built on oikos, house or orientation. Nature assigns each thing a disposition. A skunk's is simple: eat, sleep, reproduce, survive. A human's includes all that plus reason, which we were put here to use. The host's example is the reality show cast member with a partner at home who shrugs at the camera and says, \"Hopefully I don't cheat on my boyfriend tonight,\" treating himself as a passenger rather than a creature capable of choosing. Marcus Aurelius says a horse or a vine is made for some duty, and man's true delight is doing what he was made for.\n\nFrom there comes the famous division. We control our thoughts and actions. Everything else, including our bodies, reputations and past, is an indifferent. Health is only preferred, not good in itself; consider the health of Hitler in 1939. Freedom from suffering through this understanding is apatheia, not apathy. Epictetus, in the Enchiridion and the discourses, puts it hardest: you may fetter my leg, but my will not even Zeus himself can overpower. Marcus recommends starting each day expecting interference, ingratitude and insolence. Seneca, in On Anger, argues anger is voluntary rather than reflexive, a four stage process of realization, indignation, condemnation and retribution.\n\nLowered expectations are not the destination, though. The host argues the real prize is acceptance. The Stoics were compatibilists: Zeno and Chrysippus compared us to a dog tied to a moving cart, free only in how much we whine. A foot does not refuse to walk. Neither, eventually, does the host's stubborn bulldog Charlie. Say not \"I have lost it\" but \"I have given it back.\" Against the Epicureans, virtue rather than pleasure is the target, and the episode closes with Marcus on the brotherhood of rational beings, pointing ahead to Stoic natural law.",
   "keyIdeas": [
     "Oikeiosis is the natural disposition assigned to each kind of creature; for humans it includes self-preservation but crucially also rationality, so acting on impulse alone means acting like an animal rather than fulfilling one's distinctly human nature.",
     "Only wisdom and virtue are intrinsically good; things like health, wealth, or reputation are 'indifferents' -- preferred or unpreferred, but not good or bad in themselves, since something like health only matters in relation to the character of the person who has it.",
@@ -9,10 +9,22 @@
     "Seneca argued anger is not an involuntary reflex like shivering at cold water, because it requires the mind to pass through several judgments (realization, indignation, condemnation, retribution), making it a voluntary process that reason can interrupt."
   ],
   "terms": [
-    { "term": "Oikeiosis", "def": "The natural disposition or orientation assigned to a creature by nature; for humans this centrally includes the capacity for reason." },
-    { "term": "Apatheia", "def": "A state free of suffering that comes from understanding which things are and aren't within one's control; not to be confused with modern 'apathy.'" },
-    { "term": "Indifferents (preferred/unpreferred)", "def": "External things like health, wealth, or reputation that are not intrinsically good or bad, only preferable or not, since only virtue and wisdom are truly good." },
-    { "term": "Compatibilism", "def": "The stoic view, stated directly in the episode ('the most important thing to take from their views on the matter is that they were compatibilists'), that determinism/fate and free will are compatible rather than mutually exclusive." }
+    {
+      "term": "Oikeiosis",
+      "def": "The natural disposition or orientation assigned to a creature by nature; for humans this centrally includes the capacity for reason."
+    },
+    {
+      "term": "Apatheia",
+      "def": "A state free of suffering that comes from understanding which things are and aren't within one's control; not to be confused with modern 'apathy.'"
+    },
+    {
+      "term": "Indifferents (preferred/unpreferred)",
+      "def": "External things like health, wealth, or reputation that are not intrinsically good or bad, only preferable or not, since only virtue and wisdom are truly good."
+    },
+    {
+      "term": "Compatibilism",
+      "def": "The stoic view, stated directly in the episode ('the most important thing to take from their views on the matter is that they were compatibilists'), that determinism/fate and free will are compatible rather than mutually exclusive."
+    }
   ],
   "anchors": [
     "the Romans ended up really taking a liking to the stoic school.",

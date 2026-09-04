@@ -1,6 +1,6 @@
 {
   "id": 13,
-  "argument": "Skepticism emerged by pressing on a weak point in stoic epistemology: the stoics believed certain knowledge was possible through 'cognitive impressions' so clear they seemed self-evidently true, but Pyrrho and later Arkesilaos argued that any such impression is, in principle, indistinguishable from a false one that would feel exactly the same. Pyrrho concluded we should suspend judgment on everything to reach tranquility, a position later softened by Arkesilaos's Academic skepticism, which allowed acting on reasonable appearances without claiming certainty. The episode's deeper ethical payoff is that judgments, not events themselves, are what disturb us -- so withholding confident judgment about what's 'good' or 'bad' can itself be a path to peace of mind.",
+  "argument": "The Hellenistic Age handed ordinary people problems they could not fix. Cities burned, families were sold, empires changed hands overhead. Four schools answered the same question: how do you stay undisturbed when the world is beyond your control? Epicureans, Cynics, Stoics and Skeptics all aimed at ataraxia, freedom from disturbance, and Stephen West opens by walking through what each life looked like on the street. As an Epicurean you withdraw to a commune with friends. As a Cynic you live in a tub like Diogenes, treating status as an imposed convention. As a Stoic you rehearse each morning the inconsiderate people you will meet, then go serve in the senate anyway. The Skeptic option comes last, and the host calls it the hardest to actually live and the one that changed philosophy most.\n\nSkepticism found its foothold in Stoic epistemology. Zeno taught that with his hand: open palm for perception, fingers curled for assent, closed fist for comprehension. A car alarm wakes you at night. Hearing it is an impression. Deciding it is a car alarm is assent. Going outside, finding the engine compartment, touching the metal, that yields a cognitive impression, one so clear it seems it could not be false. The Stoics said suspend judgment until you get there. Hence the story of Severus, a follower of Zeno, assuring King Ptolemy that a wise man never goes on opinion alone, then biting into the wax pomegranates the king had prepared for exactly that moment.\n\nThe Skeptics accepted the demand and denied the payoff. Every cognitive impression, they said, is indistinguishable from some false one. That is your car in the parking lot, same spot, same air freshener, same \"Wash me\" in the dust, and still you cannot rule out an elaborate replica. Pyrrho, who died in 270 BC and wrote nothing, is known through his disciple Timon and through legends: surgery endured without a flinch, a friend left in a hole, a man saved from oncoming wagons who lived to 90. He had travelled east as a soldier under Alexander and may have borrowed from the naked philosophers of India, and behind him stand Parmenides and Democritus, \"by convention sweet, by convention bitter, but in reality atoms and void.\"\n\nThe practical point is that negative feelings come from negative judgments, and you cannot prove the judgment. The host offers Jack Whittaker, who won $319 million on Christmas morning in 2002 and later wished he had torn up the ticket, and his own teenage misery over a lost grocery store interview, at the second store he was hired and met his future wife.\n\nThen the obvious objection: how can you be certain nothing is certain? Arkesilaos, taking over Plato's Academy some 75 years after Plato's death in 347 BC, conceded that a skeptic lives by how things seem. You run from the tiger without testing the fur. That concession split the school between the hardliners who became Pyrrhonists and the conciliatory Philo, with Carneades in between, famous for arguing justice brilliantly on Monday and against it on Tuesday. Their lasting job, the host suggests, was keeping the Stoics honest.",
   "keyIdeas": [
     "The stoics distinguished impression (raw sense data), assent (a voluntary belief about that impression), and cognitive impression (an impression so clear a wise person could rationally treat it as certain) -- visualized by Zeno's open-palm-to-closed-fist hand gesture.",
     "Skeptics attacked the idea of a self-evidently 'cognitive' impression: no true impression can be guaranteed distinguishable from a false one that would feel identical, so nothing can be proven certain.",
@@ -9,11 +9,26 @@
     "Arkesilaos resolved this with a practical concession -- an ideal skeptic can suspend judgment about ultimate truth while still acting on what reasonably seems to be the case (e.g., fleeing a charging tiger) -- which split skepticism into Pyrrhonism (rejecting everything) and Academic Skepticism (acting on appearances)."
   ],
   "terms": [
-    { "term": "Ataraxia", "def": "Freedom from disturbance; the shared goal of the Hellenistic schools, sought here through suspending judgment." },
-    { "term": "Epoché", "def": "Pyrrho's practice of suspending judgment about everything, since certainty is unattainable." },
-    { "term": "Cognitive impression", "def": "The stoic notion of an impression so vivid and clear it is self-evidently true; the skeptics' main target." },
-    { "term": "Academic Skepticism", "def": "Arkesilaos's school, based at Plato's Academy, which suspended judgment on certainty but allowed acting on reasonable appearances." },
-    { "term": "Pyrrhonism", "def": "The die-hard branch of skepticism modeled on Pyrrho that rejected assenting to anything as true." }
+    {
+      "term": "Ataraxia",
+      "def": "Freedom from disturbance; the shared goal of the Hellenistic schools, sought here through suspending judgment."
+    },
+    {
+      "term": "Epoché",
+      "def": "Pyrrho's practice of suspending judgment about everything, since certainty is unattainable."
+    },
+    {
+      "term": "Cognitive impression",
+      "def": "The stoic notion of an impression so vivid and clear it is self-evidently true; the skeptics' main target."
+    },
+    {
+      "term": "Academic Skepticism",
+      "def": "Arkesilaos's school, based at Plato's Academy, which suspended judgment on certainty but allowed acting on reasonable appearances."
+    },
+    {
+      "term": "Pyrrhonism",
+      "def": "The die-hard branch of skepticism modeled on Pyrrho that rejected assenting to anything as true."
+    }
   ],
   "anchors": [
     "Zeno would be giving a lecture in the Painted Stoa, and he’d hold his hand out, palm completely open. And he’d say, this is perception.",
