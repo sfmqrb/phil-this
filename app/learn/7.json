@@ -1,6 +1,6 @@
 {
   "id": 7,
-  "argument": "Daoism, founded by the possibly-legendary Laozi and expanded by Zhuangzi, emerged from the same crumbling Zhou dynasty context as Confucianism, but reached the opposite conclusion: instead of returning to tradition and ritual, humans should shed civilization's distractions and align themselves with the Dao, the natural, uncategorizable way of the universe. Central to this is wu wei, or action through nonaction -- flowing around resistance rather than straining against it -- which Daoists apply to both personal life and government, arguing that the best government is one that barely governs at all.",
+  "argument": "For centuries before Daoism, China had watched dynasties rise and fall: the Xia, the Shang, and then the Zhou, which by the sixth century BC was coming apart. Kings had ruled by the Mandate of Heaven, a claim that needed no argument because heaven itself endorsed it. That claim was failing. According to the Book of Han, written around AD 100, as Zhou authority dwindled the court officials lost their posts and scattered, and each began teaching his own account of how people ought to be governed. Their competing answers became known as the One Hundred Schools of Thought. Stephen West draws the contrast with Thales, who turned to philosophy because Orphism did not satisfy his curiosity about the night sky. Chinese philosophy began out of necessity, which is why it opened not with metaphysics but with morality and the question of how best to live.\n\nA civilization in decline tends to split two ways, the host says. Either the old ideas are at fault and you need new ones, or people have simply drifted from ideas that were sound. Laozi and Confucius both took the second view. Confucius looked back to tradition, family and knowing one's role. Laozi looked back much further, past civilization itself, which he thought dehumanized people and turned the pursuit of progress into a sin against nature. \"Fame or one's own self, which does one love more?\" he asks in the Daodejing. He may never have existed. Legend has him riding west on an ox, stopped at the final outpost by a guard who begged him to write his wisdom down: 81 chapters, roughly 5,000 characters. Confucius, after meeting him, reportedly called him a dragon and said he would never understand him.\n\nThe Dao means path or road, and the host gives two readings of it. One is the balanced course nature follows, the one humans alone can stray from because they can reason. \"Dao gives birth to One. One gives birth to Two. Two give birth to Three. Three give birth to ten-thousand things.\" The other reading treats a road as an absence, the emptiness that gives everything around it its shape. Either way it resists description, which is the point of the opening line: the Dao that can be told is not the eternal Dao. From this follows wu wei, action through nonaction. Faced with a boulder blocking the path, you do not punch it. You become water, and in a few thousand years the boulder is sand. The host's mnemonic for all of it is Laozi as a lazy hippie.\n\nZhuangzi, who lived from 369 to 286 BC in the middle of the Warring States period, extended this in jokes, paradoxes and stories. Uniquely for his era, he wrote about being a happy individual rather than governing a state, and warned against chasing unlimited knowledge with a limited life. Both men concluded that the best government barely governs. Laozi likened ruling people to pulling fish from water and thought evil given nothing to oppose would fade, as the Joker would without a Gotham to disrupt. Zhuangzi went further, close to anarchism. Behind both sits yin and yang, older than Daoism itself, each holding the seed of the other. The host leaves the listener with a question: where do you sit on that spectrum, and is it where you sit when solving your own problems?",
   "keyIdeas": [
     "Like Confucius, Laozi believed civilization had gone wrong, but instead of Confucius's conservative return to tradition and ritual, Laozi wanted people to shed the distractions of civilization entirely and live closer to nature.",
     "The Dao is often interpreted as an absence, like the empty space of a road: it can't be classified or categorized, which is why the Daodejing opens by saying 'the Dao that can be told is not the eternal Dao' -- language's restrictive, categorizing nature can't capture it.",
@@ -9,10 +9,22 @@
     "The yin-yang symbol illustrates that opposites like good/evil or day/night are interdependent -- each side's significance comes from its relation to the other, and each contains a seed of its opposite."
   ],
   "terms": [
-    { "term": "Dao", "def": "Literally 'path' or 'road'; the natural, harmonious way the universe follows, which cannot be fully named or classified by language." },
-    { "term": "Wu wei", "def": "Nonaction, or action through nonaction; going with the flow of nature rather than straining against it." },
-    { "term": "Yin-yang", "def": "The interdependence of opposites; each side of a pair (like good and evil) gives the other its significance and contains a seed of the other within it." },
-    { "term": "Daodejing", "def": "The short, cryptically worded book of about 5,000 characters attributed to Laozi that founds Daoist philosophy." }
+    {
+      "term": "Dao",
+      "def": "Literally 'path' or 'road'; the natural, harmonious way the universe follows, which cannot be fully named or classified by language."
+    },
+    {
+      "term": "Wu wei",
+      "def": "Nonaction, or action through nonaction; going with the flow of nature rather than straining against it."
+    },
+    {
+      "term": "Yin-yang",
+      "def": "The interdependence of opposites; each side of a pair (like good and evil) gives the other its significance and contains a seed of the other within it."
+    },
+    {
+      "term": "Daodejing",
+      "def": "The short, cryptically worded book of about 5,000 characters attributed to Laozi that founds Daoist philosophy."
+    }
   ],
   "anchors": [
     "Both Laozi and Confucius were part of the camp of people that thought their people had lost their way as a civilization.",

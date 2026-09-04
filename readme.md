@@ -30,6 +30,16 @@ When the show posts a new transcript, one command builds everything for it: the 
 
 The summary and quiz are written by Claude, through the API when `ANTHROPIC_API_KEY` is set or the `claude` CLI otherwise. The script validates the data and stops if anything is off; review the diff, then commit and push to deploy. Run with `--help` for the other options (`--from-json`, `--skip-audio`, `--engine`).
 
+## Rewriting summaries
+
+The house style for episode summaries lives in `docs/summary-style.md`; both `add_episode.py` and `regenerate_summaries.py` send it to the model verbatim, so edit that file to change the voice. To redo the summaries of existing episodes with Claude Opus:
+
+```bash
+.venv-tts/bin/python regenerate_summaries.py 1-10 --preview   # read first
+.venv-tts/bin/python regenerate_summaries.py 1-10             # write app/learn/<id>.json
+.venv-tts/bin/python app/generate_audio.py --force --ids 1 2 3 4 5 6 7 8 9 10
+```
+
 ## Regenerating assets
 
 **Word clouds** (`app/wordclouds/<id>.png`), see the docstring in `app/generate_wordclouds.py`:

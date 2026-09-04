@@ -1,6 +1,6 @@
 {
   "id": 6,
-  "argument": "Aristotle broke decisively with his teacher Plato by locating truth in the physical, observable world rather than a transcendent realm of forms, making him an empiricist rather than a rationalist. This grounds his entire project: his four causes (material, formal, efficient, final) give a fuller account of why things exist than the Presocratics or Plato managed alone, his biological classification depends on observing function as much as physical form, and his system of logic (the syllogism) provides a formal method for turning premises gathered through observation into certain conclusions. Together these tools -- empirical observation, the four causes, and syllogistic logic -- formed the first systematic scientific method.",
+  "argument": "Aristotle came to Athens at seventeen, after his father died, and stayed twenty years in Plato's Academy. He inherited his teacher's central question: how can we recognize a tree as a tree when no two trees are alike? Plato's answer was the world of forms, a realm of perfect originals reachable only by reason. When Plato died and the Academy passed him over for Plato's nephew, who held more orthodox views, Aristotle left. Stephen West treats the departure as the best thing that ever happened to him, since it let him follow his own instincts at last. He tutored the thirteen-year-old Alexander of Macedon, later founded the Lyceum, and eventually was exiled from Athens for Macedonian sympathies. The host also takes on the ugly parts directly: Aristotle's defenses of slavery and of women's inferiority rested on bad biology, including the belief that semen supplied a baby's form and the mother only the matter.\n\nThe clearest picture of the split is Raphael's The School of Athens, where Plato points at the sky and Aristotle holds a hand flat above the ground. Plato was a rationalist and a mathematician, at home with perfect circles no eye has ever seen. Aristotle was an empiricist and a biologist, and biology is done by looking. So tree-y-ness, for him, is not a copy of something in heaven. It is the set of similarities running through every tree you have ever seen, assembled by your senses over a lifetime. The same goes for virtue. No baby is born knowing temperance. A kid learns it when his parents pry him off Angry Birds, or when his father says he only eats one cookie a day because things are good in moderation.\n\nThat commitment shapes Aristotle's account of existence. Greenness and smoothness do not float free; they exist only in some physical thing that is green or smooth. And asking what a thing is made of, the obsession of Thales and Democritus, gets you only a quarter of the way. Aristotle's four causes cover a bridge completely: the material is concrete and steel, the formal is the architect's design, the efficient is the construction crew, the final is getting people across the chasm. The final cause is teleology, and Aristotle refused to skip even a mealworm, quoting Heraclitus telling nervous visitors that there were gods even in his kitchen. Purpose is also what makes evaluation possible. A good ear is one that hears well.\n\nSorting animals meant repeating the same deductions until Aristotle noticed the pattern and wrote down the first formal system of logic, the Organon, whose title means \"the instrument.\" He preferred variables to examples; the famous \"Socrates is mortal\" syllogism actually comes from Sextus Empiricus. Pair deduction with induction and you get his scientific method, aimed not at facts but at causes. His taxonomy stood 1,500 years, his logic nearly two millennia. West closes on a walk, a discarded definition, and a question: what is beauty?",
   "keyIdeas": [
     "Where Plato believed truth is accessed through reason toward a transcendent world of forms, Aristotle believed truth is found on earth through the senses -- symbolized in Raphael's The School of Athens by Plato pointing up and Aristotle's hand held parallel to the ground.",
     "Aristotle rejected Plato's innate knowledge: our sense of 'tree-y-ness' (or any universal concept) is built up from the sum of our sensory experience, not remembered from a heavenly realm.",
@@ -9,11 +9,26 @@
     "Aristotle's scientific method combined inductive reasoning (using observed patterns to arrive at premises believed true) with deductive reasoning via the syllogism (transforming those premises into proven universal truths)."
   ],
   "terms": [
-    { "term": "Four causes", "def": "Aristotle's account of why anything exists: material, formal, efficient, and final cause." },
-    { "term": "Syllogism", "def": "Aristotle's formal system of logic in which a conclusion follows necessarily from two premises relating three terms, e.g. all A are B, B is C, therefore A is C." },
-    { "term": "Teleology", "def": "The study of the purpose or function (final cause) that natural things serve, central to how Aristotle classified living things." },
-    { "term": "Knowledge of the fact vs. knowledge of the reasoned fact", "def": "Aristotle's distinction between merely knowing that something is true (e.g. grass is green) and knowing why it is true, which requires reason and hypothesis, not just the senses." },
-    { "term": "Empiricism", "def": "The view that truth comes from sensory experience; the episode calls Aristotle 'an empiricist who was a biologist' and describes his 'empiricist viewpoint that truth is arrived at through the senses, not through reason.'" }
+    {
+      "term": "Four causes",
+      "def": "Aristotle's account of why anything exists: material, formal, efficient, and final cause."
+    },
+    {
+      "term": "Syllogism",
+      "def": "Aristotle's formal system of logic in which a conclusion follows necessarily from two premises relating three terms, e.g. all A are B, B is C, therefore A is C."
+    },
+    {
+      "term": "Teleology",
+      "def": "The study of the purpose or function (final cause) that natural things serve, central to how Aristotle classified living things."
+    },
+    {
+      "term": "Knowledge of the fact vs. knowledge of the reasoned fact",
+      "def": "Aristotle's distinction between merely knowing that something is true (e.g. grass is green) and knowing why it is true, which requires reason and hypothesis, not just the senses."
+    },
+    {
+      "term": "Empiricism",
+      "def": "The view that truth comes from sensory experience; the episode calls Aristotle 'an empiricist who was a biologist' and describes his 'empiricist viewpoint that truth is arrived at through the senses, not through reason.'"
+    }
   ],
   "anchors": [
     "Plato is pointing up towards the sky because he believed that the truth about the world around us can be found in his transcendent world of forms",

@@ -1,6 +1,6 @@
 {
   "id": 2,
-  "argument": "Pythagoras founded a religious commune around the idea that mathematical truths like the Pythagorean theorem were glimpses of eternal, divine law, distinguishing him from a modern cult leader in that he seems to have sincerely believed he was relaying sacred knowledge rather than pursuing money or power; his followers avoided meat because they believed in reincarnation of souls into animals, and sought to escape the punishing cycle of reincarnation by studying the eternal truths of math, music, and astronomy. Parmenides then upends this whole tradition with a purely deductive argument: because something cannot come from nothing, and things exist now, the universe must be eternal, and because change would require something to become what 'is not,' which cannot coherently be spoken of, change itself must be logically impossible, a conclusion he defends by insisting reason must always override the deceptive senses. Empedocles offers a compromise, agreeing the four elements themselves never change but arguing that their combining and separating, driven by the opposed forces of Love and Strife, produces the appearance of birth, death, and the ever-changing world we perceive.",
+  "argument": "Philosophy is a compound of two Greek words, philo, to love, and sophia, wisdom. The man credited with coining it opens this episode. Pythagoras, born on Samos in the sixth century BC, grew up next door to Miletus, where Thales and Anaximander had already asked what the world is fundamentally made of. He traveled to Egypt, came home fascinated by mathematics, and around the age of 40 gathered roughly 300 followers into a commune at Croton in southern Italy. Stephen West's shorthand for him is the crazed cult leader of Greek philosophy, though he adds a caveat: unlike modern cult leaders, Pythagoras seems to have genuinely believed he was relaying sacred information.\n\nTo feel why, the host asks you to imagine doing mathematics with no textbook and no physics behind you. You scratch a right triangle in the dirt, draw squares on its sides, count the units, and discover a rule that holds for every right triangle in the universe with no exceptions. That would feel like divine knowledge. The Pythagoreans concluded that number is the ruler of all forms. The story repeated in every source has Pythagoras listening to two blacksmiths, one anvil twice the size of the other, sounding the same note an octave apart. Harmony turned out to be simple ratios. Number governed sound. Two thousand years later, in 1865, John Newlands used the same octave relationship to arrange the chemical elements by weight, and the periodic table followed. Believing in the transmigration of souls, Pythagoreans ate no meat; Pythagoras claimed to have heard a dead friend's voice in a beaten dog's cry. The goal of life was to escape rebirth, and the method, borrowed from the mystery religion Orphism, was restriction and thought: math, music, astronomy. Understanding eternal truths was the nearest a person gets to immortality. They also insisted reason beats the senses, an idea that runs straight into Plato's theory of forms.\n\nThen comes the dark cloud. Parmenides, working in verse in the style of Homer and Hesiod, reported a chariot ride to a goddess who told him everyone before him was wrong. His argument: what is is, and what is not is not. Nothing comes from nothing, so the universe is eternal. And since we cannot speak of what is not, we cannot speak of change, which would require becoming what a thing is not. Change is impossible. So is motion. Reality is one unchanging sphere. Talking about a unicorn is just noise.\n\nNobody could swallow that, so successors patched it. Empedocles, a Pythagorean who dressed in a purple robe and bronze shoes and called himself a god, kept the eternal substance and made it four: earth, air, fire, water, mixed like a painter's pigments by love and pulled apart by strife. Forces acting on matter was the genuinely new idea. He even sketched something like natural selection. He also, legend says, jumped into a volcano to prove his immortality. Aristotle endorsed his elements anyway, and they held until the eighteenth century. West closes with Pythagoras's question: is there anything you would do for free, indefinitely?",
   "keyIdeas": [
     "West distinguishes Pythagoras from a modern cult leader by arguing that his extreme social skill combined with mathematical proofs that felt like glimpses of divine truth made it plausible his roughly 300 followers believed he was relaying sacred knowledge, not chasing money or power.",
     "The Pythagorean theorem felt like magic or God-given wisdom because realizing a single formula held true without exception for every right triangle felt like touching an eternal law of the universe, especially without centuries of accumulated math texts to draw on.",
@@ -9,11 +9,26 @@
     "Empedocles compromised with Parmenides by agreeing the four elements (earth, water, fire, air) themselves never change, while arguing their combining and separating, driven by the opposed forces of Love and Strife, produces the appearance of birth, death, and the ever-changing world we perceive."
   ],
   "terms": [
-    { "term": "Transmigration of souls", "def": "The Orphic-influenced Pythagorean belief that souls of the dead could be reincarnated into animals, underlying their prohibition on eating meat." },
-    { "term": "Monism (Pythagorean)", "def": "The Pythagorean view that number is the ruler of all forms, with mathematical ratios explaining phenomena like musical harmony." },
-    { "term": "Deductive reasoning (Parmenides)", "def": "Reasoning from a starting premise to a necessary conclusion; Parmenides is credited as the first to bring rigorous deduction to philosophy." },
-    { "term": "'What is is, and what is not is not'", "def": "Parmenides' foundational premise, used to argue that something cannot come from nothing and that change is incoherent." },
-    { "term": "Love and Strife", "def": "Empedocles' two opposed cosmic forces: Love combines elements into things and draws people together, Strife breaks elements apart and drives people apart." }
+    {
+      "term": "Transmigration of souls",
+      "def": "The Orphic-influenced Pythagorean belief that souls of the dead could be reincarnated into animals, underlying their prohibition on eating meat."
+    },
+    {
+      "term": "Monism (Pythagorean)",
+      "def": "The Pythagorean view that number is the ruler of all forms, with mathematical ratios explaining phenomena like musical harmony."
+    },
+    {
+      "term": "Deductive reasoning (Parmenides)",
+      "def": "Reasoning from a starting premise to a necessary conclusion; Parmenides is credited as the first to bring rigorous deduction to philosophy."
+    },
+    {
+      "term": "'What is is, and what is not is not'",
+      "def": "Parmenides' foundational premise, used to argue that something cannot come from nothing and that change is incoherent."
+    },
+    {
+      "term": "Love and Strife",
+      "def": "Empedocles' two opposed cosmic forces: Love combines elements into things and draws people together, Strife breaks elements apart and drives people apart."
+    }
   ],
   "anchors": [
     "The difference between Pythagoras and what we think of as a modern cult leader is that these modern cult leaders start these things up so they can have money, power, or influence over people. It’s not crazy to think that Pythagoras actually thought of himself as relaying some sacred information.",

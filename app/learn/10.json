@@ -1,6 +1,6 @@
 {
   "id": 10,
-  "argument": "Epicurus built a complete philosophy aimed at ataraxia, freedom from pain and mental disturbance, resting on a materialist metaphysics (atoms and void, refined with the 'swerve' to preserve free will against Democritus's determinism) and an empiricist epistemology in which the senses never lie but the mind can misjudge them. From this foundation he argued that pleasure is the goal of life, but that static pleasure (the tranquil absence of pain and desire) is superior to fleeting kinetic pleasure, and that the greatest sources of mental disturbance -- fear of the gods and fear of death -- can be rationally dissolved. Friendship, lived communally, was essential both for its own pleasures and for keeping people honest with themselves.",
+  "argument": "In the second century AD a rich man named Diogenes paid to have a wall built onto the stoa in the middle of his town of Oenoanda and carved 25,000 words into it, about 260 square meters of text. The words were not his own. They were the philosophy of Epicurus, dead almost 500 years. In a prologue Diogenes explained that he had been troubled in his youth, that Epicurus had given him a tranquility he did not know was possible, and that he built the wall \"to help also those who come after us.\" He could have found the lost few and spoken to them himself. He built a wall instead, because he thought most people were lost.\n\nStephen West sets Epicurus in the wreckage after Alexander the Great died suddenly in 323 BC without naming a successor, with Aristotle following a year later. The largest empire yet known was up for grabs. Warlords rode into towns and announced they were king, then two weeks later someone else did. Uncertainty breeds fear, and philosophy followed the mood: away from Plato's world of forms, which offered nothing to a person just sold into slavery, and back toward Socrates and the question of how to live. Four schools competed in this Hellenistic age: Stoicism, Epicureanism, Skepticism, and later Cynicism.\n\nEpicurus was born in 341 BC, seven years after Plato died, to poor parents on a minor island colony. Like Siddhartha Gautama in his palace, he saw one extreme early and was inoculated against the usual delusions about what people lack. Taught by students of both Plato and Democritus, he chose Democritus: atoms and void, all the way down. But he added weight, so atoms fall, which answers Aristotle's question of what started them moving. And he added the swerve, a small random deviation, because Democritus's universe was fully determined and Epicurus refused to be a passenger in his own body. Without some free will, nobody can be held accountable and morality collapses. Lucretius later put it in verse in De rerum natura.\n\nThe physics exists to serve the therapy. Epicurus was an empiricist: the senses never lie outright, the mind misreads them. A tower looks round at half a mile and square up close, and Principal Doctrine 23 warns that if you reject all sensation you keep no standard to judge by. The same error corrupts happiness. Kinetic pleasure is satisfying a want, the half gallon of ice cream when hungry. Static pleasure is the settled absence of pain that follows, and it is the real goal. A $20 jacket keeps you as warm as a $3,000 one. Offering ice cream to a person with a broken leg shows what most pleasure-seeking amounts to.\n\nWhat remains is fear, so the Tetrapharmakos: gods hold no fear, death no worries, good is easily attained, pain can be endured. In the Garden, open to women and slaves, friendship did the work meditation does in Buddhism. Later readers mistook all this for gluttony, and academics still argue whether his altruism is genuine or merely prudent. West leaves the listener with Stoicism next, and one question: do you believe in fate?",
   "keyIdeas": [
     "Epicurus believed determinism, if true, would make morality pointless, since no one could be held accountable for actions that were just atoms colliding according to fixed laws -- so he added the 'swerve,' a random deviation in atomic motion, to preserve some free will.",
     "The senses themselves never lie; they are purely mechanical transmitters of atoms. Error creeps in only when the mind misjudges what the sensory signal means, as with a tower that looks round from far away and square up close.",
@@ -9,11 +9,26 @@
     "Friends act as an objective, honest check against self-delusion, and Epicurus compared philosophy itself to medicine: worthless if it doesn't relieve psychological suffering, just as medicine is worthless if it doesn't treat bodily disease."
   ],
   "terms": [
-    { "term": "Ataraxia", "def": "Tranquility, or complete freedom from pain and mental disturbance; the ultimate goal of Epicurean philosophy." },
-    { "term": "The swerve", "def": "Epicurus's idea that atoms randomly deviate slightly from their path at unpredictable times, explaining both the original collisions of atoms and preserving a degree of free will against strict determinism." },
-    { "term": "Kinetic pleasure", "def": "Moving pleasure experienced while actively satisfying a desire, such as eating when hungry." },
-    { "term": "Static pleasure", "def": "The tranquil state of satisfaction once a desire has been fulfilled and pain has been removed; the superior, higher form of pleasure." },
-    { "term": "Tetrapharmakos", "def": "Epicurus's four-fold remedy for a happy life: God holds no fear, death holds no worries, good can easily be attained, and evil (pain) can be endured." }
+    {
+      "term": "Ataraxia",
+      "def": "Tranquility, or complete freedom from pain and mental disturbance; the ultimate goal of Epicurean philosophy."
+    },
+    {
+      "term": "The swerve",
+      "def": "Epicurus's idea that atoms randomly deviate slightly from their path at unpredictable times, explaining both the original collisions of atoms and preserving a degree of free will against strict determinism."
+    },
+    {
+      "term": "Kinetic pleasure",
+      "def": "Moving pleasure experienced while actively satisfying a desire, such as eating when hungry."
+    },
+    {
+      "term": "Static pleasure",
+      "def": "The tranquil state of satisfaction once a desire has been fulfilled and pain has been removed; the superior, higher form of pleasure."
+    },
+    {
+      "term": "Tetrapharmakos",
+      "def": "Epicurus's four-fold remedy for a happy life: God holds no fear, death holds no worries, good can easily be attained, and evil (pain) can be endured."
+    }
   ],
   "anchors": [
     "Because as far as he saw it, most people were lost.",

@@ -1,6 +1,6 @@
 {
   "id": 1,
-  "argument": "Philosophy became possible only once early human groups settled in resource-abundant places, freeing brainpower that had gone toward pure survival for art, science, and philosophy instead, which is why Western philosophy first arose in the closely clustered city-states of Greece and Italy. The first Presocratics were monists who each proposed a single fundamental substance or principle behind everything: Thales argued for water based on its versatility and capacity for change, Heraclitus argued that everything is in constant flux governed by a unifying logos of battling opposites, and Democritus and Leucippus proposed indivisible atoms moving through void. Atomism specifically solved two outstanding problems, Zeno's paradox of infinite divisibility and Parmenides' claim that change is impossible, by positing that atoms themselves never change while their configurations do, and by trusting reason over the senses to reach conclusions invisible to the naked eye.",
+  "argument": "Philosophy needed a surplus before it could ask questions. Stephen West opens the series with human migration: out of Africa, north to the Fertile Crescent, then a fork, one branch heading west toward Greece and Italy. His claim is that no group of people was cleverer than another. What differed was how much of that cleverness had to go toward finding food and water and not being eaten. Where resources were abundant and a settlement had walls, brainpower was left over for art, government and philosophy. Around 620 BC, on the Ionian coast of what is now Turkey and Greece, that surplus produced the thinkers we call Presocratics. The label was coined only in the early 1900s, after Socrates, born 469 BC, changed which questions got asked and who was allowed to ask them. The host notes the term is contested, since it implies inferiority, and keeps it only as a filing system.\n\nThe world Thales inherited explained itself through gods. Hesiod's Theogony, from the 7th century BC, was required reading, and it blamed high winds at sea on the monster Typhoeus. That was the whole available account of nature. Thales looked at the same rocks and birds and asked whether there might be a rational explanation instead. He was rich, well travelled, versed in geometry and astronomy learned in Egypt, and famous for buying up every olive press in Miletus one season after noticing that rainfall, not divine favor, predicted a harvest. He said he only did it to show how easy getting rich was. His claim to fame: everything is water, somewhere between ice, liquid and steam. Water sustains life, takes any shape, moves, changes. He also thought magnets were alive, though the host suspects \"alive\" then just meant \"not yet explained.\" The view that one substance underlies everything is monism, and the Presocratics mostly agreed on it. They fought about which substance.\n\nThales taught Anaximander, who taught Anaximenes, the three crown jewels of the Milesian school. Anaximander decided the first humans grew inside fish, since defenseless infants could not have survived otherwise, which the host declines to call proto-Darwinism. Heraclitus broke the pattern. Antisocial, contemptuous, writing in deliberate riddles, he refused an invitation from Darius I of Persia and told citizens begging him to write their laws to leave him alone. His universe is governed by logos and held together by battling opposites. Day and night are one thing. Hot gives cold its meaning, hunger gives fullness its meaning. Nothing keeps its identity, because you cannot step into the same river twice.\n\nDemocritus and his teacher Leucippus finished the arc. To defeat Zeno's paradox of infinite halved distances, and Parmenides' argument that change is impossible, they proposed particles too small to cut, moving through void. By convention sweet, by convention bitter, but in reality atoms and void. Plato wanted his books burned. Epicurus and Lucretius kept it alive, then Christian thought buried it until Galileo, Boyle and Locke. West leaves listeners with the obvious question about their own certainties.",
   "keyIdeas": [
     "Whether an early human group developed art, science, and philosophy depended on settling somewhere with enough resources that survival took less mental effort, freeing brainpower for other pursuits, illustrated by the contrast between the constantly-on-the-run group and the walled, secure city of Woodbury.",
     "The label 'Presocratic' is often justified by claiming Presocratics dealt only with metaphysics while Socrates covered epistemology, but West argues this misrepresents them since Presocratics did address questions of knowledge too, just less than Socrates.",
@@ -9,11 +9,26 @@
     "Democritus and Leucippus's atomism solved Zeno's paradox by proposing an indivisible smallest particle, and reconciled with Parmenides by arguing atoms themselves never change while the configuration of atoms making up an object does, explaining apparent change without violating 'something cannot come from nothing.'"
   ],
   "terms": [
-    { "term": "Presocratic", "def": "Term for philosophers before Socrates, sometimes criticized as implying they only addressed metaphysics rather than epistemology." },
-    { "term": "Monism", "def": "The metaphysical view that everything is made up of a single, fundamental substance, such as Thales's water." },
-    { "term": "Logos", "def": "Heraclitus's term for the universal cosmic law governing all things, including the constant flux of opposites." },
-    { "term": "Atomism", "def": "Democritus and Leucippus's theory that everything consists of indivisible atoms moving through empty space (void)." },
-    { "term": "True-born knowledge / bastard knowledge", "def": "Democritus's distinction between knowledge gained through reason (true-born) versus knowledge gained through the deceptive senses (bastard)." }
+    {
+      "term": "Presocratic",
+      "def": "Term for philosophers before Socrates, sometimes criticized as implying they only addressed metaphysics rather than epistemology."
+    },
+    {
+      "term": "Monism",
+      "def": "The metaphysical view that everything is made up of a single, fundamental substance, such as Thales's water."
+    },
+    {
+      "term": "Logos",
+      "def": "Heraclitus's term for the universal cosmic law governing all things, including the constant flux of opposites."
+    },
+    {
+      "term": "Atomism",
+      "def": "Democritus and Leucippus's theory that everything consists of indivisible atoms moving through empty space (void)."
+    },
+    {
+      "term": "True-born knowledge / bastard knowledge",
+      "def": "Democritus's distinction between knowledge gained through reason (true-born) versus knowledge gained through the deceptive senses (bastard)."
+    }
   ],
   "anchors": [
     "If you don’t need to worry about where your next meal is going to come from or whether a pack of wolves is going to steal your baby in the middle of the night, you can focus on other things, like art, science, government, and philosophy",

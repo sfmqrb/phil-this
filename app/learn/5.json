@@ -1,6 +1,6 @@
 {
   "id": 5,
-  "argument": "Aristotle argues that a well-lived life requires a structured plan aimed at a single ultimate end goal, living well or happiness (eudaimonia), which is self-sufficient and pursued for its own sake rather than as a means to anything further. Achieving it requires acquiring the 'real goods' — bodily goods, external goods, and goods of the soul — that fulfill our shared natural desires, and requires actively practicing virtues like temperance and courage until they become habitual second nature, though even a virtuous person's flourishing can still be thwarted by luck.",
+  "argument": "Aristotle was born in 384 BC, fifteen years after Athens put Socrates on trial and executed him. When he came to the city and enrolled at Plato's Academy, he studied under a man still shaped by that loss, and he would have heard Socrates' famous line many times: the unexamined life is not worth living. Aristotle's reply, as Stephen West puts it, goes one better. An unplanned life is not worth examining. Examination is fine, but examine it against what? You need to know what you are trying to do, why, and how you intend to get there.\n\nThe host builds this out of ordinary experience. Teenagers make plans a week deep. Older people watch their posture. Getting good at anything means doing more and more of it on purpose. His example is a YouTube recommendation he resented: Gordon Ramsay cooking scrambled eggs. West had made eggs every morning for a year and a half. Ramsay puts the butter on top of the eggs, seasons at the end because salt turns them watery and dreadful, whisks in the pan, and moves it on the heat, off the heat, like a fine risotto. Years of practice against mindless routine. Aristotle wanted that difference applied to a life. Everything is either an end or a means, and as the Nicomachean Ethics says in book three, we deliberate not about ends but about means. Happiness is the end nobody can explain the point of, so it sits at the top.\n\nBut wanting something does not make it good for you. Aristotle separates natural desires, the needs every human is born with, from acquired desires, the wants your particular life gave you. The double bacon cheeseburger looks good at noon and looks like a mistake later. Only what satisfies natural desire counts as a real good, and because those needs are shared, what is truly good for one person is truly good for everyone. The list runs three ways: bodily goods, vigor, vitality, health and pleasure; external goods, meaning food, drink, clothing, sleep and shelter, which he calls wealth; and goods of the soul, knowledge, friendship, self-esteem and honor. Honor has to be earned, though. The person waiting with a phone drawn, hoping to go viral for nothing, is chasing a vice.\n\nGetting these takes habit. Leave the banana peel on the passenger seat once and it is easier to leave it again. Pull into the McDonald's drive-thru once and tomorrow's turn is smoother. Virtue is trained the same way, chiefly through temperance and through courage, which Aristotle stretches to cover any hard book or hard workout. Luck still governs the outcome: famine, cancer, or two identically careless drivers, one of whom hits a tree and one of whom hits a mother and child. Hence justice, distributive and corrective.\n\nVirtue must be exercised, not merely possessed. Olympians only win if they compete. We are what we repeatedly do. West leaves the listener with a question: write tonight's obituary, and see what your actions say your values were.",
   "keyIdeas": [
     "Aristotle claims a well-lived life requires a structured hierarchy of goals with one ultimate goal at the top, not just a scattering of unconnected priorities — we deliberate about means to reach given ends, not about the ends themselves.",
     "Eudaimonia (living well/happiness) is the ultimate end of all human action because it is self-sufficient — no one can give a further reason for wanting it, unlike every subordinate good, which is always pursued as a means toward something else.",
@@ -9,12 +9,30 @@
     "Virtue is a matter of habituation, not innate knowledge or a single correct choice — a trained disposition built through repeated action, captured in Aristotle's line 'we are what we repeatedly do'; and it must be actively exercised, not merely possessed, since even a virtuous person's happiness can be thwarted by luck."
   ],
   "terms": [
-    { "term": "Eudaimonia", "def": "Aristotle's term for living well or flourishing, the ultimate self-sufficient end goal of all human action, often translated as 'happiness.'" },
-    { "term": "Apparent good", "def": "The object of appetite or desire — what merely seems good to a person in the moment, as opposed to what is actually good for them." },
-    { "term": "Real good", "def": "The object of rational wish — what is actually good for human nature, as distinct from the apparent good that is merely desired." },
-    { "term": "Real goods", "def": "Aristotle's three categories of goods required for eudaimonia: bodily goods, external goods, and goods of the soul." },
-    { "term": "Temperance and courage", "def": "Aristotle's two primary moral virtues: temperance is moderation, avoiding excess; courage is enduring temporary discomfort or pain to achieve a higher good, extending beyond battlefield bravery." },
-    { "term": "Tyche (luck)", "def": "The role of chance and external circumstance beyond a person's control that can still thwart even a virtuous person's flourishing." }
+    {
+      "term": "Eudaimonia",
+      "def": "Aristotle's term for living well or flourishing, the ultimate self-sufficient end goal of all human action, often translated as 'happiness.'"
+    },
+    {
+      "term": "Apparent good",
+      "def": "The object of appetite or desire — what merely seems good to a person in the moment, as opposed to what is actually good for them."
+    },
+    {
+      "term": "Real good",
+      "def": "The object of rational wish — what is actually good for human nature, as distinct from the apparent good that is merely desired."
+    },
+    {
+      "term": "Real goods",
+      "def": "Aristotle's three categories of goods required for eudaimonia: bodily goods, external goods, and goods of the soul."
+    },
+    {
+      "term": "Temperance and courage",
+      "def": "Aristotle's two primary moral virtues: temperance is moderation, avoiding excess; courage is enduring temporary discomfort or pain to achieve a higher good, extending beyond battlefield bravery."
+    },
+    {
+      "term": "Tyche (luck)",
+      "def": "The role of chance and external circumstance beyond a person's control that can still thwart even a virtuous person's flourishing."
+    }
   ],
   "anchors": [
     "there’s only one fully correct plan for life",

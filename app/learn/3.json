@@ -1,6 +1,6 @@
 {
   "id": 3,
-  "argument": "In fifth-century Athens, the demand for courtroom persuasion gave rise to the sophists, itinerant teachers who charged money to teach rhetoric and argument-winning tactics rather than truth, and who often embraced relativism — the view, epitomized by Protagoras, that no belief is more objectively right than another. Socrates emerged from this same environment but broke sharply from it: he pursued truth and virtue through relentless questioning (the Socratic method), rejected relativism as self-undermining, believed all wrongdoing stemmed from ignorance rather than malice, and ultimately chose to die rather than compromise his principles — the decisive difference between him and the sophists he was often mistaken for.",
+  "argument": "Athens in the fifth century BC was living through a golden age, the kind people rarely notice while it is happening. Pericles was in charge, the city was rich, and Greeks from the surrounding city-states poured in. It was also a democracy in love with its own legal system. Athenians enjoyed a good argument and enjoyed being entertained, and the courthouse offered both. This mattered practically: a trial could decide the shape of your life, and rising in government meant speaking well in public. But language and critical thinking were still young arts, and most people had no idea how to defend themselves. That gap created a market, and the market created the sophists.\n\nThe sophists were traveling teachers who would teach anything for the right price: music, rhetoric, grammar, mathematics. Stephen West calls them a cross between ITT Tech and a taco truck. Customers wanted to win in court, so what they got was how to win: nitpicking small points, discrediting the source, making the weaker argument beat the stronger. Gorgias knew exactly what he was selling. In his Encomium of Helen, essentially a flyer for his school, he wrote that words act like drugs on the body, some causing pain, others joy, some bewitching the soul with evil persuasion. Protagoras pushed further. If a worse argument can win when the speaker is more persuasive, then the measure of an argument is the person holding it. \"Man is the measure of all things.\" What is hot for one is cold for another, and nothing is good in itself. That is relativism, and it invites an obvious question: if everyone is right, how can anyone be wiser, and why pay a sophist at all?\n\nSocrates was the answer Athens got. He was famously unwashed, barefoot and unlovely, and in a joke beauty contest against Critobulus he argued that his bulging eyes were finer because they saw sideways too. He lost, but he had done the real work: he made Critobulus notice he could not say what beauty was. Socrates wrote nothing. Philosophy, to him, was questioning. After the Oracle at Delphi called him the wisest man alive, he went out to test it and found that reputed experts only thought they knew things. \"I do not think I know what I do not know.\" He called himself a midwife for other people's ideas. Cicero later said he called philosophy down from heaven and set it in the cities and homes, asking about life and customs and things good and evil.\n\nThat questioning made enemies, and the timing was bad. Sparta had won the Peloponnesian War, the Thirty Tyrants had seized Athens in 404 BC, and democracy was only two years old again when Socrates, aged 70, was tried for corrupting the young and denying the gods of the state. Aristophanes had already made him a buffoon in Clouds, and the crowd assumed he was just another sophist. He refused to grovel. He argued badly on purpose, told the jury they should thank him, and proposed free meals for life as his punishment. More people voted for death than had voted him guilty. He drank hemlock, holding that no one knows whether death is a blessing, and that the unexamined life is not worth living.\n\nPlato recorded the trial in the Apology, and Plato, along with Xenophon, Aristophanes and Aristotle, is most of what we have. The sophists left their mark by provoking Plato to ground morality in something firmer than one man's opinion. Socrates left his method, later called inductive argument, which Aristotle used and Francis Bacon folded into the scientific method. West ends where Socrates did, with a question for the listener: is there anything you believe deeply enough to die for?",
   "keyIdeas": [
     "The sophists were itinerant teacher-entrepreneurs who arose to meet Athenian demand for courtroom persuasion and social advancement, charging money to teach rhetoric and argument-winning tactics rather than truth or wisdom.",
     "Protagoras's relativism ('man is the measure of all things') held that the worth of a belief is set by the person holding it, not by objective facts, extending this from perception to morality itself — nothing is inherently good, only judged good by a person or society.",
@@ -9,11 +9,26 @@
     "Socrates held that no one does evil willingly, since full knowledge of evil's true nature would make it psychologically intolerable to pursue; the classic objection to this is akrasia — cases like an addict who knows the correct choice but still acts against it."
   ],
   "terms": [
-    { "term": "Sophists", "def": "Itinerant teacher-entrepreneurs in ancient Athens who charged money to teach rhetoric, argument, and other practical subjects, often prioritizing winning arguments over teaching truth." },
-    { "term": "Relativism", "def": "The view, associated with Protagoras, that there are no absolute truths or moral principles and that everything, including morality, is subjective to the person or society judging it." },
-    { "term": "Socratic method / elenchus", "def": "Socrates's technique of questioning someone's definition of a concept until contradictions in it are revealed, showing they didn't actually know what they thought they knew." },
-    { "term": "Inductive argument", "def": "A method, associated with the Socratic method, where a set of premises based on experience is established and then shown to lead to a universal truth; later influential on Aristotle and the scientific method." },
-    { "term": "Akrasia", "def": "The phenomenon of knowingly acting against one's own better judgment, cited as the classic objection to Socrates's claim that no one does evil willingly." }
+    {
+      "term": "Sophists",
+      "def": "Itinerant teacher-entrepreneurs in ancient Athens who charged money to teach rhetoric, argument, and other practical subjects, often prioritizing winning arguments over teaching truth."
+    },
+    {
+      "term": "Relativism",
+      "def": "The view, associated with Protagoras, that there are no absolute truths or moral principles and that everything, including morality, is subjective to the person or society judging it."
+    },
+    {
+      "term": "Socratic method / elenchus",
+      "def": "Socrates's technique of questioning someone's definition of a concept until contradictions in it are revealed, showing they didn't actually know what they thought they knew."
+    },
+    {
+      "term": "Inductive argument",
+      "def": "A method, associated with the Socratic method, where a set of premises based on experience is established and then shown to lead to a universal truth; later influential on Aristotle and the scientific method."
+    },
+    {
+      "term": "Akrasia",
+      "def": "The phenomenon of knowingly acting against one's own better judgment, cited as the classic objection to Socrates's claim that no one does evil willingly."
+    }
   ],
   "anchors": [
     "Just as different drugs draw forth different humors from the body—some putting a stop to disease, others to life—so too with words: some cause pain, others joy, some strike fear, some stir the audience to boldness",

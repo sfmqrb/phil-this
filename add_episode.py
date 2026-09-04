@@ -180,12 +180,21 @@ def example_block() -> str:
     return f"episode {ex_id}:\n" + json.dumps(sample, indent=2, ensure_ascii=False)
 
 
+def summary_brief() -> str:
+    """docs/summary-style.md below its divider: the instructions for the summary."""
+    path = ROOT / "docs" / "summary-style.md"
+    if not path.exists():
+        return "One paragraph of 130-200 words reconstructing the episode's argument in order."
+    text = path.read_text(encoding="utf-8")
+    return text.split("\n---\n", 1)[1].strip() if "\n---\n" in text else text.strip()
+
+
 def build_prompt(episode: int, title: str, transcript: str) -> tuple[str, str]:
     system = f"""You write study material for Philosophitor, a companion site to the podcast Philosophize This! by Stephen West. Given one episode's transcript you produce a JSON object with these fields:
 
 - "title": "<Thinker or work>: <the episode's angle>", e.g. "Shakespeare: Hamlet and the Knowledge That Kills Action". Title case, no episode number.
 - "teaser": one sentence, under 30 words, that says what the episode argues, not what it "explores".
-- "argument": one paragraph of 130-200 words reconstructing the episode's argument in order: the question it opens with, the moves it makes, where it lands. Name the thinkers. Plain prose, no bullet points, no "the episode explores".
+- "argument": the episode summary. Follow the house brief quoted at the end of these instructions exactly (it asks for about 450 words in four or five paragraphs).
 - "keyIdeas": 5 to 7 items, each one complete sentence (occasionally two) stating a claim the episode makes, specific enough to be wrong.
 - "terms": 4 to 6 items, "term" is a name or concept from the episode, "def" is one sentence explaining it as the episode uses it.
 - "questions": exactly {QUESTIONS} multiple-choice questions that test whether the listener understood the argument, not trivia. Each has:
@@ -197,7 +206,10 @@ def build_prompt(episode: int, title: str, transcript: str) -> tuple[str, str]:
 
 Write with a light touch, in the register of a sharp friend who listened carefully. Avoid the words "delve", "explore", "nuanced", "tapestry". Use straight quotes inside strings and no em dashes. Output only the JSON object.
 
-Here is a trimmed example of the expected shape and voice, from {example_block()}"""
+Here is a trimmed example of the expected shape and voice, from {example_block()}
+
+HOUSE BRIEF FOR "argument":
+{summary_brief()}"""
     user = f"Episode {episode}: {title or 'title unknown'}\n\nTRANSCRIPT:\n\n{transcript}"
     return system, user
 

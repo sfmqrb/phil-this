@@ -1,6 +1,6 @@
 {
   "id": 4,
-  "argument": "Plato held that the changing, physical things we perceive are only imperfect copies of eternal, non-physical Forms, and that true knowledge comes from reason recollecting what the soul already knew of those Forms rather than from the senses. He extended this same logic to ethics and politics, arguing that a just soul and a just city both require reason to govern lower impulses, and that only philosophers who have grasped the Form of the Good are fit to rule.",
+  "argument": "Plato was about twenty-eight when Athens killed his teacher. In 399 BC he watched Socrates tried, convicted and executed by a city still raw from defeat in the Peloponnesian War, and he never forgave it. He left for roughly twelve years, studying with Eukleides, with Theodorus, with the Pythagoreans, perhaps as far as Egypt. Some sources say he was captured and sold into slavery before friends bought him back. Whatever ended the trip, in 387 BC he returned and founded the Academy, a school that ran in some form for nearly 900 years and gave us the word \"academic.\" Its purpose was double: preserve Socrates, and produce more philosophers. Not the sort who collects a fact from under a Snapple cap and repeats it all day. Stephen West notes that Plato wanted people who chase wisdom itself, not the spectacle of knowing things.\n\nPlato wrote 27 treatises, and he wrote them as drama. Real Athenians, real names, conversations that never happened, sometimes between people who never overlapped in life. The host compares it to crossover fan fiction. Whenever a scene needed a wise man, Plato cast Socrates, deliberately typecasting his friend into permanent wisdom, which is why it is now hard to say where Socrates ends and Plato begins. In the Symposium, a drinking party where guests take turns defining love, Aristophanes offers the myth of the original humans: four arms, four legs, two faces, split in half by Zeus, forever seeking the missing piece. Socrates disagrees. We love what is beautiful, and because we cannot live forever we seek immortality through children, through fame, or through work that outlasts us. Love then climbs a staircase: one body, all bodies, the soul, laws and ideas, and finally beauty itself, which is eternal, cannot leave you, and cannot love you back.\n\nThat staircase leads to the theory of forms. Every tree differs, yet we recognize tree-y-ness, so Plato posits a perfect form of the tree, and of justice, and of everything else, in a realm reachable only by reason. Hence the Allegory of the Cave in the Republic: prisoners chained since childhood, a fire behind them, shadows of carried objects on the wall, and the freed prisoner whose eyes hurt in the light. Our senses give shadows. If asked how anyone could recognize a true form, Plato answers that the soul lived among them before birth, so learning is recollection, demonstrated when Socrates walks a slave boy through geometry in the Meno.\n\nThe Republic applies the same logic to politics. Against Thrasymachus, who says justice is only the strong imposing rules, Plato builds an ideal city of producers, guardians and rulers, mirroring appetite, spirit and reason in the soul, governed by philosopher kings and sliding downward through timocracy, oligarchy, democracy and tyranny. Plotinus and Augustine later carried the cave into Christianity. Whitehead called the rest of philosophy footnotes to Plato. The host closes by asking whether you have ever seen something as it truly is.",
   "keyIdeas": [
     "The Theory of Forms holds that particular objects (a tree, an act of justice) are inferior copies of a single eternal, non-physical Form that we access through reason, not the senses.",
     "The Allegory of the Cave depicts ordinary human experience as mistaking shadows (sense-perception) for reality, with philosophy as the process of turning around toward the true light of the Forms.",
@@ -9,11 +9,26 @@
     "Plato's five regimes decline in a fixed sequence from aristocracy (rule by philosopher-kings) through timocracy, oligarchy, and democracy down to tyranny, as the ruling motive shifts from wisdom to honor to wealth to freedom to raw power."
   ],
   "terms": [
-    { "term": "Theory of Forms", "def": "Plato's view that eternal, non-physical essences (Forms) exist separately from the material world, and that physical things are imperfect copies of them." },
-    { "term": "Allegory of the Cave", "def": "Plato's image of prisoners mistaking shadows on a wall for reality, illustrating the difference between sense-perception and true knowledge of the Forms." },
-    { "term": "Recollection", "def": "Plato's theory that learning is really the soul remembering knowledge of the Forms it possessed before birth, rather than acquiring new knowledge from the senses." },
-    { "term": "Tripartite soul", "def": "Plato's division of the soul into appetite (desire), spirit (honor), and reason, which must be ordered with reason in charge for the soul to be just." },
-    { "term": "Philosopher-king", "def": "Plato's ideal ruler, someone who has grasped the Form of the Good and is therefore fit to understand and administer true justice." }
+    {
+      "term": "Theory of Forms",
+      "def": "Plato's view that eternal, non-physical essences (Forms) exist separately from the material world, and that physical things are imperfect copies of them."
+    },
+    {
+      "term": "Allegory of the Cave",
+      "def": "Plato's image of prisoners mistaking shadows on a wall for reality, illustrating the difference between sense-perception and true knowledge of the Forms."
+    },
+    {
+      "term": "Recollection",
+      "def": "Plato's theory that learning is really the soul remembering knowledge of the Forms it possessed before birth, rather than acquiring new knowledge from the senses."
+    },
+    {
+      "term": "Tripartite soul",
+      "def": "Plato's division of the soul into appetite (desire), spirit (honor), and reason, which must be ordered with reason in charge for the soul to be just."
+    },
+    {
+      "term": "Philosopher-king",
+      "def": "Plato's ideal ruler, someone who has grasped the Form of the Good and is therefore fit to understand and administer true justice."
+    }
   ],
   "anchors": [
     "all trees we see around us are just inferior copies of that perfect tree",

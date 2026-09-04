@@ -1,6 +1,6 @@
 {
   "id": 9,
-  "argument": "After witnessing old age, sickness, death, and an ascetic during his four sights, Siddhartha Gautama abandoned his life of royal luxury and, after years of failed asceticism, found a middle way between indulgence and extreme self-denial, achieving enlightenment under the fig tree at Bodh Gaya. His resulting teaching, the Four Noble Truths, holds that dissatisfaction is the default state of the mind, that it is caused by attachment, aversion, and ignorance rooted in the delusion of a separate self, that it can be ended by dissolving that delusion, and that the Eightfold Path of morality, meditation, and wisdom is the practical route to nirvana — a permanent extinguishing of desire achieved entirely through one's own effort, with no God to answer to and no salvation dependent on belief.",
+  "argument": "Around 1500 BC, on the theory the host follows, Aryan peoples from the west settled northern India, bringing Sanskrit and Vedism, the ritual religion that fed into later Hinduism. By 600 BC the arrangement was fraying. People sacrificed to Agni the fire god and Indra the god of war and went on suffering anyway. Faith in the priests drained off, and a growing class of renunciants and ascetics walked out of ordinary life to look inward instead. Nothing in their world promised a pleasant afterlife. Reincarnation was the default assumption, which meant the suffering was not one lifetime long but endless.\n\nSiddhartha Gautama was born into that world in the sixth century BC, son of a king. His mother died seven days later, and the host notes he was too young to feel it, so grief stayed abstract. A sage had predicted the boy would become either a great king or a spiritual leader, and his father, wanting the first, walled him in with the second in mind. Gautama's own account survives: three palaces for three seasons, lotus ponds dug for his sake, cloth from Varanasi, a white sunshade held over him day and night. Then at 29 he rode out and saw four things. An old man. A sick man. A corpse. Each time the charioteer said the same thing: it happens to all of us. The fourth was an ascetic in meditation, proof that someone was working on the problem. Stephen West compares the shock to Neo learning about the Matrix.\n\nHe left, wife and newborn son included, cut his hair and put on the yellow robe. Six years followed of gurus, begging, sleeping in forests, and austerity so severe he described his ribs as the rafters of an abandoned building. It taught him impermanence and nothing else. So he ate. His companions called him a soft prince and left, and he concluded that indulgence and starvation fail identically. He named the space between them the middle way, sat under a fig tree at Bodh Gaya, and swore not to move until he had an answer. At 35 he got up as the Buddha, the one who woke up.\n\nThe Four Noble Truths are his delivery system. Dissatisfaction is the default setting: your dream car, six months on, is just your car. Its cause is desire, sorted into attachment, aversion, and ignorance, the last being the belief that your happiness is administered by the world. Nothing carries fixed value. A stolen phone is a disaster or a free upgrade. Suffering ends when the self does, since the self is an illusion inside one interconnected process, a thought the host pairs with Carl Sagan. The path there is the Eightfold Path, grouped as morality, meditation, and wisdom, with mindfulness taming what Buddhists call the monkey mind. Nirvana means blown out, like a candle.\n\nHis first converts were the ascetics who had rejected him. The Sangha grew because, unlike Pythagoreanism or Confucianism, it asked for no pedigree. He died telling his monks to let the Dharma be their teacher, and the teaching traveled to China, Tibet, Korea, Japan, Sri Lanka, and eventually the West. West leaves the listener on a harder question: Gautama abandoned a wife and child for this, so what exactly makes family binding?",
   "keyIdeas": [
     "The doctrine of impermanence (anicca) holds that nothing — including both pleasure and pain — lasts very long; all existence, including the self, is in constant flux.",
     "The Middle Way rejects both a life of sensual indulgence and a life of extreme ascetic self-denial, both of which the Buddha personally tried and found did not produce lasting insight or happiness.",
@@ -9,12 +9,30 @@
     "The Third Noble Truth grounds the end of suffering in 'no-self' (anatta): the desire driving suffering is rooted in the delusion of a separate, bounded self, and recognizing the self as impermanent and interconnected — without denying experience outright — undercuts that root desire."
   ],
   "terms": [
-    { "term": "Anicca (impermanence)", "def": "The doctrine that nothing, including pleasure, pain, and the self, lasts very long; all existence is in constant flux." },
-    { "term": "Dukkha (dissatisfaction)", "def": "The First Noble Truth's claim that dissatisfaction is the default state of mind, since satisfaction fades as the mind normalizes to it." },
-    { "term": "The Middle Way", "def": "The path between sensual indulgence and extreme ascetic self-denial that the Buddha found, after personally testing both extremes and finding neither produced lasting insight." },
-    { "term": "Anatta (no-self)", "def": "The doctrine that there is no separate, bounded, permanent self; the delusion of such a self is the root of the desire that drives suffering." },
-    { "term": "Nirvana", "def": "Literally 'blown out,' referring to the extinguishing of the flames of desire, aversion, and ignorance — not an afterlife or annihilation." },
-    { "term": "The Eightfold Path", "def": "The Buddha's guidebook to nirvana, organized into three categories: morality (right speech, action, livelihood), meditation (right effort, mindfulness, concentration), and wisdom (right understanding, resolve)." }
+    {
+      "term": "Anicca (impermanence)",
+      "def": "The doctrine that nothing, including pleasure, pain, and the self, lasts very long; all existence is in constant flux."
+    },
+    {
+      "term": "Dukkha (dissatisfaction)",
+      "def": "The First Noble Truth's claim that dissatisfaction is the default state of mind, since satisfaction fades as the mind normalizes to it."
+    },
+    {
+      "term": "The Middle Way",
+      "def": "The path between sensual indulgence and extreme ascetic self-denial that the Buddha found, after personally testing both extremes and finding neither produced lasting insight."
+    },
+    {
+      "term": "Anatta (no-self)",
+      "def": "The doctrine that there is no separate, bounded, permanent self; the delusion of such a self is the root of the desire that drives suffering."
+    },
+    {
+      "term": "Nirvana",
+      "def": "Literally 'blown out,' referring to the extinguishing of the flames of desire, aversion, and ignorance — not an afterlife or annihilation."
+    },
+    {
+      "term": "The Eightfold Path",
+      "def": "The Buddha's guidebook to nirvana, organized into three categories: morality (right speech, action, livelihood), meditation (right effort, mindfulness, concentration), and wisdom (right understanding, resolve)."
+    }
   ],
   "anchors": [
     "nothing ever lasts very long. This whole existence is impermanent, and that would become a crucial base for his philosophy",
